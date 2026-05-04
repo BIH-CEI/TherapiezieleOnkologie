@@ -1,0 +1,17 @@
+TherapiezieleOnkologie
+=========================================
+
+Generic: line 0, col 0, Warning - The Implementation Guide Resource id should be de.bih-cei.therapieziele-onkologie (BUSINESSRULE)
+Generic: line 0, col 0, Warning - An HTML fragment from the set [ip-statements.xhtml, ip-statements.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
+Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
+Generic: line 0, col 0, Warning - An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml, dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
+Generic: line 0, col 0, Warning - An HTML fragment from the set [globals-table.xhtml, globals-table.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
+/home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ImplementationGuide-bih-cei-therapieziele-onkologie.json: line 1, col 93, Warning - Das CodeSystem urn:ietf:bcp:47 ist unbekannt (NOTFOUND)
+/home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ImplementationGuide-bih-cei-therapieziele-onkologie.json: line 1, col 93, Warning - Das CodeSystem urn:ietf:bcp:47 ist unbekannt (CODEINVALID)
+/home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ImplementationGuide-bih-cei-therapieziele-onkologie.json: line 1, col 2413, Warning - Das CodeSystem urn:iso:std:iso:3166 ist unbekannt (NOTFOUND)
+/home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-therapieziel-onkologie.json: line 1, col 13504, Warning - Das CodeSystem urn:iso:std:iso:3166 ist unbekannt (NOTFOUND)
+/home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-therapieziel-onkologie.json: line 1, col 21856, Info - The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated (BUSINESSRULE)
+/home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-therapieziel-onkologie.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
+
+err = 0, warn = 10, info = 1
+IG Publisher Version: 2.2.7

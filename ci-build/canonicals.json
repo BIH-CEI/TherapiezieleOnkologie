@@ -1,0 +1,14 @@
+[{
+  "id" : "bih-cei-therapieziele-onkologie",
+  "type" : "ImplementationGuide",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ImplementationGuide/bih-cei-therapieziele-onkologie",
+  "version" : "0.1.0",
+  "name" : "TherapiezieleOnkologie"
+},
+{
+  "id" : "therapieziel-onkologie",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/therapieziel-onkologie",
+  "version" : "0.1.0",
+  "name" : "TherapiezielOnkologie"
+}]
