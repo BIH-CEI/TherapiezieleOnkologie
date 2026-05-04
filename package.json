@@ -1,0 +1,21 @@
+{
+  "name": "de.bih-cei.therapieziele-onkologie",
+  "version": "0.1.0",
+  "description": "Implementation Guide for documenting oncological therapy goals (Therapieziele) in FHIR",
+  "fhirVersions": ["4.0.1"],
+  "keywords": ["BIH-CEI", "Therapieziel", "Onkologie", "FHIR", "Goal"],
+  "license": "CC-BY-4.0",
+  "homepage": "https://www.bihealth.org",
+  "title": "Therapieziele Onkologie",
+  "maintainers": [
+    {
+      "name": "Berlin Institute of Health at Charité (BIH)",
+      "url": "https://www.bihealth.org"
+    }
+  ],
+  "canonicals": "https://bih-cei.de/fhir/therapieziele-onkologie/ImplementationGuide/bih-cei-therapieziele-onkologie",
+  "jurisdiction": "urn:iso:std:iso:3166#DE",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  }
+}

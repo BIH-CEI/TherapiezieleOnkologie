@@ -1,0 +1,56 @@
+
+# ImplementationGuide.name
+#: ImplementationGuide.name
+msgid "TherapiezieleOnkologie"
+msgstr ""
+
+# ImplementationGuide.title
+#: ImplementationGuide.title
+msgid "Implementierungsleitfaden Therapieziele Onkologie"
+msgstr ""
+
+# ImplementationGuide.publisher
+#: ImplementationGuide.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ImplementationGuide.description
+#: ImplementationGuide.description
+msgid "Implementierungsleitfaden zur Dokumentation onkologischer Therapieziele in FHIR"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Therapieziel Onkologie"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "TODO"
+msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Table of Contents"
+msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Startseite"
+msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Hinweise zur Übersetzung"
+msgstr ""
+

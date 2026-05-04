@@ -1,0 +1,167 @@
+name: Build IG & Publish to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  checks: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi@${{ vars.SUSHI_VERSION || '3.19.0' }}
+
+      - name: Cache FHIR packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.fhir/packages
+          key: fhir-packages-${{ hashFiles('sushi-config.yaml') }}
+          restore-keys: fhir-packages-
+
+      - name: Run SUSHI
+        run: sushi .
+
+      - name: Cache Java Validator
+        id: cache-validator
+        uses: actions/cache@v4
+        with:
+          path: validator_cli.jar
+          key: validator-${{ vars.JAVA_VALIDATOR_VERSION || '6.5.7' }}
+
+      - name: Download Java Validator
+        if: steps.cache-validator.outputs.cache-hit != 'true'
+        run: |
+          JAVA_VALIDATOR_VERSION="${{ vars.JAVA_VALIDATOR_VERSION || '6.5.7' }}"
+          wget -q "https://github.com/hapifhir/org.hl7.fhir.core/releases/download/${JAVA_VALIDATOR_VERSION}/validator_cli.jar" -O validator_cli.jar
+
+      - name: Run Java Validator
+        run: |
+          IG_DEPS=$(jq -r '(.dependencies // {}) | to_entries | map("-ig " + .key + "#" + .value) | join(" ")' package.json)
+          UNESCAPED_IG_DEPS=$(echo $IG_DEPS | tr -d '"')
+          java -jar validator_cli.jar \
+            fsh-generated/resources/*.json \
+            -version 4.0 \
+            ${{ vars.JAVA_VALIDATION_OPTIONS || '-output-style compact -advisor-file advisor.json -resolution-context file:fsh-generated/resources/ -show-message-ids -txLog txlog.html -forPublication -verbose -html-output validation.html -output validation.json' }} \
+            $UNESCAPED_IG_DEPS \
+            -ig fsh-generated/resources \
+            -tx http://tx.fhir.org || true
+
+      - name: Render Validation Results
+        if: always()
+        uses: patrick-werner/validation-outcome-markdown-renderer@v1
+        with:
+          bundle-file: validation.json
+          include: errors
+          filters: |
+            # Profile without snapshot (validator cannot validate without snapshot)
+            ||*has no snapshot*|
+            # Wrong Display Name (case sensitivity, TX version mismatch)
+            ||*Wrong Display Name*|
+            # Unknown codes (TX server LOINC/SNOMED version)
+            ||*Unknown code*|
+
+      - name: Upload validation artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-output
+          path: |
+            txlog.html
+            validation.html
+            validation.json
+          retention-days: 7
+
+  build:
+    needs: validate
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi@${{ vars.SUSHI_VERSION || '3.19.0' }}
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install Jekyll
+        run: gem install jekyll
+
+      - name: Cache FHIR packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.fhir/packages
+          key: fhir-packages-${{ hashFiles('sushi-config.yaml') }}
+          restore-keys: fhir-packages-
+
+      - name: Cache IG Publisher JAR
+        uses: actions/cache@v4
+        id: cache-publisher
+        with:
+          path: input-cache/publisher.jar
+          key: ig-publisher-latest
+
+      - name: Download IG Publisher
+        if: steps.cache-publisher.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p input-cache
+          curl -L -o input-cache/publisher.jar \
+            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+
+      - name: Build IG
+        run: |
+          chmod +x _build.sh
+          ./_build.sh build
+
+      - name: Deploy CI Build to GitHub Pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git fetch origin gh-pages:gh-pages 2>/dev/null; then
+            git checkout gh-pages
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . 2>/dev/null || true
+          fi
+          # Keep existing release versions, replace ci-build
+          rm -rf ci-build
+          cp -r output ci-build
+          # Create index redirect if not exists
+          if [ ! -f index.html ]; then
+            echo '<html><head><meta http-equiv="refresh" content="0; url=ci-build/index.html"></head><body>Redirecting to <a href="ci-build/index.html">CI Build</a></body></html>' > index.html
+          fi
+          git add ci-build/ index.html
+          git commit -m "ci-build: $(date -u +%Y-%m-%dT%H:%M:%SZ)" --allow-empty
+          git push origin gh-pages

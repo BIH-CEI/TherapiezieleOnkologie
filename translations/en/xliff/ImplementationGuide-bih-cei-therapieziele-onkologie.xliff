@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ImplementationGuide-bih-cei-therapieziele-onkologie" original="Resource ImplementationGuide-bih-cei-therapieziele-onkologie" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.name">
+             <notes>
+               <note id="n1">ImplementationGuide.name</note>
+             </notes>
+        <source>TherapiezieleOnkologie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.title">
+             <notes>
+               <note id="n1">ImplementationGuide.title</note>
+             </notes>
+        <source>Implementierungsleitfaden Therapieziele Onkologie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.publisher">
+             <notes>
+               <note id="n1">ImplementationGuide.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.description">
+             <notes>
+               <note id="n1">ImplementationGuide.description</note>
+             </notes>
+        <source>Implementierungsleitfaden zur Dokumentation onkologischer Therapieziele in FHIR</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Therapieziel Onkologie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>TODO</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.page.title">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
+             </notes>
+        <source>Table of Contents</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.page.title">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
+             </notes>
+        <source>Startseite</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.page.title">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
+             </notes>
+        <source>Hinweise zur Übersetzung</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
