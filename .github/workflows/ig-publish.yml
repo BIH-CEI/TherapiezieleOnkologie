@@ -81,6 +81,9 @@ jobs:
             ||*Wrong Display Name*|
             # Unknown codes (TX server LOINC/SNOMED version)
             ||*Unknown code*|
+            # IG-Publisher-Parameter (copyrightyear, releaselabel, i18n-*, translation-sources, excludettl) wurden erst post-R4 zur GuideParameterCode-Liste hinzugefügt; R4-Strikt-Validierung kennt sie nicht
+            ||*GuideParameterCode*|
+            ||*guide-parameter-code*|
 
       - name: Upload validation artifacts
         if: always()
