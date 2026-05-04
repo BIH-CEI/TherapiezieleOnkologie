@@ -72,7 +72,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-therapieziel
   "name" : "TherapiezielOnkologie",
   "title" : "Therapieziel Onkologie",
   "status" : "draft",
-  "date" : "2026-05-04T08:00:52+00:00",
+  "date" : "2026-05-04T08:07:29+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
