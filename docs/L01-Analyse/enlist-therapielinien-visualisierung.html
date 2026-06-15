@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EnLiST – Therapielinien & Therapieziele</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#FAFAF8; --card:#fff; --ink:#1A1A1A; --ink2:#555; --ink3:#999; --border:#E5E2DD; --border-lt:#F0EDEA;
+  --elot:#1D7A56; --alot:#B85A0A; --ilot:#6335A0;
+  --g-kur:#1B8A5A; --g-leb:#2968A8; --g-sym:#C07018; --g-pal:#8B5A83;
+  --cpd:#C0392B; --intol:#D4711A; --ok:#27ae60;
+  --radius:6px; --shadow:0 1px 4px rgba(0,0,0,.06);
+  --lane-h:64px; --block-h:48px; --goal-h:14px; --axis-h:26px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+/* HEADER */
+.hdr{background:#1a1a1a;color:#fff;padding:2.5rem 2rem 2rem}
+.hdr-inner{max-width:1200px;margin:0 auto}
+.hdr .src{font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.4rem}
+.hdr h1{font-family:'Instrument Serif',serif;font-size:2.3rem;font-weight:400;margin-bottom:.4rem}
+.hdr h1 em{font-style:italic;color:#F0C27A}
+.hdr .sub{font-size:.92rem;color:rgba(255,255,255,.55);font-weight:300;max-width:680px}
+
+/* LEGEND */
+.leg{background:var(--card);border-bottom:1px solid var(--border);padding:.75rem 2rem;position:sticky;top:0;z-index:100}
+.leg-inner{max-width:1200px;margin:0 auto;display:flex;gap:2rem;flex-wrap:wrap;align-items:center}
+.lg{display:flex;align-items:center;gap:.45rem}
+.lg-label{font-size:.58rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3);font-weight:600}
+.lg-item{display:flex;align-items:center;gap:.2rem;font-size:.7rem;color:var(--ink2)}
+.lg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.lg-bar{width:4px;height:14px;border-radius:2px;flex-shrink:0}
+
+/* MAIN */
+.main{max-width:1200px;margin:0 auto;padding:1.5rem 2rem 2rem}
+
+.sec{margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--ink)}
+.sec h2{font-family:'Instrument Serif',serif;font-size:1.6rem;font-weight:400}
+.sec .sub{font-size:.8rem;color:var(--ink2);font-weight:300}
+
+/* INFO */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem}
+.info-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.4rem;box-shadow:var(--shadow)}
+.info-box h3{font-family:'Instrument Serif',serif;font-size:1.05rem;font-weight:400;margin-bottom:.6rem}
+.sch-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem}
+.sch-lbl{font-size:.7rem;font-weight:600;color:var(--ink2);min-width:78px}
+.sch-bar{height:20px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:600;color:#fff;padding:0 .4rem}
+.sch-arr{font-size:.8rem;color:var(--ink3);margin:0 .15rem}
+.sch-stack{display:flex;flex-direction:column;gap:2px}
+.sch-bar-sm{height:13px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.5rem;font-weight:600;color:#fff;padding:0 .3rem}
+.sch-note{font-size:.76rem;color:var(--ink2);line-height:1.45;margin-top:.5rem}
+.goal-item{display:flex;align-items:center;gap:.4rem;margin-bottom:.4rem;font-size:.8rem}
+
+/* GUIDELINES */
+.gl-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:2rem}
+.gl{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.1rem;box-shadow:var(--shadow)}
+.gl h4{font-size:.82rem;font-weight:600;margin-bottom:.25rem;display:flex;align-items:center;gap:.35rem}
+.gl-n{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;font-size:.62rem;font-weight:700;color:#fff;flex-shrink:0}
+.gl p{font-size:.73rem;color:var(--ink2);line-height:1.45}
+.gl-tag{display:inline-block;font-weight:600;font-size:.68rem;padding:.08rem .35rem;border-radius:3px;margin-top:.2rem}
+
+/* NOTATION */
+.nota{display:flex;gap:2rem;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow)}
+.nota-xy{font-family:'Instrument Serif',serif;font-size:3.5rem;line-height:1;flex-shrink:0}
+
+/* PATIENT */
+.pat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:2rem;overflow:hidden;animation:fadeIn .35s ease both}
+.pat:nth-child(2){animation-delay:.06s}.pat:nth-child(3){animation-delay:.12s}
+.pat-hdr{padding:1.1rem 1.4rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start}
+.pat-title{font-family:'Instrument Serif',serif;font-size:1.25rem}
+.pat-dx{font-size:.78rem;color:var(--ink2);margin-top:.05rem}
+.pat-src{font-size:.62rem;color:var(--ink3);margin-top:.1rem}
+.pat-lot{text-align:right;flex-shrink:0}
+.pat-lot .val{font-size:.88rem;font-weight:600}
+.pat-lot .lbl{font-size:.68rem;color:var(--ink3)}
+
+/* TIMELINE */
+.tl-scroll{overflow-x:auto;padding:1.25rem 1rem 1rem 0}
+.tl-outer{display:flex}
+.tl-labels{flex-shrink:0;width:52px;padding-left:12px}
+.tl-labels .lab-spacer{height:calc(var(--axis-h) + var(--goal-h) + 8px)}
+.tl-labels .lab{height:var(--lane-h);display:flex;align-items:center;margin-bottom:2px}
+.tl-labels .lab-tag{font-size:.68rem;font-weight:700;letter-spacing:.03em;padding:.2rem .35rem;border-radius:3px;line-height:1.2}
+.tl-labels .lab-tag.elot{color:var(--elot);background:#e6f2ec}
+.tl-labels .lab-tag.alot{color:var(--alot);background:#fae8d6}
+.tl-labels .lab-tag.ilot{color:var(--ilot);background:#ece0f5}
+
+.tl-area{position:relative;flex-shrink:0}
+
+/* Year axis */
+.tl-axis{height:var(--axis-h);position:relative;border-bottom:1px solid var(--border)}
+.yr-label{position:absolute;bottom:4px;font-size:.62rem;color:var(--ink3);font-weight:500;transform:translateX(-50%);white-space:nowrap}
+.yr-break{position:absolute;bottom:0;height:100%;display:flex;align-items:center;font-size:.7rem;color:var(--border);letter-spacing:-.1em;transform:translateX(-50%)}
+
+/* Goal row */
+.tl-goal{height:calc(var(--goal-h) + 8px);position:relative;margin:4px 0}
+.goal-seg{position:absolute;height:10px;top:2px;border-radius:5px;opacity:.8}
+.goal-seg.kur{background:var(--g-kur)}.goal-seg.leb{background:var(--g-leb)}.goal-seg.sym{background:var(--g-sym)}.goal-seg.pal{background:var(--g-pal)}
+
+/* Composition-Version marker on goal row */
+.goal-ver{position:absolute;top:-1px;font-size:.5rem;font-weight:700;color:#fff;background:#1a1a1a;border-radius:3px;padding:0 .3rem;height:12px;line-height:12px;letter-spacing:.02em;z-index:4;transform:translateX(-50%);white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.goal-ver::after{content:'';position:absolute;bottom:-3px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:3px solid transparent;border-right:3px solid transparent;border-top:3px solid #1a1a1a}
+
+/* iLoT cross-document badge (link to Studienteilnahme) */
+.tx-ilot-badge{position:absolute;top:3px;right:4px;font-size:.5rem;font-weight:700;background:rgba(255,255,255,.95);color:var(--ilot);padding:1px 4px;border-radius:2px;letter-spacing:.04em;line-height:1.15;z-index:3;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+
+/* Lane */
+.tl-lane{height:var(--lane-h);position:relative;margin-bottom:2px;border-left:4px solid transparent;border-radius:0 4px 4px 0}
+.tl-lane.elot{border-left-color:var(--elot)}
+.tl-lane.alot{border-left-color:var(--alot)}
+.tl-lane.ilot{border-left-color:var(--ilot)}
+
+/* Gap overlay */
+.tl-gap-col{position:absolute;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:2px;z-index:1;pointer-events:none}
+.tl-gap-col .gap-bg{position:absolute;top:0;bottom:0;left:0;right:0;background:repeating-linear-gradient(90deg,var(--border-lt) 0px,var(--border-lt) 1px,transparent 1px,transparent 6px);opacity:.6}
+.tl-gap-col .gap-mark{font-size:.72rem;font-weight:300;color:var(--border);letter-spacing:-.08em;position:relative;z-index:1}
+.tl-gap-col .gap-dur{font-size:.55rem;color:var(--ink3);font-style:italic;position:relative;z-index:1;margin-top:2px;white-space:nowrap;background:var(--card);padding:0 .2rem;border-radius:2px}
+
+/* Therapy block */
+.tx{position:absolute;height:var(--block-h);top:calc((var(--lane-h) - var(--block-h))/2);border-radius:5px;display:flex;flex-direction:column;justify-content:center;padding:.3rem .55rem;color:#fff;cursor:pointer;z-index:2;overflow:hidden;transition:transform .12s,box-shadow .12s}
+.tx:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:20}
+.tx::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:5px 5px 0 0}
+.tx.lane-elot::before{background:var(--elot)}.tx.lane-alot::before{background:var(--alot)}.tx.lane-ilot::before{background:var(--ilot)}
+.tx.g-kur{background:var(--g-kur)}.tx.g-leb{background:var(--g-leb)}.tx.g-sym{background:var(--g-sym)}.tx.g-pal{background:var(--g-pal)}
+.tx.t-modified{border-left:3px solid rgba(255,255,255,.5)}
+.tx.t-same{background-image:repeating-linear-gradient(-45deg,transparent,transparent 5px,rgba(255,255,255,.1) 5px,rgba(255,255,255,.1) 10px)}
+.tx .tx-agent{font-size:.68rem;font-weight:600;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tx .tx-lot{font-size:.56rem;font-weight:600;opacity:.7}
+.tx .tx-dur{font-size:.5rem;opacity:.55;margin-top:auto}
+.tx .tx-sch{display:inline;font-size:.48rem;font-weight:700;background:rgba(0,0,0,.2);padding:0 .2rem;border-radius:2px;margin-left:.2rem}
+
+/* Planned outline */
+.tx-plan{position:absolute;height:var(--block-h);top:calc((var(--lane-h) - var(--block-h))/2);border:2px dashed;border-radius:5px;z-index:1;pointer-events:none;opacity:.3}
+.tx-plan.kur{border-color:var(--g-kur);background:rgba(27,138,90,.03)}
+.tx-plan.leb{border-color:var(--g-leb);background:rgba(41,104,168,.03)}
+
+/* Transition marker */
+.tl-mk{position:absolute;top:0;height:var(--lane-h);z-index:3;pointer-events:none}
+.tl-mk::before{content:'';position:absolute;top:6px;left:-1px;width:2px;height:calc(var(--lane-h) - 12px);border-radius:1px}
+.tl-mk::after{content:attr(data-label);position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:.55rem;font-weight:700;white-space:nowrap;padding:.05rem .3rem;border-radius:2px}
+.tl-mk.cpd::before{background:var(--cpd);opacity:.4}
+.tl-mk.cpd::after{background:#fce8e6;color:var(--cpd)}
+.tl-mk.intol::before{background:var(--intol);opacity:.4}
+.tl-mk.intol::after{background:#fdf0e4;color:var(--intol)}
+
+/* Tooltip */
+.tip{position:fixed;background:#1a1a1a;color:#fff;padding:.9rem 1.1rem;border-radius:var(--radius);font-size:.76rem;max-width:340px;pointer-events:none;opacity:0;transition:opacity .1s;z-index:1000;line-height:1.5;box-shadow:0 8px 28px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.06)}
+.tip.show{opacity:1}
+.tip .t-title{font-weight:600;font-size:.84rem;margin-bottom:.3rem;color:#F0C27A}
+.tip .t-r{display:flex;gap:.4rem;margin-bottom:.15rem}
+.tip .t-l{color:rgba(255,255,255,.4);min-width:78px;font-size:.7rem;flex-shrink:0}
+.tip .t-v{font-weight:500}
+.tip .t-hr{border-top:1px solid rgba(255,255,255,.1);margin:.35rem 0}
+.tip .t-gl{font-size:.68rem;color:rgba(255,255,255,.5);font-style:italic}
+.tip .t-cm{font-size:.7rem;color:rgba(255,255,255,.65)}
+
+.footer{margin-top:2rem;padding:1.5rem 2rem;border-top:1px solid var(--border);text-align:center;font-size:.7rem;color:var(--ink3)}
+@media(max-width:900px){.info-grid,.gl-grid{grid-template-columns:1fr}.hdr h1{font-size:1.7rem}.nota{flex-direction:column;gap:1rem}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="hdr"><div class="hdr-inner">
+  <div class="src">Nach Saini et al., Annals of Oncology 2026 · DOI: 10.1016/j.annonc.2026.02.008</div>
+  <h1>Therapielinien &amp; <em>Therapieziele</em></h1>
+  <div class="sub">Patientenverläufe nach dem ESMO-EnLiST-Framework — Swimlane-Darstellung mit komprimierten Lücken.</div>
+</div></div>
+
+<div class="leg"><div class="leg-inner">
+  <div class="lg"><span class="lg-label">Setting</span>
+    <span class="lg-item"><span class="lg-bar" style="background:var(--elot)"></span>eLoT</span>
+    <span class="lg-item"><span class="lg-bar" style="background:var(--alot)"></span>aLoT</span>
+    <span class="lg-item"><span class="lg-bar" style="background:var(--ilot)"></span>iLoT</span></div>
+  <div class="lg"><span class="lg-label">Therapieziel</span>
+    <span class="lg-item"><span class="lg-dot" style="background:var(--g-kur)"></span>Kurativ</span>
+    <span class="lg-item"><span class="lg-dot" style="background:var(--g-leb)"></span>Lebensverl.</span>
+    <span class="lg-item"><span class="lg-dot" style="background:var(--g-sym)"></span>Symptomktr.</span>
+    <span class="lg-item"><span class="lg-dot" style="background:var(--g-pal)"></span>Palliativ</span></div>
+  <div class="lg"><span class="lg-label">Übergang</span>
+    <span class="lg-item"><span class="lg-dot" style="background:#fce8e6;border:1.5px solid var(--cpd);width:8px;height:8px"></span>cPD</span>
+    <span class="lg-item"><span class="lg-dot" style="background:#fdf0e4;border:1.5px solid var(--intol);width:8px;height:8px"></span>Intol.</span></div>
+  <div class="lg"><span class="lg-label">Dauer</span>
+    <span class="lg-item" style="gap:.1rem"><span style="width:24px;height:5px;border-radius:3px;border:1.5px dashed var(--ink3);"></span>Geplant</span>
+    <span class="lg-item"><span style="width:24px;height:5px;border-radius:3px;background:var(--g-leb)"></span>Tatsächlich</span></div>
+  <div class="lg"><span class="lg-label">Composition</span>
+    <span class="lg-item"><span style="display:inline-flex;align-items:center;justify-content:center;font-size:.5rem;font-weight:700;color:#fff;background:#1a1a1a;border-radius:3px;padding:0 .3rem;height:12px;line-height:12px">v1</span>Version (ePA)</span>
+    <span class="lg-item"><span style="display:inline-flex;font-size:.5rem;font-weight:700;background:rgba(255,255,255,.95);color:var(--ilot);padding:1px 4px;border-radius:2px;border:1px solid var(--ilot)">STUDIE</span>→ Studienteilnahme-Doc</span></div>
+</div></div>
+
+<div class="main">
+<div class="nota">
+  <div class="nota-xy"><span style="color:var(--cpd)">X</span><span style="color:var(--ink3)">.</span><span style="color:var(--intol)">Y</span></div>
+  <div style="font-size:.82rem;color:var(--ink2);line-height:1.5"><strong style="color:var(--cpd)">X</strong> = Neue Therapielinien (cPD / fehlende Ansprache). <strong style="color:var(--intol)">Y</strong> = Modifikationen seit letzter neuer LoT. Getrennte Zählung: <strong>[eLoT + aLoT] + iLoT</strong></div>
+</div>
+<div class="info-grid">
+  <div class="info-box"><h3>Parallel vs. Konsekutiv</h3>
+    <div class="sch-row"><span class="sch-lbl">Konsekutiv →</span><div style="display:flex;align-items:center"><div class="sch-bar" style="background:var(--g-kur);width:48px">FEC</div><span class="sch-arr">→</span><div class="sch-bar" style="background:var(--g-kur);width:42px">Tam</div><span class="sch-arr">→</span><div class="sch-bar" style="background:var(--g-kur);width:38px">Let</div></div></div>
+    <div class="sch-row"><span class="sch-lbl">Parallel ║</span><div class="sch-stack"><div class="sch-bar-sm" style="background:var(--g-leb);width:100px">Ribociclib</div><div class="sch-bar-sm" style="background:var(--g-leb);width:100px;opacity:.75">Fulvestrant</div></div></div>
+    <div class="sch-row" style="margin-bottom:0"><span class="sch-lbl">Gemischt ⫽→</span><div style="display:flex;align-items:center"><div class="sch-stack" style="margin-right:2px"><div class="sch-bar-sm" style="background:var(--g-leb);width:45px">Carbo</div><div class="sch-bar-sm" style="background:var(--g-leb);width:45px;opacity:.75">Pem</div></div><span class="sch-arr">→</span><div class="sch-bar" style="background:var(--g-leb);width:50px;font-size:.55rem">Pembro ↻</div></div></div>
+    <div class="sch-note">Wirkstoffe innerhalb einer LoT: gleichzeitig, nacheinander oder gemischt.</div>
+  </div>
+  <div class="info-box"><h3>Therapieziele im Verlauf</h3>
+    <div class="goal-item"><span class="lg-dot" style="background:var(--g-kur);width:14px;height:14px"></span><span><strong>Kurativ</strong> — Heilung, Rezidivprävention</span></div>
+    <div class="goal-item"><span class="lg-dot" style="background:var(--g-leb);width:14px;height:14px"></span><span><strong>Lebensverlängernd</strong> — Krankheitskontrolle</span></div>
+    <div class="goal-item"><span class="lg-dot" style="background:var(--g-sym);width:14px;height:14px"></span><span><strong>Symptomkontrolle</strong> — Linderung, Lebensqualität</span></div>
+    <div class="goal-item"><span class="lg-dot" style="background:var(--g-pal);width:14px;height:14px"></span><span><strong>Palliativ</strong> — Komfortversorgung</span></div>
+    <div class="sch-note">Therapieziel ändert sich im Verlauf. EnLiST: kurativ vs. nicht-kurativ; klinisch feiner abgestuft.</div>
+  </div>
+</div>
+<div class="gl-grid">
+  <div class="gl"><h4><span class="gl-n" style="background:var(--cpd)">1</span> Neue LoT</h4><p>Neue SACT nach cPD oder fehlender Ansprache</p><span class="gl-tag" style="background:#fce8e6;color:var(--cpd)">→ (X+1).0</span></div>
+  <div class="gl"><h4><span class="gl-n" style="background:var(--ok)">2</span> Gleiche LoT</h4><p>SACT fortgesetzt / wiederaufgenommen</p><span class="gl-tag" style="background:#e6f5ef;color:var(--ok)">→ X.Y bleibt</span></div>
+  <div class="gl"><h4><span class="gl-n" style="background:var(--intol)">3</span> Modifizierte LoT</h4><p>Wirkstoffwechsel wg. Unverträglichkeit</p><span class="gl-tag" style="background:#fdf0e4;color:var(--intol)">→ X.(Y+1)</span></div>
+  <div class="gl"><h4><span class="gl-n" style="background:var(--intol)">4</span> Gleiche / Mod.</h4><p>Ohne cPD: Dosis → gleich. Ungeplant → mod.</p><span class="gl-tag" style="background:#f5f5f5;color:var(--ink2)">→ je nach Szenario</span></div>
+</div>
+<div class="sec"><h2>Patientenverläufe</h2><div class="sub">Swimlane-Darstellung mit komprimierten therapiefreien Intervallen</div></div>
+<div id="patients"></div>
+</div>
+<div class="footer">Saini KS et al. ESMO EnLiST. <em>Ann Oncol</em> 2026;37(5):608–623. — KIG Onko Therapy Goal Projekt</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const GL={kur:'g-kur',leb:'g-leb',sym:'g-sym',pal:'g-pal'};
+const GN={kur:'Kurativ',leb:'Lebensverlängernd',sym:'Symptomkontrolle',pal:'Palliativ'};
+const GC={kur:'var(--g-kur)',leb:'var(--g-leb)',sym:'var(--g-sym)',pal:'var(--g-pal)'};
+const TN={new:'Neue LoT',modified:'Mod. LoT',same:'Gleiche LoT'};
+const SN={single:'Einzelwirkstoff',seq:'Konsekutiv (→)',par:'Parallel (║)',mixed:'Gemischt (⫽→)'};
+const SI={single:'',seq:'→',par:'║',mixed:'⫽→'};
+const MO=['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
+function fD(y){const yr=Math.floor(y),m=Math.min(Math.round((y-yr)*12),11);return MO[m]+' '+yr;}
+function fDur(y){const mo=Math.round(y*12);return mo>=12?(Math.round(y*10)/10)+' J.':mo+' Mo.';}
+
+const patients=[
+{id:'Patientin A',dx:'Mammakarzinom, Stadium III — ED Dez. 1999',src:'Nach Tabelle 3, Saini et al. 2026',lot:'[eLoT 2.0 + aLoT 2.1] + iLoT 1.0',tx:[
+  {lane:'elot',lot:'eLoT 1.0',type:'new',goal:'kur',agents:'FEC → BCS → EBRT → Tamoxifen → Letrozol',short:'FEC · Tam · Let',sch:'seq',mod:'Zytostatisch + Endokrin + Chirurgie + RT',s:2000.0,e:2002.6,pe:2005.0,reason:'Unverträglichkeit (Letrozol)',rT:'intol',gl:'Ersttherapie',cm:'FEC×6→BCS→EBRT→Tam 2J→Let 3J geplant. Letrozol-Unverträglichkeit.'},
+  {lane:'elot',lot:'eLoT 1.1',type:'modified',goal:'kur',agents:'Anastrozol',short:'Anastrozol',sch:'single',mod:'Endokrin',s:2002.65,e:2005.7,reason:'Abgeschlossen',rT:'ok',gl:'LL 3: Intol. → Mod. LoT',cm:'Let→Anastrozol wg. Unverträglichkeit. Kein cPD.'},
+  {lane:'elot',lot:'eLoT 2.0',type:'new',goal:'kur',agents:'Mastektomie + Exemestan',short:'Exemestan + OP',sch:'par',mod:'Endokrin + Chirurgie',s:2011.0,e:2013.0,reason:'Abgeschlossen',rT:'ok',gl:'LL 1: Rezidiv → Neue LoT',cm:'Isoliertes Rezidiv. Resektabel. Mastektomie + Exemestan×2J.'},
+  {lane:'alot',lot:'aLoT 1.0',type:'new',goal:'leb',agents:'Ribociclib + Fulvestrant',short:'Ribociclib + Fulvestrant',sch:'par',mod:'Endokrin + Zielgerichtet',s:2018.1,e:2020.7,reason:'cPD',rT:'cpd',gl:'Settingwechsel → aLoT 1.0',cm:'Nicht-resektabel. Kurativ→Lebensverlängernd.'},
+  {lane:'alot',lot:'aLoT 2.0',type:'new',goal:'leb',agents:'Paclitaxel',short:'Paclitaxel',sch:'single',mod:'Zytostatisch',s:2020.75,e:2020.9,reason:'PIK3CA-Ergebnis',rT:'other',gl:'LL 1: cPD → Neue LoT',cm:'Brückentherapie bis PIK3CA+ vorlag.'},
+  {lane:'alot',lot:'aLoT 2.1',type:'modified',goal:'leb',agents:'Alpelisib + Fulvestrant',short:'Alpelisib + Fulvestrant',sch:'par',mod:'Endokrin + Zielgerichtet',s:2020.95,e:2021.85,reason:'cPD (Lebermet.)',rT:'cpd',gl:'LL 4: Wechsel ohne cPD → Mod.',cm:'PIK3CA+. Wechsel wg. Testergebnis → Mod. LoT.'},
+  {lane:'ilot',lot:'iLoT 1.0',type:'new',goal:'pal',agents:'LAG3-Antikörper (Phase-I)',short:'LAG3-AK (Studie)',sch:'single',mod:'Experimentell',s:2022.05,e:2022.25,reason:'cPD → Hospiz',rT:'cpd',gl:'Experimentell → iLoT 1.0',cm:'First-in-human. cPD → Hospiz.'}
+]},
+{id:'Patient B',dx:'NSCLC, Stadium IV — ED März 2020',src:'Illustratives Beispiel',lot:'[eLoT 0.0 + aLoT 3.1] + iLoT 0.0',tx:[
+  {lane:'alot',lot:'aLoT 1.0',type:'new',goal:'leb',agents:'Pembrolizumab + Carboplatin + Pemetrexed',short:'Pembro + Carbo + Pem',sch:'mixed',mod:'IO + Zytostatisch',s:2020.25,e:2021.1,reason:'cPD',rT:'cpd',gl:'Erstlinie fortgeschritten',cm:'Stadium IV, PD-L1 40%. Induktion→Erhaltung.'},
+  {lane:'alot',lot:'aLoT 2.0',type:'new',goal:'leb',agents:'Docetaxel',short:'Docetaxel',sch:'single',mod:'Zytostatisch',s:2021.2,e:2021.6,reason:'Unverträglichkeit',rT:'intol',gl:'LL 1: cPD → Neue LoT',cm:'Hämatotoxizität nach 4 Zyklen.'},
+  {lane:'alot',lot:'aLoT 2.1',type:'modified',goal:'leb',agents:'Docetaxel (red.) + Ramucirumab',short:'Doce (red.) + Ramu',sch:'par',mod:'Zytostatisch + Zielgerichtet',s:2021.65,e:2022.3,reason:'Therapiepause',rT:'other',gl:'LL 3: Intol. → Mod. LoT',cm:'Dosisreduktion + Ramu wg. Unverträglichkeit.'},
+  {lane:'alot',lot:'aLoT 2.1',type:'same',goal:'leb',agents:'Docetaxel + Ramucirumab (↺)',short:'Doce + Ramu ↺',sch:'par',mod:'Zytostatisch + Zielgerichtet',s:2022.6,e:2023.0,reason:'cPD',rT:'cpd',gl:'LL 2a: Drug Holiday → Gleiche LoT',cm:'Wiederaufnahme → bleibt 2.1.'},
+  {lane:'alot',lot:'aLoT 3.0',type:'new',goal:'sym',agents:'Nivolumab Rechallenge',short:'Nivolumab',sch:'single',mod:'Immuntherapie',s:2023.1,e:2023.7,reason:'Intol. (Hepatitis)',rT:'intol',gl:'LL 1: cPD → Neue LoT',cm:'IO-Rechallenge. Immunvermittelte Hepatitis.'},
+  {lane:'alot',lot:'aLoT 3.1',type:'modified',goal:'sym',agents:'Vinorelbin',short:'Vinorelbin',sch:'single',mod:'Zytostatisch',s:2023.75,e:2024.3,reason:'→ BSC',rT:'other',gl:'LL 3: Intol. → Mod. LoT',cm:'IO-Abbruch wg. Hepatitis → Vinorelbin.'}
+]},
+{id:'Patient C',dx:'CRC, Stadium III→IV — ED Jan. 2017',src:'Illustratives Beispiel',lot:'[eLoT 1.0 + aLoT 2.0] + iLoT 1.0',tx:[
+  {lane:'elot',lot:'eLoT 1.0',type:'new',goal:'kur',agents:'FOLFOX (adjuvant)',short:'FOLFOX (adj.)',sch:'par',mod:'Zytostatisch',s:2017.15,e:2017.65,reason:'Abgeschlossen',rT:'ok',gl:'Adjuvante Therapie',cm:'Stadium III CRC, R0, FOLFOX×6Mo.'},
+  {lane:'alot',lot:'aLoT 1.0',type:'new',goal:'leb',agents:'FOLFIRI + Bevacizumab',short:'FOLFIRI + Bevacizumab',sch:'par',mod:'Zytostatisch + Zielgerichtet',s:2019.5,e:2020.6,reason:'Drug Holiday',rT:'other',gl:'Fernmetastasen → aLoT 1.0',cm:'Lebermetastasen 2019. RAS-WT.'},
+  {lane:'alot',lot:'aLoT 1.0',type:'same',goal:'leb',agents:'FOLFIRI + Bevacizumab (↺)',short:'FOLFIRI + Bev ↺',sch:'par',mod:'Zytostatisch + Zielgerichtet',s:2020.85,e:2021.7,reason:'cPD',rT:'cpd',gl:'LL 2a: → Gleiche LoT',cm:'Drug Holiday → Wiederaufnahme → bleibt 1.0.'},
+  {lane:'alot',lot:'aLoT 2.0',type:'new',goal:'leb',agents:'FOLFIRI + Cetuximab',short:'FOLFIRI + Cetuximab',sch:'par',mod:'Zytostatisch + Zielgerichtet',s:2021.8,e:2022.8,reason:'cPD',rT:'cpd',gl:'LL 1: cPD → Neue LoT',cm:'RAS-WT. Bev→Cetux.'},
+  {lane:'ilot',lot:'iLoT 1.0',type:'new',goal:'leb',agents:'HER2-ADC (Phase II)',short:'HER2-ADC (Studie)',sch:'single',mod:'Experimentell',s:2023.0,e:2024.0,reason:'Laufend',rT:'other',gl:'Experimentell → iLoT 1.0',cm:'HER2-low. Phase-II ADC.'}
+]}];
+
+// ── BUILD COMPRESSED TIMELINE ──
+const PX_PER_YEAR = 100;   // px per year of therapy
+const MIN_TX_PX = 120;     // minimum width for any therapy block
+const GAP_PX = 48;          // fixed width for compressed gaps
+const GAP_THRESHOLD = 0.15; // years – below this, no gap shown
+
+function buildScale(txList) {
+  const sorted = [...txList].sort((a,b) => a.s - b.s);
+  const segs = []; // {type:'tx'|'gap', s, e, dur, px, pxStart}
+  let cursor = sorted[0].s;
+
+  sorted.forEach(t => {
+    const gapDur = t.s - cursor;
+    if (gapDur > GAP_THRESHOLD) {
+      segs.push({type:'gap', s:cursor, e:t.s, dur:gapDur});
+    }
+    segs.push({type:'tx', s:t.s, e:t.e, dur:t.e - t.s});
+    cursor = Math.max(cursor, t.e);
+  });
+
+  // Assign px widths
+  let total = 0;
+  segs.forEach(seg => {
+    if (seg.type === 'tx') {
+      seg.px = Math.max(seg.dur * PX_PER_YEAR, MIN_TX_PX);
+    } else {
+      seg.px = GAP_PX;
+    }
+    seg.pxStart = total;
+    total += seg.px;
+    seg.pxEnd = total;
+  });
+
+  return {
+    segs, total,
+    yearToPx(year) {
+      for (const seg of segs) {
+        if (year >= seg.s - 0.001 && year <= seg.e + 0.001) {
+          const frac = seg.dur > 0 ? (year - seg.s) / seg.dur : 0;
+          return seg.pxStart + frac * seg.px;
+        }
+      }
+      // After last segment
+      const last = segs[segs.length - 1];
+      return last ? last.pxEnd : 0;
+    },
+    widthForRange(s, e) {
+      return this.yearToPx(e) - this.yearToPx(s);
+    }
+  };
+}
+
+const $p = document.getElementById('patients');
+const $tip = document.getElementById('tip');
+
+patients.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'pat';
+  card.innerHTML = `<div class="pat-hdr"><div><div class="pat-title">${p.id}</div><div class="pat-dx">${p.dx}</div><div class="pat-src">${p.src}</div></div><div class="pat-lot"><div class="val">${p.lot}</div><div class="lbl">Gesamtergebnis LoT</div></div></div>`;
+
+  const scale = buildScale(p.tx);
+  const lanes = ['elot','alot','ilot'].filter(l => p.tx.some(t => t.lane === l));
+  const laneNames = {elot:'eLoT',alot:'aLoT',ilot:'iLoT'};
+
+  const scroll = document.createElement('div');
+  scroll.className = 'tl-scroll';
+  const outer = document.createElement('div');
+  outer.className = 'tl-outer';
+
+  // Labels
+  const labels = document.createElement('div');
+  labels.className = 'tl-labels';
+  labels.innerHTML = `<div class="lab-spacer"></div>` +
+    lanes.map(l => `<div class="lab"><span class="lab-tag ${l}">${laneNames[l]}</span></div>`).join('');
+  outer.appendChild(labels);
+
+  // Track area
+  const area = document.createElement('div');
+  area.className = 'tl-area';
+  area.style.width = scale.total + 'px';
+
+  // Year axis
+  const axis = document.createElement('div');
+  axis.className = 'tl-axis';
+
+  // Place year labels at segment boundaries
+  const shownYears = new Set();
+  scale.segs.forEach(seg => {
+    [Math.floor(seg.s), Math.ceil(seg.e)].forEach(y => {
+      if (!shownYears.has(y) && y >= Math.floor(scale.segs[0].s) && y <= Math.ceil(scale.segs[scale.segs.length-1].e)) {
+        shownYears.add(y);
+        const px = scale.yearToPx(y);
+        if (px >= 0 && px <= scale.total) {
+          const lbl = document.createElement('span');
+          lbl.className = 'yr-label';
+          lbl.style.left = px + 'px';
+          lbl.textContent = y;
+          axis.appendChild(lbl);
+        }
+      }
+    });
+  });
+  area.appendChild(axis);
+
+  // Gap overlays
+  scale.segs.filter(s => s.type === 'gap').forEach(seg => {
+    const gap = document.createElement('div');
+    gap.className = 'tl-gap-col';
+    gap.style.left = seg.pxStart + 'px';
+    gap.style.width = seg.px + 'px';
+    // calculate total lanes height
+    const totalH = 26 + 14 + 8 + lanes.length * 66; // axis + goal + gaps + lanes
+    gap.style.height = totalH + 'px';
+    gap.innerHTML = `<div class="gap-bg"></div><div class="gap-mark">⫽</div><div class="gap-dur">${fDur(seg.dur)}</div>`;
+    area.appendChild(gap);
+  });
+
+  // Goal row
+  const goalRow = document.createElement('div');
+  goalRow.className = 'tl-goal';
+  const sortedTx = [...p.tx].sort((a,b) => a.s - b.s);
+  let goalVersion = 0;
+  let lastGoal = null;
+  const goalVersionMarks = []; // {px, label}
+  sortedTx.forEach(t => {
+    const l = scale.yearToPx(t.s);
+    const w = scale.widthForRange(t.s, t.e);
+    goalRow.innerHTML += `<div class="goal-seg ${t.goal}" style="left:${l}px;width:${Math.max(w,6)}px" title="${GN[t.goal]} (Composition v${(t.goal===lastGoal?goalVersion:goalVersion+1)})"></div>`;
+    if (t.goal !== lastGoal) {
+      goalVersion += 1;
+      goalVersionMarks.push({px: l, label: 'v' + goalVersion});
+      lastGoal = t.goal;
+    }
+  });
+  goalVersionMarks.forEach(m => {
+    goalRow.innerHTML += `<div class="goal-ver" style="left:${m.px}px" title="Neue Composition-Version – Therapieziel-Übergang">${m.label}</div>`;
+  });
+  area.appendChild(goalRow);
+
+  // Lanes
+  lanes.forEach(lane => {
+    const row = document.createElement('div');
+    row.className = `tl-lane ${lane}`;
+    const lts = p.tx.filter(t => t.lane === lane);
+
+    lts.forEach(t => {
+      const l = scale.yearToPx(t.s);
+      const w = scale.widthForRange(t.s, t.e);
+
+      // Planned outline
+      if (t.pe && t.pe > t.e) {
+        const pw = scale.yearToPx(t.pe) - l;
+        row.innerHTML += `<div class="tx-plan ${t.goal}" style="left:${l}px;width:${Math.max(pw,w+20)}px"></div>`;
+      }
+
+      // Block
+      const block = document.createElement('div');
+      block.className = `tx lane-${t.lane} ${GL[t.goal]} t-${t.type}`;
+      block.style.left = l + 'px';
+      block.style.width = Math.max(w, MIN_TX_PX) + 'px';
+      const schI = t.sch !== 'single' ? `<span class="tx-sch">${SI[t.sch]}</span>` : '';
+      const ilotBadge = t.lane === 'ilot' ? `<div class="tx-ilot-badge" title="Verweis auf Studienteilnahme-Document Bundle">STUDIE</div>` : '';
+      block.innerHTML = `
+        ${ilotBadge}
+        <div class="tx-lot">${t.lot}${t.type==='modified'?' (mod.)':t.type==='same'?' (↺)':''} ${schI}</div>
+        <div class="tx-agent">${t.short}</div>
+        <div class="tx-dur">${fD(t.s)} – ${fD(t.e)} · ${fDur(t.e-t.s)}</div>
+      `;
+      block.addEventListener('mouseenter', ev => showTip(ev, t));
+      block.addEventListener('mousemove', moveTip);
+      block.addEventListener('mouseleave', () => $tip.classList.remove('show'));
+      row.appendChild(block);
+
+      // Marker
+      if (t.rT === 'cpd' || t.rT === 'intol') {
+        const mk = document.createElement('div');
+        mk.className = `tl-mk ${t.rT === 'cpd' ? 'cpd' : 'intol'}`;
+        mk.style.left = (l + Math.max(w, MIN_TX_PX)) + 'px';
+        mk.setAttribute('data-label', t.rT === 'cpd' ? 'cPD' : 'Intol.');
+        row.appendChild(mk);
+      }
+    });
+    area.appendChild(row);
+  });
+
+  outer.appendChild(area);
+  scroll.appendChild(outer);
+  card.appendChild(scroll);
+  $p.appendChild(card);
+});
+
+function showTip(ev, t) {
+  const dot = `<span style="color:${GC[t.goal]};font-weight:700">●</span>`;
+  const planned = t.pe ? `<div class="t-r"><span class="t-l">Geplant bis</span><span class="t-v">${fD(t.pe)} (${fDur(t.pe-t.s)})</span></div>` : '';
+  $tip.innerHTML = `
+    <div class="t-title">${t.lot} — ${TN[t.type]}</div>
+    <div class="t-r"><span class="t-l">Wirkstoffe</span><span class="t-v">${t.agents}</span></div>
+    <div class="t-r"><span class="t-l">Modalität</span><span class="t-v">${t.mod}</span></div>
+    <div class="t-r"><span class="t-l">Therapieziel</span><span class="t-v">${dot} ${GN[t.goal]}</span></div>
+    <div class="t-r"><span class="t-l">Schema</span><span class="t-v">${SN[t.sch]}</span></div>
+    <div class="t-r"><span class="t-l">Beendigung</span><span class="t-v">${t.reason}</span></div>
+    ${planned}
+    <div class="t-hr"></div><div class="t-gl">${t.gl}</div><div class="t-hr"></div><div class="t-cm">${t.cm}</div>`;
+  $tip.classList.add('show');
+  moveTip(ev);
+}
+function moveTip(ev) {
+  const p=14;let x=ev.clientX+p,y=ev.clientY+p;const r=$tip.getBoundingClientRect();
+  if(x+r.width>innerWidth-p)x=ev.clientX-r.width-p;if(y+r.height>innerHeight-p)y=ev.clientY-r.height-p;
+  $tip.style.left=x+'px';$tip.style.top=y+'px';
+}
+</script>
+</body>
+</html>

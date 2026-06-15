@@ -22,6 +22,8 @@ publisher:
 pages:
   index.md:
     title: Startseite
+  analysebericht.md:
+    title: Analysebericht (LG-01)
   translationinfo.md:
     title: Hinweise zur Übersetzung
 
@@ -39,6 +41,7 @@ parameters:
 
 menu:
   Startseite: index.html
+  Analysebericht: analysebericht.html
   Artefakte: artifacts.html
 
 instanceOptions:
