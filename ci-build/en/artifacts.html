@@ -203,7 +203,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von <code class="language-plaintext highlighter-rouge">CarePlan</code>, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention, die durch ein definiertes Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Trägt die Therapieintention der Linie (<code class="language-plaintext highlighter-rouge">onko-therapy-intent</code>) und gehört über <code class="language-plaintext highlighter-rouge">partOf</code> zu einem übergeordneten <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>.</p>
+<p>Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> erfolgt über <code class="language-plaintext highlighter-rouge">CarePlan.encounter</code> → <code class="language-plaintext highlighter-rouge">Encounter.episodeOfCare</code> oder die Standard-Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code>.</p>
 </td>
          </tr>
          <tr>
@@ -343,7 +343,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-15 08:15:00 +0000">
+  <span title="2026-06-15 08:40:00 +0000">
     2026-06-15
   </span>
 

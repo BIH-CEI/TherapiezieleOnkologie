@@ -11,8 +11,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.145"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-outcome",
@@ -26,8 +25,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.149"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-status",
@@ -41,8 +39,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.146"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-category",
@@ -56,8 +53,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.148"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-intent",
@@ -71,8 +67,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.150"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -86,9 +81,50 @@
     "sources" : ["2.16.840.1.113883.4.642.3.232"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DiagnosisRole",
+    "title" : "DiagnosisRole",
+    "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diagnosis-role"],
+    "oids" : ["2.16.840.1.113883.4.642.3.49"],
+    "sources" : ["2.16.840.1.113883.4.642.3.49"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/episode-of-care-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EpisodeOfCareStatus",
+    "title" : "EpisodeOfCareStatus",
+    "description" : "The status of the episode of care.",
+    "systems" : ["http://hl7.org/fhir/episode-of-care-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.664"],
+    "sources" : ["2.16.840.1.113883.4.642.3.664"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/episodeofcare-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EpisodeOfCareType",
+    "title" : "Episode of care type",
+    "description" : "This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/episodeofcare-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.666"],
+    "sources" : ["2.16.840.1.113883.4.642.3.666"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/goal-achievement",
@@ -158,9 +194,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
@@ -174,8 +210,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.375"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -203,8 +238,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/request-status",
@@ -218,8 +252,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.111"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",

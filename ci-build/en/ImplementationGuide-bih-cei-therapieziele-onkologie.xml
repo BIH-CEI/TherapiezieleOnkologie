@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-06-15T08:15:17+00:00"/>
+  <date value="2026-06-15T08:40:43+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -589,7 +589,7 @@
         <reference value="StructureDefinition/onko-therapy-line"/>
       </reference>
       <name value="Onkologische Therapielinie"/>
-      <description value="Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `CarePlan`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention, die durch ein definiertes Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Trägt die Therapieintention der Linie (`onko-therapy-intent`) und gehört über `partOf` zu einem übergeordneten `OnkoCarePlan`."/>
+      <description value="Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

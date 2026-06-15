@@ -12,6 +12,18 @@
     "http://hl7.org/fhir/R4/valueset-care-plan-activity-status.html" : "CarePlanActivityStatus"
   },
   {
+    "url" : "http://hl7.org/fhir/episode-of-care-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EpisodeOfCareStatus",
+    "title" : "EpisodeOfCareStatus",
+    "description" : "The status of the episode of care.",
+    "oids" : ["2.16.840.1.113883.4.642.4.665"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-episode-of-care-status.html" : "EpisodeOfCareStatus"
+  },
+  {
     "url" : "http://hl7.org/fhir/goal-status",
     "version" : "4.0.1",
     "status" : "draft",
@@ -69,11 +81,35 @@
     "uses" : {
     },
     "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
-    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
     "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
-    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings"
+    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "DiagnosisRole",
+    "title" : "Diagnosis Role",
+    "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1054"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-diagnosis-role.html" : "DiagnosisRole"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/episodeofcare-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "EpisodeOfCareType",
+    "title" : "Episode of care type",
+    "description" : "This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1189"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-episodeofcare-type.html" : "Episode of care type"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/goal-achievement",

@@ -3,7 +3,7 @@
 ## Ressourcenprofil: Onkologische Therapielinie 
 
  
-Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `CarePlan`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention, die durch ein definiertes Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Trägt die Therapieintention der Linie (`onko-therapy-intent`) und gehört über `partOf` zu einem übergeordneten `OnkoCarePlan`. 
+Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`. 
 
 **Usages:**
 
@@ -25,25 +25,18 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.html) 
+Diese Struktur ist abgeleitet von [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html) 
 
 #### Terminology Bindings
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.html) 
+Diese Struktur ist abgeleitet von [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html) 
 
 ** Summary **
 
 Mandatory: 4 elements
- Must-Support: 9 elements
-
-**Structures**
-
-This structure refers to these other structures:
-
-* [Onkologischer CarePlan (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan)](StructureDefinition-onko-care-plan.md)
-* [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
+ Must-Support: 11 elements
 
 **Extensions**
 
@@ -59,7 +52,7 @@ This structure refers to these extensions:
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.html) 
+Diese Struktur ist abgeleitet von [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html) 
 
  **Snapshot-AnsichtView** 
 
@@ -67,19 +60,12 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.html) 
+Diese Struktur ist abgeleitet von [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html) 
 
 ** Summary **
 
 Mandatory: 4 elements
- Must-Support: 9 elements
-
-**Structures**
-
-This structure refers to these other structures:
-
-* [Onkologischer CarePlan (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan)](StructureDefinition-onko-care-plan.md)
-* [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
+ Must-Support: 11 elements
 
 **Extensions**
 
@@ -104,7 +90,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
   "name" : "OnkoTherapyLine",
   "title" : "Onkologische Therapielinie",
   "status" : "draft",
-  "date" : "2026-06-15T08:15:17+00:00",
+  "date" : "2026-06-15T08:40:43+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -113,7 +99,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `CarePlan`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention, die durch ein definiertes Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Trägt die Therapieintention der Linie (`onko-therapy-intent`) und gehört über `partOf` zu einem übergeordneten `OnkoCarePlan`.",
+  "description" : "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -136,25 +122,20 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
-  },
-  {
-    "identity" : "v2",
-    "uri" : "http://hl7.org/v2",
-    "name" : "HL7 v2 Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,
-  "type" : "CarePlan",
-  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/CarePlan",
+  "type" : "EpisodeOfCare",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
   "derivation" : "constraint",
   "differential" : {
     "element" : [{
-      "id" : "CarePlan",
-      "path" : "CarePlan"
+      "id" : "EpisodeOfCare",
+      "path" : "EpisodeOfCare"
     },
     {
-      "id" : "CarePlan.extension",
-      "path" : "CarePlan.extension",
+      "id" : "EpisodeOfCare.extension",
+      "path" : "EpisodeOfCare.extension",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
@@ -166,8 +147,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "min" : 1
     },
     {
-      "id" : "CarePlan.extension:therapyIntent",
-      "path" : "CarePlan.extension",
+      "id" : "EpisodeOfCare.extension:therapyIntent",
+      "path" : "EpisodeOfCare.extension",
       "sliceName" : "therapyIntent",
       "min" : 1,
       "max" : "1",
@@ -178,61 +159,55 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "mustSupport" : true
     },
     {
-      "id" : "CarePlan.partOf",
-      "path" : "CarePlan.partOf",
-      "type" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
-          "valueBoolean" : true
-        }],
-        "code" : "Reference",
-        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
-      }],
+      "id" : "EpisodeOfCare.status",
+      "path" : "EpisodeOfCare.status",
       "mustSupport" : true
     },
     {
-      "id" : "CarePlan.status",
-      "path" : "CarePlan.status",
-      "mustSupport" : true
-    },
-    {
-      "id" : "CarePlan.intent",
-      "path" : "CarePlan.intent",
-      "mustSupport" : true
-    },
-    {
-      "id" : "CarePlan.subject",
-      "path" : "CarePlan.subject",
-      "type" : [{
-        "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
-      }],
-      "mustSupport" : true
-    },
-    {
-      "id" : "CarePlan.period",
-      "path" : "CarePlan.period",
+      "id" : "EpisodeOfCare.diagnosis",
+      "path" : "EpisodeOfCare.diagnosis",
       "min" : 1,
       "mustSupport" : true
     },
     {
-      "id" : "CarePlan.addresses",
-      "path" : "CarePlan.addresses",
+      "id" : "EpisodeOfCare.diagnosis.condition",
+      "path" : "EpisodeOfCare.diagnosis.condition",
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.diagnosis.role",
+      "path" : "EpisodeOfCare.diagnosis.role",
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.diagnosis.rank",
+      "path" : "EpisodeOfCare.diagnosis.rank",
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.patient",
+      "path" : "EpisodeOfCare.patient",
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.managingOrganization",
+      "path" : "EpisodeOfCare.managingOrganization",
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.period",
+      "path" : "EpisodeOfCare.period",
       "min" : 1,
       "mustSupport" : true
     },
     {
-      "id" : "CarePlan.goal",
-      "path" : "CarePlan.goal",
-      "type" : [{
-        "code" : "Reference",
-        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
-      }],
+      "id" : "EpisodeOfCare.careManager",
+      "path" : "EpisodeOfCare.careManager",
       "mustSupport" : true
     },
     {
-      "id" : "CarePlan.activity",
-      "path" : "CarePlan.activity",
+      "id" : "EpisodeOfCare.team",
+      "path" : "EpisodeOfCare.team",
       "mustSupport" : true
     }]
   }

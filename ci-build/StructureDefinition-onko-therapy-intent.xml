@@ -18,7 +18,7 @@
   <name value="OnkoTherapyIntentExt"/>
   <title value="Onkologische Therapieintention (Extension)"/>
   <status value="draft"/>
-  <date value="2026-06-15T08:15:17+00:00"/>
+  <date value="2026-06-15T08:40:43+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -50,6 +50,10 @@
   <context>
     <type value="element"/>
     <expression value="Goal"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="EpisodeOfCare"/>
   </context>
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
