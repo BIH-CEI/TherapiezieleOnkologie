@@ -1,3 +1,26 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyGoalTypeVS",
+    "title" : "Onkologische Therapieziel-Art (VS)",
+    "description" : "ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyIntentVS",
+    "title" : "Onkologische Therapieintention (VS)",
+    "description" : "ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"
+  }]
 }

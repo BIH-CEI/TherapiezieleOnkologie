@@ -1,3 +1,24 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyGoalType",
+    "title" : "Onkologische Therapieziel-Art",
+    "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+    "uses" : {
+    },
+    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyIntent",
+    "title" : "Onkologische Therapieintention",
+    "description" : "Codiert die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts (kurativ, neoadjuvant, adjuvant, palliativ, Erhaltung, supportiv).",
+    "uses" : {
+    },
+    "ValueSet-onko-therapy-intent.html" : "Onkologische Therapieintention (VS)"
+  }]
 }

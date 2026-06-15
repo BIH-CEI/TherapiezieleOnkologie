@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="onko-therapy-intent"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet onko-therapy-intent</b></p><a name="en-onko-therapy-intent"> </a><a name="en-hconko-therapy-intent"> </a><ul><li>Include all codes defined in <a href="CodeSystem-onko-therapy-intent.html"><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"/>
+  <version value="0.1.0"/>
+  <name value="OnkoTherapyIntentVS"/>
+  <title value="Onkologische Therapieintention (VS)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-15T08:15:17+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+    </include>
+  </compose>
+</ValueSet>

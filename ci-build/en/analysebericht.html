@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Analysebericht (LG-01) - Implementierungsleitfaden Therapieziele Onkologie v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/analysebericht.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Analysebericht (LG-01)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Analysebericht (LG-01)</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+<p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#analysebericht-lg-01" id="markdown-toc-analysebericht-lg-01">Analysebericht LG-01</a></li>
+  <li><a href="#auftrag-und-methodik" id="markdown-toc-auftrag-und-methodik">Auftrag und Methodik</a></li>
+  <li><a href="#mcode-stu4--minimal-common-oncology-data-elements" id="markdown-toc-mcode-stu4--minimal-common-oncology-data-elements">mCODE STU4 — Minimal Common Oncology Data Elements</a></li>
+  <li><a href="#international-patient-summary-ips-und-european-patient-summary-eps" id="markdown-toc-international-patient-summary-ips-und-european-patient-summary-eps">International Patient Summary (IPS) und European Patient Summary (EPS)</a></li>
+  <li><a href="#multiple-chronic-conditions-ig-mcc" id="markdown-toc-multiple-chronic-conditions-ig-mcc">Multiple Chronic Conditions IG (MCC)</a></li>
+  <li><a href="#patient-centered-outcomes-ig-pco" id="markdown-toc-patient-centered-outcomes-ig-pco">Patient-Centered Outcomes IG (PCO)</a></li>
+  <li><a href="#esmo-enlist-2026--lines-of-systemic-therapy" id="markdown-toc-esmo-enlist-2026--lines-of-systemic-therapy">ESMO EnLiST 2026 — Lines of Systemic Therapy</a></li>
+  <li><a href="#hl7-cpg-on-fhir-cqf-recommendations" id="markdown-toc-hl7-cpg-on-fhir-cqf-recommendations">HL7 CPG-on-FHIR (CQF Recommendations)</a></li>
+  <li><a href="#weitere-relevante-initiativen" id="markdown-toc-weitere-relevante-initiativen">Weitere relevante Initiativen</a></li>
+  <li><a href="#architekturentscheidung" id="markdown-toc-architekturentscheidung">Architekturentscheidung</a></li>
+</ul>
+
+</div>
+<h3 id="analysebericht-lg-01">Analysebericht LG-01</h3>
+
+<p>Liefergegenstand <strong>LG-01</strong> des Gematik-Auftrags C002717 (BIH-CEI). Dieser Bericht analysiert sechs internationale und nationale FHIR-/Standardisierungs-Quellen auf Übertragbarkeit für die deutsche Spezifikation „Onkologische Therapieziele" und leitet daraus die Architekturentscheidung für diesen Implementation Guide ab.</p>
+
+<p><strong>Stand:</strong> Entwurf · Mai 2026<br />
+<strong>Projektleitung:</strong> Sylvia Thun · <strong>Technische Leitung FHIR:</strong> Thomas Debertshäuser</p>
+
+<p>Die Original-Fassung (Markdown-Master und docx) liegt im Repository unter <a href="https://github.com/BIH-CEI/TherapiezieleOnkologie/tree/main/docs/L01-Analyse"><code class="language-plaintext highlighter-rouge">docs/L01-Analyse/</code></a>.</p>
+
+<hr />
+
+<h3 id="auftrag-und-methodik">Auftrag und Methodik</h3>
+
+<h4 id="auftrag">Auftrag</h4>
+
+<p>Die Spezifikation „Onkologische Therapieziele" wurde am 02.04.2026 von der gematik (Vertrag C002717) beauftragt. Sie soll bis 30.09.2026 als FHIR-Implementation-Guide vorliegen, ergänzt um ein Konzept zur MII-Integration. Dieser Analysebericht (LG-01) bildet die Grundlage für die Anforderungserhebung im ersten Workshop und für das Informationsmodell sowie den IG-Entwurf in den Folgephasen.</p>
+
+<h4 id="methodik">Methodik</h4>
+
+<p>Untersucht wurden sechs internationale und nationale FHIR-/Standardisierungs-Quellen, mit Fokus auf Übertragbarkeit auf die deutsche Versorgungsrealität:</p>
+
+<ol>
+  <li><strong>mCODE STU4</strong> — Minimal Common Oncology Data Elements (HL7 International)</li>
+  <li><strong>International Patient Summary (IPS) / European Patient Summary (EPS)</strong> — generische Patientenzusammenfassungen</li>
+  <li><strong>Multiple Chronic Conditions IG (MCC)</strong> — chronische, parallele Erkrankungen, CarePlan-/Goal-Logik</li>
+  <li><strong>Patient-Centered Outcomes IG (PCO)</strong> — patientenzentrierte Ergebniskonzepte</li>
+  <li><strong>ESMO EnLiST 2026</strong> — Therapielinien-Konsens für solide Tumoren</li>
+  <li><strong>HL7 CPG-on-FHIR (CQF Recommendations)</strong> — computable Leitlinien-Repräsentation</li>
+</ol>
+
+<p>Pro Quelle ist die Analyse einheitlich strukturiert: übertragbares Muster, Anwendungsbeispiel, Lücken &amp; Lösungsansätze, direkt übernehmbare Elemente, Fazit "Was nutzen wir warum", Quellen. Den Quellen folgt eine <strong>Synthese mit Architekturentscheidung</strong>.</p>
+
+<h3 id="mcode-stu4--minimal-common-oncology-data-elements">mCODE STU4 — Minimal Common Oncology Data Elements</h3>
+
+<h4 id="mcode-stu4--analysebaustein-onkologische-therapieziele">mCODE STU4 – Analysebaustein „Onkologische Therapieziele"</h4>
+
+<p>Baustein für Liefergegenstand LG-01 · Gematik-Auftrag · BIH-CEI</p>
+
+<p><strong>Quelle:</strong> HL7 <em>Minimal Common Oncology Data Elements (mCODE) Implementation Guide</em> v4.0.0 (STU4, publiziert 16.02.2025, FHIR R4, US-Realm, Lizenz CC0-1.0). Träger: CodeX FHIR Accelerator (MITRE Corporation + American Society of Clinical Oncology). Canonical: <a href="https://hl7.org/fhir/us/mcode">hl7.org/fhir/us/mcode</a> · Build IG: <a href="https://build.fhir.org/ig/HL7/fhir-mCODE-ig/">build.fhir.org/ig/HL7/fhir-mCODE-ig</a></p>
+
+<p><strong>Status:</strong> STU4, der bislang umfangreichste Release. Rund 53 FHIR-Profile in sechs Domänen, über 103 ValueSets, mehr als 130 Beispiele. Internationaler Referenzstandard für die strukturierte Modellierung onkologischer EHR-Daten.</p>
+
+<h5 id="1-anwendungskontext-und-zielgruppe">1. Anwendungskontext und Zielgruppe</h5>
+
+<p>mCODE adressiert insbesondere:</p>
+
+<ul>
+  <li><strong>Comparative Effectiveness Analysis:</strong> Vergleich von Behandlungsergebnissen über Versorgungssysteme hinweg, um klinische Entscheidungen kooperativ zu unterstützen.</li>
+  <li><strong>NGS-Integration:</strong> Anbindung von Next-Generation-Sequencing-Daten an Therapie-Effektivitätsanalysen für Präzisionsonkologie.</li>
+  <li><strong>Zielgruppen:</strong> Krankenhausinformationssysteme und EHR-Hersteller, klinisch-onkologische Forschung, Krebsregister (NAACCR-Alignment), Strahlentherapie- und pädiatrische Onkologieanbieter, klinische Studien-Organisationen, Interoperabilitäts-Stakeholder.</li>
+</ul>
+
+<p>Für unsere Spec ist mCODE damit der zentrale Bezugspunkt zur internationalen Vergleichbarkeit oncologischer Datenstrukturen – insbesondere für <em>ProcedureIntent</em>, <em>DiseaseStatus</em> und die genomische Verknüpfung.</p>
+
+<h5 id="2-übertragbares-muster-sechs-domänen-cancerpatient-als-zentraler-hub">2. Übertragbares Muster: Sechs Domänen, CancerPatient als zentraler Hub</h5>
+
+<p>mCODE ordnet onkologische Daten in <strong>sechs miteinander verknüpfte Domänen</strong> an, das <code class="language-plaintext highlighter-rouge">CancerPatient</code>-Profil ist der zentrale Knoten.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Domäne</th>
+      <th>Schlüsselprofile</th>
+      <th>Scope</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Patient Information</strong></td>
+      <td>CancerPatient, HumanSpecimen, MCODEPatientBundle, MCODEPatientGroup</td>
+      <td>Demografie, Proben, Patient-Bundles für Datenaustausch</td>
+    </tr>
+    <tr>
+      <td><strong>Disease Characterization</strong></td>
+      <td>PrimaryCancerCondition, SecondaryCancerCondition, CancerStage, TNMStageGroup, TumorMarkerTest, Tumor, TumorSize, HistologicBehaviorAndType, HistologicGrade, TumorMorphology, CancerRiskAssessment</td>
+      <td>Diagnose, Staging (TNM + 15 Nicht-TNM-Systeme), Morphologie, Risikoassessment</td>
+    </tr>
+    <tr>
+      <td><strong>Health Assessment</strong></td>
+      <td>ECOGPerformanceStatus, KarnofskyPerformanceStatus, LanskyPlayPerformanceStatus, DeauvilleScale, BodySurfaceArea, Comorbidities, HistoryOfMetastaticCancer</td>
+      <td>Funktionsstatus, pädiatrisches Performance-Assessment, Lymphom-Response, Body-Metriken</td>
+    </tr>
+    <tr>
+      <td><strong>Genomics</strong></td>
+      <td>GenomicsReport, GenomicVariant, GenomicRegionStudied</td>
+      <td>Genomische Testergebnisse, Varianten (HGVS/ISCN), untersuchte Regionen; kompatibel mit Genomic Reporting IG</td>
+    </tr>
+    <tr>
+      <td><strong>Cancer Treatments</strong></td>
+      <td>CancerRelatedMedicationRequest, CancerRelatedMedicationAdministration, CancerRelatedSurgicalProcedure, RadiotherapyCourseSummary, RadiotherapyVolume</td>
+      <td>Medikation, Chirurgie, Strahlentherapie inkl. Modalität, Technik, Dosis</td>
+    </tr>
+    <tr>
+      <td><strong>Outcomes</strong></td>
+      <td>CancerDiseaseStatus, TumorSize</td>
+      <td>Verlaufstracking (responding, stable, progressing), Tumormessungen</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Wichtige strukturelle Prinzipien:</strong></p>
+
+<ul>
+  <li>mCODE schreibt <strong>nicht</strong> vor, welche Daten für jede*n Patient*in erfasst werden müssen. Es liefert Muster und Templates mit kontrollierten Terminologien für den Fall, dass Daten ausgetauscht werden.</li>
+  <li>Daten außerhalb der mCODE-Profile lassen sich weiterhin als Standard-FHIR-Ressourcen austauschen.</li>
+  <li>Terminologisch nutzt mCODE 14 externe Codesysteme: SNOMED CT, ICD-10-CM, ICD-O-3, LOINC, RxNorm, NCI Thesaurus, HGNC/HGVS, UCUM, CPT/ICD-10-PCS.</li>
+</ul>
+
+<h5 id="3-therapiezielrelevante-elemente">3. Therapiezielrelevante Elemente</h5>
+
+<p>Vier Bereiche von mCODE sind für „Onkologische Therapieziele" direkt anschlussfähig:</p>
+
+<ul>
+  <li><strong>Treatment Intent:</strong> Die <code class="language-plaintext highlighter-rouge">ProcedureIntent</code>-Extension (curative, palliative, diagnostic, preventive, supportive, screening) bietet das Fundament, auf dem strukturierte Therapieziele aufbauen können.</li>
+  <li><strong>Disease Status Tracking:</strong> <code class="language-plaintext highlighter-rouge">CancerDiseaseStatus</code> und das <code class="language-plaintext highlighter-rouge">ConditionStatusTrendVS</code> (responding, stable, progressing, remission) liefern das Outcome-Vokabular, auf das Therapieziele referenzieren.</li>
+  <li><strong>Staging und Prognose:</strong> Cancer-Staging-Profile und das (neue) Risk-Assessment-Framework liefern den klinischen Kontext für die Zielbestimmung.</li>
+  <li><strong>Performance Status:</strong> ECOG, Karnofsky und (für die pädiatrische Onkologie) Lansky sind Schlüsseleingaben für die Therapieziel-Entscheidung.</li>
+</ul>
+
+<h5 id="4-lücken-in-mcode-und-lösungsansätze-für-unsere-spec">4. Lücken in mCODE und Lösungsansätze für unsere Spec</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lücke / Designentscheidung in mCODE</th>
+      <th>Lösungsansatz für unsere Spec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Keine expliziten Therapieziele</strong> (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität)</td>
+      <td>Eigene Profile <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> (auf <code class="language-plaintext highlighter-rouge">Goal</code>) mit codiertem Zielart-Set; verknüpft mit <code class="language-plaintext highlighter-rouge">CarePlan</code> und <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></td>
+    </tr>
+    <tr>
+      <td><strong>Keine Therapielinien-Notation</strong></td>
+      <td>EnLiST-basierte <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code> ergänzen, mit Anschluss an mCODE-<code class="language-plaintext highlighter-rouge">CancerRelatedMedicationRequest</code></td>
+    </tr>
+    <tr>
+      <td><strong>US-Realm-Bindung</strong> (US Core 6.1.0 als Voraussetzung)</td>
+      <td>mCODE-Profile als Referenzfolie und Inspiration nutzen; eigene Profile auf MII-KDS-Onkologie verankern; Mapping-Tabelle auf mCODE-Profile als Option</td>
+    </tr>
+    <tr>
+      <td><strong>Terminologie überwiegend US-zentriert</strong> (RxNorm, ICD-10-CM)</td>
+      <td>Für DE entsprechende Pendants verankern (ATC, ICD-10-GM, OPS), mit ConceptMaps</td>
+    </tr>
+    <tr>
+      <td><strong>Kein expliziter MDT/Tumorboard-Modus</strong></td>
+      <td>Wird in der Spec über CPG-on-FHIR-Pattern abgebildet (siehe CPG-Baustein); Molekulares Tumorboard explizit als Use Case</td>
+    </tr>
+    <tr>
+      <td><strong>Patient-Reported-Outcomes</strong> nicht im Kernscope</td>
+      <td>Anbindung an PCO IG (siehe PCO-Baustein)</td>
+    </tr>
+    <tr>
+      <td><strong>Pflegeprozess</strong> zwischen STU-Releases und unserer Spec</td>
+      <td>KIG-Onko hält Mapping-Versionen synchron zu mCODE-Releases; pro Major-Release ein Review-Zyklus</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="5-direkt-übernehmbare-elemente">5. Direkt übernehmbare Elemente</h5>
+
+<ul>
+  <li><strong>ProcedureIntent-Extension</strong> als Modellierungsbasis für Treatment Intent in <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code> und <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>.</li>
+  <li><strong>CancerDiseaseStatus + ConditionStatusTrendVS</strong> als Outcome-Vokabular und Trend-Tracking-Pattern.</li>
+  <li><strong>Strukturierung in sechs Domänen</strong> als Gliederungsmuster für das Informationsmodell.</li>
+  <li><strong>Sliced ValueSets</strong> mit klar getrennten Subsets (TNM × Nicht-TNM × pädiatrische Systeme) als Vorbild für unsere eigenen Setting-/Phasen-ValueSets.</li>
+  <li><strong>Genomik-Anbindung</strong> via <code class="language-plaintext highlighter-rouge">GenomicsReport</code> als Anknüpfungspunkt für die geplante Modellierung des Molekularen Tumorboards.</li>
+</ul>
+
+<h5 id="6-fazit-was-wir-übernehmen-und-warum">6. Fazit: Was wir übernehmen und warum</h5>
+
+<p><strong>Übernehmen:</strong></p>
+<ul>
+  <li><strong>mCODE-Profile als internationale Referenzfolie</strong> für unsere onkologischen Datenstrukturen. Begründung: international etabliert, von ASCO und MITRE getragen, semantisch breit abgedeckt (Diagnose, Staging, Therapie, Outcomes, Genomik) und CC0-lizenziert. Ermöglicht Outcome-Vergleichbarkeit gegen US- und internationale Datensätze.</li>
+  <li><strong>ProcedureIntent-Extension</strong> für Treatment Intent in unseren Therapielinien- und Therapieziel-Profilen – strukturelles Vorbild, semantisch direkt nutzbar.</li>
+  <li><strong>CancerDiseaseStatus + ConditionStatusTrendVS</strong> als Outcome-Vokabular für die Therapieziel-Verlaufsdarstellung.</li>
+</ul>
+
+<p><strong>Erweitern / spezialisieren:</strong></p>
+<ul>
+  <li><strong>Eigene <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>-Ressource</strong> (auf <code class="language-plaintext highlighter-rouge">Goal</code>), die mCODE-Outcome-Vokabular referenziert, aber die Zielart strukturiert codiert (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität).</li>
+  <li><strong>MII-Anbindung statt US-Core</strong>: deutsche Datenelemente und Terminologien als primäre Interop-Basis; Mapping auf mCODE als sekundäre Beilage.</li>
+  <li><strong>Therapielinien via EnLiST</strong> (siehe EnLiST-Baustein) – mCODE bietet keine LoT-Notation; EnLiST schließt diese Lücke.</li>
+</ul>
+
+<p><strong>Nicht übernehmen / bewusst abweichen:</strong></p>
+<ul>
+  <li><strong>US-Realm-spezifische Profile</strong> (CapabilityStatement-Anforderungen, US-Core-Abhängigkeiten) – nicht relevant für die deutsche Versorgungsrealität.</li>
+  <li><strong>US-Terminologien (RxNorm, ICD-10-CM)</strong> als Primärbindung – wir nutzen ATC und ICD-10-GM, mit ConceptMaps zu mCODE.</li>
+</ul>
+
+<h5 id="7-quellen">7. Quellen</h5>
+
+<ul>
+  <li>mCODE STU4 IG: <a href="https://hl7.org/fhir/us/mcode/STU4/">hl7.org/fhir/us/mcode/STU4</a></li>
+  <li>mCODE CI Build: <a href="https://build.fhir.org/ig/HL7/fhir-mCODE-ig/">build.fhir.org/ig/HL7/fhir-mCODE-ig</a></li>
+  <li>CodeX FHIR Accelerator: <a href="https://www.hl7.org/codex/">www.hl7.org/codex</a></li>
+  <li>mCODE GitHub Repository: <a href="https://github.com/HL7/fhir-mCODE-ig">github.com/HL7/fhir-mCODE-ig</a></li>
+  <li>mCODE Data Dictionary (STU4): im IG-Verzeichnis verlinkt</li>
+  <li>Verbundene Standards: Genomic Reporting IG, NAACCR Cancer Registry Standards</li>
+</ul>
+
+<h3 id="international-patient-summary-ips-und-european-patient-summary-eps">International Patient Summary (IPS) und European Patient Summary (EPS)</h3>
+
+<h5 id="1-management-zusammenfassung">1. Management-Zusammenfassung</h5>
+
+<p>Die <strong>International Patient Summary (IPS) v2.0.0 STU 2</strong> (HL7
+International, FHIR R4, ISO/EN 27269) ist die normative Referenz für
+condition-agnostische Patientenzusammenfassungen. Die <strong>European Patient
+Summary (EPS) v1.0.0-xtehr</strong> (HL7 Europe, QA-Preview Februar 2026)
+leitet sich direkt aus IPS ab („imposes profile IPS Composition“) und
+ergänzt EU-Core-Profile und Xt-EHR-Obligations. EPS ist die strategisch
+relevante Bezugsgröße für EHDS-/EEHRxF-Konformität.</p>
+
+<p>Beide Guides liefern <strong>übertragbare strukturelle Muster</strong>, adressieren
+aber <strong>keinerlei strukturierte Therapieziele, Therapieintention oder
+Therapielinien</strong>. Das offizielle IPS-Referenzbeispiel ist selbst ein
+Mammakarzinom-Fall und illustriert die Lücke im Standard direkt. Unsere
+Spezifikation sollte daher die IPS/EPS-Architektur übernehmen, die
+Core-Profile um onkologische Tiefe erweitern und die Ziel- und
+Abschnitts-Konzepte neu definieren.</p>
+
+<h5 id="2-übertragbares-muster-composition-architektur-und-plan-of-care">2. Übertragbares Muster: Composition-Architektur und Plan of Care</h5>
+
+<p>IPS definiert eine FHIR-Composition (Document-Type LOINC 60591-5) mit 16
+sliced Sektionen: drei Required (Problems 11450-4, Medications 10160-0,
+Allergies 48765-2), eine Recommended (Immunizations 11369-6), zwölf
+Optional. Jede Sektion trägt einen LOINC-Code, menschenlesbaren
+Narrative-Text und eine definierte Ressourcen-Liste; das
+<strong>emptyReason-Muster</strong> macht „nicht vorhanden“ explizit. Der Slice
+Composition.event:careProvisioningEvent (v3-ActCode PCPR, event.period)
+ist der einzige vorhandene Anker für Behandlungszeiträume – mit
+Kardinalität 0..1 für unsere Spec zu eng. Therapieziel-relevant sind vor
+allem drei optionale Sektionen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Optionale Sektion</strong></th>
+      <th><strong>LOINC</strong></th>
+      <th><strong>Relevanz</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Plan of Care</td>
+      <td>18776-5</td>
+      <td>CarePlan + Goal – Kernansatz für Therapieziele</td>
+    </tr>
+    <tr>
+      <td>Patient Story</td>
+      <td>81338-6</td>
+      <td>Patientenzentrierte Präferenzen, Lebensqualitätsziele</td>
+    </tr>
+    <tr>
+      <td>History of Past Problems</td>
+      <td>11348-0</td>
+      <td>Rezidivnachweis, Remissionsstatus</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die Plan-of-Care-Sektion erlaubt CarePlan und
+ImmunizationRecommendation; CarePlan.goal → Goal, <strong>aber ein Goal-Profil
+ist weder in IPS noch in EPS definiert</strong>. IPS ist zudem laut General
+Principles ein <em>informatives Dokument</em> – MedicationRequests oder
+CarePlans daraus dürfen nicht aktioniert werden. Zentrale Designfrage
+für unsere Spec: Therapieziele rein deskriptiv oder workflow-fähig?</p>
+
+<h5 id="3-das-ips-referenzbeispiel-illustriert-die-lücke">3. Das IPS-Referenzbeispiel illustriert die Lücke</h5>
+
+<p>Das offizielle IPS-Bundle Bundle-IPS-examples-Bundle-01 (Patientin
+„Martha DeLarosa“, Mammakarzinom Stage II in Remission, abatement =
+2015-03) enthält Anastrozol 1 mg als MedicationStatement mit effective:
+2016-01 –&gt; (ongoing) und Freitext „treatment for breast cancer“ –
+<strong>ohne strukturierte Verknüpfung zur Diagnose, ohne Therapieintention,
+ohne CarePlan/Goal</strong>. Der „Plan of Treatment“ („Continue hormone
+medication … for total of 5 years and monitor for potential breast
+cancer recurrence“) steht ausschließlich im Narrative. Menopausal
+flushing ist als aktives Problem geführt, aber semantisch nicht mit der
+Hormontherapie verknüpft – obwohl unser Use Case „Therapieumstellung
+durch Nebenwirkungssymptome“ genau diese Kopplung braucht. Das Beispiel
+eignet sich in LG-01 als Referenzfall für eine
+Vorher-/Nachher-Gegenüberstellung gegen unsere Spec.</p>
+
+<h5 id="4-lücken-in-ipseps-und-lösungsansätze-für-unsere-spec">4. Lücken in IPS/EPS und Lösungsansätze für unsere Spec</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Lücke in IPS/EPS</strong></th>
+      <th><strong>Lösungsansatz für unsere Spec</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kein Goal-Profil</td>
+      <td>Neues Profil „Therapieziel Onkologie“ auf Basis Goal (Zielart, Condition-Bezug, Zielzeitraum, Zielstatus, Outcome-Observation)</td>
+    </tr>
+    <tr>
+      <td>Keine Therapieintention</td>
+      <td>Codiertes Feld/Extension mit ValueSet kurativ / palliativ / adjuvant / neoadjuvant / Erhaltung – Alignment mit mCODE</td>
+    </tr>
+    <tr>
+      <td>Keine Therapielinien (ESMO-Notation)</td>
+      <td>Extension auf MedicationStatement / Procedure oder Attribut am EpisodeOfCare-Profil</td>
+    </tr>
+    <tr>
+      <td>Kein EpisodeOfCare in Plan of Care</td>
+      <td>Profil „Behandlungsabschnitt“ (EpisodeOfCare) mit Bezug zu Diagnose, Therapielinie, Intention, Zieletabelle</td>
+    </tr>
+    <tr>
+      <td>Condition-Profil condition-agnostisch</td>
+      <td>Onkologische Attribute (Staging, Grading, Biomarker); mCODE PrimaryCancerCondition als Referenzspezifikation</td>
+    </tr>
+    <tr>
+      <td>Keine strukturierten Therapieabbruch-Gründe</td>
+      <td>Codiertes ValueSet (Progress / Toxizität / Patientenwunsch / Behandlungsende) als Extension</td>
+    </tr>
+    <tr>
+      <td>Medikation ↔ Diagnose ↔ Ziel nicht verknüpft</td>
+      <td>Must-Support auf reasonReference, basedOn, goal in MedicationStatement / Procedure / CarePlan</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="5-direkt-übernehmbare-elemente-1">5. Direkt übernehmbare Elemente</h5>
+
+<ul>
+  <li>
+    <p>Composition-Architektur mit Sektions-Slicing, LOINC-Codierung und
+verpflichtendem Narrative (Narrative-first-Prinzip) inkl.
+emptyReason-Muster für fehlende Daten.</p>
+  </li>
+  <li>
+    <p>Obligations-Framework (Creator/Consumer Actors mit SHALL:populate,
+SHALL:handle, SHOULD:display); EPS zeigt mit Obligation-only-Profilen
+über EU-Core ein übertragbares Muster.</p>
+  </li>
+  <li>
+    <p>SNOMED CT (GPS/MII-Kernset) und LOINC als primäre Terminologien,
+validiert über MII-Terminologieserver.</p>
+  </li>
+  <li>
+    <p>Patient (EPS) und EU-Core-Profile als Baseline für
+Personen-/Organisationsreferenzen, wenn EHDS-Kompatibilität Ziel ist.</p>
+  </li>
+</ul>
+
+<p><strong>Vor LG-01-Release zu verifizieren</strong></p>
+
+<p>LOINC-Codes und display-Strings gegen MII-Terminologieserver ·
+EHDS-Zeitleiste (Publikation 05.03.2025, Inkrafttreten 26.03.2025,
+Implementing Acts bis 26.03.2027, PS-/ePrescription-Pflicht ab
+26.03.2029) gegen Primärtext der Verordnung im EU-Amtsblatt ·
+mCODE-Feldname treatmentIntent gegen aktuelle mCODE-Version · EPS-Status
+(QA-Preview) gegen aktuellen GitHub-Stand (github.com/hl7-eu/eps) ·
+Konformitätsstrategie: volle IPS/EPS-Konformität vs. „nur aligned“ mit
+eigenem Document-Type.</p>
+
+<p><em>Quellen: hl7.org/fhir/uv/ips/STU2 · build.fhir.org/ig/hl7-eu/eps ·
+Projektbeschreibung BIH-CEI Onkologie Therapieziele</em></p>
+
+<h3 id="multiple-chronic-conditions-ig-mcc">Multiple Chronic Conditions IG (MCC)</h3>
+
+<h5 id="1-management-zusammenfassung-1">1. Management-Zusammenfassung</h5>
+
+<p>Der HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan
+Implementation Guide definiert auf Basis von FHIR R4 ein
+Care-Plan-zentriertes Modell für die strukturierte Repräsentation,
+Abfrage und den Austausch longitudinaler Versorgungspläne. Im
+<strong>Unterschied zu IPS und EPS</strong>, die primär dokumentorientierte
+Patientenzusammenfassungen mit festen Sektionen bereitstellen,
+modelliert MCC den Behandlungsplan selbst als <strong>dynamische,
+konsensbasierte Struktur</strong> aus Concerns, Goals, Interventions und
+Outcomes. MCC ist deshalb weniger als weiterer Summary-Guide relevant,
+sondern als inhaltlich näherliegende <strong>Referenz für die semantische
+Abbildung von Zielzuständen, Maßnahmen und Ergebnissen</strong>.</p>
+
+<p>Der IG profiliert CarePlan und Goal ausdrücklich und erlaubt
+strukturierte Referenzen zwischen adressierten Gesundheitsproblemen,
+übergeordneten Zielen und geplanten bzw. durchgeführten Aktivitäten. MCC
+bleibt fachlich auf Multiple Chronic Conditions im US-Kontext
+ausgerichtet und enthält <strong>keine onkologiespezifischen Konzepte</strong> für
+Therapieintention, Therapielinie, Tumoransprechen, Progress oder
+Abbruchgründe. Für eine onkologische Spezifikation ist MCC daher eher
+ein <strong>Architektur- und Workflow-Vorbild</strong> als eine direkt ausreichende
+Fachreferenz.</p>
+
+<h5 id="2-mögliche-übertragbare-elemente-aus-careplan-und-goal">2. Mögliche übertragbare Elemente aus CarePlan und Goal</h5>
+
+<p>MCC profiliert den CarePlan als zentrales Koordinationsobjekt und
+beschreibt ihn explizit als „consensus-driven dynamic plan“, der
+priorisierte Concerns, Goals und geplante Interventions verschiedener
+Versorgungsteams für mehrere Erkrankungen zusammenführt. Damit
+adressiert MCC genau den Strukturraum, der für onkologische
+Therapieziele benötigt wird: ein gemeinsames Planobjekt mit Bezug auf
+Erkrankungen, Ziele, Maßnahmen und beobachtete Outcomes.</p>
+
+<p>Elemente für onkologische Therapieziele:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>BEschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CarePlan.addresses </td>
+      <td>Referenziert Gesundheitsprobleme (Verbindung Krankheit – CarePlan)</td>
+    </tr>
+    <tr>
+      <td>CarePlan.goal</td>
+      <td>Ein oder mehrere übergreifende Ziele des Behandlungsplans</td>
+    </tr>
+    <tr>
+      <td>CarePlan.activity.reference</td>
+      <td>Repräsentiert geplante Aktivitäten (z.B. MedicationRequest, ServiceRequest)</td>
+    </tr>
+    <tr>
+      <td>CarePlan.activity.outcomeReference</td>
+      <td>Repräsentiert durchgeführte Aktivitäten oder dokumentierte Ergebnisse (z.B. Procedure, Observation)</td>
+    </tr>
+    <tr>
+      <td>Goal.addresses</td>
+      <td>Erlaubt Verknüpfung vom Therapieziel mit Problemen, die mit diesem Ziel adressiert werden (Condition, Observation, ServiceRequest, etc.)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>StructureDefintion von CarePlan:
+<a href="https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html">https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html</a></p>
+
+<p>StructureDefintion von Goal:
+<a href="https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html">https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html</a></p>
+
+<h5 id="3-relevanz-für-onkologische-therapieziele">3. Relevanz für onkologische Therapieziele</h5>
+
+<p>Für onkologische Therapieziele ist MCC vor allem dort nützlich, wo ein
+longitudinaler Behandlungsplan mit mehreren Beteiligten, konkurrierenden
+Prioritäten und auswertbaren Zielzuständen modelliert werden soll.
+Konzeptionell lassen sich mit MCC mehrere onkologisch relevante
+Zieltypen abbilden, auch wenn das IG sie nicht onkologiespezifisch
+vorgibt:</p>
+
+<ul>
+  <li>
+    <p><strong>Krankheitsbezogene Ziele:</strong> z.B. Remission erreichen, Progress
+vermeiden oder Symptomlast senken <em>(über Goal.description,
+Goal.addresses, Goal.target)</em></p>
+  </li>
+  <li>
+    <p><strong>Patientenbezogene Ziele</strong>: z.B. Funktionsniveau erhalten,
+Lebensqualität verbessern <em>(über Goal + ergänzende Observations /
+Narrative)</em></p>
+  </li>
+  <li>
+    <p><strong>Maßnahmenbezogene Ziele</strong>: z.B. Durchführung einer systemischen
+Therapie, supportive Maßnahmen, Monitoring
+<em>(über CarePlan.activity.reference,
+CarePlan.activity.outcomeReference)</em></p>
+  </li>
+  <li>
+    <p><strong>Zeitbezogene Ziele</strong>: z.B. Erreichen eines Zustands bis zu einem
+Stichtag oder innerhalb eines Therapieabschnitts <em>(über Goal.duex und
+CarePlan.period)</em></p>
+  </li>
+</ul>
+
+<p>Aber: die fachliche Präzisierung für die Onkologie fehlt.</p>
+
+<h5 id="4-lücken-von-mcc-und-lösungsansätze-für-unsere-spec">4. Lücken von MCC und Lösungsansätze für unsere Spec</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Lücke in MCC</strong></th>
+      <th><strong>Lösungsansatz für unsere Spec</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kein onkologiespezifisches Condition-/Disease-Modell</td>
+      <td>Onkologisches Condition-Profil ergänzen, z. B. mit TNM, Grading, Biomarker-Referenzen und Disease-Status</td>
+    </tr>
+    <tr>
+      <td><em>Wie in IPS/EPS: Keine Therapieintention</em></td>
+      <td><em>Siehe IPS/EPS Analyse: Codiertes Feld/Extension mit ValueSet kurativ / palliativ / adjuvant / neoadjuvant / Erhaltung – Alignment mit mCODE</em></td>
+    </tr>
+    <tr>
+      <td><em>Wie in IPS/EPS: Keine Therapielinien (ESMO-Notation)</em></td>
+      <td><em>Siehe IPS/EPS Analyse: Extension auf MedicationStatement / Procedure oder Attribut am EpisodeOfCare-Profil</em></td>
+    </tr>
+    <tr>
+      <td>Keine standardisierte Abbildung von Tumoransprechen auf die Behandlung</td>
+      <td>Observation-Profil mit Response-Assessment mit Refernez 🡪 Goal.outcomeReference</td>
+    </tr>
+    <tr>
+      <td><em>Wie in IPS/EPS: Keine strukturierten Therapieabbruch-Gründe oder Therapiewechsel</em></td>
+      <td><em>Siehe IPS/EPS Analyse: Codiertes ValueSet (Progress / Toxizität / Patientenwunsch / Behandlungsende) als Extension</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="5-fazit-direkt-übernehmbare-elemente">5. Fazit: Direkt übernehmbare Elemente</h5>
+
+<ul>
+  <li>
+    <p><strong>CarePlan</strong> als zentrales Steuerobjekt: Im MCC ist der CarePlan
+selbst interoperables Kernelement</p>
+  </li>
+  <li>
+    <p><strong>Goal</strong> als eigenständige, referenzbasierte Ressource</p>
+  </li>
+  <li>
+    <p><strong>Must-support auf zielrelevante Beziehungen</strong> z.B. CarePlan.adresses
+oder CarePlan.goal</p>
+  </li>
+  <li>
+    <p><strong>Unterscheidung</strong> zwischen <strong>geplanten und durchgeführten
+Aktivitäten</strong> (CarePlan.activity.reference und
+CarePlan.activity.outcomeReference)</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p><em>Quellen:
+https://confluence.hl7.org/spaces/PC/pages/66935243/Multiple+Chronic+Conditions+MCC+eCare+Plan·
+https://build.fhir.org/ig/HL7/fhir-us-mcc/index.html ·
+Projektbeschreibung BIH-CEI Onkologie Therapieziele</em></p>
+
+  <p><strong>goal-acceptance Extension -&gt; Hat der Patient die Behandlung
+abgelehnt / anderes Ziel?</strong></p>
+
+  <p><strong>Timeline des Relationship-Modells -&gt; Goal definieren, Activities,
+Reference checken, war gut oder nicht?, neue Behandlungsepisode</strong></p>
+
+  <p><strong>Outcome-Clustering</strong></p>
+
+  <p><strong>Activity Referenzen übernehmen (nicht alles in den Details des
+CarePlan) –&gt; wird in R5 auch so gemacht</strong></p>
+</blockquote>
+
+<h3 id="patient-centered-outcomes-ig-pco">Patient-Centered Outcomes IG (PCO)</h3>
+
+<h4 id="1-überblick">1. Überblick</h4>
+
+<p>Der <strong>Person-Centered Outcomes (PCO) Implementation Guide</strong> ist ein HL7
+FHIR-Standard (v1.0.0, STU 1) für den Austausch von Informationen zu
+patientenzentrierten Ergebnissen. Er wurde vom <strong>HL7 International /
+Patient Care Committee</strong> entwickelt und basiert auf FHIR R4 (4.0.1), US
+Realm, CC0-Lizenz.</p>
+
+<p>Der PCO IG entstand als Weiterentwicklung des MCC (Multiple Chronic
+Conditions) eCare Plan FHIR IG und unterstützt die Identifikation und
+das Tracking von persönlichen Outcome-Zielen, die für Patienten am
+wichtigsten sind.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Version</strong></td>
+      <td>1.0.0 — STU 1 (Maturity Level 2)</td>
+    </tr>
+    <tr>
+      <td><strong>FHIR-Version</strong></td>
+      <td>R4 (4.0.1)</td>
+    </tr>
+    <tr>
+      <td><strong>Herausgeber</strong></td>
+      <td>HL7 International / Patient Care Committee</td>
+    </tr>
+    <tr>
+      <td><strong>Realm</strong></td>
+      <td>US (international anwendbar)</td>
+    </tr>
+    <tr>
+      <td><strong>Lizenz</strong></td>
+      <td>CC0-1.0 (Public Domain)</td>
+    </tr>
+    <tr>
+      <td><strong>URL</strong></td>
+      <td>http://hl7.org/fhir/us/pco</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="2-kernkonzept-what-matters-most">2. Kernkonzept: „What Matters Most“</h4>
+
+<p>Der PCO IG verfolgt einen Ansatz der <strong>kollaborativen Zielsetzung</strong>:
+Statt reiner Symptombehandlung steht im Mittelpunkt, was dem einzelnen
+Patienten am wichtigsten ist. Der Prozess umfasst:</p>
+
+<ul>
+  <li>
+    <p>Identifikation persönlicher Gesundheitspriorititäten („What Matters
+Assessment“)</p>
+  </li>
+  <li>
+    <p>Festlegung personalisierter, messbarer Ziele</p>
+  </li>
+  <li>
+    <p>Bewertung von Bereitschaft und Barrieren</p>
+  </li>
+  <li>
+    <p>Kontinuierliches Monitoring des Fortschritts</p>
+  </li>
+  <li>
+    <p>Integration in umfassende Pflegepläne</p>
+  </li>
+</ul>
+
+<h4 id="3-fhir-profile">3. FHIR-Profile</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Kategorie</strong></th>
+      <th><strong>Profil</strong></th>
+      <th><strong>Beschreibung</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ziele</strong></td>
+      <td>Person-Centered Goal</td>
+      <td>Basisprofil für alle PCO-Ziele</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>GAS Goal</td>
+      <td>Goal Attainment Scaling</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PROM Goal</td>
+      <td>Patient-Reported Outcome Measures</td>
+    </tr>
+    <tr>
+      <td><strong>Assessment</strong></td>
+      <td>What Matters Assessment</td>
+      <td>Identifikation der Patientenpriorititäten</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Readiness Assessment</td>
+      <td>Bereitschaftsbewertung</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Goal Barriers Assessment</td>
+      <td>Barrieren-Analyse</td>
+    </tr>
+    <tr>
+      <td><strong>Koordination</strong></td>
+      <td>Person-Centered Care Plan</td>
+      <td>Patientenzentrierter Pflegeplan</td>
+    </tr>
+    <tr>
+      <td><strong>Outcomes</strong></td>
+      <td>GAS Score Observation</td>
+      <td>GAS-Ergebnis-Dokumentation</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PROM Score Observation</td>
+      <td>PROM-Ergebnis-Dokumentation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="4-messmethoden">4. Messmethoden</h4>
+
+<h5 id="goal-attainment-scaling-gas">Goal Attainment Scaling (GAS)</h5>
+
+<p>GAS individualisiert die Zielmessung durch Festlegung von Baseline- und
+Ziel-Erreichungsgraden für spezifische Patientenziele. Die kollaborative
+Zielsetzung mit numerischen Skalen repräsentiert verschiedene
+Erreichungsstufen.</p>
+
+<h5 id="patient-reported-outcome-measures-prom">Patient-Reported Outcome Measures (PROM)</h5>
+
+<p>PROMs nutzen validierte, standardisierte Instrumente zur Messung von
+Ergebnissen, die Patienten als wichtig erachten. Terminologisch werden
+LOINC-Codes und spezifische Value Sets (GAS Score Type, PROM Target
+Measures) verwendet.</p>
+
+<h4 id="5-anwendungsfälle">5. Anwendungsfälle</h4>
+
+<ul>
+  <li>
+    <p>Patienten mit komplexen Versorgungsbedarfen: Identifikation von
+Prioritäten und Fortschrittsverfolgung</p>
+  </li>
+  <li>
+    <p>Klinische Implementierung über das gesamte Versorgungskontinuum</p>
+  </li>
+  <li>
+    <p>Gesundheitscoaching und Care Coordination</p>
+  </li>
+  <li>
+    <p>Qualitätsmessung und Forschung</p>
+  </li>
+  <li>
+    <p>Sektorenübergreifende Integration via FHIR-Interoperabilität</p>
+  </li>
+</ul>
+
+<h4 id="6-relevanz-für-die-kig-onko-therapieziel-spezifikation">6. Relevanz für die KIG Onko Therapieziel-Spezifikation</h4>
+
+<p>Der PCO IG ist hochrelevant für die gematik-Spezifikation „Therapieziel
+Onkologie“:</p>
+
+<ul>
+  <li>
+    <p>PCO liefert ein generisches FHIR-Framework für patientenzentrierte
+Ziele — die KIG Onko Spezifikation kann darauf aufbauen</p>
+  </li>
+  <li>
+    <p>Die GAS- und PROM-Ansätze sind direkt auf onkologische Therapieziele
+anwendbar</p>
+  </li>
+  <li>
+    <p>Die „What Matters Most“-Philosophie passt zur partizipativen
+Entscheidungsfindung (Shared Decision Making) bei der
+Therapiezielfestlegung</p>
+  </li>
+  <li>
+    <p>Das Person-Centered Goal Profil kann für onkologische Use Cases
+profiliert werden</p>
+  </li>
+  <li>
+    <p>Lücke: PCO ist generisch, nicht onkologiespezifisch — die KIG Onko
+Spezifikation füllt die onkologische Lücke (z.B. Heilung,
+Lebensverlängerung, Symptomkontrolle, Lebensqualität)</p>
+  </li>
+  <li>
+    <p>Komplementarität zu mCODE: PCO adressiert Patientenziele, mCODE die
+klinische Datenstruktur — beide zusammen bilden das Gesamtbild</p>
+  </li>
+</ul>
+
+<h4 id="7-referenzen">7. Referenzen</h4>
+
+<ul>
+  <li>
+    <p><a href="https://hl7.org/fhir/us/pco/">PCO IG (Published)</a> —
+https://hl7.org/fhir/us/pco/</p>
+  </li>
+  <li>
+    <p><a href="https://build.fhir.org/ig/HL7/pco-ig/">PCO IG (CI Build)</a> —
+https://build.fhir.org/ig/HL7/pco-ig/</p>
+  </li>
+  <li>
+    <p><a href="https://hl7.org/fhir/us/mcc/">MCC eCare Plan IG</a> —
+https://hl7.org/fhir/us/mcc/</p>
+  </li>
+  <li>
+    <p><a href="https://hl7.org/fhir/us/mcode/STU4/">mCODE STU4</a> —
+https://hl7.org/fhir/us/mcode/STU4/</p>
+  </li>
+</ul>
+
+<h3 id="esmo-enlist-2026--lines-of-systemic-therapy">ESMO EnLiST 2026 — Lines of Systemic Therapy</h3>
+
+<h4 id="enlist--analysebaustein-onkologische-therapieziele">EnLiST – Analysebaustein „Onkologische Therapieziele"</h4>
+
+<p>Baustein für Liefergegenstand LG-01 · Gematik-Auftrag · BIH-CEI</p>
+
+<p><strong>Quelle:</strong> Saini KS, Koopman M, Martins-Branco D et al. <em>ESMO adaptation of Lines of Systemic Therapy (EnLiST): a consensus framework for standardising the designation of lines of therapy in solid tumours.</em> Annals of Oncology 2026;37(5):608–623. DOI: <a href="https://doi.org/10.1016/j.annonc.2026.02.008">10.1016/j.annonc.2026.02.008</a></p>
+
+<p><strong>Status:</strong> Publiziert Februar 2026, erster paneuropäischer Delphi-Konsens (26 Stakeholder, Endkonsens ≥ 87,5 %, vier Leitlinien einstimmig). Geltungsbereich solide Tumoren; hämatologische Adaption als separates Konzept.</p>
+
+<h5 id="1-problemstellung-die-enlist-adressiert">1. Problemstellung, die EnLiST adressiert</h5>
+
+<p>Die Zählung von Therapielinien war in der internationalen Onkologie bislang inkonsistent: Studienprotokolle, Real-World-Datenbanken, Erstattungssysteme und einzelne Tumorboards verwendeten unterschiedliche Definitionen von "1L", "2L", "Maintenance" oder "Re-Challenge". Folgen waren u. a. nicht vergleichbare Studienpopulationen, fehlende Reproduzierbarkeit von Outcome-Auswertungen und Schwierigkeiten in der korrekten Anwendung linienspezifischer Zulassungen.</p>
+
+<p>EnLiST stellt erstmals ein paneuropäisches Konsensvokabular bereit, das <strong>was als Linie zählt</strong>, <strong>wie Modifikationen abgegrenzt werden</strong> (New / Modified / Same) und <strong>welche Setting-Stufe zugrunde liegt</strong> (early / advanced / investigational) einheitlich regelt. Für unsere Spec ist EnLiST damit die strukturierende Achse, an der sich die Visualisierung und die FHIR-Modellierung von Therapielinien orientieren.</p>
+
+<h5 id="2-übertragbares-muster-xy-notation-drei-settings-architektur-mindestdatensatz">2. Übertragbares Muster: X.Y-Notation, Drei-Settings-Architektur, Mindestdatensatz</h5>
+
+<p>Drei strukturierende Elemente sind direkt übernehmbar:</p>
+
+<p><strong>Settings-Trennung (separate Zählung):</strong></p>
+<ul>
+  <li><strong>eLoT</strong> – Early-stage (resektabel, neoadjuvant, adjuvant, perioperativ)</li>
+  <li><strong>aLoT</strong> – Advanced-stage (lokal fortgeschritten oder metastasiert)</li>
+  <li><strong>iLoT</strong> – Investigational: SACT mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting</li>
+</ul>
+
+<p><strong>Notation pro Setting als X.Y:</strong></p>
+<ul>
+  <li>X = Gesamtzahl der <em>New LoTs</em> (links vom Punkt)</li>
+  <li>Y = Gesamtzahl der <em>Modified LoTs</em> seit der letzten New LoT (rechts vom Punkt; bei jedem X-Inkrement Reset auf 0)</li>
+  <li>Gesamtdarstellung: <code class="language-plaintext highlighter-rouge">[eLoT + aLoT] + iLoT</code>, z. B. <code class="language-plaintext highlighter-rouge">[eLoT 2.0 + aLoT 2.1] + iLoT 1.0</code></li>
+</ul>
+
+<p><strong>Drei-Änderungstypen-Logik:</strong></p>
+<ul>
+  <li><em>New LoT</em> – bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen</li>
+  <li><em>Modified LoT</em> – bei nicht-progressionsbedingten Änderungen (Intoleranz, Hinzunahme/Wechsel eines Wirkstoffs, finanzielle/logistische Gründe)</li>
+  <li><em>Same LoT</em> – bei prospektiv geplanten Änderungen (Dosis, Zeitplan, Applikationsweg, Erhaltungstherapie, Therapiepause mit unveränderter Reintroduktion)</li>
+</ul>
+
+<p><strong>Mindestdatensatz (10 Items, 100 % Delphi-Konsens):</strong></p>
+<ol>
+  <li>Clinical setting · 2. Treatment intent · 3. Datum letzte cPD · 4. Anticancer modality · 5. SACT-Agent(en) · 6. Startdatum · 7. Stoppdatum · 8. Grund des Absetzens · 9. Kommentare · 10. Lines of therapy</li>
+</ol>
+
+<p><strong>Vier Konsens-Leitlinien</strong> regeln Re-Challenge nach Therapiepause, Wechsel ohne cPD, Hinzunahme/Wegfall von Wirkstoffen (siehe Sektion 3 für Mapping auf unsere Spec).</p>
+
+<h5 id="3-anwendungsbeispiel-aus-dem-paper">3. Anwendungsbeispiel (aus dem Paper)</h5>
+
+<p>Mammakarzinom Stage III mit kurativer Intention:</p>
+<ul>
+  <li>FEC × 6 → BCS + EBRT → Tamoxifen 2 J → Letrozol 3 J geplant; Letrozol-Intoleranz, Wechsel auf Anastrozol = <code class="language-plaintext highlighter-rouge">eLoT 1.1</code> (Modified)</li>
+  <li>Isoliertes Lokalrezidiv → Mastektomie + Exemestan = <code class="language-plaintext highlighter-rouge">eLoT 2.0</code> (New)</li>
+  <li>Spätere nicht-resektable Manifestation → Ribociclib + Fulvestrant = <code class="language-plaintext highlighter-rouge">aLoT 1.0</code> (im fortgeschrittenen Setting eigene Zählung)</li>
+  <li>Phase-I LAG3-Antikörper nach cPD = <code class="language-plaintext highlighter-rouge">iLoT 1.0</code></li>
+</ul>
+
+<p>Gesamtnotation: <code class="language-plaintext highlighter-rouge">[eLoT 2.0 + aLoT 1.0] + iLoT 1.0</code>. Das Beispiel zeigt, dass die Notation gleichzeitig Zeitverlauf, Setting-Übergänge und Studienbeteiligung in kompakter Form abbildet – direkt nutzbar als Achsenmodell für unsere Visualisierung.</p>
+
+<h5 id="4-lücken-in-enlist-und-lösungsansätze-für-unsere-spec">4. Lücken in EnLiST und Lösungsansätze für unsere Spec</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lücke / Designentscheidung in EnLiST</th>
+      <th>Lösungsansatz für unsere Spec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Nur solide Tumoren</strong> im Scope; Hämatologie ausgeklammert</td>
+      <td>Setting-Achse parametrierbar (<code class="language-plaintext highlighter-rouge">lot_axis_type</code> = <code class="language-plaintext highlighter-rouge">solid-setting</code> oder <code class="language-plaintext highlighter-rouge">haem-phase</code>); Hämatologie-Adaption als separate IG-Seite</td>
+    </tr>
+    <tr>
+      <td><strong>Lokoregionale Therapien</strong> (Chirurgie, Strahlentherapie, Ablation) ohne LoT</td>
+      <td>Eigene Modalitäten-Spur in der Visualisierung, nicht in LoT-Zählung</td>
+    </tr>
+    <tr>
+      <td>Keine harte <strong>Treatment-Holiday-Dauer</strong> als Cut-off</td>
+      <td>Entitäts- und protokollspezifische Heuristiken zulassen; optional als Konfiguration</td>
+    </tr>
+    <tr>
+      <td><strong>"Locally advanced"</strong> unter aLoT geführt – tumorspezifisch diskutabel</td>
+      <td>aLoT führen, aber <code class="language-plaintext highlighter-rouge">clinicalSetting</code> codiert (early / advanced-locally / advanced-metastatic) erhalten</td>
+    </tr>
+    <tr>
+      <td><strong>Chemoradiotherapie-LoT</strong> abhängig von SACT-Dosis und klinischem Urteil</td>
+      <td>Im Mindestdatensatz optional als codiertes Kommentar-Feld "CRT included"; explizite Doku im IG</td>
+    </tr>
+    <tr>
+      <td><strong>Intent vs. Setting</strong> entkoppelt – Paper rät zur Setting-Achse als primärer Strukturierung</td>
+      <td>Beide Felder erhalten: <code class="language-plaintext highlighter-rouge">clinicalSetting</code> und <code class="language-plaintext highlighter-rouge">treatmentIntent</code> separat, Setting impliziert nicht 1:1 Intent (z. B. palliativer Frühphasen-Einsatz)</td>
+    </tr>
+    <tr>
+      <td>Kein <strong>FHIR-Profil-Set</strong> – EnLiST ist konzeptionell, nicht profiltechnisch</td>
+      <td>Eigene Profile: <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyIntent</code> (Extension), <code class="language-plaintext highlighter-rouge">OnkoClinicalSetting</code> (Extension); CodeSysteme <code class="language-plaintext highlighter-rouge">onko-lot-setting</code>, <code class="language-plaintext highlighter-rouge">onko-treatment-intent</code></td>
+    </tr>
+    <tr>
+      <td>Keine direkte <strong>Anbindung an MII KDS</strong></td>
+      <td>Mapping-Tabellen: EnLiST <code class="language-plaintext highlighter-rouge">anticancer_modality</code> × MII-Medikation; EnLiST <code class="language-plaintext highlighter-rouge">cPD</code> × oncoBox/oBDS-Progression; <code class="language-plaintext highlighter-rouge">stop_reason</code> × oBDS-Therapieendegrund</td>
+    </tr>
+    <tr>
+      <td>Keine <strong>Transformationsereignisse</strong> (auch in soliden Tumoren relevant, z. B. NSCLC → SCLC unter EGFR-TKI)</td>
+      <td>Eigenes Event-Konzept analog zur Hämatologie-Adaption; ValueSet <code class="language-plaintext highlighter-rouge">onko-transformation-event</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="5-direkt-übernehmbare-elemente-2">5. Direkt übernehmbare Elemente</h5>
+
+<ul>
+  <li><strong>X.Y-Notation</strong> mit <code class="language-plaintext highlighter-rouge">[eLoT + aLoT] + iLoT</code>-Gesamtdarstellung – als computable Repräsentation in einem <code class="language-plaintext highlighter-rouge">OnkoLineOfTherapy</code>-Profil mit Slot-basierten Komponenten</li>
+  <li><strong>Drei-Änderungstypen-Logik</strong> (New/Modified/Same) – ValueSet <code class="language-plaintext highlighter-rouge">onko-lot-change-type</code> und Pflichtfeld</li>
+  <li><strong>Mindestdatensatz mit 10 Items</strong> als MustSupport-Set des LoT-Profils</li>
+  <li><strong>Vier Konsens-Leitlinien</strong> als Invariants/Guidance im IG (z. B. <code class="language-plaintext highlighter-rouge">inv-onko-1</code>: "Re-Challenge nach Therapiepause ohne dazwischenliegendes anderes Regime ergibt Same LoT")</li>
+  <li><strong>SACT-Definition</strong> mit acht Subkategorien (zytotoxisch, endokrin, zielgerichtet, Immuntherapie, Zell-/Gentherapie, Krebsvakzine, Radiopharmaka, Sonstige) – CodeSystem <code class="language-plaintext highlighter-rouge">onko-anticancer-modality</code></li>
+  <li><strong>iLoT-Konzept</strong> als Differenzierungsachse für Studienteilnahme – essenziell für RWD-Auswertbarkeit gemischter Real-World-/Studien-Verläufe</li>
+  <li><strong>Trennung Intent / Setting / LoT-Zählung</strong> als drei orthogonale Achsen – auch als Kommunikationsmuster für Workshop 1</li>
+</ul>
+
+<h5 id="6-fazit-was-wir-übernehmen-und-warum-1">6. Fazit: Was wir übernehmen und warum</h5>
+
+<p><strong>Übernehmen:</strong></p>
+<ul>
+  <li><strong>X.Y-Notation und Drei-Settings-Architektur</strong> als zentrale Strukturachse unseres Therapielinien-Konzepts. Begründung: einziger paneuropäischer Delphi-Konsens für solide Tumoren mit hohem Konsensgrad; international anschlussfähig; existierende Alternativen (Saini &amp; Twelves 2021, NHS England, OPTUM Claims, ChemoCare) sind entweder Vorläufer oder kontextlimitiert; mCODE/PCO/IPS adressieren das Problem strukturell nicht.</li>
+  <li><strong>Mindestdatensatz mit 10 Items</strong> als MustSupport-Set. Begründung: 100 %-Konsens-Item-Liste, deckt sich semantisch mit MII-KDS-Medikation und oBDS-Therapie zu ~80 %; die im EnLiST-Mindestdatensatz zusätzlich strukturierten Felder (cPD-Datum, Treatment Intent, Stop-Reason als codiertes Set) sind in der MII teilweise abgedeckt (z. B. <em>SystemtherapieEndeGrund</em> in <code class="language-plaintext highlighter-rouge">Procedure.outcome</code> und der Onko-Verlauf), EnLiST aggregiert sie aber auf einer linienübergreifenden Ebene, die in MII bisher fehlt.</li>
+  <li><strong>Trennung von Treatment Intent und Clinical Setting</strong> als orthogonale Felder. Begründung: für deutsche Versorgung (palliative Frühphasen-Therapie, kurative Intention auch im fortgeschrittenen Setting bei Oligometastasen) ist die 1:1-Kopplung "advanced = palliativ" empirisch falsch; EnLiST entkoppelt sie sauber.</li>
+  <li><strong>iLoT-Konzept</strong> für Studienteilnahme. Begründung: in deutschen onkologischen Zentren (besonders Comprehensive Cancer Centers, NCTs) ist Studienbeteiligung Versorgungsstandard; ohne iLoT-Trennung wird die Erstattungslogik (Linien-gebundene Zulassung) verfälscht.</li>
+</ul>
+
+<p><strong>Optional langfristig erweitern (jetzt nicht im Hauptpfad):</strong></p>
+<ul>
+  <li><strong>Hämatologie-Adaption</strong> durch Phasen-Achse statt Setting-Achse. Begründung: hämatologische Patient*innen sind in deutschen Tumorzentren regelmäßig vertreten, aber ein hämatologisches EnLiST-Pendant ist nicht konsensual etabliert (außer Rajkumar 2015 für Multiples Myelom). Ohne Konsens und Evidenz würden wir uns die Spec unnötig erschweren; die Adaption wird daher als langfristige Erweiterung beschrieben, nicht als Pflichtinhalt von LG-03.</li>
+  <li><strong>Transformationsereignisse</strong> (z. B. NSCLC → SCLC unter EGFR-TKI). Begründung: klinisch relevant, aber tumorspezifisch und ohne breite Standardisierung – als optionale Extension einplanen, nicht als Pflichtfeld.</li>
+</ul>
+
+<p><strong>Bewusst offen halten:</strong></p>
+<ul>
+  <li><strong>Locally-advanced-Setting:</strong> EnLiST führt es pauschal unter aLoT. Wir halten die Setting-Codierung über ein <strong><code class="language-plaintext highlighter-rouge">extensible</code> oder <code class="language-plaintext highlighter-rouge">preferred</code> Binding</strong> offen, damit tumorspezifische Granularität (early / advanced-locally / advanced-metastatic) als Option möglich bleibt, ohne die Entscheidung im Hauptpfad zu erzwingen. Die finale Bindungsstärke ist mit der onkologischen Fachkommission abzustimmen.</li>
+  <li><strong>Reine Konzeptebene:</strong> wir liefern Profile, ValueSets, Extensions, Invariants in FHIR; das ist unser Mehrwert gegenüber dem rein konzeptionellen EnLiST.</li>
+</ul>
+
+<h5 id="7-vor-lg-01-release-zu-verifizieren">7. Vor LG-01-Release zu verifizieren</h5>
+
+<ul>
+  <li><strong>Konformitätsstrategie:</strong> EnLiST-Notation strikt oder mit Erweiterungen (Phasenachse Hämatologie, Transformationsevents) – Auswirkung auf internationalen Anschluss klären</li>
+  <li><strong>GRADE-Bewertungsangaben</strong> (qualityOfEvidence / strengthOfRecommendation) für Anbindung an S3-Leitlinien klären</li>
+  <li><strong>Status des Frameworks:</strong> "road testing" durch ESMO 2026–2027 – unsere Spec versionskompatibel zu möglichen Updates halten</li>
+  <li><strong>Onkologische Fachkommission der KIG</strong> einbinden für Validierung der Übertragbarkeit auf deutsche Versorgungsrealität (Konsiliumsärzte, Tumorboard-Strukturen). Verteilung dieses Berichts bzw. einer Kurzfassung über die <strong>AG Interoperabilität in der Onkologie</strong>.</li>
+  <li><strong>Erhaltungstherapie und CRT:</strong> Versorgungspraxis in DE gegen EnLiST-Auslegung spiegeln. EnLiST behandelt prospektiv geplante Erhaltungstherapie als <em>Same LoT</em> (z. B. CDK4/6-Inhibitor-Maintenance, Olaparib-Maintenance, FOLFIRINOX-TNT rectal); das passt für solide Tumoren. Hämatologische Erhaltungs- und Konsolidierungstherapie folgt einer anderen Logik (Induktion–Konsolidierung–Maintenance als eine Linie) und ist außerhalb des Hauptscope.</li>
+</ul>
+
+<h5 id="8-quellen">8. Quellen</h5>
+
+<ul>
+  <li>Saini KS, Koopman M, Martins-Branco D et al. <em>ESMO adaptation of Lines of Systemic Therapy (EnLiST): a consensus framework for standardising the designation of lines of therapy in solid tumours.</em> Annals of Oncology 2026;37(5):608–623. DOI: <a href="https://doi.org/10.1016/j.annonc.2026.02.008">10.1016/j.annonc.2026.02.008</a></li>
+  <li>Saini KS, Twelves C. <em>Determining lines of therapy in patients with solid cancers: a proposed new systematic and comprehensive framework.</em> Br J Cancer 2021;125(2):155–163. (EnLiST-Vorgänger)</li>
+  <li>Rajkumar SV, Richardson PG, San Miguel JF. <em>Guidelines for determination of the number of prior lines of therapy in multiple myeloma.</em> Blood 2015;126(7):921–922. (Hämatologie-Vorbild für Multiples Myelom, außerhalb des Hauptscope unserer Spec)</li>
+</ul>
+
+<h3 id="hl7-cpg-on-fhir-cqf-recommendations">HL7 CPG-on-FHIR (CQF Recommendations)</h3>
+
+<h4 id="hl7-cpg-on-fhir--analysebaustein-onkologische-therapieziele">HL7 CPG-on-FHIR – Analysebaustein „Onkologische Therapieziele"</h4>
+
+<p>Baustein für Liefergegenstand LG-01 · Gematik-Auftrag · BIH-CEI</p>
+
+<p><strong>Quelle:</strong> HL7 <em>Clinical Practice Guidelines (CPG-on-FHIR) Implementation Guide</em> v2.0.0 STU2 (CI-Build Mai 2026; Package <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.cpg#2.0.0</code>, FHIR R4). Maintained durch HL7 Clinical Decision Support / Clinical Quality Framework. Untersuchte Seiten: <em>Methodology</em>, <em>Profiles</em>. URLs: <a href="https://build.fhir.org/ig/HL7/cqf-recommendations/en/methodology.html">build.fhir.org/ig/HL7/cqf-recommendations/en/methodology.html</a> · <a href="https://build.fhir.org/ig/HL7/cqf-recommendations/en/profiles.html">build.fhir.org/ig/HL7/cqf-recommendations/en/profiles.html</a></p>
+
+<p><strong>Status:</strong> STU2, methodisch ausgereift, in Produktion u. a. bei CDC Opioid und WHO Antenatal Care.</p>
+
+<h5 id="1-übertragbares-muster-referenzierbare-leitlinieninhalte">1. Übertragbares Muster: Referenzierbare Leitlinieninhalte</h5>
+
+<p>CPG-on-FHIR ist für unsere Spec primär als <strong>Referenzrahmen für Leitlinieninhalte</strong> relevant. Statt der vollen computable Tiefe (CQL-Bibliotheken, ausführbare Pathway-Engine) nutzen wir die Profil- und Verlinkungslogik, um existierende Leitlinien – die parallel über AWMF erschlossen werden – strukturiert in unseren Verläufen zugänglich zu machen.</p>
+
+<p>Die zentralen übertragbaren Elemente sind:</p>
+
+<ul>
+  <li><strong>Reasoning-Kernressourcen:</strong> <code class="language-plaintext highlighter-rouge">Library</code> (CQL-Logik bei Bedarf), <code class="language-plaintext highlighter-rouge">ActivityDefinition</code>, <code class="language-plaintext highlighter-rouge">PlanDefinition</code>, <code class="language-plaintext highlighter-rouge">Measure</code>.</li>
+  <li><strong>Drei PlanDefinition-Anwendungen:</strong> <code class="language-plaintext highlighter-rouge">CPGRecommendationDefinition</code> (Event-Condition-Action-Regel), <code class="language-plaintext highlighter-rouge">CPGStrategyDefinition</code> (sequenzierte Aktivitäten), <code class="language-plaintext highlighter-rouge">CPGPathwayDefinition</code> (längsschnittliche Orchestrierung).</li>
+  <li><strong>Aktivitäts-Workflow Definition → Request → Event:</strong> Pro Aktivitätstyp je ein Definitions-, Request- und Event-Profil mit <code class="language-plaintext highlighter-rouge">CPG</code>-Präfix; Verknüpfung über <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> und <code class="language-plaintext highlighter-rouge">basedOn</code>. Damit wird <em>Soll</em> (Empfehlung) vom <em>Ist</em> (verordnete bzw. verabreichte Therapie) sauber getrennt.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">relatedArtifact</code> und <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code></strong> als Verlinkungs-Mechanik zu normativen Leitlinienquellen – der Kernhebel für unsere "Verweisbild"-Logik.</li>
+  <li><strong>Optionale Bewertungs-Extensions</strong> (<code class="language-plaintext highlighter-rouge">qualityOfEvidence</code>, <code class="language-plaintext highlighter-rouge">strengthOfRecommendation</code>, <code class="language-plaintext highlighter-rouge">directionOfRecommendation</code>); für die deutsche Versorgung referenzieren wir primär die <strong>S3-Leitlinien</strong> mit ihrem AWMF-Bewertungsschema; Mapping auf ESMO und weitere Evidenzsysteme kann später ergänzt werden, ist aber für die Erstversion nicht zwingend.</li>
+</ul>
+
+<h5 id="2-anwendungsmuster-leitlinienkonformität-vs-abweichung">2. Anwendungsmuster: Leitlinienkonformität vs. Abweichung</h5>
+
+<p>In unserer Spec wird CPG-on-FHIR überall dort eingesetzt, wo <strong>eine referenzierbare Leitlinienempfehlung existiert</strong>. Liegt sie nicht vor oder weicht der konkrete Fall davon ab – etwa bei <em>patientenseitiger Abweichung</em> oder <em>Shared Decision Making</em> – übernimmt die CarePlan/Goal-Logik (siehe IPS/MCC/PCO-Bausteine) die ausführliche Beschreibung, ggf. mit eigenen Evidenzangaben.</p>
+
+<p>Diese Asymmetrie spiegelt die Versorgungsrealität (15–30 % strukturierte Abweichung nach WiZen-, NCCN- und mCRC-AIO-Daten):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Situation</th>
+      <th>Modellierung</th>
+      <th>Visualisierung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Leitlinienkonform</td>
+      <td>Verweis (<code class="language-plaintext highlighter-rouge">instantiatesCanonical</code>) auf <code class="language-plaintext highlighter-rouge">CPGRecommendationDefinition</code> / <code class="language-plaintext highlighter-rouge">CPGPathwayDefinition</code></td>
+      <td>Kompakt: "folgt S3-Leitlinie X, Empfehlung Y"</td>
+    </tr>
+    <tr>
+      <td>Bewusste Abweichung (Präferenz, Komorbidität, Studienteilnahme)</td>
+      <td><code class="language-plaintext highlighter-rouge">CPGCarePlan</code> mit eigener Beschreibung; <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> bleibt als "abgewichen von" sichtbar</td>
+      <td>Parallele Spur mit Begründung</td>
+    </tr>
+    <tr>
+      <td>Unbewusste Abweichung (Versorgungsdrift)</td>
+      <td><code class="language-plaintext highlighter-rouge">CPGCarePlan</code> + <code class="language-plaintext highlighter-rouge">CPGDetectedIssue</code>-Flag</td>
+      <td>Differenz sichtbar, Audit-Anker</td>
+    </tr>
+    <tr>
+      <td>Kontraindizierte Empfehlung</td>
+      <td><code class="language-plaintext highlighter-rouge">CPGCarePlan</code> + <code class="language-plaintext highlighter-rouge">CPGFlag</code> / <code class="language-plaintext highlighter-rouge">CPGRecordDetectedIssueTask</code> mit Begründung</td>
+      <td>Empfehlung explizit als "nicht angewandt – Kontraindikation"</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="3-lücken-in-cpg-on-fhir-und-lösungsansätze-für-unsere-spec">3. Lücken in CPG-on-FHIR und Lösungsansätze für unsere Spec</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lücke / Designentscheidung</th>
+      <th>Lösungsansatz für unsere Spec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CPG-Personas / Activity Type / Common Process CodeSysteme</strong> sind international gehalten (US-/CDC-/WHO-zentriert)</td>
+      <td>Eigene CodeSysteme <code class="language-plaintext highlighter-rouge">onko-personas</code>, <code class="language-plaintext highlighter-rouge">onko-activity-type</code> ableiten; Mapping-Tabelle auf CPG-Common erstellen; bei generischen Konzepten direkt CPG-Common nutzen</td>
+    </tr>
+    <tr>
+      <td><strong>Kein Bewertungssystem vorgeschrieben</strong></td>
+      <td>Primärbezug <strong>S3-Leitlinien (AWMF)</strong>; optional über ConceptMap auf GRADE und ESMO Magnitude of Clinical Benefit Scale (MCBS) abbildbar – nicht im Hauptpfad</td>
+    </tr>
+    <tr>
+      <td><strong>IPS als Interop-Basis</strong> ist im CPG-IG empfohlen, aber unvollständig</td>
+      <td>Für unsere Spec <strong>MII KDS-Onkologie</strong> als primärer Interop-Basis; Mapping auf IPS/EPS für EHDS-Anschluss separat</td>
+    </tr>
+    <tr>
+      <td><strong>MDT-Logik nicht explizit modelliert</strong> – kein "Tumorboard-Entscheidung als Pathway-Knoten"-Pattern</td>
+      <td>Eigene <code class="language-plaintext highlighter-rouge">OnkoTumorboardDecision</code>-Aktivität (auf <code class="language-plaintext highlighter-rouge">CPGServiceRequestActivity</code> basierend) mit <code class="language-plaintext highlighter-rouge">OnkoClinicalImpression</code> als Event; Molekulares Tumorboard als Sonderfall</td>
+    </tr>
+    <tr>
+      <td><strong>CarePlan-Detail bei Abweichung</strong> ist im IG nur skizziert, nicht als Pflicht-Pattern ausformuliert</td>
+      <td>Pflicht-Pattern in unserer Spec: bei Abweichung von einer referenzierten Recommendation MUSS ein <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>-Detail mit codiertem <code class="language-plaintext highlighter-rouge">OnkoDetectedIssue</code> (deviation-reason) hinterlegt werden</td>
+    </tr>
+    <tr>
+      <td><strong>Versions-Pflege</strong> zwischen Leitlinien-Update und IG-Release ist Trägerverantwortung – kein Standardprozess</td>
+      <td>KIG-Onko-Pflegeprozess definieren: Versionierung an S3-Leitlinien-Updates des Leitlinienprogramms Onkologie gekoppelt</td>
+    </tr>
+    <tr>
+      <td><strong>Mapping ist Pflicht</strong> – IPS und andere Standards nie vollständig</td>
+      <td>Mapping als eigenes Lieferobjekt im IG ausweisen (analog DEQM, SDC); ConceptMaps für ICD-10-GM × SNOMED, oBDS × FHIR-Profile, MII-Module × Onko</td>
+    </tr>
+    <tr>
+      <td><strong>Patientensicht / Patient-Reported-Outcomes</strong> sind im CPG-Kern nicht prominent</td>
+      <td>Anbindung an PCO IG ergänzen (siehe PCO-Baustein) – insbesondere für Shared Decision Making und Abweichungsbegründungen aus Patientenperspektive</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="4-direkt-übernehmbare-elemente">4. Direkt übernehmbare Elemente</h5>
+
+<ul>
+  <li><strong>PlanDefinition-Pathway-Pattern</strong> als natürliche Modellierungsform für onkologische Behandlungspfade (z. B. mKRK 1L → 2L → 3L als <code class="language-plaintext highlighter-rouge">CPGPathwayDefinition</code>, einzelne Linien als <code class="language-plaintext highlighter-rouge">CPGStrategyDefinition</code>, konkrete Therapieentscheidungen als <code class="language-plaintext highlighter-rouge">CPGRecommendationDefinition</code>).</li>
+  <li><strong>Definition–Request–Event-Triade</strong> als Achsenmodell: Definition = normative Empfehlung, Request = geplante Linie, Event = tatsächlich verabreichte Therapie.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> + <code class="language-plaintext highlighter-rouge">relatedArtifact</code></strong> als verbindlicher Verweis auf die S3-Leitlinienempfehlung.</li>
+  <li><strong>Optionale Bewertungs-Extensions</strong> für Empfehlungen – primär getragen durch S3-Empfehlungsstärke und LoE, optional gemappt auf GRADE.</li>
+  <li><strong>CRMI (Canonical Resource Management Infrastructure)</strong> für Lifecycle-Management, Versionierung, Paketierung.</li>
+  <li><strong>Shareable-/Publishable-Capability-Profile</strong> als Pflicht für alle definitorischen Ressourcen – sorgt für konsistente Metadaten.</li>
+</ul>
+
+<h5 id="5-fazit-was-wir-übernehmen-und-warum">5. Fazit: Was wir übernehmen und warum</h5>
+
+<p><strong>Übernehmen (referenziert, nicht explizit ausgebaut):</strong></p>
+<ul>
+  <li><strong>CPG-on-FHIR als Referenzrahmen</strong> für die Verlinkung zu Leitlinienempfehlungen. Wir nutzen die Profil- und Verlinkungsmechanik, nicht die volle computable Tiefe – sofern keine ausführbare Pathway-Logik benötigt wird.</li>
+  <li><strong>PlanDefinition mit drei Anwendungen</strong> (Pathway / Strategy / Recommendation) als zentrale Strukturressource für referenzierbare Behandlungspfade.</li>
+  <li><strong>Definition–Request–Event-Pattern</strong> als Modellierung jedes Therapiebausteins – Voraussetzung für <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code>-basierte Adhärenzauswertung.</li>
+  <li><strong>Verweisbild-/Detailbild-Asymmetrie</strong> (Leitlinie verlinkt, CarePlan ausführlich bei Abweichung).</li>
+  <li><strong>Bewertungs-Extensions optional</strong> unterstützen; primär referenzieren wir <strong>S3-Leitlinien-Empfehlungsstärken und LoE</strong>, weitere Systeme (GRADE, ESMO-MCBS) später als ConceptMap-Anhang.</li>
+</ul>
+
+<p><strong>Erweitern / spezialisieren:</strong></p>
+<ul>
+  <li><strong>Eigene <code class="language-plaintext highlighter-rouge">Onko</code>-Profile</strong> auf CPG-Basis (<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, <code class="language-plaintext highlighter-rouge">OnkoTumorboardDecision</code>, <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>, <code class="language-plaintext highlighter-rouge">OnkoDetectedIssue</code>). Begründung: deutsche Versorgungsstrukturen (Tumorboard-Pflicht, Konsiliumssystem, DKG-Quality-Indicators) benötigen spezifische Erweiterungen.</li>
+  <li><strong>Pflicht-Pattern für CarePlan-Detail bei Abweichung</strong> statt nur skizzierter Möglichkeit. Begründung: macht Abweichungsdokumentation auditierbar (relevant für WiZen-artige Versorgungsforschung und QI-Erfüllung).</li>
+  <li><strong>MII KDS-Onkologie statt IPS</strong> als primäre Interop-Basis. Begründung: deutsche Realität, etablierte Datenflüsse aus DIZ/oncoBox/oBDS; IPS/EPS-Anschluss als sekundäre Mapping-Schicht für EHDS-Konformität.</li>
+</ul>
+
+<p><strong>Nicht übernehmen / bewusst abweichen:</strong></p>
+<ul>
+  <li><strong>CPG-internationale CodeSysteme</strong> (Personas, Activity Type, Process) im Original. Stattdessen eigene <code class="language-plaintext highlighter-rouge">onko-*</code> CodeSysteme mit Mapping-Tabelle auf CPG-Common.</li>
+  <li><strong>Reine Ableitung von IPS-Composition</strong> für Patient Summary. Begründung: für unseren Use Case "Therapieziel &amp; Linien" reicht IPS-Komposition nicht – siehe IPS/EPS-Baustein.</li>
+</ul>
+
+<h5 id="6-quellen">6. Quellen</h5>
+
+<ul>
+  <li>HL7 <em>CPG-on-FHIR IG</em> v2.0.0 STU2 (CI-Build Mai 2026). Methodology: <a href="https://build.fhir.org/ig/HL7/cqf-recommendations/en/methodology.html">build.fhir.org/ig/HL7/cqf-recommendations/en/methodology.html</a> · Profiles: <a href="https://build.fhir.org/ig/HL7/cqf-recommendations/en/profiles.html">build.fhir.org/ig/HL7/cqf-recommendations/en/profiles.html</a></li>
+  <li>HL7 <em>Clinical Quality Language (CQL)</em>: <a href="https://cql.hl7.org/">cql.hl7.org</a></li>
+  <li>HL7 <em>Canonical Resource Management Infrastructure (CRMI)</em> IG</li>
+  <li>AWMF Regelwerk Leitlinien (Empfehlungsstärken, LoE): <a href="https://www.awmf.org/regelwerk/">awmf.org/regelwerk</a></li>
+  <li>Verwandte Specification IGs: Quality Measure IG, DEQM, SDC (Structured Data Capture), EBM-on-FHIR</li>
+</ul>
+
+<h3 id="weitere-relevante-initiativen">Weitere relevante Initiativen</h3>
+
+<h4 id="weitere-relevante-initiativen-1">Weitere relevante Initiativen</h4>
+
+<p>Baustein für Liefergegenstand LG-01 · Gematik-Auftrag · BIH-CEI</p>
+
+<p>Zwei weitere Initiativen sind für den Kontext dieser Spezifikation relevant, wurden hier aber bewusst nicht in der gleichen Tiefe analysiert wie die in Kapitel 3 untersuchten Standards. Sie werden im weiteren Projektverlauf — insbesondere in der Phase LG-05 (MII-Integrationskonzept) — eng angebunden.</p>
+
+<h5 id="mii-erweiterungsmodul-onkologie">MII-Erweiterungsmodul Onkologie</h5>
+
+<p>Das MII-Erweiterungsmodul Onkologie ist die nationale FHIR-Spezifikation für die strukturierte Erfassung onkologischer Versorgungsdaten in der Medizininformatik-Initiative. Es baut auf dem MII-Kerndatensatz auf, integriert die Datensätze des oBDS (onkologischer Basisdatensatz, ADT/GEKID) und liefert die Datenelemente, mit denen die deutschen Datenintegrationszentren (DIZ) und Cancer Centers heute arbeiten.</p>
+
+<p>Diese Spezifikation <strong>baut auf dem MII-Erweiterungsmodul Onkologie auf</strong>: die in unserer Spec eingeführten Profile (z. B. <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>) referenzieren die MII-Profile als Datenelemente-Basis. Auf eine eigene Tiefenanalyse wird hier verzichtet, weil die Ausschreibung explizit darauf aufbaut und in Phase LG-05 ein <strong>schriftliches Integrationskonzept</strong> in das MII-Erweiterungsmodul vorgesehen ist, das die finale Verzahnung herstellt.</p>
+
+<p>Ergänzend ist das BMBF-geförderte <strong>PM4Onko</strong> (Personalisierte Medizin für die Onkologie) als komplementäre Initiative zu nennen — Miteinbeziehung erfolgt im Rahmen der Workshop-Phase über die Comprehensive Cancer Centers und NCTs.</p>
+
+<p>Quellen:</p>
+<ul>
+  <li>MII Kerndatensatz Modul Onkologie: <a href="https://simplifier.net/medizininformatikinitiative-modulonkologie">simplifier.net/medizininformatikinitiative-modulonkologie</a></li>
+  <li>MII GitHub: <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie">github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie</a></li>
+  <li>oBDS / ADT-GEKID: Klinische Krebsregister, Datenstandard der Gesellschaft der epidemiologischen Krebsregister in Deutschland</li>
+</ul>
+
+<h5 id="european-common-cancer-data-model-hl7-europe">European Common Cancer Data Model (HL7 Europe)</h5>
+
+<p>Das <strong>European Common Cancer Data Model</strong> ist eine HL7-Europe-Initiative zur gemeinsamen Strukturierung onkologischer Daten auf europäischer Ebene. Es zielt darauf ab, EHDS-konforme Datenaustausch- und Auswertungsstrukturen für Krebspatient*innen über Sektoren- und Ländergrenzen hinweg zu ermöglichen.</p>
+
+<p>Der Reifegrad ist derzeit <strong>konzeptionell und logisch</strong>: es liegen konzeptuelle und logische Modelle vor, aber <strong>noch keine validierten FHIR-Profile</strong>. Eine direkte Übernahme in unsere Spec ist daher zum jetzigen Zeitpunkt nicht möglich. Die Initiative ist gleichwohl wichtig zu beobachten, weil:</p>
+
+<ul>
+  <li>sie ein natürliches <strong>Andockziel für EHDS-/EPS-Konformität</strong> im onkologischen Kontext darstellt,</li>
+  <li>die in dieser Spec entstehenden Modelle (insb. die <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>- und <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>-Strukturen, der CarePlan-/Goal-Pfad und die Leitlinienreferenz-Mechanik) <strong>sehr wahrscheinlich Eingang in zukünftige Versionen</strong> des Common Cancer Data Model finden werden,</li>
+  <li>eine bidirektionale Mapping-Strategie schon jetzt mitgedacht werden sollte, um spätere Konvergenz zu erleichtern.</li>
+</ul>
+
+<p>Quelle: <a href="https://build.fhir.org/ig/hl7-eu/cancer-common/index.html">build.fhir.org/ig/hl7-eu/cancer-common</a></p>
+
+<h5 id="konsequenz-für-die-spec">Konsequenz für die Spec</h5>
+
+<p>Beide Initiativen sind in der Architekturentscheidung implizit berücksichtigt:</p>
+
+<ul>
+  <li><strong>MII-Erweiterungsmodul Onkologie</strong> ist in Schicht 4 (Datenelemente &amp; Terminologie) der tragende Standard und wird in LG-05 mit einem Integrationskonzept formal angeschlossen.</li>
+  <li><strong>European Common Cancer Data Model</strong> wird über die EHDS-/EPS-Mapping-Schicht (siehe IPS/EPS-Baustein) anschlussfähig gehalten; eine eigene Profilbindung ist zum jetzigen Zeitpunkt nicht sinnvoll.</li>
+</ul>
+
+<h3 id="architekturentscheidung">Architekturentscheidung</h3>
+
+<h4 id="architekturentscheidung--spezifikation-onkologische-therapieziele">Architekturentscheidung – Spezifikation „Onkologische Therapieziele"</h4>
+
+<p>Baustein für Liefergegenstand LG-01 · Gematik-Auftrag · BIH-CEI</p>
+
+<h5 id="kernaussage">Kernaussage</h5>
+
+<p>Die Spezifikation beruht auf vier Schichten mit klarer Rollenverteilung und einem expliziten Fallback-Pfad:</p>
+
+<p><img src="architektur_stack.png" alt="Vier-Schichten-Architektur" /></p>
+
+<h5 id="rollen-der-vier-schichten">Rollen der vier Schichten</h5>
+
+<p><strong>Schicht 1 – Therapielinien-Strukturachse (EnLiST):</strong> liefert die internationale Konsensnotation für Linien, Settings und Änderungstypen. Definiert <em>was</em> gezählt wird und <em>wie</em> es dargestellt wird. Konzeptionell, nicht profiltechnisch.</p>
+
+<p><strong>Schicht 2 – Methodik &amp; computable Repräsentation (CPG-on-FHIR):</strong> liefert die Vorgehensweise (Select → Represent → Translate → Validate, L1–L4-Continuum) und das FHIR-Profil-Set (PlanDefinition, ActivityDefinition, Library, Definition–Request–Event-Triade). Wird im <strong>Primärpfad</strong> verwendet: existiert für den Fall eine computable Leitlinienempfehlung, wird sie via <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> referenziert – kompakte Darstellung, keine Wiederholung des normativen Inhalts.</p>
+
+<p><strong>Schicht 3 – Plan- und Ziel-Logik (CarePlan / Goal):</strong> liefert die generische Repräsentation des realen Versorgungsverlaufs. Wird im <strong>Fallback</strong> verwendet:</p>
+<ol>
+  <li>wenn für den klinischen Fall keine computable Leitlinienempfehlung existiert (Off-Label, seltene Tumoren, Studienteilnahme, palliative Sondersituationen);</li>
+  <li>wenn der reale Verlauf von der Leitlinie abweicht (bewusst, unbewusst oder kontraindiziert) – dann wird der CarePlan zum Detailbild neben dem Verweisbild auf die Leitlinie.</li>
+</ol>
+
+<p>Quellen für das Plan-/Ziel-Pattern: MCC eCare Plan, mCODE-Treatment-Pattern, ergänzt um die Inhaltsstruktur aus IPS (Plan-of-Care-Sektion).</p>
+
+<p><strong>IPS/EPS als Boundary Exchange Format – verpflichtend zu berücksichtigen:</strong> IPS ist in dieser Architektur <strong>kein</strong> Fallback-Standard, sondern ein <strong>Brückenformat</strong> an den Sektorengrenzen. Konkrete Rollen:</p>
+
+<ul>
+  <li><strong>Prepopulate:</strong> Beim Übergang von Versorgungssektor zu Versorgungssektor (z. B. Klinikaufnahme nach ambulanter Vorgeschichte, Reha-Verlegung) wird unsere Spec aus einem IPS-/EPS-Dokument <em>vorbefüllt</em> – Diagnosen, Medikation, Allergien, ggf. Therapieabschnitte werden übernommen.</li>
+  <li><strong>Writeback:</strong> Beim Sektorenwechsel in die Gegenrichtung schreiben wir die aktuelle Therapieziel-/Therapielinien-Sicht so in ein IPS-/EPS-Dokument zurück, dass die Folgesektoren sie verlustarm lesen können.</li>
+  <li><strong>EHDS-Anschluss:</strong> EPS ist die strategische Bezugsgröße für EHDS-/EEHRxF-Konformität und damit hochrelevant für den <strong>Datenaustausch innerhalb Europas</strong>.</li>
+</ul>
+
+<p>Daraus folgt: Unsere Spec MUSS ein <strong>IPS-/EPS-Mapping</strong> als eigenes Lieferobjekt führen und die Boundary-Transactions sauber abbilden. Die Empfehlung „Plan-/Ziel-Quelle ist nicht IPS" gilt nur für den internen Modellierungspfad, nicht für die Sektorengrenze.</p>
+
+<p><strong>Schicht 4 – Datenelemente &amp; Terminologie (MII Onkologie):</strong> liefert die deutschen Datenelemente und Terminologien als primäre Interoperabilitätsbasis. Anschluss an EHDS via Mapping auf IPS/EPS als sekundäre Schicht.</p>
+
+<h5 id="fallback-logik-wann-primärpfad-wann-fallback">Fallback-Logik: wann Primärpfad, wann Fallback</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Situation</th>
+      <th>Schicht 2 (CPG)</th>
+      <th>Schicht 3 (CarePlan/Goal)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Leitliniengerechte 1L bei häufigem Tumor (z. B. KRK mFOLFOX6)</td>
+      <td>Primär – <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> auf normative Recommendation</td>
+      <td>Optional – kompakter CarePlan als Container für Verweis</td>
+    </tr>
+    <tr>
+      <td>Bewusste Abweichung (Patient*innenpräferenz, Komorbidität)</td>
+      <td>Verweis bleibt</td>
+      <td><strong>Fallback aktiv</strong> – CarePlan mit Detailbeschreibung + <code class="language-plaintext highlighter-rouge">CPGDetectedIssue</code></td>
+    </tr>
+    <tr>
+      <td>Seltene Tumoren / Off-Label / keine computable Leitlinie</td>
+      <td>–</td>
+      <td><strong>Fallback aktiv</strong> – CarePlan + Goal als alleinige Repräsentation</td>
+    </tr>
+    <tr>
+      <td>Studienteilnahme (iLoT in EnLiST)</td>
+      <td>Wenn Studienprotokoll als CPG vorliegt: Verweis</td>
+      <td>Sonst Fallback – CarePlan referenziert ResearchStudy</td>
+    </tr>
+    <tr>
+      <td>Versorgungsdrift / unbewusste Abweichung</td>
+      <td>Verweis bleibt</td>
+      <td><strong>Fallback aktiv</strong> – CarePlan + <code class="language-plaintext highlighter-rouge">CPGDetectedIssue</code> als Audit-Anker</td>
+    </tr>
+    <tr>
+      <td>Tumorboard-Entscheidung mit eigener Empfehlung</td>
+      <td>Verweis auf S3-Leitlinie + <code class="language-plaintext highlighter-rouge">OnkoTumorboardDecision</code> als ergänzende Recommendation</td>
+      <td>CarePlan als Container; bei Abweichung zusätzlich Fallback</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="implikation-für-die-profile">Implikation für die Profile</h5>
+
+<p>Die FHIR-Profile der Spec gliedern sich entsprechend:</p>
+
+<ul>
+  <li><strong>EnLiST-konforme Profile:</strong> <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyIntent</code>-Extension, <code class="language-plaintext highlighter-rouge">OnkoClinicalSetting</code>-Extension</li>
+  <li><strong>CPG-on-FHIR-basierte Profile (Primärpfad):</strong> <code class="language-plaintext highlighter-rouge">OnkoPathwayDefinition</code> (auf <code class="language-plaintext highlighter-rouge">CPGPathwayDefinition</code>), <code class="language-plaintext highlighter-rouge">OnkoStrategyDefinition</code>, <code class="language-plaintext highlighter-rouge">OnkoRecommendationDefinition</code>, <code class="language-plaintext highlighter-rouge">OnkoMedicationRequest</code> (auf <code class="language-plaintext highlighter-rouge">CPGMedicationRequest</code>) etc.</li>
+  <li><strong>CarePlan/Goal-Profile (Fallback):</strong> <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> (auf <code class="language-plaintext highlighter-rouge">CPGCarePlan</code>, der wiederum CarePlan profiliert), <code class="language-plaintext highlighter-rouge">OnkoGoal</code> (mit Therapieziel-Codierung), <code class="language-plaintext highlighter-rouge">OnkoDetectedIssue</code> für Abweichungsbegründung</li>
+  <li><strong>MII-Anschluss-Profile (Datenelemente):</strong> Slicing auf MII KDS-Profile (Medikation, Prozedur, Diagnose) als Basis für <code class="language-plaintext highlighter-rouge">OnkoMedicationStatement</code>, <code class="language-plaintext highlighter-rouge">OnkoProcedure</code>, <code class="language-plaintext highlighter-rouge">OnkoCondition</code></li>
+</ul>
+
+<h5 id="warum-diese-architektur">Warum diese Architektur</h5>
+
+<ul>
+  <li><strong>EnLiST</strong> ist alternativlos: einziger paneuropäischer Delphi-Konsens für solide Tumoren, international anschlussfähig, sonst nichts Vergleichbares.</li>
+  <li><strong>CPG-on-FHIR</strong> ist alternativlos: einziges FHIR-natives Framework mit Methodik <strong>und</strong> Profil-Set für computable Leitlinien; Alternativen (Quality Measure IG, SDC, CDS Hooks pur) decken nur Teilaspekte.</li>
+  <li><strong>CarePlan/Goal als Fallback</strong> ist notwendig: WiZen-/internationale Studien zeigen 15–30 % strukturierte Abweichung; für seltene Tumoren und Studieneinsätze fehlen computable Leitlinien systematisch. Ohne Fallback bleibt jeder vierte bis fünfte Verlauf unmodellierbar.</li>
+  <li><strong>MII KDS-Onkologie als Datenelemente-Basis</strong> ist gesetzt: deutsche Versorgungsrealität, etablierte DIZ-Datenflüsse, gematik-/MII-Mandat. IPS/EPS sekundär für EHDS-Konformität.</li>
+</ul>
+
+<h5 id="out-of-scope-entscheidungen-mit-begründung">Out-of-Scope-Entscheidungen mit Begründung</h5>
+
+<ul>
+  <li><strong>Hämatologische Malignome:</strong> als separate IG-Seite (Phasen- statt Setting-Achse), nicht im Kern-Datenmodell. Begründung: EnLiST adressiert sie nicht; hämatologisches Pendant existiert noch nicht; Versorgungslogik (Induktion-Konsolidierung-Maintenance, Allo-SZT, CAR-T) unterscheidet sich strukturell.</li>
+  <li><strong>Lokoregionale Therapien</strong> (Chirurgie, Strahlentherapie, Ablation): in der Visualisierung als eigene Modalitäten-Spur, nicht in die LoT-Zählung. Begründung: EnLiST-konform; klinisch hochrelevant, aber konzeptuell von Systemtherapie zu trennen.</li>
+  <li><strong>Patient-Reported-Outcomes:</strong> via PCO IG anbinden, nicht selbst entwickeln. Begründung: PCO ist die international etablierte Lösung; Eigenentwicklung wäre Duplizierung.</li>
+  <li><strong>EHDS-Anschluss:</strong> via Mapping-Schicht auf IPS/EPS, nicht durch IPS-konforme Composition als Primärformat. Begründung: für computable Pfade ist IPS-Composition zu schmal (siehe IPS/EPS-Baustein).</li>
+</ul>
+
+<h5 id="konsequenzen-für-die-folgephasen">Konsequenzen für die Folgephasen</h5>
+
+<ul>
+  <li><strong>Workshop 1 (Anforderungserhebung):</strong> Use Cases auswählen, die alle vier Schichten exemplifizieren – empfohlen: KRK 1L (Primärpfad), mBC mit Komorbidität (Fallback wegen Abweichung), Sarkom in Studie (Fallback wegen iLoT/fehlender Leitlinie). Ein <strong>Molekulares Tumorboard</strong>-Use-Case soll explizit aufgenommen werden, um die Verzahnung von genomischen Befunden, CPG-Recommendations und CarePlan-Abweichungen zu prüfen.</li>
+  <li><strong>Informationsmodell:</strong> auf Basis der vier Schichten gegliedert, klare Trennung zwischen normativer Empfehlung und realer Versorgung.</li>
+  <li><strong>IG-Entwurf:</strong> Profil-Set wie oben skizziert; CPG-on-FHIR und CarePlan/Goal-Pattern als verbundenes Set in FSH/SUSHI.</li>
+  <li><strong>MII-Integrationskonzept:</strong> Schicht 4 in den MII-AGs Onkologie und Medikation gespiegelt.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-15 08:15:00 +0000">
+    2026-06-15
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

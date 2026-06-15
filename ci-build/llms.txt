@@ -3,14 +3,31 @@
 ## Pages
 
 * [Startseite](de/index.md)
-* [Artefaktübersicht](de/artifacts.md)
 * [Hinweise zur Übersetzung](de/translationinfo.md)
+* [Artefaktübersicht](de/artifacts.md)
+* [Analysebericht (LG-01)](de/analysebericht.md)
 
 ## Resources
 
+### CodeSystems
+
+* [Onkologische Therapieziel-Art](de/CodeSystem-onko-therapy-goal-type.md)
+* [Onkologische Therapieintention](de/CodeSystem-onko-therapy-intent.md)
+
+### ValueSets
+
+* [Onkologische Therapieziel-Art (VS)](de/ValueSet-onko-therapy-goal-type.md)
+* [Onkologische Therapieintention (VS)](de/ValueSet-onko-therapy-intent.md)
+
 ### Resource Profiles
 
-* [Therapieziel Onkologie](de/StructureDefinition-therapieziel-onkologie.md)
+* [Onkologischer CarePlan](de/StructureDefinition-onko-care-plan.md)
+* [Onkologisches Therapieziel](de/StructureDefinition-onko-therapy-goal.md)
+* [Onkologische Therapielinie](de/StructureDefinition-onko-therapy-line.md)
+
+### Extensions
+
+* [Onkologische Therapieintention (Extension)](de/StructureDefinition-onko-therapy-intent.md)
 
 ### ImplementationGuides
 

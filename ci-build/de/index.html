@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 
 
+
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
@@ -91,6 +92,9 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Startseite</a>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
   </li>
   <li>
     <a href="artifacts.html">Artefakte</a>
@@ -183,7 +187,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             Stand: 
-2026-05-04
+2026-06-15
 
           
         
@@ -220,6 +224,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Er entsteht im Rahmen der BIH-CEI / Gematik-Onkologie-Kooperation und wird auf Deutsch mit englischer Übersetzung veröffentlicht.</p>
 
+<h4 id="erste-profile">Erste Profile</h4>
+
+<p><img src="profile-overview.png" alt="Profil-Übersicht" /></p>
+
+<p>Der initiale Profilsatz folgt der im <a href="analysebericht.html">Analysebericht</a> festgelegten Vier-Schichten-Architektur und bildet den <strong>CarePlan-/Goal-Fallback-Pfad</strong> ab:</p>
+
+<ul>
+  <li><strong><a href="StructureDefinition-onko-care-plan.html">OnkoCarePlan</a></strong> — onkologischer Versorgungsplan mit Therapieintention, adressierter Tumorerkrankung und Bezug zu Therapielinien.</li>
+  <li><strong><a href="StructureDefinition-onko-therapy-line.html">OnkoTherapyLine</a></strong> — Therapielinie (EnLiST-konform) als Behandlungsabschnitt mit eigener Intention.</li>
+  <li><strong><a href="StructureDefinition-onko-therapy-goal.html">OnkoTherapyGoal</a></strong> — strukturiertes Therapieziel mit codierter Zielart (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität).</li>
+  <li><strong><a href="StructureDefinition-onko-therapy-intent.html">OnkoTherapyIntent</a></strong> — Extension für die Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).</li>
+</ul>
+
+<p>Begleitende Terminologien: <a href="CodeSystem-onko-therapy-goal-type.html">OnkoTherapyGoalType</a> und <a href="CodeSystem-onko-therapy-intent.html">OnkoTherapyIntent</a>.</p>
+
+<p>Der CPG-on-FHIR-Primärpfad (<code class="language-plaintext highlighter-rouge">PlanDefinition</code>, <code class="language-plaintext highlighter-rouge">ActivityDefinition</code>, <code class="language-plaintext highlighter-rouge">Library</code>) und die MII-KDS-Anbindung folgen in späteren Iterationen.</p>
+
 
 
 
@@ -248,8 +269,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-05-04 08:07:00 +0000">
-    2026-05-04
+  <span title="2026-06-15 08:15:00 +0000">
+    2026-06-15
   </span>
 
           <br/>

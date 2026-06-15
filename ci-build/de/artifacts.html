@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 
 
+
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
@@ -46,8 +47,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3"}
-    h3,h4,h5,h6{--heading-prefix:"3.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -91,6 +92,9 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Startseite</a>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
   </li>
   <li>
     <a href="artifacts.html">Artefakte</a>
@@ -161,6 +165,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>
          <a href="#1">Strukturen: Ressourcenprofile</a>
       </li>
+      <li>
+         <a href="#2">Strukturen: Extension-Definitionen</a>
+      </li>
+      <li>
+         <a href="#3">Terminologie: ValueSets</a>
+      </li>
+      <li>
+         <a href="#4">Terminologie: CodeSysteme</a>
+      </li>
    </ul>
 </div>
 <div xmlns="http://www.w3.org/1999/xhtml"
@@ -176,14 +189,122 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-therapieziel-onkologie.html"
-                  title="StructureDefinition/therapieziel-onkologie">
-                  <span title="StructureDefinition/therapieziel-onkologie">Therapieziel Onkologie
+               <a href="StructureDefinition-onko-therapy-line.html"
+                  title="StructureDefinition/onko-therapy-line">
+                  <span title="StructureDefinition/onko-therapy-line">Onkologische Therapielinie
 </span>
                </a>
             </td>
             <td>
-<p>TODO</p>
+<p>Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von <code class="language-plaintext highlighter-rouge">CarePlan</code>, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention, die durch ein definiertes Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Trägt die Therapieintention der Linie (<code class="language-plaintext highlighter-rouge">onko-therapy-intent</code>) und gehört über <code class="language-plaintext highlighter-rouge">partOf</code> zu einem übergeordneten <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-onko-care-plan.html"
+                  title="StructureDefinition/onko-care-plan">
+                  <span title="StructureDefinition/onko-care-plan">Onkologischer CarePlan
+</span>
+               </a>
+            </td>
+            <td>
+<p>Onkologischer Versorgungsplan auf Basis von <code class="language-plaintext highlighter-rouge">CarePlan</code>. Trägt die Therapieintention (Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code>), referenziert die adressierte Krebserkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>), die übergeordneten Therapieziele (<code class="language-plaintext highlighter-rouge">goal</code> → <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>) sowie die Therapielinien als untergeordnete Pläne (<code class="language-plaintext highlighter-rouge">CarePlan.partOf</code> von <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>). Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des realen Versorgungsverlaufs; im Primärpfad referenziert er via <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> eine <code class="language-plaintext highlighter-rouge">PlanDefinition</code> aus dem CPG-on-FHIR-Stack.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-onko-therapy-goal.html"
+                  title="StructureDefinition/onko-therapy-goal">
+                  <span title="StructureDefinition/onko-therapy-goal">Onkologisches Therapieziel
+</span>
+               </a>
+            </td>
+            <td>
+<p>Strukturiertes onkologisches Therapieziel auf Basis von <code class="language-plaintext highlighter-rouge">Goal</code>. Die Zielart wird über <code class="language-plaintext highlighter-rouge">category</code> codiert (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme). Über die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> kann zusätzlich die Therapieintention der zugehörigen Behandlungslinie hinterlegt werden. Das Ziel referenziert über <code class="language-plaintext highlighter-rouge">addresses</code> die adressierte Tumorerkrankung und kann über <code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> an Verlaufs-Observations (z. B. mCODE CancerDiseaseStatus) gebunden werden.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Strukturen: Extension-Definitionen </h3>
+    <p>Diese definieren Einschränkungen für FHIR-Datentypen für Systeme, die mit diesem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-onko-therapy-intent.html"
+                  title="StructureDefinition/onko-therapy-intent">
+                  <span title="StructureDefinition/onko-therapy-intent">Onkologische Therapieintention (Extension)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE <code class="language-plaintext highlighter-rouge">procedure-intent</code>.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Terminologie: ValueSets </h3>
+    <p>Diese definieren Wertemengen, die von Systemen verwendet werden, die mit dem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-onko-therapy-intent.html"
+                  title="ValueSet/onko-therapy-intent">
+                  <span title="ValueSet/onko-therapy-intent">Onkologische Therapieintention (VS)
+</span>
+               </a>
+            </td>
+            <td>
+<p>ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-onko-therapy-goal-type.html"
+                  title="ValueSet/onko-therapy-goal-type">
+                  <span title="ValueSet/onko-therapy-goal-type">Onkologische Therapieziel-Art (VS)
+</span>
+               </a>
+            </td>
+            <td>
+<p>ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminologie: CodeSysteme </h3>
+    <p>Diese definieren neue CodeSysteme, die von Systemen verwendet werden, die mit diesem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-onko-therapy-intent.html"
+                  title="CodeSystem/onko-therapy-intent">
+                  <span title="CodeSystem/onko-therapy-intent">Onkologische Therapieintention
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codiert die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts (kurativ, neoadjuvant, adjuvant, palliativ, Erhaltung, supportiv).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-onko-therapy-goal-type.html"
+                  title="CodeSystem/onko-therapy-goal-type">
+                  <span title="CodeSystem/onko-therapy-goal-type">Onkologische Therapieziel-Art
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).</p>
 </td>
          </tr>
       </tbody>
@@ -215,8 +336,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-05-04 08:07:00 +0000">
-    2026-05-04
+  <span title="2026-06-15 08:15:00 +0000">
+    2026-06-15
   </span>
 
           <br/>

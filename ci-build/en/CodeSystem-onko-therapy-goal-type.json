@@ -1,0 +1,65 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "onko-therapy-goal-type",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem onko-therapy-goal-type</b></p><a name=\"en-onko-therapy-goal-type\"> </a><a name=\"en-hconko-therapy-goal-type\"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">heilung<a name=\"en-onko-therapy-goal-type-heilung\"> </a></td><td>Heilung</td><td>Kuratives Ziel — vollständige Remission angestrebt.</td></tr><tr><td style=\"white-space:nowrap\">lebensverlaengerung<a name=\"en-onko-therapy-goal-type-lebensverlaengerung\"> </a></td><td>Lebensverlängerung</td><td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td></tr><tr><td style=\"white-space:nowrap\">symptomkontrolle<a name=\"en-onko-therapy-goal-type-symptomkontrolle\"> </a></td><td>Symptomkontrolle / Palliation</td><td>Linderung von Symptomen und Krankheitslast.</td></tr><tr><td style=\"white-space:nowrap\">lebensqualitaet<a name=\"en-onko-therapy-goal-type-lebensqualitaet\"> </a></td><td>Lebensqualität</td><td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td></tr><tr><td style=\"white-space:nowrap\">funktionserhalt<a name=\"en-onko-therapy-goal-type-funktionserhalt\"> </a></td><td>Funktionserhalt</td><td>Erhalt körperlicher oder kognitiver Funktion.</td></tr><tr><td style=\"white-space:nowrap\">studienteilnahme<a name=\"en-onko-therapy-goal-type-studienteilnahme\"> </a></td><td>Studienteilnahme</td><td>Teilnahme an einer klinischen Studie als explizites Ziel.</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyGoalType",
+  "title" : "Onkologische Therapieziel-Art",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-15T08:15:17+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "heilung",
+    "display" : "Heilung",
+    "definition" : "Kuratives Ziel — vollständige Remission angestrebt."
+  },
+  {
+    "code" : "lebensverlaengerung",
+    "display" : "Lebensverlängerung",
+    "definition" : "Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist."
+  },
+  {
+    "code" : "symptomkontrolle",
+    "display" : "Symptomkontrolle / Palliation",
+    "definition" : "Linderung von Symptomen und Krankheitslast."
+  },
+  {
+    "code" : "lebensqualitaet",
+    "display" : "Lebensqualität",
+    "definition" : "Erhalt oder Verbesserung von Funktion und Lebensqualität."
+  },
+  {
+    "code" : "funktionserhalt",
+    "display" : "Funktionserhalt",
+    "definition" : "Erhalt körperlicher oder kognitiver Funktion."
+  },
+  {
+    "code" : "studienteilnahme",
+    "display" : "Studienteilnahme",
+    "definition" : "Teilnahme an einer klinischen Studie als explizites Ziel."
+  }]
+}

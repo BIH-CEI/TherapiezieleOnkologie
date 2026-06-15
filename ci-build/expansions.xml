@@ -1,9 +1,1413 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="6acea1ab-16ea-445d-af8a-11e7f03daeaf"/>
+  <id value="24d8011b-d3c8-4a2b-88c5-b6d328e0497a"/>
   <meta>
-    <lastUpdated value="2026-05-04T08:07:29.789+00:00"/>
+    <lastUpdated value="2026-06-15T08:15:17.715+00:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-onko-therapy-goal-type.html">codesystem Onkologische Therapieziel-Art v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 6 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (de)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-heilung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-heilung">heilung</a>
+                </td>
+                <td/>
+                <td>Kuratives Ziel — vollständige Remission angestrebt.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;heilung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;heilung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensverlaengerung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensverlaengerung">lebensverlaengerung</a>
+                </td>
+                <td/>
+                <td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;lebensverlaengerung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-symptomkontrolle"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-symptomkontrolle">symptomkontrolle</a>
+                </td>
+                <td/>
+                <td>Linderung von Symptomen und Krankheitslast.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;symptomkontrolle&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensqualitaet"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensqualitaet">lebensqualitaet</a>
+                </td>
+                <td/>
+                <td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;lebensqualitaet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-funktionserhalt"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-funktionserhalt">funktionserhalt</a>
+                </td>
+                <td/>
+                <td>Erhalt körperlicher oder kognitiver Funktion.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-studienteilnahme"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-studienteilnahme">studienteilnahme</a>
+                </td>
+                <td/>
+                <td>Teilnahme an einer klinischen Studie als explizites Ziel.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;studienteilnahme&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;studienteilnahme&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"/>
+        <version value="0.1.0"/>
+        <name value="OnkoTherapyGoalTypeVS"/>
+        <title value="Onkologische Therapieziel-Art (VS)"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-15T08:15:17+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="DE"/>
+            <display value="Germany"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:46154562-1cb5-419b-9b97-b894416de614"/>
+          <timestamp value="2026-06-15T08:15:54+00:00"/>
+          <total value="6"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="de"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="heilung"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensverlaengerung"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="symptomkontrolle"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensqualitaet"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="funktionserhalt"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="studienteilnahme"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-onko-therapy-goal-type.html">codesystem Onkologische Therapieziel-Art v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 6 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (de)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-heilung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-heilung">heilung</a>
+                </td>
+                <td/>
+                <td>Kuratives Ziel — vollständige Remission angestrebt.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;heilung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;heilung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensverlaengerung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensverlaengerung">lebensverlaengerung</a>
+                </td>
+                <td/>
+                <td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;lebensverlaengerung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-symptomkontrolle"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-symptomkontrolle">symptomkontrolle</a>
+                </td>
+                <td/>
+                <td>Linderung von Symptomen und Krankheitslast.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;symptomkontrolle&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensqualitaet"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensqualitaet">lebensqualitaet</a>
+                </td>
+                <td/>
+                <td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;lebensqualitaet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-funktionserhalt"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-funktionserhalt">funktionserhalt</a>
+                </td>
+                <td/>
+                <td>Erhalt körperlicher oder kognitiver Funktion.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-studienteilnahme"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-studienteilnahme">studienteilnahme</a>
+                </td>
+                <td/>
+                <td>Teilnahme an einer klinischen Studie als explizites Ziel.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;studienteilnahme&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;studienteilnahme&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"/>
+        <version value="0.1.0"/>
+        <name value="OnkoTherapyGoalTypeVS"/>
+        <title value="Onkologische Therapieziel-Art (VS)"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-15T08:15:17+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="DE"/>
+            <display value="Germany"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:46154562-1cb5-419b-9b97-b894416de614"/>
+          <timestamp value="2026-06-15T08:15:54+00:00"/>
+          <total value="6"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="de"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="heilung"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensverlaengerung"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="symptomkontrolle"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensqualitaet"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="funktionserhalt"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="studienteilnahme"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-onko-therapy-goal-type.html">codesystem Onkologische Therapieziel-Art v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 6 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-heilung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-heilung">heilung</a>
+                </td>
+                <td>Heilung</td>
+                <td>Kuratives Ziel — vollständige Remission angestrebt.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;heilung&quot;, &quot;display&quot;: &quot;Heilung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;heilung&quot;&gt;&lt;display value=&quot;Heilung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensverlaengerung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensverlaengerung">lebensverlaengerung</a>
+                </td>
+                <td>Lebensverlängerung</td>
+                <td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;, &quot;display&quot;: &quot;Lebensverlängerung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;lebensverlaengerung&quot;&gt;&lt;display value=&quot;Lebensverlängerung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-symptomkontrolle"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-symptomkontrolle">symptomkontrolle</a>
+                </td>
+                <td>Symptomkontrolle / Palliation</td>
+                <td>Linderung von Symptomen und Krankheitslast.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;, &quot;display&quot;: &quot;Symptomkontrolle / Palliation&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;symptomkontrolle&quot;&gt;&lt;display value=&quot;Symptomkontrolle / Palliation&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensqualitaet"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensqualitaet">lebensqualitaet</a>
+                </td>
+                <td>Lebensqualität</td>
+                <td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;, &quot;display&quot;: &quot;Lebensqualität&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;lebensqualitaet&quot;&gt;&lt;display value=&quot;Lebensqualität&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-funktionserhalt"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-funktionserhalt">funktionserhalt</a>
+                </td>
+                <td>Funktionserhalt</td>
+                <td>Erhalt körperlicher oder kognitiver Funktion.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;, &quot;display&quot;: &quot;Funktionserhalt&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;display value=&quot;Funktionserhalt&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-studienteilnahme"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-studienteilnahme">studienteilnahme</a>
+                </td>
+                <td>Studienteilnahme</td>
+                <td>Teilnahme an einer klinischen Studie als explizites Ziel.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;studienteilnahme&quot;, &quot;display&quot;: &quot;Studienteilnahme&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;studienteilnahme&quot;&gt;&lt;display value=&quot;Studienteilnahme&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"/>
+        <version value="0.1.0"/>
+        <name value="OnkoTherapyGoalTypeVS"/>
+        <title value="Onkologische Therapieziel-Art (VS)"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-15T08:15:17+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="DE"/>
+            <display value="Germany"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:13ef5a52-a3a2-4e47-a878-c323f3401962"/>
+          <timestamp value="2026-06-15T08:15:54+00:00"/>
+          <total value="6"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="heilung"/>
+            <display value="Heilung"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensverlaengerung"/>
+            <display value="Lebensverlängerung"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="symptomkontrolle"/>
+            <display value="Symptomkontrolle / Palliation"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensqualitaet"/>
+            <display value="Lebensqualität"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="funktionserhalt"/>
+            <display value="Funktionserhalt"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="studienteilnahme"/>
+            <display value="Studienteilnahme"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-onko-therapy-intent.html">codesystem Onkologische Therapieintention v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 6 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (de)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-kurativ"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-kurativ">kurativ</a>
+                </td>
+                <td/>
+                <td>Heilungsabsicht.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;kurativ&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;kurativ&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-neoadjuvant"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-neoadjuvant">neoadjuvant</a>
+                </td>
+                <td/>
+                <td>Vor lokaler Therapie zur Tumorverkleinerung.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;neoadjuvant&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;neoadjuvant&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-adjuvant"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-adjuvant">adjuvant</a>
+                </td>
+                <td/>
+                <td>Nach lokaler Therapie zur Rezidivprophylaxe.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;adjuvant&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;adjuvant&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-erhaltung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-erhaltung">erhaltung</a>
+                </td>
+                <td/>
+                <td>Stabilisierung nach Ansprechen, Maintenance.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;erhaltung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;erhaltung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-palliativ"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-palliativ">palliativ</a>
+                </td>
+                <td/>
+                <td>Symptomatische / lebensverlängernde Therapie ohne kurative Absicht.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;palliativ&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;palliativ&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-supportiv"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-supportiv">supportiv</a>
+                </td>
+                <td/>
+                <td>Begleitende Therapie zur Linderung therapie- oder tumorbedingter Beschwerden.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;supportiv&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;supportiv&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"/>
+        <version value="0.1.0"/>
+        <name value="OnkoTherapyIntentVS"/>
+        <title value="Onkologische Therapieintention (VS)"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-15T08:15:17+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="DE"/>
+            <display value="Germany"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:e3e6be37-07be-479c-9a6f-e9d0099604cd"/>
+          <timestamp value="2026-06-15T08:15:54+00:00"/>
+          <total value="6"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="de"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="kurativ"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="neoadjuvant"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="adjuvant"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="erhaltung"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="palliativ"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="supportiv"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-onko-therapy-intent.html">codesystem Onkologische Therapieintention v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 6 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (de)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-kurativ"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-kurativ">kurativ</a>
+                </td>
+                <td/>
+                <td>Heilungsabsicht.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;kurativ&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;kurativ&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-neoadjuvant"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-neoadjuvant">neoadjuvant</a>
+                </td>
+                <td/>
+                <td>Vor lokaler Therapie zur Tumorverkleinerung.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;neoadjuvant&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;neoadjuvant&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-adjuvant"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-adjuvant">adjuvant</a>
+                </td>
+                <td/>
+                <td>Nach lokaler Therapie zur Rezidivprophylaxe.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;adjuvant&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;adjuvant&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-erhaltung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-erhaltung">erhaltung</a>
+                </td>
+                <td/>
+                <td>Stabilisierung nach Ansprechen, Maintenance.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;erhaltung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;erhaltung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-palliativ"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-palliativ">palliativ</a>
+                </td>
+                <td/>
+                <td>Symptomatische / lebensverlängernde Therapie ohne kurative Absicht.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;palliativ&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;palliativ&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-supportiv"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-supportiv">supportiv</a>
+                </td>
+                <td/>
+                <td>Begleitende Therapie zur Linderung therapie- oder tumorbedingter Beschwerden.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;supportiv&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;supportiv&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"/>
+        <version value="0.1.0"/>
+        <name value="OnkoTherapyIntentVS"/>
+        <title value="Onkologische Therapieintention (VS)"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-15T08:15:17+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="DE"/>
+            <display value="Germany"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:e3e6be37-07be-479c-9a6f-e9d0099604cd"/>
+          <timestamp value="2026-06-15T08:15:54+00:00"/>
+          <total value="6"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="de"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="kurativ"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="neoadjuvant"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="adjuvant"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="erhaltung"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="palliativ"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="supportiv"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-onko-therapy-intent.html">codesystem Onkologische Therapieintention v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 6 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-kurativ"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-kurativ">kurativ</a>
+                </td>
+                <td>Kurativ</td>
+                <td>Heilungsabsicht.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;kurativ&quot;, &quot;display&quot;: &quot;Kurativ&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;kurativ&quot;&gt;&lt;display value=&quot;Kurativ&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-neoadjuvant"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-neoadjuvant">neoadjuvant</a>
+                </td>
+                <td>Neoadjuvant</td>
+                <td>Vor lokaler Therapie zur Tumorverkleinerung.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;neoadjuvant&quot;, &quot;display&quot;: &quot;Neoadjuvant&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;neoadjuvant&quot;&gt;&lt;display value=&quot;Neoadjuvant&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-adjuvant"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-adjuvant">adjuvant</a>
+                </td>
+                <td>Adjuvant</td>
+                <td>Nach lokaler Therapie zur Rezidivprophylaxe.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;adjuvant&quot;, &quot;display&quot;: &quot;Adjuvant&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;adjuvant&quot;&gt;&lt;display value=&quot;Adjuvant&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-erhaltung"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-erhaltung">erhaltung</a>
+                </td>
+                <td>Erhaltungstherapie</td>
+                <td>Stabilisierung nach Ansprechen, Maintenance.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;erhaltung&quot;, &quot;display&quot;: &quot;Erhaltungstherapie&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;erhaltung&quot;&gt;&lt;display value=&quot;Erhaltungstherapie&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-palliativ"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-palliativ">palliativ</a>
+                </td>
+                <td>Palliativ</td>
+                <td>Symptomatische / lebensverlängernde Therapie ohne kurative Absicht.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;palliativ&quot;, &quot;display&quot;: &quot;Palliativ&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;palliativ&quot;&gt;&lt;display value=&quot;Palliativ&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent-supportiv"> </a>
+                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-onko-therapy-intent.html#onko-therapy-intent-supportiv">supportiv</a>
+                </td>
+                <td>Supportiv</td>
+                <td>Begleitende Therapie zur Linderung therapie- oder tumorbedingter Beschwerden.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;supportiv&quot;, &quot;display&quot;: &quot;Supportiv&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;supportiv&quot;&gt;&lt;display value=&quot;Supportiv&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"/>
+        <version value="0.1.0"/>
+        <name value="OnkoTherapyIntentVS"/>
+        <title value="Onkologische Therapieintention (VS)"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-15T08:15:17+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="DE"/>
+            <display value="Germany"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:e482a79b-3a3e-4433-b898-f45008f29511"/>
+          <timestamp value="2026-06-15T08:15:54+00:00"/>
+          <total value="6"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="kurativ"/>
+            <display value="Kurativ"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="neoadjuvant"/>
+            <display value="Neoadjuvant"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="adjuvant"/>
+            <display value="Adjuvant"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="erhaltung"/>
+            <display value="Erhaltungstherapie"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="palliativ"/>
+            <display value="Palliativ"/>
+          </contains>
+          <contains>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+            <code value="supportiv"/>
+            <display value="Supportiv"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
 </Bundle>

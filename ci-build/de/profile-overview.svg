@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="-apple-system, 'Segoe UI', 'Fira Sans', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#00305d"/>
+    </marker>
+    <marker id="arrow-ext" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7a8a99"/>
+    </marker>
+    <marker id="arrow-int" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e2001a"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="header" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#003e75"/>
+      <stop offset="100%" stop-color="#00305d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="#f5f7fa"/>
+
+  <!-- Title -->
+  <text x="600" y="48" text-anchor="middle" font-size="26" font-weight="700" fill="#00305d">Therapieziele Onkologie — Profil-Übersicht</text>
+  <text x="600" y="74" text-anchor="middle" font-size="14" fill="#5a6776">CarePlan/Goal-Fallback-Pfad · BIH-CEI · v0.1.0</text>
+
+  <!-- Legend -->
+  <g transform="translate(40, 100)">
+    <rect width="200" height="98" rx="6" fill="#ffffff" stroke="#d6dde4"/>
+    <text x="100" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#5a6776">LEGENDE</text>
+    <rect x="14" y="32" width="14" height="10" fill="#00305d"/>
+    <text x="36" y="42" font-size="11" fill="#2a3540">Profil (dieser IG)</text>
+    <rect x="14" y="50" width="14" height="10" fill="#e2001a"/>
+    <text x="36" y="60" font-size="11" fill="#2a3540">Extension</text>
+    <rect x="14" y="68" width="14" height="10" fill="#ffffff" stroke="#7a8a99" stroke-dasharray="3 2"/>
+    <text x="36" y="78" font-size="11" fill="#2a3540">Externe FHIR-Ressource</text>
+  </g>
+
+  <!-- OnkoCarePlan (center top) -->
+  <g transform="translate(440, 120)" filter="url(#shadow)">
+    <rect width="320" height="130" rx="8" fill="#ffffff" stroke="#00305d" stroke-width="2"/>
+    <rect width="320" height="34" rx="8" fill="url(#header)"/>
+    <rect y="26" width="320" height="8" fill="url(#header)"/>
+    <text x="160" y="23" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">OnkoCarePlan</text>
+    <text x="14" y="56" font-size="11" fill="#5a6776">Parent: CarePlan</text>
+    <text x="14" y="76" font-size="12" fill="#2a3540">• intent = #plan · addresses → Condition</text>
+    <text x="14" y="93" font-size="12" fill="#2a3540">• goal → OnkoTherapyGoal</text>
+    <text x="14" y="110" font-size="12" fill="#2a3540">• instantiatesCanonical → PlanDefinition</text>
+    <text x="14" y="125" font-size="11" fill="#5a6776" font-style="italic">Versorgungsplan, Primär- oder Fallback-Pfad</text>
+  </g>
+
+  <!-- OnkoTherapyLine (bottom left) -->
+  <g transform="translate(80, 360)" filter="url(#shadow)">
+    <rect width="320" height="130" rx="8" fill="#ffffff" stroke="#00305d" stroke-width="2"/>
+    <rect width="320" height="34" rx="8" fill="url(#header)"/>
+    <rect y="26" width="320" height="8" fill="url(#header)"/>
+    <text x="160" y="23" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">OnkoTherapyLine</text>
+    <text x="14" y="56" font-size="11" fill="#5a6776">Parent: CarePlan</text>
+    <text x="14" y="76" font-size="12" fill="#2a3540">• Behandlungsabschnitt (EnLiST-LoT)</text>
+    <text x="14" y="93" font-size="12" fill="#2a3540">• partOf → OnkoCarePlan</text>
+    <text x="14" y="110" font-size="12" fill="#2a3540">• period 1..1 · therapyIntent 1..1</text>
+    <text x="14" y="125" font-size="11" fill="#5a6776" font-style="italic">Eine Linie pro Intentions-Abschnitt</text>
+  </g>
+
+  <!-- OnkoTherapyGoal (bottom right) -->
+  <g transform="translate(800, 360)" filter="url(#shadow)">
+    <rect width="320" height="130" rx="8" fill="#ffffff" stroke="#00305d" stroke-width="2"/>
+    <rect width="320" height="34" rx="8" fill="url(#header)"/>
+    <rect y="26" width="320" height="8" fill="url(#header)"/>
+    <text x="160" y="23" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">OnkoTherapyGoal</text>
+    <text x="14" y="56" font-size="11" fill="#5a6776">Parent: Goal</text>
+    <text x="14" y="76" font-size="12" fill="#2a3540">• category: Heilung · Lebensverlängerung</text>
+    <text x="14" y="93" font-size="12" fill="#2a3540">  Symptomkontrolle · Lebensqualität …</text>
+    <text x="14" y="110" font-size="12" fill="#2a3540">• outcomeReference → Observation</text>
+    <text x="14" y="125" font-size="11" fill="#5a6776" font-style="italic">Strukturiertes Therapieziel</text>
+  </g>
+
+  <!-- Extension OnkoTherapyIntent (right side, bridging CarePlan and Line) -->
+  <g transform="translate(960, 130)" filter="url(#shadow)">
+    <rect width="200" height="84" rx="8" fill="#fff5f6" stroke="#e2001a" stroke-width="2"/>
+    <text x="100" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#e2001a">OnkoTherapyIntent</text>
+    <text x="100" y="38" text-anchor="middle" font-size="10" fill="#8a2030">Extension</text>
+    <text x="14" y="56" font-size="11" fill="#2a3540">kurativ · neoadjuvant ·</text>
+    <text x="14" y="70" font-size="11" fill="#2a3540">adjuvant · Erhaltung ·</text>
+    <text x="14" y="84" font-size="11" fill="#2a3540">palliativ · supportiv</text>
+  </g>
+
+  <!-- External: Condition -->
+  <g transform="translate(60, 130)">
+    <rect width="180" height="62" rx="8" fill="#ffffff" stroke="#7a8a99" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="90" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#5a6776">Condition</text>
+    <text x="90" y="42" text-anchor="middle" font-size="10" fill="#7a8a99">Tumorerkrankung</text>
+    <text x="90" y="56" text-anchor="middle" font-size="10" fill="#7a8a99">(z. B. MII KDS / mCODE)</text>
+  </g>
+
+  <!-- External: PlanDefinition -->
+  <g transform="translate(960, 256)">
+    <rect width="180" height="62" rx="8" fill="#ffffff" stroke="#7a8a99" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="90" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#5a6776">PlanDefinition</text>
+    <text x="90" y="42" text-anchor="middle" font-size="10" fill="#7a8a99">CPG-on-FHIR</text>
+    <text x="90" y="56" text-anchor="middle" font-size="10" fill="#7a8a99">(Primärpfad)</text>
+  </g>
+
+  <!-- External: Observation -->
+  <g transform="translate(960, 560)">
+    <rect width="180" height="62" rx="8" fill="#ffffff" stroke="#7a8a99" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="90" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#5a6776">Observation</text>
+    <text x="90" y="42" text-anchor="middle" font-size="10" fill="#7a8a99">CancerDiseaseStatus,</text>
+    <text x="90" y="56" text-anchor="middle" font-size="10" fill="#7a8a99">PRO, Verlaufsmessungen</text>
+  </g>
+
+  <!-- External: Patient -->
+  <g transform="translate(60, 560)">
+    <rect width="180" height="62" rx="8" fill="#ffffff" stroke="#7a8a99" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="90" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#5a6776">Patient</text>
+    <text x="90" y="42" text-anchor="middle" font-size="10" fill="#7a8a99">subject (alle Profile)</text>
+    <text x="90" y="56" text-anchor="middle" font-size="10" fill="#7a8a99"></text>
+  </g>
+
+  <!-- Arrows -->
+  <!-- CarePlan → Condition (addresses) -->
+  <path d="M 440 175 L 245 161" stroke="#00305d" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <text x="335" y="158" font-size="11" fill="#00305d" font-weight="600">addresses</text>
+
+  <!-- CarePlan → PlanDefinition (instantiatesCanonical) -->
+  <path d="M 760 215 L 955 281" stroke="#00305d" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <text x="788" y="270" font-size="11" fill="#00305d" font-weight="600">instantiatesCanonical</text>
+
+  <!-- CarePlan ← TherapyLine (partOf) -->
+  <path d="M 240 360 C 240 300, 320 280, 440 250" stroke="#00305d" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <text x="244" y="312" font-size="11" fill="#00305d" font-weight="600">partOf</text>
+
+  <!-- CarePlan → Goal (goal) -->
+  <path d="M 760 250 C 850 290, 900 320, 920 360" stroke="#00305d" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <text x="843" y="313" font-size="11" fill="#00305d" font-weight="600">goal</text>
+
+  <!-- TherapyLine → Goal (goal) -->
+  <path d="M 400 425 L 800 425" stroke="#00305d" stroke-width="1.6" fill="none" marker-end="url(#arrow)" stroke-dasharray="6 3"/>
+  <text x="600" y="418" text-anchor="middle" font-size="11" fill="#00305d" font-weight="600">goal (optional)</text>
+
+  <!-- Goal → Observation -->
+  <path d="M 1000 490 L 1018 555" stroke="#00305d" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <text x="1010" y="528" font-size="11" fill="#00305d" font-weight="600">outcomeReference</text>
+
+  <!-- TherapyLine → Patient (subject) -->
+  <path d="M 200 490 L 175 555" stroke="#00305d" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+  <text x="138" y="528" font-size="11" fill="#00305d" font-weight="600">subject</text>
+
+  <!-- Extension → CarePlan -->
+  <path d="M 960 172 L 760 178" stroke="#e2001a" stroke-width="1.4" fill="none" marker-end="url(#arrow-int)" stroke-dasharray="4 2"/>
+  <!-- Extension → TherapyLine -->
+  <path d="M 1060 214 C 1060 280, 600 340, 400 400" stroke="#e2001a" stroke-width="1.4" fill="none" marker-end="url(#arrow-int)" stroke-dasharray="4 2"/>
+  <!-- Extension → Goal -->
+  <path d="M 1130 214 C 1180 360, 1180 420, 1120 425" stroke="#e2001a" stroke-width="1.4" fill="none" marker-end="url(#arrow-int)" stroke-dasharray="4 2"/>
+
+  <!-- Footer architecture note -->
+  <g transform="translate(60, 660)">
+    <rect width="1080" height="70" rx="8" fill="#eef2f6" stroke="#d6dde4"/>
+    <text x="20" y="24" font-size="12" font-weight="700" fill="#00305d">Architektur-Einordnung</text>
+    <text x="20" y="44" font-size="12" fill="#2a3540">Diese Profile bilden <tspan font-weight="700">Schicht 3 (Plan- und Ziel-Logik)</tspan> der Vier-Schichten-Architektur ab — den Fallback-Pfad, wenn keine computable Leitlinie verfügbar ist.</text>
+    <text x="20" y="60" font-size="12" fill="#2a3540">Schicht 1 (EnLiST-Strukturachse), Schicht 2 (CPG-on-FHIR / PlanDefinition) und Schicht 4 (MII-KDS-Datenelemente) folgen in späteren Iterationen.</text>
+  </g>
+</svg>

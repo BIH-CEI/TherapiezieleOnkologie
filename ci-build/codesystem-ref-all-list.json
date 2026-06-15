@@ -1,5 +1,17 @@
 {
   "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/care-plan-activity-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CarePlanActivityStatus",
+    "title" : "CarePlanActivityStatus",
+    "description" : "Codes that reflect the current state of a care plan activity within its overall life cycle.",
+    "oids" : ["2.16.840.1.113883.4.642.4.147"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-status.html" : "CarePlanActivityStatus"
+  },
+  {
     "url" : "http://hl7.org/fhir/goal-status",
     "version" : "4.0.1",
     "status" : "draft",
@@ -12,6 +24,41 @@
     "http://hl7.org/fhir/R4/valueset-goal-status.html" : "GoalLifecycleStatus"
   },
   {
+    "url" : "http://hl7.org/fhir/request-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestIntent",
+    "title" : "RequestIntent",
+    "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.114"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-care-plan-intent.html" : "Care Plan Intent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestStatus",
+    "title" : "RequestStatus",
+    "description" : "Codes identifying the lifecycle stage of a request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.112"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-request-status.html" : "RequestStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/resource-types",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ResourceType",
+    "title" : "ResourceType",
+    "description" : "One of the resource types defined as part of this version of FHIR.",
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-kind.html" : "Care Plan Activity Kind"
+  },
+  {
     "url" : "http://snomed.info/sct",
     "version" : null,
     "status" : "active",
@@ -21,8 +68,12 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event"
+    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
+    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/goal-achievement",
@@ -37,18 +88,6 @@
     "http://hl7.org/fhir/R4/valueset-goal-achievement.html" : "Goal achievement status"
   },
   {
-    "url" : "http://terminology.hl7.org/CodeSystem/goal-category",
-    "version" : "2.0.0",
-    "status" : "active",
-    "name" : "GoalCategory",
-    "title" : "Goal category",
-    "description" : "Codes for grouping goals to use for filtering or presentation.",
-    "oids" : ["2.16.840.1.113883.4.642.1.1097"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-goal-category.html" : "Goal category"
-  },
-  {
     "url" : "http://terminology.hl7.org/CodeSystem/goal-priority",
     "version" : "1.0.1",
     "status" : "active",
@@ -59,5 +98,27 @@
     "uses" : {
     },
     "http://hl7.org/fhir/R4/valueset-goal-priority.html" : "Goal priority"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyGoalType",
+    "title" : "Onkologische Therapieziel-Art",
+    "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+    "uses" : {
+    },
+    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyIntent",
+    "title" : "Onkologische Therapieintention",
+    "description" : "Codiert die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts (kurativ, neoadjuvant, adjuvant, palliativ, Erhaltung, supportiv).",
+    "uses" : {
+    },
+    "ValueSet-onko-therapy-intent.html" : "Onkologische Therapieintention (VS)"
   }]
 }

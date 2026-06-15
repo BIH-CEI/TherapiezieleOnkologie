@@ -13,7 +13,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-05-04T08:07:29+00:00"/>
+  <date value="2026-06-15T08:15:17+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -47,7 +47,7 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="5.2.0"/>
+    <version value="5.3.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -551,13 +551,90 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/onko-therapy-intent"/>
+      </reference>
+      <name value="Onkologische Therapieintention"/>
+      <description value="Codiert die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts (kurativ, neoadjuvant, adjuvant, palliativ, Erhaltung, supportiv)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-therapy-intent"/>
+      </reference>
+      <name value="Onkologische Therapieintention (Extension)"/>
+      <description value="Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-therapy-intent"/>
+      </reference>
+      <name value="Onkologische Therapieintention (VS)"/>
+      <description value="ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/therapieziel-onkologie"/>
+        <reference value="StructureDefinition/onko-therapy-line"/>
       </reference>
-      <name value="Therapieziel Onkologie"/>
-      <description value="TODO"/>
+      <name value="Onkologische Therapielinie"/>
+      <description value="Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `CarePlan`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention, die durch ein definiertes Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Trägt die Therapieintention der Linie (`onko-therapy-intent`) und gehört über `partOf` zu einem übergeordneten `OnkoCarePlan`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/onko-therapy-goal-type"/>
+      </reference>
+      <name value="Onkologische Therapieziel-Art"/>
+      <description value="Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-therapy-goal-type"/>
+      </reference>
+      <name value="Onkologische Therapieziel-Art (VS)"/>
+      <description value="ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-care-plan"/>
+      </reference>
+      <name value="Onkologischer CarePlan"/>
+      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`. Trägt die Therapieintention (Extension `onko-therapy-intent`), referenziert die adressierte Krebserkrankung (`addresses`), die übergeordneten Therapieziele (`goal` → `OnkoTherapyGoal`) sowie die Therapielinien als untergeordnete Pläne (`CarePlan.partOf` von `OnkoTherapyLine`). Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine `PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-therapy-goal"/>
+      </reference>
+      <name value="Onkologisches Therapieziel"/>
+      <description value="Strukturiertes onkologisches Therapieziel auf Basis von `Goal`. Die Zielart wird über `category` codiert (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme). Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der zugehörigen Behandlungslinie hinterlegt werden. Das Ziel referenziert über `addresses` die adressierte Tumorerkrankung und kann über `Goal.outcomeReference` an Verlaufs-Observations (z. B. mCODE CancerDiseaseStatus) gebunden werden."/>
       <exampleBoolean value="false"/>
     </resource>
     <page>
@@ -573,6 +650,14 @@
         </extension>
         <nameUrl value="index.html"/>
         <title value="Startseite"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="analysebericht.html"/>
+        </extension>
+        <nameUrl value="analysebericht.html"/>
+        <title value="Analysebericht (LG-01)"/>
         <generation value="markdown"/>
       </page>
       <page>

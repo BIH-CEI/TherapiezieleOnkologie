@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="onko-therapy-intent"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem onko-therapy-intent</b></p><a name="en-onko-therapy-intent"> </a><a name="en-hconko-therapy-intent"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">kurativ<a name="en-onko-therapy-intent-kurativ"> </a></td><td>Kurativ</td><td>Heilungsabsicht.</td></tr><tr><td style="white-space:nowrap">neoadjuvant<a name="en-onko-therapy-intent-neoadjuvant"> </a></td><td>Neoadjuvant</td><td>Vor lokaler Therapie zur Tumorverkleinerung.</td></tr><tr><td style="white-space:nowrap">adjuvant<a name="en-onko-therapy-intent-adjuvant"> </a></td><td>Adjuvant</td><td>Nach lokaler Therapie zur Rezidivprophylaxe.</td></tr><tr><td style="white-space:nowrap">erhaltung<a name="en-onko-therapy-intent-erhaltung"> </a></td><td>Erhaltungstherapie</td><td>Stabilisierung nach Ansprechen, Maintenance.</td></tr><tr><td style="white-space:nowrap">palliativ<a name="en-onko-therapy-intent-palliativ"> </a></td><td>Palliativ</td><td>Symptomatische / lebensverlängernde Therapie ohne kurative Absicht.</td></tr><tr><td style="white-space:nowrap">supportiv<a name="en-onko-therapy-intent-supportiv"> </a></td><td>Supportiv</td><td>Begleitende Therapie zur Linderung therapie- oder tumorbedingter Beschwerden.</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+  <version value="0.1.0"/>
+  <name value="OnkoTherapyIntent"/>
+  <title value="Onkologische Therapieintention"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-15T08:15:17+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="Codiert die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts (kurativ, neoadjuvant, adjuvant, palliativ, Erhaltung, supportiv)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="kurativ"/>
+    <display value="Kurativ"/>
+    <definition value="Heilungsabsicht."/>
+  </concept>
+  <concept>
+    <code value="neoadjuvant"/>
+    <display value="Neoadjuvant"/>
+    <definition value="Vor lokaler Therapie zur Tumorverkleinerung."/>
+  </concept>
+  <concept>
+    <code value="adjuvant"/>
+    <display value="Adjuvant"/>
+    <definition value="Nach lokaler Therapie zur Rezidivprophylaxe."/>
+  </concept>
+  <concept>
+    <code value="erhaltung"/>
+    <display value="Erhaltungstherapie"/>
+    <definition value="Stabilisierung nach Ansprechen, Maintenance."/>
+  </concept>
+  <concept>
+    <code value="palliativ"/>
+    <display value="Palliativ"/>
+    <definition value="Symptomatische / lebensverlängernde Therapie ohne kurative Absicht."/>
+  </concept>
+  <concept>
+    <code value="supportiv"/>
+    <display value="Supportiv"/>
+    <definition value="Begleitende Therapie zur Linderung therapie- oder tumorbedingter Beschwerden."/>
+  </concept>
+</CodeSystem>

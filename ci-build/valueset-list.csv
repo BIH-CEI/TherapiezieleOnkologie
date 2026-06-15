@@ -1,1 +1,3 @@
 URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type,0.1.0,draft,,OnkoTherapyGoalTypeVS,Onkologische Therapieziel-Art (VS),"ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels.","StructureDefinition/onko-therapy-goal","Internal"
+https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent,0.1.0,draft,,OnkoTherapyIntentVS,Onkologische Therapieintention (VS),"ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts.","StructureDefinition/onko-therapy-intent","Internal"

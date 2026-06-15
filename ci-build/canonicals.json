@@ -1,4 +1,18 @@
 [{
+  "id" : "onko-therapy-goal-type",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyGoalType"
+},
+{
+  "id" : "onko-therapy-intent",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyIntent"
+},
+{
   "id" : "bih-cei-therapieziele-onkologie",
   "type" : "ImplementationGuide",
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ImplementationGuide/bih-cei-therapieziele-onkologie",
@@ -6,9 +20,44 @@
   "name" : "TherapiezieleOnkologie"
 },
 {
-  "id" : "therapieziel-onkologie",
+  "id" : "onko-care-plan",
   "type" : "StructureDefinition",
-  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/therapieziel-onkologie",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan",
   "version" : "0.1.0",
-  "name" : "TherapiezielOnkologie"
+  "name" : "OnkoCarePlan"
+},
+{
+  "id" : "onko-therapy-goal",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyGoal"
+},
+{
+  "id" : "onko-therapy-intent",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyIntentExt"
+},
+{
+  "id" : "onko-therapy-line",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyLine"
+},
+{
+  "id" : "onko-therapy-goal-type",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyGoalTypeVS"
+},
+{
+  "id" : "onko-therapy-intent",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyIntentVS"
 }]

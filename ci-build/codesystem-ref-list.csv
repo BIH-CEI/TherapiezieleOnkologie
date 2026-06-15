@@ -1,1 +1,3 @@
 URL,Version,Status,OIDs,Name,Title,Description,Used
+https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type,0.1.0,draft,,OnkoTherapyGoalType,Onkologische Therapieziel-Art,"Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).","ValueSet/onko-therapy-goal-type"
+https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent,0.1.0,draft,,OnkoTherapyIntent,Onkologische Therapieintention,"Codiert die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts (kurativ, neoadjuvant, adjuvant, palliativ, Erhaltung, supportiv).","ValueSet/onko-therapy-intent"
