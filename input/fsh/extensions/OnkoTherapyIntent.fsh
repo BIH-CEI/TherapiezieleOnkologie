@@ -6,5 +6,7 @@ Description: "Strukturierte Codierung der Therapieintention (kurativ, neoadjuvan
 * ^context.expression = "CarePlan"
 * ^context[+].type = #element
 * ^context[=].expression = "Goal"
+* ^context[+].type = #element
+* ^context[=].expression = "EpisodeOfCare"
 * value[x] only CodeableConcept
 * valueCodeableConcept from OnkoTherapyIntentVS (required)
