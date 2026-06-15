@@ -6,6 +6,8 @@ Er entsteht im Rahmen der BIH-CEI / Gematik-Onkologie-Kooperation und wird auf D
 
 #### Erste Profile
 
+![Profil-Übersicht](profile-overview.png)
+
 Der initiale Profilsatz folgt der im [Analysebericht](analysebericht.html) festgelegten Vier-Schichten-Architektur und bildet den **CarePlan-/Goal-Fallback-Pfad** ab:
 
 - **[OnkoCarePlan](StructureDefinition-onko-care-plan.html)** — onkologischer Versorgungsplan mit Therapieintention, adressierter Tumorerkrankung und Bezug zu Therapielinien.
