@@ -152,8 +152,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Discard build-generated changes to tracked files (e.g. translations/)
+          # before switching branches. output/ is untracked and survives.
+          git checkout -- . 2>/dev/null || true
           if git fetch origin gh-pages:gh-pages 2>/dev/null; then
-            git checkout gh-pages
+            git checkout -f gh-pages
           else
             git checkout --orphan gh-pages
             git rm -rf . 2>/dev/null || true
