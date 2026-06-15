@@ -7,6 +7,9 @@
     <marker id="arr-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
     </marker>
+    <marker id="arr-goal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c8102e"/>
+    </marker>
     <symbol id="doc" viewBox="0 0 80 100">
       <path d="M 4 4 L 60 4 L 76 20 L 76 96 L 4 96 z" fill="#ffffff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
       <path d="M 60 4 L 60 20 L 76 20" fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
@@ -198,6 +201,25 @@
     <text x="40" y="56" text-anchor="middle" font-size="9" fill="#555">Outcome / Verlauf</text>
   </g>
   <line x1="620" y1="552" x2="620" y2="588" stroke="#666" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arr-data)"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════ -->
+  <!-- GOAL ↔ OBSERVATION COUPLING -->
+  <!-- Rectangular path in the right corridor (x=895, between processes ≤880
+       and INTENTION panel ≥944), top horizontal at y=288 (above process boxes
+       at 320, below doc icons at 258). Arrow ends pointing up into Goal-doc. -->
+  <!-- ════════════════════════════════════════════════════════════════════ -->
+  <path d="M 660 612 L 895 612 L 895 288 L 430 288 L 430 262"
+        fill="none" stroke="#c8102e" stroke-width="2.2" stroke-dasharray="5 3"
+        marker-end="url(#arr-goal)" stroke-linejoin="round"/>
+
+  <!-- Inline label: outcomeReference (on the vertical right segment) -->
+  <rect x="852" y="438" width="86" height="36" fill="#ffffff"/>
+  <text x="895" y="454" text-anchor="middle" font-size="11" font-weight="700" fill="#c8102e">outcome-</text>
+  <text x="895" y="468" text-anchor="middle" font-size="11" font-weight="700" fill="#c8102e">Reference</text>
+
+  <!-- Inline label: target.measure = Observation.code (on the top horizontal segment) -->
+  <rect x="540" y="276" width="246" height="22" fill="#ffffff"/>
+  <text x="663" y="293" text-anchor="middle" font-size="11" font-weight="700" fill="#c8102e">Goal.target.measure = Observation.code</text>
 
   <!-- ════════════════════════════════════════════════════════════════════ -->
   <!-- LEGEND -->
