@@ -6,7 +6,7 @@ Description: """
 Onkologischer Versorgungsplan auf Basis von `CarePlan`.
 
 Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**
-([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html))
+([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))
 angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte
 Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte
 Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.
@@ -23,13 +23,13 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 `PlanDefinition` aus dem CPG-on-FHIR-Stack.
 """
 
-// Therapieintention (onkologiespezifisch, kein MCC-Pendant)
+// Therapieintention (onkologiespezifisch)
 * extension contains OnkoTherapyIntentExt named therapyIntent 0..1 MS
 
-// Verpflichtende Kernattribute (analog MCCCarePlan)
+// MCCCarePlan Kernattribute
 * status 1..1 MS
-* intent 1..1 MS
-* intent = #plan (exactly)
+//* intent 1..1 MS
+//* intent = #plan (exactly)
 
 // Kategorisierung des Plans
 * category MS
