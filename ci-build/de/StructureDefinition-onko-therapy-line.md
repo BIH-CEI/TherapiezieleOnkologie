@@ -90,7 +90,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
   "name" : "OnkoTherapyLine",
   "title" : "Onkologische Therapielinie",
   "status" : "draft",
-  "date" : "2026-06-15T08:59:58+00:00",
+  "date" : "2026-06-18T07:59:27+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

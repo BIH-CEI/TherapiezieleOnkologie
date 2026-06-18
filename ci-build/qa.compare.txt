@@ -35,7 +35,7 @@ INFORMATION: StructureDefinition/onko-care-plan: StructureDefinition.snapshot.el
 WARNING: StructureDefinition.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-onko-therapy-goal.json ==
 WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
-WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[4].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[5].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.snapshot.element[13].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-onko-therapy-intent.json ==

@@ -3,7 +3,14 @@
 ## Resource Profile: Onkologischer CarePlan 
 
  
-Onkologischer Versorgungsplan auf Basis von `CarePlan`. Trägt die Therapieintention (Extension `onko-therapy-intent`), referenziert die adressierte Krebserkrankung (`addresses`), die übergeordneten Therapieziele (`goal` → `OnkoTherapyGoal`) sowie die Therapielinien als untergeordnete Pläne (`CarePlan.partOf` von `OnkoTherapyLine`). Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine `PlanDefinition` aus dem CPG-on-FHIR-Stack. 
+Onkologischer Versorgungsplan auf Basis von `CarePlan`. 
+Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan** ([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html)) angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt. 
+Onkologiespezifische Ergänzungen gegenüber MCC: 
+* Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).
+* `goal` referenziert das Profil `OnkoTherapyGoal`.
+* Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter` bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.
+ 
+Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine `PlanDefinition` aus dem CPG-on-FHIR-Stack. 
 
 **Usages:**
 
@@ -32,7 +39,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-06-15T08:59:58+00:00",
+  "date" : "2026-06-18T07:59:27+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -41,7 +48,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`. Trägt die Therapieintention (Extension `onko-therapy-intent`), referenziert die adressierte Krebserkrankung (`addresses`), die übergeordneten Therapieziele (`goal` → `OnkoTherapyGoal`) sowie die Therapielinien als untergeordnete Pläne (`CarePlan.partOf` von `OnkoTherapyLine`). Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine `PlanDefinition` aus dem CPG-on-FHIR-Stack.",
+  "description" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`\n  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -101,7 +108,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"]
-      }]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "CarePlan.instantiatesCanonical",
@@ -120,6 +128,11 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
       "mustSupport" : true
     },
     {
+      "id" : "CarePlan.category",
+      "path" : "CarePlan.category",
+      "mustSupport" : true
+    },
+    {
       "id" : "CarePlan.subject",
       "path" : "CarePlan.subject",
       "type" : [{
@@ -134,6 +147,16 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
       "mustSupport" : true
     },
     {
+      "id" : "CarePlan.author",
+      "path" : "CarePlan.author",
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.contributor",
+      "path" : "CarePlan.contributor",
+      "mustSupport" : true
+    },
+    {
       "id" : "CarePlan.careTeam",
       "path" : "CarePlan.careTeam",
       "mustSupport" : true
@@ -142,6 +165,11 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
       "id" : "CarePlan.addresses",
       "path" : "CarePlan.addresses",
       "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.supportingInfo",
+      "path" : "CarePlan.supportingInfo",
       "mustSupport" : true
     },
     {
@@ -156,6 +184,32 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
     {
       "id" : "CarePlan.activity",
       "path" : "CarePlan.activity",
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.activity.outcomeReference",
+      "path" : "CarePlan.activity.outcomeReference",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Procedure",
+        "http://hl7.org/fhir/StructureDefinition/Observation",
+        "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+        "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.activity.reference",
+      "path" : "CarePlan.activity.reference",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Appointment",
+        "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+        "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
+        "http://hl7.org/fhir/StructureDefinition/Task",
+        "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+        "http://hl7.org/fhir/StructureDefinition/RequestGroup"]
+      }],
       "mustSupport" : true
     }]
   }

@@ -208,7 +208,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Onkologischer Versorgungsplan auf Basis von <code class="language-plaintext highlighter-rouge">CarePlan</code>. Trägt die Therapieintention (Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code>), referenziert die adressierte Krebserkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>), die übergeordneten Therapieziele (<code class="language-plaintext highlighter-rouge">goal</code> → <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>) sowie die Therapielinien als untergeordnete Pläne (<code class="language-plaintext highlighter-rouge">CarePlan.partOf</code> von <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>). Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des realen Versorgungsverlaufs; im Primärpfad referenziert er via <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> eine <code class="language-plaintext highlighter-rouge">PlanDefinition</code> aus dem CPG-on-FHIR-Stack.</p>
+<p>Onkologischer Versorgungsplan auf Basis von <code class="language-plaintext highlighter-rouge">CarePlan</code>.</p>
+
+<p>Das Profil ist architektonisch an den <strong>HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan</strong>
+(<a href="https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html">MCCCarePlan</a>)
+angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte
+Erkrankungen (<code class="language-plaintext highlighter-rouge">addresses</code>), übergeordnete Ziele (<code class="language-plaintext highlighter-rouge">goal</code>) sowie geplante und durchgeführte
+Maßnahmen (<code class="language-plaintext highlighter-rouge">activity</code>) verschiedener Versorgungsteams zusammenführt.</p>
+
+<p>Onkologiespezifische Ergänzungen gegenüber MCC:</p>
+<ul>
+  <li>Therapieintention über die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> (kurativ, neoadjuvant, adjuvant,
+Erhaltung, palliativ, supportiv).</li>
+  <li><code class="language-plaintext highlighter-rouge">goal</code> referenziert das Profil <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>.</li>
+  <li>Therapielinien (<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, Basis <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>) werden über <code class="language-plaintext highlighter-rouge">CarePlan.encounter</code>
+bzw. die Standard-Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code> verknüpft.</li>
+</ul>
+
+<p>Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des
+realen Versorgungsverlaufs; im Primärpfad referenziert er via <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> eine
+<code class="language-plaintext highlighter-rouge">PlanDefinition</code> aus dem CPG-on-FHIR-Stack.</p>
 </td>
          </tr>
          <tr>
@@ -220,7 +239,27 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Strukturiertes onkologisches Therapieziel auf Basis von <code class="language-plaintext highlighter-rouge">Goal</code>. Die Zielart wird über <code class="language-plaintext highlighter-rouge">category</code> codiert (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme). Über die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> kann zusätzlich die Therapieintention der zugehörigen Behandlungslinie hinterlegt werden. Das Ziel referenziert über <code class="language-plaintext highlighter-rouge">addresses</code> die adressierte Tumorerkrankung und kann über <code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> an Verlaufs-Observations (z. B. mCODE CancerDiseaseStatus) gebunden werden.</p>
+<p>Strukturiertes onkologisches Therapieziel auf Basis von <code class="language-plaintext highlighter-rouge">Goal</code>.</p>
+
+<p>Das Profil ist an den <strong>HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan</strong>
+(<a href="https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html">MCCGoal</a>)
+angelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über
+<code class="language-plaintext highlighter-rouge">addresses</code> mit den adressierten Erkrankungen und über <code class="language-plaintext highlighter-rouge">outcomeReference</code> mit beobachteten
+Ergebnissen (Verlaufs-Observations) verknüpft wird.</p>
+
+<p>Onkologiespezifische Ergänzungen gegenüber MCC:</p>
+<ul>
+  <li>Die Zielart wird über <code class="language-plaintext highlighter-rouge">category</code> aus <code class="language-plaintext highlighter-rouge">OnkoTherapyGoalTypeVS</code> codiert (Heilung,
+Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).</li>
+  <li>Über die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> kann zusätzlich die Therapieintention der
+zugehörigen Behandlungslinie hinterlegt werden.</li>
+  <li><code class="language-plaintext highlighter-rouge">outcomeReference</code> bindet das Ziel an Verlaufs-Observations (z. B. mCODE
+CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel
+bezogen ausgewertet werden kann.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">achievementStatus</code> bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab
+(z. B. erreicht, in Bearbeitung, nicht erreicht).</p>
 </td>
          </tr>
       </tbody>
@@ -336,8 +375,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-15 08:59:00 +0000">
-    2026-06-15
+  <span title="2026-06-18 07:59:00 +0000">
+    2026-06-18
   </span>
 
           <br/>

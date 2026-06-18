@@ -24,7 +24,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Goal.extension:therapyIntent","Goal.extension","therapyIntent","","",0,1,"","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent]]} {[]}
+"Goal.extension:therapyIntent","Goal.extension","therapyIntent","","",0,1,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent]]} {[]}
 ","Onkologische Therapieintention (Extension)","Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -40,13 +40,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Goal.lifecycleStatus","Goal.lifecycleStatus","","","",1,1,"Y","Y","Y","code {[]} {[]}
 ","proposed | planned | accepted | active | on-hold | completed | cancelled | entered-in-error | rejected","The state of the goal throughout its lifecycle.","This element is labeled as a modifier because the lifecycleStatus contains codes that mark the resource as not currently valid.","Allows knowing whether goal needs to be further tracked.","","","","","","","",,"required","Codes that reflect the current state of a goal and whether the goal is still being targeted.","http://hl7.org/fhir/ValueSet/goal-status|4.0.1","",,,,"Goal.lifecycleStatus",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","GOL-18-goal life cycle status",".statusCode in-progress = active (classCode = OBJ) cancelled = aborted","FiveWs.status"
-"Goal.achievementStatus","Goal.achievementStatus","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+"Goal.achievementStatus","Goal.achievementStatus","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","in-progress | improving | worsening | no-change | achieved | sustaining | not-achieved | no-progress | not-attainable","Describes the progression, or lack thereof, towards the goal against the target.","","","","","","","","","",,"preferred","Indicates the progression, or lack thereof, towards the goal against the target.","http://hl7.org/fhir/ValueSet/goal-achievement|4.0.1","",,,,"Goal.achievementStatus",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".statusCode achieved = complete sustaining = active"
 "Goal.category","Goal.category","","","",1,*,"Y","","Y","CodeableConcept {[]} {[]}
 ","E.g. Treatment, dietary, behavioral, etc.","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"extensible","","https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
-"Goal.priority","Goal.priority","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+"Goal.priority","Goal.priority","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","high-priority | medium-priority | low-priority","Identifies the mutually agreed level of importance associated with reaching/sustaining the goal.","Extensions are available to track priorities as established by each participant (i.e. Priority from the patient's perspective, different practitioners' perspectives, family member's perspectives)The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a ""low value=important"".","Used for sorting and presenting goals.","","","","","","","",,"preferred","The level of importance associated with a goal.","http://hl7.org/fhir/ValueSet/goal-priority|4.0.1","",,,,"Goal.priority",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".priorityCode","FiveWs.grade"
 "Goal.description","Goal.description","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
@@ -74,15 +74,15 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"Goal.target.measure","Goal.target.measure","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+"Goal.target.measure","Goal.target.measure","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","The parameter whose value is being tracked","The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.","","","","","","","","","",,"example","Codes to identify the value being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.","http://hl7.org/fhir/ValueSet/observation-codes|4.0.1","",,,,"Goal.target.measure",0,1,"gol-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Goal.target.detail[x]","Goal.target.detail[x]","","","",0,1,"","","Y","Quantity {[]} {[]}
+"Goal.target.detail[x]","Goal.target.detail[x]","","","",0,1,"Y","","Y","Quantity {[]} {[]}
 Range {[]} {[]}CodeableConcept {[]} {[]}string {[]} {[]}boolean {[]} {[]}integer {[]} {[]}Ratio {[]} {[]}","The target value to be achieved","The target value of the focus to be achieved to signify the fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low or both values of the range can be specified. When a low value is missing, it indicates that the goal is achieved at any focus value at or below the high value. Similarly, if the high value is missing, it indicates that the goal is achieved at any focus value at or above the low value.","A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.","","","","","","","","",,"example","Codes to identify the target value of the focus to be achieved to signify the fulfillment of the goal.","","",,,,"Goal.target.detail[x]",0,1,"gol-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Goal.target.due[x]","Goal.target.due[x]","","","",0,1,"","","Y","date {[]} {[]}
+"Goal.target.due[x]","Goal.target.due[x]","","","",0,1,"Y","","Y","date {[]} {[]}
 Duration {[]} {[]}","Reach goal on or before","Indicates either the date or the duration after start by which the goal should be met.","","Identifies when the goal should be evaluated.","","","","","","","",,,,,"",,,,"Goal.target.due[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.done[x]"
 "Goal.statusDate","Goal.statusDate","","","",0,1,"","","Y","date {[]} {[]}
@@ -91,13 +91,13 @@ Duration {[]} {[]}","Reach goal on or before","Indicates either the date or the 
 "Goal.statusReason","Goal.statusReason","","","",0,1,"","","","string {[]} {[]}
 ","Reason for current status","Captures the reason for the current status.","This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others.","","","","","","","","",,,,,"",,,,"Goal.statusReason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Goal.expressedBy","Goal.expressedBy","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1]]}
+"Goal.expressedBy","Goal.expressedBy","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1]]}
 ","Who's responsible for creating Goal?","Indicates whose goal this is - patient goal, practitioner goal, etc.","This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).","","","","","","","","",,,,,"",,,,"Goal.expressedBy",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.source"
 "Goal.addresses","Goal.addresses","","","",0,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Condition]]}
 ","Issues addressed by this goal","The identified conditions and other health record elements that are intended to be addressed by the goal.","","Allows specific goals to explicitly linked to the concerns they're dealing with - makes the goal more understandable.","","","","","","","",,,,,"",,,,"Goal.addresses",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".outboundRelationship[typeCode=SUBJ].target[classCode=CONC]","FiveWs.why[x]"
-"Goal.note","Goal.note","","","",0,*,"","","","Annotation {[]} {[]}
+"Goal.note","Goal.note","","","",0,*,"Y","","","Annotation {[]} {[]}
 ","Comments about the goal","Any comments related to the goal.","May be used for progress notes, concerns or other related information that doesn't actually describe the goal itself.","There's a need to capture information about the goal that doesn't actually describe the goal.","","","","","","","",,,,,"",,,,"Goal.note",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","GOL-16-goal evaluation + NTE?",".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=""annotation""].value"
 "Goal.outcomeCode","Goal.outcomeCode","","","",0,*,"Y","","","CodeableConcept {[]} {[]}

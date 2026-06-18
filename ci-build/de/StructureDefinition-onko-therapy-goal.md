@@ -3,7 +3,14 @@
 ## Ressourcenprofil: Onkologisches Therapieziel 
 
  
-Strukturiertes onkologisches Therapieziel auf Basis von `Goal`. Die Zielart wird über `category` codiert (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme). Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der zugehörigen Behandlungslinie hinterlegt werden. Das Ziel referenziert über `addresses` die adressierte Tumorerkrankung und kann über `Goal.outcomeReference` an Verlaufs-Observations (z. B. mCODE CancerDiseaseStatus) gebunden werden. 
+Strukturiertes onkologisches Therapieziel auf Basis von `Goal`. 
+Das Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan** ([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html)) angelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über `addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten Ergebnissen (Verlaufs-Observations) verknüpft wird. 
+Onkologiespezifische Ergänzungen gegenüber MCC: 
+* Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).
+* Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der zugehörigen Behandlungslinie hinterlegt werden.
+* `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel bezogen ausgewertet werden kann.
+ 
+`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab (z. B. erreicht, in Bearbeitung, nicht erreicht). 
 
 **Usages:**
 
@@ -38,7 +45,7 @@ Diese Struktur ist abgeleitet von [Goal](http://hl7.org/fhir/R4/goal.html)
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 9 elements
+ Must-Support: 17 elements
 
 **Extensions**
 
@@ -69,7 +76,7 @@ Diese Struktur ist abgeleitet von [Goal](http://hl7.org/fhir/R4/goal.html)
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 9 elements
+ Must-Support: 17 elements
 
 **Extensions**
 
@@ -94,7 +101,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
   "name" : "OnkoTherapyGoal",
   "title" : "Onkologisches Therapieziel",
   "status" : "draft",
-  "date" : "2026-06-15T08:59:58+00:00",
+  "date" : "2026-06-18T07:59:27+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -103,7 +110,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Strukturiertes onkologisches Therapieziel auf Basis von `Goal`. Die Zielart wird über `category` codiert (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme). Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der zugehörigen Behandlungslinie hinterlegt werden. Das Ziel referenziert über `addresses` die adressierte Tumorerkrankung und kann über `Goal.outcomeReference` an Verlaufs-Observations (z. B. mCODE CancerDiseaseStatus) gebunden werden.",
+  "description" : "Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.\n\nDas Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))\nangelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über\n`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten\nErgebnissen (Verlaufs-Observations) verknüpft wird.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,\n  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).\n- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der\n  zugehörigen Behandlungslinie hinterlegt werden.\n- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE\n  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel\n  bezogen ausgewertet werden kann.\n\n`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab\n(z. B. erreicht, in Bearbeitung, nicht erreicht).",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -158,11 +165,17 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"]
-      }]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "Goal.lifecycleStatus",
       "path" : "Goal.lifecycleStatus",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Goal.achievementStatus",
+      "path" : "Goal.achievementStatus",
       "mustSupport" : true
     },
     {
@@ -174,6 +187,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
         "strength" : "extensible",
         "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"
       }
+    },
+    {
+      "id" : "Goal.priority",
+      "path" : "Goal.priority",
+      "mustSupport" : true
     },
     {
       "id" : "Goal.description",
@@ -200,12 +218,37 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "mustSupport" : true
     },
     {
+      "id" : "Goal.target.measure",
+      "path" : "Goal.target.measure",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Goal.target.detail[x]",
+      "path" : "Goal.target.detail[x]",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Goal.target.due[x]",
+      "path" : "Goal.target.due[x]",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Goal.expressedBy",
+      "path" : "Goal.expressedBy",
+      "mustSupport" : true
+    },
+    {
       "id" : "Goal.addresses",
       "path" : "Goal.addresses",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition"]
       }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Goal.note",
+      "path" : "Goal.note",
       "mustSupport" : true
     },
     {
