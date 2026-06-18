@@ -24,7 +24,7 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 """
 
 // Therapieintention (onkologiespezifisch)
-* extension contains OnkoTherapyIntentExt named therapyIntent 0..1 MS
+* extension contains OnkoTherapyIntentExt named therapyIntent 0..1
 
 // MCCCarePlan Kernattribute
 * status 1..1 MS
@@ -39,7 +39,7 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 * subject only Reference(Patient)
 
 // Geltungszeitraum des Plans
-* period MS
+* period
 
 // Adressierte Gesundheitsprobleme (Verbindung Erkrankung – CarePlan)
 * addresses 1..* MS
@@ -62,7 +62,7 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 * careTeam MS
 * supportingInfo MS
 * contributor MS
-* author MS
+* author
 
 // Verknüpfung zum CPG-on-FHIR-Stack (Primärpfad)
 * instantiatesCanonical MS
