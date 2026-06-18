@@ -11,7 +11,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-06-18T10:39:29+00:00",
+  "date" : "2026-06-18T11:30:08+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -744,7 +744,7 @@
         "valueString" : "Practitioner"
       }],
       "reference" : {
-        "reference" : "Practitioner/OnkologinKRK"
+        "reference" : "Practitioner/OnkologinCRC"
       },
       "name" : "Behandelnde Onkologin (Beispiel)",
       "exampleBoolean" : true
@@ -767,7 +767,7 @@
         "valueString" : "Condition"
       }],
       "reference" : {
-        "reference" : "Condition/ConditionKRK"
+        "reference" : "Condition/ConditionCRC"
       },
       "name" : "Kolorektales Karzinom, metastasiert (Beispiel)",
       "description" : "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9, mit Lebermetastasen C78.7).",
@@ -863,7 +863,7 @@
         "valueString" : "CarePlan"
       }],
       "reference" : {
-        "reference" : "CarePlan/CarePlanKRKPalliativ"
+        "reference" : "CarePlan/CarePlanCRCPalliativ"
       },
       "name" : "Onkologischer CarePlan – mCRC palliativ (Beispiel)",
       "description" : "Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt.",
@@ -887,7 +887,7 @@
         "valueString" : "Patient"
       }],
       "reference" : {
-        "reference" : "Patient/PatientinKRK"
+        "reference" : "Patient/PatientinCRC"
       },
       "name" : "Patientin – mCRC (Beispiel)",
       "description" : "Beispielpatientin mit metastasiertem kolorektalem Karzinom.",
@@ -899,7 +899,7 @@
         "valueString" : "EpisodeOfCare"
       }],
       "reference" : {
-        "reference" : "EpisodeOfCare/TherapielinieKRKErstlinie"
+        "reference" : "EpisodeOfCare/TherapielinieCRCErstlinie"
       },
       "name" : "Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)",
       "description" : "Erstlinien-Behandlungsabschnitt mit palliativer Intention.",
@@ -911,7 +911,7 @@
         "valueString" : "Goal"
       }],
       "reference" : {
-        "reference" : "Goal/TherapiezielKRKLebensverlaengerung"
+        "reference" : "Goal/TherapiezielCRCLebensverlaengerung"
       },
       "name" : "Therapieziel – Lebensverlängerung & Symptomkontrolle (Beispiel)",
       "description" : "Übergeordnetes palliatives Therapieziel: Lebensverlängerung bei gleichzeitiger Symptomkontrolle.",
@@ -923,7 +923,7 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/ObservationDiseaseStatusKRK"
+        "reference" : "Observation/ObservationDiseaseStatusCRC"
       },
       "name" : "Tumoransprechen / Disease Status (Beispiel)",
       "description" : "Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen auf das Therapieziel bezieht (vgl. mCODE Cancer Disease Status).",
@@ -949,9 +949,9 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "szenario-krk.html"
+          "valueUrl" : "szenario-crc.html"
         }],
-        "nameUrl" : "szenario-krk.html",
+        "nameUrl" : "szenario-crc.html",
         "title" : "Anwendungsbeispiel (mCRC palliativ)",
         "generation" : "markdown"
       },

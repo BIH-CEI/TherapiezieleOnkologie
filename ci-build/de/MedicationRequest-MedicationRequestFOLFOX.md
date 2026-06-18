@@ -14,7 +14,7 @@
 
 **medication**: FOLFOX + Bevacizumab
 
-**subject**: [Erika Beispiel Female, DoB: 1958-09-12](Patient-PatientinKRK.md)
+**subject**: [Erika Musterfrau Female, DoB: 1961-09-12](Patient-PatientinCRC.md)
 
 
 
@@ -30,7 +30,7 @@
     "text" : "FOLFOX + Bevacizumab"
   },
   "subject" : {
-    "reference" : "Patient/PatientinKRK"
+    "reference" : "Patient/PatientinCRC"
   }
 }
 

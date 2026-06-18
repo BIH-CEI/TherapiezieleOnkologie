@@ -1,5 +1,5 @@
 {
-  "date" : "Thu, 18 Jun, 2026 10:39:29 +0000",
+  "date" : "Thu, 18 Jun, 2026 11:30:08 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
     "name" : "/fsh-generated/resources/ImplementationGuide-bih-cei-therapieziele-onkologie.json",
@@ -7,85 +7,75 @@
     "processes" : [{
       "activity" : "load",
       "start" : 24,
-      "length" : 14
+      "length" : 17
     },
     {
       "activity" : "checkR4R4B",
       "start" : 24,
-      "length" : 14
+      "length" : 16
     },
     {
       "activity" : "generateNarratives",
       "start" : 24,
-      "length" : 182
+      "length" : 188
     },
     {
       "activity" : "validate",
       "start" : 30,
-      "length" : 2765
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 32,
-      "length" : 1
-    },
-    {
-      "activity" : "scanForUsageStats",
-      "start" : 32,
-      "length" : 1
+      "length" : 2372
     },
     {
       "activity" : "translate",
-      "start" : 33,
-      "length" : 14
+      "start" : 32,
+      "length" : 15
     },
     {
       "activity" : "generate1",
       "start" : 33,
-      "length" : 124
+      "length" : 116
     },
     {
       "activity" : "generate2",
       "start" : 36,
-      "length" : 199
+      "length" : 300
     },
     {
       "activity" : "generateValidationPack",
       "start" : 49,
-      "length" : 6
+      "length" : 5
     },
     {
       "activity" : "scanExamplesForR5",
-      "start" : 56,
+      "start" : 57,
       "length" : 1
     }]
   },
   {
-    "name" : "fsh-generated/resources/CarePlan-CarePlanKRKPalliativ.json",
+    "name" : "fsh-generated/resources/CarePlan-CarePlanCRCPalliativ.json",
     "size" : 1424,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 24,
-      "length" : 4
+      "start" : 23,
+      "length" : 5
     },
     {
       "activity" : "load-configure",
       "start" : 24,
-      "length" : 1
+      "length" : 2
     },
     {
       "activity" : "generateNarratives",
       "start" : 24,
-      "length" : 29
+      "length" : 30
     },
     {
       "activity" : "validate",
       "start" : 32,
-      "length" : 49
+      "length" : 48
     },
     {
       "activity" : "translate",
-      "start" : 33,
+      "start" : 32,
       "length" : 5
     },
     {
@@ -95,8 +85,8 @@
     },
     {
       "activity" : "generate2",
-      "start" : 37,
-      "length" : 45
+      "start" : 36,
+      "length" : 52
     }]
   },
   {
@@ -104,48 +94,92 @@
     "size" : 1498,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 24,
-      "length" : 3
+      "start" : 23,
+      "length" : 2
     },
     {
       "activity" : "load",
-      "start" : 24,
-      "length" : 7
+      "start" : 23,
+      "length" : 8
     },
     {
-      "activity" : "load-configure",
+      "activity" : "checkR4R4B",
       "start" : 24,
       "length" : 1
     },
     {
       "activity" : "generateNarratives",
       "start" : 24,
-      "length" : 21
+      "length" : 16
     },
     {
       "activity" : "validate",
       "start" : 25,
-      "length" : 399
+      "length" : 416
     },
     {
-      "activity" : "checkConformanceResources",
+      "activity" : "validate",
       "start" : 32,
       "length" : 1
     },
     {
       "activity" : "translate",
-      "start" : 33,
-      "length" : 3
+      "start" : 32,
+      "length" : 5
     },
     {
       "activity" : "generate1",
       "start" : 33,
-      "length" : 20
+      "length" : 23
     },
     {
       "activity" : "generate2",
-      "start" : 37,
-      "length" : 233
+      "start" : 36,
+      "length" : 163
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-onko-therapy-intent.json",
+    "size" : 1395,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 23,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 23,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 24,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 25,
+      "length" : 93
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 33,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 36,
+      "length" : 109
     },
     {
       "activity" : "generateValidationPack",
@@ -154,17 +188,46 @@
     }]
   },
   {
-    "name" : "fsh-generated/resources/CodeSystem-onko-therapy-intent.json",
-    "size" : 1395,
+    "name" : "fsh-generated/resources/Condition-ConditionCRC.json",
+    "size" : 785,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 24,
+      "start" : 23,
       "length" : 2
     },
     {
-      "activity" : "load",
+      "activity" : "generateNarratives",
       "start" : 24,
-      "length" : 3
+      "length" : 55
+    },
+    {
+      "activity" : "validate",
+      "start" : 32,
+      "length" : 12
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 33,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 37,
+      "length" : 23
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/EpisodeOfCare-TherapielinieCRCErstlinie.json",
+    "size" : 866,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 23,
+      "length" : 2
     },
     {
       "activity" : "checkR4R4B",
@@ -178,23 +241,47 @@
     },
     {
       "activity" : "validate",
-      "start" : 25,
-      "length" : 36
+      "start" : 32,
+      "length" : 17
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 33,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 37,
+      "length" : 23
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Goal-TherapiezielCRCLebensverlaengerung.json",
+    "size" : 2328,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 23,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 24,
+      "length" : 7
     },
     {
       "activity" : "validate",
       "start" : 32,
-      "length" : 1
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 32,
-      "length" : 1
+      "length" : 28
     },
     {
       "activity" : "translate",
-      "start" : 33,
-      "length" : 2
+      "start" : 32,
+      "length" : 3
     },
     {
       "activity" : "generate1",
@@ -204,119 +291,7 @@
     {
       "activity" : "generate2",
       "start" : 37,
-      "length" : 128
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 49,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/Condition-ConditionKRK.json",
-    "size" : 785,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 2
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 24,
-      "length" : 57
-    },
-    {
-      "activity" : "validate",
-      "start" : 32,
-      "length" : 11
-    },
-    {
-      "activity" : "translate",
-      "start" : 33,
-      "length" : 3
-    },
-    {
-      "activity" : "generate1",
-      "start" : 33,
-      "length" : 8
-    },
-    {
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 20
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/EpisodeOfCare-TherapielinieKRKErstlinie.json",
-    "size" : 866,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 2
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 24,
-      "length" : 7
-    },
-    {
-      "activity" : "validate",
-      "start" : 32,
-      "length" : 63
-    },
-    {
-      "activity" : "translate",
-      "start" : 33,
-      "length" : 2
-    },
-    {
-      "activity" : "generate1",
-      "start" : 33,
-      "length" : 13
-    },
-    {
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 17
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/Goal-TherapiezielKRKLebensverlaengerung.json",
-    "size" : 2328,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 3
-    },
-    {
-      "activity" : "checkR4R4B",
-      "start" : 24,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 24,
-      "length" : 7
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 27
-    },
-    {
-      "activity" : "translate",
-      "start" : 33,
-      "length" : 2
-    },
-    {
-      "activity" : "generate1",
-      "start" : 33,
-      "length" : 20
-    },
-    {
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 24
+      "length" : 40
     }]
   },
   {
@@ -324,8 +299,13 @@
     "size" : 252,
     "processes" : [{
       "activity" : "loadResources",
+      "start" : 23,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
       "start" : 24,
-      "length" : 2
+      "length" : 1
     },
     {
       "activity" : "generateNarratives",
@@ -334,12 +314,51 @@
     },
     {
       "activity" : "validate",
-      "start" : 33,
-      "length" : 5
+      "start" : 32,
+      "length" : 6
     },
     {
       "activity" : "translate",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
       "start" : 33,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 37,
+      "length" : 30
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-ObservationDiseaseStatusCRC.json",
+    "size" : 539,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 23,
+      "length" : 2
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 24,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 24,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 32,
+      "length" : 14
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
       "length" : 3
     },
     {
@@ -350,7 +369,75 @@
     {
       "activity" : "generate2",
       "start" : 37,
-      "length" : 17
+      "length" : 21
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-PatientinCRC.json",
+    "size" : 207,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 23,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 24,
+      "length" : 2
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 32,
+      "length" : 4
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 33,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 37,
+      "length" : 16
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-OnkologinCRC.json",
+    "size" : 161,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 24,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 33,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 37,
+      "length" : 13
     },
     {
       "activity" : "generateExampleZip",
@@ -359,129 +446,27 @@
     }]
   },
   {
-    "name" : "fsh-generated/resources/Observation-ObservationDiseaseStatusKRK.json",
-    "size" : 534,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 24,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 11
-    },
-    {
-      "activity" : "translate",
-      "start" : 33,
-      "length" : 2
-    },
-    {
-      "activity" : "generate1",
-      "start" : 33,
-      "length" : 8
-    },
-    {
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 15
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/Patient-PatientinKRK.json",
-    "size" : 205,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 24,
-      "length" : 2
-    },
-    {
-      "activity" : "validate",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 4
-    },
-    {
-      "activity" : "translate",
-      "start" : 33,
-      "length" : 2
-    },
-    {
-      "activity" : "generate1",
-      "start" : 33,
-      "length" : 6
-    },
-    {
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 11
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/Practitioner-OnkologinKRK.json",
-    "size" : 161,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 24,
-      "length" : 1
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 2
-    },
-    {
-      "activity" : "translate",
-      "start" : 33,
-      "length" : 2
-    },
-    {
-      "activity" : "generate1",
-      "start" : 33,
-      "length" : 4
-    },
-    {
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 9
-    }]
-  },
-  {
     "name" : "fsh-generated/resources/StructureDefinition-onko-care-plan.json",
     "size" : 5280,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 24,
+      "start" : 23,
       "length" : 5
     },
     {
       "activity" : "load",
       "start" : 24,
-      "length" : 7
+      "length" : 9
     },
     {
       "activity" : "generateSnapshots",
       "start" : 24,
-      "length" : 60
+      "length" : 63
+    },
+    {
+      "activity" : "loadDepInfo",
+      "start" : 24,
+      "length" : 1
     },
     {
       "activity" : "checkR4R4B",
@@ -491,194 +476,12 @@
     {
       "activity" : "generateNarratives",
       "start" : 24,
-      "length" : 488
+      "length" : 497
     },
     {
       "activity" : "validate",
-      "start" : 26,
-      "length" : 1064
-    },
-    {
-      "activity" : "scanForUsageStats",
-      "start" : 32,
-      "length" : 2
-    },
-    {
-      "activity" : "translate",
-      "start" : 33,
-      "length" : 2
-    },
-    {
-      "activity" : "generate1",
-      "start" : 33,
-      "length" : 375
-    },
-    {
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 1506
-    },
-    {
-      "activity" : "generate2",
-      "start" : 40,
-      "length" : 1341
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 49,
-      "length" : 12
-    },
-    {
-      "activity" : "scanExamplesForR5",
-      "start" : 56,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/StructureDefinition-onko-therapy-goal.json",
-    "size" : 4580,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 4
-    },
-    {
-      "activity" : "load",
-      "start" : 24,
-      "length" : 6
-    },
-    {
-      "activity" : "generateSnapshots",
-      "start" : 24,
-      "length" : 30
-    },
-    {
-      "activity" : "generateNarratives",
       "start" : 25,
-      "length" : 54
-    },
-    {
-      "activity" : "validate",
-      "start" : 27,
-      "length" : 421
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 32,
-      "length" : 1
-    },
-    {
-      "activity" : "scanForUsageStats",
-      "start" : 32,
-      "length" : 1
-    },
-    {
-      "activity" : "generate1",
-      "start" : 34,
-      "length" : 259
-    },
-    {
-      "activity" : "generate2",
-      "start" : 39,
-      "length" : 662
-    },
-    {
-      "activity" : "generate2",
-      "start" : 42,
-      "length" : 220
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 49,
-      "length" : 8
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/StructureDefinition-onko-therapy-intent.json",
-    "size" : 2029,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 3
-    },
-    {
-      "activity" : "load",
-      "start" : 24,
-      "length" : 3
-    },
-    {
-      "activity" : "generateSnapshots",
-      "start" : 24,
-      "length" : 5
-    },
-    {
-      "activity" : "scan",
-      "start" : 24,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 25,
-      "length" : 13
-    },
-    {
-      "activity" : "validate",
-      "start" : 27,
-      "length" : 2186
-    },
-    {
-      "activity" : "translate",
-      "start" : 33,
-      "length" : 1
-    },
-    {
-      "activity" : "generate1",
-      "start" : 34,
-      "length" : 66
-    },
-    {
-      "activity" : "generate2",
-      "start" : 39,
-      "length" : 209
-    },
-    {
-      "activity" : "generate2",
-      "start" : 42,
-      "length" : 48
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 49,
-      "length" : 2
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/StructureDefinition-onko-therapy-line.json",
-    "size" : 3177,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 24,
-      "length" : 3
-    },
-    {
-      "activity" : "load",
-      "start" : 24,
-      "length" : 5
-    },
-    {
-      "activity" : "generateSnapshots",
-      "start" : 24,
-      "length" : 35
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 25,
-      "length" : 33
-    },
-    {
-      "activity" : "validate",
-      "start" : 29,
-      "length" : 430
+      "length" : 1088
     },
     {
       "activity" : "checkConformanceResources",
@@ -688,31 +491,213 @@
     {
       "activity" : "scanForUsageStats",
       "start" : 32,
-      "length" : 1
+      "length" : 2
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
+      "length" : 2
     },
     {
       "activity" : "generate1",
-      "start" : 34,
-      "length" : 175
+      "start" : 33,
+      "length" : 267
+    },
+    {
+      "activity" : "generate2",
+      "start" : 37,
+      "length" : 1861
     },
     {
       "activity" : "generate2",
       "start" : 40,
-      "length" : 499
-    },
-    {
-      "activity" : "generate2",
-      "start" : 42,
-      "length" : 179
+      "length" : 1977
     },
     {
       "activity" : "generateValidationPack",
       "start" : 49,
-      "length" : 6
+      "length" : 16
     },
     {
       "activity" : "scanExamplesForR5",
-      "start" : 56,
+      "start" : 57,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-onko-therapy-goal.json",
+    "size" : 4580,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 23,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 24,
+      "length" : 7
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 24,
+      "length" : 39
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 25,
+      "length" : 60
+    },
+    {
+      "activity" : "validate",
+      "start" : 26,
+      "length" : 494
+    },
+    {
+      "activity" : "generate1",
+      "start" : 33,
+      "length" : 187
+    },
+    {
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 650
+    },
+    {
+      "activity" : "generate2",
+      "start" : 42,
+      "length" : 194
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 50,
+      "length" : 12
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-onko-therapy-intent.json",
+    "size" : 2029,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 23,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 24,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 24,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 25,
+      "length" : 13
+    },
+    {
+      "activity" : "validate",
+      "start" : 27,
+      "length" : 2306
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 33,
+      "length" : 51
+    },
+    {
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 200
+    },
+    {
+      "activity" : "generate2",
+      "start" : 42,
+      "length" : 42
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 50,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-onko-therapy-line.json",
+    "size" : 3177,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 23,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 24,
+      "length" : 5
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 24,
+      "length" : 32
+    },
+    {
+      "activity" : "loadInfo",
+      "start" : 24,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 25,
+      "length" : 37
+    },
+    {
+      "activity" : "validate",
+      "start" : 29,
+      "length" : 419
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 33,
+      "length" : 158
+    },
+    {
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 511
+    },
+    {
+      "activity" : "generate2",
+      "start" : 42,
+      "length" : 137
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 50,
+      "length" : 9
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 57,
       "length" : 1
     }]
   },
@@ -721,13 +706,13 @@
     "size" : 553,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 24,
-      "length" : 2
+      "start" : 23,
+      "length" : 1
     },
     {
       "activity" : "load",
-      "start" : 24,
-      "length" : 2
+      "start" : 23,
+      "length" : 3
     },
     {
       "activity" : "load-configure",
@@ -742,36 +727,31 @@
     {
       "activity" : "generateNarratives",
       "start" : 25,
-      "length" : 39
+      "length" : 38
     },
     {
       "activity" : "validate",
       "start" : 25,
-      "length" : 72
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 32,
-      "length" : 1
+      "length" : 40
     },
     {
       "activity" : "translate",
-      "start" : 33,
-      "length" : 2
+      "start" : 32,
+      "length" : 3
     },
     {
       "activity" : "generate1",
-      "start" : 34,
-      "length" : 10
+      "start" : 33,
+      "length" : 8
     },
     {
       "activity" : "generate2",
       "start" : 40,
-      "length" : 129
+      "length" : 114
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 49,
+      "start" : 50,
       "length" : 1
     }]
   },
@@ -780,13 +760,13 @@
     "size" : 578,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 24,
+      "start" : 23,
       "length" : 1
     },
     {
       "activity" : "load",
       "start" : 24,
-      "length" : 2
+      "length" : 3
     },
     {
       "activity" : "generateNarratives",
@@ -795,23 +775,23 @@
     },
     {
       "activity" : "validate",
-      "start" : 26,
-      "length" : 24
+      "start" : 25,
+      "length" : 30
     },
     {
       "activity" : "translate",
-      "start" : 33,
-      "length" : 2
+      "start" : 32,
+      "length" : 4
     },
     {
       "activity" : "generate1",
-      "start" : 34,
-      "length" : 9
+      "start" : 33,
+      "length" : 8
     },
     {
       "activity" : "generate2",
       "start" : 40,
-      "length" : 107
+      "length" : 83
     }]
   },
   {
@@ -833,11 +813,11 @@
     "processes" : [{
       "activity" : "generate2",
       "start" : 40,
-      "length" : 8
+      "length" : 15
     }]
   },
   {
-    "name" : "/input/pagecontent/szenario-krk.md",
+    "name" : "/input/pagecontent/szenario-crc.md",
     "size" : 2681,
     "processes" : [{
       "activity" : "generate2",
@@ -851,12 +831,7 @@
   },
   {
     "name" : "/input/pagecontent/index.md",
-    "size" : 1699,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 40,
-      "length" : 1
-    }]
+    "size" : 1699
   },
   {
     "name" : "/template/config",
@@ -877,16 +852,16 @@
   },
   {
     "name" : "/input/images/profile-overview.png",
-    "size" : 271803,
+    "size" : 271803
+  },
+  {
+    "name" : "/input/images/architektur_stack.png",
+    "size" : 223620,
     "processes" : [{
       "activity" : "generate2",
       "start" : 40,
       "length" : 1
     }]
-  },
-  {
-    "name" : "/input/images/architektur_stack.png",
-    "size" : 223620
   },
   {
     "name" : "/input/images/profile-overview.svg",

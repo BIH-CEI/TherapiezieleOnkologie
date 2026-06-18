@@ -3,9 +3,9 @@
 ## Pages
 
 * [Startseite](de/index.md)
-* [Anwendungsbeispiel (mCRC palliativ)](de/szenario-krk.md)
 * [Hinweise zur Übersetzung](de/translationinfo.md)
 * [Artefaktübersicht](de/artifacts.md)
+* [Anwendungsbeispiel (mCRC palliativ)](de/szenario-crc.md)
 * [Analysebericht (LG-01)](de/analysebericht.md)
 
 ## Resources
@@ -36,11 +36,11 @@
 
 ### Examples
 
-* [CarePlanKRKPalliativ (CarePlan)](de/CarePlan-CarePlanKRKPalliativ.md)
-* [ConditionKRK (Condition)](de/Condition-ConditionKRK.md)
-* [TherapielinieKRKErstlinie (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieKRKErstlinie.md)
-* [TherapiezielKRKLebensverlaengerung (Goal)](de/Goal-TherapiezielKRKLebensverlaengerung.md)
+* [CarePlanCRCPalliativ (CarePlan)](de/CarePlan-CarePlanCRCPalliativ.md)
+* [ConditionCRC (Condition)](de/Condition-ConditionCRC.md)
+* [TherapielinieCRCErstlinie (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieCRCErstlinie.md)
+* [TherapiezielCRCLebensverlaengerung (Goal)](de/Goal-TherapiezielCRCLebensverlaengerung.md)
 * [MedicationRequestFOLFOX (MedicationRequest)](de/MedicationRequest-MedicationRequestFOLFOX.md)
-* [ObservationDiseaseStatusKRK (Observation)](de/Observation-ObservationDiseaseStatusKRK.md)
-* [PatientinKRK (Patient)](de/Patient-PatientinKRK.md)
-* [OnkologinKRK (Practitioner)](de/Practitioner-OnkologinKRK.md)
+* [ObservationDiseaseStatusCRC (Observation)](de/Observation-ObservationDiseaseStatusCRC.md)
+* [PatientinCRC (Patient)](de/Patient-PatientinCRC.md)
+* [OnkologinCRC (Practitioner)](de/Practitioner-OnkologinCRC.md)

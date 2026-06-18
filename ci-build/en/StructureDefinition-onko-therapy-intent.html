@@ -95,7 +95,7 @@
     <a href="index.html">Startseite</a>
   </li>
   <li>
-    <a href="szenario-krk.html">Anwendungsbeispiel</a>
+    <a href="szenario-crc.html">Anwendungsbeispiel</a>
   </li>
   <li>
     <a href="analysebericht.html">Analysebericht</a>
@@ -289,7 +289,7 @@ Element ID:     <code>
   <p><b>Usages:</b></p>
 <ul>
  <li>Use this Extension: <a href="StructureDefinition-onko-care-plan.html">Onkologischer CarePlan</a>, <a href="StructureDefinition-onko-therapy-goal.html">Onkologisches Therapieziel</a> and <a href="StructureDefinition-onko-therapy-line.html">Onkologische Therapielinie</a></li>
- <li>Examples for this Extension: <a href="CarePlan-CarePlanKRKPalliativ.html">CarePlan/CarePlanKRKPalliativ</a>, <a href="EpisodeOfCare-TherapielinieKRKErstlinie.html">EpisodeOfCare/TherapielinieKRKErstlinie</a> and <a href="Goal-TherapiezielKRKLebensverlaengerung.html">Goal/TherapiezielKRKLebensverlaengerung</a></li>
+ <li>Examples for this Extension: <a href="CarePlan-CarePlanCRCPalliativ.html">CarePlan/CarePlanCRCPalliativ</a>, <a href="EpisodeOfCare-TherapielinieCRCErstlinie.html">EpisodeOfCare/TherapielinieCRCErstlinie</a> and <a href="Goal-TherapiezielCRCLebensverlaengerung.html">Goal/TherapiezielCRCLebensverlaengerung</a></li>
 </ul>
 <p>You can also check for <a href="https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-intent.json">usages in the FHIR IG Statistics</a></p>
 
@@ -353,7 +353,7 @@ Element ID:     <code>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Value of extension</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-onko-therapy-intent.html" title="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent" class="binding">Onkologische Therapieintention (VS)</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc6fc902-881d-4c53-aeea-67d61c033e75
 document.getElementById('cbonko-therapy-intentD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-therapy-intentD'), 'binding', document.getElementById('cbonko-therapy-intentD-binding').checked, document.getElementById('pponko-therapy-intentD'));
 document.getElementById('cbonko-therapy-intentD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -441,7 +441,7 @@ filterDesc(document.getElementById('onko-therapy-intentD'), 'obligation', docume
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value of extension<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-onko-therapy-intent.html" title="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent" class="binding">Onkologische Therapieintention (VS)</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc6fc902-881d-4c53-aeea-67d61c033e75
 document.getElementById('cbonko-therapy-intentS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-therapy-intentS'), 'binding', document.getElementById('cbonko-therapy-intentS-binding').checked, document.getElementById('pponko-therapy-intentS'));
 document.getElementById('cbonko-therapy-intentS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -615,7 +615,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Value of extension</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-onko-therapy-intent.html" title="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent" class="binding">Onkologische Therapieintention (VS)</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc6fc902-881d-4c53-aeea-67d61c033e75
 document.getElementById('cbonko-therapy-intentDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-therapy-intentDA'), 'binding', document.getElementById('cbonko-therapy-intentDA-binding').checked, document.getElementById('pponko-therapy-intentDA'));
 document.getElementById('cbonko-therapy-intentDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -699,7 +699,7 @@ filterDesc(document.getElementById('onko-therapy-intentDA'), 'obligation', docum
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value of extension<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-onko-therapy-intent.html" title="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent" class="binding">Onkologische Therapieintention (VS)</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc6fc902-881d-4c53-aeea-67d61c033e75
 document.getElementById('cbonko-therapy-intentSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-therapy-intentSA'), 'binding', document.getElementById('cbonko-therapy-intentSA-binding').checked, document.getElementById('pponko-therapy-intentSA'));
 document.getElementById('cbonko-therapy-intentSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -877,7 +877,7 @@ Summary
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-18 10:39:00 +0000">
+  <span title="2026-06-18 11:30:00 +0000">
     2026-06-18
   </span>
 

@@ -1,0 +1,28 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObservationDiseaseStatusCRC",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObservationDiseaseStatusCRC</b></p><a name=\"en-ObservationDiseaseStatusCRC\"> </a><a name=\"en-hcObservationDiseaseStatusCRC\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 97509-4}\">Cancer disease progression</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>effective</b>: 2026-05-15</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 260415000}\">Not detected</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "97509-4",
+      "display" : "Cancer disease progression"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinCRC"
+  },
+  "effectiveDateTime" : "2026-05-15",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "260415000",
+      "display" : "Not detected"
+    }]
+  }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="ConditionCRC"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Condition ConditionCRC</b></p><a name="ConditionCRC"> </a><a name="hcConditionCRC"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}">Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen</span></p><p><b>subject</b>: <a href="Patient-PatientinCRC.html">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>onset</b>: 2026-01-20</p></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+      <code value="C18.9"/>
+      <display value="Bösartige Neubildung: Kolon, nicht näher bezeichnet"/>
+    </coding>
+    <text value="Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen"/>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinCRC"/>
+  </subject>
+  <onsetDateTime value="2026-01-20"/>
+</Condition>

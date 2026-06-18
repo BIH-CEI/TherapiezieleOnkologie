@@ -13,7 +13,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-06-18T10:39:29+00:00"/>
+  <date value="2026-06-18T11:30:08+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -554,7 +554,7 @@
         <valueString value="Practitioner"/>
       </extension>
       <reference>
-        <reference value="Practitioner/OnkologinKRK"/>
+        <reference value="Practitioner/OnkologinCRC"/>
       </reference>
       <name value="Behandelnde Onkologin (Beispiel)"/>
       <exampleBoolean value="true"/>
@@ -575,7 +575,7 @@
         <valueString value="Condition"/>
       </extension>
       <reference>
-        <reference value="Condition/ConditionKRK"/>
+        <reference value="Condition/ConditionCRC"/>
       </reference>
       <name value="Kolorektales Karzinom, metastasiert (Beispiel)"/>
       <description value="Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9, mit Lebermetastasen C78.7)."/>
@@ -663,7 +663,7 @@
         <valueString value="CarePlan"/>
       </extension>
       <reference>
-        <reference value="CarePlan/CarePlanKRKPalliativ"/>
+        <reference value="CarePlan/CarePlanCRCPalliativ"/>
       </reference>
       <name value="Onkologischer CarePlan – mCRC palliativ (Beispiel)"/>
       <description value="Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt."/>
@@ -685,7 +685,7 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/PatientinKRK"/>
+        <reference value="Patient/PatientinCRC"/>
       </reference>
       <name value="Patientin – mCRC (Beispiel)"/>
       <description value="Beispielpatientin mit metastasiertem kolorektalem Karzinom."/>
@@ -696,7 +696,7 @@
         <valueString value="EpisodeOfCare"/>
       </extension>
       <reference>
-        <reference value="EpisodeOfCare/TherapielinieKRKErstlinie"/>
+        <reference value="EpisodeOfCare/TherapielinieCRCErstlinie"/>
       </reference>
       <name value="Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)"/>
       <description value="Erstlinien-Behandlungsabschnitt mit palliativer Intention."/>
@@ -707,7 +707,7 @@
         <valueString value="Goal"/>
       </extension>
       <reference>
-        <reference value="Goal/TherapiezielKRKLebensverlaengerung"/>
+        <reference value="Goal/TherapiezielCRCLebensverlaengerung"/>
       </reference>
       <name value="Therapieziel – Lebensverlängerung &amp; Symptomkontrolle (Beispiel)"/>
       <description value="Übergeordnetes palliatives Therapieziel: Lebensverlängerung bei gleichzeitiger Symptomkontrolle."/>
@@ -718,7 +718,7 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/ObservationDiseaseStatusKRK"/>
+        <reference value="Observation/ObservationDiseaseStatusCRC"/>
       </reference>
       <name value="Tumoransprechen / Disease Status (Beispiel)"/>
       <description value="Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen auf das Therapieziel bezieht (vgl. mCODE Cancer Disease Status)."/>
@@ -741,9 +741,9 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="szenario-krk.html"/>
+          <valueUrl value="szenario-crc.html"/>
         </extension>
-        <nameUrl value="szenario-krk.html"/>
+        <nameUrl value="szenario-crc.html"/>
         <title value="Anwendungsbeispiel (mCRC palliativ)"/>
         <generation value="markdown"/>
       </page>

@@ -33,7 +33,7 @@ ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapiezie
   "title" : "Onkologische Therapieziel-Art (VS)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-18T10:39:29+00:00",
+  "date" : "2026-06-18T11:30:08+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
