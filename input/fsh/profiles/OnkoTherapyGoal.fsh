@@ -24,15 +24,15 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 (z. B. erreicht, in Bearbeitung, nicht erreicht).
 """
 
-// Therapieintention (onkologiespezifisch, kein MCC-Pendant)
-* extension contains OnkoTherapyIntentExt named therapyIntent 0..1 MS
+// Therapieintention (onkologiespezifisch)
+* extension contains OnkoTherapyIntentExt named therapyIntent 0..1
 
-// Lebenszyklus und Erreichungsgrad (analog MCCGoal)
+// Lebenszyklus und Erreichungsgrad
 * lifecycleStatus 1..1 MS
 * achievementStatus MS
 
 // Zielart (onkologiespezifische ValueSet-Bindung)
-* category 1..* MS
+* category 1..*
 * category from OnkoTherapyGoalTypeVS (extensible)
 
 // Priorisierung konkurrierender Ziele
@@ -60,9 +60,9 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 * expressedBy MS
 
 // Ergebnisse / Tumoransprechen
-* outcomeCode MS
+* outcomeCode
 * outcomeReference MS
 * outcomeReference only Reference(Observation)
 
 // Begleitende Hinweise
-* note MS
+* note
