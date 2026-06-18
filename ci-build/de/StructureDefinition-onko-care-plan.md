@@ -4,7 +4,7 @@
 
  
 Onkologischer Versorgungsplan auf Basis von `CarePlan`. 
-Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan** ([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html)) angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt. 
+Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan** ([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html)) angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt. 
 Onkologiespezifische Ergänzungen gegenüber MCC: 
 * Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).
 * `goal` referenziert das Profil `OnkoTherapyGoal`.
@@ -43,8 +43,7 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 16 elements
- Fixed: 1 element
+ Must-Support: 15 elements
 
 **Structures**
 
@@ -79,8 +78,7 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 16 elements
- Fixed: 1 element
+ Must-Support: 15 elements
 
 **Structures**
 
@@ -111,7 +109,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-06-18T07:59:27+00:00",
+  "date" : "2026-06-18T08:40:58+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -120,7 +118,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`\n  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
+  "description" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`\n  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -191,12 +189,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
     {
       "id" : "CarePlan.status",
       "path" : "CarePlan.status",
-      "mustSupport" : true
-    },
-    {
-      "id" : "CarePlan.intent",
-      "path" : "CarePlan.intent",
-      "fixedCode" : "plan",
       "mustSupport" : true
     },
     {

@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-06-18T07:59:27+00:00"/>
+  <date value="2026-06-18T08:40:58+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -622,7 +622,7 @@
         <reference value="StructureDefinition/onko-care-plan"/>
       </reference>
       <name value="Onkologischer CarePlan"/>
-      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`&#xA;  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
+      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`&#xA;  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
