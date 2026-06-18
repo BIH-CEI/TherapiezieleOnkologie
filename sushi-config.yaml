@@ -22,6 +22,8 @@ publisher:
 pages:
   index.md:
     title: Startseite
+  szenario-krk.md:
+    title: Anwendungsbeispiel (mCRC palliativ)
   analysebericht.md:
     title: Analysebericht (LG-01)
   translationinfo.md:
@@ -41,6 +43,7 @@ parameters:
 
 menu:
   Startseite: index.html
+  Anwendungsbeispiel: szenario-krk.html
   Analysebericht: analysebericht.html
   Artefakte: artifacts.html
 
