@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-inte
   "name" : "OnkoTherapyIntentExt",
   "title" : "Onkologische Therapieintention (Extension)",
   "status" : "draft",
-  "date" : "2026-06-18T08:53:27+00:00",
+  "date" : "2026-06-18T08:56:30+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
