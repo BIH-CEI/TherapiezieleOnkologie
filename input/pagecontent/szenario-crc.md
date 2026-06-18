@@ -10,13 +10,13 @@ Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der `OnkoCarePlan` 
 
 | Element | Ressource | Beispiel-Instanz |
 |---|---|---|
-| Patient:in | `Patient` | [PatientinKRK](Patient-PatientinKRK.html) |
-| Tumorerkrankung | `Condition` | [ConditionKRK](Condition-ConditionKRK.html) |
-| Versorgungsplan | `OnkoCarePlan` | [CarePlanKRKPalliativ](CarePlan-CarePlanKRKPalliativ.html) |
-| Therapieziel | `OnkoTherapyGoal` | [TherapiezielKRKLebensverlaengerung](Goal-TherapiezielKRKLebensverlaengerung.html) |
-| Therapielinie (LoT 1) | `OnkoTherapyLine` | [TherapielinieKRKErstlinie](EpisodeOfCare-TherapielinieKRKErstlinie.html) |
+| Patient:in | `Patient` | [PatientinCRC](Patient-PatientinCRC.html) |
+| Tumorerkrankung | `Condition` | [ConditionCRC](Condition-ConditionCRC.html) |
+| Versorgungsplan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.html) |
+| Therapieziel | `OnkoTherapyGoal` | [TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.html) |
+| Therapielinie (LoT 1) | `OnkoTherapyLine` | [TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.html) |
 | Geplante Maßnahme | `MedicationRequest` | [MedicationRequestFOLFOX](MedicationRequest-MedicationRequestFOLFOX.html) |
-| Tumoransprechen | `Observation` | [ObservationDiseaseStatusKRK](Observation-ObservationDiseaseStatusKRK.html) |
+| Tumoransprechen | `Observation` | [ObservationDiseaseStatusCRC](Observation-ObservationDiseaseStatusCRC.html) |
 
 ### Verknüpfungen im Beispiel
 
