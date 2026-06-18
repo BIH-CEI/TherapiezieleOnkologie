@@ -39,7 +39,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
   "name" : "OnkoTherapyGoal",
   "title" : "Onkologisches Therapieziel",
   "status" : "draft",
-  "date" : "2026-06-18T08:40:58+00:00",
+  "date" : "2026-06-18T08:53:27+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -103,8 +103,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"]
-      }],
-      "mustSupport" : true
+      }]
     },
     {
       "id" : "Goal.lifecycleStatus",
@@ -120,7 +119,6 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
       "id" : "Goal.category",
       "path" : "Goal.category",
       "min" : 1,
-      "mustSupport" : true,
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"
@@ -182,16 +180,6 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition"]
       }],
-      "mustSupport" : true
-    },
-    {
-      "id" : "Goal.note",
-      "path" : "Goal.note",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Goal.outcomeCode",
-      "path" : "Goal.outcomeCode",
       "mustSupport" : true
     },
     {

@@ -109,7 +109,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-06-18T08:40:58+00:00",
+  "date" : "2026-06-18T08:53:27+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

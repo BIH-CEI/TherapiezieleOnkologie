@@ -230,7 +230,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"onko-therapy-goal","Goal.extension:therapyIntent","Goal.extension","therapyIntent","","",0,1,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent]]} {[]}
+"onko-therapy-goal","Goal.extension:therapyIntent","Goal.extension","therapyIntent","","",0,1,"","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent]]} {[]}
 ","Onkologische Therapieintention (Extension)","Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -249,7 +249,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "onko-therapy-goal","Goal.achievementStatus","Goal.achievementStatus","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","in-progress | improving | worsening | no-change | achieved | sustaining | not-achieved | no-progress | not-attainable","Describes the progression, or lack thereof, towards the goal against the target.","","","","","","","","","",,"preferred","Indicates the progression, or lack thereof, towards the goal against the target.","http://hl7.org/fhir/ValueSet/goal-achievement|4.0.1","",,,,"Goal.achievementStatus",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"onko-therapy-goal","Goal.category","Goal.category","","","",1,*,"Y","","Y","CodeableConcept {[]} {[]}
+"onko-therapy-goal","Goal.category","Goal.category","","","",1,*,"","","Y","CodeableConcept {[]} {[]}
 ","E.g. Treatment, dietary, behavioral, etc.","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"extensible","","https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "onko-therapy-goal","Goal.priority","Goal.priority","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
@@ -303,10 +303,10 @@ Duration {[]} {[]}","Reach goal on or before","Indicates either the date or the 
 "onko-therapy-goal","Goal.addresses","Goal.addresses","","","",0,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Condition]]}
 ","Issues addressed by this goal","The identified conditions and other health record elements that are intended to be addressed by the goal.","","Allows specific goals to explicitly linked to the concerns they're dealing with - makes the goal more understandable.","","","","","","","",,,,,"",,,,"Goal.addresses",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"onko-therapy-goal","Goal.note","Goal.note","","","",0,*,"Y","","","Annotation {[]} {[]}
+"onko-therapy-goal","Goal.note","Goal.note","","","",0,*,"","","","Annotation {[]} {[]}
 ","Comments about the goal","Any comments related to the goal.","May be used for progress notes, concerns or other related information that doesn't actually describe the goal itself.","There's a need to capture information about the goal that doesn't actually describe the goal.","","","","","","","",,,,,"",,,,"Goal.note",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"onko-therapy-goal","Goal.outcomeCode","Goal.outcomeCode","","","",0,*,"Y","","","CodeableConcept {[]} {[]}
+"onko-therapy-goal","Goal.outcomeCode","Goal.outcomeCode","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","What result was achieved regarding the goal?","Identifies the change (or lack of change) at the point when the status of the goal is assessed.","Note that this should not duplicate the goal status.","Outcome tracking is a key aspect of care planning.","","","","","","","",,"example","The result of the goal; e.g. ""25% increase in shoulder mobility"", ""Anxiety reduced to moderate levels"".  ""15 kg weight loss sustained over 6 months"".","http://hl7.org/fhir/ValueSet/clinical-findings|4.0.1","",,,,"Goal.outcomeCode",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "onko-therapy-goal","Goal.outcomeReference","Goal.outcomeReference","","","",0,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Observation|4.0.1]]}

@@ -45,7 +45,7 @@ Diese Struktur ist abgeleitet von [Goal](http://hl7.org/fhir/R4/goal.html)
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 17 elements
+ Must-Support: 13 elements
 
 **Extensions**
 
@@ -76,7 +76,7 @@ Diese Struktur ist abgeleitet von [Goal](http://hl7.org/fhir/R4/goal.html)
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 17 elements
+ Must-Support: 13 elements
 
 **Extensions**
 
@@ -101,7 +101,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
   "name" : "OnkoTherapyGoal",
   "title" : "Onkologisches Therapieziel",
   "status" : "draft",
-  "date" : "2026-06-18T08:40:58+00:00",
+  "date" : "2026-06-18T08:53:27+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -165,8 +165,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"]
-      }],
-      "mustSupport" : true
+      }]
     },
     {
       "id" : "Goal.lifecycleStatus",
@@ -182,7 +181,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "id" : "Goal.category",
       "path" : "Goal.category",
       "min" : 1,
-      "mustSupport" : true,
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"
@@ -244,16 +242,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition"]
       }],
-      "mustSupport" : true
-    },
-    {
-      "id" : "Goal.note",
-      "path" : "Goal.note",
-      "mustSupport" : true
-    },
-    {
-      "id" : "Goal.outcomeCode",
-      "path" : "Goal.outcomeCode",
       "mustSupport" : true
     },
     {
