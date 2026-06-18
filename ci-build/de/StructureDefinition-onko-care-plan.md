@@ -14,7 +14,7 @@ Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Rep
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Specification
+* Examples for this Profile: [CarePlan/CarePlanKRKPalliativ](CarePlan-CarePlanKRKPalliativ.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-care-plan.json)
 
@@ -109,7 +109,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-06-18T08:56:30+00:00",
+  "date" : "2026-06-18T10:39:29+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

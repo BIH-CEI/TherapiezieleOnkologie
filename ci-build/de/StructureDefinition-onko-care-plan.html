@@ -49,8 +49,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"4.2"}
-    h3,h4,h5,h6{--heading-prefix:"4.2"}</style>
+    <style type="text/css">h2{--heading-prefix:"5.2"}
+    h3,h4,h5,h6{--heading-prefix:"5.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -94,6 +94,9 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Startseite</a>
+  </li>
+  <li>
+    <a href="szenario-krk.html">Anwendungsbeispiel</a>
   </li>
   <li>
     <a href="analysebericht.html">Analysebericht</a>
@@ -181,6 +184,16 @@
 
 
 
+
+
+
+  
+    
+      <li>
+        <a href="StructureDefinition-onko-care-plan-examples.html">Beispiele</a>
+      </li>
+    
+  
 
 
 
@@ -294,7 +307,7 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via <code class="lang
 
 <p><b>Usages:</b></p>
 <ul>
- <li>This Profile is not used by any profiles in this Specification</li>
+ <li>Examples for this Profile: <a href="CarePlan-CarePlanKRKPalliativ.html">CarePlan/CarePlanKRKPalliativ</a></li>
 </ul>
 <p>You can also check for <a href="https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-care-plan.json">usages in the FHIR IG Statistics</a></p>
 
@@ -444,7 +457,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a> | <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> | <a href="http://hl7.org/fhir/R4/nutritionorder.html">NutritionOrder</a> | <a href="http://hl7.org/fhir/R4/task.html">Task</a> | <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a> | <a href="http://hl7.org/fhir/R4/requestgroup.html">RequestGroup</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Activity details defined in specific resource</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1b4bed63-e028-4e5a-8ed6-5f1ac2a85060
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
 document.getElementById('cbonko-care-planK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-care-planK'), 'binding', document.getElementById('cbonko-care-planK-binding').checked, document.getElementById('pponko-care-planK'));
 document.getElementById('cbonko-care-planK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -715,7 +728,7 @@ filterDesc(document.getElementById('onko-care-planK'), 'obligation', document.ge
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a> | <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> | <a href="http://hl7.org/fhir/R4/nutritionorder.html">NutritionOrder</a> | <a href="http://hl7.org/fhir/R4/task.html">Task</a> | <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a> | <a href="http://hl7.org/fhir/R4/requestgroup.html">RequestGroup</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Activity details defined in specific resource</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1b4bed63-e028-4e5a-8ed6-5f1ac2a85060
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
 document.getElementById('cbonko-care-planD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-care-planD'), 'binding', document.getElementById('cbonko-care-planD-binding').checked, document.getElementById('pponko-care-planD'));
 document.getElementById('cbonko-care-planD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1080,7 +1093,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Comments about the plan<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1b4bed63-e028-4e5a-8ed6-5f1ac2a85060
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
 document.getElementById('cbonko-care-planS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-care-planS'), 'binding', document.getElementById('cbonko-care-planS-binding').checked, document.getElementById('pponko-care-planS'));
 document.getElementById('cbonko-care-planS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1608,7 +1621,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a> | <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> | <a href="http://hl7.org/fhir/R4/nutritionorder.html">NutritionOrder</a> | <a href="http://hl7.org/fhir/R4/task.html">Task</a> | <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a> | <a href="http://hl7.org/fhir/R4/requestgroup.html">RequestGroup</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Activity details defined in specific resource</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1b4bed63-e028-4e5a-8ed6-5f1ac2a85060
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
 document.getElementById('cbonko-care-planKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-care-planKA'), 'binding', document.getElementById('cbonko-care-planKA-binding').checked, document.getElementById('pponko-care-planKA'));
 document.getElementById('cbonko-care-planKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1878,7 +1891,7 @@ filterDesc(document.getElementById('onko-care-planKA'), 'obligation', document.g
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a> | <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> | <a href="http://hl7.org/fhir/R4/nutritionorder.html">NutritionOrder</a> | <a href="http://hl7.org/fhir/R4/task.html">Task</a> | <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a> | <a href="http://hl7.org/fhir/R4/requestgroup.html">RequestGroup</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Activity details defined in specific resource</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1b4bed63-e028-4e5a-8ed6-5f1ac2a85060
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
 document.getElementById('cbonko-care-planDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-care-planDA'), 'binding', document.getElementById('cbonko-care-planDA-binding').checked, document.getElementById('pponko-care-planDA'));
 document.getElementById('cbonko-care-planDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2240,7 +2253,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Comments about the plan<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1b4bed63-e028-4e5a-8ed6-5f1ac2a85060
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 66b18cc1-07f4-429f-9851-b12f15d2cbd0
 document.getElementById('cbonko-care-planSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('onko-care-planSA'), 'binding', document.getElementById('cbonko-care-planSA-binding').checked, document.getElementById('pponko-care-planSA'));
 document.getElementById('cbonko-care-planSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2696,7 +2709,7 @@ Summary
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-18 08:56:00 +0000">
+  <span title="2026-06-18 10:39:00 +0000">
     2026-06-18
   </span>
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="OnkologinKRK"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Practitioner OnkologinKRK</b></p><a name="en-OnkologinKRK"> </a><a name="en-hcOnkologinKRK"> </a><p><b>name</b>: Petra Musterarzt </p></div>
+  </text>
+  <name>
+    <family value="Musterarzt"/>
+    <given value="Petra"/>
+  </name>
+</Practitioner>

@@ -3,6 +3,7 @@
 ## Pages
 
 * [Startseite](index.md)
+* [Anwendungsbeispiel (mCRC palliativ)](szenario-krk.md)
 * [Hinweise zur Übersetzung](translationinfo.md)
 * [Artifacts Summary](artifacts.md)
 * [Analysebericht (LG-01)](analysebericht.md)
@@ -32,3 +33,14 @@
 ### ImplementationGuides
 
 * [Implementierungsleitfaden Therapieziele Onkologie](ImplementationGuide-bih-cei-therapieziele-onkologie.md)
+
+### Examples
+
+* [CarePlanKRKPalliativ (CarePlan)](CarePlan-CarePlanKRKPalliativ.md)
+* [ConditionKRK (Condition)](Condition-ConditionKRK.md)
+* [TherapielinieKRKErstlinie (EpisodeOfCare)](EpisodeOfCare-TherapielinieKRKErstlinie.md)
+* [TherapiezielKRKLebensverlaengerung (Goal)](Goal-TherapiezielKRKLebensverlaengerung.md)
+* [MedicationRequestFOLFOX (MedicationRequest)](MedicationRequest-MedicationRequestFOLFOX.md)
+* [ObservationDiseaseStatusKRK (Observation)](Observation-ObservationDiseaseStatusKRK.md)
+* [PatientinKRK (Patient)](Patient-PatientinKRK.md)
+* [OnkologinKRK (Practitioner)](Practitioner-OnkologinKRK.md)

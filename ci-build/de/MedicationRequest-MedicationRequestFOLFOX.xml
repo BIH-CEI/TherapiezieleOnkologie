@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="MedicationRequestFOLFOX"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: MedicationRequest MedicationRequestFOLFOX</b></p><a name="MedicationRequestFOLFOX"> </a><a name="hcMedicationRequestFOLFOX"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>medication</b>: <span title="Codes:">FOLFOX + Bevacizumab</span></p><p><b>subject</b>: <a href="Patient-PatientinKRK.html">Erika Beispiel  Female, DoB: 1958-09-12</a></p></div>
+  </text>
+  <status value="active"/>
+  <intent value="plan"/>
+  <medicationCodeableConcept>
+    <text value="FOLFOX + Bevacizumab"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/PatientinKRK"/>
+  </subject>
+</MedicationRequest>

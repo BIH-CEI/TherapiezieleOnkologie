@@ -1,0 +1,12 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "OnkologinKRK",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner OnkologinKRK</b></p><a name=\"OnkologinKRK\"> </a><a name=\"hcOnkologinKRK\"> </a><p><b>name</b>: Petra Musterarzt </p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner OnkologinKRK</b></p><a name=\"en-OnkologinKRK\"> </a><a name=\"en-hcOnkologinKRK\"> </a><p><b>name</b>: Petra Musterarzt </p></div></div>"
+  },
+  "name" : [{
+    "family" : "Musterarzt",
+    "given" : ["Petra"]
+  }]
+}

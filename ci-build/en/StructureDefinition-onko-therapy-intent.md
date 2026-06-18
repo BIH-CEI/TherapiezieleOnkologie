@@ -11,6 +11,7 @@ Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, E
 **Usages:**
 
 * Use this Extension: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md), [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md) and [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+* Examples for this Extension: [CarePlan/CarePlanKRKPalliativ](CarePlan-CarePlanKRKPalliativ.md), [EpisodeOfCare/TherapielinieKRKErstlinie](EpisodeOfCare-TherapielinieKRKErstlinie.md) and [Goal/TherapiezielKRKLebensverlaengerung](Goal-TherapiezielKRKLebensverlaengerung.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-intent.json)
 
@@ -35,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-inte
   "name" : "OnkoTherapyIntentExt",
   "title" : "Onkologische Therapieintention (Extension)",
   "status" : "draft",
-  "date" : "2026-06-18T08:56:30+00:00",
+  "date" : "2026-06-18T10:39:29+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

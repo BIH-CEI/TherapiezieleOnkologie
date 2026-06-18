@@ -47,8 +47,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"4"}
-    h3,h4,h5,h6{--heading-prefix:"4.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -92,6 +92,9 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Startseite</a>
+  </li>
+  <li>
+    <a href="szenario-krk.html">Anwendungsbeispiel</a>
   </li>
   <li>
     <a href="analysebericht.html">Analysebericht</a>
@@ -180,6 +183,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
       <li>
          <a href="#4">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#5">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -355,6 +361,107 @@ bezogen ausgewertet werden kann.</li>
          </tr>
       </tbody>
    </table>
+   <a name="5"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-OnkologinKRK.html" title="Practitioner/OnkologinKRK">
+                  <span title="Practitioner/OnkologinKRK">Behandelnde Onkologin (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-MedicationRequestFOLFOX.html"
+                  title="MedicationRequest/MedicationRequestFOLFOX">
+                  <span title="MedicationRequest/MedicationRequestFOLFOX">Geplante Systemtherapie – FOLFOX + Bevacizumab (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Geplante Aktivität des CarePlan: palliative Erstlinien-Chemotherapie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ConditionKRK.html" title="Condition/ConditionKRK">
+                  <span title="Condition/ConditionKRK">Kolorektales Karzinom, metastasiert (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9, mit Lebermetastasen C78.7).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-CarePlanKRKPalliativ.html"
+                  title="CarePlan/CarePlanKRKPalliativ">
+                  <span title="CarePlan/CarePlanKRKPalliativ">Onkologischer CarePlan – mCRC palliativ (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-PatientinKRK.html" title="Patient/PatientinKRK">
+                  <span title="Patient/PatientinKRK">Patientin – mCRC (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispielpatientin mit metastasiertem kolorektalem Karzinom.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="EpisodeOfCare-TherapielinieKRKErstlinie.html"
+                  title="EpisodeOfCare/TherapielinieKRKErstlinie">
+                  <span title="EpisodeOfCare/TherapielinieKRKErstlinie">Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Erstlinien-Behandlungsabschnitt mit palliativer Intention.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-TherapiezielKRKLebensverlaengerung.html"
+                  title="Goal/TherapiezielKRKLebensverlaengerung">
+                  <span title="Goal/TherapiezielKRKLebensverlaengerung">Therapieziel – Lebensverlängerung &amp; Symptomkontrolle (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Übergeordnetes palliatives Therapieziel: Lebensverlängerung bei gleichzeitiger Symptomkontrolle.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObservationDiseaseStatusKRK.html"
+                  title="Observation/ObservationDiseaseStatusKRK">
+                  <span title="Observation/ObservationDiseaseStatusKRK">Tumoransprechen / Disease Status (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen auf das Therapieziel bezieht (vgl. mCODE Cancer Disease Status).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
 </div>
 
 </div>
@@ -382,7 +489,7 @@ bezogen ausgewertet werden kann.</li>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-18 08:56:00 +0000">
+  <span title="2026-06-18 10:39:00 +0000">
     2026-06-18
   </span>
 

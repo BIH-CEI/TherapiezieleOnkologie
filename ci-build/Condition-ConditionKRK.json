@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Condition",
+  "id" : "ConditionKRK",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionKRK</b></p><a name=\"ConditionKRK\"> </a><a name=\"hcConditionKRK\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}\">Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen</span></p><p><b>subject</b>: <a href=\"Patient-PatientinKRK.html\">Erika Beispiel  Female, DoB: 1958-09-12</a></p><p><b>onset</b>: 2026-01-20</p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionKRK</b></p><a name=\"en-ConditionKRK\"> </a><a name=\"en-hcConditionKRK\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}\">Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen</span></p><p><b>subject</b>: <a href=\"Patient-PatientinKRK.html\">Erika Beispiel  Female, DoB: 1958-09-12</a></p><p><b>onset</b>: 2026-01-20</p></div></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "confirmed"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "code" : "C18.9",
+      "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+    }],
+    "text" : "Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinKRK"
+  },
+  "onsetDateTime" : "2026-01-20"
+}

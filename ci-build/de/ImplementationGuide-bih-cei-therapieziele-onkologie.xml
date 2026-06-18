@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-06-18T08:56:30+00:00"/>
+  <date value="2026-06-18T10:39:29+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -550,6 +550,38 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/OnkologinKRK"/>
+      </reference>
+      <name value="Behandelnde Onkologin (Beispiel)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/MedicationRequestFOLFOX"/>
+      </reference>
+      <name value="Geplante Systemtherapie – FOLFOX + Bevacizumab (Beispiel)"/>
+      <description value="Geplante Aktivität des CarePlan: palliative Erstlinien-Chemotherapie."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ConditionKRK"/>
+      </reference>
+      <name value="Kolorektales Karzinom, metastasiert (Beispiel)"/>
+      <description value="Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9, mit Lebermetastasen C78.7)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -627,6 +659,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/CarePlanKRKPalliativ"/>
+      </reference>
+      <name value="Onkologischer CarePlan – mCRC palliativ (Beispiel)"/>
+      <description value="Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -635,6 +678,50 @@
       <name value="Onkologisches Therapieziel"/>
       <description value="Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.&#xA;&#xA;Das Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))&#xA;angelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über&#xA;`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten&#xA;Ergebnissen (Verlaufs-Observations) verknüpft wird.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,&#xA;  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).&#xA;- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der&#xA;  zugehörigen Behandlungslinie hinterlegt werden.&#xA;- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE&#xA;  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel&#xA;  bezogen ausgewertet werden kann.&#xA;&#xA;`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab&#xA;(z. B. erreicht, in Bearbeitung, nicht erreicht)."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/PatientinKRK"/>
+      </reference>
+      <name value="Patientin – mCRC (Beispiel)"/>
+      <description value="Beispielpatientin mit metastasiertem kolorektalem Karzinom."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/TherapielinieKRKErstlinie"/>
+      </reference>
+      <name value="Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)"/>
+      <description value="Erstlinien-Behandlungsabschnitt mit palliativer Intention."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/TherapiezielKRKLebensverlaengerung"/>
+      </reference>
+      <name value="Therapieziel – Lebensverlängerung &amp; Symptomkontrolle (Beispiel)"/>
+      <description value="Übergeordnetes palliatives Therapieziel: Lebensverlängerung bei gleichzeitiger Symptomkontrolle."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObservationDiseaseStatusKRK"/>
+      </reference>
+      <name value="Tumoransprechen / Disease Status (Beispiel)"/>
+      <description value="Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen auf das Therapieziel bezieht (vgl. mCODE Cancer Disease Status)."/>
+      <exampleBoolean value="true"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -649,6 +736,14 @@
         </extension>
         <nameUrl value="index.html"/>
         <title value="Startseite"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="szenario-krk.html"/>
+        </extension>
+        <nameUrl value="szenario-krk.html"/>
+        <title value="Anwendungsbeispiel (mCRC palliativ)"/>
         <generation value="markdown"/>
       </page>
       <page>
