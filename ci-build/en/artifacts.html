@@ -202,6 +202,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-onko-condition.html"
+                  title="StructureDefinition/onko-condition">
+                  <span title="StructureDefinition/onko-condition">Onkologische Diagnose (Condition)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Onkologische Tumorerkrankung auf Basis des <strong>MII Kerndatensatz-Moduls Onkologie</strong>
+(<a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII PR Onkologie Diagnose Primärtumor</a>,
+Version 2026.0.3).</p>
+
+<p>Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,
+ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,
+Feststellungsdatum) und dient als adressierte Erkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>) für <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>
+und <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>. Damit wird die Therapieziel-Spezifikation an den nationalen
+Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.</p>
+
+<p>Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das
+Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen
+lokalen Canonical bereit, auf den die übrigen Profile referenzieren.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-onko-therapy-line.html"
                   title="StructureDefinition/onko-therapy-line">
                   <span title="StructureDefinition/onko-therapy-line">Onkologische Therapielinie
@@ -398,7 +422,7 @@ bezogen ausgewertet werden kann.</li>
                </a>
             </td>
             <td>
-<p>Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9, mit Lebermetastasen C78.7).</p>
+<p>Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor).</p>
 </td>
          </tr>
          <tr>
@@ -489,8 +513,8 @@ bezogen ausgewertet werden kann.</li>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-18 11:30:00 +0000">
-    2026-06-18
+  <span title="2026-06-23 16:45:00 +0000">
+    2026-06-23
   </span>
 
           <br/>

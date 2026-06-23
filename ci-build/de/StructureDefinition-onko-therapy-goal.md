@@ -48,6 +48,12 @@ Diese Struktur ist abgeleitet von [Goal](http://hl7.org/fhir/R4/goal.html)
 Mandatory: 1 element
  Must-Support: 13 elements
 
+**Structures**
+
+This structure refers to these other structures:
+
+* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+
 **Extensions**
 
 This structure refers to these extensions:
@@ -79,6 +85,12 @@ Diese Struktur ist abgeleitet von [Goal](http://hl7.org/fhir/R4/goal.html)
 Mandatory: 1 element
  Must-Support: 13 elements
 
+**Structures**
+
+This structure refers to these other structures:
+
+* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+
 **Extensions**
 
 This structure refers to these extensions:
@@ -102,7 +114,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
   "name" : "OnkoTherapyGoal",
   "title" : "Onkologisches Therapieziel",
   "status" : "draft",
-  "date" : "2026-06-18T11:30:08+00:00",
+  "date" : "2026-06-23T16:45:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -241,7 +253,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "path" : "Goal.addresses",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition"]
+        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
       }],
       "mustSupport" : true
     },

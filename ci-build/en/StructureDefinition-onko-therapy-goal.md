@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
   "name" : "OnkoTherapyGoal",
   "title" : "Onkologisches Therapieziel",
   "status" : "draft",
-  "date" : "2026-06-18T11:30:08+00:00",
+  "date" : "2026-06-23T16:45:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
       "path" : "Goal.addresses",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition"]
+        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
       }],
       "mustSupport" : true
     },

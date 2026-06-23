@@ -13,7 +13,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-06-18T11:30:08+00:00"/>
+  <date value="2026-06-23T16:45:59+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -48,6 +48,11 @@
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_onkologie">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.onkologie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+    <version value="2026.0.3"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -578,8 +583,19 @@
         <reference value="Condition/ConditionCRC"/>
       </reference>
       <name value="Kolorektales Karzinom, metastasiert (Beispiel)"/>
-      <description value="Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9, mit Lebermetastasen C78.7)."/>
-      <exampleBoolean value="true"/>
+      <description value="Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-condition"/>
+      </reference>
+      <name value="Onkologische Diagnose (Condition)"/>
+      <description value="Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**&#xA;([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),&#xA;Version 2026.0.3).&#xA;&#xA;Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,&#xA;ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,&#xA;Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`&#xA;und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen&#xA;Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.&#xA;&#xA;Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das&#xA;Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen&#xA;lokalen Canonical bereit, auf den die übrigen Profile referenzieren."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

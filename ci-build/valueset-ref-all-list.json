@@ -1,5 +1,31 @@
 {
   "codeSystems" : [{
+    "url" : "http://fhir.de/ValueSet/lebensphase-de",
+    "version" : "1.5.4",
+    "status" : "active",
+    "name" : "ValueSetLebensphaseDe",
+    "title" : "LebensphaseDe ValueSet",
+    "description" : "Dieses Valueset enthält Snomedcodes zur Angabe der Lebensphase",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/body-site",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTBodyStructures",
+    "title" : "SNOMED CT Body Structures",
+    "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.141"],
+    "sources" : ["2.16.840.1.113883.4.642.3.141"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-kind",
     "version" : "4.0.1",
     "status" : "draft",
@@ -83,6 +109,132 @@
     },
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
     "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/common-tags",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonTags",
+    "title" : "Common Tags",
+    "description" : "Common Tag Codes defined by FHIR project",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/common-tags"],
+    "oids" : ["2.16.840.1.113883.4.642.3.79"],
+    "sources" : ["2.16.840.1.113883.4.642.3.79"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionCategoryCodes",
+    "title" : "Condition Category Codes",
+    "description" : "Preferred value set for Condition Categories.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.162"],
+    "sources" : ["2.16.840.1.113883.4.642.3.162"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Preferred value set for Condition Clinical Status.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+    "oids" : ["2.16.840.1.113883.4.642.3.164"],
+    "sources" : ["2.16.840.1.113883.4.642.3.164"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Condition/Problem/DiagnosisCodes",
+    "title" : "Condition/Problem/Diagnosis Codes",
+    "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.161"],
+    "sources" : ["2.16.840.1.113883.4.642.3.161"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-predecessor",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionPredecessorCodes",
+    "title" : "Condition Predecessor Codes",
+    "description" : "Example value set for condition predecessor codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.966"],
+    "sources" : ["2.16.840.1.113883.4.642.3.966"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Condition/DiagnosisSeverity",
+    "title" : "Condition/Diagnosis Severity",
+    "description" : "Preferred value set for Condition/Diagnosis severity grading.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.168"],
+    "sources" : ["2.16.840.1.113883.4.642.3.168"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionStage",
+    "title" : "Condition Stage",
+    "description" : "Example value set for stages of cancer and other conditions.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.170"],
+    "sources" : ["2.16.840.1.113883.4.642.3.170"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionStageType",
+    "title" : "Condition Stage Type",
+    "description" : "Example value set for the type of stages of cancer and other conditions",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.171"],
+    "sources" : ["2.16.840.1.113883.4.642.3.171"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionVerificationStatus",
+    "title" : "ConditionVerificationStatus",
+    "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.166"],
+    "sources" : ["2.16.840.1.113883.4.642.3.166"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
@@ -194,9 +346,24 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)",
     "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/manifestation-or-symptom",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ManifestationAndSymptomCodes",
+    "title" : "Manifestation and Symptom Codes",
+    "description" : "Example value set for Manifestation and Symptom codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.169"],
+    "sources" : ["2.16.840.1.113883.4.642.3.169"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
@@ -241,6 +408,20 @@
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "QuantityComparator",
+    "title" : "QuantityComparator",
+    "description" : "How the Quantity should be understood and represented.",
+    "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+    "oids" : ["2.16.840.1.113883.4.642.3.59"],
+    "sources" : ["2.16.840.1.113883.4.642.3.59"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/request-status",
     "version" : "4.0.1",
     "status" : "draft",
@@ -253,6 +434,24 @@
     "uses" : {
     },
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "All Security Labels",
+    "title" : "SecurityLabels",
+    "description" : "A single value set for all security labels defined by FHIR.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+    "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+    "oids" : ["2.16.840.1.113883.4.642.3.47"],
+    "sources" : ["2.16.840.1.113883.4.642.3.47"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
@@ -277,5 +476,113 @@
     "uses" : {
     },
     "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct",
+    "version" : "2026.0.0",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_DiagnoseCodes_SNOMED",
+    "title" : "MII VS Diagnose Diagnose-Codes SNOMED",
+    "description" : "Enthaelt alle SNOMED Clinical finding, Event und Situation with explicit context codes",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid",
+    "version" : "2026.0.0",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_AlphaID",
+    "title" : "MII VS Diagnose Alpha-ID",
+    "description" : "Enthaelt Alpha-ID-Codes der Versionen 2018 bis 2025",
+    "systems" : ["http://fhir.de/CodeSystem/bfarm/alpha-id"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed",
+    "version" : "2026.0.0",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_BodyStructure_SNOMED",
+    "title" : "MII VS Diagnose BodyStructure SNOMED",
+    "description" : "Enthaelt alle SNOMED Body structure codes",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm",
+    "version" : "2026.0.0",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_ICD10GM",
+    "title" : "MII VS Diagnose ICD-10-GM",
+    "description" : "Enthaelt ICD-10-GM-Codes der Versionen 2009 bis 2025",
+    "systems" : ["http://fhir.de/CodeSystem/bfarm/icd-10-gm"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet",
+    "version" : "2026.0.0",
+    "status" : "active",
+    "name" : "MII_VS_Diagnose_Orphanet",
+    "title" : "MII VS Diagnose Orphanet",
+    "description" : "Enthaelt alle Orpha-Kennnummern (ORPHAcodes)",
+    "systems" : ["http://www.orpha.net"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_VS_Onko_ICDO3_Morphologie",
+    "title" : "MII VS Onkologie ICD-O-3 Morphologie",
+    "description" : "Codes für histologische Morphologie und Verhalten einer neoplastischen Veränderung",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/icd-o-3"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_VS_Onko_ICDO3_Topographie",
+    "title" : "MII VS Onkologie ICD-O-3 Topographie",
+    "description" : "Codes für Topographie einer neoplastischen Veränderung",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/icd-o-3"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_VS_Onko_Primaertumor_Diagnosesicherung",
+    "title" : "MII VS Onkologie Primärtumor Diagnosesicherung",
+    "description" : "Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose.",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation",
+    "version" : "2026.0.3",
+    "status" : "active",
+    "name" : "MII_VS_Onko_Seitenlokalisation",
+    "title" : "MII VS Onkologie Primärtumor Seitenlokalisation",
+    "description" : "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
   }]
 }

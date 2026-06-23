@@ -210,7 +210,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>Tumorerkrankung</td>
-      <td><code class="language-plaintext highlighter-rouge">Condition</code></td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoCondition</code></td>
       <td><a href="Condition-ConditionCRC.html">ConditionCRC</a></td>
     </tr>
     <tr>
@@ -245,7 +245,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>Therapieintention:</strong> <code class="language-plaintext highlighter-rouge">palliativ</code> (Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code>) auf CarePlan, Therapieziel und Therapielinie.</li>
-  <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert die <code class="language-plaintext highlighter-rouge">Condition</code>.</li>
+  <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert die <code class="language-plaintext highlighter-rouge">OnkoCondition</code> (geerbt vom <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a>, v2026.0.3).</li>
   <li><strong>CarePlan → Ziel:</strong> <code class="language-plaintext highlighter-rouge">goal</code> referenziert das <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> (Kategorien Lebensverlängerung + Symptomkontrolle).</li>
   <li><strong>Geplant vs. durchgeführt:</strong> <code class="language-plaintext highlighter-rouge">activity.reference</code> → geplante Systemtherapie (<code class="language-plaintext highlighter-rouge">MedicationRequest</code>); <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → dokumentiertes Ergebnis (<code class="language-plaintext highlighter-rouge">Observation</code>).</li>
   <li><strong>Ziel → Ergebnis:</strong> <code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> bindet die Verlaufs-Observation (Disease Status), wodurch der <code class="language-plaintext highlighter-rouge">achievementStatus</code> (hier <code class="language-plaintext highlighter-rouge">in-progress</code>) auswertbar wird.</li>
@@ -279,8 +279,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-18 11:30:00 +0000">
-    2026-06-18
+  <span title="2026-06-23 16:45:00 +0000">
+    2026-06-23
   </span>
 
           <br/>

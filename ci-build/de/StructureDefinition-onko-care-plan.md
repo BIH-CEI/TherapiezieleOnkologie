@@ -49,6 +49,7 @@ Mandatory: 1 element
 
 This structure refers to these other structures:
 
+* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
 * [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
 
 **Extensions**
@@ -84,6 +85,7 @@ Mandatory: 1 element
 
 This structure refers to these other structures:
 
+* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
 * [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
 
 **Extensions**
@@ -109,7 +111,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-06-18T11:30:08+00:00",
+  "date" : "2026-06-23T16:45:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -218,6 +220,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
       "id" : "CarePlan.addresses",
       "path" : "CarePlan.addresses",
       "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+      }],
       "mustSupport" : true
     },
     {

@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-06-18T11:30:08+00:00",
+  "date" : "2026-06-23T16:45:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -53,6 +53,12 @@
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
     "version" : "5.3.0"
+  },
+  {
+    "id" : "de_medizininformatikinitiative_kerndatensatz_onkologie",
+    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.onkologie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.onkologie",
+    "packageId" : "de.medizininformatikinitiative.kerndatensatz.onkologie",
+    "version" : "2026.0.3"
   }],
   "definition" : {
     "extension" : [{
@@ -773,8 +779,20 @@
         "reference" : "Condition/ConditionCRC"
       },
       "name" : "Kolorektales Karzinom, metastasiert (Beispiel)",
-      "description" : "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9, mit Lebermetastasen C78.7).",
-      "exampleBoolean" : true
+      "description" : "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor).",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/onko-condition"
+      },
+      "name" : "Onkologische Diagnose (Condition)",
+      "description" : "Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**\n([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),\nVersion 2026.0.3).\n\nDieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,\nICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,\nFeststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`\nund `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen\nOnkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.\n\nFür die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das\nProfil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen\nlokalen Canonical bereit, auf den die übrigen Profile referenzieren.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{

@@ -23,6 +23,7 @@
 ### Resource Profiles
 
 * [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
+* [Onkologische Diagnose (Condition)](StructureDefinition-onko-condition.md)
 * [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 * [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 

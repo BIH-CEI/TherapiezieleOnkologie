@@ -1,11 +1,18 @@
 {
   "resourceType" : "Condition",
   "id" : "ConditionCRC",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+  },
   "language" : "de",
   "text" : {
-    "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionCRC</b></p><a name=\"ConditionCRC\"> </a><a name=\"hcConditionCRC\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}\">Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>onset</b>: 2026-01-20</p></div>"
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionCRC</b></p><a name=\"ConditionCRC\"> </a><a name=\"hcConditionCRC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-condition.html\">Onkologische Diagnose (Condition)</a></p></div><p><b>Condition Asserted Date</b>: 2026-01-20</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}\">Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>onset</b>: 2026-01-20</p><p><b>recordedDate</b>: 2026-01-20</p></div>"
   },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+    "valueDateTime" : "2026-01-20"
+  }],
   "clinicalStatus" : {
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
@@ -18,9 +25,16 @@
       "code" : "confirmed"
     }]
   },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "encounter-diagnosis"
+    }]
+  }],
   "code" : {
     "coding" : [{
       "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2026",
       "code" : "C18.9",
       "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
     }],
@@ -29,5 +43,6 @@
   "subject" : {
     "reference" : "Patient/PatientinCRC"
   },
-  "onsetDateTime" : "2026-01-20"
+  "onsetDateTime" : "2026-01-20",
+  "recordedDate" : "2026-01-20"
 }
