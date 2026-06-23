@@ -11,6 +11,8 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
 * diagnosis 1..* MS
 * diagnosis.condition 1..1 MS
 * diagnosis.condition only Reference(Condition)
+// Bindung an OnkoCondition via targetProfile (s. Hinweis in OnkoCarePlan)
+* diagnosis.condition ^type.targetProfile = Canonical(OnkoCondition)
 * diagnosis.role MS
 * diagnosis.rank MS
 * managingOrganization MS

@@ -43,7 +43,9 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 
 // Adressierte Gesundheitsprobleme (Verbindung Erkrankung – CarePlan)
 * addresses 1..* MS
-* addresses only Reference(Condition)
+// Bindung an OnkoCondition via targetProfile (SUSHI kann die externe Parent-Kette
+// des MII-Profils im `only Reference()`-Check nicht auflösen; FHIR-Ausgabe identisch)
+* addresses ^type.targetProfile = Canonical(OnkoCondition)
 
 // Übergeordnete Therapieziele
 * goal MS

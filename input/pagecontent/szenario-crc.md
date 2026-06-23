@@ -11,7 +11,7 @@ Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der `OnkoCarePlan` 
 | Element | Ressource | Beispiel-Instanz |
 |---|---|---|
 | Patient:in | `Patient` | [PatientinCRC](Patient-PatientinCRC.html) |
-| Tumorerkrankung | `Condition` | [ConditionCRC](Condition-ConditionCRC.html) |
+| Tumorerkrankung | `OnkoCondition` | [ConditionCRC](Condition-ConditionCRC.html) |
 | Versorgungsplan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.html) |
 | Therapieziel | `OnkoTherapyGoal` | [TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.html) |
 | Therapielinie (LoT 1) | `OnkoTherapyLine` | [TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.html) |
@@ -21,7 +21,7 @@ Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der `OnkoCarePlan` 
 ### Verknüpfungen im Beispiel
 
 - **Therapieintention:** `palliativ` (Extension `onko-therapy-intent`) auf CarePlan, Therapieziel und Therapielinie.
-- **CarePlan → Erkrankung:** `addresses` referenziert die `Condition`.
+- **CarePlan → Erkrankung:** `addresses` referenziert die `OnkoCondition` (geerbt vom [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor), v2026.0.3).
 - **CarePlan → Ziel:** `goal` referenziert das `OnkoTherapyGoal` (Kategorien Lebensverlängerung + Symptomkontrolle).
 - **Geplant vs. durchgeführt:** `activity.reference` → geplante Systemtherapie (`MedicationRequest`); `activity.outcomeReference` → dokumentiertes Ergebnis (`Observation`).
 - **Ziel → Ergebnis:** `Goal.outcomeReference` bindet die Verlaufs-Observation (Disease Status), wodurch der `achievementStatus` (hier `in-progress`) auswertbar wird.

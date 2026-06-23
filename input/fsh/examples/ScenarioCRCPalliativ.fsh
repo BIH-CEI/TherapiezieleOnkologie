@@ -25,16 +25,21 @@ Description: "Beispielpatientin mit metastasiertem kolorektalem Karzinom."
 * birthDate = "1961-09-12"
 
 Instance: ConditionCRC
-InstanceOf: Condition
+InstanceOf: OnkoCondition
 Usage: #example
 Title: "Kolorektales Karzinom, metastasiert (Beispiel)"
-Description: "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9, mit Lebermetastasen C78.7)."
+Description: "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
-* code.coding[0] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#C18.9 "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category.coding.code = #encounter-diagnosis
+* code.coding[icd10-gm] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#C18.9 "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+* code.coding[icd10-gm].version = "2026"
 * code.text = "Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen"
+* extension[Feststellungsdatum].valueDateTime = "2026-01-20"
 * subject = Reference(PatientinCRC)
 * onsetDateTime = "2026-01-20"
+* recordedDate = "2026-01-20"
 
 Instance: TherapielinieCRCErstlinie
 InstanceOf: OnkoTherapyLine

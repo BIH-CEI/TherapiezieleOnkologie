@@ -55,6 +55,8 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 // Adressierte Tumorerkrankung
 * addresses MS
 * addresses only Reference(Condition)
+// Bindung an OnkoCondition via targetProfile (s. Hinweis in OnkoCarePlan)
+* addresses ^type.targetProfile = Canonical(OnkoCondition)
 
 // Verfasser des Ziels (Behandler bzw. Patient)
 * expressedBy MS

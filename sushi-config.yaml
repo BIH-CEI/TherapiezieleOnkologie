@@ -15,6 +15,13 @@ publisher:
   name: Berlin Institute of Health at Charité (BIH)
   url: https://www.bihealth.org
 
+# ╭───────────────────────────────────── Dependencies ─────────────────────────────╮
+# │ Abgleich mit dem MII Kerndatensatz-Modul Onkologie (v2026.0.3): Wiederverwendung │
+# │ des onkologischen Diagnose-Profils (Primärtumor) als Basis für OnkoCondition.    │
+# ╰────────────────────────────────────────────────────────────────────────────────╯
+dependencies:
+  de.medizininformatikinitiative.kerndatensatz.onkologie: 2026.0.3
+
 # ╭───────────────────────────────────── Pages ────────────────────────────────────╮
 # │ Default-language pages live in input/pagecontent/. Translated copies live in   │
 # │ input/translations/de/pagecontent/ and are matched by filename.                │
