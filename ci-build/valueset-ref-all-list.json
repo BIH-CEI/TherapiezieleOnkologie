@@ -346,8 +346,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
     "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
     "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)",
     "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
   },

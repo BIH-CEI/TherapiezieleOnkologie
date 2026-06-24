@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="Calibri, 'Segoe UI', Helvetica, sans-serif" font-size="13">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13">
   <defs>
     <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#222"/>
@@ -10,114 +10,111 @@
     <marker id="arr-goal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#c8102e"/>
     </marker>
+    <marker id="arr-cycle" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f7a4d"/>
+    </marker>
     <symbol id="doc" viewBox="0 0 80 100">
       <path d="M 4 4 L 60 4 L 76 20 L 76 96 L 4 96 z" fill="#ffffff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
       <path d="M 60 4 L 60 20 L 76 20" fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
     </symbol>
   </defs>
 
-  <rect width="1200" height="760" fill="#ffffff"/>
+  <rect width="1200" height="780" fill="#ffffff"/>
 
   <!-- Title -->
-  <text x="600" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#222">Therapieziele Onkologie — Profile und Verlauf</text>
-  <line x1="380" y1="52" x2="820" y2="52" stroke="#c8102e" stroke-width="2"/>
-  <text x="600" y="72" text-anchor="middle" font-size="12" fill="#555">CarePlan · Goal · EpisodeOfCare — BIH-CEI v0.1.0  ·  Schicht 3 (Fallback-Pfad)</text>
+  <text x="600" y="42" text-anchor="middle" font-size="23" font-weight="700" fill="#222" letter-spacing="0.3">Therapieziele Onkologie — Profile und Verlauf</text>
+  <line x1="372" y1="56" x2="828" y2="56" stroke="#c8102e" stroke-width="2.5"/>
+  <text x="600" y="78" text-anchor="middle" font-size="12.5" fill="#555">CarePlan · Goal · EpisodeOfCare — BIH-CEI v0.1.0  ·  Schicht 3 (Fallback-Pfad)</text>
 
-  <!-- LEFT DOMAIN PANEL: Zielarten -->
+  <!-- LEFT DOMAIN PANEL: Zielarten (2×3) -->
   <g transform="translate(36, 280)">
-    <rect width="220" height="260" fill="#fdf3f5" stroke="#c8102e" stroke-width="2"/>
-    <text x="110" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#c8102e" letter-spacing="1.5">ZIELART (category)</text>
-    <line x1="14" y1="32" x2="206" y2="32" stroke="#c8102e" stroke-width="0.5"/>
+    <rect width="224" height="276" rx="6" fill="#fdf3f5" stroke="#c8102e" stroke-width="2"/>
+    <text x="112" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="#c8102e" letter-spacing="1.8">ZIELART (category)</text>
+    <line x1="16" y1="38" x2="208" y2="38" stroke="#c8102e" stroke-width="0.75"/>
     <g font-size="11" fill="#222">
-      <rect x="14" y="46" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="60" y="64" text-anchor="middle" font-weight="600">Heilung</text>
-      <text x="60" y="80" text-anchor="middle" font-size="10" fill="#555">curative</text>
+      <rect x="16" y="52" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="62" y="72" text-anchor="middle" font-weight="600">Heilung</text>
+      <text x="62" y="88" text-anchor="middle" font-size="10" fill="#777">curative</text>
 
-      <rect x="114" y="46" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="160" y="62" text-anchor="middle" font-weight="600">Lebens-</text>
-      <text x="160" y="76" text-anchor="middle" font-weight="600">verlängerung</text>
+      <rect x="116" y="52" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="162" y="70" text-anchor="middle" font-weight="600">Lebens-</text>
+      <text x="162" y="86" text-anchor="middle" font-weight="600">verlängerung</text>
 
-      <rect x="14" y="98" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="60" y="116" text-anchor="middle" font-weight="600">Symptom-</text>
-      <text x="60" y="130" text-anchor="middle" font-weight="600">kontrolle</text>
+      <rect x="16" y="112" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="62" y="130" text-anchor="middle" font-weight="600">Symptom-</text>
+      <text x="62" y="146" text-anchor="middle" font-weight="600">kontrolle</text>
 
-      <rect x="114" y="98" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="160" y="116" text-anchor="middle" font-weight="600">Lebens-</text>
-      <text x="160" y="130" text-anchor="middle" font-weight="600">qualität</text>
+      <rect x="116" y="112" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="162" y="130" text-anchor="middle" font-weight="600">Lebens-</text>
+      <text x="162" y="146" text-anchor="middle" font-weight="600">qualität</text>
 
-      <rect x="14" y="150" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="60" y="168" text-anchor="middle" font-weight="600">Funktions-</text>
-      <text x="60" y="182" text-anchor="middle" font-weight="600">erhalt</text>
+      <rect x="16" y="172" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="62" y="190" text-anchor="middle" font-weight="600">Funktions-</text>
+      <text x="62" y="206" text-anchor="middle" font-weight="600">erhalt</text>
 
-      <rect x="114" y="150" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="160" y="168" text-anchor="middle" font-weight="600">Studien-</text>
-      <text x="160" y="182" text-anchor="middle" font-weight="600">teilnahme</text>
+      <rect x="116" y="172" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="162" y="190" text-anchor="middle" font-weight="600">Studien-</text>
+      <text x="162" y="206" text-anchor="middle" font-weight="600">teilnahme</text>
     </g>
-    <text x="110" y="220" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">Goal.category</text>
-    <text x="110" y="236" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">onko-therapy-goal-type</text>
+    <text x="112" y="244" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">Goal.category</text>
+    <text x="112" y="260" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">onko-therapy-goal-type</text>
   </g>
 
-  <!-- RIGHT DOMAIN PANEL: Intentionen -->
-  <g transform="translate(944, 280)">
-    <rect width="220" height="260" fill="#fdf3f5" stroke="#c8102e" stroke-width="2"/>
-    <text x="110" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#c8102e" letter-spacing="1.5">INTENTION (extension)</text>
-    <line x1="14" y1="32" x2="206" y2="32" stroke="#c8102e" stroke-width="0.5"/>
+  <!-- RIGHT DOMAIN PANEL: Intentionen (2×2) -->
+  <g transform="translate(940, 280)">
+    <rect width="224" height="276" rx="6" fill="#fdf3f5" stroke="#c8102e" stroke-width="2"/>
+    <text x="112" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="#c8102e" letter-spacing="1.8">INTENTION (extension)</text>
+    <line x1="16" y1="38" x2="208" y2="38" stroke="#c8102e" stroke-width="0.75"/>
     <g font-size="11" fill="#222">
-      <rect x="14" y="46" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="60" y="72" text-anchor="middle" font-weight="600">kurativ</text>
+      <rect x="16" y="64" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="62" y="92" text-anchor="middle" font-weight="600">kurativ</text>
 
-      <rect x="114" y="46" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="160" y="72" text-anchor="middle" font-weight="600">neoadjuvant</text>
+      <rect x="116" y="64" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="162" y="92" text-anchor="middle" font-weight="600">Erhaltung</text>
 
-      <rect x="14" y="98" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="60" y="124" text-anchor="middle" font-weight="600">adjuvant</text>
+      <rect x="16" y="132" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="62" y="160" text-anchor="middle" font-weight="600">palliativ</text>
 
-      <rect x="114" y="98" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="160" y="124" text-anchor="middle" font-weight="600">Erhaltung</text>
-
-      <rect x="14" y="150" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="60" y="176" text-anchor="middle" font-weight="600">palliativ</text>
-
-      <rect x="114" y="150" width="92" height="44" fill="#ffffff" stroke="#222"/>
-      <text x="160" y="176" text-anchor="middle" font-weight="600">supportiv</text>
+      <rect x="116" y="132" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="162" y="160" text-anchor="middle" font-weight="600">supportiv</text>
     </g>
-    <text x="110" y="220" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">onko-therapy-intent</text>
-    <text x="110" y="236" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">CarePlan · Goal · EpisodeOfCare</text>
+    <text x="112" y="244" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">onko-therapy-intent</text>
+    <text x="112" y="260" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">CarePlan · Goal · EpisodeOfCare</text>
   </g>
 
   <!-- ════════════════════════════════════════════════════════════════════ -->
-  <!-- CENTER WORKFLOW LANE  (y around 320, between panels) -->
+  <!-- CENTER WORKFLOW LANE -->
   <!-- ════════════════════════════════════════════════════════════════════ -->
 
   <!-- Start -->
   <circle cx="305" cy="350" r="16" fill="#ffffff" stroke="#222" stroke-width="2"/>
-  <text x="305" y="386" text-anchor="middle" font-size="10" fill="#555">Diagnose</text>
-  <text x="305" y="398" text-anchor="middle" font-size="10" fill="#555">(Condition)</text>
+  <text x="305" y="388" text-anchor="middle" font-size="10" fill="#555">Diagnose</text>
+  <text x="305" y="400" text-anchor="middle" font-size="10" fill="#555">(Condition)</text>
 
   <!-- Process 1 -->
   <g transform="translate(360, 320)">
-    <rect width="140" height="60" fill="#ffffff" stroke="#222" stroke-width="2"/>
+    <rect width="140" height="60" rx="5" fill="#ffffff" stroke="#222" stroke-width="2"/>
     <text x="70" y="28" text-anchor="middle" font-weight="600">Therapieziel</text>
     <text x="70" y="46" text-anchor="middle" font-weight="600">festlegen</text>
   </g>
 
   <!-- Process 2 -->
   <g transform="translate(540, 320)">
-    <rect width="160" height="60" fill="#ffffff" stroke="#222" stroke-width="2"/>
+    <rect width="160" height="60" rx="5" fill="#ffffff" stroke="#222" stroke-width="2"/>
     <text x="80" y="28" text-anchor="middle" font-weight="600">Behandlungs-</text>
     <text x="80" y="46" text-anchor="middle" font-weight="600">abschnitt anlegen</text>
   </g>
 
   <!-- Process 3 -->
   <g transform="translate(740, 320)">
-    <rect width="140" height="60" fill="#ffffff" stroke="#222" stroke-width="2"/>
+    <rect width="140" height="60" rx="5" fill="#ffffff" stroke="#222" stroke-width="2"/>
     <text x="70" y="28" text-anchor="middle" font-weight="600">Versorgungsplan</text>
     <text x="70" y="46" text-anchor="middle" font-weight="600">erstellen</text>
   </g>
 
   <!-- Process 4: Verlauf -->
   <g transform="translate(540, 490)">
-    <rect width="160" height="60" fill="#ffffff" stroke="#222" stroke-width="2"/>
+    <rect width="160" height="60" rx="5" fill="#ffffff" stroke="#222" stroke-width="2"/>
     <text x="80" y="28" text-anchor="middle" font-weight="600">Verlauf</text>
     <text x="80" y="46" text-anchor="middle" font-weight="600">bewerten</text>
   </g>
@@ -132,26 +129,31 @@
   <!-- End -->
   <circle cx="305" cy="520" r="16" fill="#ffffff" stroke="#222" stroke-width="2"/>
   <circle cx="305" cy="520" r="11" fill="#ffffff" stroke="#222" stroke-width="2"/>
-  <text x="305" y="554" text-anchor="middle" font-size="10" fill="#555">Ziel-Abschluss</text>
+  <text x="305" y="556" text-anchor="middle" font-size="10" fill="#555">Ziel-Abschluss</text>
 
-  <!-- Process flow arrows -->
+  <!-- ════════════════════════════════════════════════════════════════════ -->
+  <!-- CYCLE: emphasised workflow loop (green), mostly straight segments with
+       rounded corners to read as a cycle without heavy curves. -->
+  <!-- ════════════════════════════════════════════════════════════════════ -->
+
+  <!-- straight forward arrows (top row) -->
   <line x1="321" y1="350" x2="358" y2="350" stroke="#222" stroke-width="1.6" marker-end="url(#arr)"/>
   <line x1="500" y1="350" x2="538" y2="350" stroke="#222" stroke-width="1.6" marker-end="url(#arr)"/>
   <line x1="700" y1="350" x2="738" y2="350" stroke="#222" stroke-width="1.6" marker-end="url(#arr)"/>
 
-  <!-- Versorgungsplan → Verlauf (down + left) -->
-  <path d="M 810 380 L 810 460 L 620 460 L 620 488" stroke="#222" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+  <!-- Versorgungsplan → Verlauf : down then left -->
+  <path d="M 810 382 L 810 520 L 702 520" fill="none" stroke="#1f7a4d" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arr-cycle)"/>
 
   <!-- Verlauf → Decision -->
-  <line x1="540" y1="520" x2="522" y2="520" stroke="#222" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="540" y1="520" x2="522" y2="520" stroke="#1f7a4d" stroke-width="2.4" marker-end="url(#arr-cycle)"/>
+
+  <!-- Decision → Behandlungsabschnitt (Wechsel) : up then right, closes the loop -->
+  <path d="M 440 490 L 440 410 L 620 410 L 620 382" fill="none" stroke="#1f7a4d" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#arr-cycle)"/>
+  <text x="455" y="404" font-size="11" font-weight="700" fill="#1f7a4d">Wechsel</text>
 
   <!-- Decision → End (Erreicht) -->
   <line x1="360" y1="520" x2="321" y2="520" stroke="#222" stroke-width="1.6" marker-end="url(#arr)"/>
   <text x="343" y="512" text-anchor="middle" font-size="11" font-weight="600" fill="#222">Erreicht</text>
-
-  <!-- Decision → Behandlungsabschnitt (Wechsel, loop back up) -->
-  <path d="M 440 490 L 440 410 L 620 410 L 620 380" stroke="#222" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
-  <text x="455" y="404" font-size="11" font-weight="600" fill="#222">Wechsel</text>
 
   <!-- ════════════════════════════════════════════════════════════════════ -->
   <!-- DATA: FHIR Resources as document icons (above processes) -->
@@ -161,8 +163,8 @@
   <g transform="translate(390, 158)">
     <use href="#doc" width="80" height="100"/>
     <text x="40" y="56" text-anchor="middle" font-size="11" font-weight="700">Goal</text>
-    <text x="40" y="74" text-anchor="middle" font-size="9" fill="#555">OnkoTherapy-</text>
-    <text x="40" y="86" text-anchor="middle" font-size="9" fill="#555">Goal</text>
+    <text x="40" y="74" text-anchor="middle" font-size="9" fill="#777">OnkoTherapy-</text>
+    <text x="40" y="86" text-anchor="middle" font-size="9" fill="#777">Goal</text>
   </g>
   <line x1="430" y1="260" x2="430" y2="318" stroke="#666" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arr-data)"/>
 
@@ -171,8 +173,8 @@
     <use href="#doc" width="80" height="100"/>
     <text x="40" y="46" text-anchor="middle" font-size="11" font-weight="700">EpisodeOf-</text>
     <text x="40" y="60" text-anchor="middle" font-size="11" font-weight="700">Care</text>
-    <text x="40" y="78" text-anchor="middle" font-size="9" fill="#555">OnkoTherapy-</text>
-    <text x="40" y="90" text-anchor="middle" font-size="9" fill="#555">Line</text>
+    <text x="40" y="78" text-anchor="middle" font-size="9" fill="#777">OnkoTherapy-</text>
+    <text x="40" y="90" text-anchor="middle" font-size="9" fill="#777">Line</text>
   </g>
   <line x1="620" y1="260" x2="620" y2="318" stroke="#666" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arr-data)"/>
 
@@ -180,8 +182,8 @@
   <g transform="translate(770, 158)">
     <use href="#doc" width="80" height="100"/>
     <text x="40" y="56" text-anchor="middle" font-size="11" font-weight="700">CarePlan</text>
-    <text x="40" y="74" text-anchor="middle" font-size="9" fill="#555">OnkoCare-</text>
-    <text x="40" y="86" text-anchor="middle" font-size="9" fill="#555">Plan</text>
+    <text x="40" y="74" text-anchor="middle" font-size="9" fill="#777">OnkoCare-</text>
+    <text x="40" y="86" text-anchor="middle" font-size="9" fill="#777">Plan</text>
   </g>
   <line x1="810" y1="260" x2="810" y2="318" stroke="#666" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arr-data)"/>
 
@@ -189,45 +191,42 @@
   <g transform="translate(880, 188)">
     <use href="#doc" width="60" height="72"/>
     <text x="30" y="36" text-anchor="middle" font-size="10" font-weight="700">PlanDef.</text>
-    <text x="30" y="50" text-anchor="middle" font-size="9" fill="#555">CPG-on-FHIR</text>
-    <text x="30" y="62" text-anchor="middle" font-size="9" fill="#555">(optional)</text>
+    <text x="30" y="50" text-anchor="middle" font-size="9" fill="#777">CPG-on-FHIR</text>
+    <text x="30" y="62" text-anchor="middle" font-size="9" fill="#777">(optional)</text>
   </g>
   <line x1="880" y1="220" x2="852" y2="220" stroke="#666" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arr-data)"/>
 
   <!-- Observation below Verlauf bewerten -->
-  <g transform="translate(580, 590)">
+  <g transform="translate(580, 600)">
     <use href="#doc" width="80" height="80"/>
     <text x="40" y="40" text-anchor="middle" font-size="11" font-weight="700">Observation</text>
-    <text x="40" y="56" text-anchor="middle" font-size="9" fill="#555">Outcome / Verlauf</text>
+    <text x="40" y="56" text-anchor="middle" font-size="9" fill="#777">Outcome / Verlauf</text>
   </g>
-  <line x1="620" y1="552" x2="620" y2="588" stroke="#666" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arr-data)"/>
+  <line x1="620" y1="552" x2="620" y2="598" stroke="#666" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arr-data)"/>
 
   <!-- ════════════════════════════════════════════════════════════════════ -->
-  <!-- GOAL ↔ OBSERVATION COUPLING -->
-  <!-- Rectangular path in the right corridor (x=895, between processes ≤880
-       and INTENTION panel ≥944), top horizontal at y=288 (above process boxes
-       at 320, below doc icons at 258). Arrow ends pointing up into Goal-doc. -->
+  <!-- GOAL ↔ OBSERVATION COUPLING (red dashed, left corridor / clockwise) -->
   <!-- ════════════════════════════════════════════════════════════════════ -->
-  <path d="M 660 612 L 895 612 L 895 288 L 430 288 L 430 262"
+  <path d="M 580 632 L 278 632 L 278 208 L 388 208"
         fill="none" stroke="#c8102e" stroke-width="2.2" stroke-dasharray="5 3"
         marker-end="url(#arr-goal)" stroke-linejoin="round"/>
 
-  <!-- Inline label: outcomeReference (on the vertical right segment) -->
-  <rect x="852" y="438" width="86" height="36" fill="#ffffff"/>
-  <text x="895" y="454" text-anchor="middle" font-size="11" font-weight="700" fill="#c8102e">outcome-</text>
-  <text x="895" y="468" text-anchor="middle" font-size="11" font-weight="700" fill="#c8102e">Reference</text>
+  <!-- Inline label: outcomeReference -->
+  <rect x="286" y="436" width="86" height="38" rx="3" fill="#ffffff"/>
+  <text x="329" y="453" text-anchor="middle" font-size="11" font-weight="700" fill="#c8102e">outcome-</text>
+  <text x="329" y="468" text-anchor="middle" font-size="11" font-weight="700" fill="#c8102e">Reference</text>
 
-  <!-- Inline label: target.measure = Observation.code (on the top horizontal segment) -->
-  <rect x="540" y="276" width="246" height="22" fill="#ffffff"/>
+  <!-- Inline label: target.measure = Observation.code -->
+  <rect x="538" y="276" width="250" height="24" rx="3" fill="#ffffff"/>
   <text x="663" y="293" text-anchor="middle" font-size="11" font-weight="700" fill="#c8102e">Goal.target.measure = Observation.code</text>
 
   <!-- ════════════════════════════════════════════════════════════════════ -->
   <!-- LEGEND -->
   <!-- ════════════════════════════════════════════════════════════════════ -->
-  <g transform="translate(60, 690)">
+  <g transform="translate(60, 710)">
     <text x="0" y="16" font-size="11" font-weight="700" fill="#222" letter-spacing="1">LEGENDE</text>
 
-    <rect x="60" y="6" width="44" height="22" fill="#ffffff" stroke="#222" stroke-width="2"/>
+    <rect x="60" y="6" width="44" height="22" rx="3" fill="#ffffff" stroke="#222" stroke-width="2"/>
     <text x="112" y="22" font-size="11" fill="#222">Prozess-Schritt</text>
 
     <g transform="translate(225, 0)">
@@ -238,14 +237,14 @@
     <polygon points="370,18 392,6 414,18 392,30" fill="#ffffff" stroke="#222" stroke-width="2"/>
     <text x="424" y="22" font-size="11" fill="#222">Entscheidung</text>
 
-    <rect x="530" y="6" width="28" height="22" fill="#fdf3f5" stroke="#c8102e" stroke-width="2"/>
+    <rect x="530" y="6" width="28" height="22" rx="3" fill="#fdf3f5" stroke="#c8102e" stroke-width="2"/>
     <text x="566" y="22" font-size="11" fill="#222">Wertebereich</text>
 
-    <circle cx="675" y="18" cy="18" r="10" fill="#ffffff" stroke="#222" stroke-width="2"/>
-    <text x="695" y="22" font-size="11" fill="#222">Start / Ende</text>
+    <circle cx="685" cy="18" r="10" fill="#ffffff" stroke="#222" stroke-width="2"/>
+    <text x="705" y="22" font-size="11" fill="#222">Start / Ende</text>
 
-    <line x1="800" y1="18" x2="836" y2="18" stroke="#222" stroke-width="1.6" marker-end="url(#arr)"/>
-    <text x="844" y="22" font-size="11" fill="#222">Prozessfluss</text>
+    <line x1="810" y1="18" x2="846" y2="18" stroke="#1f7a4d" stroke-width="2.4" marker-end="url(#arr-cycle)"/>
+    <text x="854" y="22" font-size="11" fill="#222">Kreislauf</text>
 
     <line x1="960" y1="18" x2="996" y2="18" stroke="#666" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arr-data)"/>
     <text x="1004" y="22" font-size="11" fill="#222">Datenobjekt</text>
@@ -253,7 +252,6 @@
 
   <!-- FHIR references footer -->
   <g transform="translate(60, 130)">
-    <rect width="1080" height="22" fill="none" stroke="none"/>
     <text x="540" y="16" text-anchor="middle" font-size="11" fill="#555" font-style="italic">OnkoCarePlan.addresses → Condition  ·  .goal → OnkoTherapyGoal  ·  .encounter → Encounter.episodeOfCare → OnkoTherapyLine  ·  .instantiatesCanonical → PlanDefinition</text>
   </g>
 </svg>
