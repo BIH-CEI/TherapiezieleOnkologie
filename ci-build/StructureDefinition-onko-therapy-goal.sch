@@ -13,6 +13,7 @@
     <sch:title>f:Goal</sch:title>
     <sch:rule context="f:Goal">
       <sch:assert test="count(f:extension[@url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent']) &lt;= 1">extension with URL = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/goal-reasonRejected']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/goal-reasonRejected': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:category) &gt;= 1">category: minimum cardinality of 'category' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

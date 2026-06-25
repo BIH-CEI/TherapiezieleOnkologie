@@ -174,6 +174,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#klinische-erzählung" id="markdown-toc-klinische-erzählung">Klinische Erzählung</a></li>
   <li><a href="#informationsmodell" id="markdown-toc-informationsmodell">Informationsmodell</a></li>
   <li><a href="#verknüpfungen-im-beispiel" id="markdown-toc-verknüpfungen-im-beispiel">Verknüpfungen im Beispiel</a></li>
+  <li><a href="#aus-mcc-übernommene-extensions-im-beispiel" id="markdown-toc-aus-mcc-übernommene-extensions-im-beispiel">Aus MCC übernommene Extensions im Beispiel</a></li>
 </ul>
 
 </div>
@@ -186,6 +187,73 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="informationsmodell">Informationsmodell</h3>
 
 <p>Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> ist das zentrale Steuerobjekt, das die adressierte Erkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>), das übergeordnete Ziel (<code class="language-plaintext highlighter-rouge">goal</code>) sowie geplante und durchgeführte Maßnahmen (<code class="language-plaintext highlighter-rouge">activity.reference</code> / <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code>) zusammenführt.</p>
+
+<p>Der folgende Referenzgraph zeigt alle FHIR-Referenzen zwischen den Beispiel-Instanzen. Durchgezogene Pfeile sind fachliche Referenzen (mit Feldnamen), gestrichelte Pfeile die <code class="language-plaintext highlighter-rouge">subject</code>-Referenzen aller Ressourcen auf die Patientin (zu einem „subject-Bus" zusammengefasst). Der Graph ist gerichtet und <strong>zyklenfrei</strong> — jede Referenz verweist vom referenzierenden auf das referenzierte Resource, ohne Rückkanten.</p>
+
+<svg width="100%" viewBox="0 0 680 600" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Vollständiger Referenzgraph des Beispiel-Szenarios mCRC palliativ</title>
+<desc>Geordneter, zyklenfreier Graph aller FHIR-Referenzen zwischen den Beispiel-Instanzen. Durchgezogene Pfeile sind fachliche Referenzen mit Feldnamen, gestrichelte Pfeile die subject-Referenzen aller Ressourcen auf die Patientin, zusammengefasst zu einem subject-Bus.</desc>
+<defs>
+<marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+<marker id="arg" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<path d="M130,88 L190,48" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L190,268" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L190,468" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L370,148" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L540,88" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M310,48 L370,428" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M310,48 L370,148" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M310,48 L560,60" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M310,60 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,448 L570,116" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M490,428 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M490,428 L518,428 L518,100 L540,100" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+
+<path d="M150,508 L540,508" fill="none" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arg)" />
+<path d="M130,116 L150,116 L150,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M130,476 L160,476 L160,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M310,48 L330,48 L330,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M310,268 L340,268 L340,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M370,176 L355,176 L355,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M490,428 L520,428 L520,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M600,116 L665,116 L665,520 L660,520" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arg)" />
+
+<text x="160" y="52" text-anchor="middle" font-size="11.5" fill="#5F5E5A">goal</text>
+<text x="255" y="226" text-anchor="middle" font-size="11.5" fill="#5F5E5A">activity.reference</text>
+<text x="255" y="425" text-anchor="middle" font-size="11.5" fill="#5F5E5A">custodian</text>
+<text x="430" y="108" text-anchor="middle" font-size="11.5" fill="#5F5E5A">activity.outcomeReference</text>
+<text x="478" y="80" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
+<text x="475" y="277" text-anchor="middle" font-size="11.5" fill="#5F5E5A">author</text>
+<text x="340" y="236" text-anchor="middle" font-size="11.5" fill="#5F5E5A">relatedGoal</text>
+<text x="336" y="122" text-anchor="middle" font-size="11.5" fill="#5F5E5A">outcomeReference</text>
+<text x="300" y="304" text-anchor="middle" font-size="11.5" fill="#5F5E5A">diagnosis.condition</text>
+<text x="432" y="42" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
+<text x="452" y="232" text-anchor="middle" font-size="11.5" fill="#5F5E5A">expressedBy</text>
+<text x="520" y="378" text-anchor="middle" font-size="11.5" fill="#5F5E5A">expressedBy</text>
+<text x="533" y="252" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
+<text x="200" y="500" text-anchor="middle" font-size="11.5" fill="#5F5E5A">subject (von allen Ressourcen)</text>
+
+<g><rect x="10" y="60" width="120" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" /><text x="70" y="84" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">CarePlan</text><text x="70" y="102" text-anchor="middle" font-size="11.5" fill="#534AB7">OnkoCarePlan</text></g>
+<g><rect x="10" y="420" width="120" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" /><text x="70" y="444" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Therapielinie</text><text x="70" y="462" text-anchor="middle" font-size="11.5" fill="#534AB7">OnkoTherapyLine</text></g>
+<g><rect x="190" y="20" width="120" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="250" y="44" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Ziel (palliativ)</text><text x="250" y="62" text-anchor="middle" font-size="11.5" fill="#0F6E56">OnkoTherapyGoal</text></g>
+<g><rect x="190" y="240" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30" /><text x="250" y="264" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">FOLFOX</text><text x="250" y="282" text-anchor="middle" font-size="11.5" fill="#993C1D">MedicationRequest</text></g>
+<g><rect x="190" y="440" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" /><text x="250" y="464" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Tumorzentrum</text><text x="250" y="482" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Organization</text></g>
+<g><rect x="370" y="120" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30" /><text x="430" y="144" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">Disease Status</text><text x="430" y="162" text-anchor="middle" font-size="11.5" fill="#993C1D">Observation</text></g>
+<g><rect x="370" y="400" width="120" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="430" y="424" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Ziel (abgelehnt)</text><text x="430" y="442" text-anchor="middle" font-size="11.5" fill="#0F6E56">OnkoTherapyGoal</text></g>
+<g><rect x="540" y="60" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30" /><text x="600" y="84" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">Diagnose</text><text x="600" y="102" text-anchor="middle" font-size="11.5" fill="#993C1D">OnkoCondition</text></g>
+<g><rect x="540" y="300" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" /><text x="600" y="324" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Onkologin</text><text x="600" y="342" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Practitioner</text></g>
+<g><rect x="540" y="480" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" /><text x="600" y="504" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Patientin</text><text x="600" y="522" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Patient</text></g>
+
+<rect x="40" y="560" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="571" font-size="11.5" fill="#5F5E5A">Plan</text>
+<rect x="108" y="560" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="127" y="571" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="170" y="560" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30" /><text x="189" y="571" font-size="11.5" fill="#5F5E5A">Klinik</text>
+<rect x="242" y="560" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="261" y="571" font-size="11.5" fill="#5F5E5A">Akteur</text>
+<line x1="330" y1="567" x2="360" y2="567" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" /><text x="366" y="571" font-size="11.5" fill="#5F5E5A">Referenz</text>
+<line x1="448" y1="567" x2="478" y2="567" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arg)" /><text x="484" y="571" font-size="11.5" fill="#5F5E5A">subject (Patientenbezug)</text>
+</svg>
 
 <table>
   <thead>
@@ -244,6 +312,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Ziel → Ergebnis:</strong> <code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> bindet die Verlaufs-Observation (Disease Status), wodurch der <code class="language-plaintext highlighter-rouge">achievementStatus</code> (hier <code class="language-plaintext highlighter-rouge">in-progress</code>) auswertbar wird.</li>
 </ul>
 
+<h3 id="aus-mcc-übernommene-extensions-im-beispiel">Aus MCC übernommene Extensions im Beispiel</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">goal-acceptance</code></strong> (MCCGoal): Die Patientin stimmt dem palliativen Ziel mit hoher Priorität zu (<code class="language-plaintext highlighter-rouge">status = agree</code>).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">goal-reasonRejected</code></strong> (MCCGoal): Das in der Tumorkonferenz erwogene kurative Ziel (<a href="Goal-TherapiezielCRCKurativAbgelehnt.html">TherapiezielCRCKurativAbgelehnt</a>, <code class="language-plaintext highlighter-rouge">lifecycleStatus = rejected</code>) trägt die Ablehnungsbegründung (nicht resektable Metastasierung).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">goal-relationship</code></strong> (MCCGoal): Das palliative Ziel ist als <code class="language-plaintext highlighter-rouge">replacement</code> mit dem abgelehnten kurativen Ziel verknüpft.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">custodian</code></strong> (MCC CarePlan, R5-Backport): Das <a href="Organization-TumorzentrumCRC.html">Tumorzentrum</a> ist als für Pflege und Aktualisierung des Plans verantwortliche Stelle hinterlegt.</li>
+</ul>
+
 
 
 
@@ -272,8 +349,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-24 07:38:00 +0000">
-    2026-06-24
+  <span title="2026-06-25 15:12:00 +0000">
+    2026-06-25
   </span>
 
           <br/>

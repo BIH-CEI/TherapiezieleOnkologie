@@ -1,7 +1,7 @@
 TherapiezieleOnkologie : Validation Results
 =========================================
 
-err = 1, warn = 42, info = 77
+err = 1, warn = 50, info = 79
 $--
 Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
  Build Errors : 0 / 6 / 0
@@ -10,15 +10,18 @@ Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (cano
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CodeSystem-onko-therapy-intent : 0 / 2 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Condition-ConditionCRC : 1 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/EpisodeOfCare-TherapielinieCRCErstlinie : 0 / 0 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Goal-TherapiezielCRCKurativAbgelehnt : 0 / 0 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Goal-TherapiezielCRCLebensverlaengerung : 0 / 0 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ImplementationGuide-bih-cei-therapieziele-onkologie : 0 / 5 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/MedicationRequest-MedicationRequestFOLFOX : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObservationDiseaseStatusCRC : 0 / 1 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Organization-TumorzentrumCRC : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Patient-PatientinCRC : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Practitioner-OnkologinCRC : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-care-plan : 0 / 2 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-careplan-custodian : 0 / 2 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-condition : 0 / 9 / 72
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-goal : 0 / 4 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-goal : 0 / 10 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-intent : 0 / 4 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-line : 0 / 2 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-onko-therapy-goal-type : 0 / 2 / 2
@@ -44,6 +47,8 @@ WARNING: Condition/ConditionCRC: Condition.code.coding[0].system: A definition f
 ERROR: Condition/ConditionCRC: Condition.code.coding[0]: Der angegebene Code (http://fhir.de/CodeSystem/bfarm/icd-10-gm#C18.9) befindet sich nicht im ValueSet 'MII VS Diagnose ICD-10-GM' (https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.0), und es wird ein Code aus diesem ValueSet benötigt: Invalid criteria version: '2025"
 == fsh-generated/resources/EpisodeOfCare-TherapielinieCRCErstlinie.json ==
 INFORMATION: EpisodeOfCare/TherapielinieCRCErstlinie: EpisodeOfCare.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0
+== fsh-generated/resources/Goal-TherapiezielCRCKurativAbgelehnt.json ==
+INFORMATION: Goal/TherapiezielCRCKurativAbgelehnt: Goal.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0
 == fsh-generated/resources/Goal-TherapiezielCRCLebensverlaengerung.json ==
 INFORMATION: Goal/TherapiezielCRCLebensverlaengerung: Goal.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0
 == fsh-generated/resources/ImplementationGuide-bih-cei-therapieziele-onkologie.json ==
@@ -55,12 +60,16 @@ WARNING: ImplementationGuide/bih-cei-therapieziele-onkologie: ImplementationGuid
 == fsh-generated/resources/MedicationRequest-MedicationRequestFOLFOX.json ==
 == fsh-generated/resources/Observation-ObservationDiseaseStatusCRC.json ==
 WARNING: Observation/ObservationDiseaseStatusCRC: Observation: Alle Observations sollten einen Performer haben
+== fsh-generated/resources/Organization-TumorzentrumCRC.json ==
 == fsh-generated/resources/Patient-PatientinCRC.json ==
 == fsh-generated/resources/Practitioner-OnkologinCRC.json ==
 == fsh-generated/resources/StructureDefinition-onko-care-plan.json ==
 WARNING: StructureDefinition/onko-care-plan: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: StructureDefinition/onko-care-plan: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 INFORMATION: StructureDefinition/onko-care-plan: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+== fsh-generated/resources/StructureDefinition-onko-careplan-custodian.json ==
+WARNING: StructureDefinition/onko-careplan-custodian: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
+WARNING: StructureDefinition/onko-careplan-custodian: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 == fsh-generated/resources/StructureDefinition-onko-condition.json ==
 INFORMATION: StructureDefinition/onko-condition: StructureDefinition.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem http://hl7.org/fhir/spdx-license|84728b7
 WARNING: StructureDefinition/onko-condition: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
@@ -145,8 +154,15 @@ WARNING: StructureDefinition/onko-condition: StructureDefinition.snapshot.elemen
 == fsh-generated/resources/StructureDefinition-onko-therapy-goal.json ==
 WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
-WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[5].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
-WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.snapshot.element[13].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.snapshot.element[9].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/goal-acceptance'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/goal-acceptance' to 'http://hl7.org/fhir/StructureDefinition/goal-acceptance|5.3.0'
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.snapshot.element[10].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/goal-reasonRejected'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/goal-reasonRejected' to 'http://hl7.org/fhir/StructureDefinition/goal-reasonRejected|5.3.0'
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.snapshot.element[11].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/goal-relationship'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/goal-relationship' to 'http://hl7.org/fhir/StructureDefinition/goal-relationship|5.3.0'
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[3].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/goal-acceptance'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/goal-acceptance' to 'http://hl7.org/fhir/StructureDefinition/goal-acceptance|5.3.0'
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[4].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/goal-reasonRejected'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/goal-reasonRejected' to 'http://hl7.org/fhir/StructureDefinition/goal-reasonRejected|5.3.0'
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[5].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/goal-relationship'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0 (from hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/goal-relationship' to 'http://hl7.org/fhir/StructureDefinition/goal-relationship|5.3.0'
+INFORMATION: StructureDefinition/onko-therapy-goal: Goal.extension: The extension http://hl7.org/fhir/StructureDefinition/goal-reasonRejected|5.3.0 is deprecated with the note: 'This extension is deprecated and replaced by Goal.statusReason'
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[8].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.snapshot.element[16].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
 == fsh-generated/resources/StructureDefinition-onko-therapy-intent.json ==
 WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1

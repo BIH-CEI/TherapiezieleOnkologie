@@ -12,6 +12,15 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
 **Onkologische Therapieintention (Extension)**: Palliativ
 
+> **Goal acceptance**
+* individual: [Erika Musterfrau Female, DoB: 1961-09-12](Patient-PatientinCRC.md)
+* status: agree
+* priority: High Priority
+
+> **Goal: Related Goal**
+* type: Replacement
+* target: [Goal: extension = Kurativ,; lifecycleStatus = rejected; category = Heilung; description = ](Goal-TherapiezielCRCKurativAbgelehnt.md)
+
 **lifecycleStatus**: Active
 
 **achievementStatus**: In Progress
@@ -59,6 +68,48 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
         "display" : "Palliativ"
       }]
     }
+  },
+  {
+    "extension" : [{
+      "url" : "individual",
+      "valueReference" : {
+        "reference" : "Patient/PatientinCRC"
+      }
+    },
+    {
+      "url" : "status",
+      "valueCode" : "agree"
+    },
+    {
+      "url" : "priority",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+          "code" : "high-priority",
+          "display" : "High Priority"
+        }]
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-acceptance"
+  },
+  {
+    "extension" : [{
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/goal-relationship-type",
+          "code" : "replacement",
+          "display" : "Replacement"
+        }]
+      }
+    },
+    {
+      "url" : "target",
+      "valueReference" : {
+        "reference" : "Goal/TherapiezielCRCKurativAbgelehnt"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
   }],
   "lifecycleStatus" : "active",
   "achievementStatus" : {

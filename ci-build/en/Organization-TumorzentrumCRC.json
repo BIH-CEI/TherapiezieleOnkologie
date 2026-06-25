@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Organization",
+  "id" : "TumorzentrumCRC",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Organization TumorzentrumCRC</b></p><a name=\"en-TumorzentrumCRC\"> </a><a name=\"en-hcTumorzentrumCRC\"> </a><p><b>name</b>: Onkologisches Zentrum Musterklinik</p></div>"
+  },
+  "name" : "Onkologisches Zentrum Musterklinik"
+}

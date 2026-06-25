@@ -39,7 +39,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-06-24T07:38:46+00:00",
+  "date" : "2026-06-25T15:12:52+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -109,6 +109,18 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"]
       }]
+    },
+    {
+      "id" : "CarePlan.extension:custodian",
+      "path" : "CarePlan.extension",
+      "sliceName" : "custodian",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "CarePlan.instantiatesCanonical",

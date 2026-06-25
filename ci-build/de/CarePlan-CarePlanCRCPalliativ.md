@@ -12,6 +12,8 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **Onkologische Therapieintention (Extension)**: Palliativ
 
+**CarePlan Custodian (Extension)**: [Organization Onkologisches Zentrum Musterklinik](Organization-TumorzentrumCRC.md)
+
 **status**: Active
 
 **intent**: Plan
@@ -26,7 +28,7 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **addresses**: [Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet](Condition-ConditionCRC.md)
 
-**goal**: [Goal: extension = Palliativ; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10](Goal-TherapiezielCRCLebensverlaengerung.md)
+**goal**: [Goal: extension = Palliativ,,; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10](Goal-TherapiezielCRCLebensverlaengerung.md)
 
 ### Activities
 
@@ -54,6 +56,12 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
         "code" : "palliativ",
         "display" : "Palliativ"
       }]
+    }
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+    "valueReference" : {
+      "reference" : "Organization/TumorzentrumCRC"
     }
   }],
   "status" : "active",

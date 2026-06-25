@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="TumorzentrumCRC"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Organization TumorzentrumCRC</b></p><a name="TumorzentrumCRC"> </a><a name="hcTumorzentrumCRC"> </a><p><b>name</b>: Onkologisches Zentrum Musterklinik</p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Organization TumorzentrumCRC</b></p><a name="en-TumorzentrumCRC"> </a><a name="en-hcTumorzentrumCRC"> </a><p><b>name</b>: Onkologisches Zentrum Musterklinik</p></div></div>
+  </text>
+  <name value="Onkologisches Zentrum Musterklinik"/>
+</Organization>

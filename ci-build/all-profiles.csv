@@ -29,6 +29,20 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Onkologische Therapieintention (Extension)","Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-care-plan","CarePlan.extension:custodian","CarePlan.extension","custodian","","",0,*,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian]]} {[]}
+","CarePlan Custodian (Extension)","Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans (Custodian).
+
+Übernahme der **MCC eCare Plan** Extension
+[custodian](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-custodian.html)
+(`http://hl7.org/fhir/us/mcc/StructureDefinition/custodian`). Es handelt sich um einen
+R5-Backport: In FHIR R5 wurde `CarePlan.author` entfernt; `CarePlan.custodian` benennt die
+für Pflege und Wartung des Plans verantwortliche Partei. Der Custodian kann, muss aber kein
+Contributor sein.
+
+Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu
+vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "onko-care-plan","CarePlan.modifierExtension","CarePlan.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -204,6 +218,31 @@ Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Medicatio
 "
 "onko-care-plan","CarePlan.note","CarePlan.note","","","",0,*,"","","","Annotation {[]} {[]}
 ","Comments about the plan","General notes about the care plan not covered elsewhere.","","Used to capture information that applies to the plan as a whole that doesn't fit into discrete elements.","","","","","","","",,,,,"",,,,"CarePlan.note",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"onko-careplan-custodian","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","CarePlan Custodian (Extension)","Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans (Custodian).
+
+Übernahme der **MCC eCare Plan** Extension
+[custodian](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-custodian.html)
+(`http://hl7.org/fhir/us/mcc/StructureDefinition/custodian`). Es handelt sich um einen
+R5-Backport: In FHIR R5 wurde `CarePlan.author` entfernt; `CarePlan.custodian` benennt die
+für Pflege und Wartung des Plans verantwortliche Partei. Der Custodian kann, muss aber kein
+Contributor sein.
+
+Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu
+vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-careplan-custodian","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"onko-careplan-custodian","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-careplan-custodian","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"onko-careplan-custodian","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/CareTeam], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]]}
+","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "onko-condition","Condition","Condition","","","",0,*,"","","","null {[]} {[]}
 ","Detailed information about conditions, problems or diagnoses","A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.","","","","","","","","","",,,,,"",,,,"Condition",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
@@ -1099,6 +1138,18 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "onko-therapy-goal","Goal.extension:therapyIntent","Goal.extension","therapyIntent","","",0,1,"","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent]]} {[]}
 ","Onkologische Therapieintention (Extension)","Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-therapy-goal","Goal.extension:acceptance","Goal.extension","acceptance","","",0,*,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/goal-acceptance]]} {[]}
+","Individual acceptance of goal","Information about the acceptance and relative priority assigned to the goal by the patient, practitioners and other stake-holders. In R6, this acceptance extension was elevated to the base Goal resource.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-therapy-goal","Goal.extension:reasonRejected","Goal.extension","reasonRejected","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/goal-reasonRejected]]} {[]}
+","The reason the goal was not accepted","The reason the goal was not accepted. Applies only if the status of the goal is rejected.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-therapy-goal","Goal.extension:relatedGoal","Goal.extension","relatedGoal","","",0,*,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/goal-relationship]]} {[]}
+","Goals related to this Goal","Establishes a relationship between this goal and other goals.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "onko-therapy-goal","Goal.modifierExtension","Goal.modifierExtension","","extensions

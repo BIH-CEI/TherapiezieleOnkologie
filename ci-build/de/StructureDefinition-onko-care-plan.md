@@ -43,7 +43,7 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 12 elements
+ Must-Support: 13 elements
 
 **Structures**
 
@@ -57,6 +57,7 @@ This structure refers to these other structures:
 This structure refers to these extensions:
 
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent](StructureDefinition-onko-therapy-intent.md)
+* [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian](StructureDefinition-onko-careplan-custodian.md)
 
  **Schlüsselelemente-Ansicht** 
 
@@ -79,7 +80,7 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 12 elements
+ Must-Support: 13 elements
 
 **Structures**
 
@@ -93,6 +94,7 @@ This structure refers to these other structures:
 This structure refers to these extensions:
 
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent](StructureDefinition-onko-therapy-intent.md)
+* [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian](StructureDefinition-onko-careplan-custodian.md)
 
  
 
@@ -111,7 +113,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-06-24T07:38:46+00:00",
+  "date" : "2026-06-25T15:12:52+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -181,6 +183,18 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"]
       }]
+    },
+    {
+      "id" : "CarePlan.extension:custodian",
+      "path" : "CarePlan.extension",
+      "sliceName" : "custodian",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "CarePlan.instantiatesCanonical",

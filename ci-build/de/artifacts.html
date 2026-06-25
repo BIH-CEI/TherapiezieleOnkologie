@@ -302,6 +302,28 @@ bezogen ausgewertet werden kann.</li>
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-onko-careplan-custodian.html"
+                  title="StructureDefinition/onko-careplan-custodian">
+                  <span title="StructureDefinition/onko-careplan-custodian">CarePlan Custodian (Extension)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans (Custodian).</p>
+
+<p>Übernahme der <strong>MCC eCare Plan</strong> Extension
+<a href="https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-custodian.html">custodian</a>
+(<code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/us/mcc/StructureDefinition/custodian</code>). Es handelt sich um einen
+R5-Backport: In FHIR R5 wurde <code class="language-plaintext highlighter-rouge">CarePlan.author</code> entfernt; <code class="language-plaintext highlighter-rouge">CarePlan.custodian</code> benennt die
+für Pflege und Wartung des Plans verantwortliche Partei. Der Custodian kann, muss aber kein
+Contributor sein.</p>
+
+<p>Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu
+vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-onko-therapy-intent.html"
                   title="StructureDefinition/onko-therapy-intent">
                   <span title="StructureDefinition/onko-therapy-intent">Onkologische Therapieintention (Extension)
@@ -467,6 +489,18 @@ bezogen ausgewertet werden kann.</li>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Goal-TherapiezielCRCKurativAbgelehnt.html"
+                  title="Goal/TherapiezielCRCKurativAbgelehnt">
+                  <span title="Goal/TherapiezielCRCKurativAbgelehnt">Therapieziel – kurative Resektion (abgelehnt, Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>In der Tumorkonferenz erwogenes kuratives Ziel, das aufgrund der Metastasierung verworfen wurde. Demonstriert die Extension goal-reasonRejected.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-ObservationDiseaseStatusCRC.html"
                   title="Observation/ObservationDiseaseStatusCRC">
                   <span title="Observation/ObservationDiseaseStatusCRC">Tumoransprechen / Disease Status (Beispiel)
@@ -475,6 +509,18 @@ bezogen ausgewertet werden kann.</li>
             </td>
             <td>
 <p>Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen auf das Therapieziel bezieht (vgl. mCODE Cancer Disease Status).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-TumorzentrumCRC.html"
+                  title="Organization/TumorzentrumCRC">
+                  <span title="Organization/TumorzentrumCRC">Tumorzentrum (Custodian, Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.</p>
 </td>
          </tr>
       </tbody>
@@ -506,8 +552,8 @@ bezogen ausgewertet werden kann.</li>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-24 07:38:00 +0000">
-    2026-06-24
+  <span title="2026-06-25 15:12:00 +0000">
+    2026-06-25
   </span>
 
           <br/>

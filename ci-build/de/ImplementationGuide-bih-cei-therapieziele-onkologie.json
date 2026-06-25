@@ -11,7 +11,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-06-24T07:38:46+00:00",
+  "date" : "2026-06-25T15:12:52+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -758,6 +758,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/onko-careplan-custodian"
+      },
+      "name" : "CarePlan Custodian (Extension)",
+      "description" : "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans (Custodian).\n\nÜbernahme der **MCC eCare Plan** Extension\n[custodian](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-custodian.html)\n(`http://hl7.org/fhir/us/mcc/StructureDefinition/custodian`). Es handelt sich um einen\nR5-Backport: In FHIR R5 wurde `CarePlan.author` entfernt; `CarePlan.custodian` benennt die\nfür Pflege und Wartung des Plans verantwortliche Partei. Der Custodian kann, muss aber kein\nContributor sein.\n\nHier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu\nvermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "MedicationRequest"
       }],
       "reference" : {
@@ -929,6 +941,18 @@
         "valueString" : "Goal"
       }],
       "reference" : {
+        "reference" : "Goal/TherapiezielCRCKurativAbgelehnt"
+      },
+      "name" : "Therapieziel – kurative Resektion (abgelehnt, Beispiel)",
+      "description" : "In der Tumorkonferenz erwogenes kuratives Ziel, das aufgrund der Metastasierung verworfen wurde. Demonstriert die Extension goal-reasonRejected.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      }],
+      "reference" : {
         "reference" : "Goal/TherapiezielCRCLebensverlaengerung"
       },
       "name" : "Therapieziel – Lebensverlängerung & Symptomkontrolle (Beispiel)",
@@ -945,6 +969,18 @@
       },
       "name" : "Tumoransprechen / Disease Status (Beispiel)",
       "description" : "Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen auf das Therapieziel bezieht (vgl. mCODE Cancer Disease Status).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/TumorzentrumCRC"
+      },
+      "name" : "Tumorzentrum (Custodian, Beispiel)",
+      "description" : "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.",
       "exampleBoolean" : true
     }],
     "page" : {

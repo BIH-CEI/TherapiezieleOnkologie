@@ -27,6 +27,13 @@
   "name" : "OnkoCarePlan"
 },
 {
+  "id" : "onko-careplan-custodian",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+  "version" : "0.1.0",
+  "name" : "OnkoCarePlanCustodianExt"
+},
+{
   "id" : "onko-condition",
   "type" : "StructureDefinition",
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition",

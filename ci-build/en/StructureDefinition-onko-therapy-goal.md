@@ -15,7 +15,7 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 **Usages:**
 
 * Refer to this Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
-* Examples for this Profile: [Goal/TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md)
+* Examples for this Profile: [Goal/TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md) and [Goal/TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-goal.json)
 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
   "name" : "OnkoTherapyGoal",
   "title" : "Onkologisches Therapieziel",
   "status" : "draft",
-  "date" : "2026-06-24T07:38:46+00:00",
+  "date" : "2026-06-25T15:12:52+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -105,6 +105,42 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"]
       }]
+    },
+    {
+      "id" : "Goal.extension:acceptance",
+      "path" : "Goal.extension",
+      "sliceName" : "acceptance",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/goal-acceptance"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Goal.extension:reasonRejected",
+      "path" : "Goal.extension",
+      "sliceName" : "reasonRejected",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/goal-reasonRejected"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Goal.extension:relatedGoal",
+      "path" : "Goal.extension",
+      "sliceName" : "relatedGoal",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/goal-relationship"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "Goal.lifecycleStatus",
