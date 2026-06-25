@@ -23,8 +23,10 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 `PlanDefinition` aus dem CPG-on-FHIR-Stack.
 """
 
-// Therapieintention (onkologiespezifisch)
-* extension contains OnkoTherapyIntentExt named therapyIntent 0..1
+// Therapieintention (onkologiespezifisch) und Custodian (übernommen aus MCC)
+* extension contains
+    OnkoTherapyIntentExt named therapyIntent 0..1 and
+    OnkoCarePlanCustodianExt named custodian 0..* MS
 
 // MCCCarePlan Kernattribute
 * status 1..1 MS

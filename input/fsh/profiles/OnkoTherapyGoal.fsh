@@ -24,8 +24,13 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 (z. B. erreicht, in Bearbeitung, nicht erreicht).
 """
 
-// Therapieintention (onkologiespezifisch)
-* extension contains OnkoTherapyIntentExt named therapyIntent 0..1
+// Therapieintention (onkologiespezifisch) sowie die von MCCGoal als Must-Support
+// gesetzten Standard-FHIR-Extensions (goal-acceptance, goal-reasonRejected, goal-relationship)
+* extension contains
+    OnkoTherapyIntentExt named therapyIntent 0..1 and
+    http://hl7.org/fhir/StructureDefinition/goal-acceptance named acceptance 0..* MS and
+    http://hl7.org/fhir/StructureDefinition/goal-reasonRejected named reasonRejected 0..1 MS and
+    http://hl7.org/fhir/StructureDefinition/goal-relationship named relatedGoal 0..* MS
 
 // Lebenszyklus und Erreichungsgrad
 * lifecycleStatus 1..1 MS

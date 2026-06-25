@@ -8,6 +8,10 @@ Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonka
 
 Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der `OnkoCarePlan` ist das zentrale Steuerobjekt, das die adressierte Erkrankung (`addresses`), das übergeordnete Ziel (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity.reference` / `activity.outcomeReference`) zusammenführt.
 
+Der folgende Referenzgraph zeigt alle FHIR-Referenzen zwischen den Beispiel-Instanzen. Durchgezogene Pfeile sind fachliche Referenzen (mit Feldnamen), gestrichelte Pfeile die `subject`-Referenzen aller Ressourcen auf die Patientin (zu einem „subject-Bus" zusammengefasst). Der Graph ist gerichtet und **zyklenfrei** — jede Referenz verweist vom referenzierenden auf das referenzierte Resource, ohne Rückkanten.
+
+{% include beispiel-referenzgraph.svg %}
+
 | Element | Ressource | Beispiel-Instanz |
 |---|---|---|
 | Patient:in | `Patient` | [PatientinCRC](Patient-PatientinCRC.html) |
@@ -25,3 +29,10 @@ Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der `OnkoCarePlan` 
 - **CarePlan → Ziel:** `goal` referenziert das `OnkoTherapyGoal` (Kategorien Lebensverlängerung + Symptomkontrolle).
 - **Geplant vs. durchgeführt:** `activity.reference` → geplante Systemtherapie (`MedicationRequest`); `activity.outcomeReference` → dokumentiertes Ergebnis (`Observation`).
 - **Ziel → Ergebnis:** `Goal.outcomeReference` bindet die Verlaufs-Observation (Disease Status), wodurch der `achievementStatus` (hier `in-progress`) auswertbar wird.
+
+### Aus MCC übernommene Extensions im Beispiel
+
+- **`goal-acceptance`** (MCCGoal): Die Patientin stimmt dem palliativen Ziel mit hoher Priorität zu (`status = agree`).
+- **`goal-reasonRejected`** (MCCGoal): Das in der Tumorkonferenz erwogene kurative Ziel ([TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.html), `lifecycleStatus = rejected`) trägt die Ablehnungsbegründung (nicht resektable Metastasierung).
+- **`goal-relationship`** (MCCGoal): Das palliative Ziel ist als `replacement` mit dem abgelehnten kurativen Ziel verknüpft.
+- **`custodian`** (MCC CarePlan, R5-Backport): Das [Tumorzentrum](Organization-TumorzentrumCRC.html) ist als für Pflege und Aktualisierung des Plans verantwortliche Stelle hinterlegt.
