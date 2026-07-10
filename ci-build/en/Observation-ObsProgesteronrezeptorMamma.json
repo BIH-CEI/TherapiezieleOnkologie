@@ -1,0 +1,34 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObsProgesteronrezeptorMamma",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsProgesteronrezeptorMamma</b></p><a name=\"en-ObsProgesteronrezeptorMamma\"> </a><a name=\"en-hcObsProgesteronrezeptorMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85339-0}\">Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6577-6}\">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → PR-negativ.</p>\n</div></blockquote><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "85339-0",
+      "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "effectiveDateTime" : "2025-09-17",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA6577-6",
+      "display" : "Negative"
+    }]
+  },
+  "note" : [{
+    "text" : "Immunhistochemie: <1 % positive Kerne → PR-negativ."
+  }],
+  "specimen" : {
+    "reference" : "Specimen/SpecimenBiopsieMamma"
+  }
+}

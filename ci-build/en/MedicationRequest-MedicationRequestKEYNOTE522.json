@@ -1,0 +1,17 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "MedicationRequestKEYNOTE522",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest MedicationRequestKEYNOTE522</b></p><a name=\"en-MedicationRequestKEYNOTE522\"> </a><a name=\"en-hcMedicationRequestKEYNOTE522\"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Plan</p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p></div>"
+  },
+  "status" : "completed",
+  "intent" : "plan",
+  "medicationCodeableConcept" : {
+    "text" : "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  }
+}

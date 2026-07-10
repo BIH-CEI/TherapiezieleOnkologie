@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="MedicationRequestKEYNOTE522"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: MedicationRequest MedicationRequestKEYNOTE522</b></p><a name="en-MedicationRequestKEYNOTE522"> </a><a name="en-hcMedicationRequestKEYNOTE522"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Plan</p><p><b>medication</b>: <span title="Codes:">Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p></div>
+  </text>
+  <status value="completed"/>
+  <intent value="plan"/>
+  <medicationCodeableConcept>
+    <text value="Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+</MedicationRequest>

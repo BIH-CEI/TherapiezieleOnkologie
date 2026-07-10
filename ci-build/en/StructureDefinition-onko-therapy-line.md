@@ -7,7 +7,7 @@ Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfC
 
 **Usages:**
 
-* Examples for this Profile: [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md)
+* Examples for this Profile: [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md) and [EpisodeOfCare/TherapielinieMammaNeoadjuvant](EpisodeOfCare-TherapielinieMammaNeoadjuvant.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-line.json)
 
@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
   "name" : "OnkoTherapyLine",
   "title" : "Onkologische Therapielinie",
   "status" : "draft",
-  "date" : "2026-06-25T15:12:52+00:00",
+  "date" : "2026-07-10T09:26:12+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

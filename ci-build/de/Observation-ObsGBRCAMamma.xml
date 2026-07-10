@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ObsGBRCAMamma"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsGBRCAMamma</b></p><a name="ObsGBRCAMamma"> </a><a name="hcObsGBRCAMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 51958-7}">BRCA1 and BRCA2 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-25</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260385009}">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen.</p>
+</div></blockquote></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="51958-7"/>
+      <display value="BRCA1 and BRCA2 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+  <effectiveDateTime value="2025-09-25"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="260385009"/>
+      <display value="Negative"/>
+    </coding>
+  </valueCodeableConcept>
+  <note>
+    <text value="gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen."/>
+  </note>
+</Observation>

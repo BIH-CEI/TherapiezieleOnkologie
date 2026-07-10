@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ObsEstrogenrezeptorMamma"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsEstrogenrezeptorMamma</b></p><a name="ObsEstrogenrezeptorMamma"> </a><a name="hcObsEstrogenrezeptorMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 40556-3}">Estrogen receptor Ag [Presence] in Tissue by Immune stain</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6577-6}">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → ER-negativ.</p>
+</div></blockquote><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="40556-3"/>
+      <display value="Estrogen receptor Ag [Presence] in Tissue by Immune stain"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+  <effectiveDateTime value="2025-09-17"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA6577-6"/>
+      <display value="Negative"/>
+    </coding>
+  </valueCodeableConcept>
+  <note>
+    <text value="Immunhistochemie: &lt;1 % positive Kerne → ER-negativ."/>
+  </note>
+  <specimen>
+    <reference value="Specimen/SpecimenBiopsieMamma"/>
+  </specimen>
+</Observation>

@@ -1,0 +1,103 @@
+# Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel) - Implementierungsleitfaden Therapieziele Onkologie v0.1.0
+
+## Example CarePlan: Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)
+
+-------
+
+**English**
+
+-------
+
+Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
+
+**Onkologische Therapieintention (Extension)**: Kurativ
+
+**CarePlan Custodian (Extension)**: [Organization Zertifiziertes Brustzentrum Musterklinik](Organization-TumorzentrumMamma.md)
+
+**status**: Active
+
+**intent**: Plan
+
+**category**: Cancer care plan
+
+**subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
+
+**period**: 2025-09-22 --> (ongoing)
+
+**author**: [Practitioner Katrin Musterarzt ](Practitioner-OnkologinMamma.md)
+
+**addresses**: [Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse](Condition-ConditionMamma.md)
+
+**goal**: [Goal: extension = Kurativ,; lifecycleStatus = active; achievementStatus = Achieved; category = Heilung,Funktionserhalt; priority = High Priority; description = ; start[x] = 2025-09-22](Goal-TherapiezielMammaHeilung.md)
+
+> **activity****outcomeReference**: [Procedure Lumpectomy of breast (procedure)](Procedure-ProcedureOperationMamma.md)**reference**: [MedicationRequest: status = completed; intent = plan; medication[x] = ](MedicationRequest-MedicationRequestKEYNOTE522.md)
+
+> **activity****outcomeReference**: [Observation Cancer disease progression](Observation-ObsDiseaseStatusMamma.md)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CarePlan",
+  "id" : "CarePlanMammaNeoadjuvant",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
+  },
+  "extension" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
+        "code" : "kurativ",
+        "display" : "Kurativ"
+      }]
+    }
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+    "valueReference" : {
+      "reference" : "Organization/TumorzentrumMamma"
+    }
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "736252007",
+      "display" : "Cancer care plan"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "period" : {
+    "start" : "2025-09-22"
+  },
+  "author" : {
+    "reference" : "Practitioner/OnkologinMamma"
+  },
+  "addresses" : [{
+    "reference" : "Condition/ConditionMamma"
+  }],
+  "goal" : [{
+    "reference" : "Goal/TherapiezielMammaHeilung"
+  }],
+  "activity" : [{
+    "outcomeReference" : [{
+      "reference" : "Procedure/ProcedureOperationMamma"
+    }],
+    "reference" : {
+      "reference" : "MedicationRequest/MedicationRequestKEYNOTE522"
+    }
+  },
+  {
+    "outcomeReference" : [{
+      "reference" : "Observation/ObsDiseaseStatusMamma"
+    }]
+  }]
+}
+
+```

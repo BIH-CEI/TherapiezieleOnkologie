@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Anwendungsbeispiel (Mammakarzinom neoadjuvant) - Implementierungsleitfaden Therapieziele Onkologie v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/szenario-mamma.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Anwendungsbeispiel (Mammakarzinom neoadjuvant)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Anwendungsbeispiel (Mammakarzinom neoadjuvant)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#klinische-erzählung" id="markdown-toc-klinische-erzählung">Klinische Erzählung</a></li>
+  <li><a href="#zeitlicher-verlauf" id="markdown-toc-zeitlicher-verlauf">Zeitlicher Verlauf</a></li>
+  <li><a href="#pathologisches-und-molekulares-profil" id="markdown-toc-pathologisches-und-molekulares-profil">Pathologisches und molekulares Profil</a></li>
+  <li><a href="#informationsmodell" id="markdown-toc-informationsmodell">Informationsmodell</a></li>
+  <li><a href="#verknüpfungen-im-beispiel" id="markdown-toc-verknüpfungen-im-beispiel">Verknüpfungen im Beispiel</a></li>
+  <li><a href="#aus-mcc-übernommene-extensions-im-beispiel" id="markdown-toc-aus-mcc-übernommene-extensions-im-beispiel">Aus MCC übernommene Extensions im Beispiel</a></li>
+</ul>
+
+</div>
+<p>Diese Seite zeigt – analog zum <a href="szenario-crc.html">Szenario mCRC (palliativ)</a> – ein durchgängiges Anwendungsbeispiel für die Profile <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> und <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>, hier für ein <strong>kuratives Behandlungskonzept mit neoadjuvanter Systemtherapie und anschließender Operation</strong>.</p>
+
+<h3 id="klinische-erzählung">Klinische Erzählung</h3>
+
+<p>Eine 48-jährige Patientin stellt sich mit einem tastbaren Knoten in der linken Brust vor. Die Stanzbiopsie sichert ein <strong>invasives Mammakarzinom links (NST, G3)</strong>, klinisch <strong>cT2 cN1 cM0 (UICC IIB)</strong>. Die immunhistochemische Aufarbeitung zeigt ein <strong>triple-negatives Profil</strong> (ER negativ, PR negativ, HER2 negativ) bei hoher Proliferation (Ki-67 70 %); die leitlinienindizierte Keimbahn-Testung (gBRCA1/2) ist unauffällig.</p>
+
+<p>In der interdisziplinären Tumorkonferenz wird – leitlinienkonform für ein frühes triple-negatives Mammakarzinom (TNBC) im Stadium II (S3-Leitlinie Mammakarzinom / AGO-Empfehlungen) – eine <strong>kurative Strategie mit neoadjuvanter Systemtherapie</strong> nach dem <strong>KEYNOTE-522-Schema</strong> (Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid) und <strong>anschließender Operation</strong> festgelegt. Übergeordnete Therapieziele sind <strong>Heilung</strong> und <strong>Brusterhalt (Funktionserhalt)</strong>.</p>
+
+<p>Nach Abschluss der neoadjuvanten Therapie erfolgt eine <strong>brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie</strong>. Die pathologische Aufarbeitung des Präparats zeigt eine <strong>pathologische Komplettremission (pCR, ypT0 ypN0)</strong>. Das Ansprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet (<code class="language-plaintext highlighter-rouge">achievementStatus = achieved</code>).</p>
+
+<h3 id="zeitlicher-verlauf">Zeitlicher Verlauf</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datum</th>
+      <th>Ereignis</th>
+      <th>Ressource</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15.09.2025</td>
+      <td>Stanzbiopsie, Histologie: invasives Karzinom NST (ICD-O-3 8500/3), G3</td>
+      <td><a href="Condition-ConditionMamma.html">ConditionMamma</a>, <a href="Observation-ObsHistologieMamma.html">ObsHistologieMamma</a>, <a href="Observation-ObsGradingMamma.html">ObsGradingMamma</a></td>
+    </tr>
+    <tr>
+      <td>16.09.2025</td>
+      <td>Ausbreitungsdiagnostik: klinisches TNM cT2 cN1 cM0 (UICC IIB)</td>
+      <td><a href="Observation-ObsTNMklinischMamma.html">ObsTNMklinischMamma</a></td>
+    </tr>
+    <tr>
+      <td>17.09.2025</td>
+      <td>Immunhistochemie: ER negativ, PR negativ, HER2 negativ, Ki-67 70 %</td>
+      <td><a href="Observation-ObsEstrogenrezeptorMamma.html">ObsEstrogenrezeptorMamma</a>, <a href="Observation-ObsProgesteronrezeptorMamma.html">ObsProgesteronrezeptorMamma</a>, <a href="Observation-ObsHER2Mamma.html">ObsHER2Mamma</a>, <a href="Observation-ObsKi67Mamma.html">ObsKi67Mamma</a></td>
+    </tr>
+    <tr>
+      <td>22.09.2025</td>
+      <td>Interdisziplinäre Tumorkonferenz: kuratives Konzept, neoadjuvante Systemtherapie beschlossen; Therapieziel festgelegt</td>
+      <td><a href="CarePlan-CarePlanMammaNeoadjuvant.html">CarePlanMammaNeoadjuvant</a>, <a href="Goal-TherapiezielMammaHeilung.html">TherapiezielMammaHeilung</a></td>
+    </tr>
+    <tr>
+      <td>25.09.2025</td>
+      <td>Keimbahn-Panel gBRCA1/2: unauffällig</td>
+      <td><a href="Observation-ObsGBRCAMamma.html">ObsGBRCAMamma</a></td>
+    </tr>
+    <tr>
+      <td>01.10.2025 – 15.03.2026</td>
+      <td>Neoadjuvante Chemo-/Immuntherapie (KEYNOTE-522), Therapielinie 1</td>
+      <td><a href="EpisodeOfCare-TherapielinieMammaNeoadjuvant.html">TherapielinieMammaNeoadjuvant</a>, <a href="MedicationRequest-MedicationRequestKEYNOTE522.html">MedicationRequestKEYNOTE522</a></td>
+    </tr>
+    <tr>
+      <td>02.04.2026</td>
+      <td>Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie</td>
+      <td><a href="Procedure-ProcedureOperationMamma.html">ProcedureOperationMamma</a></td>
+    </tr>
+    <tr>
+      <td>07.04.2026</td>
+      <td>Pathologie des OP-Präparats: ypT0 ypN0 → pathologische Komplettremission (pCR); Disease Status</td>
+      <td><a href="Observation-ObsTNMpathologischMamma.html">ObsTNMpathologischMamma</a>, <a href="Observation-ObsDiseaseStatusMamma.html">ObsDiseaseStatusMamma</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="pathologisches-und-molekulares-profil">Pathologisches und molekulares Profil</h3>
+
+<p>Das prätherapeutische Profil aus der Stanzbiopsie ist – leitlinienkonform – prädiktiv für die Therapieentscheidung: das triple-negative, hochproliferative Profil ohne Fernmetastasierung begründet die neoadjuvante Systemtherapie.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Merkmal</th>
+      <th>Befund</th>
+      <th>Kodierung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Histologie (Morphologie)</td>
+      <td>Invasives Karzinom, NST</td>
+      <td>ICD-O-3 <code class="language-plaintext highlighter-rouge">8500/3</code></td>
+    </tr>
+    <tr>
+      <td>Grading</td>
+      <td>G3 – schlecht differenziert</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">33732-9</code></td>
+    </tr>
+    <tr>
+      <td>Klinisches Stadium</td>
+      <td>cT2 cN1 cM0 – UICC IIB</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">21908-9</code></td>
+    </tr>
+    <tr>
+      <td>Östrogenrezeptor (ER)</td>
+      <td>negativ (&lt;1 %)</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">40556-3</code> → <code class="language-plaintext highlighter-rouge">LA6577-6</code></td>
+    </tr>
+    <tr>
+      <td>Progesteronrezeptor (PR)</td>
+      <td>negativ (&lt;1 %)</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">85339-0</code> → <code class="language-plaintext highlighter-rouge">LA6577-6</code></td>
+    </tr>
+    <tr>
+      <td>HER2/neu</td>
+      <td>negativ (IHC 1+)</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">48676-1</code> → MII oBDS <code class="language-plaintext highlighter-rouge">N</code> / Leitlinie <code class="language-plaintext highlighter-rouge">negativ</code></td>
+    </tr>
+    <tr>
+      <td>Ki-67</td>
+      <td>70 % (hohe Proliferation)</td>
+      <td>Ki-67 Proliferationsindex, <code class="language-plaintext highlighter-rouge">%</code></td>
+    </tr>
+    <tr>
+      <td>Keimbahn gBRCA1/2</td>
+      <td>unauffällig</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">51958-7</code> → SNOMED <code class="language-plaintext highlighter-rouge">260385009</code></td>
+    </tr>
+    <tr>
+      <td>Ansprechen (postneoadjuvant)</td>
+      <td>ypT0 ypN0 – pCR</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">21902-2</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Die Rezeptor-/HER2-Kodierung orientiert sich am <strong>MII KDS-Modul Onkologie</strong> (Mamma-Zusatzmodul, v2026.0.3). Die Marker sind hier als eigenständige <code class="language-plaintext highlighter-rouge">Observation</code>-Instanzen modelliert und über <code class="language-plaintext highlighter-rouge">subject</code> mit der Patientin verknüpft.</p>
+</blockquote>
+
+<h3 id="informationsmodell">Informationsmodell</h3>
+
+<p>Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Szenario: Der <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> ist das zentrale Steuerobjekt, das die adressierte Erkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>), das übergeordnete Ziel (<code class="language-plaintext highlighter-rouge">goal</code>) sowie geplante und durchgeführte Maßnahmen (<code class="language-plaintext highlighter-rouge">activity.reference</code> / <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code>) zusammenführt. Die <strong>neoadjuvante Therapielinie</strong> dient dabei dem <strong>kurativen Gesamtziel</strong>: Die <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code> trägt die Intention <code class="language-plaintext highlighter-rouge">neoadjuvant</code>, während <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> und <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> die übergeordnete Intention <code class="language-plaintext highlighter-rouge">kurativ</code> tragen.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Ressource</th>
+      <th>Beispiel-Instanz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient:in</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code></td>
+      <td><a href="Patient-PatientinMamma.html">PatientinMamma</a></td>
+    </tr>
+    <tr>
+      <td>Tumorerkrankung</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoCondition</code></td>
+      <td><a href="Condition-ConditionMamma.html">ConditionMamma</a></td>
+    </tr>
+    <tr>
+      <td>Versorgungsplan</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoCarePlan</code></td>
+      <td><a href="CarePlan-CarePlanMammaNeoadjuvant.html">CarePlanMammaNeoadjuvant</a></td>
+    </tr>
+    <tr>
+      <td>Therapieziel</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code></td>
+      <td><a href="Goal-TherapiezielMammaHeilung.html">TherapiezielMammaHeilung</a></td>
+    </tr>
+    <tr>
+      <td>Therapielinie (LoT 1)</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></td>
+      <td><a href="EpisodeOfCare-TherapielinieMammaNeoadjuvant.html">TherapielinieMammaNeoadjuvant</a></td>
+    </tr>
+    <tr>
+      <td>Geplante Maßnahme (Systemtherapie)</td>
+      <td><code class="language-plaintext highlighter-rouge">MedicationRequest</code></td>
+      <td><a href="MedicationRequest-MedicationRequestKEYNOTE522.html">MedicationRequestKEYNOTE522</a></td>
+    </tr>
+    <tr>
+      <td>Durchgeführte Maßnahme (Operation)</td>
+      <td><code class="language-plaintext highlighter-rouge">Procedure</code></td>
+      <td><a href="Procedure-ProcedureOperationMamma.html">ProcedureOperationMamma</a></td>
+    </tr>
+    <tr>
+      <td>Tumoransprechen</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation</code></td>
+      <td><a href="Observation-ObsDiseaseStatusMamma.html">ObsDiseaseStatusMamma</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="verknüpfungen-im-beispiel">Verknüpfungen im Beispiel</h3>
+
+<ul>
+  <li><strong>Therapieintention:</strong> <code class="language-plaintext highlighter-rouge">kurativ</code> (Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code>) auf CarePlan und Therapieziel; die zugehörige Therapielinie trägt <code class="language-plaintext highlighter-rouge">neoadjuvant</code>.</li>
+  <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert die <code class="language-plaintext highlighter-rouge">OnkoCondition</code> (geerbt vom <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a>, v2026.0.3).</li>
+  <li><strong>CarePlan → Ziel:</strong> <code class="language-plaintext highlighter-rouge">goal</code> referenziert das <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> (Kategorien Heilung + Funktionserhalt).</li>
+  <li><strong>Geplant vs. durchgeführt:</strong> <code class="language-plaintext highlighter-rouge">activity.reference</code> → geplante Systemtherapie (<code class="language-plaintext highlighter-rouge">MedicationRequest</code>); <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → durchgeführte Operation (<code class="language-plaintext highlighter-rouge">Procedure</code>) und dokumentiertes Ergebnis (<code class="language-plaintext highlighter-rouge">Observation</code>).</li>
+  <li><strong>Ziel → Ergebnis:</strong> <code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> bindet die Verlaufs-Observation (Disease Status, pCR), wodurch der <code class="language-plaintext highlighter-rouge">achievementStatus</code> (hier <code class="language-plaintext highlighter-rouge">achieved</code>) auswertbar wird.</li>
+</ul>
+
+<h3 id="aus-mcc-übernommene-extensions-im-beispiel">Aus MCC übernommene Extensions im Beispiel</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">goal-acceptance</code></strong> (MCCGoal): Die Patientin stimmt dem kurativen Ziel mit hoher Priorität zu (<code class="language-plaintext highlighter-rouge">status = agree</code>).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">custodian</code></strong> (MCC CarePlan, R5-Backport): Das <a href="Organization-TumorzentrumMamma.html">Brustzentrum</a> ist als für Pflege und Aktualisierung des Plans verantwortliche Stelle hinterlegt.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-10 09:26:00 +0000">
+    2026-07-10
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="TherapiezielMammaHeilung"/>
+  <meta>
+    <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Goal TherapiezielMammaHeilung</b></p><a name="TherapiezielMammaHeilung"> </a><a name="hcTherapiezielMammaHeilung"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-onko-therapy-goal.html">Onkologisches Therapieziel</a></p></div><p><b>Onkologische Therapieintention (Extension)</b>: <span title="Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent kurativ}">Kurativ</span></p><blockquote><p><b>Goal acceptance</b></p><ul><li>individual: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></li><li>status: agree</li><li>priority: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}">High Priority</span></li></ul></blockquote><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement achieved}">Achieved</span></p><p><b>category</b>: <span title="Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type heilung}">Heilung</span>, <span title="Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type funktionserhalt}">Funktionserhalt</span></p><p><b>priority</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}">High Priority</span></p><p><b>description</b>: <span title="Codes:">Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR).</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>start</b>: 2025-09-22</p><h3>Targets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Measure</b></td><td><b>Due[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://loinc.org 21908-9}">Stage group.clinical Cancer</span></td><td>2026-04-15</td></tr></table><p><b>expressedBy</b>: <a href="Practitioner-OnkologinMamma.html">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href="Condition-ConditionMamma.html">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>outcomeReference</b>: <a href="Observation-ObsDiseaseStatusMamma.html">Observation Cancer disease progression</a></p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Goal TherapiezielMammaHeilung</b></p><a name="en-TherapiezielMammaHeilung"> </a><a name="en-hcTherapiezielMammaHeilung"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-onko-therapy-goal.html">Onkologisches Therapieziel</a></p></div><p><b>Onkologische Therapieintention (Extension)</b>: <span title="Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent kurativ}">Kurativ</span></p><blockquote><p><b>Goal acceptance</b></p><ul><li>individual: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></li><li>status: agree</li><li>priority: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}">High Priority</span></li></ul></blockquote><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement achieved}">Achieved</span></p><p><b>category</b>: <span title="Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type heilung}">Heilung</span>, <span title="Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type funktionserhalt}">Funktionserhalt</span></p><p><b>priority</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}">High Priority</span></p><p><b>description</b>: <span title="Codes:">Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR).</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>start</b>: 2025-09-22</p><h3>Targets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Measure</b></td><td><b>Due[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://loinc.org 21908-9}">Stage group.clinical Cancer</span></td><td>2026-04-15</td></tr></table><p><b>expressedBy</b>: <a href="Practitioner-OnkologinMamma.html">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href="Condition-ConditionMamma.html">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>outcomeReference</b>: <a href="Observation-ObsDiseaseStatusMamma.html">Observation Cancer disease progression</a></p></div></div>
+  </text>
+  <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"/>
+        <code value="kurativ"/>
+        <display value="Kurativ"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/goal-acceptance">
+    <extension url="individual">
+      <valueReference>
+        <reference value="Patient/PatientinMamma"/>
+      </valueReference>
+    </extension>
+    <extension url="status">
+      <valueCode value="agree"/>
+    </extension>
+    <extension url="priority">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+          <code value="high-priority"/>
+          <display value="High Priority"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <lifecycleStatus value="active"/>
+  <achievementStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+      <code value="achieved"/>
+      <display value="Achieved"/>
+    </coding>
+  </achievementStatus>
+  <category>
+    <coding>
+      <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+      <code value="heilung"/>
+      <display value="Heilung"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+      <code value="funktionserhalt"/>
+      <display value="Funktionserhalt"/>
+    </coding>
+  </category>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+      <code value="high-priority"/>
+      <display value="High Priority"/>
+    </coding>
+  </priority>
+  <description>
+    <text value="Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR)."/>
+  </description>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+  <startDate value="2025-09-22"/>
+  <target>
+    <measure>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="21908-9"/>
+        <display value="Stage group.clinical Cancer"/>
+      </coding>
+    </measure>
+    <dueDate value="2026-04-15"/>
+  </target>
+  <expressedBy>
+    <reference value="Practitioner/OnkologinMamma"/>
+  </expressedBy>
+  <addresses>
+    <reference value="Condition/ConditionMamma"/>
+  </addresses>
+  <outcomeReference>
+    <reference value="Observation/ObsDiseaseStatusMamma"/>
+  </outcomeReference>
+</Goal>

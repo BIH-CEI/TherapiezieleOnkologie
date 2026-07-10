@@ -47,8 +47,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -93,8 +93,18 @@
   <li>
     <a href="index.html">Startseite</a>
   </li>
-  <li>
-    <a href="szenario-crc.html">Anwendungsbeispiel</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="analysebericht.html">Analysebericht</a>
@@ -426,6 +436,42 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Practitioner-OnkologinMamma.html"
+                  title="Practitioner/OnkologinMamma">
+                  <span title="Practitioner/OnkologinMamma">Behandelnde Onkologin (Mamma, Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-ProcedureOperationMamma.html"
+                  title="Procedure/ProcedureOperationMamma">
+                  <span title="Procedure/ProcedureOperationMamma">Brusterhaltende Operation + Sentinel-Lymphknoten-Biopsie (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Durchgeführte lokale Therapie nach Abschluss der neoadjuvanten Systemtherapie: brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-TumorzentrumMamma.html"
+                  title="Organization/TumorzentrumMamma">
+                  <span title="Organization/TumorzentrumMamma">Brustzentrum (Custodian, Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="MedicationRequest-MedicationRequestFOLFOX.html"
                   title="MedicationRequest/MedicationRequestFOLFOX">
                   <span title="MedicationRequest/MedicationRequestFOLFOX">Geplante Systemtherapie – FOLFOX + Bevacizumab (Beispiel)
@@ -438,6 +484,87 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationRequest-MedicationRequestKEYNOTE522.html"
+                  title="MedicationRequest/MedicationRequestKEYNOTE522">
+                  <span title="MedicationRequest/MedicationRequestKEYNOTE522">Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsGradingMamma.html"
+                  title="Observation/ObsGradingMamma">
+                  <span title="Observation/ObsGradingMamma">Grading G3 (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Histopathologisches Grading nach Elston-Ellis: G3 (schlecht differenziert).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsHER2Mamma.html" title="Observation/ObsHER2Mamma">
+                  <span title="Observation/ObsHER2Mamma">HER2/neu-Status – negativ (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>HER2/neu-Status: negativ (IHC 1+). Kodierung nach MII Mamma-Zusatzmodul (oBDS + Leitlinie).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsHistologieMamma.html"
+                  title="Observation/ObsHistologieMamma">
+                  <span title="Observation/ObsHistologieMamma">Histologie / Morphologie (ICD-O-3, Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Histologischer Befund der Stanzbiopsie: invasives Karzinom ohne speziellen Typ (NST).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsGBRCAMamma.html" title="Observation/ObsGBRCAMamma">
+                  <span title="Observation/ObsGBRCAMamma">Keimbahn-Testung gBRCA1/2 – unauffällig (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim TNBC: keine (wahrscheinlich) pathogene Variante nachgewiesen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsKi67Mamma.html" title="Observation/ObsKi67Mamma">
+                  <span title="Observation/ObsKi67Mamma">Ki-67 Proliferationsindex (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Proliferationsmarker Ki-67: 70 % – hohe Proliferationsaktivität.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsTNMklinischMamma.html"
+                  title="Observation/ObsTNMklinischMamma">
+                  <span title="Observation/ObsTNMklinischMamma">Klinisches TNM / UICC-Stadium (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Klinische Ausbreitungsdiagnostik vor Therapiebeginn: cT2 cN1 cM0, UICC-Stadium IIB.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Condition-ConditionCRC.html" title="Condition/ConditionCRC">
                   <span title="Condition/ConditionCRC">Kolorektales Karzinom, metastasiert (Beispiel)
 </span>
@@ -445,6 +572,29 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
             </td>
             <td>
 <p>Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ConditionMamma.html" title="Condition/ConditionMamma">
+                  <span title="Condition/ConditionMamma">Mammakarzinom links, triple-negativ (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Adressierte Tumorerkrankung: invasives Mammakarzinom links (NST), ICD-10-GM C50.4. Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-CarePlanMammaNeoadjuvant.html"
+                  title="CarePlan/CarePlanMammaNeoadjuvant">
+                  <span title="CarePlan/CarePlanMammaNeoadjuvant">Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives Therapieziel sowie geplante (neoadjuvante Systemtherapie) und durchgeführte Maßnahmen (Operation, Ansprechbeurteilung) zusammenführt.</p>
 </td>
          </tr>
          <tr>
@@ -461,6 +611,17 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Patient-PatientinMamma.html" title="Patient/PatientinMamma">
+                  <span title="Patient/PatientinMamma">Patientin – Mammakarzinom (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispielpatientin mit primärem, triple-negativem Mammakarzinom (frühes Stadium).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Patient-PatientinCRC.html" title="Patient/PatientinCRC">
                   <span title="Patient/PatientinCRC">Patientin – mCRC (Beispiel)
 </span>
@@ -468,6 +629,54 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
             </td>
             <td>
 <p>Beispielpatientin mit metastasiertem kolorektalem Karzinom.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsTNMpathologischMamma.html"
+                  title="Observation/ObsTNMpathologischMamma">
+                  <span title="Observation/ObsTNMpathologischMamma">Postneoadjuvantes TNM / pCR (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Pathologische Aufarbeitung des OP-Präparats nach neoadjuvanter Therapie: ypT0 ypN0 – pathologische Komplettremission (pCR).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsProgesteronrezeptorMamma.html"
+                  title="Observation/ObsProgesteronrezeptorMamma">
+                  <span title="Observation/ObsProgesteronrezeptorMamma">Progesteronrezeptor-Status – negativ (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Immunhistochemischer Progesteronrezeptor-Status: negativ (&lt;1 % positive Tumorzellkerne).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-ProcedureBiopsieMamma.html"
+                  title="Procedure/ProcedureBiopsieMamma">
+                  <span title="Procedure/ProcedureBiopsieMamma">Sonografisch gesteuerte Stanzbiopsie der Mamma (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Diagnostische Prozedur zur Sicherung der Tumordiagnose: sonografisch gesteuerte Stanzbiopsie der Mamma links. Liefert das Material für Histologie, Grading und Rezeptor-/HER2-Bestimmung.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-SpecimenBiopsieMamma.html"
+                  title="Specimen/SpecimenBiopsieMamma">
+                  <span title="Specimen/SpecimenBiopsieMamma">Stanzbiopsat Mamma links (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Gewebeprobe aus der Stanzbiopsie, an der die histopathologische und molekulare Diagnostik durchgeführt wurde.</p>
 </td>
          </tr>
          <tr>
@@ -480,6 +689,30 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
             </td>
             <td>
 <p>Erstlinien-Behandlungsabschnitt mit palliativer Intention.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="EpisodeOfCare-TherapielinieMammaNeoadjuvant.html"
+                  title="EpisodeOfCare/TherapielinieMammaNeoadjuvant">
+                  <span title="EpisodeOfCare/TherapielinieMammaNeoadjuvant">Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-TherapiezielMammaHeilung.html"
+                  title="Goal/TherapiezielMammaHeilung">
+                  <span title="Goal/TherapiezielMammaHeilung">Therapieziel – Heilung &amp; Brusterhalt (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC durch neoadjuvante Systemtherapie und anschließende Operation, bei gleichzeitigem Ziel des Brusterhalts (Funktionserhalt).</p>
 </td>
          </tr>
          <tr>
@@ -520,6 +753,18 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-ObsDiseaseStatusMamma.html"
+                  title="Observation/ObsDiseaseStatusMamma">
+                  <span title="Observation/ObsDiseaseStatusMamma">Tumoransprechen / Disease Status – Komplettremission (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Verlaufs-Observation zum Krankheitsstatus nach neoadjuvanter Therapie und Operation: pathologische Komplettremission (vgl. mCODE Cancer Disease Status).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Organization-TumorzentrumCRC.html"
                   title="Organization/TumorzentrumCRC">
                   <span title="Organization/TumorzentrumCRC">Tumorzentrum (Custodian, Beispiel)
@@ -528,6 +773,18 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
             </td>
             <td>
 <p>Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObsEstrogenrezeptorMamma.html"
+                  title="Observation/ObsEstrogenrezeptorMamma">
+                  <span title="Observation/ObsEstrogenrezeptorMamma">Östrogenrezeptor-Status – negativ (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Immunhistochemischer Östrogenrezeptor-Status: negativ (&lt;1 % positive Tumorzellkerne).</p>
 </td>
          </tr>
       </tbody>
@@ -559,8 +816,8 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-25 15:12:00 +0000">
-    2026-06-25
+  <span title="2026-07-10 09:26:00 +0000">
+    2026-07-10
   </span>
 
           <br/>

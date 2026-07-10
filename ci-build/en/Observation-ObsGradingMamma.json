@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObsGradingMamma",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsGradingMamma</b></p><a name=\"en-ObsGradingMamma\"> </a><a name=\"en-hcObsGradingMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 33732-9}\">Histology grade [Identifier] in Cancer specimen</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-15</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading 3}\">G3 – schlecht differenziert (Elston-Ellis)</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "33732-9",
+      "display" : "Histology grade [Identifier] in Cancer specimen"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "effectiveDateTime" : "2025-09-15",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
+      "code" : "3",
+      "display" : "schlecht differenziert"
+    }],
+    "text" : "G3 – schlecht differenziert (Elston-Ellis)"
+  },
+  "specimen" : {
+    "reference" : "Specimen/SpecimenBiopsieMamma"
+  }
+}

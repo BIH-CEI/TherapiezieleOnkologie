@@ -13,7 +13,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-06-25T15:12:52+00:00"/>
+  <date value="2026-07-10T09:26:12+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -566,6 +566,38 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/OnkologinMamma"/>
+      </reference>
+      <name value="Behandelnde Onkologin (Mamma, Beispiel)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/ProcedureOperationMamma"/>
+      </reference>
+      <name value="Brusterhaltende Operation + Sentinel-Lymphknoten-Biopsie (Beispiel)"/>
+      <description value="Durchgeführte lokale Therapie nach Abschluss der neoadjuvanten Systemtherapie: brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/TumorzentrumMamma"/>
+      </reference>
+      <name value="Brustzentrum (Custodian, Beispiel)"/>
+      <description value="Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -588,6 +620,83 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/MedicationRequestKEYNOTE522"/>
+      </reference>
+      <name value="Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"/>
+      <description value="Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsGradingMamma"/>
+      </reference>
+      <name value="Grading G3 (Beispiel)"/>
+      <description value="Histopathologisches Grading nach Elston-Ellis: G3 (schlecht differenziert)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsHER2Mamma"/>
+      </reference>
+      <name value="HER2/neu-Status – negativ (Beispiel)"/>
+      <description value="HER2/neu-Status: negativ (IHC 1+). Kodierung nach MII Mamma-Zusatzmodul (oBDS + Leitlinie)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsHistologieMamma"/>
+      </reference>
+      <name value="Histologie / Morphologie (ICD-O-3, Beispiel)"/>
+      <description value="Histologischer Befund der Stanzbiopsie: invasives Karzinom ohne speziellen Typ (NST)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsGBRCAMamma"/>
+      </reference>
+      <name value="Keimbahn-Testung gBRCA1/2 – unauffällig (Beispiel)"/>
+      <description value="Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim TNBC: keine (wahrscheinlich) pathogene Variante nachgewiesen."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsKi67Mamma"/>
+      </reference>
+      <name value="Ki-67 Proliferationsindex (Beispiel)"/>
+      <description value="Proliferationsmarker Ki-67: 70 % – hohe Proliferationsaktivität."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsTNMklinischMamma"/>
+      </reference>
+      <name value="Klinisches TNM / UICC-Stadium (Beispiel)"/>
+      <description value="Klinische Ausbreitungsdiagnostik vor Therapiebeginn: cT2 cN1 cM0, UICC-Stadium IIB."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Condition"/>
       </extension>
       <reference>
@@ -595,6 +704,17 @@
       </reference>
       <name value="Kolorektales Karzinom, metastasiert (Beispiel)"/>
       <description value="Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ConditionMamma"/>
+      </reference>
+      <name value="Mammakarzinom links, triple-negativ (Beispiel)"/>
+      <description value="Adressierte Tumorerkrankung: invasives Mammakarzinom links (NST), ICD-10-GM C50.4. Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."/>
       <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
     </resource>
     <resource>
@@ -690,6 +810,17 @@
         <valueString value="CarePlan"/>
       </extension>
       <reference>
+        <reference value="CarePlan/CarePlanMammaNeoadjuvant"/>
+      </reference>
+      <name value="Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)"/>
+      <description value="Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives Therapieziel sowie geplante (neoadjuvante Systemtherapie) und durchgeführte Maßnahmen (Operation, Ansprechbeurteilung) zusammenführt."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
         <reference value="CarePlan/CarePlanCRCPalliativ"/>
       </reference>
       <name value="Onkologischer CarePlan – mCRC palliativ (Beispiel)"/>
@@ -712,10 +843,65 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
+        <reference value="Patient/PatientinMamma"/>
+      </reference>
+      <name value="Patientin – Mammakarzinom (Beispiel)"/>
+      <description value="Beispielpatientin mit primärem, triple-negativem Mammakarzinom (frühes Stadium)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
         <reference value="Patient/PatientinCRC"/>
       </reference>
       <name value="Patientin – mCRC (Beispiel)"/>
       <description value="Beispielpatientin mit metastasiertem kolorektalem Karzinom."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsTNMpathologischMamma"/>
+      </reference>
+      <name value="Postneoadjuvantes TNM / pCR (Beispiel)"/>
+      <description value="Pathologische Aufarbeitung des OP-Präparats nach neoadjuvanter Therapie: ypT0 ypN0 – pathologische Komplettremission (pCR)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsProgesteronrezeptorMamma"/>
+      </reference>
+      <name value="Progesteronrezeptor-Status – negativ (Beispiel)"/>
+      <description value="Immunhistochemischer Progesteronrezeptor-Status: negativ (&lt;1 % positive Tumorzellkerne)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/ProcedureBiopsieMamma"/>
+      </reference>
+      <name value="Sonografisch gesteuerte Stanzbiopsie der Mamma (Beispiel)"/>
+      <description value="Diagnostische Prozedur zur Sicherung der Tumordiagnose: sonografisch gesteuerte Stanzbiopsie der Mamma links. Liefert das Material für Histologie, Grading und Rezeptor-/HER2-Bestimmung."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/SpecimenBiopsieMamma"/>
+      </reference>
+      <name value="Stanzbiopsat Mamma links (Beispiel)"/>
+      <description value="Gewebeprobe aus der Stanzbiopsie, an der die histopathologische und molekulare Diagnostik durchgeführt wurde."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -728,6 +914,28 @@
       <name value="Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)"/>
       <description value="Erstlinien-Behandlungsabschnitt mit palliativer Intention."/>
       <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/TherapielinieMammaNeoadjuvant"/>
+      </reference>
+      <name value="Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie (Beispiel)"/>
+      <description value="Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/TherapiezielMammaHeilung"/>
+      </reference>
+      <name value="Therapieziel – Heilung &amp; Brusterhalt (Beispiel)"/>
+      <description value="Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC durch neoadjuvante Systemtherapie und anschließende Operation, bei gleichzeitigem Ziel des Brusterhalts (Funktionserhalt)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -764,6 +972,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsDiseaseStatusMamma"/>
+      </reference>
+      <name value="Tumoransprechen / Disease Status – Komplettremission (Beispiel)"/>
+      <description value="Verlaufs-Observation zum Krankheitsstatus nach neoadjuvanter Therapie und Operation: pathologische Komplettremission (vgl. mCODE Cancer Disease Status)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Organization"/>
       </extension>
       <reference>
@@ -771,6 +990,17 @@
       </reference>
       <name value="Tumorzentrum (Custodian, Beispiel)"/>
       <description value="Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsEstrogenrezeptorMamma"/>
+      </reference>
+      <name value="Östrogenrezeptor-Status – negativ (Beispiel)"/>
+      <description value="Immunhistochemischer Östrogenrezeptor-Status: negativ (&lt;1 % positive Tumorzellkerne)."/>
       <exampleBoolean value="true"/>
     </resource>
     <page>
@@ -794,6 +1024,14 @@
         </extension>
         <nameUrl value="szenario-crc.html"/>
         <title value="Anwendungsbeispiel (mCRC palliativ)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="szenario-mamma.html"/>
+        </extension>
+        <nameUrl value="szenario-mamma.html"/>
+        <title value="Anwendungsbeispiel (Mammakarzinom neoadjuvant)"/>
         <generation value="markdown"/>
       </page>
       <page>

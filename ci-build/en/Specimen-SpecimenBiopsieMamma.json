@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "SpecimenBiopsieMamma",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Specimen SpecimenBiopsieMamma</b></p><a name=\"en-SpecimenBiopsieMamma\"> </a><a name=\"en-hcSpecimenBiopsieMamma\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119376003}\">Stanzbiopsat (Gewebeprobe) Mamma links</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-09-15</td><td><span title=\"Codes:\">Mamma links, oberer äußerer Quadrant</span></td></tr></table></div>"
+  },
+  "status" : "available",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119376003",
+      "display" : "Tissue specimen (specimen)"
+    }],
+    "text" : "Stanzbiopsat (Gewebeprobe) Mamma links"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "collection" : {
+    "collectedDateTime" : "2025-09-15",
+    "bodySite" : {
+      "text" : "Mamma links, oberer äußerer Quadrant"
+    }
+  }
+}
