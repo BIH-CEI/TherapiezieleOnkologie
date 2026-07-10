@@ -31,6 +31,8 @@ pages:
     title: Startseite
   szenario-crc.md:
     title: Anwendungsbeispiel (mCRC palliativ)
+  szenario-mamma.md:
+    title: Anwendungsbeispiel (Mammakarzinom neoadjuvant)
   analysebericht.md:
     title: Analysebericht (LG-01)
   translationinfo.md:
@@ -50,7 +52,9 @@ parameters:
 
 menu:
   Startseite: index.html
-  Anwendungsbeispiel: szenario-crc.html
+  Anwendungsbeispiele:
+    mCRC (palliativ): szenario-crc.html
+    Mammakarzinom (neoadjuvant): szenario-mamma.html
   Analysebericht: analysebericht.html
   Artefakte: artifacts.html
 
