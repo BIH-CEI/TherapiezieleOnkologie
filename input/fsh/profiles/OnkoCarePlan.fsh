@@ -57,7 +57,7 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 * activity MS
 // Geplante Aktivität (z. B. MedicationRequest, ServiceRequest)
 * activity.reference MS
-* activity.reference only Reference(Appointment or MedicationRequest or NutritionOrder or Task or ServiceRequest or RequestGroup)
+* activity.reference only Reference(Appointment or MedicationRequest or TumorboardMedicationRequest or NutritionOrder or Task or ServiceRequest or TumorboardServiceRequest or RequestGroup )
 // Durchgeführte Aktivität / dokumentiertes Ergebnis (z. B. Procedure, Observation)
 * activity.outcomeReference MS
 * activity.outcomeReference only Reference(Procedure or Observation or MedicationAdministration or DiagnosticReport)

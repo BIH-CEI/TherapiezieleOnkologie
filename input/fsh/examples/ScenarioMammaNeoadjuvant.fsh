@@ -50,6 +50,94 @@ Title: "Brustzentrum (Custodian, Beispiel)"
 Description: "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."
 * name = "Zertifiziertes Brustzentrum Musterklinik"
 
+
+// ---------------------------------------------------------------------
+// Diagnostische Anforderungen (Aktivitäten des diagnostischen CarePlans)
+// ---------------------------------------------------------------------
+
+Instance: ServiceRequestBiopsieMamma
+InstanceOf: ServiceRequest
+Usage: #example
+Title: "Anforderung Stanzbiopsie Mamma (Beispiel)"
+Description: "Anforderung einer sonografisch gesteuerten Stanzbiopsie der Mamma links zur histologischen Sicherung des Tumorverdachts."
+* status = #completed
+* intent = #order
+* code = http://snomed.info/sct#44578009 "Core needle biopsy of breast (procedure)"
+* subject = Reference(PatientinMamma)
+* authoredOn = "2025-09-12"
+* requester = Reference(OnkologinMamma)
+
+Instance: ServiceRequestPathologieMamma
+InstanceOf: ServiceRequest
+Usage: #example
+Title: "Anforderung histopathologische Untersuchung (Beispiel)"
+Description: "Pathologieauftrag zum Stanzbiopsat: Histologie, Grading, Hormonrezeptor- und HER2-Status sowie Ki-67."
+* status = #completed
+* intent = #order
+* code = http://snomed.info/sct#788124003 "Histopathology service (qualifier value)"
+* code.text = "Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67"
+* specimen = Reference(SpecimenBiopsieMamma)
+* subject = Reference(PatientinMamma)
+* authoredOn = "2025-09-15"
+* requester = Reference(OnkologinMamma)
+
+Instance: ServiceRequestStagingMamma
+InstanceOf: ServiceRequest
+Usage: #example
+Title: "Anforderung klinisches Staging (Beispiel)"
+Description: "Anforderung der klinischen Ausbreitungsdiagnostik (TNM-Klassifikation) vor Therapiebeginn."
+* status = #completed
+* intent = #order
+* code.text = "Klinische Ausbreitungsdiagnostik / TNM-Staging"
+* subject = Reference(PatientinMamma)
+* authoredOn = "2025-09-15"
+* requester = Reference(OnkologinMamma)
+
+Instance: ServiceRequestGBRCAMamma
+InstanceOf: ServiceRequest
+Usage: #example
+Title: "Anforderung Keimbahn-Testung gBRCA1 (Beispiel)"
+Description: "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim triple-negativen Mammakarzinom."
+* status = #completed
+* intent = #order
+* code = http://loinc.org#21639-0 "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+* subject = Reference(PatientinMamma)
+* authoredOn = "2025-09-18"
+* requester = Reference(OnkologinMamma)
+
+
+// ---------------------------------------------------------------------
+// Erstellung eines Tumordiagnose CarePlans
+// ---------------------------------------------------------------------
+
+Instance: CarePlanMammaDiagnostik
+InstanceOf: DiagnosticCarePlan
+Usage: #example
+Title: "Diagnostischer CarePlan "
+Description: "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."
+* status = #active
+* intent = #plan
+* category.text = "Tumordiagnostik" 
+* subject = Reference(PatientinMamma)
+* addresses = Reference(ConditionMamma)
+* author = Reference(OnkologinMamma)
+// Durchgeführte Maßnahme / dokumentiertes Ergebnis: Ansprechbeurteilung
+* activity[0].reference = Reference(ServiceRequestBiopsieMamma)
+* activity[0].outcomeReference = Reference(ProcedureBiopsieMamma)
+* activity[1].reference = Reference(ServiceRequestPathologieMamma)
+* activity[1].outcomeReference[0] = Reference(ObsHistologieMamma)
+* activity[1].outcomeReference[1] = Reference(ObsGradingMamma)
+* activity[1].outcomeReference[2] = Reference(ObsEstrogenrezeptorMamma)
+* activity[1].outcomeReference[3] = Reference(ObsProgesteronrezeptorMamma)
+* activity[1].outcomeReference[4] = Reference(ObsHER2Mamma)
+* activity[1].outcomeReference[5] = Reference(ObsKi67Mamma)
+* activity[2].reference = Reference(ServiceRequestStagingMamma)
+* activity[2].outcomeReference = Reference(ObsTNMklinischMamma)
+* activity[3].reference = Reference(ServiceRequestGBRCAMamma)
+* activity[3].outcomeReference = Reference(ObsGBRCAMamma)
+
+
+
 // ---------------------------------------------------------------------
 // Tumorerkrankung (Diagnose)
 // ---------------------------------------------------------------------
@@ -83,7 +171,7 @@ Title: "Sonografisch gesteuerte Stanzbiopsie der Mamma (Beispiel)"
 Description: "Diagnostische Prozedur zur Sicherung der Tumordiagnose: sonografisch gesteuerte Stanzbiopsie der Mamma links. Liefert das Material für Histologie, Grading und Rezeptor-/HER2-Bestimmung."
 * status = #completed
 * category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
-* code.coding = http://snomed.info/sct#447021001 "Core needle biopsy of breast (procedure)"
+* code.coding = http://snomed.info/sct#44578009 "Core needle biopsy of breast (procedure)"
 * code.text = "Sonografisch gesteuerte Stanzbiopsie der Mamma links"
 * bodySite.text = "Mamma links, oberer äußerer Quadrant"
 * subject = Reference(PatientinMamma)
@@ -112,7 +200,7 @@ Usage: #example
 Title: "Histologie / Morphologie (ICD-O-3, Beispiel)"
 Description: "Histologischer Befund der Stanzbiopsie: invasives Karzinom ohne speziellen Typ (NST)."
 * status = #final
-* code = http://loinc.org#59847-4 "Histology [Type] in Cancer specimen Qualitative"
+* code = http://loinc.org#33731-1 "Histology type in Cancer specimen Narrative"
 * valueCodeableConcept.coding.system = "urn:oid:2.16.840.1.113883.6.43.1"
 * valueCodeableConcept.coding.code = #8500/3
 * valueCodeableConcept.coding.display = "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
@@ -182,7 +270,7 @@ Usage: #example
 Title: "HER2/neu-Status – negativ (Beispiel)"
 Description: "HER2/neu-Status: negativ (IHC 1+). Kodierung nach MII Mamma-Zusatzmodul (oBDS + Leitlinie)."
 * status = #final
-* code = http://loinc.org#48676-1 "HER2 [Interpretation] in Tissue"
+* code = http://loinc.org#48676-1 "HER2 Ag [Interpretation] in Tissue"
 * valueCodeableConcept.coding[0] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds#N "negativ"
 * valueCodeableConcept.coding[1] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie#negativ "HER2-negativ"
 * note.text = "Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich."
@@ -205,10 +293,10 @@ Description: "Proliferationsmarker Ki-67: 70 % – hohe Proliferationsaktivität
 Instance: ObsGBRCAMamma
 InstanceOf: Observation
 Usage: #example
-Title: "Keimbahn-Testung gBRCA1/2 – unauffällig (Beispiel)"
+Title: "Keimbahn-Testung gBRCA1 – unauffällig (Beispiel)"
 Description: "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim TNBC: keine (wahrscheinlich) pathogene Variante nachgewiesen."
 * status = #final
-* code = http://loinc.org#51958-7 "BRCA1 and BRCA2 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+* code = http://loinc.org#21639-0 "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
 * valueCodeableConcept = http://snomed.info/sct#260385009 "Negative"
 * note.text = "gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen."
 * subject = Reference(PatientinMamma)
@@ -260,16 +348,35 @@ Description: "Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC d
 * outcomeReference = Reference(ObsDiseaseStatusMamma)
 
 // ---------------------------------------------------------------------
-// Geplante Systemtherapie (neoadjuvant)
+// Geplante Operation vom Tumorboard
+// ---------------------------------------------------------------------
+
+Instance: ServiceRequestProcedure
+InstanceOf: TumorboardServiceRequest
+Usage: #example
+Title: "Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen"
+Description: "Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpektomie) bei Mammakarzinom."
+* status = #active
+* intent = #proposal
+* category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
+* category[+] = http://snomed.info/sct#387713003 "Surgical procedure"
+* code = http://snomed.info/sct#392021009 "Lumpectomy of breast (procedure)"
+* subject = Reference(PatientinMamma)
+
+
+
+// ---------------------------------------------------------------------
+// Geplante Systemtherapie vom Tumorboard (neoadjuvant)
 // ---------------------------------------------------------------------
 
 Instance: MedicationRequestKEYNOTE522
-InstanceOf: MedicationRequest
+InstanceOf: TumorboardMedicationRequest
 Usage: #example
 Title: "Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"
 Description: "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."
 * status = #completed
 * intent = #plan
+* category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
 * medicationCodeableConcept.text = "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"
 * subject = Reference(PatientinMamma)
 
@@ -332,8 +439,10 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives T
 * goal = Reference(TherapiezielMammaHeilung)
 * author = Reference(OnkologinMamma)
 // Geplante Maßnahme: neoadjuvante Systemtherapie
+// Geplante Maßnahme: neoadjuvante Systemtherapie (Tumorboard-Empfehlung)
 * activity[0].reference = Reference(MedicationRequestKEYNOTE522)
-// Durchgeführte Maßnahme: Operation nach neoadjuvanter Therapie
-* activity[0].outcomeReference = Reference(ProcedureOperationMamma)
-// Durchgeführte Maßnahme / dokumentiertes Ergebnis: Ansprechbeurteilung
-* activity[1].outcomeReference = Reference(ObsDiseaseStatusMamma)
+// Geplante Maßnahme: OP-Empfehlung des Tumorboards → durchgeführte Operation
+* activity[1].reference = Reference(ServiceRequestProcedure)
+* activity[1].outcomeReference = Reference(ProcedureOperationMamma)
+// Dokumentiertes Ergebnis: Ansprechbeurteilung
+* activity[2].outcomeReference = Reference(ObsDiseaseStatusMamma)
