@@ -135,12 +135,16 @@ Instance: TherapielinieCRCErstlinie
 InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)"
-Description: "Erstlinien-Behandlungsabschnitt mit palliativer Intention."
-* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#palliativ "Palliativ"
+Description: "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab)."
+// Zwei-Achsen-Intention: Hauptintention palliativ + Phase Induktionstherapie
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliativ"
+* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#450827009 "Induktionstherapie"
 * status = #active
+* type = http://snomed.info/sct#315601005 "Ambulatory chemotherapy"
 * patient = Reference(PatientinCRC)
 * period.start = "2026-02-10"
 * diagnosis.condition = Reference(ConditionCRC)
+* diagnosis.role = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
 * diagnosis.rank = 1
 * managingOrganization = Reference(TumorzentrumCRC)
 * careManager = Reference(OnkologinCRC)
@@ -155,14 +159,19 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Therapieziel – Lebensverlängerung & Symptomkontrolle (Beispiel)"
 Description: "Übergeordnetes palliatives Therapieziel: Lebensverlängerung bei gleichzeitiger Symptomkontrolle."
-* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#palliativ "Palliativ"
+// Zwei-Achsen-Intention: palliativ + Induktionsphase (dieses Ziel gilt für die Induktion)
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliativ"
+* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#450827009 "Induktionstherapie"
 // goal-acceptance: Die Patientin stimmt dem Ziel mit hoher Priorität zu (MCCGoal)
 * extension[acceptance].extension[individual].valueReference = Reference(PatientinCRC)
 * extension[acceptance].extension[status].valueCode = #agree
 * extension[acceptance].extension[priority].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
-// goal-relationship: Dieses Ziel ersetzt das abgelehnte kurative Ziel (MCCGoal)
-* extension[relatedGoal].extension[type].valueCodeableConcept = http://hl7.org/fhir/goal-relationship-type#replacement "Replacement"
-* extension[relatedGoal].extension[target].valueReference = Reference(TherapiezielCRCKurativAbgelehnt)
+// goal-relationship #1 (replacement): ersetzt das abgelehnte kurative Ziel
+* extension[relatedGoal][0].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-relationship-type#replacement "Replacement"
+* extension[relatedGoal][0].extension[target].valueReference = Reference(TherapiezielCRCKurativAbgelehnt)
+// goal-relationship #2 (successor): nach erreichter Induktion folgt das Erhaltungsziel
+* extension[relatedGoal][1].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-relationship-type#successor "Successor"
+* extension[relatedGoal][1].extension[target].valueReference = Reference(TherapiezielCRCErhaltung)
 * lifecycleStatus = #active
 * achievementStatus = http://terminology.hl7.org/CodeSystem/goal-achievement#in-progress "In Progress"
 * category[0] = OnkoTherapyGoalType#lebensverlaengerung "Lebensverlängerung"
@@ -182,12 +191,31 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Therapieziel – kurative Resektion (abgelehnt, Beispiel)"
 Description: "In der Tumorkonferenz erwogenes kuratives Ziel, das aufgrund der Metastasierung verworfen wurde. Demonstriert die Extension goal-reasonRejected."
-* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#kurativ "Kurativ"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
 // goal-reasonRejected: Begründung für die Ablehnung des Ziels (MCCGoal)
 * extension[reasonRejected].valueCodeableConcept.text = "Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar."
 * lifecycleStatus = #rejected
 * category[0] = OnkoTherapyGoalType#heilung "Heilung"
 * description.text = "Kurative Resektion des Primärtumors mit kurativer Absicht."
+* subject = Reference(PatientinCRC)
+* addresses = Reference(ConditionCRC)
+* expressedBy = Reference(OnkologinCRC)
+
+Instance: TherapiezielCRCErhaltung
+InstanceOf: OnkoTherapyGoal
+Usage: #example
+Title: "Therapieziel – Erhaltungstherapie / Stabilisierung (Beispiel)"
+Description: "Nachgelagertes Ziel der Erhaltungsphase (Deeskalation auf 5-FU/Bevacizumab nach Ansprechen). Demonstriert die predecessor-Beziehung als Gegenrichtung zum successor des Induktionsziels."
+// Zwei-Achsen-Intention: palliativ + Erhaltungsphase
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliativ"
+* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Erhaltungstherapie"
+// goal-relationship (predecessor): das Induktionsziel muss zuvor erreicht sein
+* extension[relatedGoal].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-relationship-type#predecessor "Predecessor"
+* extension[relatedGoal].extension[target].valueReference = Reference(TherapiezielCRCLebensverlaengerung)
+* lifecycleStatus = #proposed
+* category[0] = OnkoTherapyGoalType#lebensverlaengerung "Lebensverlängerung"
+* category[1] = OnkoTherapyGoalType#lebensqualitaet "Lebensqualität"
+* description.text = "Erhalt des Therapieansprechens bei reduzierter Toxizität (Erhaltungstherapie) nach erfolgreicher Induktion."
 * subject = Reference(PatientinCRC)
 * addresses = Reference(ConditionCRC)
 * expressedBy = Reference(OnkologinCRC)
@@ -245,7 +273,7 @@ InstanceOf: OnkoCarePlan
 Usage: #example
 Title: "Onkologischer CarePlan – mCRC palliativ (Beispiel)"
 Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt."
-* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#palliativ "Palliativ"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliativ"
 // custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans (MCC R5-Backport)
 * extension[custodian].valueReference = Reference(TumorzentrumCRC)
 * status = #active

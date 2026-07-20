@@ -311,12 +311,14 @@ InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie (Beispiel)"
 Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
-* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#neoadjuvant "Neoadjuvant"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373847000 "Neoadjuvant"
 * status = #finished
+* type = http://snomed.info/sct#385786002 "Chemotherapy care"
 * patient = Reference(PatientinMamma)
 * period.start = "2025-10-01"
 * period.end = "2026-03-15"
 * diagnosis.condition = Reference(ConditionMamma)
+* diagnosis.role = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
 * diagnosis.rank = 1
 
 // ---------------------------------------------------------------------
@@ -328,7 +330,7 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Therapieziel – Heilung & Brusterhalt (Beispiel)"
 Description: "Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC durch neoadjuvante Systemtherapie und anschließende Operation, bei gleichzeitigem Ziel des Brusterhalts (Funktionserhalt)."
-* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#kurativ "Kurativ"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
 // goal-acceptance: Die Patientin stimmt dem kurativen Ziel mit hoher Priorität zu (MCCGoal)
 * extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
 * extension[acceptance].extension[status].valueCode = #agree
@@ -427,7 +429,7 @@ InstanceOf: OnkoCarePlan
 Usage: #example
 Title: "Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)"
 Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives Therapieziel sowie geplante (neoadjuvante Systemtherapie) und durchgeführte Maßnahmen (Operation, Ansprechbeurteilung) zusammenführt."
-* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#kurativ "Kurativ"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
 // custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans (MCC R5-Backport)
 * extension[custodian].valueReference = Reference(TumorzentrumMamma)
 * status = #active

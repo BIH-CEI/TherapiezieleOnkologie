@@ -17,4 +17,6 @@ Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgen
 Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen
 lokalen Canonical bereit, auf den die übrigen Profile referenzieren.
 """
+* insert Translation(^title, en, Oncological diagnosis condition)
+* insert Translation(^description, en, Oncological tumor condition based on the MII core data set module Oncology – MII PR Onkologie Diagnose Primärtumor\, version 2026.0.3. The profile inherits the full oncological diagnosis model – ICD-10-GM\, ICD-O-3 topography and morphology\, diagnostic certainty per oBDS\, laterality\, date of diagnosis – and serves as the addressed condition for OnkoCarePlan and OnkoTherapyGoal. No additional constraints are added for the therapy-goal domain.)
 * ^status = #draft

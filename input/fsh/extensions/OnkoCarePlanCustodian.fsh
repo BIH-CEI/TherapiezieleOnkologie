@@ -14,6 +14,11 @@ Contributor sein.
 Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu
 vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.
 """
+* insert Translation(^title, en, CarePlan custodian extension)
+* insert Translation(^description, en, Party responsible for maintaining the care plan – custodian. Adopted from the MCC eCare Plan custodian extension as an R5 backport: in FHIR R5 CarePlan.author was removed and CarePlan.custodian names the party responsible for maintenance. Modelled here as a local extension to avoid the US-realm dependency.)
 * ^context.type = #element
 * ^context.expression = "CarePlan"
 * value[x] only Reference(Practitioner or PractitionerRole or Organization or CareTeam or Patient or RelatedPerson or Device)
+* insert Label(value[x], Custodian, Für Pflege und Aktualisierung des Versorgungsplans verantwortliche Stelle.)
+* insert Translation(value[x] ^short, en, Custodian)
+* insert Translation(value[x] ^definition, en, Party responsible for maintaining the care plan.)
