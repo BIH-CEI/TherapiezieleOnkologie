@@ -39,7 +39,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-07-10T09:26:12+00:00",
+  "date" : "2026-07-20T12:02:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -204,9 +204,11 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Appointment",
         "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+        "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request",
         "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
         "http://hl7.org/fhir/StructureDefinition/Task",
         "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+        "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request",
         "http://hl7.org/fhir/StructureDefinition/RequestGroup"]
       }],
       "mustSupport" : true

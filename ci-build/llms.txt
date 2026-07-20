@@ -3,11 +3,11 @@
 ## Pages
 
 * [Startseite](de/index.md)
-* [Hinweise zur Übersetzung](de/translationinfo.md)
-* [Artefaktübersicht](de/artifacts.md)
 * [Anwendungsbeispiel (mCRC palliativ)](de/szenario-crc.md)
 * [Anwendungsbeispiel (Mammakarzinom neoadjuvant)](de/szenario-mamma.md)
 * [Analysebericht (LG-01)](de/analysebericht.md)
+* [Hinweise zur Übersetzung](de/translationinfo.md)
+* [Artefaktübersicht](de/artifacts.md)
 
 ## Resources
 
@@ -25,8 +25,11 @@
 
 * [Onkologischer CarePlan](de/StructureDefinition-onko-care-plan.md)
 * [Onkologische Diagnose (Condition)](de/StructureDefinition-onko-condition.md)
+* [Diagnostischer CarePlan](de/StructureDefinition-onko-diagnostic-care-plan.md)
 * [Onkologisches Therapieziel](de/StructureDefinition-onko-therapy-goal.md)
 * [Onkologische Therapielinie](de/StructureDefinition-onko-therapy-line.md)
+* [Tumorboard MedicationRequest](de/StructureDefinition-onko-tumorboard-medication-request.md)
+* [Tumorboard ServiceRequest](de/StructureDefinition-onko-tumorboard-service-request.md)
 
 ### Extensions
 
@@ -40,9 +43,13 @@
 ### Examples
 
 * [CarePlanCRCPalliativ (CarePlan)](de/CarePlan-CarePlanCRCPalliativ.md)
+* [CarePlanMammaDiagnostik (CarePlan)](de/CarePlan-CarePlanMammaDiagnostik.md)
 * [CarePlanMammaNeoadjuvant (CarePlan)](de/CarePlan-CarePlanMammaNeoadjuvant.md)
+* [DiagnostikCarePlanCRC (CarePlan)](de/CarePlan-DiagnostikCarePlanCRC.md)
+* [Interdisziplinäres Tumorboard Kolorektales Karzinom (CareTeam)](de/CareTeam-TumorboardCRC.md)
 * [ConditionCRC (Condition)](de/Condition-ConditionCRC.md)
 * [ConditionMamma (Condition)](de/Condition-ConditionMamma.md)
+* [DiagnosticReportHistologieCRC (DiagnosticReport)](de/DiagnosticReport-DiagnosticReportHistologieCRC.md)
 * [TherapielinieCRCErstlinie (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieCRCErstlinie.md)
 * [TherapielinieMammaNeoadjuvant (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieMammaNeoadjuvant.md)
 * [TherapiezielCRCKurativAbgelehnt (Goal)](de/Goal-TherapiezielCRCKurativAbgelehnt.md)
@@ -69,4 +76,11 @@
 * [OnkologinMamma (Practitioner)](de/Practitioner-OnkologinMamma.md)
 * [ProcedureBiopsieMamma (Procedure)](de/Procedure-ProcedureBiopsieMamma.md)
 * [ProcedureOperationMamma (Procedure)](de/Procedure-ProcedureOperationMamma.md)
+* [ServiceRequestBiopsieMamma (ServiceRequest)](de/ServiceRequest-ServiceRequestBiopsieMamma.md)
+* [ServiceRequestGBRCAMamma (ServiceRequest)](de/ServiceRequest-ServiceRequestGBRCAMamma.md)
+* [ServiceRequestKoloskopieCRC (ServiceRequest)](de/ServiceRequest-ServiceRequestKoloskopieCRC.md)
+* [ServiceRequestPathologieMamma (ServiceRequest)](de/ServiceRequest-ServiceRequestPathologieMamma.md)
+* [ServiceRequestPortCRC (ServiceRequest)](de/ServiceRequest-ServiceRequestPortCRC.md)
+* [ServiceRequestProcedure (ServiceRequest)](de/ServiceRequest-ServiceRequestProcedure.md)
+* [ServiceRequestStagingMamma (ServiceRequest)](de/ServiceRequest-ServiceRequestStagingMamma.md)
 * [SpecimenBiopsieMamma (Specimen)](de/Specimen-SpecimenBiopsieMamma.md)

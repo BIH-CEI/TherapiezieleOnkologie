@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-07-10T09:26:12+00:00"/>
+  <date value="2026-07-20T12:02:06+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -555,6 +555,61 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestPathologieMamma"/>
+      </reference>
+      <name value="Anforderung histopathologische Untersuchung (Beispiel)"/>
+      <description value="Pathologieauftrag zum Stanzbiopsat: Histologie, Grading, Hormonrezeptor- und HER2-Status sowie Ki-67."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestGBRCAMamma"/>
+      </reference>
+      <name value="Anforderung Keimbahn-Testung gBRCA1 (Beispiel)"/>
+      <description value="Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim triple-negativen Mammakarzinom."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestStagingMamma"/>
+      </reference>
+      <name value="Anforderung klinisches Staging (Beispiel)"/>
+      <description value="Anforderung der klinischen Ausbreitungsdiagnostik (TNM-Klassifikation) vor Therapiebeginn."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestKoloskopieCRC"/>
+      </reference>
+      <name value="Anforderung Koloskopie mit Biopsie (Beispiel)"/>
+      <description value="Diagnostische Maßnahme des DiagnosticCarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestBiopsieMamma"/>
+      </reference>
+      <name value="Anforderung Stanzbiopsie Mamma (Beispiel)"/>
+      <description value="Anforderung einer sonografisch gesteuerten Stanzbiopsie der Mamma links zur histologischen Sicherung des Tumorverdachts."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Practitioner"/>
       </extension>
       <reference>
@@ -608,14 +663,47 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationRequest"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="MedicationRequest/MedicationRequestFOLFOX"/>
+        <reference value="StructureDefinition/onko-diagnostic-care-plan"/>
       </reference>
-      <name value="Geplante Systemtherapie – FOLFOX + Bevacizumab (Beispiel)"/>
-      <description value="Geplante Aktivität des CarePlan: palliative Erstlinien-Chemotherapie."/>
-      <exampleBoolean value="true"/>
+      <name value="Diagnostischer CarePlan"/>
+      <description value="CarePlan für die Tumordiagnostik auf Basis von `CarePlan`.&#xA;&#xA;Ergänzend zum onkologischen Therapie-CarePlan (`OnkoCarePlan`) bildet dieses Profil den Weg&#xA;zur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfads werden als&#xA;Aktivitäten abgebildet, deren Ergebnisse können&#xA;über `activity.outcomeReference` angebunden werden.&#xA;&#xA;Der diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (`OnkoCondition`)&#xA;und ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.&#xA;&#xA;Diagnostikspezifische Ergänzungen:&#xA;- Der Plan-Typ ist über `category` verpflichtend gekennzeichnet: `category.text`&#xA;  muss den Wert &quot;Tumordiagnostik&quot; tragen. Weitere Categories können ergänzt&#xA;  werden. Damit sind diagnostischer und Therapie-CarePlan unterscheidbar.&#xA;&#xA;**Abgrenzung:** Dieses Profil beschreibt den *Prozess* der Diagnosefindung."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/CarePlanMammaDiagnostik"/>
+      </reference>
+      <name value="Diagnostischer CarePlan "/>
+      <description value="Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/DiagnostikCarePlanCRC"/>
+      </reference>
+      <name value="Diagnostischer CarePlan – Tumordiagnostik (Beispiel)"/>
+      <description value="Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestProcedure"/>
+      </reference>
+      <name value="Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen"/>
+      <description value="Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpektomie) bei Mammakarzinom."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -626,7 +714,7 @@
       </reference>
       <name value="Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"/>
       <description value="Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -663,12 +751,34 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReportHistologieCRC"/>
+      </reference>
+      <name value="Histopathologischer Befund (Beispiel)"/>
+      <description value="Ergebnis der Diagnostik: histologische Sicherung eines Adenokarzinoms des Kolons."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CareTeam"/>
+      </extension>
+      <reference>
+        <reference value="CareTeam/TumorboardCRC"/>
+      </reference>
+      <name value="Interdisziplinäres Tumorboard (Beispiel)"/>
+      <description value="Tumorkonferenz, die die Therapieempfehlungen ausspricht (Requester der Tumorboard-Requests)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
         <reference value="Observation/ObsGBRCAMamma"/>
       </reference>
-      <name value="Keimbahn-Testung gBRCA1/2 – unauffällig (Beispiel)"/>
+      <name value="Keimbahn-Testung gBRCA1 – unauffällig (Beispiel)"/>
       <description value="Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim TNBC: keine (wahrscheinlich) pathogene Variante nachgewiesen."/>
       <exampleBoolean value="true"/>
     </resource>
@@ -982,13 +1092,57 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-tumorboard-medication-request"/>
+      </reference>
+      <name value="Tumorboard MedicationRequest"/>
+      <description value="Strukturierte Empfehlung des Tumorboards auf Basis von `MedicationRequest`.&#xA;&#xA;Tumorboardspezifische Ergänzung:&#xA;- Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-tumorboard-service-request"/>
+      </reference>
+      <name value="Tumorboard ServiceRequest"/>
+      <description value="Strukturierte Empfehlung des Tumorboards auf Basis von `ServiceRequest`.&#xA;&#xA;Tumorboardspezifische Ergänzung:&#xA;- Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/MedicationRequestFOLFOX"/>
+      </reference>
+      <name value="Tumorboard-Empfehlung – FOLFOX + Bevacizumab (Beispiel)"/>
+      <description value="Vom Tumorboard empfohlene palliative Erstlinien-Systemtherapie (geplante Aktivität des Therapie-CarePlan)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestPortCRC"/>
+      </reference>
+      <name value="Tumorboard-Empfehlung – Portimplantation (Beispiel)"/>
+      <description value="Vom Tumorboard empfohlene Anlage eines Portkatheters für die systemische Therapie."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Organization"/>
       </extension>
       <reference>
         <reference value="Organization/TumorzentrumCRC"/>
       </reference>
       <name value="Tumorzentrum (Custodian, Beispiel)"/>
-      <description value="Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."/>
+      <description value="Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

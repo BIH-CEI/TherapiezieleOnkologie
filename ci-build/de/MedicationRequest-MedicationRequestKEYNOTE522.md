@@ -8,9 +8,13 @@
 
 -------
 
+Profile: [Tumorboard MedicationRequest](StructureDefinition-onko-tumorboard-medication-request.md)
+
 **status**: Completed
 
 **intent**: Plan
+
+**category**: Tumor board Consult note
 
 **medication**: Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)
 
@@ -24,8 +28,18 @@
 {
   "resourceType" : "MedicationRequest",
   "id" : "MedicationRequestKEYNOTE522",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"]
+  },
   "status" : "completed",
   "intent" : "plan",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "85232-7",
+      "display" : "Tumor board Consult note"
+    }]
+  }],
   "medicationCodeableConcept" : {
     "text" : "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"
   },

@@ -16,12 +16,14 @@ Nach Abschluss der neoadjuvanten Therapie erfolgt eine **brusterhaltende Operati
 
 | | | |
 | :--- | :--- | :--- |
-| 15.09.2025 | Stanzbiopsie, Histologie: invasives Karzinom NST (ICD-O-3 8500/3), G3 | [ConditionMamma](Condition-ConditionMamma.md),[ObsHistologieMamma](Observation-ObsHistologieMamma.md),[ObsGradingMamma](Observation-ObsGradingMamma.md) |
+| 12.09.2025 | Anlage des diagnostischen CarePlans bei Tumorverdacht; Anforderung der Stanzbiopsie | [CarePlanMammaDiagnostik](CarePlan-CarePlanMammaDiagnostik.md),[ServiceRequestBiopsieMamma](ServiceRequest-ServiceRequestBiopsieMamma.md) |
+| 15.09.2025 | Stanzbiopsie; Pathologieauftrag und Staging angefordert; Histologie: invasives Karzinom NST (ICD-O-3 8500/3), G3 | [ProcedureBiopsieMamma](Procedure-ProcedureBiopsieMamma.md),[ServiceRequestPathologieMamma](ServiceRequest-ServiceRequestPathologieMamma.md),[ServiceRequestStagingMamma](ServiceRequest-ServiceRequestStagingMamma.md),[ConditionMamma](Condition-ConditionMamma.md),[ObsHistologieMamma](Observation-ObsHistologieMamma.md),[ObsGradingMamma](Observation-ObsGradingMamma.md) |
 | 16.09.2025 | Ausbreitungsdiagnostik: klinisches TNM cT2 cN1 cM0 (UICC IIB) | [ObsTNMklinischMamma](Observation-ObsTNMklinischMamma.md) |
 | 17.09.2025 | Immunhistochemie: ER negativ, PR negativ, HER2 negativ, Ki-67 70 % | [ObsEstrogenrezeptorMamma](Observation-ObsEstrogenrezeptorMamma.md),[ObsProgesteronrezeptorMamma](Observation-ObsProgesteronrezeptorMamma.md),[ObsHER2Mamma](Observation-ObsHER2Mamma.md),[ObsKi67Mamma](Observation-ObsKi67Mamma.md) |
-| 22.09.2025 | Interdisziplinäre Tumorkonferenz: kuratives Konzept, neoadjuvante Systemtherapie beschlossen; Therapieziel festgelegt | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md),[TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md) |
-| 25.09.2025 | Keimbahn-Panel gBRCA1/2: unauffällig | [ObsGBRCAMamma](Observation-ObsGBRCAMamma.md) |
-| 01.10.2025 – 15.03.2026 | Neoadjuvante Chemo-/Immuntherapie (KEYNOTE-522), Therapielinie 1 | [TherapielinieMammaNeoadjuvant](EpisodeOfCare-TherapielinieMammaNeoadjuvant.md),[MedicationRequestKEYNOTE522](MedicationRequest-MedicationRequestKEYNOTE522.md) |
+| 18.09.2025 | Anforderung Keimbahn-Testung gBRCA1/2 | [ServiceRequestGBRCAMamma](ServiceRequest-ServiceRequestGBRCAMamma.md) |
+| 22.09.2025 | Interdisziplinäre Tumorkonferenz: kuratives Konzept, OP vom Tumorboard vorgeschlagen, Neoadjuvante Chemo-/Immuntherapie (KEYNOTE-522) von Tumorboard vorgeschlagen; Therapieziel festgelegt | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md),[TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md),[ServiceRequestProcedure](ServiceRequest-ServiceRequestProcedure.md),[MedicationRequestKEYNOTE522](MedicationRequest-MedicationRequestKEYNOTE522.md) |
+| 25.09.2025 | Keimbahn-Panel gBRCA1/2: unauffällig → Abschluss der Diagnostikphase | [ObsGBRCAMamma](Observation-ObsGBRCAMamma.md) |
+| 01.10.2025 – 15.03.2026 | Planung Therapielinie 1 | [TherapielinieMammaNeoadjuvant](EpisodeOfCare-TherapielinieMammaNeoadjuvant.md) |
 | 02.04.2026 | Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.md) |
 | 07.04.2026 | Pathologie des OP-Präparats: ypT0 ypN0 → pathologische Komplettremission (pCR); Disease Status | [ObsTNMpathologischMamma](Observation-ObsTNMpathologischMamma.md),[ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.md) |
 

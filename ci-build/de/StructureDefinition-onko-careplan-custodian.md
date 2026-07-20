@@ -14,8 +14,8 @@ Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / 
 
 **Usages:**
 
-* Use this Extension: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
-* Examples for this Extension: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md) and [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md)
+* Use this Extension: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md) and [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan.md)
+* Examples for this Extension: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md) and [CarePlan/DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-careplan-custodian.json)
 
@@ -77,7 +77,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-carepla
   "name" : "OnkoCarePlanCustodianExt",
   "title" : "CarePlan Custodian (Extension)",
   "status" : "draft",
-  "date" : "2026-07-10T09:26:12+00:00",
+  "date" : "2026-07-20T12:02:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

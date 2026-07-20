@@ -22,6 +22,30 @@
     "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm" : "MII VS Diagnose ICD-10-GM"
   },
   {
+    "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Intent",
+    "title" : "Medication request  intent",
+    "description" : "MedicationRequest Intent Codes",
+    "oids" : ["2.16.840.1.113883.4.642.4.1378"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-medicationrequest-intent.html" : "Medication request  intent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationrequest Status",
+    "title" : "Medicationrequest  status",
+    "description" : "MedicationRequest Status Codes",
+    "oids" : ["2.16.840.1.113883.4.642.4.1377"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-medicationrequest-status.html" : "Medicationrequest  status"
+  },
+  {
     "url" : "http://hl7.org/fhir/care-plan-activity-status",
     "version" : "4.0.1",
     "status" : "draft",
@@ -79,7 +103,20 @@
     "oids" : ["2.16.840.1.113883.4.642.4.114"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-care-plan-intent.html" : "Care Plan Intent"
+    "http://hl7.org/fhir/R4/valueset-care-plan-intent.html" : "Care Plan Intent",
+    "http://hl7.org/fhir/R4/valueset-request-intent.html" : "RequestIntent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "RequestPriority",
+    "description" : "Identifies the level of importance to be assigned to actioning the request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.116"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-request-priority.html" : "Request priority"
   },
   {
     "url" : "http://hl7.org/fhir/request-status",
@@ -126,22 +163,28 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
     "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
     "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
-    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
-    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
     "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct" : "MII VS Diagnose Diagnose-Codes SNOMED",
-    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=http://fhir.de/ValueSet/lebensphase-de" : "LebensphaseDe ValueSet",
-    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
     "http://hl7.org/fhir/R4/valueset-condition-predecessor.html" : "Condition Predecessor Codes",
     "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed" : "MII VS Diagnose BodyStructure SNOMED",
-    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome"
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
+    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct" : "MII VS Diagnose Diagnose-Codes SNOMED",
+    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=http://fhir.de/ValueSet/lebensphase-de" : "LebensphaseDe ValueSet"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
@@ -251,6 +294,78 @@
     },
     "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie" : "MII VS Onkologie ICD-O-3 Topographie",
     "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie" : "MII VS Onkologie ICD-O-3 Morphologie"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "MedicationRequestCategoryCodes",
+    "title" : "MedicationRequest Category Codes",
+    "description" : "MedicationRequest Category Codes",
+    "oids" : ["2.16.840.1.113883.4.642.1.1323"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-medicationrequest-category.html" : "Medication request  category  codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MedicationRequestCourseOfTherapyCodes",
+    "title" : "MedicationRequest Course of Therapy Codes",
+    "description" : "MedicationRequest Course of Therapy Codes",
+    "oids" : ["2.16.840.1.113883.4.642.1.1327"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-medicationrequest-course-of-therapy.html" : "Medication request  course of  therapy  codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MedicationRequestStatusReasonCodes",
+    "title" : "MedicationRequest Status Reason Codes",
+    "description" : "MedicationRequest Status Reason Codes",
+    "oids" : ["2.16.840.1.113883.4.642.1.1325"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-medicationrequest-status-reason.html" : "Medication request  status  reason  codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "ActReason",
+    "title" : "ActReason",
+    "description" : "A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.\r\n\r\n*Examples:* Example reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
+    "oids" : ["2.16.840.1.113883.5.8"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.2.0/ValueSet-v3-SubstanceAdminSubstitutionReason.html" : "SubstanceAdminSubstitutionReason"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "RoleCode",
+    "title" : "RoleCode",
+    "description" : "A set of codes further specifying the kind of Role; specific classification codes for further qualifying RoleClass codes.",
+    "oids" : ["2.16.840.1.113883.5.111"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.2.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "SubstanceAdminSubstitution",
+    "title" : "Substance Admin Substitution",
+    "description" : "Identifies what sort of change is permitted or has occurred between the therapy that was ordered and the therapy that was/will be provided.",
+    "oids" : ["2.16.840.1.113883.5.1070"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.2.0/ValueSet-v3-ActSubstanceAdminSubstitutionCode.html" : "ActSubstanceAdminSubstitutionCode"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",

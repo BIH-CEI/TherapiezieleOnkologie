@@ -1,22 +1,26 @@
 TherapiezieleOnkologie : Validation Results
 =========================================
 
-err = 2, warn = 64, info = 82
+err = 2, warn = 75, info = 97
 $--
 Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
  Build Errors : 0 / 7 / 0
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-CarePlanCRCPalliativ : 0 / 0 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-CarePlanMammaDiagnostik : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-CarePlanMammaNeoadjuvant : 0 / 0 / 2
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CodeSystem-onko-therapy-goal-type : 0 / 2 / 1
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CodeSystem-onko-therapy-intent : 0 / 2 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-DiagnostikCarePlanCRC : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CareTeam-TumorboardCRC : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CodeSystem-onko-therapy-goal-type : 0 / 3 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CodeSystem-onko-therapy-intent : 0 / 3 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Condition-ConditionCRC : 1 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Condition-ConditionMamma : 1 / 1 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/DiagnosticReport-DiagnosticReportHistologieCRC : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/EpisodeOfCare-TherapielinieCRCErstlinie : 0 / 0 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/EpisodeOfCare-TherapielinieMammaNeoadjuvant : 0 / 0 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Goal-TherapiezielCRCKurativAbgelehnt : 0 / 0 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Goal-TherapiezielCRCLebensverlaengerung : 0 / 0 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Goal-TherapiezielMammaHeilung : 0 / 0 / 2
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ImplementationGuide-bih-cei-therapieziele-onkologie : 0 / 5 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ImplementationGuide-bih-cei-therapieziele-onkologie : 0 / 6 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/MedicationRequest-MedicationRequestFOLFOX : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/MedicationRequest-MedicationRequestKEYNOTE522 : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsDiseaseStatusMamma : 0 / 1 / 1
@@ -38,15 +42,25 @@ Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (cano
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Practitioner-OnkologinMamma : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Procedure-ProcedureBiopsieMamma : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Procedure-ProcedureOperationMamma : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestBiopsieMamma : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestGBRCAMamma : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestKoloskopieCRC : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestPathologieMamma : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestPortCRC : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestProcedure : 0 / 0 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestStagingMamma : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Specimen-SpecimenBiopsieMamma : 0 / 0 / 1
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-care-plan : 0 / 2 / 2
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-careplan-custodian : 0 / 2 / 1
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-condition : 0 / 9 / 72
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-goal : 0 / 10 / 2
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-intent : 0 / 4 / 1
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-line : 0 / 2 / 1
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-onko-therapy-goal-type : 0 / 2 / 2
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-onko-therapy-intent : 0 / 2 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-care-plan : 0 / 2 / 3
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-careplan-custodian : 0 / 2 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-condition : 0 / 9 / 73
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-diagnostic-care-plan : 0 / 2 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-goal : 0 / 10 / 3
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-intent : 0 / 4 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-line : 0 / 2 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-tumorboard-medication-request : 0 / 2 / 4
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-tumorboard-service-request : 0 / 2 / 4
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-onko-therapy-goal-type : 0 / 3 / 2
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-onko-therapy-intent : 0 / 3 / 2
 </table>
 == n/a ==
 WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be de.bih-cei.therapieziele-onkologie
@@ -58,20 +72,26 @@ WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-ta
 WARNING: 4: An HTML fragment from the set [globals-table.xhtml, globals-table.xhtml] is not included anywhere in the produced implementation guide
 == fsh-generated/resources/CarePlan-CarePlanCRCPalliativ.json ==
 INFORMATION: CarePlan/CarePlanCRCPalliativ: CarePlan.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0
+== fsh-generated/resources/CarePlan-CarePlanMammaDiagnostik.json ==
 == fsh-generated/resources/CarePlan-CarePlanMammaNeoadjuvant.json ==
 INFORMATION: CarePlan/CarePlanMammaNeoadjuvant: CarePlan.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0
+== fsh-generated/resources/CarePlan-DiagnostikCarePlanCRC.json ==
+== fsh-generated/resources/CareTeam-TumorboardCRC.json ==
 == fsh-generated/resources/CodeSystem-onko-therapy-goal-type.json ==
 WARNING: CodeSystem/onko-therapy-goal-type: CodeSystem.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: CodeSystem/onko-therapy-goal-type: CodeSystem.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+WARNING: Resource: The resource CodeSystem/onko-therapy-goal-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/CodeSystem-onko-therapy-intent.json ==
 WARNING: CodeSystem/onko-therapy-intent: CodeSystem.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: CodeSystem/onko-therapy-intent: CodeSystem.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+WARNING: Resource: The resource CodeSystem/onko-therapy-intent should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Condition-ConditionCRC.json ==
 WARNING: Condition/ConditionCRC: Condition.code.coding[0].system: A definition for CodeSystem 'http://fhir.de/CodeSystem/bfarm/icd-10-gm' version '2026' could not be found, so the code cannot be validated. No versions of this code system are known
 ERROR: Condition/ConditionCRC: Condition.code.coding[0]: Der angegebene Code (http://fhir.de/CodeSystem/bfarm/icd-10-gm#C18.9) befindet sich nicht im ValueSet 'MII VS Diagnose ICD-10-GM' (https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.0), und es wird ein Code aus diesem ValueSet benötigt: Invalid criteria version: '2025"
 == fsh-generated/resources/Condition-ConditionMamma.json ==
 WARNING: Condition/ConditionMamma: Condition.code.coding[0].system: A definition for CodeSystem 'http://fhir.de/CodeSystem/bfarm/icd-10-gm' version '2026' could not be found, so the code cannot be validated. No versions of this code system are known
 ERROR: Condition/ConditionMamma: Condition.code.coding[0]: Der angegebene Code (http://fhir.de/CodeSystem/bfarm/icd-10-gm#C50.4) befindet sich nicht im ValueSet 'MII VS Diagnose ICD-10-GM' (https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.0), und es wird ein Code aus diesem ValueSet benötigt: Invalid criteria version: '2025"
+== fsh-generated/resources/DiagnosticReport-DiagnosticReportHistologieCRC.json ==
 == fsh-generated/resources/EpisodeOfCare-TherapielinieCRCErstlinie.json ==
 INFORMATION: EpisodeOfCare/TherapielinieCRCErstlinie: EpisodeOfCare.extension[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent|0.1.0
 == fsh-generated/resources/EpisodeOfCare-TherapielinieMammaNeoadjuvant.json ==
@@ -87,7 +107,9 @@ WARNING: ImplementationGuide/bih-cei-therapieziele-onkologie: ImplementationGuid
 WARNING: ImplementationGuide/bih-cei-therapieziele-onkologie: ImplementationGuide.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: ImplementationGuide/bih-cei-therapieziele-onkologie: ImplementationGuide.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 WARNING: ImplementationGuide/bih-cei-therapieziele-onkologie: ImplementationGuide.dependsOn[2].uri: Canonical URL 'http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.onkologie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.onkologie' kann nicht aufgelöst werden
+WARNING: ImplementationGuide/bih-cei-therapieziele-onkologie: ImplementationGuide.definition.resource[11].name: Wert sollte nicht mit Leerzeichen beginnen oder enden
 WARNING: ImplementationGuide/bih-cei-therapieziele-onkologie: ImplementationGuide.dependsOn[2]: The canonical URL http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.onkologie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.onkologie doesn't point to an actual ImplementationGuide resource
+INFORMATION: Resource: The resource ImplementationGuide/bih-cei-therapieziele-onkologie could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/MedicationRequest-MedicationRequestFOLFOX.json ==
 == fsh-generated/resources/MedicationRequest-MedicationRequestKEYNOTE522.json ==
 == fsh-generated/resources/Observation-ObsDiseaseStatusMamma.json ==
@@ -122,14 +144,24 @@ WARNING: Observation/ObservationDiseaseStatusCRC: Observation: Alle Observations
 == fsh-generated/resources/Practitioner-OnkologinMamma.json ==
 == fsh-generated/resources/Procedure-ProcedureBiopsieMamma.json ==
 == fsh-generated/resources/Procedure-ProcedureOperationMamma.json ==
+== fsh-generated/resources/ServiceRequest-ServiceRequestBiopsieMamma.json ==
+== fsh-generated/resources/ServiceRequest-ServiceRequestGBRCAMamma.json ==
+== fsh-generated/resources/ServiceRequest-ServiceRequestKoloskopieCRC.json ==
+== fsh-generated/resources/ServiceRequest-ServiceRequestPathologieMamma.json ==
+== fsh-generated/resources/ServiceRequest-ServiceRequestPortCRC.json ==
+== fsh-generated/resources/ServiceRequest-ServiceRequestProcedure.json ==
+INFORMATION: ServiceRequest/ServiceRequestProcedure: ServiceRequest.category[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request|0.1.0 überein.
+== fsh-generated/resources/ServiceRequest-ServiceRequestStagingMamma.json ==
 == fsh-generated/resources/Specimen-SpecimenBiopsieMamma.json ==
 == fsh-generated/resources/StructureDefinition-onko-care-plan.json ==
 WARNING: StructureDefinition/onko-care-plan: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: StructureDefinition/onko-care-plan: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 INFORMATION: StructureDefinition/onko-care-plan: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+INFORMATION: Resource: The resource StructureDefinition/onko-care-plan could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-careplan-custodian.json ==
 WARNING: StructureDefinition/onko-careplan-custodian: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: StructureDefinition/onko-careplan-custodian: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+INFORMATION: Resource: The resource StructureDefinition/onko-careplan-custodian could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-condition.json ==
 INFORMATION: StructureDefinition/onko-condition: StructureDefinition.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem http://hl7.org/fhir/spdx-license|84728b7
 WARNING: StructureDefinition/onko-condition: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
@@ -211,6 +243,11 @@ WARNING: StructureDefinition/onko-condition: StructureDefinition.snapshot.elemen
 WARNING: StructureDefinition/onko-condition: StructureDefinition.snapshot.element[97].binding: The definition for the element 'Condition.code.coding' binds to the value set 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet' which is experimental, but this structure is not labeled as experimental
 INFORMATION: StructureDefinition/onko-condition: StructureDefinition.snapshot.element[109].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 WARNING: StructureDefinition/onko-condition: StructureDefinition.snapshot.element[110].binding: The definition for the element 'Condition.bodySite.coding' binds to the value set 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed' which is experimental, but this structure is not labeled as experimental
+INFORMATION: Resource: The resource StructureDefinition/onko-condition could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-onko-diagnostic-care-plan.json ==
+WARNING: StructureDefinition/onko-diagnostic-care-plan: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
+WARNING: StructureDefinition/onko-diagnostic-care-plan: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+INFORMATION: Resource: The resource StructureDefinition/onko-diagnostic-care-plan could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-therapy-goal.json ==
 WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
@@ -223,19 +260,36 @@ WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential
 INFORMATION: StructureDefinition/onko-therapy-goal: Goal.extension: The extension http://hl7.org/fhir/StructureDefinition/goal-reasonRejected|5.3.0 is deprecated with the note: 'This extension is deprecated and replaced by Goal.statusReason'
 WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[8].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.snapshot.element[16].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
+INFORMATION: Resource: The resource StructureDefinition/onko-therapy-goal could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-therapy-intent.json ==
 WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.differential.element[3].binding: The definition for the element 'Extension.value[x]' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.snapshot.element[4].binding: The definition for the element 'Extension.value[x]' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent' which is experimental, but this structure is not labeled as experimental
+INFORMATION: Resource: The resource StructureDefinition/onko-therapy-intent could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-therapy-line.json ==
 WARNING: StructureDefinition/onko-therapy-line: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: StructureDefinition/onko-therapy-line: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+INFORMATION: Resource: The resource StructureDefinition/onko-therapy-line could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-onko-tumorboard-medication-request.json ==
+WARNING: StructureDefinition/onko-tumorboard-medication-request: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
+WARNING: StructureDefinition/onko-tumorboard-medication-request: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+INFORMATION: StructureDefinition/onko-tumorboard-medication-request: StructureDefinition.differential.element[3].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/onko-tumorboard-medication-request: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: Resource: The resource StructureDefinition/onko-tumorboard-medication-request could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-onko-tumorboard-service-request.json ==
+WARNING: StructureDefinition/onko-tumorboard-service-request: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
+WARNING: StructureDefinition/onko-tumorboard-service-request: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+INFORMATION: StructureDefinition/onko-tumorboard-service-request: StructureDefinition.differential.element[3].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/onko-tumorboard-service-request: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: Resource: The resource StructureDefinition/onko-tumorboard-service-request could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-onko-therapy-goal-type.json ==
 WARNING: ValueSet/onko-therapy-goal-type: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: ValueSet/onko-therapy-goal-type: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 INFORMATION: ValueSet/onko-therapy-goal-type: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because there is no terminology server
+WARNING: Resource: The resource ValueSet/onko-therapy-goal-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-onko-therapy-intent.json ==
 WARNING: ValueSet/onko-therapy-intent: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: ValueSet/onko-therapy-intent: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 INFORMATION: ValueSet/onko-therapy-intent: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because there is no terminology server
+WARNING: Resource: The resource ValueSet/onko-therapy-intent should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

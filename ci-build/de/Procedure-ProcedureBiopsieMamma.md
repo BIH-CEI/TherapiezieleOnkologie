@@ -41,7 +41,7 @@
   "code" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "447021001",
+      "code" : "44578009",
       "display" : "Core needle biopsy of breast (procedure)"
     }],
     "text" : "Sonografisch gesteuerte Stanzbiopsie der Mamma links"

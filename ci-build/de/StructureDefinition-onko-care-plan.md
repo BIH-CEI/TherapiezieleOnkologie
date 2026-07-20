@@ -51,6 +51,8 @@ This structure refers to these other structures:
 
 * [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
 * [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
+* [Tumorboard MedicationRequest (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request)](StructureDefinition-onko-tumorboard-medication-request.md)
+* [Tumorboard ServiceRequest (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request)](StructureDefinition-onko-tumorboard-service-request.md)
 
 **Extensions**
 
@@ -88,6 +90,8 @@ This structure refers to these other structures:
 
 * [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
 * [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
+* [Tumorboard MedicationRequest (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request)](StructureDefinition-onko-tumorboard-medication-request.md)
+* [Tumorboard ServiceRequest (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request)](StructureDefinition-onko-tumorboard-service-request.md)
 
 **Extensions**
 
@@ -113,7 +117,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
   "name" : "OnkoCarePlan",
   "title" : "Onkologischer CarePlan",
   "status" : "draft",
-  "date" : "2026-07-10T09:26:12+00:00",
+  "date" : "2026-07-20T12:02:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -278,9 +282,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Appointment",
         "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+        "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request",
         "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
         "http://hl7.org/fhir/StructureDefinition/Task",
         "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+        "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request",
         "http://hl7.org/fhir/StructureDefinition/RequestGroup"]
       }],
       "mustSupport" : true

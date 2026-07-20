@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-10T09:26:12+00:00",
+  "date" : "2026-07-20T12:02:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -750,7 +750,91 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ServiceRequestPathologieMamma.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ServiceRequestPathologieMamma"
+      },
+      "name" : "Anforderung histopathologische Untersuchung (Beispiel)",
+      "description" : "Pathologieauftrag zum Stanzbiopsat: Histologie, Grading, Hormonrezeptor- und HER2-Status sowie Ki-67.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ServiceRequestGBRCAMamma.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ServiceRequestGBRCAMamma"
+      },
+      "name" : "Anforderung Keimbahn-Testung gBRCA1 (Beispiel)",
+      "description" : "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim triple-negativen Mammakarzinom.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ServiceRequestStagingMamma.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ServiceRequestStagingMamma"
+      },
+      "name" : "Anforderung klinisches Staging (Beispiel)",
+      "description" : "Anforderung der klinischen Ausbreitungsdiagnostik (TNM-Klassifikation) vor Therapiebeginn.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ServiceRequestKoloskopieCRC.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ServiceRequestKoloskopieCRC"
+      },
+      "name" : "Anforderung Koloskopie mit Biopsie (Beispiel)",
+      "description" : "Diagnostische Maßnahme des DiagnosticCarePlan.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ServiceRequestBiopsieMamma.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ServiceRequestBiopsieMamma"
+      },
+      "name" : "Anforderung Stanzbiopsie Mamma (Beispiel)",
+      "description" : "Anforderung einer sonografisch gesteuerten Stanzbiopsie der Mamma links zur histologischen Sicherung des Tumorverdachts.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-OnkologinCRC.html"
       }],
       "reference" : {
         "reference" : "Practitioner/OnkologinCRC"
@@ -762,6 +846,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-OnkologinMamma.html"
       }],
       "reference" : {
         "reference" : "Practitioner/OnkologinMamma"
@@ -773,6 +861,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Procedure"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Procedure-ProcedureOperationMamma.html"
       }],
       "reference" : {
         "reference" : "Procedure/ProcedureOperationMamma"
@@ -785,6 +877,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-TumorzentrumMamma.html"
       }],
       "reference" : {
         "reference" : "Organization/TumorzentrumMamma"
@@ -797,6 +893,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-careplan-custodian.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/onko-careplan-custodian"
@@ -808,31 +908,91 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationRequest"
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-diagnostic-care-plan.html"
       }],
       "reference" : {
-        "reference" : "MedicationRequest/MedicationRequestFOLFOX"
+        "reference" : "StructureDefinition/onko-diagnostic-care-plan"
       },
-      "name" : "Geplante Systemtherapie – FOLFOX + Bevacizumab (Beispiel)",
-      "description" : "Geplante Aktivität des CarePlan: palliative Erstlinien-Chemotherapie.",
-      "exampleBoolean" : true
+      "name" : "Diagnostischer CarePlan",
+      "description" : "CarePlan für die Tumordiagnostik auf Basis von `CarePlan`.\n\nErgänzend zum onkologischen Therapie-CarePlan (`OnkoCarePlan`) bildet dieses Profil den Weg\nzur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfads werden als\nAktivitäten abgebildet, deren Ergebnisse können\nüber `activity.outcomeReference` angebunden werden.\n\nDer diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (`OnkoCondition`)\nund ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.\n\nDiagnostikspezifische Ergänzungen:\n- Der Plan-Typ ist über `category` verpflichtend gekennzeichnet: `category.text`\n  muss den Wert \"Tumordiagnostik\" tragen. Weitere Categories können ergänzt\n  werden. Damit sind diagnostischer und Therapie-CarePlan unterscheidbar.\n\n**Abgrenzung:** Dieses Profil beschreibt den *Prozess* der Diagnosefindung.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CarePlan"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CarePlan-CarePlanMammaDiagnostik.html"
+      }],
+      "reference" : {
+        "reference" : "CarePlan/CarePlanMammaDiagnostik"
+      },
+      "name" : "Diagnostischer CarePlan ",
+      "description" : "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CarePlan"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CarePlan-DiagnostikCarePlanCRC.html"
+      }],
+      "reference" : {
+        "reference" : "CarePlan/DiagnostikCarePlanCRC"
+      },
+      "name" : "Diagnostischer CarePlan – Tumordiagnostik (Beispiel)",
+      "description" : "Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ServiceRequestProcedure.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ServiceRequestProcedure"
+      },
+      "name" : "Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen",
+      "description" : "Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpektomie) bei Mammakarzinom.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "MedicationRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "MedicationRequest-MedicationRequestKEYNOTE522.html"
       }],
       "reference" : {
         "reference" : "MedicationRequest/MedicationRequestKEYNOTE522"
       },
       "name" : "Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)",
       "description" : "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC).",
-      "exampleBoolean" : true
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsGradingMamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsGradingMamma"
@@ -845,6 +1005,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsHER2Mamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsHER2Mamma"
@@ -857,6 +1021,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsHistologieMamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsHistologieMamma"
@@ -868,12 +1036,48 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DiagnosticReport-DiagnosticReportHistologieCRC.html"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/DiagnosticReportHistologieCRC"
+      },
+      "name" : "Histopathologischer Befund (Beispiel)",
+      "description" : "Ergebnis der Diagnostik: histologische Sicherung eines Adenokarzinoms des Kolons.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CareTeam"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CareTeam-TumorboardCRC.html"
+      }],
+      "reference" : {
+        "reference" : "CareTeam/TumorboardCRC"
+      },
+      "name" : "Interdisziplinäres Tumorboard (Beispiel)",
+      "description" : "Tumorkonferenz, die die Therapieempfehlungen ausspricht (Requester der Tumorboard-Requests).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsGBRCAMamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsGBRCAMamma"
       },
-      "name" : "Keimbahn-Testung gBRCA1/2 – unauffällig (Beispiel)",
+      "name" : "Keimbahn-Testung gBRCA1 – unauffällig (Beispiel)",
       "description" : "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim TNBC: keine (wahrscheinlich) pathogene Variante nachgewiesen.",
       "exampleBoolean" : true
     },
@@ -881,6 +1085,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsKi67Mamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsKi67Mamma"
@@ -893,6 +1101,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsTNMklinischMamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsTNMklinischMamma"
@@ -905,6 +1117,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Condition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Condition-ConditionCRC.html"
       }],
       "reference" : {
         "reference" : "Condition/ConditionCRC"
@@ -917,6 +1133,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Condition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Condition-ConditionMamma.html"
       }],
       "reference" : {
         "reference" : "Condition/ConditionMamma"
@@ -929,6 +1149,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-condition.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/onko-condition"
@@ -941,6 +1165,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-onko-therapy-intent.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/onko-therapy-intent"
@@ -953,6 +1181,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-therapy-intent.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/onko-therapy-intent"
@@ -965,6 +1197,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-onko-therapy-intent.html"
       }],
       "reference" : {
         "reference" : "ValueSet/onko-therapy-intent"
@@ -977,6 +1213,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-therapy-line.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/onko-therapy-line"
@@ -989,6 +1229,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-onko-therapy-goal-type.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/onko-therapy-goal-type"
@@ -1001,6 +1245,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-onko-therapy-goal-type.html"
       }],
       "reference" : {
         "reference" : "ValueSet/onko-therapy-goal-type"
@@ -1013,6 +1261,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-care-plan.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/onko-care-plan"
@@ -1025,6 +1277,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CarePlan"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CarePlan-CarePlanMammaNeoadjuvant.html"
       }],
       "reference" : {
         "reference" : "CarePlan/CarePlanMammaNeoadjuvant"
@@ -1037,6 +1293,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CarePlan"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CarePlan-CarePlanCRCPalliativ.html"
       }],
       "reference" : {
         "reference" : "CarePlan/CarePlanCRCPalliativ"
@@ -1049,6 +1309,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-therapy-goal.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/onko-therapy-goal"
@@ -1061,6 +1325,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-PatientinMamma.html"
       }],
       "reference" : {
         "reference" : "Patient/PatientinMamma"
@@ -1073,6 +1341,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-PatientinCRC.html"
       }],
       "reference" : {
         "reference" : "Patient/PatientinCRC"
@@ -1085,6 +1357,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsTNMpathologischMamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsTNMpathologischMamma"
@@ -1097,6 +1373,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsProgesteronrezeptorMamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsProgesteronrezeptorMamma"
@@ -1109,6 +1389,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Procedure"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Procedure-ProcedureBiopsieMamma.html"
       }],
       "reference" : {
         "reference" : "Procedure/ProcedureBiopsieMamma"
@@ -1121,6 +1405,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Specimen"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Specimen-SpecimenBiopsieMamma.html"
       }],
       "reference" : {
         "reference" : "Specimen/SpecimenBiopsieMamma"
@@ -1133,6 +1421,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "EpisodeOfCare"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "EpisodeOfCare-TherapielinieCRCErstlinie.html"
       }],
       "reference" : {
         "reference" : "EpisodeOfCare/TherapielinieCRCErstlinie"
@@ -1145,6 +1437,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "EpisodeOfCare"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "EpisodeOfCare-TherapielinieMammaNeoadjuvant.html"
       }],
       "reference" : {
         "reference" : "EpisodeOfCare/TherapielinieMammaNeoadjuvant"
@@ -1157,6 +1453,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Goal"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Goal-TherapiezielMammaHeilung.html"
       }],
       "reference" : {
         "reference" : "Goal/TherapiezielMammaHeilung"
@@ -1169,6 +1469,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Goal"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Goal-TherapiezielCRCKurativAbgelehnt.html"
       }],
       "reference" : {
         "reference" : "Goal/TherapiezielCRCKurativAbgelehnt"
@@ -1181,6 +1485,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Goal"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Goal-TherapiezielCRCLebensverlaengerung.html"
       }],
       "reference" : {
         "reference" : "Goal/TherapiezielCRCLebensverlaengerung"
@@ -1193,6 +1501,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObservationDiseaseStatusCRC.html"
       }],
       "reference" : {
         "reference" : "Observation/ObservationDiseaseStatusCRC"
@@ -1205,6 +1517,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsDiseaseStatusMamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsDiseaseStatusMamma"
@@ -1216,19 +1532,91 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-tumorboard-medication-request.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/onko-tumorboard-medication-request"
+      },
+      "name" : "Tumorboard MedicationRequest",
+      "description" : "Strukturierte Empfehlung des Tumorboards auf Basis von `MedicationRequest`.\n\nTumorboardspezifische Ergänzung:\n- Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-tumorboard-service-request.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/onko-tumorboard-service-request"
+      },
+      "name" : "Tumorboard ServiceRequest",
+      "description" : "Strukturierte Empfehlung des Tumorboards auf Basis von `ServiceRequest`.\n\nTumorboardspezifische Ergänzung:\n- Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "MedicationRequest-MedicationRequestFOLFOX.html"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/MedicationRequestFOLFOX"
+      },
+      "name" : "Tumorboard-Empfehlung – FOLFOX + Bevacizumab (Beispiel)",
+      "description" : "Vom Tumorboard empfohlene palliative Erstlinien-Systemtherapie (geplante Aktivität des Therapie-CarePlan).",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ServiceRequestPortCRC.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ServiceRequestPortCRC"
+      },
+      "name" : "Tumorboard-Empfehlung – Portimplantation (Beispiel)",
+      "description" : "Vom Tumorboard empfohlene Anlage eines Portkatheters für die systemische Therapie.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-TumorzentrumCRC.html"
       }],
       "reference" : {
         "reference" : "Organization/TumorzentrumCRC"
       },
       "name" : "Tumorzentrum (Custodian, Beispiel)",
-      "description" : "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.",
+      "description" : "Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne.",
       "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-ObsEstrogenrezeptorMamma.html"
       }],
       "reference" : {
         "reference" : "Observation/ObsEstrogenrezeptorMamma"

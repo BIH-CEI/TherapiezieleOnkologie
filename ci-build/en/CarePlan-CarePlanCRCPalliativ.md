@@ -26,16 +26,17 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **author**: [Practitioner Petra Musterarzt ](Practitioner-OnkologinCRC.md)
 
+**careTeam**: [CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom](CareTeam-TumorboardCRC.md)
+
 **addresses**: [Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet](Condition-ConditionCRC.md)
+
+**supportingInfo**: [CarePlan: extension = ->Organization Onkologisches Zentrum Musterklinik; status = completed; intent = plan; category = ; period = 2026-01-05 --> 2026-01-20](CarePlan-DiagnostikCarePlanCRC.md)
 
 **goal**: [Goal: extension = Palliativ,,; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10](Goal-TherapiezielCRCLebensverlaengerung.md)
 
-### Activities
+> **activity****outcomeReference**: [Observation Cancer disease progression](Observation-ObservationDiseaseStatusCRC.md)**reference**: [MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestFOLFOX.md)
 
-| | | |
-| :--- | :--- | :--- |
-| - | **OutcomeReference** | **Reference** |
-| * | [Observation Cancer disease progression](Observation-ObservationDiseaseStatusCRC.md) | [MedicationRequest: status = active; intent = plan; medication[x] = ](MedicationRequest-MedicationRequestFOLFOX.md) |
+> **activity****reference**: [ServiceRequest Implantable venous access port injection](ServiceRequest-ServiceRequestPortCRC.md)
 
 
 
@@ -82,8 +83,14 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
   "author" : {
     "reference" : "Practitioner/OnkologinCRC"
   },
+  "careTeam" : [{
+    "reference" : "CareTeam/TumorboardCRC"
+  }],
   "addresses" : [{
     "reference" : "Condition/ConditionCRC"
+  }],
+  "supportingInfo" : [{
+    "reference" : "CarePlan/DiagnostikCarePlanCRC"
   }],
   "goal" : [{
     "reference" : "Goal/TherapiezielCRCLebensverlaengerung"
@@ -94,6 +101,11 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
     }],
     "reference" : {
       "reference" : "MedicationRequest/MedicationRequestFOLFOX"
+    }
+  },
+  {
+    "reference" : {
+      "reference" : "ServiceRequest/ServiceRequestPortCRC"
     }
   }]
 }

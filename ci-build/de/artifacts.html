@@ -205,6 +205,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-onko-diagnostic-care-plan.html"
+                  title="StructureDefinition/onko-diagnostic-care-plan">
+                  <span title="StructureDefinition/onko-diagnostic-care-plan">Diagnostischer CarePlan
+</span>
+               </a>
+            </td>
+            <td>
+<p>CarePlan für die Tumordiagnostik auf Basis von <code class="language-plaintext highlighter-rouge">CarePlan</code>.</p>
+
+<p>Ergänzend zum onkologischen Therapie-CarePlan (<code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>) bildet dieses Profil den Weg
+zur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfads werden als
+Aktivitäten abgebildet, deren Ergebnisse können
+über <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> angebunden werden.</p>
+
+<p>Der diagnostische CarePlan verweist über <code class="language-plaintext highlighter-rouge">addresses</code> auf die Tumordiagnose (<code class="language-plaintext highlighter-rouge">OnkoCondition</code>)
+und ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.</p>
+
+<p>Diagnostikspezifische Ergänzungen:</p>
+<ul>
+  <li>Der Plan-Typ ist über <code class="language-plaintext highlighter-rouge">category</code> verpflichtend gekennzeichnet: <code class="language-plaintext highlighter-rouge">category.text</code>
+muss den Wert "Tumordiagnostik" tragen. Weitere Categories können ergänzt
+werden. Damit sind diagnostischer und Therapie-CarePlan unterscheidbar.</li>
+</ul>
+
+<p><strong>Abgrenzung:</strong> Dieses Profil beschreibt den <em>Prozess</em> der Diagnosefindung.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-onko-condition.html"
                   title="StructureDefinition/onko-condition">
                   <span title="StructureDefinition/onko-condition">Onkologische Diagnose (Condition)
@@ -300,6 +329,40 @@ bezogen ausgewertet werden kann.</li>
 
 <p><code class="language-plaintext highlighter-rouge">achievementStatus</code> bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab
 (z. B. erreicht, in Bearbeitung, nicht erreicht).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-onko-tumorboard-medication-request.html"
+                  title="StructureDefinition/onko-tumorboard-medication-request">
+                  <span title="StructureDefinition/onko-tumorboard-medication-request">Tumorboard MedicationRequest
+</span>
+               </a>
+            </td>
+            <td>
+<p>Strukturierte Empfehlung des Tumorboards auf Basis von <code class="language-plaintext highlighter-rouge">MedicationRequest</code>.</p>
+
+<p>Tumorboardspezifische Ergänzung:</p>
+<ul>
+  <li>Im Element <code class="language-plaintext highlighter-rouge">category</code> muss der LOINC-Code <code class="language-plaintext highlighter-rouge">Tumor board Consult note</code> (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden.</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-onko-tumorboard-service-request.html"
+                  title="StructureDefinition/onko-tumorboard-service-request">
+                  <span title="StructureDefinition/onko-tumorboard-service-request">Tumorboard ServiceRequest
+</span>
+               </a>
+            </td>
+            <td>
+<p>Strukturierte Empfehlung des Tumorboards auf Basis von <code class="language-plaintext highlighter-rouge">ServiceRequest</code>.</p>
+
+<p>Tumorboardspezifische Ergänzung:</p>
+<ul>
+  <li>Im Element <code class="language-plaintext highlighter-rouge">category</code> muss der LOINC-Code <code class="language-plaintext highlighter-rouge">Tumor board Consult note</code> (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden.</li>
+</ul>
 </td>
          </tr>
       </tbody>
@@ -418,6 +481,66 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="ServiceRequest-ServiceRequestGBRCAMamma.html"
+                  title="ServiceRequest/ServiceRequestGBRCAMamma">
+                  <span title="ServiceRequest/ServiceRequestGBRCAMamma">Anforderung Keimbahn-Testung gBRCA1 (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim triple-negativen Mammakarzinom.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ServiceRequestKoloskopieCRC.html"
+                  title="ServiceRequest/ServiceRequestKoloskopieCRC">
+                  <span title="ServiceRequest/ServiceRequestKoloskopieCRC">Anforderung Koloskopie mit Biopsie (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Diagnostische Maßnahme des DiagnosticCarePlan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ServiceRequestBiopsieMamma.html"
+                  title="ServiceRequest/ServiceRequestBiopsieMamma">
+                  <span title="ServiceRequest/ServiceRequestBiopsieMamma">Anforderung Stanzbiopsie Mamma (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Anforderung einer sonografisch gesteuerten Stanzbiopsie der Mamma links zur histologischen Sicherung des Tumorverdachts.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ServiceRequestPathologieMamma.html"
+                  title="ServiceRequest/ServiceRequestPathologieMamma">
+                  <span title="ServiceRequest/ServiceRequestPathologieMamma">Anforderung histopathologische Untersuchung (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Pathologieauftrag zum Stanzbiopsat: Histologie, Grading, Hormonrezeptor- und HER2-Status sowie Ki-67.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ServiceRequestStagingMamma.html"
+                  title="ServiceRequest/ServiceRequestStagingMamma">
+                  <span title="ServiceRequest/ServiceRequestStagingMamma">Anforderung klinisches Staging (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Anforderung der klinischen Ausbreitungsdiagnostik (TNM-Klassifikation) vor Therapiebeginn.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Practitioner-OnkologinCRC.html" title="Practitioner/OnkologinCRC">
                   <span title="Practitioner/OnkologinCRC">Behandelnde Onkologin (Beispiel)
 </span>
@@ -465,14 +588,38 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="MedicationRequest-MedicationRequestFOLFOX.html"
-                  title="MedicationRequest/MedicationRequestFOLFOX">
-                  <span title="MedicationRequest/MedicationRequestFOLFOX">Geplante Systemtherapie – FOLFOX + Bevacizumab (Beispiel)
+               <a href="CarePlan-CarePlanMammaDiagnostik.html"
+                  title="CarePlan/CarePlanMammaDiagnostik">
+                  <span title="CarePlan/CarePlanMammaDiagnostik">Diagnostischer CarePlan 
 </span>
                </a>
             </td>
             <td>
-<p>Geplante Aktivität des CarePlan: palliative Erstlinien-Chemotherapie.</p>
+<p>Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-DiagnostikCarePlanCRC.html"
+                  title="CarePlan/DiagnostikCarePlanCRC">
+                  <span title="CarePlan/DiagnostikCarePlanCRC">Diagnostischer CarePlan – Tumordiagnostik (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ServiceRequestProcedure.html"
+                  title="ServiceRequest/ServiceRequestProcedure">
+                  <span title="ServiceRequest/ServiceRequestProcedure">Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen
+</span>
+               </a>
+            </td>
+            <td>
+<p>Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpektomie) bei Mammakarzinom.</p>
 </td>
          </tr>
          <tr>
@@ -524,8 +671,31 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="DiagnosticReport-DiagnosticReportHistologieCRC.html"
+                  title="DiagnosticReport/DiagnosticReportHistologieCRC">
+                  <span title="DiagnosticReport/DiagnosticReportHistologieCRC">Histopathologischer Befund (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ergebnis der Diagnostik: histologische Sicherung eines Adenokarzinoms des Kolons.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CareTeam-TumorboardCRC.html" title="CareTeam/TumorboardCRC">
+                  <span title="CareTeam/TumorboardCRC">Interdisziplinäres Tumorboard (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Tumorkonferenz, die die Therapieempfehlungen ausspricht (Requester der Tumorboard-Requests).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-ObsGBRCAMamma.html" title="Observation/ObsGBRCAMamma">
-                  <span title="Observation/ObsGBRCAMamma">Keimbahn-Testung gBRCA1/2 – unauffällig (Beispiel)
+                  <span title="Observation/ObsGBRCAMamma">Keimbahn-Testung gBRCA1 – unauffällig (Beispiel)
 </span>
                </a>
             </td>
@@ -758,6 +928,30 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationRequest-MedicationRequestFOLFOX.html"
+                  title="MedicationRequest/MedicationRequestFOLFOX">
+                  <span title="MedicationRequest/MedicationRequestFOLFOX">Tumorboard-Empfehlung – FOLFOX + Bevacizumab (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Vom Tumorboard empfohlene palliative Erstlinien-Systemtherapie (geplante Aktivität des Therapie-CarePlan).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ServiceRequestPortCRC.html"
+                  title="ServiceRequest/ServiceRequestPortCRC">
+                  <span title="ServiceRequest/ServiceRequestPortCRC">Tumorboard-Empfehlung – Portimplantation (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Vom Tumorboard empfohlene Anlage eines Portkatheters für die systemische Therapie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Organization-TumorzentrumCRC.html"
                   title="Organization/TumorzentrumCRC">
                   <span title="Organization/TumorzentrumCRC">Tumorzentrum (Custodian, Beispiel)
@@ -765,7 +959,7 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
                </a>
             </td>
             <td>
-<p>Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.</p>
+<p>Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne.</p>
 </td>
          </tr>
          <tr>
@@ -809,8 +1003,8 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-10 09:26:00 +0000">
-    2026-07-10
+  <span title="2026-07-20 12:02:00 +0000">
+    2026-07-20
   </span>
 
           <br/>

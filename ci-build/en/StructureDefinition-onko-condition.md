@@ -9,7 +9,7 @@ Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgen
 
 **Usages:**
 
-* Refer to this Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md), [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md) and [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+* Refer to this Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md), [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan.md), [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md) and [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 * Examples for this Profile: [Condition/ConditionCRC](Condition-ConditionCRC.md) and [Condition/ConditionMamma](Condition-ConditionMamma.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-condition.json)
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-condition.cs
   "name" : "OnkoCondition",
   "title" : "Onkologische Diagnose (Condition)",
   "status" : "draft",
-  "date" : "2026-07-10T09:26:12+00:00",
+  "date" : "2026-07-20T12:02:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

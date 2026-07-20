@@ -120,7 +120,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
   "name" : "OnkoTherapyGoal",
   "title" : "Onkologisches Therapieziel",
   "status" : "draft",
-  "date" : "2026-07-10T09:26:12+00:00",
+  "date" : "2026-07-20T12:02:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

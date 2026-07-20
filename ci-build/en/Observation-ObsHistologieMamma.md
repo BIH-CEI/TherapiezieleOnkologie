@@ -10,7 +10,7 @@
 
 **status**: Final
 
-**code**: Histology [Type] in Cancer specimen Qualitative
+**code**: Histology type in Cancer specimen Narrative
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -32,8 +32,8 @@
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
-      "code" : "59847-4",
-      "display" : "Histology [Type] in Cancer specimen Qualitative"
+      "code" : "33731-1",
+      "display" : "Histology type in Cancer specimen Narrative"
     }]
   },
   "subject" : {

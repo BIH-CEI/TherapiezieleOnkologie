@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ServiceRequestPathologieMamma"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest ServiceRequestPathologieMamma</b></p><a name="en-ServiceRequestPathologieMamma"> </a><a name="en-hcServiceRequestPathologieMamma"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 788124003}">Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>authoredOn</b>: 2025-09-15</p><p><b>requester</b>: <a href="Practitioner-OnkologinMamma.html">Practitioner Katrin Musterarzt </a></p><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div>
+  </text>
+  <status value="completed"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="788124003"/>
+      <display value="Histopathology service (qualifier value)"/>
+    </coding>
+    <text value="Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67"/>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+  <authoredOn value="2025-09-15"/>
+  <requester>
+    <reference value="Practitioner/OnkologinMamma"/>
+  </requester>
+  <specimen>
+    <reference value="Specimen/SpecimenBiopsieMamma"/>
+  </specimen>
+</ServiceRequest>

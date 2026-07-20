@@ -30,7 +30,9 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **goal**: [Goal: extension = Kurativ,; lifecycleStatus = active; achievementStatus = Achieved; category = Heilung,Funktionserhalt; priority = High Priority; description = ; start[x] = 2025-09-22](Goal-TherapiezielMammaHeilung.md)
 
-> **activity****outcomeReference**: [Procedure Lumpectomy of breast (procedure)](Procedure-ProcedureOperationMamma.md)**reference**: [MedicationRequest: status = completed; intent = plan; medication[x] = ](MedicationRequest-MedicationRequestKEYNOTE522.md)
+> **activity****reference**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestKEYNOTE522.md)
+
+> **activity****outcomeReference**: [Procedure Lumpectomy of breast (procedure)](Procedure-ProcedureOperationMamma.md)**reference**: [ServiceRequest Lumpectomy of breast (procedure)](ServiceRequest-ServiceRequestProcedure.md)
 
 > **activity****outcomeReference**: [Observation Cancer disease progression](Observation-ObsDiseaseStatusMamma.md)
 
@@ -86,11 +88,16 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
     "reference" : "Goal/TherapiezielMammaHeilung"
   }],
   "activity" : [{
+    "reference" : {
+      "reference" : "MedicationRequest/MedicationRequestKEYNOTE522"
+    }
+  },
+  {
     "outcomeReference" : [{
       "reference" : "Procedure/ProcedureOperationMamma"
     }],
     "reference" : {
-      "reference" : "MedicationRequest/MedicationRequestKEYNOTE522"
+      "reference" : "ServiceRequest/ServiceRequestProcedure"
     }
   },
   {

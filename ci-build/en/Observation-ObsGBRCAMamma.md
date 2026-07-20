@@ -1,6 +1,6 @@
-# Keimbahn-Testung gBRCA1/2 – unauffällig (Beispiel) - Implementierungsleitfaden Therapieziele Onkologie v0.1.0
+# Keimbahn-Testung gBRCA1 – unauffällig (Beispiel) - Implementierungsleitfaden Therapieziele Onkologie v0.1.0
 
-## Example Observation: Keimbahn-Testung gBRCA1/2 – unauffällig (Beispiel)
+## Example Observation: Keimbahn-Testung gBRCA1 – unauffällig (Beispiel)
 
 -------
 
@@ -10,7 +10,7 @@
 
 **status**: Final
 
-**code**: BRCA1 and BRCA2 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal
+**code**: BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -37,8 +37,8 @@ gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen.
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
-      "code" : "51958-7",
-      "display" : "BRCA1 and BRCA2 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+      "code" : "21639-0",
+      "display" : "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
     }]
   },
   "subject" : {

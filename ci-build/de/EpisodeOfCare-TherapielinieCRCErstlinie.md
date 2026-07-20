@@ -23,7 +23,13 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
 **patient**: [Erika Musterfrau Female, DoB: 1961-09-12](Patient-PatientinCRC.md)
 
+**managingOrganization**: [Organization Onkologisches Zentrum Musterklinik](Organization-TumorzentrumCRC.md)
+
 **period**: 2026-02-10 --> (ongoing)
+
+**careManager**: [Practitioner Petra Musterarzt ](Practitioner-OnkologinCRC.md)
+
+**team**: [CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom](CareTeam-TumorboardCRC.md)
 
 
 
@@ -56,9 +62,18 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
   "patient" : {
     "reference" : "Patient/PatientinCRC"
   },
+  "managingOrganization" : {
+    "reference" : "Organization/TumorzentrumCRC"
+  },
   "period" : {
     "start" : "2026-02-10"
-  }
+  },
+  "careManager" : {
+    "reference" : "Practitioner/OnkologinCRC"
+  },
+  "team" : [{
+    "reference" : "CareTeam/TumorboardCRC"
+  }]
 }
 
 ```

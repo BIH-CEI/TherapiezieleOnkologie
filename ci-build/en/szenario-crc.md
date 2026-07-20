@@ -5,34 +5,44 @@
  
 There is no translation page available for the current page, so it has been rendered in the default language 
 
-Diese Seite zeigt – in Anlehnung an die [szenariobasierte Darstellung des MII IG Modul Onkologie](https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current) – ein durchgängiges Anwendungsbeispiel für die Profile `OnkoCarePlan` und `OnkoTherapyGoal`.
+Diese Seite zeigt – in Anlehnung an die [szenariobasierte Darstellung des MII IG Modul Onkologie](https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current) – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens nutzt: `OnkoCondition`, `DiagnosticCarePlan`, `OnkoCarePlan`, `OnkoTherapyLine`, `OnkoTherapyGoal`, `TumorboardMedicationRequest` und `TumorboardServiceRequest`.
 
 ### Klinische Erzählung
 
-Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonkarzinom (mCRC, Lebermetastasen) vor. Nach interdisziplinärer Tumorkonferenz wird eine **palliative Systemtherapie** (FOLFOX + Bevacizumab) als Erstlinientherapie festgelegt. Die übergeordneten Therapieziele sind **Lebensverlängerung** und **Symptomkontrolle**. Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet.
+Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonkarzinom (mCRC, Lebermetastasen) vor. Der **Diagnostikpfad** – Koloskopie mit Biopsie und histopathologische Sicherung – wird über einen `DiagnosticCarePlan` abgebildet und mündet in die gesicherte Diagnose (`OnkoCondition`). Das interdisziplinäre **Tumorboard** (`CareTeam`) empfiehlt eine **palliative Systemtherapie** (FOLFOX + Bevacizumab, `TumorboardMedicationRequest`) sowie die Anlage eines **Portkatheters** (`TumorboardServiceRequest`). Die übergeordneten Therapieziele sind **Lebensverlängerung** und **Symptomkontrolle**. Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet.
 
 ### Informationsmodell
 
 Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der `OnkoCarePlan` ist das zentrale Steuerobjekt, das die adressierte Erkrankung (`addresses`), das übergeordnete Ziel (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity.reference` / `activity.outcomeReference`) zusammenführt.
 
-Der folgende Referenzgraph zeigt alle FHIR-Referenzen zwischen den Beispiel-Instanzen. Durchgezogene Pfeile sind fachliche Referenzen (mit Feldnamen), gestrichelte Pfeile die `subject`-Referenzen aller Ressourcen auf die Patientin (zu einem „subject-Bus" zusammengefasst). Der Graph ist gerichtet und **zyklenfrei** — jede Referenz verweist vom referenzierenden auf das referenzierte Resource, ohne Rückkanten.
+Der folgende Referenzgraph zeigt die **Kernbeziehungen des Therapie-CarePlan** (die vollständige Ressourcenliste inkl. Diagnostikpfad und Tumorboard steht in der Tabelle unten). Durchgezogene Pfeile sind fachliche Referenzen (mit Feldnamen), gestrichelte Pfeile die `subject`-Referenzen aller Ressourcen auf die Patientin (zu einem „subject-Bus" zusammengefasst). Der Graph ist gerichtet und **zyklenfrei** — jede Referenz verweist vom referenzierenden auf das referenzierte Resource, ohne Rückkanten.
 
 | | | |
 | :--- | :--- | :--- |
 | Patient:in | `Patient` | [PatientinCRC](Patient-PatientinCRC.md) |
 | Tumorerkrankung | `OnkoCondition` | [ConditionCRC](Condition-ConditionCRC.md) |
-| Versorgungsplan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md) |
-| Therapieziel | `OnkoTherapyGoal` | [TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md) |
+| Diagnostik-Plan | `DiagnosticCarePlan` | [DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.md) |
+| Diagnostik-Anforderung | `ServiceRequest` | [ServiceRequestKoloskopieCRC](ServiceRequest-ServiceRequestKoloskopieCRC.md) |
+| Diagnostik-Ergebnis | `DiagnosticReport` | [DiagnosticReportHistologieCRC](DiagnosticReport-DiagnosticReportHistologieCRC.md) |
+| Therapie-Plan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md) |
 | Therapielinie (LoT 1) | `OnkoTherapyLine` | [TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md) |
-| Geplante Maßnahme | `MedicationRequest` | [MedicationRequestFOLFOX](MedicationRequest-MedicationRequestFOLFOX.md) |
+| Therapieziel (palliativ) | `OnkoTherapyGoal` | [TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md) |
+| Therapieziel (abgelehnt) | `OnkoTherapyGoal` | [TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md) |
+| Tumorboard | `CareTeam` | [TumorboardCRC](CareTeam-TumorboardCRC.md) |
+| Empfehlung Systemtherapie | `TumorboardMedicationRequest` | [MedicationRequestFOLFOX](MedicationRequest-MedicationRequestFOLFOX.md) |
+| Empfehlung Portanlage | `TumorboardServiceRequest` | [ServiceRequestPortCRC](ServiceRequest-ServiceRequestPortCRC.md) |
 | Tumoransprechen | `Observation` | [ObservationDiseaseStatusCRC](Observation-ObservationDiseaseStatusCRC.md) |
+| Custodian / Zentrum | `Organization` | [TumorzentrumCRC](Organization-TumorzentrumCRC.md) |
+| Behandlerin | `Practitioner` | [OnkologinCRC](Practitioner-OnkologinCRC.md) |
 
 ### Verknüpfungen im Beispiel
 
+* **Diagnostikpfad:** Der `DiagnosticCarePlan` (`category.text = "Tumordiagnostik"`) adressiert dieselbe `OnkoCondition` und führt geplante Anforderung (`activity.reference` → `ServiceRequest` Koloskopie) und Ergebnis (`activity.outcomeReference` → `DiagnosticReport` Histologie) zusammen. Der Therapie-CarePlan verweist über `supportingInfo` auf den Diagnostik-CarePlan.
+* **Tumorboard:** Die Empfehlungen (`TumorboardMedicationRequest`, `TumorboardServiceRequest`) tragen im `category` den LOINC-Code `85232-7` (Tumor board Consult note); das `CareTeam` ist als `careTeam` am Therapie-CarePlan und als `team` an der Therapielinie hinterlegt.
 * **Therapieintention:** `palliativ` (Extension `onko-therapy-intent`) auf CarePlan, Therapieziel und Therapielinie.
 * **CarePlan → Erkrankung:** `addresses` referenziert die `OnkoCondition` (geerbt vom [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor), v2026.0.3).
 * **CarePlan → Ziel:** `goal` referenziert das `OnkoTherapyGoal` (Kategorien Lebensverlängerung + Symptomkontrolle).
-* **Geplant vs. durchgeführt:** `activity.reference` → geplante Systemtherapie (`MedicationRequest`); `activity.outcomeReference` → dokumentiertes Ergebnis (`Observation`).
+* **Geplant vs. durchgeführt:** `activity.reference` → geplante Maßnahmen (Tumorboard-Empfehlungen); `activity.outcomeReference` → dokumentiertes Ergebnis (`Observation`).
 * **Ziel → Ergebnis:** `Goal.outcomeReference` bindet die Verlaufs-Observation (Disease Status), wodurch der `achievementStatus` (hier `in-progress`) auswertbar wird.
 
 ### Aus MCC übernommene Extensions im Beispiel

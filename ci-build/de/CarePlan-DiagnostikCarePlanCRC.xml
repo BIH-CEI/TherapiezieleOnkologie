@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="DiagnostikCarePlanCRC"/>
+  <meta>
+    <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CarePlan DiagnostikCarePlanCRC</b></p><a name="DiagnostikCarePlanCRC"> </a><a name="hcDiagnostikCarePlanCRC"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-onko-diagnostic-care-plan.html">Diagnostischer CarePlan</a></p></div><p><b>CarePlan Custodian (Extension)</b>: <a href="Organization-TumorzentrumCRC.html">Organization Onkologisches Zentrum Musterklinik</a></p><p><b>status</b>: Completed</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title="Codes:">Tumordiagnostik</span></p><p><b>subject</b>: <a href="Patient-PatientinCRC.html">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>period</b>: 2026-01-05 --&gt; 2026-01-20</p><p><b>careTeam</b>: <a href="CareTeam-TumorboardCRC.html">CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom</a></p><p><b>addresses</b>: <a href="Condition-ConditionCRC.html">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></p><h3>Activities</h3><table class="grid"><tr><td style="display: none">-</td><td><b>OutcomeReference</b></td><td><b>Reference</b></td></tr><tr><td style="display: none">*</td><td><a href="DiagnosticReport-DiagnosticReportHistologieCRC.html">Diagnostic Report for 'Pathology Synoptic report' for '-&gt;Erika Musterfrau  Female, DoB: 1961-09-12'</a></td><td><a href="ServiceRequest-ServiceRequestKoloskopieCRC.html">ServiceRequest Colonoscopy</a></td></tr></table></div>
+  </text>
+  <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian">
+    <valueReference>
+      <reference value="Organization/TumorzentrumCRC"/>
+    </valueReference>
+  </extension>
+  <status value="completed"/>
+  <intent value="plan"/>
+  <category>
+    <text value="Tumordiagnostik"/>
+  </category>
+  <subject>
+    <reference value="Patient/PatientinCRC"/>
+  </subject>
+  <period>
+    <start value="2026-01-05"/>
+    <end value="2026-01-20"/>
+  </period>
+  <careTeam>
+    <reference value="CareTeam/TumorboardCRC"/>
+  </careTeam>
+  <addresses>
+    <reference value="Condition/ConditionCRC"/>
+  </addresses>
+  <activity>
+    <outcomeReference>
+      <reference value="DiagnosticReport/DiagnosticReportHistologieCRC"/>
+    </outcomeReference>
+    <reference>
+      <reference value="ServiceRequest/ServiceRequestKoloskopieCRC"/>
+    </reference>
+  </activity>
+</CarePlan>

@@ -22,8 +22,8 @@
   "profiles": {
     "CarePlan": [
       {
-        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan",
-        "title": "Onkologischer CarePlan"
+        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan",
+        "title": "Diagnostischer CarePlan"
       }
     ],
     "Condition": [
@@ -42,6 +42,18 @@
       {
         "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line",
         "title": "Onkologische Therapielinie"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request",
+        "title": "Tumorboard MedicationRequest"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request",
+        "title": "Tumorboard ServiceRequest"
       }
     ]
   },

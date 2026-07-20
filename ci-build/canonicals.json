@@ -41,6 +41,13 @@
   "name" : "OnkoCondition"
 },
 {
+  "id" : "onko-diagnostic-care-plan",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan",
+  "version" : "0.1.0",
+  "name" : "DiagnosticCarePlan"
+},
+{
   "id" : "onko-therapy-goal",
   "type" : "StructureDefinition",
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal",
@@ -60,6 +67,20 @@
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line",
   "version" : "0.1.0",
   "name" : "OnkoTherapyLine"
+},
+{
+  "id" : "onko-tumorboard-medication-request",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request",
+  "version" : "0.1.0",
+  "name" : "TumorboardMedicationRequest"
+},
+{
+  "id" : "onko-tumorboard-service-request",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request",
+  "version" : "0.1.0",
+  "name" : "TumorboardServiceRequest"
 },
 {
   "id" : "onko-therapy-goal-type",
