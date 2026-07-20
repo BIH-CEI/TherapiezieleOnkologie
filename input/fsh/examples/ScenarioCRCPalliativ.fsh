@@ -6,13 +6,24 @@
 // MII IG Modul Onkologie (Anwendungsfälle / Informationsmodell).
 //
 // Erzählung: Eine 67-jährige Patientin mit synchron metastasiertem
-// Kolonkarzinom (Lebermetastasen). Nach interdisziplinärer
-// Tumorkonferenz wird eine palliative Systemtherapie (FOLFOX +
-// Bevacizumab) als Erstlinientherapie festgelegt. Übergeordnete
-// Therapieziele sind Lebensverlängerung und Symptomkontrolle. Das
-// Tumoransprechen wird über eine Verlaufs-Observation (Disease Status)
-// auf das Ziel bezogen ausgewertet.
+// Kolonkarzinom (Lebermetastasen). Der Diagnostikpfad (Koloskopie mit
+// Biopsie → Histologie) wird über einen `DiagnosticCarePlan` abgebildet.
+// Nach interdisziplinärer Tumorkonferenz (`CareTeam`) empfiehlt das
+// Tumorboard eine palliative Systemtherapie (FOLFOX + Bevacizumab,
+// `TumorboardMedicationRequest`) sowie die Anlage eines Portkatheters
+// (`TumorboardServiceRequest`). Übergeordnete Therapieziele sind
+// Lebensverlängerung und Symptomkontrolle. Das Tumoransprechen wird über
+// eine Verlaufs-Observation (Disease Status) auf das Ziel bezogen
+// ausgewertet.
+//
+// Genutzte Profile: OnkoCondition, DiagnosticCarePlan, OnkoCarePlan,
+// OnkoTherapyLine, OnkoTherapyGoal (x2), TumorboardMedicationRequest,
+// TumorboardServiceRequest.
 // =====================================================================
+
+// ---------------------------------------------------------------------
+// Basis: Patientin und Akteure
+// ---------------------------------------------------------------------
 
 Instance: PatientinCRC
 InstanceOf: Patient
@@ -23,6 +34,35 @@ Description: "Beispielpatientin mit metastasiertem kolorektalem Karzinom."
 * name.given = "Erika"
 * gender = #female
 * birthDate = "1961-09-12"
+
+Instance: OnkologinCRC
+InstanceOf: Practitioner
+Usage: #example
+Title: "Behandelnde Onkologin (Beispiel)"
+* name.family = "Musterarzt"
+* name.given = "Petra"
+
+Instance: TumorzentrumCRC
+InstanceOf: Organization
+Usage: #example
+Title: "Tumorzentrum (Custodian, Beispiel)"
+Description: "Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne."
+* name = "Onkologisches Zentrum Musterklinik"
+
+Instance: TumorboardCRC
+InstanceOf: CareTeam
+Usage: #example
+Title: "Interdisziplinäres Tumorboard (Beispiel)"
+Description: "Tumorkonferenz, die die Therapieempfehlungen ausspricht (Requester der Tumorboard-Requests)."
+* status = #active
+* name = "Interdisziplinäres Tumorboard Kolorektales Karzinom"
+* subject = Reference(PatientinCRC)
+* participant.member = Reference(OnkologinCRC)
+* managingOrganization = Reference(TumorzentrumCRC)
+
+// ---------------------------------------------------------------------
+// Diagnose
+// ---------------------------------------------------------------------
 
 Instance: ConditionCRC
 InstanceOf: OnkoCondition
@@ -41,6 +81,56 @@ Description: "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-
 * onsetDateTime = "2026-01-20"
 * recordedDate = "2026-01-20"
 
+// ---------------------------------------------------------------------
+// Diagnostikpfad: DiagnosticCarePlan mit ServiceRequest → DiagnosticReport
+// ---------------------------------------------------------------------
+
+Instance: DiagnostikCarePlanCRC
+InstanceOf: DiagnosticCarePlan
+Usage: #example
+Title: "Diagnostischer CarePlan – Tumordiagnostik (Beispiel)"
+Description: "Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."
+* extension[custodian].valueReference = Reference(TumorzentrumCRC)
+* status = #completed
+* intent = #plan
+* category.text = "Tumordiagnostik"
+* subject = Reference(PatientinCRC)
+* period.start = "2026-01-05"
+* period.end = "2026-01-20"
+* addresses = Reference(ConditionCRC)
+* careTeam = Reference(TumorboardCRC)
+// Geplante diagnostische Maßnahme
+* activity[0].reference = Reference(ServiceRequestKoloskopieCRC)
+// Dokumentiertes Ergebnis der Diagnostik
+* activity[0].outcomeReference = Reference(DiagnosticReportHistologieCRC)
+
+Instance: ServiceRequestKoloskopieCRC
+InstanceOf: ServiceRequest
+Usage: #example
+Title: "Anforderung Koloskopie mit Biopsie (Beispiel)"
+Description: "Diagnostische Maßnahme des DiagnosticCarePlan."
+* status = #completed
+* intent = #order
+* code = http://snomed.info/sct#73761001 "Colonoscopy"
+* code.text = "Koloskopie mit Biopsieentnahme"
+* subject = Reference(PatientinCRC)
+
+Instance: DiagnosticReportHistologieCRC
+InstanceOf: DiagnosticReport
+Usage: #example
+Title: "Histopathologischer Befund (Beispiel)"
+Description: "Ergebnis der Diagnostik: histologische Sicherung eines Adenokarzinoms des Kolons."
+* status = #final
+* code = http://loinc.org#60568-3 "Pathology Synoptic report"
+* code.text = "Histopathologie Kolonbiopsie"
+* subject = Reference(PatientinCRC)
+* effectiveDateTime = "2026-01-18"
+* conclusion = "Adenokarzinom des Kolons (C18.9), ICD-O-3 M8140/3."
+
+// ---------------------------------------------------------------------
+// Therapielinie (Line of Therapy, EnLiST)
+// ---------------------------------------------------------------------
+
 Instance: TherapielinieCRCErstlinie
 InstanceOf: OnkoTherapyLine
 Usage: #example
@@ -52,6 +142,13 @@ Description: "Erstlinien-Behandlungsabschnitt mit palliativer Intention."
 * period.start = "2026-02-10"
 * diagnosis.condition = Reference(ConditionCRC)
 * diagnosis.rank = 1
+* managingOrganization = Reference(TumorzentrumCRC)
+* careManager = Reference(OnkologinCRC)
+* team = Reference(TumorboardCRC)
+
+// ---------------------------------------------------------------------
+// Therapieziele
+// ---------------------------------------------------------------------
 
 Instance: TherapiezielCRCLebensverlaengerung
 InstanceOf: OnkoTherapyGoal
@@ -95,6 +192,39 @@ Description: "In der Tumorkonferenz erwogenes kuratives Ziel, das aufgrund der M
 * addresses = Reference(ConditionCRC)
 * expressedBy = Reference(OnkologinCRC)
 
+// ---------------------------------------------------------------------
+// Tumorboard-Empfehlungen (Requests)
+// ---------------------------------------------------------------------
+
+Instance: MedicationRequestFOLFOX
+InstanceOf: TumorboardMedicationRequest
+Usage: #example
+Title: "Tumorboard-Empfehlung – FOLFOX + Bevacizumab (Beispiel)"
+Description: "Vom Tumorboard empfohlene palliative Erstlinien-Systemtherapie (geplante Aktivität des Therapie-CarePlan)."
+* status = #active
+* intent = #plan
+* category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
+* medicationCodeableConcept.text = "FOLFOX + Bevacizumab"
+* subject = Reference(PatientinCRC)
+* requester = Reference(OnkologinCRC)
+
+Instance: ServiceRequestPortCRC
+InstanceOf: TumorboardServiceRequest
+Usage: #example
+Title: "Tumorboard-Empfehlung – Portimplantation (Beispiel)"
+Description: "Vom Tumorboard empfohlene Anlage eines Portkatheters für die systemische Therapie."
+* status = #active
+* intent = #plan
+* category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
+* code = http://snomed.info/sct#1255694000 "Implantable venous access port injection"
+* code.text = "Implantation eines Portkatheters für die systemische Therapie"
+* subject = Reference(PatientinCRC)
+* requester = Reference(OnkologinCRC)
+
+// ---------------------------------------------------------------------
+// Verlauf: Tumoransprechen
+// ---------------------------------------------------------------------
+
 Instance: ObservationDiseaseStatusCRC
 InstanceOf: Observation
 Usage: #example
@@ -106,12 +236,9 @@ Description: "Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen
 * subject = Reference(PatientinCRC)
 * effectiveDateTime = "2026-05-15"
 
-Instance: OnkologinCRC
-InstanceOf: Practitioner
-Usage: #example
-Title: "Behandelnde Onkologin (Beispiel)"
-* name.family = "Musterarzt"
-* name.given = "Petra"
+// ---------------------------------------------------------------------
+// Therapie-CarePlan (zentrales Steuerobjekt)
+// ---------------------------------------------------------------------
 
 Instance: CarePlanCRCPalliativ
 InstanceOf: OnkoCarePlan
@@ -129,24 +256,11 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives
 * addresses = Reference(ConditionCRC)
 * goal = Reference(TherapiezielCRCLebensverlaengerung)
 * author = Reference(OnkologinCRC)
-// Geplante Maßnahme: systemische Erstlinientherapie
+* careTeam = Reference(TumorboardCRC)
+// Verknüpfung zum vorgelagerten Diagnostik-CarePlan
+* supportingInfo = Reference(DiagnostikCarePlanCRC)
+// Geplante Maßnahmen: Tumorboard-Empfehlungen
 * activity[0].reference = Reference(MedicationRequestFOLFOX)
+* activity[1].reference = Reference(ServiceRequestPortCRC)
 // Durchgeführte Maßnahme / dokumentiertes Ergebnis: Verlaufsbeurteilung
 * activity[0].outcomeReference = Reference(ObservationDiseaseStatusCRC)
-
-Instance: TumorzentrumCRC
-InstanceOf: Organization
-Usage: #example
-Title: "Tumorzentrum (Custodian, Beispiel)"
-Description: "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."
-* name = "Onkologisches Zentrum Musterklinik"
-
-Instance: MedicationRequestFOLFOX
-InstanceOf: MedicationRequest
-Usage: #example
-Title: "Geplante Systemtherapie – FOLFOX + Bevacizumab (Beispiel)"
-Description: "Geplante Aktivität des CarePlan: palliative Erstlinien-Chemotherapie."
-* status = #active
-* intent = #plan
-* medicationCodeableConcept.text = "FOLFOX + Bevacizumab"
-* subject = Reference(PatientinCRC)
