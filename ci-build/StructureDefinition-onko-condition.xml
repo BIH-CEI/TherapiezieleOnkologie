@@ -19,9 +19,18 @@
   <url value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
   <version value="0.1.0"/>
   <name value="OnkoCondition"/>
-  <title value="Onkologische Diagnose (Condition)"/>
+  <title value="Onkologische Diagnose (Condition)">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Oncological diagnosis condition"/>
+      </extension>
+    </extension>
+  </title>
   <status value="draft"/>
-  <date value="2026-07-20T12:02:06+00:00"/>
+  <date value="2026-07-20T15:05:40+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -30,7 +39,16 @@
       <value value="https://www.bihealth.org"/>
     </telecom>
   </contact>
-  <description value="Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**&#xA;([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),&#xA;Version 2026.0.3).&#xA;&#xA;Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,&#xA;ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,&#xA;Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`&#xA;und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen&#xA;Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.&#xA;&#xA;Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das&#xA;Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen&#xA;lokalen Canonical bereit, auf den die übrigen Profile referenzieren."/>
+  <description value="Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**&#xA;([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),&#xA;Version 2026.0.3).&#xA;&#xA;Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,&#xA;ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,&#xA;Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`&#xA;und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen&#xA;Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.&#xA;&#xA;Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das&#xA;Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen&#xA;lokalen Canonical bereit, auf den die übrigen Profile referenzieren.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Oncological tumor condition based on the MII core data set module Oncology – MII PR Onkologie Diagnose Primärtumor, version 2026.0.3. The profile inherits the full oncological diagnosis model – ICD-10-GM, ICD-O-3 topography and morphology, diagnostic certainty per oBDS, laterality, date of diagnosis – and serves as the addressed condition for OnkoCarePlan and OnkoTherapyGoal. No additional constraints are added for the therapy-goal domain."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

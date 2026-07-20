@@ -10,16 +10,19 @@
 
 Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
-**Onkologische Therapieintention (Extension)**: Neoadjuvant
+> **Onkologische Therapieintention (Extension)**
+* hauptintention: Neoadjuvant
 
 **status**: Finished
 
+**type**: Chemotherapy care
+
 ### Diagnoses
 
-| | | |
-| :--- | :--- | :--- |
-| - | **Condition** | **Rank** |
-| * | [Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse](Condition-ConditionMamma.md) | 1 |
+| | | | |
+| :--- | :--- | :--- | :--- |
+| - | **Condition** | **Role** | **Rank** |
+| * | [Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse](Condition-ConditionMamma.md) | Chief complaint | 1 |
 
 **patient**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -37,19 +40,36 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
     "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
   },
   "extension" : [{
-    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
-        "code" : "neoadjuvant",
-        "display" : "Neoadjuvant"
-      }]
-    }
+    "extension" : [{
+      "url" : "hauptintention",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "373847000",
+          "display" : "Neoadjuvant"
+        }]
+      }
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
   }],
   "status" : "finished",
+  "type" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "385786002",
+      "display" : "Chemotherapy care"
+    }]
+  }],
   "diagnosis" : [{
     "condition" : {
       "reference" : "Condition/ConditionMamma"
+    },
+    "role" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+        "code" : "CC",
+        "display" : "Chief complaint"
+      }]
     },
     "rank" : 1
   }],

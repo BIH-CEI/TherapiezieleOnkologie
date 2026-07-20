@@ -18,4 +18,10 @@
       <sch:assert test="count(f:period) &gt;= 1">period: minimum cardinality of 'period' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:EpisodeOfCare/f:diagnosis</sch:title>
+    <sch:rule context="f:EpisodeOfCare/f:diagnosis">
+      <sch:assert test="count(f:role) &gt;= 1">role: minimum cardinality of 'role' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>

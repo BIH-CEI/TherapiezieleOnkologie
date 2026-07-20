@@ -320,6 +320,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="Goal-TherapiezielCRCKurativAbgelehnt.html">TherapiezielCRCKurativAbgelehnt</a></td>
     </tr>
     <tr>
+      <td>Therapieziel (Erhaltung)</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code></td>
+      <td><a href="Goal-TherapiezielCRCErhaltung.html">TherapiezielCRCErhaltung</a></td>
+    </tr>
+    <tr>
       <td>Tumorboard</td>
       <td><code class="language-plaintext highlighter-rouge">CareTeam</code></td>
       <td><a href="CareTeam-TumorboardCRC.html">TumorboardCRC</a></td>
@@ -357,7 +362,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Diagnostikpfad:</strong> Der <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code> (<code class="language-plaintext highlighter-rouge">category.text = "Tumordiagnostik"</code>) adressiert dieselbe <code class="language-plaintext highlighter-rouge">OnkoCondition</code> und führt geplante Anforderung (<code class="language-plaintext highlighter-rouge">activity.reference</code> → <code class="language-plaintext highlighter-rouge">ServiceRequest</code> Koloskopie) und Ergebnis (<code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> Histologie) zusammen. Der Therapie-CarePlan verweist über <code class="language-plaintext highlighter-rouge">supportingInfo</code> auf den Diagnostik-CarePlan.</li>
   <li><strong>Tumorboard:</strong> Die Empfehlungen (<code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code>, <code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>) tragen im <code class="language-plaintext highlighter-rouge">category</code> den LOINC-Code <code class="language-plaintext highlighter-rouge">85232-7</code> (Tumor board Consult note); das <code class="language-plaintext highlighter-rouge">CareTeam</code> ist als <code class="language-plaintext highlighter-rouge">careTeam</code> am Therapie-CarePlan und als <code class="language-plaintext highlighter-rouge">team</code> an der Therapielinie hinterlegt.</li>
-  <li><strong>Therapieintention:</strong> <code class="language-plaintext highlighter-rouge">palliativ</code> (Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code>) auf CarePlan, Therapieziel und Therapielinie.</li>
+  <li><strong>Therapieintention (zwei Achsen):</strong> Die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> codiert <code class="language-plaintext highlighter-rouge">hauptintention</code> (hier <code class="language-plaintext highlighter-rouge">palliativ</code>, SNOMED <code class="language-plaintext highlighter-rouge">363676003</code>) und optional <code class="language-plaintext highlighter-rouge">phase</code> (hier <code class="language-plaintext highlighter-rouge">Induktionstherapie</code>, SNOMED <code class="language-plaintext highlighter-rouge">450827009</code>). So ist „palliativ + Induktionsphase" gleichzeitig ausdrückbar; die Codes sind extensible gebunden.</li>
   <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert die <code class="language-plaintext highlighter-rouge">OnkoCondition</code> (geerbt vom <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a>, v2026.0.3).</li>
   <li><strong>CarePlan → Ziel:</strong> <code class="language-plaintext highlighter-rouge">goal</code> referenziert das <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> (Kategorien Lebensverlängerung + Symptomkontrolle).</li>
   <li><strong>Geplant vs. durchgeführt:</strong> <code class="language-plaintext highlighter-rouge">activity.reference</code> → geplante Maßnahmen (Tumorboard-Empfehlungen); <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → dokumentiertes Ergebnis (<code class="language-plaintext highlighter-rouge">Observation</code>).</li>
@@ -369,9 +374,47 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">goal-acceptance</code></strong> (MCCGoal): Die Patientin stimmt dem palliativen Ziel mit hoher Priorität zu (<code class="language-plaintext highlighter-rouge">status = agree</code>).</li>
   <li><strong><code class="language-plaintext highlighter-rouge">goal-reasonRejected</code></strong> (MCCGoal): Das in der Tumorkonferenz erwogene kurative Ziel (<a href="Goal-TherapiezielCRCKurativAbgelehnt.html">TherapiezielCRCKurativAbgelehnt</a>, <code class="language-plaintext highlighter-rouge">lifecycleStatus = rejected</code>) trägt die Ablehnungsbegründung (nicht resektable Metastasierung).</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">goal-relationship</code></strong> (MCCGoal): Das palliative Ziel ist als <code class="language-plaintext highlighter-rouge">replacement</code> mit dem abgelehnten kurativen Ziel verknüpft.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">goal-relationship</code></strong> (MCCGoal): Das Induktionsziel (<a href="Goal-TherapiezielCRCLebensverlaengerung.html">TherapiezielCRCLebensverlaengerung</a>) ist gleich zweifach verknüpft — als <code class="language-plaintext highlighter-rouge">replacement</code> mit dem abgelehnten kurativen Ziel und als <code class="language-plaintext highlighter-rouge">successor</code> mit dem nachgelagerten Erhaltungsziel (<a href="Goal-TherapiezielCRCErhaltung.html">TherapiezielCRCErhaltung</a>), das seinerseits als <code class="language-plaintext highlighter-rouge">predecessor</code> zurückverweist.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">custodian</code></strong> (MCC CarePlan, R5-Backport): Das <a href="Organization-TumorzentrumCRC.html">Tumorzentrum</a> ist als für Pflege und Aktualisierung des Plans verantwortliche Stelle hinterlegt.</li>
 </ul>
+
+<h4 id="goal-relationship--bedeutung-der-beziehungstypen"><code class="language-plaintext highlighter-rouge">goal-relationship</code> – Bedeutung der Beziehungstypen</h4>
+
+<p>Codesystem <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/goal-relationship-type</code>. Die Beziehung wird immer aus Sicht des <em>Quell-Ziels</em> (das die Extension trägt) auf das <em>Ziel-Ziel</em> (<code class="language-plaintext highlighter-rouge">target</code>) angegeben:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Typ</th>
+      <th>Bedeutung</th>
+      <th>im Beispiel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">predecessor</code></td>
+      <td>Das Ziel-Ziel muss <strong>vorher</strong> erreicht werden.</td>
+      <td>Erhaltungsziel → predecessor → Induktionsziel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">successor</code></td>
+      <td>Das Ziel-Ziel ist das angestrebte Ziel, <strong>nachdem</strong> dieses erreicht ist.</td>
+      <td>Induktionsziel → successor → Erhaltungsziel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">replacement</code></td>
+      <td>Dieses Ziel wurde <strong>durch</strong> das Ziel-Ziel <strong>ersetzt</strong>.</td>
+      <td>palliatives Ziel → replacement → abgelehntes kuratives Ziel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">milestone</code></td>
+      <td>Das Ziel-Ziel ist ein <strong>Teilschritt</strong> dieses Ziels.</td>
+      <td>(nicht im Beispiel)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">predecessor</code> und <code class="language-plaintext highlighter-rouge">successor</code> sind zueinander invers: Induktions- und Erhaltungsziel verweisen wechselseitig aufeinander und bilden so die zeitliche Sequenz ab.</p>
 
 
 
@@ -401,7 +444,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-20 12:02:00 +0000">
+  <span title="2026-07-20 15:05:00 +0000">
     2026-07-20
   </span>
 

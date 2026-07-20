@@ -10,7 +10,9 @@
 
 Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
-**Onkologische Therapieintention (Extension)**: Palliativ
+> **Onkologische Therapieintention (Extension)**
+* hauptintention: Palliativ
+* phase: Induktionstherapie
 
 > **Goal acceptance**
 * individual: [Erika Musterfrau Female, DoB: 1961-09-12](Patient-PatientinCRC.md)
@@ -19,7 +21,11 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
 > **Goal: Related Goal**
 * type: Replacement
-* target: [Goal: extension = Kurativ,; lifecycleStatus = rejected; category = Heilung; description = ](Goal-TherapiezielCRCKurativAbgelehnt.md)
+* target: [Goal: extension = ,; lifecycleStatus = rejected; category = Heilung; description = ](Goal-TherapiezielCRCKurativAbgelehnt.md)
+
+> **Goal: Related Goal**
+* type: Successor
+* target: [Goal: extension = ,; lifecycleStatus = proposed; category = Lebensverlängerung,Lebensqualität; description = ](Goal-TherapiezielCRCErhaltung.md)
 
 **lifecycleStatus**: Active
 
@@ -60,14 +66,27 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
     "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
   },
   "extension" : [{
-    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
-        "code" : "palliativ",
-        "display" : "Palliativ"
-      }]
-    }
+    "extension" : [{
+      "url" : "hauptintention",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "363676003",
+          "display" : "Palliativ"
+        }]
+      }
+    },
+    {
+      "url" : "phase",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "450827009",
+          "display" : "Induktionstherapie"
+        }]
+      }
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
   },
   {
     "extension" : [{
@@ -97,7 +116,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
       "url" : "type",
       "valueCodeableConcept" : {
         "coding" : [{
-          "system" : "http://hl7.org/fhir/goal-relationship-type",
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-relationship-type",
           "code" : "replacement",
           "display" : "Replacement"
         }]
@@ -107,6 +126,25 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
       "url" : "target",
       "valueReference" : {
         "reference" : "Goal/TherapiezielCRCKurativAbgelehnt"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+  },
+  {
+    "extension" : [{
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-relationship-type",
+          "code" : "successor",
+          "display" : "Successor"
+        }]
+      }
+    },
+    {
+      "url" : "target",
+      "valueReference" : {
+        "reference" : "Goal/TherapiezielCRCErhaltung"
       }
     }],
     "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"

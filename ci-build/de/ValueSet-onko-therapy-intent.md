@@ -3,7 +3,8 @@
 ## ValueSet: Onkologische Therapieintention (VS) (Experimentell) 
 
  
-ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts. 
+Intention (das „Warum") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts. 
+Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`. Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden. 
 
  **References** 
 
@@ -14,6 +15,8 @@ ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapiel
  
 
 ### Expansion
+
+No Expansion for this valueset (not supported by Publication Tooling)
 
 -------
 
@@ -33,7 +36,7 @@ ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapiel
   "title" : "Onkologische Therapieintention (VS)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-20T12:02:06+00:00",
+  "date" : "2026-07-20T15:05:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -42,7 +45,7 @@ ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapiel
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts.",
+  "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nDie deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen\nSNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -52,7 +55,27 @@ ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapiel
   }],
   "compose" : {
     "include" : [{
-      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "373808002",
+        "display" : "Kurativ"
+      },
+      {
+        "code" : "363676003",
+        "display" : "Palliativ"
+      },
+      {
+        "code" : "373847000",
+        "display" : "Neoadjuvant"
+      },
+      {
+        "code" : "373846009",
+        "display" : "Adjuvant"
+      },
+      {
+        "code" : "399707004",
+        "display" : "Supportiv"
+      }]
     }]
   }
 }

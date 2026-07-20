@@ -17,8 +17,32 @@
     "status" : "draft",
     "name" : "OnkoTherapyIntentVS",
     "title" : "Onkologische Therapieintention (VS)",
-    "description" : "ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts.",
-    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"],
+    "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nDie deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen\nSNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-line-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyLineTypeVS",
+    "title" : "Onkologische Therapielinie – Art (VS)",
+    "description" : "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein\nBeispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert\n`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code\n`Ambulatory chemotherapy` (315601005).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyPhaseVS",
+    "title" : "Onkologische Therapiephase / Unter-Intention (VS)",
+    "description" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nDeutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung\nergänzbar).",
+    "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
     "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"

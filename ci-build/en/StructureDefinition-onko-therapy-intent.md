@@ -1,8 +1,8 @@
 # Onkologische Therapieintention (Extension) - Implementierungsleitfaden Therapieziele Onkologie v0.1.0
 
-## Extension: Onkologische Therapieintention (Extension) 
+## Extension: Oncological therapy intent extension 
 
-Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.
+Structured coding of the therapy intent on two axes: hauptintention – the actual treatment intent such as curative, palliative, neoadjuvant, adjuvant, supportive – and phase – the sequential treatment phase such as induction or maintenance therapy. This allows expressing e.g. curative plus induction phase at the same time.
 
 **Context of Use**
 
@@ -11,7 +11,7 @@ Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, E
 **Usages:**
 
 * Use this Extension: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md), [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md) and [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
-* Examples for this Extension: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md), [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md), [EpisodeOfCare/TherapielinieMammaNeoadjuvant](EpisodeOfCare-TherapielinieMammaNeoadjuvant.md)... Show 3 more, [Goal/TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md), [Goal/TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md) and [Goal/TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md)
+* Examples for this Extension: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md), [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md), [EpisodeOfCare/TherapielinieMammaNeoadjuvant](EpisodeOfCare-TherapielinieMammaNeoadjuvant.md)... Show 4 more, [Goal/TherapiezielCRCErhaltung](Goal-TherapiezielCRCErhaltung.md), [Goal/TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md), [Goal/TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md) and [Goal/TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-intent.json)
 
@@ -35,8 +35,21 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-inte
   "version" : "0.1.0",
   "name" : "OnkoTherapyIntentExt",
   "title" : "Onkologische Therapieintention (Extension)",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Oncological therapy intent extension"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "draft",
-  "date" : "2026-07-20T12:02:06+00:00",
+  "date" : "2026-07-20T15:05:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -45,7 +58,20 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-inte
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.",
+  "description" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Structured coding of the therapy intent on two axes: hauptintention – the actual treatment intent such as curative, palliative, neoadjuvant, adjuvant, supportive – and phase – the sequential treatment phase such as induction or maintenance therapy. This allows expressing e.g. curative plus induction phase at the same time."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -81,12 +107,126 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-inte
       "id" : "Extension",
       "path" : "Extension",
       "short" : "Onkologische Therapieintention (Extension)",
-      "definition" : "Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`."
+      "definition" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`."
     },
     {
       "id" : "Extension.extension",
       "path" : "Extension.extension",
+      "min" : 1
+    },
+    {
+      "id" : "Extension.extension:hauptintention",
+      "path" : "Extension.extension",
+      "sliceName" : "hauptintention",
+      "short" : "Haupt-Therapieintention",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Main therapy intent"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Die eigentliche Behandlungsintention (kurativ, palliativ, neoadjuvant, adjuvant, supportiv).",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The actual treatment intent – curative, palliative, neoadjuvant, adjuvant, supportive."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:hauptintention.extension",
+      "path" : "Extension.extension.extension",
       "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:hauptintention.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "hauptintention"
+    },
+    {
+      "id" : "Extension.extension:hauptintention.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"
+      }
+    },
+    {
+      "id" : "Extension.extension:phase",
+      "path" : "Extension.extension",
+      "sliceName" : "phase",
+      "short" : "Therapiephase / Unter-Intention",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Therapy phase / sub-intent"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Sequenzielle Behandlungsphase innerhalb des Konzepts (z. B. Induktions-, Erhaltungstherapie).",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Sequential treatment phase within the concept – e.g. induction or maintenance therapy."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "*",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:phase.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:phase.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "phase"
+    },
+    {
+      "id" : "Extension.extension:phase.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase"
+      }
     },
     {
       "id" : "Extension.url",
@@ -96,13 +236,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-inte
     {
       "id" : "Extension.value[x]",
       "path" : "Extension.value[x]",
-      "type" : [{
-        "code" : "CodeableConcept"
-      }],
-      "binding" : {
-        "strength" : "required",
-        "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"
-      }
+      "max" : "0"
     }]
   }
 }

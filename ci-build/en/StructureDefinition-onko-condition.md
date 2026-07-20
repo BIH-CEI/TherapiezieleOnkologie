@@ -3,9 +3,7 @@
 ## Resource Profile: Onkologische Diagnose (Condition) 
 
  
-Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie** ([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor), Version 2026.0.3). 
-Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM, ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation, Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan` und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren. 
-Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen lokalen Canonical bereit, auf den die übrigen Profile referenzieren. 
+Oncological tumor condition based on the MII core data set module Oncology – MII PR Onkologie Diagnose Primärtumor, version 2026.0.3. The profile inherits the full oncological diagnosis model – ICD-10-GM, ICD-O-3 topography and morphology, diagnostic certainty per oBDS, laterality, date of diagnosis – and serves as the addressed condition for OnkoCarePlan and OnkoTherapyGoal. No additional constraints are added for the therapy-goal domain. 
 
 **Usages:**
 
@@ -44,8 +42,21 @@ Other representations of profile: [CSV](../StructureDefinition-onko-condition.cs
   "version" : "0.1.0",
   "name" : "OnkoCondition",
   "title" : "Onkologische Diagnose (Condition)",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Oncological diagnosis condition"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "draft",
-  "date" : "2026-07-20T12:02:06+00:00",
+  "date" : "2026-07-20T15:05:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -55,6 +66,19 @@ Other representations of profile: [CSV](../StructureDefinition-onko-condition.cs
     }]
   }],
   "description" : "Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**\n([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),\nVersion 2026.0.3).\n\nDieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,\nICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,\nFeststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`\nund `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen\nOnkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.\n\nFür die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das\nProfil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen\nlokalen Canonical bereit, auf den die übrigen Profile referenzieren.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Oncological tumor condition based on the MII core data set module Oncology – MII PR Onkologie Diagnose Primärtumor, version 2026.0.3. The profile inherits the full oncological diagnosis model – ICD-10-GM, ICD-O-3 topography and morphology, diagnostic certainty per oBDS, laterality, date of diagnosis – and serves as the addressed condition for OnkoCarePlan and OnkoTherapyGoal. No additional constraints are added for the therapy-goal domain."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

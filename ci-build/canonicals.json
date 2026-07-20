@@ -6,13 +6,6 @@
   "name" : "OnkoTherapyGoalType"
 },
 {
-  "id" : "onko-therapy-intent",
-  "type" : "CodeSystem",
-  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
-  "version" : "0.1.0",
-  "name" : "OnkoTherapyIntent"
-},
-{
   "id" : "bih-cei-therapieziele-onkologie",
   "type" : "ImplementationGuide",
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ImplementationGuide/bih-cei-therapieziele-onkologie",
@@ -95,4 +88,18 @@
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",
   "version" : "0.1.0",
   "name" : "OnkoTherapyIntentVS"
+},
+{
+  "id" : "onko-therapy-line-type",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-line-type",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyLineTypeVS"
+},
+{
+  "id" : "onko-therapy-phase",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyPhaseVS"
 }]

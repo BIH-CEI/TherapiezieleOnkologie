@@ -10,7 +10,8 @@
 
 Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
-**Onkologische Therapieintention (Extension)**: Palliativ
+> **Onkologische Therapieintention (Extension)**
+* hauptintention: Palliativ
 
 **CarePlan Custodian (Extension)**: [Organization Onkologisches Zentrum Musterklinik](Organization-TumorzentrumCRC.md)
 
@@ -32,7 +33,7 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **supportingInfo**: [CarePlan: extension = ->Organization Onkologisches Zentrum Musterklinik; status = completed; intent = plan; category = ; period = 2026-01-05 --> 2026-01-20](CarePlan-DiagnostikCarePlanCRC.md)
 
-**goal**: [Goal: extension = Palliativ,,; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10](Goal-TherapiezielCRCLebensverlaengerung.md)
+**goal**: [Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10](Goal-TherapiezielCRCLebensverlaengerung.md)
 
 > **activity****outcomeReference**: [Observation Cancer disease progression](Observation-ObservationDiseaseStatusCRC.md)**reference**: [MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestFOLFOX.md)
 
@@ -50,14 +51,17 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
     "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
   },
   "extension" : [{
-    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
-        "code" : "palliativ",
-        "display" : "Palliativ"
-      }]
-    }
+    "extension" : [{
+      "url" : "hauptintention",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "363676003",
+          "display" : "Palliativ"
+        }]
+      }
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",

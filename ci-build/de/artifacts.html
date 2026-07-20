@@ -404,7 +404,18 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
                </a>
             </td>
             <td>
-<p>Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE <code class="language-plaintext highlighter-rouge">procedure-intent</code>.</p>
+<p>Strukturierte Codierung der Therapieintention über zwei Achsen:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">hauptintention</code> (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,
+neoadjuvant, adjuvant, supportiv) – SNOMED <code class="language-plaintext highlighter-rouge">Procedure by intent</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">phase</code> (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention
+(Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.</li>
+</ul>
+
+<p>So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Verwendet in
+OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE
+<code class="language-plaintext highlighter-rouge">procedure-intent</code>.</p>
 </td>
          </tr>
       </tbody>
@@ -424,7 +435,44 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
                </a>
             </td>
             <td>
-<p>ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts.</p>
+<p>Intention (das „Warum") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.</p>
+
+<p>Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie <code class="language-plaintext highlighter-rouge">362961001 | Procedure by intent</code>.
+Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen
+SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-onko-therapy-line-type.html"
+                  title="ValueSet/onko-therapy-line-type">
+                  <span title="ValueSet/onko-therapy-line-type">Onkologische Therapielinie – Art (VS)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Art einer onkologischen Therapielinie (Behandlungsmodalität) für <code class="language-plaintext highlighter-rouge">EpisodeOfCare.type</code>.</p>
+
+<p>Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein
+Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert
+<code class="language-plaintext highlighter-rouge">Radiation therapy care</code> (385798007), für die ambulante Chemotherapie der spezifische Code
+<code class="language-plaintext highlighter-rouge">Ambulatory chemotherapy</code> (315601005).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-onko-therapy-phase.html"
+                  title="ValueSet/onko-therapy-phase">
+                  <span title="ValueSet/onko-therapy-phase">Onkologische Therapiephase / Unter-Intention (VS)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur
+Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,
+sondern als Behandlungsformen unter <code class="language-plaintext highlighter-rouge">716872004 | Antineoplastic chemotherapy regimen</code>.
+Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung
+ergänzbar).</p>
 </td>
          </tr>
          <tr>
@@ -447,18 +495,6 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-onko-therapy-intent.html"
-                  title="CodeSystem/onko-therapy-intent">
-                  <span title="CodeSystem/onko-therapy-intent">Onkologische Therapieintention
-</span>
-               </a>
-            </td>
-            <td>
-<p>Codiert die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts (kurativ, neoadjuvant, adjuvant, palliativ, Erhaltung, supportiv).</p>
-</td>
-         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-onko-therapy-goal-type.html"
@@ -851,7 +887,7 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
                </a>
             </td>
             <td>
-<p>Erstlinien-Behandlungsabschnitt mit palliativer Intention.</p>
+<p>Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab).</p>
 </td>
          </tr>
          <tr>
@@ -864,6 +900,18 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
             </td>
             <td>
 <p>Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-TherapiezielCRCErhaltung.html"
+                  title="Goal/TherapiezielCRCErhaltung">
+                  <span title="Goal/TherapiezielCRCErhaltung">Therapieziel – Erhaltungstherapie / Stabilisierung (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nachgelagertes Ziel der Erhaltungsphase (Deeskalation auf 5-FU/Bevacizumab nach Ansprechen). Demonstriert die predecessor-Beziehung als Gegenrichtung zum successor des Induktionsziels.</p>
 </td>
          </tr>
          <tr>
@@ -1003,7 +1051,7 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-20 12:02:00 +0000">
+  <span title="2026-07-20 15:05:00 +0000">
     2026-07-20
   </span>
 

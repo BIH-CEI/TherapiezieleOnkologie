@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-20T12:02:06+00:00",
+  "date" : "2026-07-20T15:05:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -1164,22 +1164,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "CodeSystem-onko-therapy-intent.html"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/onko-therapy-intent"
-      },
-      "name" : "Onkologische Therapieintention",
-      "description" : "Codiert die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts (kurativ, neoadjuvant, adjuvant, palliativ, Erhaltung, supportiv).",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       },
       {
@@ -1190,7 +1174,7 @@
         "reference" : "StructureDefinition/onko-therapy-intent"
       },
       "name" : "Onkologische Therapieintention (Extension)",
-      "description" : "Strukturierte Codierung der Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv). Verwendet in OnkoCarePlan und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.",
+      "description" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`.",
       "exampleBoolean" : false
     },
     {
@@ -1206,7 +1190,7 @@
         "reference" : "ValueSet/onko-therapy-intent"
       },
       "name" : "Onkologische Therapieintention (VS)",
-      "description" : "ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts.",
+      "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nDie deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen\nSNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
       "exampleBoolean" : false
     },
     {
@@ -1223,6 +1207,38 @@
       },
       "name" : "Onkologische Therapielinie",
       "description" : "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-onko-therapy-line-type.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/onko-therapy-line-type"
+      },
+      "name" : "Onkologische Therapielinie – Art (VS)",
+      "description" : "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein\nBeispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert\n`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code\n`Ambulatory chemotherapy` (315601005).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-onko-therapy-phase.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/onko-therapy-phase"
+      },
+      "name" : "Onkologische Therapiephase / Unter-Intention (VS)",
+      "description" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nDeutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung\nergänzbar).",
       "exampleBoolean" : false
     },
     {
@@ -1430,7 +1446,7 @@
         "reference" : "EpisodeOfCare/TherapielinieCRCErstlinie"
       },
       "name" : "Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)",
-      "description" : "Erstlinien-Behandlungsabschnitt mit palliativer Intention.",
+      "description" : "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab).",
       "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
     },
     {
@@ -1448,6 +1464,22 @@
       "name" : "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie (Beispiel)",
       "description" : "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts.",
       "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Goal-TherapiezielCRCErhaltung.html"
+      }],
+      "reference" : {
+        "reference" : "Goal/TherapiezielCRCErhaltung"
+      },
+      "name" : "Therapieziel – Erhaltungstherapie / Stabilisierung (Beispiel)",
+      "description" : "Nachgelagertes Ziel der Erhaltungsphase (Deeskalation auf 5-FU/Bevacizumab nach Ansprechen). Demonstriert die predecessor-Beziehung als Gegenrichtung zum successor des Induktionsziels.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
     },
     {
       "extension" : [{

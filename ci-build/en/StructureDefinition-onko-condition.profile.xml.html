@@ -290,9 +290,9 @@ XML Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;OnkoCondition&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Onkologische Diagnose (Condition)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Oncological diagnosis condition&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-07-20T12:02:06+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-07-20T15:05:40+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Berlin Institute of Health at Charité (BIH)&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Berlin Institute of Health at Charité (BIH)&quot;/&gt;
@@ -302,19 +302,7 @@ XML Profile
     &lt;/<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.description">description</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**
-([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),
-Version 2026.0.3).
-
-Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,
-ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,
-Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`
-und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen
-Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.
-
-Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das
-Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen
-lokalen Canonical bereit, auf den die übrigen Profile referenzieren.&quot;/&gt;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Oncological tumor condition based on the MII core data set module Oncology – MII PR Onkologie Diagnose Primärtumor, version 2026.0.3. The profile inherits the full oncological diagnosis model – ICD-10-GM, ICD-O-3 topography and morphology, diagnostic certainty per oBDS, laterality, date of diagnosis – and serves as the addressed condition for OnkoCarePlan and OnkoTherapyGoal. No additional constraints are added for the therapy-goal domain.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.jurisdiction">jurisdiction</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
@@ -10830,7 +10818,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-20 12:02:00 +0000">
+  <span title="2026-07-20 15:05:00 +0000">
     2026-07-20
   </span>
 

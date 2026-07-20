@@ -38,8 +38,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.145"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-outcome",
@@ -53,8 +53,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.149"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-status",
@@ -68,8 +68,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.146"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-category",
@@ -83,8 +83,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.148"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-intent",
@@ -98,8 +98,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.150"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -114,8 +114,8 @@
     "uses" : {
     },
     "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/common-tags",
@@ -171,8 +171,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.161"],
     "uses" : {
     },
-    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-predecessor",
@@ -273,20 +273,6 @@
     "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
   },
   {
-    "url" : "http://hl7.org/fhir/ValueSet/episodeofcare-type",
-    "version" : "4.0.1",
-    "status" : "draft",
-    "name" : "EpisodeOfCareType",
-    "title" : "Episode of care type",
-    "description" : "This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/episodeofcare-type"],
-    "oids" : ["2.16.840.1.113883.4.642.3.666"],
-    "sources" : ["2.16.840.1.113883.4.642.3.666"],
-    "uses" : {
-    },
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
-  },
-  {
     "url" : "http://hl7.org/fhir/ValueSet/goal-achievement",
     "version" : "4.0.1",
     "status" : "draft",
@@ -354,13 +340,13 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
     "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
     "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/manifestation-or-symptom",
@@ -402,9 +388,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.375"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
     "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-category",
@@ -530,9 +516,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
     "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
@@ -588,8 +574,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/request-status",
@@ -603,9 +589,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.111"],
     "uses" : {
     },
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
     "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/security-labels",
@@ -713,8 +699,32 @@
     "status" : "draft",
     "name" : "OnkoTherapyIntentVS",
     "title" : "Onkologische Therapieintention (VS)",
-    "description" : "ValueSet der zugelassenen Codes für die Intention einer onkologischen Therapielinie oder eines Behandlungsabschnitts.",
-    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent"],
+    "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nDie deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen\nSNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-line-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyLineTypeVS",
+    "title" : "Onkologische Therapielinie – Art (VS)",
+    "description" : "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein\nBeispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert\n`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code\n`Ambulatory chemotherapy` (315601005).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "OnkoTherapyPhaseVS",
+    "title" : "Onkologische Therapiephase / Unter-Intention (VS)",
+    "description" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nDeutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung\nergänzbar).",
+    "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
     "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"

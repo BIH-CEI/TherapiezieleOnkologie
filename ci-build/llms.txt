@@ -14,12 +14,13 @@
 ### CodeSystems
 
 * [Onkologische Therapieziel-Art](de/CodeSystem-onko-therapy-goal-type.md)
-* [Onkologische Therapieintention](de/CodeSystem-onko-therapy-intent.md)
 
 ### ValueSets
 
 * [Onkologische Therapieziel-Art (VS)](de/ValueSet-onko-therapy-goal-type.md)
 * [Onkologische Therapieintention (VS)](de/ValueSet-onko-therapy-intent.md)
+* [Onkologische Therapielinie – Art (VS)](de/ValueSet-onko-therapy-line-type.md)
+* [Onkologische Therapiephase / Unter-Intention (VS)](de/ValueSet-onko-therapy-phase.md)
 
 ### Resource Profiles
 
@@ -52,6 +53,7 @@
 * [DiagnosticReportHistologieCRC (DiagnosticReport)](de/DiagnosticReport-DiagnosticReportHistologieCRC.md)
 * [TherapielinieCRCErstlinie (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieCRCErstlinie.md)
 * [TherapielinieMammaNeoadjuvant (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieMammaNeoadjuvant.md)
+* [TherapiezielCRCErhaltung (Goal)](de/Goal-TherapiezielCRCErhaltung.md)
 * [TherapiezielCRCKurativAbgelehnt (Goal)](de/Goal-TherapiezielCRCKurativAbgelehnt.md)
 * [TherapiezielCRCLebensverlaengerung (Goal)](de/Goal-TherapiezielCRCLebensverlaengerung.md)
 * [TherapiezielMammaHeilung (Goal)](de/Goal-TherapiezielMammaHeilung.md)

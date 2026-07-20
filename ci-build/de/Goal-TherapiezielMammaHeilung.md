@@ -10,7 +10,8 @@
 
 Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
-**Onkologische Therapieintention (Extension)**: Kurativ
+> **Onkologische Therapieintention (Extension)**
+* hauptintention: Kurativ
 
 > **Goal acceptance**
 * individual: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
@@ -56,14 +57,17 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
     "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
   },
   "extension" : [{
-    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-intent",
-        "code" : "kurativ",
-        "display" : "Kurativ"
-      }]
-    }
+    "extension" : [{
+      "url" : "hauptintention",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "373808002",
+          "display" : "Kurativ"
+        }]
+      }
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
   },
   {
     "extension" : [{
