@@ -6,10 +6,15 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
 * insert Translation(^title, en, Oncological line of therapy)
 * insert Translation(^description, en, An oncological line of therapy based on EpisodeOfCare\, EnLiST-conformant. A line of therapy is a treatment segment with a defined intent and a defined tumor condition\, ended by a clinical event such as progression\, toxicity\, patient wish\, end of study or planned switch.)
 
-* extension contains OnkoTherapyIntentExt named therapyIntent 1..1 MS
+* extension contains
+    OnkoTherapyIntentExt named therapyIntent 1..1 MS and
+    OnkoTherapyLineMedicationRequestExt named medicationRequest 0..* MS
 * insert Label(extension[therapyIntent], Therapieintention, Strukturierte Therapieintention der Behandlungslinie – Hauptintention und optionale Behandlungsphase.)
 * insert Translation(extension[therapyIntent] ^short, en, Therapy intent)
 * insert Translation(extension[therapyIntent] ^definition, en, Structured therapy intent of the line of therapy – main intent and optional treatment phase.)
+* insert Label(extension[medicationRequest], Medikationsverordnung, Referenz auf Medikationsverordnungen\, die den Anlass für diese Therapielinie bilden – Ergänzung zu referralRequest\, das auf ServiceRequest beschränkt ist.)
+* insert Translation(extension[medicationRequest] ^short, en, Medication request)
+* insert Translation(extension[medicationRequest] ^definition, en, Reference to the medication requests giving rise to this line of therapy – complements referralRequest\, which is restricted to ServiceRequest.)
 
 * status 1..1 MS
 * insert Label(status, Status, Status der Therapielinie – z. B. active\, onhold\, finished\, cancelled.)
@@ -73,3 +78,10 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
 * insert Label(team, Behandlungsteam, An der Therapielinie beteiligtes Versorgungsteam\, z. B. Tumorboard.)
 * insert Translation(team ^short, en, Care team)
 * insert Translation(team ^definition, en, Care team involved in the line of therapy\, e.g. tumor board.)
+
+// Auslösende Anforderung(en) dieser Therapielinie – auf ServiceRequest beschränkt (FHIR-Core);
+// für MedicationRequest s. extension[medicationRequest]
+* referralRequest MS
+* insert Label(referralRequest, Anforderung, Der Therapielinie zugrunde liegende Anforderung oder Anforderungen\, z. B. Überweisung oder Prozedur-Anforderung.)
+* insert Translation(referralRequest ^short, en, Referral request)
+* insert Translation(referralRequest ^definition, en, Requests giving rise to this line of therapy\, e.g. a referral or procedure request.)
