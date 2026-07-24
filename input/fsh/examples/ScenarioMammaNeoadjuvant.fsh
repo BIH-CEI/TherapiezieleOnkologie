@@ -564,11 +564,68 @@ Description: "Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (C
 * description.text = "Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie"
 * subject = Reference(PatientinMamma)
 * startDate = "2026-08-15"
+// Kern-Target: Rezidivfreiheit / Krankheitsstatus (S3-LL Mammakarzinom, AGO)
 * target[0].measure = http://loinc.org#21976-6 "Cancer outcome status"
-* target[0].detailCodeableConcept.text = "Kein Hinweis auf Tumorprogress oder -rezidiv"
+* target[0].detailCodeableConcept.text = "Kein Hinweis auf Lokalrezidiv oder Fernmetastasen"
 * target[0].dueDate = "2026-11-15"
-* target[1].measure = http://loinc.org#6875-9 "Cancer-Antigen 15-3 [Einheiten/Volumen] in Serum oder Plasma"
+// Bildgebung: jährliche Mammographie der operierten und kontralateralen Brust
+* target[1].measure = http://loinc.org#24606-6 "MG Breast Screening"
+* target[1].detailCodeableConcept.text = "Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis"
+* target[1].dueDate = "2027-04-15"
+// Funktion / Nebenwirkung nach Sentinel-Lymphknoten-Biopsie: Armfunktion, Lymphödem
+* target[2].measure.text = "Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff"
+* target[2].detailCodeableConcept.text = "Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit"
+// Patientenberichtete Lebensqualität (EORTC QLQ-C30 / BR23).
+// Erfassung erfolgt im MII PRO-Modul (PROM) — hier nur als Nachsorge-Target
+// referenziert; die eigentlichen PRO-Messungen werden über das PCO IG
+// angebunden (vgl. analysebericht.md, PCO-Baustein), nicht selbst modelliert.
+* target[3].measure.text = "Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul"
+* target[3].detailCodeableConcept.text = "Stabile bis verbesserte Lebensqualität im Verlauf"
+// Hinweis: Routinemäßige Tumormarker-Bestimmung (z. B. CA 15-3) wird in der
+// asymptomatischen kurativen Nachsorge leitlinienkonform NICHT empfohlen und
+// ist daher bewusst nicht als Monitoring-Target hinterlegt.
 * expressedBy = Reference(OnkologinMamma)
 * addresses[0] = Reference(ConditionMamma)
 * outcomeReference = Reference(ObsDiseaseStatusMamma)
+
+
+// ---------------------------------------------------------------------
+// Nachsorge / Surveillance
+// Eigener Nachsorge-CarePlan, der das Nachsorge-Ziel (FollowUpGoal) trägt.
+// Enthält die geplante (noch nicht durchgeführte) jährliche Mammographie als
+// Maßnahme. Bewusst OHNE outcomeReference/Observation: die Nachsorge liegt in
+// der Zukunft (ab 08/2026), ein Negativbefund existiert daher noch nicht.
+// ---------------------------------------------------------------------
+
+Instance: ServiceRequestMammographieNachsorge
+InstanceOf: ServiceRequest
+Usage: #example
+Title: "Anforderung Nachsorge-Mammographie (Beispiel)"
+Description: "Geplante jährliche Nachsorge-Mammographie der operierten und der kontralateralen Brust zur Rezidiv-/Zweitkarzinom-Früherkennung (S3-Leitlinie Mammakarzinom / AGO)."
+* status = #active
+* intent = #plan
+* code = http://loinc.org#24606-6 "MG Breast Screening"
+* code.text = "Nachsorge-Mammographie beidseits (jährlich)"
+* subject = Reference(PatientinMamma)
+* occurrenceDateTime = "2027-04-15"
+* requester = Reference(OnkologinMamma)
+* reasonReference = Reference(ConditionMamma)
+
+Instance: CarePlanMammaNachsorge
+InstanceOf: OnkoCarePlan
+Usage: #example
+Title: "Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)"
+Description: "Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR): trägt das Nachsorge-Ziel (Rezidivfreiheit, Funktion, Lebensqualität) und die geplante jährliche Mammographie als Maßnahme."
+// custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans
+* extension[custodian].valueReference = Reference(TumorzentrumMamma)
+* status = #active
+* intent = #plan
+* category = http://snomed.info/sct#736252007 "Cancer care plan"
+* subject = Reference(PatientinMamma)
+* period.start = "2026-08-15"
+* addresses = Reference(ConditionMamma)
+* goal = Reference(FollowUpGoal)
+* author = Reference(OnkologinMamma)
+// Geplante Nachsorge-Maßnahme: jährliche Mammographie (noch kein Ergebnis/Befund)
+* activity[0].reference = Reference(ServiceRequestMammographieNachsorge)
 
