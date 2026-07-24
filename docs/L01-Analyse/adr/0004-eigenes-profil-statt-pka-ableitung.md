@@ -62,3 +62,8 @@ Eigenständige Composition-Profile pro Dokumenttyp (Therapieziel, Studienteilnah
 ## Offene Punkte
 
 - Verhältnis zu MII-KDS-Composition-Profilen (falls vorhanden) — in LG-05 prüfen, ob dort harmonisierungsfähige Patterns existieren.
+
+### Verifizierte Referenzen (2026-07-24)
+
+- PKA-Vorbild: [KBV mio42 PKA](https://mio.kbv.de/display/PKA/) (MIO aus NFD + DPE, basierend auf gematik NFDM 1.6.0).
+- Ergänzend zur Composition-Generik siehe ADR-0008 (generische Behandlungsziel-Composition, Krankheits-Spezifik via Value Sets).

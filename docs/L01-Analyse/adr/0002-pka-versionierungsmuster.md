@@ -61,3 +61,9 @@ Versionierungsmuster für alle drei Document Bundles (Therapieziel, Studienteiln
 
 - Schreibhoheit-Modell: Darf nur der ursprüngliche Autor updaten, oder ist Übergabe an andere Akteure (Tumorboard, Folgesektor) erlaubt? → Workshop 1.
 - Verhalten bei konkurrierenden Updates (zwei Akteure schreiben quasi-gleichzeitig) — Conflict-Resolution-Strategie der ePA-Festlegung.
+
+### Verifizierte Referenzen (2026-07-24)
+
+- Die hier geregelte Versionierung liegt auf **Inhaltsebene** (`Composition`). Auf der **Dokument-Management-Ebene** verwaltet die ePA (IHE XDS/MHD) Identität/Ersetzung über [`DocumentReference.masterIdentifier` + `relatesTo = replaces`](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Comprehensive.DocumentReference.html) (bzw. XDS-RPLC-Association).
+- **Companion-Entscheidung:** ADR-0006 regelt diese Metadatenebene explizit; beide Ebenen sind konsistent zu pflegen.
+- PKA-Muster-Referenz: [KBV mio42 PKA](https://mio.kbv.de/display/PKA/).
