@@ -7,7 +7,7 @@ An oncological line of therapy based on EpisodeOfCare, EnLiST-conformant. A line
 
 **Usages:**
 
-* Examples for this Profile: [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md) and [EpisodeOfCare/TherapielinieMammaNeoadjuvant](EpisodeOfCare-TherapielinieMammaNeoadjuvant.md)
+* Examples for this Profile: [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md), [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md) and [EpisodeOfCare/TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-line.json)
 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-20T15:05:40+00:00",
+  "date" : "2026-07-27T15:55:12+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -151,6 +151,46 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.extension:medicationRequest",
+      "path" : "EpisodeOfCare.extension",
+      "sliceName" : "medicationRequest",
+      "short" : "Medikationsverordnung",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Medication request"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Referenz auf Medikationsverordnungen, die den Anlass für diese Therapielinie bilden – Ergänzung zu referralRequest, das auf ServiceRequest beschränkt ist.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Reference to the medication requests giving rise to this line of therapy – complements referralRequest, which is restricted to ServiceRequest."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request"]
       }],
       "mustSupport" : true
     },
@@ -500,6 +540,39 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
         }]
       },
       "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.referralRequest",
+      "path" : "EpisodeOfCare.referralRequest",
+      "short" : "Anforderung",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Referral request"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Der Therapielinie zugrunde liegende Anforderung oder Anforderungen, z. B. Überweisung oder Prozedur-Anforderung.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Requests giving rise to this line of therapy, e.g. a referral or procedure request."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "mustSupport" : true
     },
     {

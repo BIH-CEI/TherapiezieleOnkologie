@@ -8,7 +8,7 @@ Structured tumor board recommendation based on MedicationRequest. The category m
 **Usages:**
 
 * Refer to this Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
-* Examples for this Profile: [MedicationRequest/MedicationRequestFOLFOX](MedicationRequest-MedicationRequestFOLFOX.md) and [MedicationRequest/MedicationRequestKEYNOTE522](MedicationRequest-MedicationRequestKEYNOTE522.md)
+* Examples for this Profile: [MedicationRequest/MedicationRequestFOLFOX](MedicationRequest-MedicationRequestFOLFOX.md) and [MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-tumorboard-medication-request.json)
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-tumorboard-m
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-20T15:05:40+00:00",
+  "date" : "2026-07-27T15:55:12+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

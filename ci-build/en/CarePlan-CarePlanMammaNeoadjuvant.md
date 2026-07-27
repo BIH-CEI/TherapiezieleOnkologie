@@ -10,9 +10,6 @@
 
 Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
-> **Onkologische Therapieintention (Extension)**
-* hauptintention: Kurativ
-
 **CarePlan Custodian (Extension)**: [Organization Zertifiziertes Brustzentrum Musterklinik](Organization-TumorzentrumMamma.md)
 
 **status**: Active
@@ -29,9 +26,9 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **addresses**: [Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse](Condition-ConditionMamma.md)
 
-**goal**: [Goal: extension = ,; lifecycleStatus = active; achievementStatus = Achieved; category = Heilung,Funktionserhalt; priority = High Priority; description = ; start[x] = 2025-09-22](Goal-TherapiezielMammaHeilung.md)
+**goal**: [Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = Achieved; category = Heilung,Funktionserhalt; priority = High Priority; description = ; start[x] = 2025-09-22](Goal-TherapiezielMammaHeilung.md)
 
-> **activity****reference**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestKEYNOTE522.md)
+> **activity****reference**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
 
 > **activity****outcomeReference**: [Procedure Lumpectomy of breast (procedure)](Procedure-ProcedureOperationMamma.md)**reference**: [ServiceRequest Lumpectomy of breast (procedure)](ServiceRequest-ServiceRequestProcedure.md)
 
@@ -49,19 +46,6 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
     "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
   },
   "extension" : [{
-    "extension" : [{
-      "url" : "hauptintention",
-      "valueCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "373808002",
-          "display" : "Kurativ"
-        }]
-      }
-    }],
-    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
-  },
-  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
     "valueReference" : {
       "reference" : "Organization/TumorzentrumMamma"
@@ -93,7 +77,7 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
   }],
   "activity" : [{
     "reference" : {
-      "reference" : "MedicationRequest/MedicationRequestKEYNOTE522"
+      "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
     }
   },
   {

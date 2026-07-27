@@ -15,7 +15,7 @@ Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / 
 **Usages:**
 
 * Use this Extension: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md) and [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan.md)
-* Examples for this Extension: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md) and [CarePlan/DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.md)
+* Examples for this Extension: [Bundle/BundleCRCPalliativ](Bundle-BundleCRCPalliativ.md), [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md), [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [CarePlan/CarePlanMammaNachsorge](CarePlan-CarePlanMammaNachsorge.md)... Show 2 more, [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md) and [CarePlan/DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-careplan-custodian.json)
 
@@ -90,7 +90,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-carepla
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-20T15:05:40+00:00",
+  "date" : "2026-07-27T15:55:12+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

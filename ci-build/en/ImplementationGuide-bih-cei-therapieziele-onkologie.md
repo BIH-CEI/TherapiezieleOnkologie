@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-20T15:05:40+00:00",
+  "date" : "2026-07-27T15:55:12+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -42,7 +42,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.2.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7ext",
@@ -818,6 +818,22 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-ServiceRequestMammographieNachsorge.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ServiceRequestMammographieNachsorge"
+      },
+      "name" : "Anforderung Nachsorge-Mammographie (Beispiel)",
+      "description" : "Geplante jährliche Nachsorge-Mammographie der operierten und der kontralateralen Brust zur Rezidiv-/Zweitkarzinom-Früherkennung (S3-Leitlinie Mammakarzinom / AGO).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ServiceRequest-ServiceRequestBiopsieMamma.html"
       }],
       "reference" : {
@@ -933,7 +949,7 @@
       "reference" : {
         "reference" : "CarePlan/CarePlanMammaDiagnostik"
       },
-      "name" : "Diagnostischer CarePlan ",
+      "name" : "Diagnostischer CarePlan",
       "description" : "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose.",
       "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
     },
@@ -976,10 +992,10 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "MedicationRequest-MedicationRequestKEYNOTE522.html"
+        "valueUri" : "MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html"
       }],
       "reference" : {
-        "reference" : "MedicationRequest/MedicationRequestKEYNOTE522"
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
       },
       "name" : "Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)",
       "description" : "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC).",
@@ -1324,6 +1340,38 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CarePlan"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CarePlan-CarePlanMammaNachsorge.html"
+      }],
+      "reference" : {
+        "reference" : "CarePlan/CarePlanMammaNachsorge"
+      },
+      "name" : "Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)",
+      "description" : "Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR): trägt das Nachsorge-Ziel (Rezidivfreiheit, Funktion, Lebensqualität) und die geplante jährliche Mammographie als Maßnahme.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Goal-DiagnosticGoal.html"
+      }],
+      "reference" : {
+        "reference" : "Goal/DiagnosticGoal"
+      },
+      "name" : "Onkologisches Diagnosezeil",
+      "description" : "Das onkologische Diagnoseziel wird im diagnostischen CarePlan verlinkt und hat zum Ziel, dass eine Tumordiagnostik gestellt werden kann.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       },
       {
@@ -1456,14 +1504,46 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "EpisodeOfCare-TherapielinieMammaNeoadjuvant.html"
+        "valueUri" : "EpisodeOfCare-TherapielinieChemo.html"
       }],
       "reference" : {
-        "reference" : "EpisodeOfCare/TherapielinieMammaNeoadjuvant"
+        "reference" : "EpisodeOfCare/TherapielinieChemo"
       },
-      "name" : "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie (Beispiel)",
+      "name" : "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie",
       "description" : "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts.",
       "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EpisodeOfCare"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "EpisodeOfCare-TherapielinieOperation.html"
+      }],
+      "reference" : {
+        "reference" : "EpisodeOfCare/TherapielinieOperation"
+      },
+      "name" : "Therapielinie 2 – Operation",
+      "description" : "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-onko-therapy-line-medication-request.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/onko-therapy-line-medication-request"
+      },
+      "name" : "Therapielinie – Medikationsverordnung (Extension)",
+      "description" : "Referenz auf die `MedicationRequest`-Ressource(en), die den Anlass bzw. die Verordnung für\ndiese Therapielinie bilden.\n\n`EpisodeOfCare.referralRequest` ist im FHIR-Core auf `Reference(ServiceRequest)` beschränkt\nund kann in einem Profil nicht auf weitere Zieltypen erweitert werden (Profile dürfen\nReferenzziele nur einschränken, nicht erweitern). Für Therapielinien, deren Auslöser eine\nMedikationsverordnung statt eines ServiceRequest ist (z. B. eine antineoplastische\nSystemtherapie), wird daher diese Extension ergänzend zu `referralRequest` verwendet.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1532,6 +1612,38 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BundleMammaNeoadjuvant.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/BundleMammaNeoadjuvant"
+      },
+      "name" : "Transaction-Bundle – Mammakarzinom neoadjuvant (Beispiel)",
+      "description" : "Postbares Transaction-Bundle mit allen Instanzen des Mamma-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinien, Therapieziele, Tumorboard-Empfehlungen, Verlauf).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BundleCRCPalliativ.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/BundleCRCPalliativ"
+      },
+      "name" : "Transaction-Bundle – mCRC palliativ (Beispiel)",
+      "description" : "Postbares Transaction-Bundle mit allen Instanzen des mCRC-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinie, Therapieziele, Tumorboard-Empfehlungen, Verlauf).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       },
       {
@@ -1559,6 +1671,22 @@
       },
       "name" : "Tumoransprechen / Disease Status – Komplettremission (Beispiel)",
       "description" : "Verlaufs-Observation zum Krankheitsstatus nach neoadjuvanter Therapie und Operation: pathologische Komplettremission (vgl. mCODE Cancer Disease Status).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-Tumorboard.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/Tumorboard"
+      },
+      "name" : "Tumorboard",
+      "description" : "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.",
       "exampleBoolean" : true
     },
     {
@@ -1640,6 +1768,22 @@
       "name" : "Tumorzentrum (Custodian, Beispiel)",
       "description" : "Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne.",
       "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Goal-FollowUpGoal.html"
+      }],
+      "reference" : {
+        "reference" : "Goal/FollowUpGoal"
+      },
+      "name" : "Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung",
+      "description" : "Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms.",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
     },
     {
       "extension" : [{

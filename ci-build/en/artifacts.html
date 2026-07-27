@@ -425,6 +425,25 @@ OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig
 <code class="language-plaintext highlighter-rouge">procedure-intent</code>.</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-onko-therapy-line-medication-request.html"
+                  title="StructureDefinition/onko-therapy-line-medication-request">
+                  <span title="StructureDefinition/onko-therapy-line-medication-request">Therapielinie – Medikationsverordnung (Extension)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Referenz auf die <code class="language-plaintext highlighter-rouge">MedicationRequest</code>-Ressource(en), die den Anlass bzw. die Verordnung für
+diese Therapielinie bilden.</p>
+
+<p><code class="language-plaintext highlighter-rouge">EpisodeOfCare.referralRequest</code> ist im FHIR-Core auf <code class="language-plaintext highlighter-rouge">Reference(ServiceRequest)</code> beschränkt
+und kann in einem Profil nicht auf weitere Zieltypen erweitert werden (Profile dürfen
+Referenzziele nur einschränken, nicht erweitern). Für Therapielinien, deren Auslöser eine
+Medikationsverordnung statt eines ServiceRequest ist (z. B. eine antineoplastische
+Systemtherapie), wird daher diese Extension ergänzend zu <code class="language-plaintext highlighter-rouge">referralRequest</code> verwendet.</p>
+</td>
+         </tr>
       </tbody>
    </table>
    <a name="3"> </a>
@@ -548,6 +567,18 @@ ergänzbar).</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ServiceRequest-ServiceRequestMammographieNachsorge.html"
+                  title="ServiceRequest/ServiceRequestMammographieNachsorge">
+                  <span title="ServiceRequest/ServiceRequestMammographieNachsorge">Anforderung Nachsorge-Mammographie (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Geplante jährliche Nachsorge-Mammographie der operierten und der kontralateralen Brust zur Rezidiv-/Zweitkarzinom-Früherkennung (S3-Leitlinie Mammakarzinom / AGO).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ServiceRequest-ServiceRequestBiopsieMamma.html"
                   title="ServiceRequest/ServiceRequestBiopsieMamma">
                   <span title="ServiceRequest/ServiceRequestBiopsieMamma">Anforderung Stanzbiopsie Mamma (Beispiel)
@@ -633,7 +664,7 @@ ergänzbar).</p>
             <td style="column-width:30%">
                <a href="CarePlan-CarePlanMammaDiagnostik.html"
                   title="CarePlan/CarePlanMammaDiagnostik">
-                  <span title="CarePlan/CarePlanMammaDiagnostik">Diagnostischer CarePlan 
+                  <span title="CarePlan/CarePlanMammaDiagnostik">Diagnostischer CarePlan
 </span>
                </a>
             </td>
@@ -667,9 +698,9 @@ ergänzbar).</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="MedicationRequest-MedicationRequestKEYNOTE522.html"
-                  title="MedicationRequest/MedicationRequestKEYNOTE522">
-                  <span title="MedicationRequest/MedicationRequestKEYNOTE522">Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)
+               <a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html"
+                  title="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma">
+                  <span title="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma">Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)
 </span>
                </a>
             </td>
@@ -805,6 +836,18 @@ ergänzbar).</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="CarePlan-CarePlanMammaNachsorge.html"
+                  title="CarePlan/CarePlanMammaNachsorge">
+                  <span title="CarePlan/CarePlanMammaNachsorge">Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR): trägt das Nachsorge-Ziel (Rezidivfreiheit, Funktion, Lebensqualität) und die geplante jährliche Mammographie als Maßnahme.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CarePlan-CarePlanCRCPalliativ.html"
                   title="CarePlan/CarePlanCRCPalliativ">
                   <span title="CarePlan/CarePlanCRCPalliativ">Onkologischer CarePlan – mCRC palliativ (Beispiel)
@@ -813,6 +856,17 @@ ergänzbar).</p>
             </td>
             <td>
 <p>Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-DiagnosticGoal.html" title="Goal/DiagnosticGoal">
+                  <span title="Goal/DiagnosticGoal">Onkologisches Diagnosezeil
+</span>
+               </a>
+            </td>
+            <td>
+<p>Das onkologische Diagnoseziel wird im diagnostischen CarePlan verlinkt und hat zum Ziel, dass eine Tumordiagnostik gestellt werden kann.</p>
 </td>
          </tr>
          <tr>
@@ -899,9 +953,21 @@ ergänzbar).</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="EpisodeOfCare-TherapielinieMammaNeoadjuvant.html"
-                  title="EpisodeOfCare/TherapielinieMammaNeoadjuvant">
-                  <span title="EpisodeOfCare/TherapielinieMammaNeoadjuvant">Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie (Beispiel)
+               <a href="EpisodeOfCare-TherapielinieChemo.html"
+                  title="EpisodeOfCare/TherapielinieChemo">
+                  <span title="EpisodeOfCare/TherapielinieChemo">Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie
+</span>
+               </a>
+            </td>
+            <td>
+<p>Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="EpisodeOfCare-TherapielinieOperation.html"
+                  title="EpisodeOfCare/TherapielinieOperation">
+                  <span title="EpisodeOfCare/TherapielinieOperation">Therapielinie 2 – Operation
 </span>
                </a>
             </td>
@@ -959,6 +1025,29 @@ ergänzbar).</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Bundle-BundleMammaNeoadjuvant.html"
+                  title="Bundle/BundleMammaNeoadjuvant">
+                  <span title="Bundle/BundleMammaNeoadjuvant">Transaction-Bundle – Mammakarzinom neoadjuvant (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Postbares Transaction-Bundle mit allen Instanzen des Mamma-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinien, Therapieziele, Tumorboard-Empfehlungen, Verlauf).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-BundleCRCPalliativ.html" title="Bundle/BundleCRCPalliativ">
+                  <span title="Bundle/BundleCRCPalliativ">Transaction-Bundle – mCRC palliativ (Beispiel)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Postbares Transaction-Bundle mit allen Instanzen des mCRC-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinie, Therapieziele, Tumorboard-Empfehlungen, Verlauf).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-ObservationDiseaseStatusCRC.html"
                   title="Observation/ObservationDiseaseStatusCRC">
                   <span title="Observation/ObservationDiseaseStatusCRC">Tumoransprechen / Disease Status (Beispiel)
@@ -979,6 +1068,17 @@ ergänzbar).</p>
             </td>
             <td>
 <p>Verlaufs-Observation zum Krankheitsstatus nach neoadjuvanter Therapie und Operation: pathologische Komplettremission (vgl. mCODE Cancer Disease Status).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Tumorboard.html" title="Organization/Tumorboard">
+                  <span title="Organization/Tumorboard">Tumorboard
+</span>
+               </a>
+            </td>
+            <td>
+<p>Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.</p>
 </td>
          </tr>
          <tr>
@@ -1015,6 +1115,17 @@ ergänzbar).</p>
             </td>
             <td>
 <p>Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-FollowUpGoal.html" title="Goal/FollowUpGoal">
+                  <span title="Goal/FollowUpGoal">Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms.</p>
 </td>
          </tr>
          <tr>
@@ -1058,8 +1169,8 @@ ergänzbar).</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-20 15:05:00 +0000">
-    2026-07-20
+  <span title="2026-07-27 15:55:00 +0000">
+    2026-07-27
   </span>
 
           <br/>

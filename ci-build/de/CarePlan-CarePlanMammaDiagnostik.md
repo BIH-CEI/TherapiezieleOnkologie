@@ -1,6 +1,6 @@
 # Diagnostischer CarePlan - Implementierungsleitfaden Therapieziele Onkologie v0.1.0
 
-## Beispiel CarePlan: Diagnostischer CarePlan 
+## Beispiel CarePlan: Diagnostischer CarePlan
 
 -------
 
@@ -21,6 +21,8 @@ Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan
 **author**: [Practitioner Katrin Musterarzt ](Practitioner-OnkologinMamma.md)
 
 **addresses**: [Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse](Condition-ConditionMamma.md)
+
+**goal**: [Goal: extension = ; lifecycleStatus = active; achievementStatus = In Progress; category = Diagnostic intent; priority = High Priority; description = ; start[x] = 2025-09-12](Goal-DiagnosticGoal.md)
 
 > **activity****outcomeReference**: [Procedure Core needle biopsy of breast (procedure)](Procedure-ProcedureBiopsieMamma.md)**reference**: [ServiceRequest Core needle biopsy of breast (procedure)](ServiceRequest-ServiceRequestBiopsieMamma.md)
 
@@ -61,6 +63,9 @@ Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan
   },
   "addresses" : [{
     "reference" : "Condition/ConditionMamma"
+  }],
+  "goal" : [{
+    "reference" : "Goal/DiagnosticGoal"
   }],
   "activity" : [{
     "outcomeReference" : [{

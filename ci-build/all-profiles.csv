@@ -1498,6 +1498,28 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "onko-therapy-intent","Extension.value[x]","Extension.value[x]","","","",0,0,"","","","base64Binary {[]} {[]}
 boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
+"onko-therapy-line-medication-request","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","Therapielinie – Medikationsverordnung (Extension)","Referenz auf die `MedicationRequest`-Ressource(en), die den Anlass bzw. die Verordnung für
+diese Therapielinie bilden.
+
+`EpisodeOfCare.referralRequest` ist im FHIR-Core auf `Reference(ServiceRequest)` beschränkt
+und kann in einem Profil nicht auf weitere Zieltypen erweitert werden (Profile dürfen
+Referenzziele nur einschränken, nicht erweitern). Für Therapielinien, deren Auslöser eine
+Medikationsverordnung statt eines ServiceRequest ist (z. B. eine antineoplastische
+Systemtherapie), wird daher diese Extension ergänzend zu `referralRequest` verwendet.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-therapy-line-medication-request","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"onko-therapy-line-medication-request","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-therapy-line-medication-request","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"onko-therapy-line-medication-request","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest]]}
+","Medikationsverordnung","Referenz auf die der Therapielinie zugrunde liegende Medikationsverordnung.","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
 "onko-therapy-line","EpisodeOfCare","EpisodeOfCare","","Case Program Problem
 ","",0,*,"","","","null {[]} {[]}
 ","An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility","An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
@@ -1526,6 +1548,10 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "onko-therapy-line","EpisodeOfCare.extension:therapyIntent","EpisodeOfCare.extension","therapyIntent","","",1,1,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent]]} {[]}
 ","Therapieintention","Strukturierte Therapieintention der Behandlungslinie – Hauptintention und optionale Behandlungsphase.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-therapy-line","EpisodeOfCare.extension:medicationRequest","EpisodeOfCare.extension","medicationRequest","","",0,*,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request]]} {[]}
+","Medikationsverordnung","Referenz auf Medikationsverordnungen, die den Anlass für diese Therapielinie bilden – Ergänzung zu referralRequest, das auf ServiceRequest beschränkt ist.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "onko-therapy-line","EpisodeOfCare.modifierExtension","EpisodeOfCare.modifierExtension","","extensions
@@ -1603,8 +1629,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "onko-therapy-line","EpisodeOfCare.period","EpisodeOfCare.period","","","",1,1,"Y","","Y","Period {[]} {[]}
 ","Behandlungszeitraum","Zeitraum der Therapielinie von Beginn bis Ende des Behandlungsabschnitts.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"onko-therapy-line","EpisodeOfCare.referralRequest","EpisodeOfCare.referralRequest","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1]]}
-","Originating Referral Request(s)","Referral Request(s) that are fulfilled by this EpisodeOfCare, incoming referrals.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare.referralRequest",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"onko-therapy-line","EpisodeOfCare.referralRequest","EpisodeOfCare.referralRequest","","","",0,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1]]}
+","Anforderung","Der Therapielinie zugrunde liegende Anforderung oder Anforderungen, z. B. Überweisung oder Prozedur-Anforderung.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare.referralRequest",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "onko-therapy-line","EpisodeOfCare.careManager","EpisodeOfCare.careManager","","","",0,1,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1]]}
 ","Fallverantwortliche/r","Für die Therapielinie fallverantwortliche behandelnde Person.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare.careManager",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

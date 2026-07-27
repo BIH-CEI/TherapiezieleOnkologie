@@ -1,0 +1,86 @@
+# Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel) - Implementierungsleitfaden Therapieziele Onkologie v0.1.0
+
+## Example CarePlan: Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)
+
+-------
+
+**English**
+
+-------
+
+Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
+
+**CarePlan Custodian (Extension)**: [Organization Zertifiziertes Brustzentrum Musterklinik](Organization-TumorzentrumMamma.md)
+
+**status**: Active
+
+**intent**: Plan
+
+**category**: Cancer care plan
+
+**subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
+
+**period**: 2026-08-15 --> (ongoing)
+
+**author**: [Practitioner Katrin Musterarzt ](Practitioner-OnkologinMamma.md)
+
+**addresses**: [Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse](Condition-ConditionMamma.md)
+
+**goal**: [Goal: extension = ,,; lifecycleStatus = planned; achievementStatus = In Progress; category = Lebensqualität; priority = High Priority; description = ; start[x] = 2026-08-15](Goal-FollowUpGoal.md)
+
+### Activities
+
+| | |
+| :--- | :--- |
+| - | **Reference** |
+| * | [ServiceRequest MG Breast Screening](ServiceRequest-ServiceRequestMammographieNachsorge.md) |
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CarePlan",
+  "id" : "CarePlanMammaNachsorge",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
+  },
+  "extension" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+    "valueReference" : {
+      "reference" : "Organization/TumorzentrumMamma"
+    }
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "736252007",
+      "display" : "Cancer care plan"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "period" : {
+    "start" : "2026-08-15"
+  },
+  "author" : {
+    "reference" : "Practitioner/OnkologinMamma"
+  },
+  "addresses" : [{
+    "reference" : "Condition/ConditionMamma"
+  }],
+  "goal" : [{
+    "reference" : "Goal/FollowUpGoal"
+  }],
+  "activity" : [{
+    "reference" : {
+      "reference" : "ServiceRequest/ServiceRequestMammographieNachsorge"
+    }
+  }]
+}
+
+```

@@ -18,6 +18,14 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 * status: agree
 * priority: High Priority
 
+> **Goal: Related Goal**
+* type: Predecessor
+* target: [Goal: extension = ; lifecycleStatus = active; achievementStatus = In Progress; category = Diagnostic intent; priority = High Priority; description = ; start[x] = 2025-09-12](Goal-DiagnosticGoal.md)
+
+> **Goal: Related Goal**
+* type: Successor
+* target: [Goal: extension = ,,; lifecycleStatus = planned; achievementStatus = In Progress; category = Lebensqualität; priority = High Priority; description = ; start[x] = 2026-08-15](Goal-FollowUpGoal.md)
+
 **lifecycleStatus**: Active
 
 **achievementStatus**: Achieved
@@ -91,6 +99,44 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
       }
     }],
     "url" : "http://hl7.org/fhir/StructureDefinition/goal-acceptance"
+  },
+  {
+    "extension" : [{
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/goal-relationship-type",
+          "code" : "predecessor",
+          "display" : "Predecessor"
+        }]
+      }
+    },
+    {
+      "url" : "target",
+      "valueReference" : {
+        "reference" : "Goal/DiagnosticGoal"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+  },
+  {
+    "extension" : [{
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/goal-relationship-type",
+          "code" : "successor",
+          "display" : "Successor"
+        }]
+      }
+    },
+    {
+      "url" : "target",
+      "valueReference" : {
+        "reference" : "Goal/FollowUpGoal"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
   }],
   "lifecycleStatus" : "active",
   "achievementStatus" : {

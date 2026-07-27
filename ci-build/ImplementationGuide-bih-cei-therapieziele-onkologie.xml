@@ -13,7 +13,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-07-20T15:05:40+00:00"/>
+  <date value="2026-07-27T15:55:12+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -39,7 +39,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.2.0"/>
+    <version value="7.3.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -603,6 +603,17 @@
         <valueString value="ServiceRequest"/>
       </extension>
       <reference>
+        <reference value="ServiceRequest/ServiceRequestMammographieNachsorge"/>
+      </reference>
+      <name value="Anforderung Nachsorge-Mammographie (Beispiel)"/>
+      <description value="Geplante jährliche Nachsorge-Mammographie der operierten und der kontralateralen Brust zur Rezidiv-/Zweitkarzinom-Früherkennung (S3-Leitlinie Mammakarzinom / AGO)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
         <reference value="ServiceRequest/ServiceRequestBiopsieMamma"/>
       </reference>
       <name value="Anforderung Stanzbiopsie Mamma (Beispiel)"/>
@@ -680,7 +691,7 @@
       <reference>
         <reference value="CarePlan/CarePlanMammaDiagnostik"/>
       </reference>
-      <name value="Diagnostischer CarePlan "/>
+      <name value="Diagnostischer CarePlan"/>
       <description value="Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."/>
       <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
     </resource>
@@ -711,7 +722,7 @@
         <valueString value="MedicationRequest"/>
       </extension>
       <reference>
-        <reference value="MedicationRequest/MedicationRequestKEYNOTE522"/>
+        <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
       </reference>
       <name value="Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"/>
       <description value="Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."/>
@@ -950,6 +961,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/CarePlanMammaNachsorge"/>
+      </reference>
+      <name value="Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)"/>
+      <description value="Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR): trägt das Nachsorge-Ziel (Rezidivfreiheit, Funktion, Lebensqualität) und die geplante jährliche Mammographie als Maßnahme."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/DiagnosticGoal"/>
+      </reference>
+      <name value="Onkologisches Diagnosezeil"/>
+      <description value="Das onkologische Diagnoseziel wird im diagnostischen CarePlan verlinkt und hat zum Ziel, dass eine Tumordiagnostik gestellt werden kann."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -1041,11 +1074,33 @@
         <valueString value="EpisodeOfCare"/>
       </extension>
       <reference>
-        <reference value="EpisodeOfCare/TherapielinieMammaNeoadjuvant"/>
+        <reference value="EpisodeOfCare/TherapielinieChemo"/>
       </reference>
-      <name value="Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie (Beispiel)"/>
+      <name value="Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie"/>
       <description value="Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."/>
       <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/TherapielinieOperation"/>
+      </reference>
+      <name value="Therapielinie 2 – Operation"/>
+      <description value="Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-therapy-line-medication-request"/>
+      </reference>
+      <name value="Therapielinie – Medikationsverordnung (Extension)"/>
+      <description value="Referenz auf die `MedicationRequest`-Ressource(en), die den Anlass bzw. die Verordnung für&#xA;diese Therapielinie bilden.&#xA;&#xA;`EpisodeOfCare.referralRequest` ist im FHIR-Core auf `Reference(ServiceRequest)` beschränkt&#xA;und kann in einem Profil nicht auf weitere Zieltypen erweitert werden (Profile dürfen&#xA;Referenzziele nur einschränken, nicht erweitern). Für Therapielinien, deren Auslöser eine&#xA;Medikationsverordnung statt eines ServiceRequest ist (z. B. eine antineoplastische&#xA;Systemtherapie), wird daher diese Extension ergänzend zu `referralRequest` verwendet."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1093,6 +1148,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BundleMammaNeoadjuvant"/>
+      </reference>
+      <name value="Transaction-Bundle – Mammakarzinom neoadjuvant (Beispiel)"/>
+      <description value="Postbares Transaction-Bundle mit allen Instanzen des Mamma-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinien, Therapieziele, Tumorboard-Empfehlungen, Verlauf)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BundleCRCPalliativ"/>
+      </reference>
+      <name value="Transaction-Bundle – mCRC palliativ (Beispiel)"/>
+      <description value="Postbares Transaction-Bundle mit allen Instanzen des mCRC-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinie, Therapieziele, Tumorboard-Empfehlungen, Verlauf)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
@@ -1111,6 +1188,17 @@
       </reference>
       <name value="Tumoransprechen / Disease Status – Komplettremission (Beispiel)"/>
       <description value="Verlaufs-Observation zum Krankheitsstatus nach neoadjuvanter Therapie und Operation: pathologische Komplettremission (vgl. mCODE Cancer Disease Status)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/Tumorboard"/>
+      </reference>
+      <name value="Tumorboard"/>
+      <description value="Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1167,6 +1255,17 @@
       <name value="Tumorzentrum (Custodian, Beispiel)"/>
       <description value="Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne."/>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/FollowUpGoal"/>
+      </reference>
+      <name value="Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung"/>
+      <description value="Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

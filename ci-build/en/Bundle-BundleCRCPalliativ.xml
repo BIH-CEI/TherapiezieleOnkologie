@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="BundleCRCPalliativ"/>
+  <language value="en"/>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Patient/PatientinCRC"/>
+    <resource>
+      <Patient>
+        <id value="PatientinCRC"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="Musterfrau"/>
+          <given value="Erika"/>
+        </name>
+        <gender value="female"/>
+        <birthDate value="1961-09-12"/>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Practitioner/OnkologinCRC"/>
+    <resource>
+      <Practitioner>
+        <id value="OnkologinCRC"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="Musterarzt"/>
+          <given value="Petra"/>
+        </name>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Organization/TumorzentrumCRC"/>
+    <resource>
+      <Organization>
+        <id value="TumorzentrumCRC"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name value="Onkologisches Zentrum Musterklinik"/>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/CareTeam/TumorboardCRC"/>
+    <resource>
+      <CareTeam>
+        <id value="TumorboardCRC"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <name value="Interdisziplinäres Tumorboard Kolorektales Karzinom"/>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <participant>
+          <member>
+            <reference value="Practitioner/OnkologinCRC"/>
+          </member>
+        </participant>
+        <managingOrganization>
+          <reference value="Organization/TumorzentrumCRC"/>
+        </managingOrganization>
+      </CareTeam>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CareTeam"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Condition/ConditionCRC"/>
+    <resource>
+      <Condition>
+        <id value="ConditionCRC"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2026-01-20"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2026"/>
+            <code value="C18.9"/>
+            <display value="Bösartige Neubildung: Kolon, nicht näher bezeichnet"/>
+          </coding>
+          <text value="Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <onsetDateTime value="2026-01-20"/>
+        <recordedDate value="2026-01-20"/>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/CarePlan/DiagnostikCarePlanCRC"/>
+    <resource>
+      <CarePlan>
+        <id value="DiagnostikCarePlanCRC"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian">
+          <valueReference>
+            <reference value="Organization/TumorzentrumCRC"/>
+          </valueReference>
+        </extension>
+        <status value="completed"/>
+        <intent value="plan"/>
+        <category>
+          <text value="Tumordiagnostik"/>
+        </category>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <period>
+          <start value="2026-01-05"/>
+          <end value="2026-01-20"/>
+        </period>
+        <careTeam>
+          <reference value="CareTeam/TumorboardCRC"/>
+        </careTeam>
+        <addresses>
+          <reference value="Condition/ConditionCRC"/>
+        </addresses>
+        <activity>
+          <outcomeReference>
+            <reference value="DiagnosticReport/DiagnosticReportHistologieCRC"/>
+          </outcomeReference>
+          <reference>
+            <reference value="ServiceRequest/ServiceRequestKoloskopieCRC"/>
+          </reference>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/ServiceRequest/ServiceRequestKoloskopieCRC"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequestKoloskopieCRC"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <intent value="order"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="73761001"/>
+            <display value="Colonoscopy"/>
+          </coding>
+          <text value="Koloskopie mit Biopsieentnahme"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/DiagnosticReport/DiagnosticReportHistologieCRC"/>
+    <resource>
+      <DiagnosticReport>
+        <id value="DiagnosticReportHistologieCRC"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="60568-3"/>
+            <display value="Pathology Synoptic report"/>
+          </coding>
+          <text value="Histopathologie Kolonbiopsie"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <effectiveDateTime value="2026-01-18"/>
+        <conclusion value="Adenokarzinom des Kolons (C18.9), ICD-O-3 M8140/3."/>
+      </DiagnosticReport>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="DiagnosticReport"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/EpisodeOfCare/TherapielinieCRCErstlinie"/>
+    <resource>
+      <EpisodeOfCare>
+        <id value="TherapielinieCRCErstlinie"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+          <extension url="hauptintention">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="363676003"/>
+                <display value="Palliativ"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="phase">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="450827009"/>
+                <display value="Induktionstherapie"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <status value="active"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="315601005"/>
+            <display value="Ambulatory chemotherapy"/>
+          </coding>
+        </type>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/ConditionCRC"/>
+          </condition>
+          <role>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="CC"/>
+              <display value="Chief complaint"/>
+            </coding>
+          </role>
+          <rank value="1"/>
+        </diagnosis>
+        <patient>
+          <reference value="Patient/PatientinCRC"/>
+        </patient>
+        <managingOrganization>
+          <reference value="Organization/TumorzentrumCRC"/>
+        </managingOrganization>
+        <period>
+          <start value="2026-02-10"/>
+        </period>
+        <careManager>
+          <reference value="Practitioner/OnkologinCRC"/>
+        </careManager>
+        <team>
+          <reference value="CareTeam/TumorboardCRC"/>
+        </team>
+      </EpisodeOfCare>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="EpisodeOfCare"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Goal/TherapiezielCRCLebensverlaengerung"/>
+    <resource>
+      <Goal>
+        <id value="TherapiezielCRCLebensverlaengerung"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+          <extension url="hauptintention">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="363676003"/>
+                <display value="Palliativ"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="phase">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="450827009"/>
+                <display value="Induktionstherapie"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-acceptance">
+          <extension url="individual">
+            <valueReference>
+              <reference value="Patient/PatientinCRC"/>
+            </valueReference>
+          </extension>
+          <extension url="status">
+            <valueCode value="agree"/>
+          </extension>
+          <extension url="priority">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+                <code value="high-priority"/>
+                <display value="High Priority"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-relationship">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/goal-relationship-type"/>
+                <code value="replacement"/>
+                <display value="Replacement"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="target">
+            <valueReference>
+              <reference value="Goal/TherapiezielCRCKurativAbgelehnt"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-relationship">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/goal-relationship-type"/>
+                <code value="successor"/>
+                <display value="Successor"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="target">
+            <valueReference>
+              <reference value="Goal/TherapiezielCRCErhaltung"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <lifecycleStatus value="active"/>
+        <achievementStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+            <code value="in-progress"/>
+            <display value="In Progress"/>
+          </coding>
+        </achievementStatus>
+        <category>
+          <coding>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensverlaengerung"/>
+            <display value="Lebensverlängerung"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="symptomkontrolle"/>
+            <display value="Symptomkontrolle / Palliation"/>
+          </coding>
+        </category>
+        <priority>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+            <code value="high-priority"/>
+            <display value="High Priority"/>
+          </coding>
+        </priority>
+        <description>
+          <text value="Verlängerung des Gesamtüberlebens und Kontrolle tumorbedingter Symptome unter palliativer Systemtherapie."/>
+        </description>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <startDate value="2026-02-10"/>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="21908-9"/>
+              <display value="Stage group.clinical Cancer"/>
+            </coding>
+          </measure>
+          <dueDate value="2026-08-10"/>
+        </target>
+        <expressedBy>
+          <reference value="Practitioner/OnkologinCRC"/>
+        </expressedBy>
+        <addresses>
+          <reference value="Condition/ConditionCRC"/>
+        </addresses>
+        <outcomeReference>
+          <reference value="Observation/ObservationDiseaseStatusCRC"/>
+        </outcomeReference>
+      </Goal>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Goal"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Goal/TherapiezielCRCKurativAbgelehnt"/>
+    <resource>
+      <Goal>
+        <id value="TherapiezielCRCKurativAbgelehnt"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+          <extension url="hauptintention">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="373808002"/>
+                <display value="Kurativ"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-reasonRejected">
+          <valueCodeableConcept>
+            <text value="Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar."/>
+          </valueCodeableConcept>
+        </extension>
+        <lifecycleStatus value="rejected"/>
+        <category>
+          <coding>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="heilung"/>
+            <display value="Heilung"/>
+          </coding>
+        </category>
+        <description>
+          <text value="Kurative Resektion des Primärtumors mit kurativer Absicht."/>
+        </description>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <expressedBy>
+          <reference value="Practitioner/OnkologinCRC"/>
+        </expressedBy>
+        <addresses>
+          <reference value="Condition/ConditionCRC"/>
+        </addresses>
+      </Goal>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Goal"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Goal/TherapiezielCRCErhaltung"/>
+    <resource>
+      <Goal>
+        <id value="TherapiezielCRCErhaltung"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+          <extension url="hauptintention">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="363676003"/>
+                <display value="Palliativ"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="phase">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="1345242003"/>
+                <display value="Erhaltungstherapie"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-relationship">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/goal-relationship-type"/>
+                <code value="predecessor"/>
+                <display value="Predecessor"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="target">
+            <valueReference>
+              <reference value="Goal/TherapiezielCRCLebensverlaengerung"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <lifecycleStatus value="proposed"/>
+        <category>
+          <coding>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensverlaengerung"/>
+            <display value="Lebensverlängerung"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensqualitaet"/>
+            <display value="Lebensqualität"/>
+          </coding>
+        </category>
+        <description>
+          <text value="Erhalt des Therapieansprechens bei reduzierter Toxizität (Erhaltungstherapie) nach erfolgreicher Induktion."/>
+        </description>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <expressedBy>
+          <reference value="Practitioner/OnkologinCRC"/>
+        </expressedBy>
+        <addresses>
+          <reference value="Condition/ConditionCRC"/>
+        </addresses>
+      </Goal>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Goal"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationRequest/MedicationRequestFOLFOX"/>
+    <resource>
+      <MedicationRequest>
+        <id value="MedicationRequestFOLFOX"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85232-7"/>
+            <display value="Tumor board Consult note"/>
+          </coding>
+        </category>
+        <medicationCodeableConcept>
+          <text value="FOLFOX + Bevacizumab"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <requester>
+          <reference value="Practitioner/OnkologinCRC"/>
+        </requester>
+      </MedicationRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/ServiceRequest/ServiceRequestPortCRC"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequestPortCRC"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85232-7"/>
+            <display value="Tumor board Consult note"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1255694000"/>
+            <display value="Implantable venous access port injection"/>
+          </coding>
+          <text value="Implantation eines Portkatheters für die systemische Therapie"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <requester>
+          <reference value="Practitioner/OnkologinCRC"/>
+        </requester>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObservationDiseaseStatusCRC"/>
+    <resource>
+      <Observation>
+        <id value="ObservationDiseaseStatusCRC"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="97509-4"/>
+            <display value="Cancer disease progression"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <effectiveDateTime value="2026-05-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260415000"/>
+            <display value="Not detected"/>
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/CarePlan/CarePlanCRCPalliativ"/>
+    <resource>
+      <CarePlan>
+        <id value="CarePlanCRCPalliativ"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+          <extension url="hauptintention">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="363676003"/>
+                <display value="Palliativ"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian">
+          <valueReference>
+            <reference value="Organization/TumorzentrumCRC"/>
+          </valueReference>
+        </extension>
+        <status value="active"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="736252007"/>
+            <display value="Cancer care plan"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/PatientinCRC"/>
+        </subject>
+        <period>
+          <start value="2026-02-10"/>
+        </period>
+        <author>
+          <reference value="Practitioner/OnkologinCRC"/>
+        </author>
+        <careTeam>
+          <reference value="CareTeam/TumorboardCRC"/>
+        </careTeam>
+        <addresses>
+          <reference value="Condition/ConditionCRC"/>
+        </addresses>
+        <supportingInfo>
+          <reference value="CarePlan/DiagnostikCarePlanCRC"/>
+        </supportingInfo>
+        <goal>
+          <reference value="Goal/TherapiezielCRCLebensverlaengerung"/>
+        </goal>
+        <activity>
+          <outcomeReference>
+            <reference value="Observation/ObservationDiseaseStatusCRC"/>
+          </outcomeReference>
+          <reference>
+            <reference value="MedicationRequest/MedicationRequestFOLFOX"/>
+          </reference>
+        </activity>
+        <activity>
+          <reference>
+            <reference value="ServiceRequest/ServiceRequestPortCRC"/>
+          </reference>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+</Bundle>

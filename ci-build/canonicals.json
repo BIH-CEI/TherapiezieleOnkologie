@@ -62,6 +62,13 @@
   "name" : "OnkoTherapyLine"
 },
 {
+  "id" : "onko-therapy-line-medication-request",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",
+  "version" : "0.1.0",
+  "name" : "OnkoTherapyLineMedicationRequestExt"
+},
+{
   "id" : "onko-tumorboard-medication-request",
   "type" : "StructureDefinition",
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request",

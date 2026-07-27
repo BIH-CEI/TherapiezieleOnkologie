@@ -29,6 +29,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Therapieintention","Strukturierte Therapieintention der Behandlungslinie – Hauptintention und optionale Behandlungsphase.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"EpisodeOfCare.extension:medicationRequest","EpisodeOfCare.extension","medicationRequest","","",0,*,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request]]} {[]}
+","Medikationsverordnung","Referenz auf Medikationsverordnungen, die den Anlass für diese Therapielinie bilden – Ergänzung zu referralRequest, das auf ServiceRequest beschränkt ist.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "EpisodeOfCare.modifierExtension","EpisodeOfCare.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -104,8 +108,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "EpisodeOfCare.period","EpisodeOfCare.period","","","",1,1,"Y","","Y","Period {[]} {[]}
 ","Behandlungszeitraum","Zeitraum der Therapielinie von Beginn bis Ende des Behandlungsabschnitts.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.occurrence[x]","FiveWs.init"
-"EpisodeOfCare.referralRequest","EpisodeOfCare.referralRequest","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1]]}
-","Originating Referral Request(s)","Referral Request(s) that are fulfilled by this EpisodeOfCare, incoming referrals.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare.referralRequest",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"EpisodeOfCare.referralRequest","EpisodeOfCare.referralRequest","","","",0,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1]]}
+","Anforderung","Der Therapielinie zugrunde liegende Anforderung oder Anforderungen, z. B. Überweisung oder Prozedur-Anforderung.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare.referralRequest",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.basedOn"
 "EpisodeOfCare.careManager","EpisodeOfCare.careManager","","","",0,1,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1]]}
 ","Fallverantwortliche/r","Für die Therapielinie fallverantwortliche behandelnde Person.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare.careManager",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

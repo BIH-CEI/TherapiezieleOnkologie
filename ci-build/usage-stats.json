@@ -68,6 +68,13 @@
         "Dosage",
         "Meta"
       ]
+    },
+    {
+      "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",
+      "title": "Therapielinie – Medikationsverordnung (Extension)",
+      "types": [
+        "Reference"
+      ]
     }
   ],
   "profiles": {
@@ -124,6 +131,7 @@
       "Condition.code.coding"
     ],
     "http://hl7.org/fhir/StructureDefinition/condition-assertedDate": [
+      "Bundle.entry.resource",
       "Condition"
     ],
     "http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing": [
@@ -148,12 +156,15 @@
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/goal-acceptance": [
+      "Bundle.entry.resource",
       "Goal"
     ],
     "http://hl7.org/fhir/StructureDefinition/goal-reasonRejected": [
+      "Bundle.entry.resource",
       "Goal"
     ],
     "http://hl7.org/fhir/StructureDefinition/goal-relationship": [
+      "Bundle.entry.resource",
       "Goal"
     ],
     "http://hl7.org/fhir/StructureDefinition/regex": [
@@ -193,12 +204,18 @@
       "StructureDefinition.snapshot"
     ],
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian": [
+      "Bundle.entry.resource",
       "CarePlan"
     ],
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent": [
+      "Bundle.entry.resource",
       "CarePlan",
       "EpisodeOfCare",
       "Goal"
+    ],
+    "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request": [
+      "Bundle.entry.resource",
+      "EpisodeOfCare"
     ],
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3": [
       "Condition"

@@ -7,7 +7,7 @@ Oncological care plan based on CarePlan, architecturally aligned with the HL7 FH
 
 **Usages:**
 
-* Examples for this Profile: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md) and [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md)
+* Examples for this Profile: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [CarePlan/CarePlanMammaNachsorge](CarePlan-CarePlanMammaNachsorge.md) and [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-care-plan.json)
 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-20T15:05:40+00:00",
+  "date" : "2026-07-27T15:55:12+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
