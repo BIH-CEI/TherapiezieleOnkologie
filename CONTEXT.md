@@ -17,9 +17,11 @@ Referenz nur `CarePlan.goal → Goal` (es gibt keine `Goal → CarePlan`-Referen
 _EN_: overarching goal
 Genau ein zu jedem Zeitpunkt aktives `OnkoTherapyGoal`, das die strategische
 Therapieintention (kurativ vs. palliativ) der aktuellen Intentions-Ära abbildet.
-Bei einem strategischen Wechsel (z. B. kurativ → palliativ bei Progress) wird es
-abgeschlossen und durch ein **neues** übergeordnetes Ziel ersetzt (nicht in-place
-geändert); die beiden werden als Vorgänger/Nachfolger bzw. Ersetzung verknüpft.
+Bei einem strategischen Wechsel/Ablösung (z. B. kurativ → palliativ bei Progress)
+wird es abgeschlossen und durch ein **neues** übergeordnetes Ziel ersetzt (nicht
+in-place geändert), verknüpft über `replacement`. Ein **erfolgreich abgeschlossenes**
+Ziel dagegen wird *nicht* ersetzt, sondern über `predecessor`/`successor` mit seinem
+Folgeziel verbunden.
 _Vermeiden_: Gesamtziel, Hauptziel
 
 **Episodenziel**
@@ -88,10 +90,12 @@ _EN_: status convention
 `achievementStatus` = *erreichter Grad*. `achievementStatus` nur bei
 `lifecycleStatus ∈ {active, on-hold, completed}`; `proposed`/`planned` trägt noch
 keinen. **`completed` nur bei Erfolg** (CR/pCR → `completed`+`achieved`); Aufgabe/
-Pivot ist `cancelled`+`not-achieved`/`not-attainable` **mit `replacement`-Nachfolger**
-(= die Intentions-Pivotierung, s. [[Übergeordnetes Behandlungsziel]]). Partielle
-Remission ist **nicht** `completed`: entweder `active`+`in-progress` (weiter kurativ)
-oder `cancelled`+Replacement (Palliativ-Pivot).
+Pivot ist `cancelled`+`not-achieved`/`not-attainable`, verknüpft über **`replacement`**
+zum neuen Ziel (Intentions-Pivotierung, s. [[Übergeordnetes Behandlungsziel]]). Ein
+**erfolgreich abgeschlossenes** Ziel (CR/pCR) wird dagegen *nicht* ersetzt, sondern über
+**`predecessor`/`successor`** an sein Folgeziel übergeben. Partielle Remission ist
+**nicht** `completed`: entweder `active`+`in-progress` (weiter kurativ) oder
+`cancelled`+`replacement` (Palliativ-Pivot).
 **Nur die Zustands-Codes** verwenden: `in-progress`, `achieved`, `not-achieved`,
 `not-attainable`. Die **Trajektorie**-Leaves (`improving`, `worsening`, `no-change`,
 `sustaining`, `no-progress`) werden **vermieden** — `Goal.achievementStatus` ist

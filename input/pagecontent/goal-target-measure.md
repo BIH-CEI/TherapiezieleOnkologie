@@ -12,6 +12,19 @@ Ein Therapieziel wird **messbar**, indem es einen oder mehrere Zielwerte trägt.
 Ein Ziel kann **mehrere** Targets tragen (z. B. Krankheitsstatus *und* Bildgebung
 *und* Funktion).
 
+### Vor allem auf Ebene der Therapieepisoden
+
+Diese messbare `target`-Logik betrifft **vor allem die
+[Episodenziele](therapieziele.html)** der einzelnen Therapieepisoden — dort werden
+konkrete klinische Parameter (Krankheitsstatus, Staging, Ansprechen …) als Zielgröße
+gesetzt.
+
+Das **übergeordnete Behandlungsziel** trägt dagegen in der Regel **keine messbare
+Zielgröße**, sondern die **strategische Intention** (kurativ vs. palliativ). Deren
+Festlegung ist kein Laborwert, sondern eine **klinische Einordnung** — abhängig von der
+**Krebsindikation** und davon, ab welchem **Staging/Grading** eine kurative Behandlung
+(z. B. Operabilität/Resektabilität) nicht mehr möglich ist.
+
 ### Zielwert ≠ Ergebnis
 
 Sauber zu trennen sind der **angestrebte** Wert und das **beobachtete** Ergebnis:
@@ -33,10 +46,13 @@ nicht bestimmbar. Ansprechen und Verlauf liegen deshalb in den
 `outcomeReference`-**Observations** (z. B. RECIST, mCODE Cancer Disease Status), die
 zeitgestempelt sind und ihren Bezugspunkt selbst definieren.
 
-### Messgrößen im Beispiel
+### Typische Messgrößen entlang des Verlaufs
 
-Aus dem [Mamma-Szenario](szenario-mamma.html) — typische Messgrößen entlang des
-Verlaufs:
+Diese Messgrößen gelten **generell**, nicht nur für ein einzelnes Szenario — das
+[Mamma-Szenario](szenario-mamma.html) dient hier lediglich der Illustration (nicht
+damit gleichsetzen). Einige sind **entitätsspezifisch** (z. B. ER/PR/HER2 und das
+Nottingham-Grading beim Mammakarzinom, Arm-/Lymphödem-Status nach Axilla-Eingriff),
+andere **allgemein** (TNM, Stadiengruppe, Krankheitsstatus):
 
 | Ziel-Phase | Messgröße (`target.measure`) | Code |
 |---|---|---|
@@ -46,7 +62,6 @@ Verlaufs:
 | Diagnostik | Grading (Nottingham) | LOINC `44648-4` |
 | Behandlung (kurativ) | Stadiengruppe (Ansprechen → pCR) | LOINC `21908-9` |
 | Nachsorge | Krankheitsstatus / Rezidivfreiheit | LOINC `21976-6` |
-| Nachsorge | Nachsorge-Mammographie | LOINC `24606-6` |
 | Nachsorge | Arm-/Schulterfunktion, Lymphödem | Freitext (`measure.text`) |
 | Nachsorge | Lebensqualität (PROM, EORTC QLQ-C30/BR23) | Freitext, Anbindung via PCO |
 
@@ -58,6 +73,34 @@ detected*), und über `outcomeReference` auf das jeweilige Ziel bezogen.
 > existiert (Funktion, PROM), ist `measure.text` zulässig. Für patientenberichtete
 > Endpunkte ist die Anbindung an das [PCO IG](https://hl7.org/fhir/us/pco/) vorgesehen,
 > statt sie hier eigen zu modellieren.
+
+### Modalität ist kein Endpunkt
+
+Nicht jedes klinische Verfahren ist eine geeignete Zielgröße. Eine
+**Nachsorge-Mammographie** etwa ist ein **Verfahren zur Beurteilung**, **kein
+Endpunkt** — der Endpunkt ist der **Krankheitsstatus / die Rezidivfreiheit** (LOINC
+`21976-6`), den die Mammographie *feststellen hilft*. `target.measure` trägt den
+**gemessenen Zielzustand**, nicht die Modalität, mit der er erhoben wird (die
+Mammographie selbst gehört als geplante Maßnahme in einen `ServiceRequest`).
+
+### Weitere typische Zielgrößen
+
+| Zweck | Messgröße | Code (LOINC) |
+|---|---|---|
+| Ansprechen (neoadjuvant) | Tumorgröße, max. Durchmesser (mm) | `33728-7` |
+| Chirurgisches Ergebnis | Resektionsstatus (R0/R1/R2) | `84892-9` |
+| Toxizitäts-/Labormonitoring | Leukozyten (z. B. Leukopenie) | `6690-2` |
+| Tumormarker-Monitoring | PSA (Prostata) | `2857-1` |
+| Tumormarker-Monitoring | CA-125 (Ovar) | `10334-1` |
+| Tumormarker-Monitoring | CEA (gastrointestinal) | `2039-6` |
+| Tumormarker-Monitoring | CA 15-3 (Mamma) | `6875-9` |
+
+Tumormarker sind vor allem im **Verlaufsmonitoring** relevant; ihr sinnvoller Einsatz
+ist **entitäts- und situationsabhängig** (Marker × Entität × Situation). So ist
+**CA-125 beim Ovarialkarzinom** ein etablierter Monitoring-Endpunkt (GCIG-CA-125-
+Ansprech-/Progressionskriterien), während die routinemäßige **CA-15-3-Bestimmung in der
+asymptomatischen kurativen Mamma-Nachsorge** leitlinienkonform *nicht* empfohlen wird.
+CA-125 ist dabei der **Ovarial-**, CA 15-3 der **Mamma-Marker** — nicht austauschbar.
 
 ### Beispiele
 

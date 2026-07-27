@@ -3,7 +3,7 @@
 - **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Sylvia Thun, Thomas Debertshäuser
-- **Bezug:** ADR-0009, ADR-0016, ADR-0020 (lokoregionale, nicht-EnLiST Behandlungslinien); `00_Architekturentscheidung.md`, LG-01 §EnLiST; ESMO EnLiST 2026
+- **Bezug:** ADR-0009, ADR-0016, ADR-0020 (lokoregionale, nicht-EnLiST Behandlungslinien); `00_Architekturentscheidung.md`, LG-01 §EnLiST; EnLiST: [Saini et al., *Ann Oncol* 2026;37(5):608–623, DOI 10.1016/j.annonc.2026.02.008](https://doi.org/10.1016/j.annonc.2026.02.008)
 
 ## Kontext
 
@@ -43,3 +43,7 @@ Therapielinie-Extension und Intentions-/Setting-Kodierung.
 ## Offene Punkte
 
 - Hämatologische Phasenachse (Induktion/Konsolidierung/Erhaltung) als separater Baustein.
+- **LoT-Zählung nicht als entitätsübergreifender Score interpretieren:** EnLiST gilt
+  für **solide Tumoren + systemische Therapie** und ist im „road testing" (2026–2027);
+  die Vergleichbarkeit der Linien-Zählung über Tumorentitäten hinweg ist begrenzt.
+  Versionskompatibel zu EnLiST-Updates halten.

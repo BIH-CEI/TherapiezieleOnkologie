@@ -47,3 +47,8 @@ CarePlan/Goal-Fallback (ADR-0012).
 ## Offene Punkte
 
 - Verfügbarkeit computable S3-Leitlinieninhalte (KRK etc.) als Referenzziel.
+- **Kein normativer Katalog / keine interoperable Abbildung** für systemische
+  Protokolle. Bezug bis dahin interim über `instantiatesUri`/Identifier. Ein Katalog
+  wird vsl. **ab Q4 2026 durch die PHOENIX-Initiative** (European Common Cancer Model)
+  bereitgestellt — Anbindung vorsehen, sobald verfügbar. Verhältnis CPG ↔ Katalog:
+  s. ADR-0022.

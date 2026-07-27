@@ -42,6 +42,20 @@ Die Zielart des übergeordneten Ziels wird durch die Extension
 > architektonisch festgelegt und werden im laufenden Ausbau des Profilsatzes
 > umgesetzt.
 
+### Über die Onkologie hinaus — weitere Intentionen und Entitäten
+
+Die oben genannten Zielarten und die Intentionen kurativ/palliativ sind **nicht
+abschließend**. Andere Entitäten kennen weitere, spezialisierte Intentionen bzw.
+Behandlungsphasen — hämatologische Erkrankungen etwa **Induktion**, **Konsolidierung**
+und **Erhaltungstherapie**. Zielart und Intention sind deshalb bewusst **offen
+(extensible)** kodiert.
+
+Der zugrunde liegende Aufbau — ein übergeordnetes Ziel plus Phasen-/Episodenziele — ist
+**erkrankungsübergreifend** tragfähig. Für ausgewählte weitere Erkrankungen sind
+**eigene Seiten** vorgesehen (z. B. Diabetes, Asthma, chronisch-entzündliche
+Darmerkrankungen, chronische Niereninsuffizienz/Dialyse), die dieselbe Struktur mit
+entitätsspezifischen Werten illustrieren.
+
 ### Ein Strategiewechsel ersetzt das Ziel — er ändert es nicht
 
 Die strategische Intention ist **nicht stabil**: Eine kurativ behandelte Erkrankung

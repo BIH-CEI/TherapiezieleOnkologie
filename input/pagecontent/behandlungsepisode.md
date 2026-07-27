@@ -29,13 +29,23 @@ das Modell zu ändern.
 Der Oberbegriff **Behandlungslinie** umfasst zwei Modalitätsklassen:
 
 - Die **systemische Therapielinie** (Line of Therapy, LoT) folgt der internationalen
-  Konsensnotation **[EnLiST](https://www.esmo.org/)** und wird in die **Linien-Zählung**
-  aufgenommen. Eine Linie ist ein Abschnitt aktiver Systemtherapie mit definierter
+  Konsensnotation **EnLiST** ([Saini et al., *Ann Oncol* 2026](https://doi.org/10.1016/j.annonc.2026.02.008))
+  und wird in die **Linien-Zählung** aufgenommen. Eine Linie ist ein Abschnitt aktiver Systemtherapie mit definierter
   Intention, beendet durch ein klinisches Ereignis (Progress, Toxizität,
   Patientenwunsch, Studienende, geplanter Wechsel).
 - Die **lokoregionale Behandlungslinie** (Chirurgie, Strahlentherapie, Ablation) wird
   von EnLiST **nicht** abgedeckt und **nicht** mitgezählt — sie bildet eine eigene
   Modalitätsspur.
+
+> **Einordnung EnLiST.** EnLiST ist ein paneuropäischer Delphi-Konsens zur
+> **Standardisierung der Linien-Bezeichnung bei soliden Tumoren** — bewusst begrenzt
+> auf **systemische** Therapie. Für **hämatologische** Erkrankungen gilt eine
+> **separate** Adaptation (andere Achse: Induktion/Konsolidierung/Erhaltung), und das
+> Framework befindet sich noch im „road testing" (ESMO 2026–2027). Die **LoT-Zählung
+> ist damit kein universeller, entitätsübergreifender Score**, sondern eine Struktur-
+> und Notationskonvention innerhalb ihres Geltungsbereichs; ihre Vergleichbarkeit über
+> Tumorentitäten hinweg ist begrenzt. Die Spalte „In LoT-Zählung?" ist entsprechend
+> **im Kontext der jeweiligen Entität** zu lesen.
 
 ### Episode ≠ Prozedur ≠ Kontakt
 
