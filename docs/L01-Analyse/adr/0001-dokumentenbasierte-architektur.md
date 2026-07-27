@@ -56,3 +56,9 @@ Die Spezifikation wird als **dokumentenbasierte FHIR-Architektur** ausgeliefert.
 ## Offene Punkte
 
 - Konkrete Endpunkt-Spezifikation der ePA-Schreibschnittstelle für „eigene" Festlegungen — mit gematik im Mai-Status klären.
+
+### Verifizierte Referenzen (2026-07-24)
+
+- Die ePA-Dokumentenverwaltung ist **IHE-XDS-basiert** (Repository/Registry); Einstellen via **XDS Document Source**. Maßgeblich: [gemSpec_Dokumentenverwaltung](https://gemspec.gematik.de/docs/gemSpec/gemSpec_Dokumentenverwaltung/gemSpec_Dokumentenverwaltung_V1.10.0/), [gemILF_PS_ePA (Primärsysteme)](https://gemspec.gematik.de/prereleases/ePAfueralle/gemILF_PS_ePA_V3.0.0_CC/).
+- **Zu verifizieren:** die wörtliche Aussage „lose Ressourcen werden abgelehnt, nur Document Bundle" ist durch das dokumentzentrische XDS-Modell plausibel, aber im gemILF_PS_ePA noch wörtlich zu verankern.
+- Siehe ADR-0006 (Dokument-Identität auf XDS/MHD-Ebene), ADR-0007 (Current-Summary).

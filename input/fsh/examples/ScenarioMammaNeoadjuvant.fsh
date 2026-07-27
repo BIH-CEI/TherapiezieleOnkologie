@@ -50,6 +50,17 @@ Title: "Brustzentrum (Custodian, Beispiel)"
 Description: "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."
 * name = "Zertifiziertes Brustzentrum Musterklinik"
 
+Instance: Tumorboard
+InstanceOf: Organization
+Usage: #example
+Title: "Tumorboard"
+Description: "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."
+* identifier.system = "https://www.musterklinik.de/fhir/sid/organisationen"
+* identifier.value = "tumorboard-brust-001"
+* active = true
+* type = http://terminology.hl7.org/CodeSystem/organization-type#team "Organizational team"
+* name = "Zertifiziertes Brustzentrum Musterklinik"
+
 
 // ---------------------------------------------------------------------
 // Diagnostische Anforderungen (Aktivitäten des diagnostischen CarePlans)
@@ -113,7 +124,7 @@ Description: "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim 
 Instance: CarePlanMammaDiagnostik
 InstanceOf: DiagnosticCarePlan
 Usage: #example
-Title: "Diagnostischer CarePlan "
+Title: "Diagnostischer CarePlan"
 Description: "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."
 * status = #active
 * intent = #plan
@@ -121,6 +132,7 @@ Description: "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesiche
 * subject = Reference(PatientinMamma)
 * addresses = Reference(ConditionMamma)
 * author = Reference(OnkologinMamma)
+* goal = Reference(DiagnosticGoal)
 // Durchgeführte Maßnahme / dokumentiertes Ergebnis: Ansprechbeurteilung
 * activity[0].reference = Reference(ServiceRequestBiopsieMamma)
 * activity[0].outcomeReference = Reference(ProcedureBiopsieMamma)
@@ -135,6 +147,50 @@ Description: "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesiche
 * activity[2].outcomeReference = Reference(ObsTNMklinischMamma)
 * activity[3].reference = Reference(ServiceRequestGBRCAMamma)
 * activity[3].outcomeReference = Reference(ObsGBRCAMamma)
+
+// ---------------------------------------------------------------------
+// Erstellung eines Goals für die Tumordiagnose (vorlaufender Goal)
+// ---------------------------------------------------------------------
+
+Instance: DiagnosticGoal
+InstanceOf: OnkoTherapyGoal
+Usage: #example
+Title: "Onkologisches Diagnosezeil"
+Description: "Das onkologische Diagnoseziel wird im diagnostischen CarePlan verlinkt und hat zum Ziel, dass eine Tumordiagnostik gestellt werden kann."
+* extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
+* extension[acceptance].extension[status].valueCode = #agree
+* extension[acceptance].extension[priority].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
+* lifecycleStatus = #active
+* achievementStatus = http://terminology.hl7.org/CodeSystem/goal-achievement#in-progress "In Progress"
+* category = http://snomed.info/sct#261004008 "Diagnostic intent"
+* priority = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
+* description.text = "Diagnosesicherung für die Verdachtsdiagnose"
+* subject = Reference(PatientinMamma)
+* startDate = "2025-09-12"
+// Klinisches TNM
+* target[0].measure = http://loinc.org#21905-5 "Primary tumor.clinical [Class] Cancer" // cT
+* target[1].measure = http://loinc.org#21906-3 "Regional lymph nodes.clinical [Class] Cancer" // cN
+* target[2].measure = http://loinc.org#21907-1 "Distant metastases.clinical [Class] Cancer" // cM
+* target[3].measure = http://loinc.org#21908-9 "Stage group.clinical Cancer" // optional: Gesamtstadium
+
+// Rezeptorstatus
+* target[4].measure = http://loinc.org#40556-3 "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+* target[5].measure = http://loinc.org#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* target[6].measure = http://loinc.org#48676-1 "HER2 Ag [Interpretation] in Tissue"
+
+// Lokalisation
+* target[7].measure = http://loinc.org#21855-2 "Primary site Cancer"
+
+// Nottingham-Score (Bloom-Richardson) & allgemeines Grading
+* target[8].measure = http://loinc.org#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+* target[9].measure = http://loinc.org#33732-9 "Histology grade [Identifier] in Cancer specimen"
+
+// Sentinel-Lymphknoten
+* target[10].measure = http://loinc.org#85347-3 "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"
+
+* expressedBy = Reference(OnkologinMamma)
+* addresses = Reference(ConditionMamma)
+* outcomeReference = Reference(ObsDiseaseStatusMamma)
 
 
 
@@ -303,24 +359,52 @@ Description: "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim 
 * effectiveDateTime = "2025-09-25"
 
 // ---------------------------------------------------------------------
-// Therapielinie (neoadjuvante Systemtherapie, LoT 1)
+// Therapielinie (Chemotherapy, LoT 1)
 // ---------------------------------------------------------------------
 
-Instance: TherapielinieMammaNeoadjuvant
+Instance: TherapielinieChemo
 InstanceOf: OnkoTherapyLine
 Usage: #example
-Title: "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie (Beispiel)"
+Title: "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie"
 Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373847000 "Neoadjuvant"
+* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
 * status = #finished
-* type = http://snomed.info/sct#385786002 "Chemotherapy care"
+* type = http://snomed.info/sct#385786002  "Chemotherapy care"
+* diagnosis.condition = Reference(ConditionMamma)
+* diagnosis.rank = 1
 * patient = Reference(PatientinMamma)
 * period.start = "2025-10-01"
 * period.end = "2026-03-15"
-* diagnosis.condition = Reference(ConditionMamma)
 * diagnosis.role = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
-* diagnosis.rank = 1
+* extension[medicationRequest].valueReference = Reference(MedicationRequestPembroChemoNeoadjuvantMamma)
+* managingOrganization = Reference(Tumorboard)
+* careManager = Reference(OnkologinMamma)
 
+// Tumorhauseboard
+// * type-> hier besser proceudre angeben -> antineoplastische therapie...   könnte hier sein ein value aus https://snomedbrowser.org/?perspective=full&conceptId1=225355000&edition=MAIN/2026-07-01&release=&languages=en
+
+// ---------------------------------------------------------------------
+// Therapielinie (Operation, LoT 2)
+// ---------------------------------------------------------------------
+
+Instance: TherapielinieOperation
+InstanceOf: OnkoTherapyLine
+Usage: #example
+Title: "Therapielinie 2 – Operation"
+Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
+* status = #finished
+* type = http://snomed.info/sct#1345242003 "Erhaltungstherapie"
+* patient = Reference(PatientinMamma)
+* period.start = "2026-03-20"
+* period.end = "2026-04-06"
+* diagnosis.condition = Reference(ConditionMamma)
+* diagnosis.rank = 1
+* diagnosis.role = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
+* referralRequest = Reference(ServiceRequestProcedure)
+* managingOrganization = Reference(Tumorboard)
+* careManager = Reference(OnkologinMamma)
 // ---------------------------------------------------------------------
 // Therapieziel (kurativ) mit Zielakzeptanz und Verlaufsergebnis
 // ---------------------------------------------------------------------
@@ -335,6 +419,10 @@ Description: "Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC d
 * extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
 * extension[acceptance].extension[status].valueCode = #agree
 * extension[acceptance].extension[priority].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
+* extension[relatedGoal][0].extension[type].valueCodeableConcept = http://hl7.org/fhir/goal-relationship-type#predecessor "Predecessor"
+* extension[relatedGoal][0].extension[target].valueReference = Reference(DiagnosticGoal)
+* extension[relatedGoal][1].extension[type].valueCodeableConcept = http://hl7.org/fhir/goal-relationship-type#successor "Successor"
+* extension[relatedGoal][1].extension[target].valueReference = Reference(FollowUpGoal)
 * lifecycleStatus = #active
 * achievementStatus = http://terminology.hl7.org/CodeSystem/goal-achievement#achieved "Achieved"
 * category[0] = OnkoTherapyGoalType#heilung "Heilung"
@@ -348,6 +436,7 @@ Description: "Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC d
 * addresses = Reference(ConditionMamma)
 * expressedBy = Reference(OnkologinMamma)
 * outcomeReference = Reference(ObsDiseaseStatusMamma)
+
 
 // ---------------------------------------------------------------------
 // Geplante Operation vom Tumorboard
@@ -371,11 +460,12 @@ Description: "Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpe
 // Geplante Systemtherapie vom Tumorboard (neoadjuvant)
 // ---------------------------------------------------------------------
 
-Instance: MedicationRequestKEYNOTE522
+Instance: MedicationRequestPembroChemoNeoadjuvantMamma
 InstanceOf: TumorboardMedicationRequest
 Usage: #example
 Title: "Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"
 Description: "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."
+// hier auch name von KEYNOTE-522 herausfinden, welcher typ usw. 
 * status = #completed
 * intent = #plan
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
@@ -429,7 +519,7 @@ InstanceOf: OnkoCarePlan
 Usage: #example
 Title: "Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)"
 Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives Therapieziel sowie geplante (neoadjuvante Systemtherapie) und durchgeführte Maßnahmen (Operation, Ansprechbeurteilung) zusammenführt."
-* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
+//* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#kurativ "Kurativ"
 // custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans (MCC R5-Backport)
 * extension[custodian].valueReference = Reference(TumorzentrumMamma)
 * status = #active
@@ -442,9 +532,100 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives T
 * author = Reference(OnkologinMamma)
 // Geplante Maßnahme: neoadjuvante Systemtherapie
 // Geplante Maßnahme: neoadjuvante Systemtherapie (Tumorboard-Empfehlung)
-* activity[0].reference = Reference(MedicationRequestKEYNOTE522)
+* activity[0].reference = Reference(MedicationRequestPembroChemoNeoadjuvantMamma)
 // Geplante Maßnahme: OP-Empfehlung des Tumorboards → durchgeführte Operation
 * activity[1].reference = Reference(ServiceRequestProcedure)
 * activity[1].outcomeReference = Reference(ProcedureOperationMamma)
 // Dokumentiertes Ergebnis: Ansprechbeurteilung
 * activity[2].outcomeReference = Reference(ObsDiseaseStatusMamma)
+
+
+// ---------------------------------------------------------------------
+// Erhaltung des Gesundheitsstauts -> wichtig zu bestimmen, wann dieser Goal erstellt wird. In meinem Beispiel wenn der CarePlan erstellt wird
+// ---------------------------------------------------------------------
+
+
+Instance: FollowUpGoal
+InstanceOf: OnkoTherapyGoal
+Usage: #example
+Title: "Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung"
+Description: "Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms."
+* extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
+* extension[acceptance].extension[status].valueCode = #agree
+* extension[acceptance].extension[priority].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
+* extension[relatedGoal][0].extension[type].valueCodeableConcept = http://hl7.org/fhir/goal-relationship-type#predecessor "Predecessor"
+* extension[relatedGoal][0].extension[target].valueReference = Reference(DiagnosticGoal)
+* extension[relatedGoal][1].extension[type].valueCodeableConcept = http://hl7.org/fhir/goal-relationship-type#predecessor "Predecessor"
+* extension[relatedGoal][1].extension[target].valueReference = Reference(TherapiezielMammaHeilung)
+* lifecycleStatus = #planned
+* achievementStatus = http://terminology.hl7.org/CodeSystem/goal-achievement#in-progress "In Progress"
+* category = OnkoTherapyGoalType#lebensqualitaet "Lebensqualität"
+* priority = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
+* description.text = "Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie"
+* subject = Reference(PatientinMamma)
+* startDate = "2026-08-15"
+// Kern-Target: Rezidivfreiheit / Krankheitsstatus (S3-LL Mammakarzinom, AGO)
+* target[0].measure = http://loinc.org#21976-6 "Cancer outcome status"
+* target[0].detailCodeableConcept.text = "Kein Hinweis auf Lokalrezidiv oder Fernmetastasen"
+* target[0].dueDate = "2026-11-15"
+// Bildgebung: jährliche Mammographie der operierten und kontralateralen Brust
+* target[1].measure = http://loinc.org#24606-6 "MG Breast Screening"
+* target[1].detailCodeableConcept.text = "Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis"
+* target[1].dueDate = "2027-04-15"
+// Funktion / Nebenwirkung nach Sentinel-Lymphknoten-Biopsie: Armfunktion, Lymphödem
+* target[2].measure.text = "Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff"
+* target[2].detailCodeableConcept.text = "Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit"
+// Patientenberichtete Lebensqualität (EORTC QLQ-C30 / BR23).
+// Erfassung erfolgt im MII PRO-Modul (PROM) — hier nur als Nachsorge-Target
+// referenziert; die eigentlichen PRO-Messungen werden über das PCO IG
+// angebunden (vgl. analysebericht.md, PCO-Baustein), nicht selbst modelliert.
+* target[3].measure.text = "Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul"
+* target[3].detailCodeableConcept.text = "Stabile bis verbesserte Lebensqualität im Verlauf"
+// Hinweis: Routinemäßige Tumormarker-Bestimmung (z. B. CA 15-3) wird in der
+// asymptomatischen kurativen Nachsorge leitlinienkonform NICHT empfohlen und
+// ist daher bewusst nicht als Monitoring-Target hinterlegt.
+* expressedBy = Reference(OnkologinMamma)
+* addresses[0] = Reference(ConditionMamma)
+* outcomeReference = Reference(ObsDiseaseStatusMamma)
+
+
+// ---------------------------------------------------------------------
+// Nachsorge / Surveillance
+// Eigener Nachsorge-CarePlan, der das Nachsorge-Ziel (FollowUpGoal) trägt.
+// Enthält die geplante (noch nicht durchgeführte) jährliche Mammographie als
+// Maßnahme. Bewusst OHNE outcomeReference/Observation: die Nachsorge liegt in
+// der Zukunft (ab 08/2026), ein Negativbefund existiert daher noch nicht.
+// ---------------------------------------------------------------------
+
+Instance: ServiceRequestMammographieNachsorge
+InstanceOf: ServiceRequest
+Usage: #example
+Title: "Anforderung Nachsorge-Mammographie (Beispiel)"
+Description: "Geplante jährliche Nachsorge-Mammographie der operierten und der kontralateralen Brust zur Rezidiv-/Zweitkarzinom-Früherkennung (S3-Leitlinie Mammakarzinom / AGO)."
+* status = #active
+* intent = #plan
+* code = http://loinc.org#24606-6 "MG Breast Screening"
+* code.text = "Nachsorge-Mammographie beidseits (jährlich)"
+* subject = Reference(PatientinMamma)
+* occurrenceDateTime = "2027-04-15"
+* requester = Reference(OnkologinMamma)
+* reasonReference = Reference(ConditionMamma)
+
+Instance: CarePlanMammaNachsorge
+InstanceOf: OnkoCarePlan
+Usage: #example
+Title: "Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)"
+Description: "Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR): trägt das Nachsorge-Ziel (Rezidivfreiheit, Funktion, Lebensqualität) und die geplante jährliche Mammographie als Maßnahme."
+// custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans
+* extension[custodian].valueReference = Reference(TumorzentrumMamma)
+* status = #active
+* intent = #plan
+* category = http://snomed.info/sct#736252007 "Cancer care plan"
+* subject = Reference(PatientinMamma)
+* period.start = "2026-08-15"
+* addresses = Reference(ConditionMamma)
+* goal = Reference(FollowUpGoal)
+* author = Reference(OnkologinMamma)
+// Geplante Nachsorge-Maßnahme: jährliche Mammographie (noch kein Ergebnis/Befund)
+* activity[0].reference = Reference(ServiceRequestMammographieNachsorge)
+

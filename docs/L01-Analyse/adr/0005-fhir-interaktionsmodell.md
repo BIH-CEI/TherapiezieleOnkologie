@@ -104,3 +104,9 @@ Reader muss damit umgehen, dass das verlinkte Ziel-Dokument **fehlen** kann, ein
 - Konkrete Endpunkt-URL und Authentifizierungsverfahren — Festlegungs-Sache, mit gematik klären.
 - Verhalten bei konkurrierenden Updates (zwei Akteure schreiben quasi-gleichzeitig) — Conflict-Resolution-Strategie.
 - Such-Parameter-Indizierung: welche der oben definierten Parameter sind in der ePA-Festlegung verpflichtend zu unterstützen.
+
+### Verifizierte Referenzen (2026-07-24)
+
+- **Schreiben ≠ MHD-Service:** Das [ePA MHD Service IG](https://gemspec.gematik.de/ig/fhir/epa-mhd/1.1.0/general-principles.html) ist **lesend** (nur `ITI-67 Find`, `ITI-68 Retrieve`). Das *Einstellen* läuft über die **ePA-Dokumentenverwaltung** (IHE **XDS Document Source**), praktisch beschrieben im [gemILF_PS_ePA](https://gemspec.gematik.de/prereleases/ePAfueralle/gemILF_PS_ePA_V3.0.0_CC/).
+- Der „POST/Create eines Document Bundle"-Pfad ist entsprechend als XDS-Provide-Vorgang zu verstehen; Referenzen in diesem ADR auf die o. g. Specs umstellen.
+- Siehe ADR-0006 (Ersetzung auf XDS/MHD-Ebene).
