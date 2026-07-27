@@ -1,6 +1,6 @@
 # ADR-0017: Empfehlungs-/Behandlungs-CarePlan getrennt, `basedOn` statt `partOf`
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0012, ADR-0015, ADR-0016, ADR-0021 (multimodale Orchestrierung), `CONTEXT.md` (Versorgungspläne); FHIR `CarePlan.basedOn`/`partOf`

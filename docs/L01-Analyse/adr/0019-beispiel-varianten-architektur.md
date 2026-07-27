@@ -1,6 +1,6 @@
 # ADR-0019: Beispiel-/Bundle-Varianten-Architektur (self-contained, PUT, RuleSet)
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0017, `CONTEXT.md`; FHIR `Bundle` (transaction), SUSHI `RuleSet`

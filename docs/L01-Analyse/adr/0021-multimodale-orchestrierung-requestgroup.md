@@ -1,6 +1,6 @@
 # ADR-0021: Multimodale, sequenzierte/konkurrente Ansätze als `RequestGroup` (R4) / `RequestOrchestration` (R6)
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0011 (CPG-Primärpfad), ADR-0017 (Empfehlungs-/Behandlungs-CarePlan), ADR-0020 (lokoregionale Linien); `CONTEXT.md`; FHIR `RequestGroup` (R4) / `RequestOrchestration` (R6)

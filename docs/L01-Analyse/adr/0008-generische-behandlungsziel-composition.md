@@ -1,6 +1,6 @@
 # ADR-0008: Generische Behandlungsziel-Composition, Krankheits-Spezifik nur via Value Sets
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0001, ADR-0004, ADR-0007, ADR-0015, ADR-0016; [KBV PKA](https://mio.kbv.de/display/PKA/); FHIR `Composition`

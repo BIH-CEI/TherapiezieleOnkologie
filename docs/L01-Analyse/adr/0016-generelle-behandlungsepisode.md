@@ -1,6 +1,6 @@
 # ADR-0016: Generelles `Behandlungsepisode`-Profil ersetzt `OnkoTherapyLine`
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0010 (EnLiST), ADR-0015, ADR-0017, ADR-0020 (perioperative Episode), `CONTEXT.md` (Behandlungsverlauf); FHIR `EpisodeOfCare`, `workflow-episodeOfCare`

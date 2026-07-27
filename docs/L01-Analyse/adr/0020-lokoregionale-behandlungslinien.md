@@ -1,6 +1,6 @@
 # ADR-0020: Lokoregionale Behandlungslinien (Chirurgie, Strahlentherapie, Ablation) als nicht-EnLiST-Behandlungsepisoden
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0010 (EnLiST), ADR-0016 (generelle Behandlungsepisode), ADR-0019 (Varianten-Beispiele), `00_Architekturentscheidung.md` (lokoregionale Modalitätsspur), `CONTEXT.md` (Behandlungslinie / Lokoregionale Behandlungslinie); FHIR `EpisodeOfCare`, `Procedure`, `Encounter`

@@ -1,6 +1,6 @@
 # ADR-0006: Dokument-Identität & Ersetzung auf XDS/MHD-Ebene (Companion zu ADR-0002)
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0001, ADR-0002, ADR-0005; [IHE MHD DocumentReference](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Comprehensive.DocumentReference.html); [gemSpec_Dokumentenverwaltung](https://gemspec.gematik.de/docs/gemSpec/gemSpec_Dokumentenverwaltung/gemSpec_Dokumentenverwaltung_V1.10.0/)

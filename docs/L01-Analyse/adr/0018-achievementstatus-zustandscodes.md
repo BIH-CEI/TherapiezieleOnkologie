@@ -1,6 +1,6 @@
 # ADR-0018: `achievementStatus` nur Zustands-Codes; Trajektorie in Observations
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0015, `CONTEXT.md` (Status-Konvention, Zielwert vs. Ergebnis); FHIR `Goal.lifecycleStatus`/`achievementStatus`, `goal-achievement`

@@ -1,6 +1,6 @@
 # ADR-0007: Therapieziel-Dokument als Current-Summary, nicht kumulativ
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0001, ADR-0002, ADR-0015; [KBV PKA](https://mio.kbv.de/display/PKA/); [HL7 IPS](https://hl7.org/fhir/uv/ips/)

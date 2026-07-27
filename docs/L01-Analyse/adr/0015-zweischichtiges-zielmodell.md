@@ -1,6 +1,6 @@
 # ADR-0015: Zweischichtiges Zielmodell mit Replace-on-Pivot statt Mutation
 
-- **Status:** proposed
+- **Status:** accepted
 - **Datum:** 2026-07-24
 - **Beteiligte:** Thomas Debertshäuser
 - **Bezug:** ADR-0012 (CarePlan/Goal-Fallback), ADR-0016, ADR-0017, ADR-0018, `CONTEXT.md` (Ziele); MCCGoal (HL7 US MCC eCare Plan)

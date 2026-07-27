@@ -29,9 +29,9 @@ und Band C (Content-Modell-Detail) bauen darauf auf.
 | [0003](0003-drei-parallele-document-bundles.md) | Drei parallele Document Bundles (Therapieziel, Studienteilnahme, CAM) | accepted (Scope-Risiko CAM offen) | 2026-05-20 |
 | [0004](0004-eigenes-profil-statt-pka-ableitung.md) | Eigenes Composition-Profil statt Ableitung von kbv-pr-mio-pka-composition | accepted | 2026-05-20 |
 | [0005](0005-fhir-interaktionsmodell.md) | FHIR-Interaktionsmodell: Create/Update/Read als Document-Pattern | accepted | 2026-05-20 |
-| [0006](0006-dokumentidentitaet-xds-mhd.md) | Dokument-Identität & Ersetzung auf XDS/MHD-Ebene (Companion zu 0002) | proposed | 2026-07-24 |
-| [0007](0007-therapieziel-current-summary.md) | Therapieziel-Dokument als Current-Summary, nicht kumulativ | proposed | 2026-07-24 |
-| [0008](0008-generische-behandlungsziel-composition.md) | Generische Behandlungsziel-Composition, Krankheits-Spezifik nur via Value Sets | proposed | 2026-07-24 |
+| [0006](0006-dokumentidentitaet-xds-mhd.md) | Dokument-Identität & Ersetzung auf XDS/MHD-Ebene (Companion zu 0002) | accepted | 2026-07-24 |
+| [0007](0007-therapieziel-current-summary.md) | Therapieziel-Dokument als Current-Summary, nicht kumulativ | accepted | 2026-07-24 |
+| [0008](0008-generische-behandlungsziel-composition.md) | Generische Behandlungsziel-Composition, Krankheits-Spezifik nur via Value Sets | accepted | 2026-07-24 |
 
 ### Band B — Content-Architektur (LG-01-Analyse, Vier-Schichten-Fundament)
 
@@ -48,13 +48,13 @@ und Band C (Content-Modell-Detail) bauen darauf auf.
 
 | # | Titel | Status | Datum |
 |---|-------|--------|-------|
-| [0015](0015-zweischichtiges-zielmodell.md) | Zweischichtiges Zielmodell mit Replace-on-Pivot | proposed | 2026-07-24 |
-| [0016](0016-generelle-behandlungsepisode.md) | Generelles `Behandlungsepisode`-Profil ersetzt `OnkoTherapyLine` | proposed | 2026-07-24 |
-| [0017](0017-empfehlung-behandlung-careplan.md) | Empfehlungs-/Behandlungs-CarePlan getrennt, `basedOn` statt `partOf` | proposed | 2026-07-24 |
-| [0018](0018-achievementstatus-zustandscodes.md) | `achievementStatus` nur Zustands-Codes; Trajektorie in Observations | proposed | 2026-07-24 |
-| [0019](0019-beispiel-varianten-architektur.md) | Beispiel-/Bundle-Varianten-Architektur (self-contained, PUT, RuleSet) | proposed | 2026-07-24 |
-| [0020](0020-lokoregionale-behandlungslinien.md) | Lokoregionale Behandlungslinien (Chirurgie, Strahlentherapie, Ablation) als nicht-EnLiST-Behandlungsepisoden | proposed | 2026-07-24 |
-| [0021](0021-multimodale-orchestrierung-requestgroup.md) | Multimodale, sequenzierte/konkurrente Ansätze als `RequestGroup` / `RequestOrchestration` | proposed | 2026-07-24 |
+| [0015](0015-zweischichtiges-zielmodell.md) | Zweischichtiges Zielmodell mit Replace-on-Pivot | accepted | 2026-07-24 |
+| [0016](0016-generelle-behandlungsepisode.md) | Generelles `Behandlungsepisode`-Profil ersetzt `OnkoTherapyLine` | accepted | 2026-07-24 |
+| [0017](0017-empfehlung-behandlung-careplan.md) | Empfehlungs-/Behandlungs-CarePlan getrennt, `basedOn` statt `partOf` | accepted | 2026-07-24 |
+| [0018](0018-achievementstatus-zustandscodes.md) | `achievementStatus` nur Zustands-Codes; Trajektorie in Observations | accepted | 2026-07-24 |
+| [0019](0019-beispiel-varianten-architektur.md) | Beispiel-/Bundle-Varianten-Architektur (self-contained, PUT, RuleSet) | accepted | 2026-07-24 |
+| [0020](0020-lokoregionale-behandlungslinien.md) | Lokoregionale Behandlungslinien (Chirurgie, Strahlentherapie, Ablation) als nicht-EnLiST-Behandlungsepisoden | accepted | 2026-07-24 |
+| [0021](0021-multimodale-orchestrierung-requestgroup.md) | Multimodale, sequenzierte/konkurrente Ansätze als `RequestGroup` / `RequestOrchestration` | accepted | 2026-07-24 |
 
 ## Workflow
 
