@@ -55,6 +55,7 @@ und Band C (Content-Modell-Detail) bauen darauf auf.
 | [0019](0019-beispiel-varianten-architektur.md) | Beispiel-/Bundle-Varianten-Architektur (self-contained, PUT, RuleSet) | accepted | 2026-07-24 |
 | [0020](0020-lokoregionale-behandlungslinien.md) | Lokoregionale Behandlungslinien (Chirurgie, Strahlentherapie, Ablation) als nicht-EnLiST-Behandlungsepisoden | accepted | 2026-07-24 |
 | [0021](0021-multimodale-orchestrierung-requestgroup.md) | Multimodale, sequenzierte/konkurrente Ansätze als `RequestGroup` / `RequestOrchestration` | accepted | 2026-07-24 |
+| [0022](0022-zweistufige-vorlagen-cpg-protokollkatalog.md) | Zweistufige Vorlagen: CPG-Leitlinie → Empfehlungsplan, Protokollkatalog → Behandlungsplan | accepted | 2026-07-27 |
 
 ## Workflow
 

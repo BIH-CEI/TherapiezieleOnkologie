@@ -22,8 +22,10 @@ Historie**, und die Trajektorie-Codes definieren **keinen Bezugspunkt**
 **vermieden**. Konvention: `lifecycleStatus` = *warum die Verfolgung endet*,
 `achievementStatus` = *erreichter Grad*; **`completed` nur bei Erfolg** (CR/pCR →
 `completed`+`achieved`), Abbruch/Pivot = `cancelled`+`not-achieved`/`not-attainable`
-mit `replacement`-Nachfolger; partielle Remission = `active`+`in-progress` **oder**
-`cancelled`+Replacement. **Verlauf/Ansprechen** (RECIST, mCODE CancerDiseaseStatus)
+mit einem über `replacement` verknüpften neuen Ziel. Ein **erfolgreich
+abgeschlossenes** Ziel (CR/pCR) übergibt dagegen über `predecessor`/`successor` an
+sein Folgeziel — nicht `replacement`. Partielle Remission = `active`+`in-progress`
+**oder** `cancelled`+`replacement`. **Verlauf/Ansprechen** (RECIST, mCODE CancerDiseaseStatus)
 liegt in den `outcomeReference`-**Observations**, die zeitgestempelt sind und ihren
 Bezugspunkt selbst definieren.
 

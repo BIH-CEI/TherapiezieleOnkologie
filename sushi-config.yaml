@@ -29,6 +29,14 @@ dependencies:
 pages:
   index.md:
     title: Startseite
+  therapieziele.md:
+    title: Therapieziele (Goals)
+  empfehlung-behandlung.md:
+    title: Empfehlungs- und Behandlungsplan
+  behandlungsepisode.md:
+    title: Behandlungsepisoden (EpisodeOfCare)
+  goal-target-measure.md:
+    title: Zielwerte und Messgrößen
   szenario-crc.md:
     title: Anwendungsbeispiel (mCRC palliativ)
   szenario-mamma.md:
@@ -52,6 +60,11 @@ parameters:
 
 menu:
   Startseite: index.html
+  Konzepte:
+    Therapieziele: therapieziele.html
+    Empfehlungs- und Behandlungsplan: empfehlung-behandlung.html
+    Behandlungsepisoden: behandlungsepisode.html
+    Zielwerte & Messgrößen: goal-target-measure.html
   Anwendungsbeispiele:
     mCRC (palliativ): szenario-crc.html
     Mammakarzinom (neoadjuvant): szenario-mamma.html

@@ -21,9 +21,13 @@ Zwei Ziel-Ebenen: **Layer 1** = genau **ein zu jedem Zeitpunkt aktives**
 Intention; **Layer 2** = optionale *Episodenziele* je [[Behandlungsepisode]]/Phase.
 Bei einem Strategiewechsel wird das übergeordnete Ziel **nicht mutiert**, sondern
 abgeschlossen (`lifecycleStatus = cancelled`, `achievementStatus = not-achieved`/
-`not-attainable`) und durch ein **neues** ersetzt (`goal-relationship = replacement`/
-`successor`). Das `Goal` ist konzeptionell **primär**; `CarePlan.goal` ist eine
-Verfolgungs-Referenz, kein Besitz.
+`not-attainable`) und durch ein **neues** ersetzt (`goal-relationship = replacement`).
+Davon zu unterscheiden ist der **erfolgreiche Abschluss** eines Ziels
+(`completed`/`achieved`): dessen Folgeziel wird über `predecessor`/`successor`
+verknüpft, **nicht** über `replacement`. `replacement` bezeichnet die *Ablösung*
+eines nicht (mehr) verfolgten Ziels (Pivot), `successor` die *zeitliche Abfolge* nach
+erfolgreichem Abschluss. Das `Goal` ist konzeptionell **primär**; `CarePlan.goal` ist
+eine Verfolgungs-Referenz, kein Besitz.
 
 ## Konsequenzen
 
@@ -60,3 +64,8 @@ Verfolgungs-Referenz, kein Besitz.
 ## Offene Punkte
 
 - Bindung/Terminologie der Zielart des übergeordneten Ziels (`OnkoTherapyGoalTypeVS`).
+- **Studienteilnahme als Zielart fraglich:** Studienteilnahme ist primär ein *Mittel*
+  (investigational Line of Therapy, iLoT/EnLiST) bzw. eigener Dokumenttyp (ADR-0003) —
+  **kein** patientenseitiger Zielzustand. Nur wenn die Patient:in sie ausdrücklich als
+  eigenes Anliegen benennt (Shared Decision / „what matters most", PCO), ist sie ein
+  Ziel. Aufnahme in `OnkoTherapyGoalTypeVS` mit Patient:in-Perspektive überdenken.
