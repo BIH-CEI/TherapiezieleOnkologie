@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Empfehlungs- und Behandlungsplan - Implementierungsleitfaden Therapieziele Onkologie v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/empfehlung-behandlung.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Empfehlungs- und Behandlungsplan</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Empfehlungs- und Behandlungsplan</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#empfehlungs--und-behandlungsplan" id="markdown-toc-empfehlungs--und-behandlungsplan">Empfehlungs- und Behandlungsplan</a></li>
+  <li><a href="#zwei-rollen-des-careplan" id="markdown-toc-zwei-rollen-des-careplan">Zwei Rollen des <code class="language-plaintext highlighter-rouge">CarePlan</code></a></li>
+  <li><a href="#unterschiedliche-detailtiefe" id="markdown-toc-unterschiedliche-detailtiefe">Unterschiedliche Detailtiefe</a></li>
+  <li><a href="#zeitliche-und-organisatorische-entkopplung" id="markdown-toc-zeitliche-und-organisatorische-entkopplung">Zeitliche und organisatorische Entkopplung</a></li>
+  <li><a href="#verknüpfung-basedon-nicht-partof" id="markdown-toc-verknüpfung-basedon-nicht-partof">Verknüpfung: <code class="language-plaintext highlighter-rouge">basedOn</code>, nicht <code class="language-plaintext highlighter-rouge">partOf</code></a></li>
+  <li><a href="#bezug-auf-etablierte-protokolle" id="markdown-toc-bezug-auf-etablierte-protokolle">Bezug auf etablierte Protokolle</a></li>
+  <li><a href="#beispiele" id="markdown-toc-beispiele">Beispiele</a></li>
+</ul>
+
+</div>
+<h3 id="empfehlungs--und-behandlungsplan">Empfehlungs- und Behandlungsplan</h3>
+
+<p>Auf der <a href="therapieziele.html">vorigen Seite</a> wurde deutlich: die Therapieintention
+entsteht <strong>bei der Empfehlung</strong> (Tumorboard). Daraus folgt eine Unterscheidung, die
+für die gesamte Modellierung tragend ist — <strong>das Empfohlene und das tatsächlich
+Erbrachte sind verschiedene Gegenstände</strong>.</p>
+
+<h3 id="zwei-rollen-des-careplan">Zwei Rollen des <code class="language-plaintext highlighter-rouge">CarePlan</code></h3>
+
+<ul>
+  <li><strong>EmpfehlungsCarePlan</strong> — die vom Tumorboard nach abgeschlossener Diagnostik
+synthetisierte <strong>Empfehlungsliste</strong>. Sie enthält die empfohlenen Maßnahmen als
+Vorschläge (<a href="StructureDefinition-onko-tumorboard-medication-request.html"><code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code></a>,
+<a href="StructureDefinition-onko-tumorboard-service-request.html"><code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code></a>,
+jeweils mit <code class="language-plaintext highlighter-rouge">intent = proposal</code>) und trägt das <strong>übergeordnete Behandlungsziel</strong>.</li>
+  <li><strong>BehandlungsCarePlan</strong> — der Plan der <strong>tatsächlich erbrachten</strong> Versorgung eines
+konkreten Behandlungsabschnitts. Er trägt das jeweilige <strong>Episodenziel</strong> und die
+real durchgeführten bzw. konkret geplanten Maßnahmen.</li>
+</ul>
+
+<h3 id="unterschiedliche-detailtiefe">Unterschiedliche Detailtiefe</h3>
+
+<p>Der Empfehlungsplan ist bewusst <strong>grobkörnig</strong>: „welche Strategie, welche Modalitäten,
+welches Ziel". Der Behandlungsplan ist <strong>feinkörnig</strong>: „welche Substanz in welcher
+Dosis, welcher Eingriff, an welcher Einrichtung, mit welchem Ergebnis". Ein und
+dieselbe Board-Empfehlung („neoadjuvante Systemtherapie, dann Operation") kann sich in
+<strong>mehreren</strong> Behandlungsplänen niederschlagen.</p>
+
+<p><strong>Beispiel Detailtiefe.</strong> Der Empfehlungsplan kann eine Systemtherapie auf
+<strong>Wirkstoffklassen-Ebene</strong> empfehlen (z. B. „platinbasierte Chemotherapie +
+Checkpoint-Inhibitor"). Der Behandlungsplan legt daraus — je nach internen Abläufen,
+Verfügbarkeit und Vortherapien — die <strong>konkreten Wirkstoffe, Dosis und Schema</strong> fest.
+An dieser feinkörnigen Stelle kann der Behandlungsplan zudem mit <strong>operativen
+Systemen</strong> verknüpft werden: Anbindung an <strong>Apotheken-/Bestellsysteme</strong> (Medikations-
+versorgung) und <strong>Terminbuchungssysteme</strong> (Applikations-/Eingriffstermine). Der
+Empfehlungsplan bleibt davon unberührt.</p>
+
+<h3 id="zeitliche-und-organisatorische-entkopplung">Zeitliche und organisatorische Entkopplung</h3>
+
+<p>Empfehlung und Umsetzung fallen <strong>zeitlich</strong> auseinander (die Empfehlung entsteht am
+Board-Termin, die Umsetzung zieht sich über Wochen bis Monate und mehrere Phasen) und
+<strong>organisatorisch</strong> (die Umsetzung erfolgt ggf. an anderen Einrichtungen als der
+diagnostizierenden — Klinik, niedergelassene Onkologie, Reha). Jeder Behandlungsplan
+trägt daher seine <strong>eigene verantwortliche Stelle</strong> (<code class="language-plaintext highlighter-rouge">custodian</code>).</p>
+
+<h3 id="verknüpfung-basedon-nicht-partof">Verknüpfung: <code class="language-plaintext highlighter-rouge">basedOn</code>, nicht <code class="language-plaintext highlighter-rouge">partOf</code></h3>
+
+<p>Der Behandlungsplan <strong>erfüllt</strong> die Empfehlung — er ist ihr nicht untergeordnet.
+Modelliert wird das über <strong><code class="language-plaintext highlighter-rouge">CarePlan.basedOn</code></strong> (Behandlung → Empfehlung), die
+Umsetzung <em>einzelner</em> Empfehlungen zusätzlich auf Request-Ebene (der ausgeführte
+<code class="language-plaintext highlighter-rouge">ServiceRequest</code>/<code class="language-plaintext highlighter-rouge">MedicationRequest</code> trägt <code class="language-plaintext highlighter-rouge">.basedOn</code> → den Empfehlungs-Request).</p>
+
+<p>Bewusst <strong>nicht</strong> verwendet wird <code class="language-plaintext highlighter-rouge">CarePlan.partOf</code>: Dieses würde eine <strong>zentrale
+Steuerinstanz</strong> unterstellen, die in der deutschen <strong>intersektoralen</strong> Versorgung
+nicht existiert. Autonome Leistungserbringer planen eigenständig und <em>erfüllen</em> die
+Empfehlung — sie sind keinem Masterplan untergeordnet.</p>
+
+<blockquote>
+  <p><strong>Zielmodell.</strong> Die Trennung in <code class="language-plaintext highlighter-rouge">EmpfehlungsCarePlan</code> und <code class="language-plaintext highlighter-rouge">BehandlungsCarePlan</code> ist
+architektonisch festgelegt und wird im laufenden Ausbau des Profilsatzes umgesetzt.
+Aktuell bildet der <a href="StructureDefinition-onko-care-plan.html"><code class="language-plaintext highlighter-rouge">OnkoCarePlan</code></a> das
+zentrale Steuerobjekt; die Board-Empfehlungen sind bereits über die
+Tumorboard-Request-Profile ausgezeichnet (LOINC <code class="language-plaintext highlighter-rouge">85232-7</code>, Tumor board Consult note).</p>
+</blockquote>
+
+<h3 id="bezug-auf-etablierte-protokolle">Bezug auf etablierte Protokolle</h3>
+
+<p>Ein Behandlungsplan bezieht sich in der Realität häufig auf ein <strong>etabliertes
+Protokoll</strong> — eine Leitlinie, ein Studienprotokoll oder eine interne SOP. Ein solches
+Protokoll soll als <strong>Referenz verlinkbar</strong> sein: FHIR bietet dafür
+<code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> (wenn das Protokoll als computable <code class="language-plaintext highlighter-rouge">PlanDefinition</code> vorliegt —
+CPG-Primärpfad, s. <a href="analysebericht.html">Analysebericht</a>) bzw.
+<code class="language-plaintext highlighter-rouge">instantiatesUri</code>/Identifier für nicht-computable Protokolle.</p>
+
+<p><strong>Zwei Vorlagen-Ebenen, die zusammenspielen.</strong> Computable <strong>Clinical Guidelines</strong>
+(CPG-on-FHIR) wirken als <strong>Empfehlungsvorlagen</strong> und speisen den <em>Empfehlungsplan</em>
+(„was ist leitliniengerecht zu empfehlen?"); ein <strong>Protokollkatalog</strong> (systemische
+Regime/Protokolle) wirkt als <strong>Behandlungsvorlage</strong> und speist den <em>Behandlungsplan</em>
+(„welches Schema wird konkret ausgeführt?"). Beide sind <code class="language-plaintext highlighter-rouge">PlanDefinition</code>-Vorlagen, die
+der jeweilige Plan via <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code> referenziert — Leitlinie auf
+Empfehlungs-, Protokoll auf Behandlungsebene. CPG und Katalog <strong>konkurrieren nicht,
+sondern ergänzen sich</strong>.</p>
+
+<p><strong>Aktuelle Lücke.</strong> Für systemische onkologische Protokolle existiert derzeit <strong>keine
+normative, interoperable Abbildung</strong> und <strong>kein offizieller Katalog</strong>. Der Bezug
+erfolgt bis dahin interimistisch über URI/Identifier (Leitlinien-/Studien-ID, Text).
+Ein normativer Katalog wird <strong>voraussichtlich ab Q4 2026 von der PHOENIX-Initiative</strong>
+zur Unterstützung des <strong>European Common Cancer Model</strong> bereitgestellt; dessen Anbindung
+ist vorgesehen, sobald verfügbar.</p>
+
+<p><strong>Abdeckung des Katalogs.</strong> Der Katalog wird zunächst v. a. <strong>systemische Chemo-/
+Targeted-Protokolle</strong> umfassen. <strong>Nicht-chemo-systemische Therapien</strong> (z. B. Apherese/
+Blutwäsche, Elektrotherapien), die <strong>genaue Operationsdurchführung</strong>, <strong>Vor- und
+Nachsorge</strong> sowie die <strong>Strahlentherapie</strong> sind vorerst <strong>nicht abgedeckt</strong> — sie
+können bei Bedarf künftig in Zusammenarbeit mit nationalen und internationalen
+Fachgesellschaften erarbeitet und ergänzt werden.</p>
+
+<h3 id="beispiele">Beispiele</h3>
+
+<ul>
+  <li><a href="szenario-crc.html">mCRC (palliativ)</a> — Board-Empfehlung (FOLFOX + Bevacizumab,
+Portanlage) und übergeordnetes Ziel im Zusammenspiel.</li>
+  <li><a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a> — Empfehlung neoadjuvante
+Systemtherapie + Operation, umgesetzt über mehrere Abschnitte.</li>
+</ul>
+
+<p>→ Weiter: <a href="behandlungsepisode.html">Behandlungsepisoden (EpisodeOfCare)</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-28 00:29:00 +0000">
+    2026-07-28
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

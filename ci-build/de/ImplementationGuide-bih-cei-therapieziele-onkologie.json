@@ -11,7 +11,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-27T15:55:12+00:00",
+  "date" : "2026-07-28T00:29:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -1549,6 +1549,42 @@
         }],
         "nameUrl" : "index.html",
         "title" : "Startseite",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "therapieziele.html"
+        }],
+        "nameUrl" : "therapieziele.html",
+        "title" : "Therapieziele (Goals)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "empfehlung-behandlung.html"
+        }],
+        "nameUrl" : "empfehlung-behandlung.html",
+        "title" : "Empfehlungs- und Behandlungsplan",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "behandlungsepisode.html"
+        }],
+        "nameUrl" : "behandlungsepisode.html",
+        "title" : "Behandlungsepisoden (EpisodeOfCare)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "goal-target-measure.html"
+        }],
+        "nameUrl" : "goal-target-measure.html",
+        "title" : "Zielwerte und Messgrößen",
         "generation" : "markdown"
       },
       {

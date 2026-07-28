@@ -7,7 +7,11 @@
 * [Analysebericht (LG-01)](analysebericht.md)
 * [Anwendungsbeispiel (Mammakarzinom neoadjuvant)](szenario-mamma.md)
 * [Artifacts Summary](artifacts.md)
+* [Empfehlungs- und Behandlungsplan](empfehlung-behandlung.md)
+* [Therapieziele (Goals)](therapieziele.md)
 * [Anwendungsbeispiel (mCRC palliativ)](szenario-crc.md)
+* [Behandlungsepisoden (EpisodeOfCare)](behandlungsepisode.md)
+* [Zielwerte und Messgrößen](goal-target-measure.md)
 
 ## Resources
 
