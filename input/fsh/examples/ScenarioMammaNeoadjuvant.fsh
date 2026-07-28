@@ -24,6 +24,10 @@
 // Biopsie; die pathologische Aufarbeitung zeigt eine pathologische
 // Komplettremission (pCR, ypT0 ypN0). Das Ansprechen wird über eine
 // Verlaufs-Observation (Disease Status) auf das Therapieziel bezogen.
+// Im Anschluss an die Operation folgt — schemakonform zu KEYNOTE-522 und
+// unabhängig vom pCR-Status — eine ambulante adjuvante Pembrolizumab-
+// Monotherapie (~9 Zyklen q3w) als nachgelagerte Therapielinie
+// (EpisodeOfCare).
 // =====================================================================
 
 Instance: PatientinMamma
@@ -405,6 +409,34 @@ Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNO
 * referralRequest = Reference(ServiceRequestProcedure)
 * managingOrganization = Reference(Tumorboard)
 * careManager = Reference(OnkologinMamma)
+
+// ---------------------------------------------------------------------
+// Therapielinie (adjuvante Immuntherapie, LoT 3) — nachgelagert, ambulant
+// Vervollständigt das KEYNOTE-522-Schema: adjuvante Pembrolizumab-
+// Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status),
+// ~9 Zyklen q3w im ambulanten Setting. Zum Zeitpunkt der Darstellung noch
+// laufend (status = active).
+// ---------------------------------------------------------------------
+
+Instance: TherapieliniePembroAdjuvant
+InstanceOf: OnkoTherapyLine
+Usage: #example
+Title: "Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant"
+Description: "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept)."
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373846009 "Adjuvant"
+* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Erhaltungstherapie"
+* extension[medicationRequest].valueReference = Reference(MedicationRequestPembroAdjuvantMamma)
+* status = #active
+* type = http://snomed.info/sct#76334006 "Immunological therapy"
+* type.text = "Ambulante adjuvante Immuntherapie – Pembrolizumab-Monotherapie"
+* patient = Reference(PatientinMamma)
+* period.start = "2026-04-24"
+* diagnosis.condition = Reference(ConditionMamma)
+* diagnosis.rank = 1
+* diagnosis.role = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
+* managingOrganization = Reference(Tumorboard)
+* careManager = Reference(OnkologinMamma)
+
 // ---------------------------------------------------------------------
 // Therapieziel (kurativ) mit Zielakzeptanz und Verlaufsergebnis
 // ---------------------------------------------------------------------
@@ -473,6 +505,22 @@ Description: "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapi
 * subject = Reference(PatientinMamma)
 
 // ---------------------------------------------------------------------
+// Geplante adjuvante Systemtherapie vom Tumorboard (nach der Operation)
+// Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie.
+// ---------------------------------------------------------------------
+
+Instance: MedicationRequestPembroAdjuvantMamma
+InstanceOf: TumorboardMedicationRequest
+Usage: #example
+Title: "Adjuvante Systemtherapie – Pembrolizumab-Monotherapie (KEYNOTE-522, Beispiel)"
+Description: "Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status), ambulant über ~9 Zyklen (q3w)."
+* status = #active
+* intent = #plan
+* category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
+* medicationCodeableConcept.text = "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), ambulant, ~9 Zyklen q3w"
+* subject = Reference(PatientinMamma)
+
+// ---------------------------------------------------------------------
 // Durchgeführte Operation nach neoadjuvanter Therapie
 // ---------------------------------------------------------------------
 
@@ -536,8 +584,10 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives T
 // Geplante Maßnahme: OP-Empfehlung des Tumorboards → durchgeführte Operation
 * activity[1].reference = Reference(ServiceRequestProcedure)
 * activity[1].outcomeReference = Reference(ProcedureOperationMamma)
+// Geplante Maßnahme: adjuvante Systemtherapie (Pembrolizumab-Monotherapie, ambulant)
+* activity[2].reference = Reference(MedicationRequestPembroAdjuvantMamma)
 // Dokumentiertes Ergebnis: Ansprechbeurteilung
-* activity[2].outcomeReference = Reference(ObsDiseaseStatusMamma)
+* activity[3].outcomeReference = Reference(ObsDiseaseStatusMamma)
 
 
 // ---------------------------------------------------------------------
