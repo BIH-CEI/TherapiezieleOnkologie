@@ -56,6 +56,7 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 | Durchgeführte Maßnahme (Operation) | `Procedure` | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.html) |
 | Tumoransprechen | `Observation` | [ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.html) |
 
+
 ### Verknüpfungen im Beispiel
 
 - **Therapieintention:** `kurativ` (Extension `onko-therapy-intent`) auf CarePlan und Therapieziel; die zugehörige Therapielinie trägt `neoadjuvant`.
@@ -68,3 +69,4 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 
 - **`goal-acceptance`** (MCCGoal): Die Patientin stimmt dem kurativen Ziel mit hoher Priorität zu (`status = agree`).
 - **`custodian`** (MCC CarePlan, R5-Backport): Das [Brustzentrum](Organization-TumorzentrumMamma.html) ist als für Pflege und Aktualisierung des Plans verantwortliche Stelle hinterlegt.
+
