@@ -1,0 +1,72 @@
+<svg width="100%" viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Treat-to-target-Regelkreis der rheumatoiden Arthritis</title>
+<desc>Regelkreis: Ziel festlegen (Remission nach ACR-EULAR bzw. SDAI/CDAI), behandeln, alle 1 bis 3 Monate messen, bei Zielverfehlung Therapie anpassen, bei Zielerreichung halten. Darunter die Etappen: nach 3 Monaten mindestens 50 Prozent Reduktion, nach 6 Monaten Zielerreichung (target.due).</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7"/></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A"/></marker>
+</defs>
+
+<g><rect x="40" y="40" width="190" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="135" y="62" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">Ziel festlegen</text>
+<text x="135" y="80" text-anchor="middle" font-size="11" fill="#04342C">Remission: SDAI ≤ 3,3 · CDAI ≤ 2,8</text>
+<text x="135" y="96" text-anchor="middle" font-size="10.5" fill="#0F6E56">Goal.target — SDAI/CDAI: measure.text</text></g>
+
+<line x1="232" y1="76" x2="278" y2="76" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+
+<g><rect x="280" y="40" width="160" height="72" rx="8" fill="#FAECE7" stroke="#D85A30"/>
+<text x="360" y="62" text-anchor="middle" font-size="13" font-weight="500" fill="#4A1B0C">Behandeln</text>
+<text x="360" y="80" text-anchor="middle" font-size="10.5" fill="#4A1B0C">DMARD, ggf. Biologikum/JAK</text>
+<text x="360" y="96" text-anchor="middle" font-size="10.5" fill="#993C1D">MedicationRequest</text></g>
+
+<line x1="442" y1="76" x2="488" y2="76" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+
+<g><rect x="490" y="40" width="150" height="72" rx="8" fill="#FAECE7" stroke="#D85A30"/>
+<text x="565" y="58" text-anchor="middle" font-size="13" font-weight="500" fill="#4A1B0C">Messen</text>
+<text x="565" y="74" text-anchor="middle" font-size="10.5" fill="#4A1B0C">SDAI/CDAI · CRP/BSG</text>
+<text x="565" y="88" text-anchor="middle" font-size="10.5" fill="#4A1B0C">alle 1–3 Monate</text>
+<text x="565" y="102" text-anchor="middle" font-size="9.5" fill="#993C1D">Observation · 1988-5 · 30341-2</text></g>
+
+<line x1="565" y1="114" x2="565" y2="146" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+
+<polygon points="565,148 645,192 565,236 485,192" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="565" y="196" text-anchor="middle" font-size="12" font-weight="500" fill="#26215C">Ziel erreicht?</text>
+
+<line x1="483" y1="192" x2="234" y2="192" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<text x="458" y="184" font-size="11" fill="#5F5E5A">ja</text>
+
+<g><rect x="40" y="156" width="190" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="135" y="178" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">Halten</text>
+<text x="135" y="196" text-anchor="middle" font-size="11" fill="#04342C">Remission dauerhaft halten</text>
+<text x="135" y="212" text-anchor="middle" font-size="10.5" fill="#0F6E56">HAQ · Röntgen: measure.text</text></g>
+
+<path d="M565,238 L565,278 L442,278" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<text x="574" y="260" font-size="11" fill="#5F5E5A">nein</text>
+
+<g><rect x="280" y="250" width="160" height="56" rx="8" fill="#FAECE7" stroke="#D85A30"/>
+<text x="360" y="272" text-anchor="middle" font-size="12.5" font-weight="500" fill="#4A1B0C">Therapie anpassen</text>
+<text x="360" y="290" text-anchor="middle" font-size="10.5" fill="#4A1B0C">eskalieren / umstellen</text></g>
+
+<line x1="360" y1="248" x2="360" y2="114" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+
+<g><rect x="40" y="250" width="200" height="66" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="140" y="266" text-anchor="middle" font-size="10.5" font-weight="500" fill="#2C2C2A">DAS28: als Remissionsmaß</text>
+<text x="140" y="280" text-anchor="middle" font-size="10.5" fill="#2C2C2A">nicht mehr empfohlen (EULAR 2025) —</text>
+<text x="140" y="294" text-anchor="middle" font-size="10.5" fill="#2C2C2A">unter IL-6-/JAK-Hemmern verzerrt;</text>
+<text x="140" y="308" text-anchor="middle" font-size="10.5" fill="#2C2C2A">stattdessen ACR-EULAR · SDAI/CDAI</text></g>
+
+<line x1="60" y1="356" x2="620" y2="356" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)"/>
+<line x1="60" y1="350" x2="60" y2="362" stroke="#5F5E5A" stroke-width="1.2"/>
+<line x1="200" y1="350" x2="200" y2="362" stroke="#5F5E5A" stroke-width="1.2"/>
+<line x1="430" y1="350" x2="430" y2="362" stroke="#5F5E5A" stroke-width="1.2"/>
+<text x="60" y="378" text-anchor="middle" font-size="11" fill="#5F5E5A">Therapiebeginn</text>
+<text x="200" y="378" text-anchor="middle" font-size="11" fill="#5F5E5A">3 Monate:</text>
+<text x="200" y="392" text-anchor="middle" font-size="11" fill="#5F5E5A">≥ 50 % Reduktion der Aktivität</text>
+<text x="430" y="378" text-anchor="middle" font-size="11" fill="#5F5E5A">6 Monate:</text>
+<text x="430" y="392" text-anchor="middle" font-size="11" fill="#5F5E5A">Ziel erreicht (target.due)</text>
+
+<rect x="40" y="414" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="59" y="425" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="100" y="414" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30"/><text x="119" y="425" font-size="11.5" fill="#5F5E5A">Maßnahme / Messung</text>
+<rect x="255" y="414" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="274" y="425" font-size="11.5" fill="#5F5E5A">Entscheidung</text>
+<rect x="365" y="414" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="384" y="425" font-size="11.5" fill="#5F5E5A">Hinweis</text>
+<text x="460" y="425" font-size="10.5" fill="#5F5E5A">Scores ohne Code: measure.text</text>
+</svg>

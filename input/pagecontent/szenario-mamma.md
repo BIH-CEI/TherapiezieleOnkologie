@@ -8,6 +8,8 @@ In der interdisziplinären Tumorkonferenz wird – leitlinienkonform für ein fr
 
 Nach Abschluss der neoadjuvanten Therapie erfolgt eine **brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie**. Die pathologische Aufarbeitung des Präparats zeigt eine **pathologische Komplettremission (pCR, ypT0 ypN0)**. Das Ansprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet (`achievementStatus = achieved`).
 
+Schemakonform zu KEYNOTE-522 – und **unabhängig vom pCR-Status** – schließt sich an die Operation eine **ambulante adjuvante Pembrolizumab-Monotherapie** (~9 Zyklen q3w) an. Sie ist als **nachgelagerte Therapielinie** (`OnkoTherapyLine` / `EpisodeOfCare`, ambulant) modelliert und zum Zeitpunkt der Darstellung noch laufend (`status = active`).
+
 ### Zeitlicher Verlauf
 
 | Datum | Ereignis | Ressource |
@@ -22,6 +24,7 @@ Nach Abschluss der neoadjuvanten Therapie erfolgt eine **brusterhaltende Operati
 | 01.10.2025 – 15.03.2026 | Therapielinie neoadjuvante und kurative Chemotherapie | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.html) |
 | 20.03.2026 - 06.04.2026 | Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie, Therapielinie kurative Operation | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.html), [TherapielinieOperation](EpisodeOfCare-Therapielinieoperation.html)  |
 | 07.04.2026 | Pathologie des OP-Präparats: ypT0 ypN0 → pathologische Komplettremission (pCR); Disease Status | [ObsTNMpathologischMamma](Observation-ObsTNMpathologischMamma.html), [ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.html) |
+| ab 24.04.2026 (laufend) | Nachgelagerte, **ambulante** adjuvante Pembrolizumab-Monotherapie (KEYNOTE-522, ~9 Zyklen q3w); Therapielinie adjuvante Immuntherapie | [TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.html), [MedicationRequestPembroAdjuvantMamma](MedicationRequest-MedicationRequestPembroAdjuvantMamma.html) |
 
 ### Pathologisches und molekulares Profil
 
