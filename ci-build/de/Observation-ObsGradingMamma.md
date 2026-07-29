@@ -10,7 +10,7 @@
 
 **status**: Final
 
-**code**: Histology grade [Identifier] in Cancer specimen
+**code**: Histologic grade [Score] in Breast cancer specimen by Nottingham
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -18,7 +18,7 @@
 
 **value**: G3 – schlecht differenziert (Elston-Ellis)
 
-**specimen**: [Specimen: status = available; type = Tissue specimen (specimen)](Specimen-SpecimenBiopsieMamma.md)
+**specimen**: [Specimen: status = available; type = Specimen from breast obtained by core needle biopsy](Specimen-SpecimenBiopsieMamma.md)
 
 
 
@@ -32,8 +32,8 @@
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
-      "code" : "33732-9",
-      "display" : "Histology grade [Identifier] in Cancer specimen"
+      "code" : "44648-4",
+      "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
     }]
   },
   "subject" : {
@@ -42,6 +42,11 @@
   "effectiveDateTime" : "2025-09-15",
   "valueCodeableConcept" : {
     "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "1155704001",
+      "display" : "G3: Poorly differentiated"
+    },
+    {
       "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
       "code" : "3",
       "display" : "schlecht differenziert"

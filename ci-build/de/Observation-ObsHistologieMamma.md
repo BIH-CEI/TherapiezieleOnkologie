@@ -10,7 +10,7 @@
 
 **status**: Final
 
-**code**: Histology type in Cancer specimen Narrative
+**code**: Histology and Behavior ICD-O-3 Cancer
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -18,7 +18,7 @@
 
 **value**: Invasives Mammakarzinom, NST (ICD-O-3 8500/3)
 
-**specimen**: [Specimen: status = available; type = Tissue specimen (specimen)](Specimen-SpecimenBiopsieMamma.md)
+**specimen**: [Specimen: status = available; type = Specimen from breast obtained by core needle biopsy](Specimen-SpecimenBiopsieMamma.md)
 
 
 
@@ -32,8 +32,8 @@
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
-      "code" : "33731-1",
-      "display" : "Histology type in Cancer specimen Narrative"
+      "code" : "59847-4",
+      "display" : "Histology and Behavior ICD-O-3 Cancer"
     }]
   },
   "subject" : {
@@ -42,6 +42,11 @@
   "effectiveDateTime" : "2025-09-15",
   "valueCodeableConcept" : {
     "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "82711006",
+      "display" : "Infiltrating duct carcinoma"
+    },
+    {
       "system" : "urn:oid:2.16.840.1.113883.6.43.1",
       "code" : "8500/3",
       "display" : "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"

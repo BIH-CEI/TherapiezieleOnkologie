@@ -4,8 +4,8 @@
   <id value="ObsProgesteronrezeptorMamma"/>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsProgesteronrezeptorMamma</b></p><a name="en-ObsProgesteronrezeptorMamma"> </a><a name="en-hcObsProgesteronrezeptorMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 85339-0}">Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6577-6}">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → PR-negativ.</p>
-</div></blockquote><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsProgesteronrezeptorMamma</b></p><a name="en-ObsProgesteronrezeptorMamma"> </a><a name="en-hcObsProgesteronrezeptorMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 85339-0}, {http://snomed.info/sct 1234806008}">Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6577-6}">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → PR-negativ.</p>
+</div></blockquote><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div>
   </text>
   <status value="final"/>
   <code>
@@ -13,6 +13,11 @@
       <system value="http://loinc.org"/>
       <code value="85339-0"/>
       <display value="Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1234806008"/>
+      <display value="Observation using immunohistochemistry (observable entity)"/>
     </coding>
   </code>
   <subject>

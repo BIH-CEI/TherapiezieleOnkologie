@@ -4,11 +4,16 @@
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Specimen SpecimenBiopsieMamma</b></p><a name=\"en-SpecimenBiopsieMamma\"> </a><a name=\"en-hcSpecimenBiopsieMamma\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119376003}\">Stanzbiopsat (Gewebeprobe) Mamma links</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-09-15</td><td><span title=\"Codes:\">Mamma links, oberer äußerer Quadrant</span></td></tr></table></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Specimen SpecimenBiopsieMamma</b></p><a name=\"en-SpecimenBiopsieMamma\"> </a><a name=\"en-hcSpecimenBiopsieMamma\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 122737001}, {http://snomed.info/sct 119376003}\">Stanzbiopsat (Gewebeprobe) Mamma links</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-09-15</td><td><span title=\"Codes:{http://snomed.info/sct 9911007}\">Core needle biopsy</span></td><td><span title=\"Codes:{http://snomed.info/sct 76365002}\">Mamma links, oberer äußerer Quadrant</span></td></tr></table></div>"
   },
   "status" : "available",
   "type" : {
     "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "122737001",
+      "display" : "Specimen from breast obtained by core needle biopsy"
+    },
+    {
       "system" : "http://snomed.info/sct",
       "code" : "119376003",
       "display" : "Tissue specimen (specimen)"
@@ -20,7 +25,19 @@
   },
   "collection" : {
     "collectedDateTime" : "2025-09-15",
+    "method" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "9911007",
+        "display" : "Core needle biopsy"
+      }]
+    },
     "bodySite" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "76365002",
+        "display" : "Structure of upper outer quadrant of breast"
+      }],
       "text" : "Mamma links, oberer äußerer Quadrant"
     }
   }

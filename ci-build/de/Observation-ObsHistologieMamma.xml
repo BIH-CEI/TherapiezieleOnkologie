@@ -4,14 +4,14 @@
   <id value="ObsHistologieMamma"/>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsHistologieMamma</b></p><a name="ObsHistologieMamma"> </a><a name="hcObsHistologieMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 33731-1}">Histology type in Cancer specimen Narrative</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-15</p><p><b>value</b>: <span title="Codes:{urn:oid:2.16.840.1.113883.6.43.1 8500/3}">Invasives Mammakarzinom, NST (ICD-O-3 8500/3)</span></p><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsHistologieMamma</b></p><a name="ObsHistologieMamma"> </a><a name="hcObsHistologieMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 59847-4}">Histology and Behavior ICD-O-3 Cancer</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-15</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 82711006}, {urn:oid:2.16.840.1.113883.6.43.1 8500/3}">Invasives Mammakarzinom, NST (ICD-O-3 8500/3)</span></p><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div>
   </text>
   <status value="final"/>
   <code>
     <coding>
       <system value="http://loinc.org"/>
-      <code value="33731-1"/>
-      <display value="Histology type in Cancer specimen Narrative"/>
+      <code value="59847-4"/>
+      <display value="Histology and Behavior ICD-O-3 Cancer"/>
     </coding>
   </code>
   <subject>
@@ -19,6 +19,11 @@
   </subject>
   <effectiveDateTime value="2025-09-15"/>
   <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="82711006"/>
+      <display value="Infiltrating duct carcinoma"/>
+    </coding>
     <coding>
       <system value="urn:oid:2.16.840.1.113883.6.43.1"/>
       <code value="8500/3"/>

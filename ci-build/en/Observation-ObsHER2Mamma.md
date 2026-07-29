@@ -10,13 +10,13 @@
 
 **status**: Final
 
-**code**: HER2 Ag [Interpretation] in Tissue
+**code**: HER2 [Interpretation] in Tissue
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
 **effective**: 2025-09-17
 
-**value**: negativ
+**value**: Negative
 
 **note**: 
 
@@ -25,7 +25,7 @@
 Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.
 
 
-**specimen**: [Specimen: status = available; type = Tissue specimen (specimen)](Specimen-SpecimenBiopsieMamma.md)
+**specimen**: [Specimen: status = available; type = Specimen from breast obtained by core needle biopsy](Specimen-SpecimenBiopsieMamma.md)
 
 
 
@@ -40,7 +40,7 @@ Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "48676-1",
-      "display" : "HER2 Ag [Interpretation] in Tissue"
+      "display" : "HER2 [Interpretation] in Tissue"
     }]
   },
   "subject" : {
@@ -49,6 +49,11 @@ Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.
   "effectiveDateTime" : "2025-09-17",
   "valueCodeableConcept" : {
     "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA6577-6",
+      "display" : "Negative"
+    },
+    {
       "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds",
       "code" : "N",
       "display" : "negativ"

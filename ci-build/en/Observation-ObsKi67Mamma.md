@@ -18,7 +18,7 @@
 
 **value**: 70 % (Details: UCUM code% = '%')
 
-**specimen**: [Specimen: status = available; type = Tissue specimen (specimen)](Specimen-SpecimenBiopsieMamma.md)
+**specimen**: [Specimen: status = available; type = Specimen from breast obtained by core needle biopsy](Specimen-SpecimenBiopsieMamma.md)
 
 
 
@@ -30,6 +30,16 @@
   "id" : "ObsKi67Mamma",
   "status" : "final",
   "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "85330-9",
+      "display" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234806008",
+      "display" : "Observation using immunohistochemistry (observable entity)"
+    }],
     "text" : "Ki-67 Proliferationsindex (MIB-1)"
   },
   "subject" : {

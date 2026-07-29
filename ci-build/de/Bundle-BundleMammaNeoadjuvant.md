@@ -133,7 +133,7 @@
       "id" : "ServiceRequestPathologieMamma",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"ServiceRequest_ServiceRequestPathologieMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ServiceRequestPathologieMamma</b></p><a name=\"ServiceRequestPathologieMamma\"> </a><a name=\"hcServiceRequestPathologieMamma\"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 788124003}\">Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>authoredOn</b>: 2025-09-15</p><p><b>requester</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"ServiceRequest_ServiceRequestPathologieMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ServiceRequestPathologieMamma</b></p><a name=\"ServiceRequestPathologieMamma\"> </a><a name=\"hcServiceRequestPathologieMamma\"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 788124003}\">Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>authoredOn</b>: 2025-09-15</p><p><b>requester</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div></div>"
       },
       "status" : "completed",
       "intent" : "order",
@@ -229,7 +229,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_CarePlanMammaDiagnostik\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan CarePlanMammaDiagnostik</b></p><a name=\"CarePlanMammaDiagnostik\"> </a><a name=\"hcCarePlanMammaDiagnostik\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-diagnostic-care-plan.html\">Diagnostischer CarePlan</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:\">Tumordiagnostik</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>author</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>goal</b>: <a href=\"Goal-DiagnosticGoal.html\">Goal: extension = ; lifecycleStatus = active; achievementStatus = In Progress; category = Diagnostic intent; priority = High Priority; description = ; start[x] = 2025-09-12</a></p><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Procedure-ProcedureBiopsieMamma.html\">Procedure Core needle biopsy of breast (procedure)</a></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestBiopsieMamma.html\">ServiceRequest Core needle biopsy of breast (procedure)</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: </p><ul><li><a href=\"Observation-ObsHistologieMamma.html\">Observation Histology type in Cancer specimen Narrative</a></li><li><a href=\"Observation-ObsGradingMamma.html\">Observation Histology grade [Identifier] in Cancer specimen</a></li><li><a href=\"Observation-ObsEstrogenrezeptorMamma.html\">Observation Estrogen receptor Ag [Presence] in Tissue by Immune stain</a></li><li><a href=\"Observation-ObsProgesteronrezeptorMamma.html\">Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-ObsHER2Mamma.html\">Observation HER2 Ag [Interpretation] in Tissue</a></li><li><a href=\"Observation-ObsKi67Mamma.html\">Observation </a></li></ul><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestPathologieMamma.html\">ServiceRequest Histopathology service (qualifier value)</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsTNMklinischMamma.html\">Observation Stage group.clinical Cancer</a></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestStagingMamma.html\">ServiceRequest </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsGBRCAMamma.html\">Observation BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</a></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestGBRCAMamma.html\">ServiceRequest BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</a></p></blockquote></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_CarePlanMammaDiagnostik\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan CarePlanMammaDiagnostik</b></p><a name=\"CarePlanMammaDiagnostik\"> </a><a name=\"hcCarePlanMammaDiagnostik\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-diagnostic-care-plan.html\">Diagnostischer CarePlan</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:\">Tumordiagnostik</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>author</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>goal</b>: <a href=\"Goal-DiagnosticGoal.html\">Goal: extension = ; lifecycleStatus = active; achievementStatus = In Progress; category = Diagnostic intent; priority = High Priority; description = ; start[x] = 2025-09-12</a></p><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Procedure-ProcedureBiopsieMamma.html\">Procedure Core needle biopsy of breast (procedure)</a></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestBiopsieMamma.html\">ServiceRequest Core needle biopsy of breast (procedure)</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: </p><ul><li><a href=\"Observation-ObsHistologieMamma.html\">Observation Histology and Behavior ICD-O-3 Cancer</a></li><li><a href=\"Observation-ObsGradingMamma.html\">Observation Histologic grade [Score] in Breast cancer specimen by Nottingham</a></li><li><a href=\"Observation-ObsEstrogenrezeptorMamma.html\">Observation Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-ObsProgesteronrezeptorMamma.html\">Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-ObsHER2Mamma.html\">Observation HER2 [Interpretation] in Tissue</a></li><li><a href=\"Observation-ObsKi67Mamma.html\">Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain</a></li></ul><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestPathologieMamma.html\">ServiceRequest Histopathology service (qualifier value)</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsTNMklinischMamma.html\">Observation Stage group.clinical Cancer</a></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestStagingMamma.html\">ServiceRequest </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsGBRCAMamma.html\">Observation BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</a></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestGBRCAMamma.html\">ServiceRequest BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</a></p></blockquote></div></div>"
       },
       "status" : "active",
       "intent" : "plan",
@@ -584,11 +584,16 @@
       "id" : "SpecimenBiopsieMamma",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Specimen_SpecimenBiopsieMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen SpecimenBiopsieMamma</b></p><a name=\"SpecimenBiopsieMamma\"> </a><a name=\"hcSpecimenBiopsieMamma\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119376003}\">Stanzbiopsat (Gewebeprobe) Mamma links</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-09-15</td><td><span title=\"Codes:\">Mamma links, oberer äußerer Quadrant</span></td></tr></table></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Specimen_SpecimenBiopsieMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen SpecimenBiopsieMamma</b></p><a name=\"SpecimenBiopsieMamma\"> </a><a name=\"hcSpecimenBiopsieMamma\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 122737001}, {http://snomed.info/sct 119376003}\">Stanzbiopsat (Gewebeprobe) Mamma links</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-09-15</td><td><span title=\"Codes:{http://snomed.info/sct 9911007}\">Core needle biopsy</span></td><td><span title=\"Codes:{http://snomed.info/sct 76365002}\">Mamma links, oberer äußerer Quadrant</span></td></tr></table></div></div>"
       },
       "status" : "available",
       "type" : {
         "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "122737001",
+          "display" : "Specimen from breast obtained by core needle biopsy"
+        },
+        {
           "system" : "http://snomed.info/sct",
           "code" : "119376003",
           "display" : "Tissue specimen (specimen)"
@@ -600,7 +605,19 @@
       },
       "collection" : {
         "collectedDateTime" : "2025-09-15",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "9911007",
+            "display" : "Core needle biopsy"
+          }]
+        },
         "bodySite" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "76365002",
+            "display" : "Structure of upper outer quadrant of breast"
+          }],
           "text" : "Mamma links, oberer äußerer Quadrant"
         }
       }
@@ -617,14 +634,14 @@
       "id" : "ObsHistologieMamma",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsHistologieMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsHistologieMamma</b></p><a name=\"ObsHistologieMamma\"> </a><a name=\"hcObsHistologieMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 33731-1}\">Histology type in Cancer specimen Narrative</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-15</p><p><b>value</b>: <span title=\"Codes:{urn:oid:2.16.840.1.113883.6.43.1 8500/3}\">Invasives Mammakarzinom, NST (ICD-O-3 8500/3)</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsHistologieMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsHistologieMamma</b></p><a name=\"ObsHistologieMamma\"> </a><a name=\"hcObsHistologieMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 59847-4}\">Histology and Behavior ICD-O-3 Cancer</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-15</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 82711006}, {urn:oid:2.16.840.1.113883.6.43.1 8500/3}\">Invasives Mammakarzinom, NST (ICD-O-3 8500/3)</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div></div>"
       },
       "status" : "final",
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
-          "code" : "33731-1",
-          "display" : "Histology type in Cancer specimen Narrative"
+          "code" : "59847-4",
+          "display" : "Histology and Behavior ICD-O-3 Cancer"
         }]
       },
       "subject" : {
@@ -633,6 +650,11 @@
       "effectiveDateTime" : "2025-09-15",
       "valueCodeableConcept" : {
         "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "82711006",
+          "display" : "Infiltrating duct carcinoma"
+        },
+        {
           "system" : "urn:oid:2.16.840.1.113883.6.43.1",
           "code" : "8500/3",
           "display" : "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
@@ -655,14 +677,14 @@
       "id" : "ObsGradingMamma",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsGradingMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsGradingMamma</b></p><a name=\"ObsGradingMamma\"> </a><a name=\"hcObsGradingMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 33732-9}\">Histology grade [Identifier] in Cancer specimen</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-15</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading 3}\">G3 – schlecht differenziert (Elston-Ellis)</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsGradingMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsGradingMamma</b></p><a name=\"ObsGradingMamma\"> </a><a name=\"hcObsGradingMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44648-4}\">Histologic grade [Score] in Breast cancer specimen by Nottingham</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-15</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 1155704001}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading 3}\">G3 – schlecht differenziert (Elston-Ellis)</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div></div>"
       },
       "status" : "final",
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
-          "code" : "33732-9",
-          "display" : "Histology grade [Identifier] in Cancer specimen"
+          "code" : "44648-4",
+          "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
         }]
       },
       "subject" : {
@@ -671,6 +693,11 @@
       "effectiveDateTime" : "2025-09-15",
       "valueCodeableConcept" : {
         "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1155704001",
+          "display" : "G3: Poorly differentiated"
+        },
+        {
           "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
           "code" : "3",
           "display" : "schlecht differenziert"
@@ -723,14 +750,19 @@
       "id" : "ObsEstrogenrezeptorMamma",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsEstrogenrezeptorMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsEstrogenrezeptorMamma</b></p><a name=\"ObsEstrogenrezeptorMamma\"> </a><a name=\"hcObsEstrogenrezeptorMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 40556-3}\">Estrogen receptor Ag [Presence] in Tissue by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6577-6}\">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → ER-negativ.</p>\n</div></blockquote><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsEstrogenrezeptorMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsEstrogenrezeptorMamma</b></p><a name=\"ObsEstrogenrezeptorMamma\"> </a><a name=\"hcObsEstrogenrezeptorMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85337-4}, {http://snomed.info/sct 1234806008}\">Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6577-6}\">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → ER-negativ.</p>\n</div></blockquote><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div></div>"
       },
       "status" : "final",
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
-          "code" : "40556-3",
-          "display" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+          "code" : "85337-4",
+          "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
         }]
       },
       "subject" : {
@@ -763,7 +795,7 @@
       "id" : "ObsProgesteronrezeptorMamma",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsProgesteronrezeptorMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsProgesteronrezeptorMamma</b></p><a name=\"ObsProgesteronrezeptorMamma\"> </a><a name=\"hcObsProgesteronrezeptorMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85339-0}\">Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6577-6}\">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → PR-negativ.</p>\n</div></blockquote><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsProgesteronrezeptorMamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsProgesteronrezeptorMamma</b></p><a name=\"ObsProgesteronrezeptorMamma\"> </a><a name=\"hcObsProgesteronrezeptorMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85339-0}, {http://snomed.info/sct 1234806008}\">Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6577-6}\">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → PR-negativ.</p>\n</div></blockquote><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div></div>"
       },
       "status" : "final",
       "code" : {
@@ -771,6 +803,11 @@
           "system" : "http://loinc.org",
           "code" : "85339-0",
           "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
         }]
       },
       "subject" : {
@@ -803,14 +840,14 @@
       "id" : "ObsHER2Mamma",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsHER2Mamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsHER2Mamma</b></p><a name=\"ObsHER2Mamma\"> </a><a name=\"hcObsHER2Mamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48676-1}\">HER2 Ag [Interpretation] in Tissue</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds N}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie negativ}\">negativ</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.</p>\n</div></blockquote><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsHER2Mamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsHER2Mamma</b></p><a name=\"ObsHER2Mamma\"> </a><a name=\"hcObsHER2Mamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 48676-1}\">HER2 [Interpretation] in Tissue</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6577-6}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds N}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie negativ}\">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.</p>\n</div></blockquote><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div></div>"
       },
       "status" : "final",
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
           "code" : "48676-1",
-          "display" : "HER2 Ag [Interpretation] in Tissue"
+          "display" : "HER2 [Interpretation] in Tissue"
         }]
       },
       "subject" : {
@@ -819,6 +856,11 @@
       "effectiveDateTime" : "2025-09-17",
       "valueCodeableConcept" : {
         "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA6577-6",
+          "display" : "Negative"
+        },
+        {
           "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds",
           "code" : "N",
           "display" : "negativ"
@@ -848,10 +890,20 @@
       "id" : "ObsKi67Mamma",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsKi67Mamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsKi67Mamma</b></p><a name=\"ObsKi67Mamma\"> </a><a name=\"hcObsKi67Mamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:\">Ki-67 Proliferationsindex (MIB-1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: 70 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Observation_ObsKi67Mamma\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsKi67Mamma</b></p><a name=\"ObsKi67Mamma\"> </a><a name=\"hcObsKi67Mamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85330-9}, {http://snomed.info/sct 1234806008}\">Ki-67 Proliferationsindex (MIB-1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: 70 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div></div>"
       },
       "status" : "final",
       "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85330-9",
+          "display" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
+        }],
         "text" : "Ki-67 Proliferationsindex (MIB-1)"
       },
       "subject" : {

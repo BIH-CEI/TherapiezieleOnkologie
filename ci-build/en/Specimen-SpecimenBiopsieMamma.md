@@ -16,10 +16,10 @@
 
 ### Collections
 
-| | | |
-| :--- | :--- | :--- |
-| - | **Collected[x]** | **BodySite** |
-| * | 2025-09-15 | Mamma links, oberer äußerer Quadrant |
+| | | | |
+| :--- | :--- | :--- | :--- |
+| - | **Collected[x]** | **Method** | **BodySite** |
+| * | 2025-09-15 | Core needle biopsy | Mamma links, oberer äußerer Quadrant |
 
 
 
@@ -33,6 +33,11 @@
   "type" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "code" : "122737001",
+      "display" : "Specimen from breast obtained by core needle biopsy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "119376003",
       "display" : "Tissue specimen (specimen)"
     }],
@@ -43,7 +48,19 @@
   },
   "collection" : {
     "collectedDateTime" : "2025-09-15",
+    "method" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "9911007",
+        "display" : "Core needle biopsy"
+      }]
+    },
     "bodySite" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "76365002",
+        "display" : "Structure of upper outer quadrant of breast"
+      }],
       "text" : "Mamma links, oberer äußerer Quadrant"
     }
   }

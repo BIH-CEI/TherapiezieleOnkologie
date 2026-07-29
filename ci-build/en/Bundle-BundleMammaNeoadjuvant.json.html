@@ -926,6 +926,11 @@
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "122737001",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Specimen from breast obtained by core needle biopsy"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "119376003",
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Tissue specimen (specimen)"
             }
@@ -937,7 +942,23 @@
         },
         "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection">collection</a>" : {
           "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection.collected_x_">collectedDateTime</a>" : "2025-09-15",
+          "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection.method">method</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "9911007",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Core needle biopsy"
+              }
+            ]
+          },
           "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection.bodySite">bodySite</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "76365002",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Structure of upper outer quadrant of breast"
+              }
+            ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Mamma links, oberer äußerer Quadrant"
           }
         }
@@ -961,8 +982,8 @@
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "33731-1",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Histology type in Cancer specimen Narrative"
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "59847-4",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Histology and Behavior ICD-O-3 Cancer"
             }
           ]
         },
@@ -972,6 +993,11 @@
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">effectiveDateTime</a>" : "2025-09-15",
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">valueCodeableConcept</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "82711006",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Infiltrating duct carcinoma"
+            },
             {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.840.1.113883.6.43.1",
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "8500/3",
@@ -1003,8 +1029,8 @@
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "33732-9",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Histology grade [Identifier] in Cancer specimen"
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "44648-4",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
             }
           ]
         },
@@ -1014,6 +1040,11 @@
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">effectiveDateTime</a>" : "2025-09-15",
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">valueCodeableConcept</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1155704001",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "G3: Poorly differentiated"
+            },
             {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "3",
@@ -1077,8 +1108,13 @@
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "40556-3",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "85337-4",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1234806008",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Observation using immunohistochemistry (observable entity)"
             }
           ]
         },
@@ -1125,6 +1161,11 @@
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "85339-0",
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1234806008",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Observation using immunohistochemistry (observable entity)"
             }
           ]
         },
@@ -1170,7 +1211,7 @@
             {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "48676-1",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "HER2 Ag [Interpretation] in Tissue"
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "HER2 [Interpretation] in Tissue"
             }
           ]
         },
@@ -1180,6 +1221,11 @@
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective_x_">effectiveDateTime</a>" : "2025-09-17",
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value_x_">valueCodeableConcept</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "LA6577-6",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Negative"
+            },
             {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds",
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "N",
@@ -1217,6 +1263,18 @@
         },
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "85330-9",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1234806008",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Observation using immunohistochemistry (observable entity)"
+            }
+          ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Ki-67 Proliferationsindex (MIB-1)"
         },
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
@@ -2266,8 +2324,8 @@
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-28 09:41:00 +0000">
-    2026-07-28
+  <span title="2026-07-29 10:30:00 +0000">
+    2026-07-29
   </span>
 
           <br/>

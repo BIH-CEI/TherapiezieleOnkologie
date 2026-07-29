@@ -238,10 +238,22 @@
   "<a href="http://hl7.org/fhir/R4/resource.html#Observation.language">language</a>" : "de",
   "<a href="http://hl7.org/fhir/R4/domainresource.html#Observation.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;de\&quot; lang=\&quot;de\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation ObsKi67Mamma&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ObsKi67Mamma\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcObsKi67Mamma\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:\&quot;&gt;Ki-67 Proliferationsindex (MIB-1)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-PatientinMamma.html\&quot;&gt;Sabine Baumann  Female, DoB: 1977-06-24&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2025-09-17&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 70 %&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  code% = '%')&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specimen&lt;/b&gt;: &lt;a href=\&quot;Specimen-SpecimenBiopsieMamma.html\&quot;&gt;Specimen: status = available; type = Tissue specimen (specimen)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;de\&quot; lang=\&quot;de\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation ObsKi67Mamma&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ObsKi67Mamma\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcObsKi67Mamma\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 85330-9}, {http://snomed.info/sct 1234806008}\&quot;&gt;Ki-67 Proliferationsindex (MIB-1)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-PatientinMamma.html\&quot;&gt;Sabine Baumann  Female, DoB: 1977-06-24&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2025-09-17&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 70 %&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  code% = '%')&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specimen&lt;/b&gt;: &lt;a href=\&quot;Specimen-SpecimenBiopsieMamma.html\&quot;&gt;Specimen: status = available; type = Specimen from breast obtained by core needle biopsy&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
   "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "85330-9",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1234806008",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Observation using immunohistochemistry (observable entity)"
+      }
+    ],
     "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Ki-67 Proliferationsindex (MIB-1)"
   },
   "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
@@ -290,8 +302,8 @@
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-28 09:41:00 +0000">
-    2026-07-28
+  <span title="2026-07-29 10:30:00 +0000">
+    2026-07-29
   </span>
 
           <br/>

@@ -1,12 +1,12 @@
 TherapiezieleOnkologie : Validation Results
 =========================================
 
-err = 31, warn = 107, info = 535
-IG Publisher Version: 2.2.11 Out of date - current version is null
-Generated Tue Jul 28 09:44:16 UTC 2026. FHIR version 4.0.1 for de.bih-cei.therapieziele-onkologie#0.1.0 (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
+err = 31, warn = 105, info = 535
+IG Publisher Version: 2.2.11
+Generated Wed Jul 29 10:32:08 UTC 2026. FHIR version 4.0.1 for de.bih-cei.therapieziele-onkologie#0.1.0 (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
  Build Errors : 6 / 7 / 0
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Bundle-BundleCRCPalliativ : 8 / 4 / 57
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Bundle-BundleMammaNeoadjuvant : 11 / 16 / 83
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Bundle-BundleMammaNeoadjuvant : 11 / 15 / 83
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-CarePlanCRCPalliativ : 0 / 0 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-CarePlanMammaDiagnostik : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-CarePlanMammaNachsorge : 0 / 0 / 1
@@ -34,7 +34,7 @@ Generated Tue Jul 28 09:44:16 UTC 2026. FHIR version 4.0.1 for de.bih-cei.therap
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsGBRCAMamma : 0 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsGradingMamma : 0 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsHER2Mamma : 0 / 1 / 1
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsHistologieMamma : 0 / 2 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsHistologieMamma : 0 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsKi67Mamma : 0 / 2 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsProgesteronrezeptorMamma : 0 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Observation-ObsTNMklinischMamma : 0 / 1 / 1
@@ -145,7 +145,6 @@ WARNING: Bundle/BundleMammaNeoadjuvant: Bundle.entry[10].resource/*Condition/Con
 ERROR: Bundle/BundleMammaNeoadjuvant: Bundle.entry[10].resource/*Condition/ConditionMamma*/.code.coding[0]: Der angegebene Code (http://fhir.de/CodeSystem/bfarm/icd-10-gm#C50.4) befindet sich nicht im ValueSet 'MII VS Diagnose ICD-10-GM' (https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.0), und es wird ein Code aus diesem ValueSet benötigt: Invalid criteria version: '2025"
 INFORMATION: Bundle/BundleMammaNeoadjuvant: Bundle.entry[11].resource/*Procedure/ProcedureBiopsieMamma*/.reasonReference[0]: Details für Condition/ConditionMamma Abgleich gegen Profilhttp://hl7.org/fhir/StructureDefinition/Condition|4.0.1
 WARNING: Bundle/BundleMammaNeoadjuvant: Bundle.entry[13].resource/*Observation/ObsHistologieMamma*/: Alle Observations sollten einen Performer haben
-WARNING: Bundle/BundleMammaNeoadjuvant: Bundle.entry[13].resource/*Observation/ObsHistologieMamma*/.value.ofType(CodeableConcept).coding[0].system: Das CodeSystem urn:oid:2.16.840.1.113883.6.43.1 ist unbekannt
 WARNING: Bundle/BundleMammaNeoadjuvant: Bundle.entry[14].resource/*Observation/ObsGradingMamma*/: Alle Observations sollten einen Performer haben
 WARNING: Bundle/BundleMammaNeoadjuvant: Bundle.entry[15].resource/*Observation/ObsTNMklinischMamma*/: Alle Observations sollten einen Performer haben
 WARNING: Bundle/BundleMammaNeoadjuvant: Bundle.entry[16].resource/*Observation/ObsEstrogenrezeptorMamma*/: Alle Observations sollten einen Performer haben
@@ -259,7 +258,6 @@ WARNING: Observation/ObsGradingMamma: Observation: Alle Observations sollten ein
 == fsh-generated/resources/Observation-ObsHER2Mamma.json ==
 WARNING: Observation/ObsHER2Mamma: Observation: Alle Observations sollten einen Performer haben
 == fsh-generated/resources/Observation-ObsHistologieMamma.json ==
-WARNING: Observation/ObsHistologieMamma: Observation.value.ofType(CodeableConcept).coding[0].system: Das CodeSystem urn:oid:2.16.840.1.113883.6.43.1 ist unbekannt
 WARNING: Observation/ObsHistologieMamma: Observation: Alle Observations sollten einen Performer haben
 == fsh-generated/resources/Observation-ObsKi67Mamma.json ==
 WARNING: Observation/ObsKi67Mamma: Observation.value.ofType(Quantity): Fehler beim Validieren des Codes: Ausführung ohne Terminologiedienste

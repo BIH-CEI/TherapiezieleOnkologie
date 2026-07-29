@@ -4,10 +4,20 @@
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsKi67Mamma</b></p><a name=\"en-ObsKi67Mamma\"> </a><a name=\"en-hcObsKi67Mamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:\">Ki-67 Proliferationsindex (MIB-1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: 70 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsKi67Mamma</b></p><a name=\"en-ObsKi67Mamma\"> </a><a name=\"en-hcObsKi67Mamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85330-9}, {http://snomed.info/sct 1234806008}\">Ki-67 Proliferationsindex (MIB-1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: 70 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div>"
   },
   "status" : "final",
   "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "85330-9",
+      "display" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234806008",
+      "display" : "Observation using immunohistochemistry (observable entity)"
+    }],
     "text" : "Ki-67 Proliferationsindex (MIB-1)"
   },
   "subject" : {

@@ -25,7 +25,7 @@
 Immunhistochemie: <1 % positive Kerne → PR-negativ.
 
 
-**specimen**: [Specimen: status = available; type = Tissue specimen (specimen)](Specimen-SpecimenBiopsieMamma.md)
+**specimen**: [Specimen: status = available; type = Specimen from breast obtained by core needle biopsy](Specimen-SpecimenBiopsieMamma.md)
 
 
 
@@ -41,6 +41,11 @@ Immunhistochemie: <1 % positive Kerne → PR-negativ.
       "system" : "http://loinc.org",
       "code" : "85339-0",
       "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234806008",
+      "display" : "Observation using immunohistochemistry (observable entity)"
     }]
   },
   "subject" : {

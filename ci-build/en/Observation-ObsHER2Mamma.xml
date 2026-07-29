@@ -4,15 +4,15 @@
   <id value="ObsHER2Mamma"/>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsHER2Mamma</b></p><a name="en-ObsHER2Mamma"> </a><a name="en-hcObsHER2Mamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 48676-1}">HER2 Ag [Interpretation] in Tissue</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds N}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie negativ}">negativ</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.</p>
-</div></blockquote><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Tissue specimen (specimen)</a></p></div>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsHER2Mamma</b></p><a name="en-ObsHER2Mamma"> </a><a name="en-hcObsHER2Mamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 48676-1}">HER2 [Interpretation] in Tissue</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6577-6}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds N}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie negativ}">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.</p>
+</div></blockquote><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div>
   </text>
   <status value="final"/>
   <code>
     <coding>
       <system value="http://loinc.org"/>
       <code value="48676-1"/>
-      <display value="HER2 Ag [Interpretation] in Tissue"/>
+      <display value="HER2 [Interpretation] in Tissue"/>
     </coding>
   </code>
   <subject>
@@ -20,6 +20,11 @@
   </subject>
   <effectiveDateTime value="2025-09-17"/>
   <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA6577-6"/>
+      <display value="Negative"/>
+    </coding>
     <coding>
       <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds"/>
       <code value="N"/>

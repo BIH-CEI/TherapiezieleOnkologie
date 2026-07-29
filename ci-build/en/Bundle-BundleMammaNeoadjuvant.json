@@ -582,6 +582,11 @@
       "type" : {
         "coding" : [{
           "system" : "http://snomed.info/sct",
+          "code" : "122737001",
+          "display" : "Specimen from breast obtained by core needle biopsy"
+        },
+        {
+          "system" : "http://snomed.info/sct",
           "code" : "119376003",
           "display" : "Tissue specimen (specimen)"
         }],
@@ -592,7 +597,19 @@
       },
       "collection" : {
         "collectedDateTime" : "2025-09-15",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "9911007",
+            "display" : "Core needle biopsy"
+          }]
+        },
         "bodySite" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "76365002",
+            "display" : "Structure of upper outer quadrant of breast"
+          }],
           "text" : "Mamma links, oberer äußerer Quadrant"
         }
       }
@@ -615,8 +632,8 @@
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
-          "code" : "33731-1",
-          "display" : "Histology type in Cancer specimen Narrative"
+          "code" : "59847-4",
+          "display" : "Histology and Behavior ICD-O-3 Cancer"
         }]
       },
       "subject" : {
@@ -625,6 +642,11 @@
       "effectiveDateTime" : "2025-09-15",
       "valueCodeableConcept" : {
         "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "82711006",
+          "display" : "Infiltrating duct carcinoma"
+        },
+        {
           "system" : "urn:oid:2.16.840.1.113883.6.43.1",
           "code" : "8500/3",
           "display" : "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
@@ -653,8 +675,8 @@
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
-          "code" : "33732-9",
-          "display" : "Histology grade [Identifier] in Cancer specimen"
+          "code" : "44648-4",
+          "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
         }]
       },
       "subject" : {
@@ -663,6 +685,11 @@
       "effectiveDateTime" : "2025-09-15",
       "valueCodeableConcept" : {
         "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1155704001",
+          "display" : "G3: Poorly differentiated"
+        },
+        {
           "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
           "code" : "3",
           "display" : "schlecht differenziert"
@@ -721,8 +748,13 @@
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
-          "code" : "40556-3",
-          "display" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+          "code" : "85337-4",
+          "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
         }]
       },
       "subject" : {
@@ -763,6 +795,11 @@
           "system" : "http://loinc.org",
           "code" : "85339-0",
           "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
         }]
       },
       "subject" : {
@@ -802,7 +839,7 @@
         "coding" : [{
           "system" : "http://loinc.org",
           "code" : "48676-1",
-          "display" : "HER2 Ag [Interpretation] in Tissue"
+          "display" : "HER2 [Interpretation] in Tissue"
         }]
       },
       "subject" : {
@@ -811,6 +848,11 @@
       "effectiveDateTime" : "2025-09-17",
       "valueCodeableConcept" : {
         "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA6577-6",
+          "display" : "Negative"
+        },
+        {
           "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds",
           "code" : "N",
           "display" : "negativ"
@@ -844,6 +886,16 @@
       },
       "status" : "final",
       "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85330-9",
+          "display" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
+        }],
         "text" : "Ki-67 Proliferationsindex (MIB-1)"
       },
       "subject" : {

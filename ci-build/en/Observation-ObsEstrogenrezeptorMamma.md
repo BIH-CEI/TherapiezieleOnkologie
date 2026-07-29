@@ -10,7 +10,7 @@
 
 **status**: Final
 
-**code**: Estrogen receptor Ag [Presence] in Tissue by Immune stain
+**code**: Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -25,7 +25,7 @@
 Immunhistochemie: <1 % positive Kerne → ER-negativ.
 
 
-**specimen**: [Specimen: status = available; type = Tissue specimen (specimen)](Specimen-SpecimenBiopsieMamma.md)
+**specimen**: [Specimen: status = available; type = Specimen from breast obtained by core needle biopsy](Specimen-SpecimenBiopsieMamma.md)
 
 
 
@@ -39,8 +39,13 @@ Immunhistochemie: <1 % positive Kerne → ER-negativ.
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
-      "code" : "40556-3",
-      "display" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+      "code" : "85337-4",
+      "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234806008",
+      "display" : "Observation using immunohistochemistry (observable entity)"
     }]
   },
   "subject" : {

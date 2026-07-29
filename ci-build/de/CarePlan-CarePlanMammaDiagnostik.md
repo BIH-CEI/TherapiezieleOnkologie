@@ -27,12 +27,12 @@ Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan
 > **activity****outcomeReference**: [Procedure Core needle biopsy of breast (procedure)](Procedure-ProcedureBiopsieMamma.md)**reference**: [ServiceRequest Core needle biopsy of breast (procedure)](ServiceRequest-ServiceRequestBiopsieMamma.md)
 
 > **activity****outcomeReference**: 
-* [Observation Histology type in Cancer specimen Narrative](Observation-ObsHistologieMamma.md)
-* [Observation Histology grade [Identifier] in Cancer specimen](Observation-ObsGradingMamma.md)
-* [Observation Estrogen receptor Ag [Presence] in Tissue by Immune stain](Observation-ObsEstrogenrezeptorMamma.md)
+* [Observation Histology and Behavior ICD-O-3 Cancer](Observation-ObsHistologieMamma.md)
+* [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-ObsGradingMamma.md)
+* [Observation Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-ObsEstrogenrezeptorMamma.md)
 * [Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-ObsProgesteronrezeptorMamma.md)
-* [Observation HER2 Ag [Interpretation] in Tissue](Observation-ObsHER2Mamma.md)
-* [Observation ](Observation-ObsKi67Mamma.md)
+* [Observation HER2 [Interpretation] in Tissue](Observation-ObsHER2Mamma.md)
+* [Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain](Observation-ObsKi67Mamma.md)
 **reference**: [ServiceRequest Histopathology service (qualifier value)](ServiceRequest-ServiceRequestPathologieMamma.md)
 
 > **activity****outcomeReference**: [Observation Stage group.clinical Cancer](Observation-ObsTNMklinischMamma.md)**reference**: [ServiceRequest ](ServiceRequest-ServiceRequestStagingMamma.md)

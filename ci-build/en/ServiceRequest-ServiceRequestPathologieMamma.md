@@ -20,7 +20,7 @@
 
 **requester**: [Practitioner Katrin Musterarzt ](Practitioner-OnkologinMamma.md)
 
-**specimen**: [Specimen: status = available; type = Tissue specimen (specimen)](Specimen-SpecimenBiopsieMamma.md)
+**specimen**: [Specimen: status = available; type = Specimen from breast obtained by core needle biopsy](Specimen-SpecimenBiopsieMamma.md)
 
 
 
