@@ -1,0 +1,61 @@
+<svg width="100%" viewBox="0 0 680 500" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Zielstruktur des Typ-2-Diabetes: Phasen, parallele Schutzziele und PROM-Schwellen</title>
+<desc>Oben das uebergeordnete strategische Ziel, darunter die Phasen Fruehphase (Remission) und Erhalt (dauerhafte Kontrolle) mit ihren HbA1c-Zielen, dann die parallel laufenden Schutzziele fuer Herz-Kreislauf und Nieren, unten der PROM-Regelkreis des dDMP: Fragebogen-Erhebung, Schwelle, automatisch ausgeloeste Reaktion.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7"/></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A"/></marker>
+</defs>
+
+<g><rect x="40" y="16" width="600" height="42" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="340" y="33" text-anchor="middle" font-size="12" font-weight="500" fill="#2C2C2A">Übergeordnetes Ziel (strategisch, ohne Zielwert)</text>
+<text x="340" y="50" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Lebenserwartung erhöhen · Lebensqualität erhalten · Folgeschäden vermeiden</text></g>
+
+<g><rect x="40" y="78" width="260" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="170" y="97" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Frühphase</text></g>
+<line x1="302" y1="93" x2="326" y2="93" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<g><rect x="330" y="78" width="310" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="485" y="97" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Erhalt / dauerhafte Kontrolle</text></g>
+
+<g><rect x="40" y="116" width="260" height="58" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="170" y="136" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">Remission</text>
+<text x="170" y="152" text-anchor="middle" font-size="11" fill="#04342C">HbA1c &lt; 6,5 % ohne Medikation</text>
+<text x="170" y="167" text-anchor="middle" font-size="10.5" fill="#0F6E56">Lebensstil — LOINC 4548-4</text></g>
+<g><rect x="330" y="116" width="310" height="58" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="485" y="136" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">Blutzucker-Kontrolle</text>
+<text x="485" y="152" text-anchor="middle" font-size="11" fill="#04342C">HbA1c 6,5–7,5 % (individuell)</text>
+<text x="485" y="167" text-anchor="middle" font-size="10.5" fill="#0F6E56">LOINC 4548-4 · neu daneben: Time-in-Range (measure.text)</text></g>
+
+<text x="40" y="198" font-size="11" font-weight="500" fill="#5F5E5A">parallel, dauerhaft (Organschutz):</text>
+<g><rect x="40" y="206" width="600" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="340" y="223" text-anchor="middle" font-size="11.5" fill="#04342C">Herz-Kreislauf-Schutz — Blutdruck &lt; 140/90 mmHg · LDL nach Risiko</text>
+<text x="340" y="240" text-anchor="middle" font-size="10.5" fill="#0F6E56">LOINC 8480-6 / 8462-4 · 13457-7</text></g>
+<g><rect x="40" y="258" width="600" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="340" y="275" text-anchor="middle" font-size="11.5" fill="#04342C">Nierenschutz — eGFR stabil · Albumin/Kreatinin-Quotient &lt; 30 mg/g</text>
+<text x="340" y="292" text-anchor="middle" font-size="10.5" fill="#0F6E56">LOINC 62238-1 · 9318-7</text></g>
+
+<text x="40" y="330" font-size="11" font-weight="500" fill="#5F5E5A">Lebensqualität als messbare Zielgröße (PROMs im dDMP):</text>
+
+<g><rect x="40" y="340" width="190" height="68" rx="8" fill="#FAECE7" stroke="#D85A30"/>
+<text x="135" y="360" text-anchor="middle" font-size="12.5" font-weight="500" fill="#4A1B0C">Fragebogen-Erhebung</text>
+<text x="135" y="376" text-anchor="middle" font-size="10.5" fill="#4A1B0C">WHO-5 · PAID, alle 2 Wochen</text>
+<text x="135" y="392" text-anchor="middle" font-size="10" fill="#993C1D">per App/ePA · measure.text</text></g>
+<line x1="232" y1="374" x2="268" y2="374" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<g><rect x="270" y="340" width="190" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="365" y="360" text-anchor="middle" font-size="12.5" font-weight="500" fill="#04342C">Schwelle (target.detail)</text>
+<text x="365" y="376" text-anchor="middle" font-size="10.5" fill="#04342C">Ziel: WHO-5 ≥ 13 · PAID &lt; 40</text>
+<text x="365" y="392" text-anchor="middle" font-size="10.5" fill="#0F6E56">Alarm: WHO-5 &lt; 10 · PAID ≥ 40</text></g>
+<line x1="462" y1="374" x2="498" y2="374" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<g><rect x="500" y="340" width="140" height="68" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="570" y="360" text-anchor="middle" font-size="12.5" font-weight="500" fill="#2C2C2A">Reaktion</text>
+<text x="570" y="376" text-anchor="middle" font-size="10.5" fill="#2C2C2A">Praxis aufsuchen,</text>
+<text x="570" y="390" text-anchor="middle" font-size="10.5" fill="#2C2C2A">Terminvermittlung</text></g>
+
+<path d="M570,410 L570,436 L135,436 L135,412" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#argr)"/>
+<text x="352" y="450" text-anchor="middle" font-size="10.5" fill="#5F5E5A">weiter regelmäßig erheben → achievementStatus fortschreiben</text>
+
+<rect x="40" y="468" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="59" y="479" font-size="11.5" fill="#5F5E5A">Phase</text>
+<rect x="110" y="468" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="129" y="479" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="170" y="468" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30"/><text x="189" y="479" font-size="11.5" fill="#5F5E5A">Messung / PROM</text>
+<rect x="300" y="468" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="319" y="479" font-size="11.5" fill="#5F5E5A">Hinweis / Reaktion</text>
+<text x="450" y="479" font-size="10.5" fill="#5F5E5A">PROMs/Scores ohne Code: measure.text</text>
+</svg>
