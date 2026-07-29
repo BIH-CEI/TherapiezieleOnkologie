@@ -29,7 +29,7 @@ Die Zielart des übergeordneten Ziels wird durch die Extension [`OnkoTherapyInte
 
 Die oben genannten Zielarten und die Intentionen kurativ/palliativ sind **nicht abschließend**. Andere Entitäten kennen weitere, spezialisierte Intentionen bzw. Behandlungsphasen — hämatologische Erkrankungen etwa **Induktion**, **Konsolidierung** und **Erhaltungstherapie**. Zielart und Intention sind deshalb bewusst **offen (extensible)** kodiert.
 
-Der zugrunde liegende Aufbau — ein übergeordnetes Ziel plus Phasen-/Episodenziele — ist **erkrankungsübergreifend** tragfähig. Für ausgewählte weitere Erkrankungen sind **eigene Seiten** vorgesehen (z. B. Diabetes, Asthma, chronisch-entzündliche Darmerkrankungen, chronische Niereninsuffizienz/Dialyse), die dieselbe Struktur mit entitätsspezifischen Werten illustrieren.
+Der zugrunde liegende Aufbau — ein übergeordnetes Ziel plus Phasen-/Episodenziele — ist **erkrankungsübergreifend** tragfähig. Für ausgewählte weitere Erkrankungen zeigen **eigene Seiten** denselben Aufbau mit entitätsspezifischen Werten: [Diabetes mellitus](entitaet-diabetes.md), [Asthma bronchiale](entitaet-asthma.md), [chronisch-entzündliche Darmerkrankungen](entitaet-ced.md) und [rheumatoide Arthritis](entitaet-rheuma.md). Sie illustrieren die Bandbreite der Phasenlogik — von Frühphasen-Remission plus paralleler Dauerkontrolle (Diabetes) über Step-up/Step-down (Asthma) bis Induktion→Erhalt (CED, Rheuma) — und, am Diabetes, wie das digitale DMP diese Ziele samt patientenberichteter Messgrößen bereits kodifiziert.
 
 ### Ein Strategiewechsel ersetzt das Ziel — er ändert es nicht
 

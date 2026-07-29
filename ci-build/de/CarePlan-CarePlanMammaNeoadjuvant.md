@@ -32,6 +32,8 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 > **activity****outcomeReference**: [Procedure Lumpectomy of breast (procedure)](Procedure-ProcedureOperationMamma.md)**reference**: [ServiceRequest Lumpectomy of breast (procedure)](ServiceRequest-ServiceRequestProcedure.md)
 
+> **activity****reference**: [MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroAdjuvantMamma.md)
+
 > **activity****outcomeReference**: [Observation Cancer disease progression](Observation-ObsDiseaseStatusMamma.md)
 
 
@@ -86,6 +88,11 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
     }],
     "reference" : {
       "reference" : "ServiceRequest/ServiceRequestProcedure"
+    }
+  },
+  {
+    "reference" : {
+      "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
     }
   },
   {

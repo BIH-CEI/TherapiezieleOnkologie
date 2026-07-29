@@ -7,7 +7,7 @@ An oncological line of therapy based on EpisodeOfCare, EnLiST-conformant. A line
 
 **Usages:**
 
-* Examples for this Profile: [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md), [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md) and [EpisodeOfCare/TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md)
+* Examples for this Profile: [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md), [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md), [EpisodeOfCare/TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md) and [EpisodeOfCare/TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-line.json)
 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-29T11:12:20+00:00",
+  "date" : "2026-07-29T12:00:29+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

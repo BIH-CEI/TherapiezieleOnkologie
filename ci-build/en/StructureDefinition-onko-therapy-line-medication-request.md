@@ -11,7 +11,7 @@ Reference to the MedicationRequest resource or resources that gave rise to or or
 **Usages:**
 
 * Use this Extension: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
-* Examples for this Extension: [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md) and [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md)
+* Examples for this Extension: [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md), [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md) and [EpisodeOfCare/TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-line-medication-request.json)
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-29T11:12:20+00:00",
+  "date" : "2026-07-29T12:00:29+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

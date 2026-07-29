@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-tumorboard-s
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-29T11:12:20+00:00",
+  "date" : "2026-07-29T12:00:29+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

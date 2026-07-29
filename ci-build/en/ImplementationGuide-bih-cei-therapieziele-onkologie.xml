@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-07-29T11:12:20+00:00"/>
+  <date value="2026-07-29T12:00:29+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -555,6 +555,17 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/MedicationRequestPembroAdjuvantMamma"/>
+      </reference>
+      <name value="Adjuvante Systemtherapie – Pembrolizumab-Monotherapie (KEYNOTE-522, Beispiel)"/>
+      <description value="Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status), ambulant über ~9 Zyklen (q3w)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ServiceRequest"/>
       </extension>
       <reference>
@@ -1092,6 +1103,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/TherapieliniePembroAdjuvant"/>
+      </reference>
+      <name value="Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant"/>
+      <description value="Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -1338,6 +1360,38 @@
         </extension>
         <nameUrl value="szenario-mamma.html"/>
         <title value="Anwendungsbeispiel (Mammakarzinom neoadjuvant)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="entitaet-diabetes.html"/>
+        </extension>
+        <nameUrl value="entitaet-diabetes.html"/>
+        <title value="Weitere Entität – Diabetes mellitus"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="entitaet-asthma.html"/>
+        </extension>
+        <nameUrl value="entitaet-asthma.html"/>
+        <title value="Weitere Entität – Asthma bronchiale"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="entitaet-ced.html"/>
+        </extension>
+        <nameUrl value="entitaet-ced.html"/>
+        <title value="Weitere Entität – Chronisch-entzündliche Darmerkrankungen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="entitaet-rheuma.html"/>
+        </extension>
+        <nameUrl value="entitaet-rheuma.html"/>
+        <title value="Weitere Entität – Rheumatoide Arthritis"/>
         <generation value="markdown"/>
       </page>
       <page>

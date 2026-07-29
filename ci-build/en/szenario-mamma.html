@@ -122,6 +122,25 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="analysebericht.html">Analysebericht</a>
   </li>
@@ -223,6 +242,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Nach Abschluss der neoadjuvanten Therapie erfolgt eine <strong>brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie</strong>. Die pathologische Aufarbeitung des Präparats zeigt eine <strong>pathologische Komplettremission (pCR, ypT0 ypN0)</strong>. Das Ansprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet (<code class="language-plaintext highlighter-rouge">achievementStatus = achieved</code>).</p>
 
+<p>Schemakonform zu KEYNOTE-522 – und <strong>unabhängig vom pCR-Status</strong> – schließt sich an die Operation eine <strong>ambulante adjuvante Pembrolizumab-Monotherapie</strong> (~9 Zyklen q3w) an. Sie ist als <strong>nachgelagerte Therapielinie</strong> (<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code> / <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>, ambulant) modelliert und zum Zeitpunkt der Darstellung noch laufend (<code class="language-plaintext highlighter-rouge">status = active</code>).</p>
+
 <h3 id="zeitlicher-verlauf">Zeitlicher Verlauf</h3>
 
 <table>
@@ -277,12 +298,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>20.03.2026 - 06.04.2026</td>
       <td>Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie, Therapielinie kurative Operation</td>
-      <td><a name="l595">​</a><a href="Procedure-ProcedureOperationMamma.html">ProcedureOperationMamma</a>, <a href="EpisodeOfCare-Therapielinieoperation.html">TherapielinieOperation</a></td>
+      <td><a name="l651">​</a><a href="Procedure-ProcedureOperationMamma.html">ProcedureOperationMamma</a>, <a href="EpisodeOfCare-Therapielinieoperation.html">TherapielinieOperation</a></td>
     </tr>
     <tr>
       <td>07.04.2026</td>
       <td>Pathologie des OP-Präparats: ypT0 ypN0 → pathologische Komplettremission (pCR); Disease Status</td>
       <td><a href="Observation-ObsTNMpathologischMamma.html">ObsTNMpathologischMamma</a>, <a href="Observation-ObsDiseaseStatusMamma.html">ObsDiseaseStatusMamma</a></td>
+    </tr>
+    <tr>
+      <td>ab 24.04.2026 (laufend)</td>
+      <td>Nachgelagerte, <strong>ambulante</strong> adjuvante Pembrolizumab-Monotherapie (KEYNOTE-522, ~9 Zyklen q3w); Therapielinie adjuvante Immuntherapie</td>
+      <td><a href="EpisodeOfCare-TherapieliniePembroAdjuvant.html">TherapieliniePembroAdjuvant</a>, <a href="MedicationRequest-MedicationRequestPembroAdjuvantMamma.html">MedicationRequestPembroAdjuvantMamma</a></td>
     </tr>
   </tbody>
 </table>
@@ -388,7 +414,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>Therapielinie (LoT 1)</td>
       <td><code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></td>
-      <td><a name="l930">​</a><a href="EpisodeOfCare-TherapielinieMammaNeoadjuvant.html">TherapielinieMammaNeoadjuvant</a></td>
+      <td><a name="l1005">​</a><a href="EpisodeOfCare-TherapielinieMammaNeoadjuvant.html">TherapielinieMammaNeoadjuvant</a></td>
     </tr>
     <tr>
       <td>Geplante Maßnahme (Systemtherapie)</td>
@@ -453,7 +479,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-29 11:12:00 +0000">
+  <span title="2026-07-29 12:00:00 +0000">
     2026-07-29
   </span>
 

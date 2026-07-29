@@ -48,6 +48,19 @@ Das zugehörige **Ergebnis** wird als Verlaufs-`Observation` geführt, z. B. der
 
 > **Hinweis.** Nicht jede Messgröße muss codiert sein — wo (noch) kein passender Code existiert (Funktion, PROM), ist `measure.text` zulässig. Für patientenberichtete Endpunkte ist die Anbindung an das [PCO IG](https://hl7.org/fhir/us/pco/) vorgesehen, statt sie hier eigen zu modellieren.
 
+### Messgrößen ändern sich — deshalb an die Leitlinie binden
+
+Welche Größe ein Ziel misst, ist **keine zeitlose Konstante**, sondern folgt dem jeweils gültigen Leitlinienstand — und der ändert sich. Beispiel: In der **rheumatoiden Arthritis** war der **DAS28** (ein zusammengesetzter Aktivitäts-Punktwert) lange die Remissions-Messgröße; das **EULAR-2025-Update rät davon ausdrücklich ab** (der DAS28 überschätzt Remission unter modernen Entzündungshemmern wie IL-6-/JAK-Hemmern) und stellt auf die **ACR-EULAR-Kriterien (Boolean) bzw. SDAI/CDAI** um (siehe [Rheumatoide Arthritis](entitaet-rheuma.md)).
+
+Entscheidend: **Nicht alle stellen gleichzeitig um.** Register, Standorte und Systeme sind zu jedem Zeitpunkt auf **unterschiedlichem** Leitlinienstand — alte und neue Messgröße **koexistieren**. Eine „Remission" nach DAS28 ist nicht dieselbe wie eine nach ACR-EULAR; ohne Herkunftsangabe vergleicht man Unvergleichbares.
+
+Das Muster ist **nicht RA-spezifisch** — dieselbe Verschiebung zeigt sich quer durch die [weiteren Entitäten](therapieziele.md): **HbA1c → kardiorenaler Endpunkt / Time-in-Range** ([Diabetes](entitaet-diabetes.md)), **SABA → antiinflammatorischer Reliever** ([Asthma](entitaet-asthma.md)) und **symptombasiert → Calprotectin/Endoskopie** ([CED](entitaet-ced.md)). In allen Fällen laufen Alt- und Neu-Größe eine Zeit lang parallel.
+
+Für die Modellierung folgt daraus zweierlei:
+
+* `target.measure` ist **versionsabhängig und austauschbar**, kein hartkodierter Wert. Die Zielgröße trägt ihren **Herkunfts- und Gültigkeitskontext** mit (welche Leitlinie, welche Fassung).
+* Zielgrößen werden an ihre **normative Leitlinienquelle** gebunden — über die Verlinkungs-Mechanik aus CPG-on-FHIR (`relatedArtifact` / `instantiatesCanonical`, siehe [Analysebericht](analysebericht.md)) — statt einen Zahlenwert als zeitlose Wahrheit zu behaupten. So bleiben parallele Stände **unterscheidbar und vergleichbar**.
+
 ### Modalität ist kein Endpunkt
 
 Nicht jedes klinische Verfahren ist eine geeignete Zielgröße. Eine **Nachsorge-Mammographie** etwa ist ein **Verfahren zur Beurteilung**, **kein Endpunkt** — der Endpunkt ist der **Krankheitsstatus / die Rezidivfreiheit** (LOINC `21976-6`), den die Mammographie **feststellen hilft**. `target.measure` trägt den **gemessenen Zielzustand**, nicht die Modalität, mit der er erhoben wird (die Mammographie selbst gehört als geplante Maßnahme in einen `ServiceRequest`).

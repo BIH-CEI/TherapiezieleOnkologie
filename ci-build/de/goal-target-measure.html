@@ -125,6 +125,25 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="analysebericht.html">Analysebericht</a>
   </li>
@@ -205,6 +224,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#zielwert--ergebnis" id="markdown-toc-zielwert--ergebnis">Zielwert ≠ Ergebnis</a></li>
   <li><a href="#verlauf-gehört-in-die-observation-nicht-in-den-status" id="markdown-toc-verlauf-gehört-in-die-observation-nicht-in-den-status">Verlauf gehört in die Observation, nicht in den Status</a></li>
   <li><a href="#typische-messgrößen-entlang-des-verlaufs" id="markdown-toc-typische-messgrößen-entlang-des-verlaufs">Typische Messgrößen entlang des Verlaufs</a></li>
+  <li><a href="#messgrößen-ändern-sich--deshalb-an-die-leitlinie-binden" id="markdown-toc-messgrößen-ändern-sich--deshalb-an-die-leitlinie-binden">Messgrößen ändern sich — deshalb an die Leitlinie binden</a></li>
   <li><a href="#modalität-ist-kein-endpunkt" id="markdown-toc-modalität-ist-kein-endpunkt">Modalität ist kein Endpunkt</a></li>
   <li><a href="#weitere-typische-zielgrößen" id="markdown-toc-weitere-typische-zielgrößen">Weitere typische Zielgrößen</a></li>
   <li><a href="#beispiele" id="markdown-toc-beispiele">Beispiele</a></li>
@@ -334,6 +354,40 @@ Endpunkte ist die Anbindung an das <a href="https://hl7.org/fhir/us/pco/">PCO IG
 statt sie hier eigen zu modellieren.</p>
 </blockquote>
 
+<h3 id="messgrößen-ändern-sich--deshalb-an-die-leitlinie-binden">Messgrößen ändern sich — deshalb an die Leitlinie binden</h3>
+
+<p>Welche Größe ein Ziel misst, ist <strong>keine zeitlose Konstante</strong>, sondern folgt dem jeweils
+gültigen Leitlinienstand — und der ändert sich. Beispiel: In der <strong>rheumatoiden
+Arthritis</strong> war der <strong>DAS28</strong> (ein zusammengesetzter Aktivitäts-Punktwert) lange die
+Remissions-Messgröße; das <strong>EULAR-2025-Update rät davon ausdrücklich ab</strong> (der DAS28
+überschätzt Remission unter modernen Entzündungshemmern wie IL-6-/JAK-Hemmern) und
+stellt auf die <strong>ACR-EULAR-Kriterien (Boolean) bzw. SDAI/CDAI</strong> um (siehe
+<a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>).</p>
+
+<p>Entscheidend: <strong>Nicht alle stellen gleichzeitig um.</strong> Register, Standorte und Systeme
+sind zu jedem Zeitpunkt auf <em>unterschiedlichem</em> Leitlinienstand — alte und neue Messgröße
+<strong>koexistieren</strong>. Eine „Remission" nach DAS28 ist nicht dieselbe wie eine nach ACR-EULAR;
+ohne Herkunftsangabe vergleicht man Unvergleichbares.</p>
+
+<p>Das Muster ist <strong>nicht RA-spezifisch</strong> — dieselbe Verschiebung zeigt sich quer durch die
+<a href="therapieziele.html">weiteren Entitäten</a>: <strong>HbA1c → kardiorenaler Endpunkt / Time-in-Range</strong>
+(<a href="entitaet-diabetes.html">Diabetes</a>), <strong>SABA → antiinflammatorischer Reliever</strong>
+(<a href="entitaet-asthma.html">Asthma</a>) und <strong>symptombasiert → Calprotectin/Endoskopie</strong>
+(<a href="entitaet-ced.html">CED</a>). In allen Fällen laufen Alt- und Neu-Größe eine Zeit lang
+parallel.</p>
+
+<p>Für die Modellierung folgt daraus zweierlei:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">target.measure</code> ist <strong>versionsabhängig und austauschbar</strong>, kein hartkodierter Wert.
+Die Zielgröße trägt ihren <strong>Herkunfts- und Gültigkeitskontext</strong> mit (welche Leitlinie,
+welche Fassung).</li>
+  <li>Zielgrößen werden an ihre <strong>normative Leitlinienquelle</strong> gebunden — über die
+Verlinkungs-Mechanik aus CPG-on-FHIR (<code class="language-plaintext highlighter-rouge">relatedArtifact</code> / <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code>,
+siehe <a href="analysebericht.html">Analysebericht</a>) — statt einen Zahlenwert als zeitlose
+Wahrheit zu behaupten. So bleiben parallele Stände <strong>unterscheidbar und vergleichbar</strong>.</li>
+</ul>
+
 <h3 id="modalität-ist-kein-endpunkt">Modalität ist kein Endpunkt</h3>
 
 <p>Nicht jedes klinische Verfahren ist eine geeignete Zielgröße. Eine
@@ -438,7 +492,7 @@ Bezug auf die Verlaufs-Observation.</li>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-29 11:12:00 +0000">
+  <span title="2026-07-29 12:00:00 +0000">
     2026-07-29
   </span>
 

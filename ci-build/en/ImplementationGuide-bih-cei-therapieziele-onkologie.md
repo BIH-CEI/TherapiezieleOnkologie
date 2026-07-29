@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-29T11:12:20+00:00",
+  "date" : "2026-07-29T12:00:29+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -748,6 +748,22 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
     "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "MedicationRequest-MedicationRequestPembroAdjuvantMamma.html"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+      },
+      "name" : "Adjuvante Systemtherapie – Pembrolizumab-Monotherapie (KEYNOTE-522, Beispiel)",
+      "description" : "Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status), ambulant über ~9 Zyklen (q3w).",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"
+    },
+    {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ServiceRequest"
@@ -1532,6 +1548,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EpisodeOfCare"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "EpisodeOfCare-TherapieliniePembroAdjuvant.html"
+      }],
+      "reference" : {
+        "reference" : "EpisodeOfCare/TherapieliniePembroAdjuvant"
+      },
+      "name" : "Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant",
+      "description" : "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept).",
+      "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       },
       {
@@ -1870,6 +1902,42 @@
         }],
         "nameUrl" : "szenario-mamma.html",
         "title" : "Anwendungsbeispiel (Mammakarzinom neoadjuvant)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "entitaet-diabetes.html"
+        }],
+        "nameUrl" : "entitaet-diabetes.html",
+        "title" : "Weitere Entität – Diabetes mellitus",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "entitaet-asthma.html"
+        }],
+        "nameUrl" : "entitaet-asthma.html",
+        "title" : "Weitere Entität – Asthma bronchiale",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "entitaet-ced.html"
+        }],
+        "nameUrl" : "entitaet-ced.html",
+        "title" : "Weitere Entität – Chronisch-entzündliche Darmerkrankungen",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "entitaet-rheuma.html"
+        }],
+        "nameUrl" : "entitaet-rheuma.html",
+        "title" : "Weitere Entität – Rheumatoide Arthritis",
         "generation" : "markdown"
       },
       {

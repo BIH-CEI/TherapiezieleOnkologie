@@ -1478,6 +1478,11 @@
         }
       },
       {
+        "reference" : {
+          "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+        }
+      },
+      {
         "outcomeReference" : [{
           "reference" : "Observation/ObsDiseaseStatusMamma"
         }]
