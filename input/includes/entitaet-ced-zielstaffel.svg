@@ -1,0 +1,51 @@
+<svg width="100%" viewBox="0 0 680 470" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Phasen und Zielstaffel der CED</title>
+<desc>Zwei Behandlungsphasen auf einem Zeitpfeil – Remissionsinduktion und Remissionserhalt – und darunter die dreistufige Zielstaffel nach STRIDE-II: Beschwerden, Laborwerte, Schleimhautheilung. Jede Stufe traegt Zielgroesse (target.measure) und Zielwert (target.detail).</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7"/></marker>
+<marker id="argn" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#0F6E56"/></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A"/></marker>
+</defs>
+
+<line x1="40" y1="84" x2="628" y2="84" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)"/>
+<text x="640" y="88" font-size="11" fill="#5F5E5A">Zeit</text>
+
+<g><rect x="40" y="24" width="285" height="46" rx="8" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="182" y="43" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Remissionsinduktion</text>
+<text x="182" y="60" text-anchor="middle" font-size="11" fill="#534AB7">den akuten Schub zum Abklingen bringen</text></g>
+<line x1="328" y1="47" x2="352" y2="47" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<g><rect x="355" y="24" width="285" height="46" rx="8" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="497" y="43" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Remissionserhalt</text>
+<text x="497" y="60" text-anchor="middle" font-size="11" fill="#534AB7">den ruhigen Zustand bewahren</text></g>
+
+<g><rect x="470" y="98" width="170" height="38" rx="6" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="555" y="114" text-anchor="middle" font-size="10.5" fill="#2C2C2A">dabei: Remission</text>
+<text x="555" y="128" text-anchor="middle" font-size="10.5" fill="#2C2C2A">ohne Kortison (steroidfrei)</text></g>
+
+<text x="40" y="150" font-size="12" font-weight="500" fill="#5F5E5A">Zielstaffel „treat to target“ (STRIDE-II):</text>
+
+<path d="M145,330 L145,283 L242,283" fill="none" stroke="#0F6E56" stroke-width="1.6" marker-end="url(#argn)"/>
+<path d="M340,245 L340,198 L437,198" fill="none" stroke="#0F6E56" stroke-width="1.6" marker-end="url(#argn)"/>
+
+<g><rect x="50" y="330" width="190" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="145" y="352" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">1 · Beschwerden</text>
+<text x="145" y="370" text-anchor="middle" font-size="11.5" fill="#04342C">klinische Remission</text>
+<text x="145" y="386" text-anchor="middle" font-size="10.5" fill="#0F6E56">CDAI/HBI · Mayo/SCCAI — measure.text</text></g>
+
+<g><rect x="245" y="245" width="190" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="340" y="267" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">2 · Laborwerte</text>
+<text x="340" y="285" text-anchor="middle" font-size="11.5" fill="#04342C">Calprotectin &lt; 150–250 µg/g</text>
+<text x="340" y="301" text-anchor="middle" font-size="10.5" fill="#0F6E56">LOINC 38445-3 · CRP (normal) 1988-5</text></g>
+
+<g><rect x="440" y="160" width="190" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="535" y="182" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">3 · Schleimhautheilung</text>
+<text x="535" y="200" text-anchor="middle" font-size="11.5" fill="#04342C">abgeheilte Schleimhaut</text>
+<text x="535" y="216" text-anchor="middle" font-size="10" fill="#0F6E56">SES-CD/Mayo: measure.text · OPS 1-650</text></g>
+
+<text x="50" y="432" font-size="11" fill="#5F5E5A">je Stufe: Zielgröße (target.measure) + Zielwert (target.detail) · Scores ohne Code: measure.text</text>
+
+<rect x="40" y="444" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="59" y="455" font-size="11.5" fill="#5F5E5A">Behandlungsphase</text>
+<rect x="180" y="444" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="199" y="455" font-size="11.5" fill="#5F5E5A">Ziel / Zielstufe</text>
+<rect x="305" y="444" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="324" y="455" font-size="11.5" fill="#5F5E5A">Hinweis</text>
+<line x1="400" y1="450" x2="430" y2="450" stroke="#0F6E56" stroke-width="1.6" marker-end="url(#argn)"/><text x="436" y="455" font-size="11.5" fill="#5F5E5A">nächste Zielstufe</text>
+</svg>

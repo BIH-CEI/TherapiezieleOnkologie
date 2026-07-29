@@ -74,6 +74,38 @@ detected*), und über `outcomeReference` auf das jeweilige Ziel bezogen.
 > Endpunkte ist die Anbindung an das [PCO IG](https://hl7.org/fhir/us/pco/) vorgesehen,
 > statt sie hier eigen zu modellieren.
 
+### Messgrößen ändern sich — deshalb an die Leitlinie binden
+
+Welche Größe ein Ziel misst, ist **keine zeitlose Konstante**, sondern folgt dem jeweils
+gültigen Leitlinienstand — und der ändert sich. Beispiel: In der **rheumatoiden
+Arthritis** war der **DAS28** (ein zusammengesetzter Aktivitäts-Punktwert) lange die
+Remissions-Messgröße; das **EULAR-2025-Update rät davon ausdrücklich ab** (der DAS28
+überschätzt Remission unter modernen Entzündungshemmern wie IL-6-/JAK-Hemmern) und
+stellt auf die **ACR-EULAR-Kriterien (Boolean) bzw. SDAI/CDAI** um (siehe
+[Rheumatoide Arthritis](entitaet-rheuma.html)).
+
+Entscheidend: **Nicht alle stellen gleichzeitig um.** Register, Standorte und Systeme
+sind zu jedem Zeitpunkt auf *unterschiedlichem* Leitlinienstand — alte und neue Messgröße
+**koexistieren**. Eine „Remission" nach DAS28 ist nicht dieselbe wie eine nach ACR-EULAR;
+ohne Herkunftsangabe vergleicht man Unvergleichbares.
+
+Das Muster ist **nicht RA-spezifisch** — dieselbe Verschiebung zeigt sich quer durch die
+[weiteren Entitäten](therapieziele.html): **HbA1c → kardiorenaler Endpunkt / Time-in-Range**
+([Diabetes](entitaet-diabetes.html)), **SABA → antiinflammatorischer Reliever**
+([Asthma](entitaet-asthma.html)) und **symptombasiert → Calprotectin/Endoskopie**
+([CED](entitaet-ced.html)). In allen Fällen laufen Alt- und Neu-Größe eine Zeit lang
+parallel.
+
+Für die Modellierung folgt daraus zweierlei:
+
+- `target.measure` ist **versionsabhängig und austauschbar**, kein hartkodierter Wert.
+  Die Zielgröße trägt ihren **Herkunfts- und Gültigkeitskontext** mit (welche Leitlinie,
+  welche Fassung).
+- Zielgrößen werden an ihre **normative Leitlinienquelle** gebunden — über die
+  Verlinkungs-Mechanik aus CPG-on-FHIR (`relatedArtifact` / `instantiatesCanonical`,
+  siehe [Analysebericht](analysebericht.html)) — statt einen Zahlenwert als zeitlose
+  Wahrheit zu behaupten. So bleiben parallele Stände **unterscheidbar und vergleichbar**.
+
 ### Modalität ist kein Endpunkt
 
 Nicht jedes klinische Verfahren ist eine geeignete Zielgröße. Eine
