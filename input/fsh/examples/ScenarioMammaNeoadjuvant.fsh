@@ -240,10 +240,14 @@ Usage: #example
 Title: "Stanzbiopsat Mamma links (Beispiel)"
 Description: "Gewebeprobe aus der Stanzbiopsie, an der die histopathologische und molekulare Diagnostik durchgeführt wurde."
 * status = #available
-* type.coding = http://snomed.info/sct#119376003 "Tissue specimen (specimen)"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsySpecimenPart (spezifischer Biopsat-Typ + Entnahmemethode + codierter bodySite)
+* type.coding[0] = http://snomed.info/sct#122737001 "Specimen from breast obtained by core needle biopsy"
+* type.coding[1] = http://snomed.info/sct#119376003 "Tissue specimen (specimen)"
 * type.text = "Stanzbiopsat (Gewebeprobe) Mamma links"
 * subject = Reference(PatientinMamma)
 * collection.collectedDateTime = "2025-09-15"
+* collection.method = http://snomed.info/sct#9911007 "Core needle biopsy"
+* collection.bodySite.coding = http://snomed.info/sct#76365002 "Structure of upper outer quadrant of breast"
 * collection.bodySite.text = "Mamma links, oberer äußerer Quadrant"
 
 // ---------------------------------------------------------------------
@@ -256,10 +260,12 @@ Usage: #example
 Title: "Histologie / Morphologie (ICD-O-3, Beispiel)"
 Description: "Histologischer Befund der Stanzbiopsie: invasives Karzinom ohne speziellen Typ (NST)."
 * status = #final
-* code = http://loinc.org#33731-1 "Histology type in Cancer specimen Narrative"
-* valueCodeableConcept.coding.system = "urn:oid:2.16.840.1.113883.6.43.1"
-* valueCodeableConcept.coding.code = #8500/3
-* valueCodeableConcept.coding.display = "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyHistologicalTypeICDO3 (LOINC 59847-4, Wert als SNOMED-Morphologie)
+* code = http://loinc.org#59847-4 "Histology and Behavior ICD-O-3 Cancer"
+* valueCodeableConcept.coding[0] = http://snomed.info/sct#82711006 "Infiltrating duct carcinoma"
+* valueCodeableConcept.coding[1].system = "urn:oid:2.16.840.1.113883.6.43.1"
+* valueCodeableConcept.coding[1].code = #8500/3
+* valueCodeableConcept.coding[1].display = "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
 * valueCodeableConcept.text = "Invasives Mammakarzinom, NST (ICD-O-3 8500/3)"
 * specimen = Reference(SpecimenBiopsieMamma)
 * subject = Reference(PatientinMamma)
@@ -271,8 +277,10 @@ Usage: #example
 Title: "Grading G3 (Beispiel)"
 Description: "Histopathologisches Grading nach Elston-Ellis: G3 (schlecht differenziert)."
 * status = #final
-* code = http://loinc.org#33732-9 "Histology grade [Identifier] in Cancer specimen"
-* valueCodeableConcept.coding = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading#3 "schlecht differenziert"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyNottinghamGrade (LOINC 44648-4, Wert als SNOMED-Grade)
+* code = http://loinc.org#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+* valueCodeableConcept.coding[0] = http://snomed.info/sct#1155704001 "G3: Poorly differentiated"
+* valueCodeableConcept.coding[1] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading#3 "schlecht differenziert"
 * valueCodeableConcept.text = "G3 – schlecht differenziert (Elston-Ellis)"
 * specimen = Reference(SpecimenBiopsieMamma)
 * subject = Reference(PatientinMamma)
@@ -300,7 +308,9 @@ Usage: #example
 Title: "Östrogenrezeptor-Status – negativ (Beispiel)"
 Description: "Immunhistochemischer Östrogenrezeptor-Status: negativ (<1 % positive Tumorzellkerne)."
 * status = #final
-* code = http://loinc.org#40556-3 "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyERStatus (brustspezifischer LOINC + SNOMED-Methode IHC)
+* code.coding[0] = http://loinc.org#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[1] = http://snomed.info/sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * valueCodeableConcept = http://loinc.org#LA6577-6 "Negative"
 * note.text = "Immunhistochemie: <1 % positive Kerne → ER-negativ."
 * specimen = Reference(SpecimenBiopsieMamma)
@@ -313,7 +323,9 @@ Usage: #example
 Title: "Progesteronrezeptor-Status – negativ (Beispiel)"
 Description: "Immunhistochemischer Progesteronrezeptor-Status: negativ (<1 % positive Tumorzellkerne)."
 * status = #final
-* code = http://loinc.org#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyPRStatus (LOINC + SNOMED-Methode IHC)
+* code.coding[0] = http://loinc.org#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[1] = http://snomed.info/sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * valueCodeableConcept = http://loinc.org#LA6577-6 "Negative"
 * note.text = "Immunhistochemie: <1 % positive Kerne → PR-negativ."
 * specimen = Reference(SpecimenBiopsieMamma)
@@ -326,9 +338,11 @@ Usage: #example
 Title: "HER2/neu-Status – negativ (Beispiel)"
 Description: "HER2/neu-Status: negativ (IHC 1+). Kodierung nach MII Mamma-Zusatzmodul (oBDS + Leitlinie)."
 * status = #final
-* code = http://loinc.org#48676-1 "HER2 Ag [Interpretation] in Tissue"
-* valueCodeableConcept.coding[0] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds#N "negativ"
-* valueCodeableConcept.coding[1] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie#negativ "HER2-negativ"
+// Abgleich BreastCancerSpec: HER2Overall (LOINC 48676-1, Interpretation als LOINC-Answer); MII-Kodierung bleibt erhalten
+* code = http://loinc.org#48676-1 "HER2 [Interpretation] in Tissue"
+* valueCodeableConcept.coding[0] = http://loinc.org#LA6577-6 "Negative"
+* valueCodeableConcept.coding[1] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds#N "negativ"
+* valueCodeableConcept.coding[2] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie#negativ "HER2-negativ"
 * note.text = "Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich."
 * specimen = Reference(SpecimenBiopsieMamma)
 * subject = Reference(PatientinMamma)
@@ -340,6 +354,9 @@ Usage: #example
 Title: "Ki-67 Proliferationsindex (Beispiel)"
 Description: "Proliferationsmarker Ki-67: 70 % – hohe Proliferationsaktivität."
 * status = #final
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyKi67 (LOINC 85330-9 + SNOMED-Methode IHC)
+* code.coding[0] = http://loinc.org#85330-9 "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+* code.coding[1] = http://snomed.info/sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Ki-67 Proliferationsindex (MIB-1)"
 * valueQuantity = 70 '%' "%"
 * specimen = Reference(SpecimenBiopsieMamma)

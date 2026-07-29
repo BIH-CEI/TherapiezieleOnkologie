@@ -724,7 +724,7 @@ Baustein für Liefergegenstand LG-01 · Gematik-Auftrag · BIH-CEI
 
 Die Spezifikation beruht auf vier Schichten mit klarer Rollenverteilung und einem expliziten Fallback-Pfad:
 
-![Vier-Schichten-Architektur](architektur_stack.png)
+<img src="architektur_stack.png" alt="Vier-Schichten-Architektur" style="display:block; width:100%; max-width:820px; height:auto; margin:1em auto;"/>
 
 ##### Rollen der vier Schichten
 
