@@ -56,7 +56,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-condition.cs
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-30T12:36:35+00:00",
+  "date" : "2026-07-30T15:22:14+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

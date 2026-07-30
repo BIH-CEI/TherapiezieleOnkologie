@@ -51,8 +51,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14.59"}
-    h3,h4,h5,h6{--heading-prefix:"14.59"}</style>
+    <style type="text/css">h2{--heading-prefix:"15.59"}
+    h3,h4,h5,h6{--heading-prefix:"15.59"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -126,6 +126,9 @@
       </li>
       <li>
         <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
       </li>
     </ul>
   </li>
@@ -1657,6 +1660,142 @@
   &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationAdministrationPembroChemoNeoadjuvantMamma1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;<a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/PatientinMamma&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-10-01&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>&gt;<a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;POST&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;MedicationAdministration&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationAdministrationPembroChemoNeoadjuvantMamma2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;<a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/PatientinMamma&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-11-01&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>&gt;<a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;POST&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;MedicationAdministration&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationAdministrationPembroChemoNeoadjuvantMamma3&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;<a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/PatientinMamma&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-02-10&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>&gt;<a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;POST&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;MedicationAdministration&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationAdministrationPembroChemoNeoadjuvantMamma4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;<a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/PatientinMamma&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-03-15&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>&gt;<a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;POST&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;MedicationAdministration&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/fhir/Procedure/ProcedureOperationMamma&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/procedure.html#Procedure">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/procedure.html#Procedure">Procedure</a>&gt;
@@ -1803,6 +1942,22 @@
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Goal/TherapiezielMammaHeilung&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.goal">goal</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity">activity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>&gt;<a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>&gt;<a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>&gt;<a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>&gt;<a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.reference">reference</a>&gt;<a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> 
             &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma&quot;/&gt;
@@ -2123,7 +2278,7 @@
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-30 12:36:00 +0000">
+  <span title="2026-07-30 15:22:00 +0000">
     2026-07-30
   </span>
 

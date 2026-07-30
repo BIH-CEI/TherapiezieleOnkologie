@@ -1,0 +1,23 @@
+{
+  "resourceType" : "MedicationAdministration",
+  "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration MedicationAdministrationPembroChemoNeoadjuvantMamma1</b></p><a name=\"MedicationAdministrationPembroChemoNeoadjuvantMamma1\"> </a><a name=\"hcMedicationAdministrationPembroChemoNeoadjuvantMamma1\"> </a><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-10-01</p><p><b>request</b>: <a href=\"MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html\">MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = </a></p><p><b>note</b>: </p><blockquote><div><p>Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</p>\n</div></blockquote></div>"
+  },
+  "status" : "completed",
+  "medicationCodeableConcept" : {
+    "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "effectiveDateTime" : "2025-10-01",
+  "request" : {
+    "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+  },
+  "note" : [{
+    "text" : "Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+  }]
+}

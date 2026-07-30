@@ -120,6 +120,9 @@
       <li>
         <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
       </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -219,6 +222,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#klinische-erzählung" id="markdown-toc-klinische-erzählung">Klinische Erzählung</a></li>
   <li><a href="#zeitlicher-verlauf" id="markdown-toc-zeitlicher-verlauf">Zeitlicher Verlauf</a></li>
   <li><a href="#pathologisches-und-molekulares-profil" id="markdown-toc-pathologisches-und-molekulares-profil">Pathologisches und molekulares Profil</a></li>
+  <li><a href="#graphische-darstellung-des-zeitlichen-verlaufs" id="markdown-toc-graphische-darstellung-des-zeitlichen-verlaufs">Graphische Darstellung des zeitlichen Verlaufs</a></li>
   <li><a href="#informationsmodell" id="markdown-toc-informationsmodell">Informationsmodell</a></li>
   <li><a href="#verknüpfungen-im-beispiel" id="markdown-toc-verknüpfungen-im-beispiel">Verknüpfungen im Beispiel</a></li>
   <li><a href="#aus-mcc-übernommene-extensions-im-beispiel" id="markdown-toc-aus-mcc-übernommene-extensions-im-beispiel">Aus MCC übernommene Extensions im Beispiel</a></li>
@@ -285,13 +289,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>01.10.2025 – 15.03.2026</td>
-      <td>Therapielinie neoadjuvante und kurative Chemotherapie</td>
-      <td><a href="EpisodeOfCare-TherapielinieChemo.html">TherapielinieChemo</a></td>
+      <td>Therapielinie neoadjuvante und kurative Chemotherapie mit Medikationsabgabe</td>
+      <td><a href="EpisodeOfCare-TherapielinieChemo.html">TherapielinieChemo</a>, <a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.html">MedicationAdministrationPembroChemoNeoadjuvantMamma1</a>, <a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.html">MedicationAdministrationPembroChemoNeoadjuvantMamma2</a>, <a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.html">MedicationAdministrationPembroChemoNeoadjuvantMamma3</a>, <a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.html">MedicationAdministrationPembroChemoNeoadjuvantMamma4</a></td>
     </tr>
     <tr>
       <td>20.03.2026 - 06.04.2026</td>
       <td>Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie, Therapielinie kurative Operation</td>
-      <td><a name="l645">​</a><a href="Procedure-ProcedureOperationMamma.html">ProcedureOperationMamma</a>, <a href="EpisodeOfCare-Therapielinieoperation.html">TherapielinieOperation</a></td>
+      <td><a name="l667">​</a><a href="Procedure-ProcedureOperationMamma.html">ProcedureOperationMamma</a>, <a href="EpisodeOfCare-Therapielinieoperation.html">TherapielinieOperation</a></td>
     </tr>
     <tr>
       <td>07.04.2026</td>
@@ -371,6 +375,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <p>Die Rezeptor-/HER2-Kodierung orientiert sich am <strong>MII KDS-Modul Onkologie</strong> (Mamma-Zusatzmodul, v2026.0.3). Die Marker sind hier als eigenständige <code class="language-plaintext highlighter-rouge">Observation</code>-Instanzen modelliert und über <code class="language-plaintext highlighter-rouge">subject</code> mit der Patientin verknüpft.</p>
 </blockquote>
 
+<h3 id="graphische-darstellung-des-zeitlichen-verlaufs">Graphische Darstellung des zeitlichen Verlaufs</h3>
+
+<p><img src="Beispiel_Mamma.png" alt="Graphische Darstellung des zeitlichen Verlaufs" style="width:100%;"/></p>
+
 <h3 id="informationsmodell">Informationsmodell</h3>
 
 <p>Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Szenario: Der <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> ist das zentrale Steuerobjekt, das die adressierte Erkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>), das übergeordnete Ziel (<code class="language-plaintext highlighter-rouge">goal</code>) sowie geplante und durchgeführte Maßnahmen (<code class="language-plaintext highlighter-rouge">activity.reference</code> / <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code>) zusammenführt. Die <strong>neoadjuvante Therapielinie</strong> dient dabei dem <strong>kurativen Gesamtziel</strong>: Die <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code> trägt die Intention <code class="language-plaintext highlighter-rouge">neoadjuvant</code>, während <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> und <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> die übergeordnete Intention <code class="language-plaintext highlighter-rouge">kurativ</code> tragen.</p>
@@ -407,7 +415,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>Therapielinie (LoT 1)</td>
       <td><code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></td>
-      <td><a name="l999">​</a><a href="EpisodeOfCare-TherapielinieMammaNeoadjuvant.html">TherapielinieMammaNeoadjuvant</a></td>
+      <td><a name="l1027">​</a><a href="EpisodeOfCare-TherapielinieMammaNeoadjuvant.html">TherapielinieMammaNeoadjuvant</a></td>
     </tr>
     <tr>
       <td>Geplante Maßnahme (Systemtherapie)</td>
@@ -472,7 +480,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-30 12:36:00 +0000">
+  <span title="2026-07-30 15:22:00 +0000">
     2026-07-30
   </span>
 

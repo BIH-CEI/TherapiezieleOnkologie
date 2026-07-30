@@ -1332,6 +1332,126 @@
     </request>
   </entry>
   <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroChemoNeoadjuvantMamma1"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-10-01"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroChemoNeoadjuvantMamma2"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-11-01"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroChemoNeoadjuvantMamma3"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-02-10"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroChemoNeoadjuvantMamma4"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-03-15"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
     <fullUrl value="http://example.org/fhir/Procedure/ProcedureOperationMamma"/>
     <resource>
       <Procedure>
@@ -1471,6 +1591,18 @@
           <reference value="Goal/TherapiezielMammaHeilung"/>
         </goal>
         <activity>
+          <outcomeReference>
+            <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"/>
+          </outcomeReference>
           <reference>
             <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
           </reference>

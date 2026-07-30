@@ -13,7 +13,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-07-30T12:36:35+00:00"/>
+  <date value="2026-07-30T15:22:14+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -1280,6 +1280,50 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"/>
+      </reference>
+      <name value="Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 1/4 (KEYNOTE-522, Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 1 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"/>
+      </reference>
+      <name value="Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 2/4 (KEYNOTE-522, Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 2 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"/>
+      </reference>
+      <name value="Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 3/4 (KEYNOTE-522, Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 3 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"/>
+      </reference>
+      <name value="Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 4/4 (KEYNOTE-522, Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 4 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Goal"/>
       </extension>
       <reference>
@@ -1361,6 +1405,14 @@
         </extension>
         <nameUrl value="szenario-mamma.html"/>
         <title value="Anwendungsbeispiel (Mammakarzinom neoadjuvant)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="szenario-mamma-abweichende-szenarios.html"/>
+        </extension>
+        <nameUrl value="szenario-mamma-abweichende-szenarios.html"/>
+        <title value="Abweichende Szenarios"/>
         <generation value="markdown"/>
       </page>
       <page>

@@ -28,7 +28,12 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **goal**: [Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = Achieved; category = Heilung,Funktionserhalt; priority = High Priority; description = ; start[x] = 2025-09-22](Goal-TherapiezielMammaHeilung.md)
 
-> **activity****reference**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
+> **activity****outcomeReference**: 
+* [MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2025-10-01; note = Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.md)
+* [MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2025-11-01; note = Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.md)
+* [MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2026-02-10; note = Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.md)
+* [MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2026-03-15; note = Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.md)
+**reference**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
 
 > **activity****outcomeReference**: [Procedure Lumpectomy of breast (procedure)](Procedure-ProcedureOperationMamma.md)**reference**: [ServiceRequest Lumpectomy of breast (procedure)](ServiceRequest-ServiceRequestProcedure.md)
 
@@ -78,6 +83,18 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
     "reference" : "Goal/TherapiezielMammaHeilung"
   }],
   "activity" : [{
+    "outcomeReference" : [{
+      "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"
+    },
+    {
+      "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"
+    },
+    {
+      "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"
+    },
+    {
+      "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"
+    }],
     "reference" : {
       "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
     }

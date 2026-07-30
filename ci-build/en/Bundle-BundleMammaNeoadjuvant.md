@@ -1336,6 +1336,122 @@
     }
   },
   {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationAdministration_MedicationAdministrationPembroChemoNeoadjuvantMamma1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration MedicationAdministrationPembroChemoNeoadjuvantMamma1</b></p><a name=\"MedicationAdministrationPembroChemoNeoadjuvantMamma1\"> </a><a name=\"hcMedicationAdministrationPembroChemoNeoadjuvantMamma1\"> </a><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-10-01</p><p><b>request</b>: <a href=\"MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html\">MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = </a></p><p><b>note</b>: </p><blockquote><div><p>Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</p>\n</div></blockquote></div></div>"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-10-01",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma2",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationAdministration_MedicationAdministrationPembroChemoNeoadjuvantMamma2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration MedicationAdministrationPembroChemoNeoadjuvantMamma2</b></p><a name=\"MedicationAdministrationPembroChemoNeoadjuvantMamma2\"> </a><a name=\"hcMedicationAdministrationPembroChemoNeoadjuvantMamma2\"> </a><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-11-01</p><p><b>request</b>: <a href=\"MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html\">MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = </a></p><p><b>note</b>: </p><blockquote><div><p>Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</p>\n</div></blockquote></div></div>"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-11-01",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma3",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationAdministration_MedicationAdministrationPembroChemoNeoadjuvantMamma3\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration MedicationAdministrationPembroChemoNeoadjuvantMamma3</b></p><a name=\"MedicationAdministrationPembroChemoNeoadjuvantMamma3\"> </a><a name=\"hcMedicationAdministrationPembroChemoNeoadjuvantMamma3\"> </a><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2026-02-10</p><p><b>request</b>: <a href=\"MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html\">MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = </a></p><p><b>note</b>: </p><blockquote><div><p>Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</p>\n</div></blockquote></div></div>"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-02-10",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma4",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"MedicationAdministration_MedicationAdministrationPembroChemoNeoadjuvantMamma4\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration MedicationAdministrationPembroChemoNeoadjuvantMamma4</b></p><a name=\"MedicationAdministrationPembroChemoNeoadjuvantMamma4\"> </a><a name=\"hcMedicationAdministrationPembroChemoNeoadjuvantMamma4\"> </a><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2026-03-15</p><p><b>request</b>: <a href=\"MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html\">MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = </a></p><p><b>note</b>: </p><blockquote><div><p>Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</p>\n</div></blockquote></div></div>"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-03-15",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
     "fullUrl" : "http://example.org/fhir/Procedure/ProcedureOperationMamma",
     "resource" : {
       "resourceType" : "Procedure",
@@ -1440,7 +1556,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_CarePlanMammaNeoadjuvant\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan CarePlanMammaNeoadjuvant</b></p><a name=\"CarePlanMammaNeoadjuvant\"> </a><a name=\"hcCarePlanMammaNeoadjuvant\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-care-plan.html\">Onkologischer CarePlan</a></p></div><p><b>CarePlan Custodian (Extension)</b>: <a href=\"Organization-TumorzentrumMamma.html\">Organization Zertifiziertes Brustzentrum Musterklinik</a></p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 736252007}\">Cancer care plan</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>period</b>: 2025-09-22 --&gt; (ongoing)</p><p><b>author</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>goal</b>: <a href=\"Goal-TherapiezielMammaHeilung.html\">Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = Achieved; category = Heilung,Funktionserhalt; priority = High Priority; description = ; start[x] = 2025-09-22</a></p><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href=\"MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html\">MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Procedure-ProcedureOperationMamma.html\">Procedure Lumpectomy of breast (procedure)</a></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestProcedure.html\">ServiceRequest Lumpectomy of breast (procedure)</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href=\"MedicationRequest-MedicationRequestPembroAdjuvantMamma.html\">MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsDiseaseStatusMamma.html\">Observation Cancer disease progression</a></p></blockquote></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_CarePlanMammaNeoadjuvant\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan CarePlanMammaNeoadjuvant</b></p><a name=\"CarePlanMammaNeoadjuvant\"> </a><a name=\"hcCarePlanMammaNeoadjuvant\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-care-plan.html\">Onkologischer CarePlan</a></p></div><p><b>CarePlan Custodian (Extension)</b>: <a href=\"Organization-TumorzentrumMamma.html\">Organization Zertifiziertes Brustzentrum Musterklinik</a></p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 736252007}\">Cancer care plan</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>period</b>: 2025-09-22 --&gt; (ongoing)</p><p><b>author</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>goal</b>: <a href=\"Goal-TherapiezielMammaHeilung.html\">Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = Achieved; category = Heilung,Funktionserhalt; priority = High Priority; description = ; start[x] = 2025-09-22</a></p><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: </p><ul><li><a href=\"MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.html\">MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2025-10-01; note = Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</a></li><li><a href=\"MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.html\">MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2025-11-01; note = Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</a></li><li><a href=\"MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.html\">MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2026-02-10; note = Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</a></li><li><a href=\"MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.html\">MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2026-03-15; note = Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</a></li></ul><p><b>reference</b>: <a href=\"MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html\">MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Procedure-ProcedureOperationMamma.html\">Procedure Lumpectomy of breast (procedure)</a></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestProcedure.html\">ServiceRequest Lumpectomy of breast (procedure)</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href=\"MedicationRequest-MedicationRequestPembroAdjuvantMamma.html\">MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsDiseaseStatusMamma.html\">Observation Cancer disease progression</a></p></blockquote></div></div>"
       },
       "extension" : [{
         "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
@@ -1473,6 +1589,18 @@
         "reference" : "Goal/TherapiezielMammaHeilung"
       }],
       "activity" : [{
+        "outcomeReference" : [{
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"
+        }],
         "reference" : {
           "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
         }

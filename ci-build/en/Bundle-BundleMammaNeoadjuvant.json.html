@@ -51,8 +51,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14.59"}
-    h3,h4,h5,h6{--heading-prefix:"14.59"}</style>
+    <style type="text/css">h2{--heading-prefix:"15.59"}
+    h3,h4,h5,h6{--heading-prefix:"15.59"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -126,6 +126,9 @@
       </li>
       <li>
         <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
       </li>
     </ul>
   </li>
@@ -1822,6 +1825,130 @@
       }
     },
     {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+      "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a>" : "en",
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+          <a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/PatientinMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2025-10-01",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+          <a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>" : "Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationAdministration"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2",
+      "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "MedicationAdministrationPembroChemoNeoadjuvantMamma2",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a>" : "en",
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+          <a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/PatientinMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2025-11-01",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+          <a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>" : "Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationAdministration"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3",
+      "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "MedicationAdministrationPembroChemoNeoadjuvantMamma3",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a>" : "en",
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+          <a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/PatientinMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2026-02-10",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+          <a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>" : "Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationAdministration"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4",
+      "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "MedicationAdministrationPembroChemoNeoadjuvantMamma4",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a>" : "en",
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+          <a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/PatientinMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2026-03-15",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+          <a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>" : "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationAdministration"
+      }
+    },
+    {
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://example.org/fhir/Procedure/ProcedureOperationMamma",
       "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/procedure.html">resourceType</a>" : "Procedure",
@@ -1982,6 +2109,20 @@
         ],
         "<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity">activity</a>" : [
           {
+            "<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.outcomeReference">outcomeReference</a>" : [
+              {
+                <a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"
+              },
+              {
+                <a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"
+              },
+              {
+                <a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"
+              },
+              {
+                <a href="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"
+              }
+            ],
             "<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.activity.reference">reference</a>" : {
               <a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
             }
@@ -2348,7 +2489,7 @@
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-30 12:36:00 +0000">
+  <span title="2026-07-30 15:22:00 +0000">
     2026-07-30
   </span>
 

@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-30T12:36:35+00:00",
+  "date" : "2026-07-30T15:22:14+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -1804,6 +1804,70 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.html"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"
+      },
+      "name" : "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 1/4 (KEYNOTE-522, Beispiel)",
+      "description" : "Dokumentierte Gabe (Zyklus 1 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.html"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"
+      },
+      "name" : "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 2/4 (KEYNOTE-522, Beispiel)",
+      "description" : "Dokumentierte Gabe (Zyklus 2 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.html"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"
+      },
+      "name" : "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 3/4 (KEYNOTE-522, Beispiel)",
+      "description" : "Dokumentierte Gabe (Zyklus 3 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.html"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"
+      },
+      "name" : "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 4/4 (KEYNOTE-522, Beispiel)",
+      "description" : "Dokumentierte Gabe (Zyklus 4 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Goal"
       },
       {
@@ -1902,6 +1966,15 @@
         }],
         "nameUrl" : "szenario-mamma.html",
         "title" : "Anwendungsbeispiel (Mammakarzinom neoadjuvant)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "szenario-mamma-abweichende-szenarios.html"
+        }],
+        "nameUrl" : "szenario-mamma-abweichende-szenarios.html",
+        "title" : "Abweichende Szenarios",
         "generation" : "markdown"
       },
       {

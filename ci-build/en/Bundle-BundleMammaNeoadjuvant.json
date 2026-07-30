@@ -1328,6 +1328,122 @@
     }
   },
   {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-10-01",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma2",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-11-01",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma3",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-02-10",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma4",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-03-15",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
     "fullUrl" : "http://example.org/fhir/Procedure/ProcedureOperationMamma",
     "resource" : {
       "resourceType" : "Procedure",
@@ -1465,6 +1581,18 @@
         "reference" : "Goal/TherapiezielMammaHeilung"
       }],
       "activity" : [{
+        "outcomeReference" : [{
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"
+        }],
         "reference" : {
           "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
         }
