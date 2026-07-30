@@ -19,9 +19,10 @@ Nach Abschluss der neoadjuvanten Therapie erfolgt eine **brusterhaltende Operati
 | 18.09.2025 | Anforderung Keimbahn-Testung gBRCA1/2 | [ServiceRequestGBRCAMamma](ServiceRequest-ServiceRequestGBRCAMamma.html) |
 | 22.09.2025 | Interdisziplinäre Tumorkonferenz: kuratives Konzept, OP vom Tumorboard vorgeschlagen, Neoadjuvante Chemo-/Immuntherapie (KEYNOTE-522) von Tumorboard vorgeschlagen; Therapieziel festgelegt | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.html), [TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.html), [FollowUpGoal](Goal-FollowUpGoal.html),[ServiceRequestProcedure](ServiceRequest-ServiceRequestProcedure.html), [MedicationRequestPembroChemoNeoadjuvantMamma](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html) |
 | 25.09.2025 | Keimbahn-Panel gBRCA1/2: unauffällig → Abschluss der Diagnostikphase | [ObsGBRCAMamma](Observation-ObsGBRCAMamma.html) |
-| 01.10.2025 – 15.03.2026 | Therapielinie neoadjuvante und kurative Chemotherapie | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.html) |
+| 01.10.2025 – 15.03.2026 | Therapielinie neoadjuvante und kurative Chemotherapie mit Medikationsabgabe | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.html), [MedicationAdministrationPembroChemoNeoadjuvantMamma1](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.html), [MedicationAdministrationPembroChemoNeoadjuvantMamma2](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.html), [MedicationAdministrationPembroChemoNeoadjuvantMamma3](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.html), [MedicationAdministrationPembroChemoNeoadjuvantMamma4](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.html)|
 | 20.03.2026 - 06.04.2026 | Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie, Therapielinie kurative Operation | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.html), [TherapielinieOperation](EpisodeOfCare-Therapielinieoperation.html)  |
 | 07.04.2026 | Pathologie des OP-Präparats: ypT0 ypN0 → pathologische Komplettremission (pCR); Disease Status | [ObsTNMpathologischMamma](Observation-ObsTNMpathologischMamma.html), [ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.html) |
+
 
 ### Pathologisches und molekulares Profil
 
@@ -40,6 +41,11 @@ Das prätherapeutische Profil aus der Stanzbiopsie ist – leitlinienkonform –
 | Ansprechen (postneoadjuvant) | ypT0 ypN0 – pCR | LOINC `21902-2` |
 
 > Die Rezeptor-/HER2-Kodierung orientiert sich am **MII KDS-Modul Onkologie** (Mamma-Zusatzmodul, v2026.0.3). Die Marker sind hier als eigenständige `Observation`-Instanzen modelliert und über `subject` mit der Patientin verknüpft.
+
+### Graphische Darstellung des zeitlichen Verlaufs
+
+<img src="Beispiel_Mamma.png" alt="Graphische Darstellung des zeitlichen Verlaufs" style="width:100%;" />
+
 
 ### Informationsmodell
 
