@@ -4,11 +4,11 @@ name: TherapiezieleOnkologie
 title: Implementierungsleitfaden Therapieziele Onkologie
 description: Implementierungsleitfaden zur Dokumentation onkologischer Therapieziele in FHIR
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 1.0.0-ballot
 packageId: de.bih-cei.therapieziele-onkologie
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
-releaseLabel: ci-build
+releaseLabel: Ballot
 license: CC-BY-4.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#DE "Germany"
 publisher:

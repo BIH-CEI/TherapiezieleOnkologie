@@ -1,5 +1,3 @@
-### Empfehlungs- und Behandlungsplan
-
 Auf der [vorigen Seite](therapieziele.html) wurde deutlich: die Therapieintention
 entsteht **bei der Empfehlung** (Tumorboard). Daraus folgt eine Unterscheidung, die
 für die gesamte Modellierung tragend ist — **das Empfohlene und das tatsächlich

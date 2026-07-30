@@ -1,5 +1,3 @@
-### Behandlungsepisoden (`EpisodeOfCare`)
-
 Ein onkologischer Verlauf besteht aus **abgegrenzten Abschnitten klinischer
 Aktivität** — Diagnostik, Therapielinien, Operation, Überwachung, Nachsorge. Jeder
 solche Abschnitt wird als **Behandlungsepisode** auf Basis von FHIR `EpisodeOfCare`

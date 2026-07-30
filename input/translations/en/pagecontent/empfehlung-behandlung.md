@@ -1,5 +1,3 @@
-### Recommendation and treatment plan
-
 The therapy intent arises at the **recommendation** (tumor board). It follows that *what is
 recommended* and *what is actually delivered* are distinct objects.
 

@@ -1,5 +1,3 @@
-### Zielwerte und Messgrößen (`Goal.target`)
-
 Ein Therapieziel wird **messbar**, indem es einen oder mehrere Zielwerte trägt. FHIR
 `Goal.target` gliedert das in drei Elemente:
 
