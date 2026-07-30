@@ -1,0 +1,456 @@
+
+# HumanName.family
+#: HumanName.family
+msgid "Baumann"
+msgstr ""
+
+# HumanName.given
+#: HumanName.given
+msgid "Sabine"
+msgstr ""
+
+# HumanName.family
+#: HumanName.family
+msgid "Musterarzt"
+msgstr ""
+
+# HumanName.given
+#: HumanName.given
+msgid "Katrin"
+msgstr ""
+
+# Organization.name
+#: Organization.name
+msgid "Zertifiziertes Brustzentrum Musterklinik"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Organizational team"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Core needle biopsy of breast (procedure)"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Histopathology service (qualifier value)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Klinische Ausbreitungsdiagnostik / TNM-Staging"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Tumordiagnostik"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "High Priority"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "In Progress"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Diagnostic intent"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Diagnosesicherung für die Verdachtsdiagnose"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Primary tumor.clinical [Class] Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Regional lymph nodes.clinical [Class] Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Distant metastases.clinical [Class] Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Stage group.clinical Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "HER2 Ag [Interpretation] in Tissue"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Primary site Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Histology grade [Identifier] in Cancer specimen"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Invasives Mammakarzinom links, oberer äußerer Quadrant (NST), triple-negativ"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Mamma links, oberer äußerer Quadrant"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Diagnostic procedure (procedure)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Sonografisch gesteuerte Stanzbiopsie der Mamma links"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Specimen from breast obtained by core needle biopsy"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Tissue specimen (specimen)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Stanzbiopsat (Gewebeprobe) Mamma links"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Core needle biopsy"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Structure of upper outer quadrant of breast"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Histology and Behavior ICD-O-3 Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Infiltrating duct carcinoma"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Invasives Mammakarzinom, NST (ICD-O-3 8500/3)"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "G3: Poorly differentiated"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "schlecht differenziert"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "G3 – schlecht differenziert (Elston-Ellis)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "cT2 cN1 cM0 – UICC IIB"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Observation using immunohistochemistry (observable entity)"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Negative"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Immunhistochemie: <1 % positive Kerne → ER-negativ."
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Immunhistochemie: <1 % positive Kerne → PR-negativ."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "HER2 [Interpretation] in Tissue"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "negativ"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "HER2-negativ"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Ki-67 Proliferationsindex (MIB-1)"
+msgstr ""
+
+# Quantity.unit
+#: Quantity.unit
+msgid "%"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Neoadjuvant"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Kurativ"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Chemotherapy care"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Chief complaint"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Erhaltungstherapie"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Predecessor"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Successor"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Achieved"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Heilung"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Funktionserhalt"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR)."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Tumor board Consult note"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Surgical procedure"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Lumpectomy of breast (procedure)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Stage group.pathology Cancer"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "ypT0 ypN0 – pathologische Komplettremission (pCR)"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Cancer disease progression"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Not detected"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Pathologische Komplettremission (pCR, ypT0 ypN0) nach neoadjuvanter Systemtherapie."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Cancer care plan"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Lebensqualität"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Cancer outcome status"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Kein Hinweis auf Lokalrezidiv oder Fernmetastasen"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "MG Breast Screening"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Stabile bis verbesserte Lebensqualität im Verlauf"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Nachsorge-Mammographie beidseits (jährlich)"
+msgstr ""
+

@@ -1,0 +1,36 @@
+
+# A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.
+#: StructureDefinition.name
+msgid "OnkoCondition"
+msgstr "OnkoCondition"
+
+# A short, descriptive, user-friendly title for the structure definition.
+#: StructureDefinition.title
+msgid "Onkologische Diagnose (Condition)"
+msgstr "Oncological diagnosis condition"
+
+# The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.
+#: StructureDefinition.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr "Berlin Institute of Health at Charité (BIH)"
+
+# The name of an individual to contact.
+#: StructureDefinition.contact.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr "Berlin Institute of Health at Charité (BIH)"
+
+# A name for the specification that is being mapped to.
+#: StructureDefinition.mapping.MII-FHIR-to-MVGenomSeq/name
+msgid "Onkologie LogicalModel MII Onkologie Mapping"
+msgstr "Onkologie LogicalModel MII Onkologie Mapping"
+
+# A name for the specification that is being mapped to.
+#: StructureDefinition.mapping.oBDS/name
+msgid "Mapping FHIR zu oBDS"
+msgstr "Mapping FHIR zu oBDS"
+
+# A name for the specification that is being mapped to.
+#: StructureDefinition.mapping.LogicalModel/name
+msgid "FHIR-Profil zu LogicalModel Mapping"
+msgstr "FHIR-Profil zu LogicalModel Mapping"
+

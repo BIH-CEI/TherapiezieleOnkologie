@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Observation-ObsEstrogenrezeptorMamma" original="Resource Observation-ObsEstrogenrezeptorMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Observation-ObsEstrogenrezeptorMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsEstrogenrezeptorMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Observation using immunohistochemistry (observable entity)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsEstrogenrezeptorMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Negative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsEstrogenrezeptorMamma" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Immunhistochemie: &lt;1 % positive Kerne → ER-negativ.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

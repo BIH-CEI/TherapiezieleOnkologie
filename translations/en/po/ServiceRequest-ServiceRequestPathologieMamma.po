@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Histopathology service (qualifier value)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67"
+msgstr ""
+

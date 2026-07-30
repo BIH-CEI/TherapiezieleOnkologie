@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ServiceRequest-ServiceRequestStagingMamma" original="Resource ServiceRequest-ServiceRequestStagingMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ServiceRequest-ServiceRequestStagingMamma" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Klinische Ausbreitungsdiagnostik / TNM-Staging</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

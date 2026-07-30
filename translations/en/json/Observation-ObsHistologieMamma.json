@@ -1,0 +1,31 @@
+{
+  "id" : "Observation-ObsHistologieMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Histology and Behavior ICD-O-3 Cancer",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Infiltrating duct carcinoma",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Invasives Mammakarzinom, NST (ICD-O-3 8500/3)",
+      "target" : null
+    }]
+  }]
+}

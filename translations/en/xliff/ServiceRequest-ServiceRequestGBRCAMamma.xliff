@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ServiceRequest-ServiceRequestGBRCAMamma" original="Resource ServiceRequest-ServiceRequestGBRCAMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ServiceRequest-ServiceRequestGBRCAMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

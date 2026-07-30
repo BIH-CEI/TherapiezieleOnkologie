@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CodeSystem-onko-therapy-goal-type" original="Resource CodeSystem-onko-therapy-goal-type" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.name">
+             <notes>
+               <note id="n1">CodeSystem.name</note>
+             </notes>
+        <source>OnkoTherapyGoalType</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.title">
+             <notes>
+               <note id="n1">CodeSystem.title</note>
+             </notes>
+        <source>Onkologische Therapieziel-Art</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.publisher">
+             <notes>
+               <note id="n1">CodeSystem.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.description">
+             <notes>
+               <note id="n1">CodeSystem.description</note>
+             </notes>
+        <source>Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Heilung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Kuratives Ziel — vollständige Remission angestrebt.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Lebensverlängerung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Symptomkontrolle / Palliation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Linderung von Symptomen und Krankheitslast.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Lebensqualität</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Erhalt oder Verbesserung von Funktion und Lebensqualität.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Funktionserhalt</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Erhalt körperlicher oder kognitiver Funktion.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Studienteilnahme</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Teilnahme an einer klinischen Studie als explizites Ziel.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,13 @@
+{
+  "id" : "Organization-TumorzentrumMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Organization.name",
+      "context" : "Organization.name",
+      "source" : "Zertifiziertes Brustzentrum Musterklinik",
+      "target" : null
+    }]
+  }]
+}

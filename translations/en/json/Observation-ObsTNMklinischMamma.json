@@ -1,0 +1,19 @@
+{
+  "id" : "Observation-ObsTNMklinischMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Stage group.clinical Cancer",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "cT2 cN1 cM0 – UICC IIB",
+      "target" : null
+    }]
+  }]
+}

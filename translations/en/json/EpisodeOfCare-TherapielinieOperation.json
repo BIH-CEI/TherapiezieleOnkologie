@@ -1,0 +1,25 @@
+{
+  "id" : "EpisodeOfCare-TherapielinieOperation",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Kurativ",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Erhaltungstherapie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Chief complaint",
+      "target" : null
+    }]
+  }]
+}

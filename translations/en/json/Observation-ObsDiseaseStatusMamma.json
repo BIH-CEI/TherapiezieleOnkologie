@@ -1,0 +1,25 @@
+{
+  "id" : "Observation-ObsDiseaseStatusMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cancer disease progression",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Not detected",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Pathologische Komplettremission (pCR, ypT0 ypN0) nach neoadjuvanter Systemtherapie.",
+      "target" : null
+    }]
+  }]
+}

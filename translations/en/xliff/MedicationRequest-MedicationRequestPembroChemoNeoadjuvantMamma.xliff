@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma" original="Resource MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tumor board Consult note</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

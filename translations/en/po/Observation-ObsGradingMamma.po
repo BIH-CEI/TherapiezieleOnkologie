@@ -1,0 +1,21 @@
+
+# Coding.display
+#: Coding.display
+msgid "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "G3: Poorly differentiated"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "schlecht differenziert"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "G3 – schlecht differenziert (Elston-Ellis)"
+msgstr ""
+

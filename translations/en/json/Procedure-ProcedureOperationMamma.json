@@ -1,0 +1,19 @@
+{
+  "id" : "Procedure-ProcedureOperationMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Lumpectomy of breast (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie",
+      "target" : null
+    }]
+  }]
+}

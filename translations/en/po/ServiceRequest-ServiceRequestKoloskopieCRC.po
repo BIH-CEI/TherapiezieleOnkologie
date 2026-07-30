@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Colonoscopy"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Koloskopie mit Biopsieentnahme"
+msgstr ""
+

@@ -42,13 +42,787 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
-      "source" : "Therapieziel Onkologie",
+      "source" : "Adjuvante Systemtherapie – Pembrolizumab-Monotherapie (KEYNOTE-522, Beispiel)",
       "target" : null
     },
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "TODO",
+      "source" : "Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status), ambulant über ~9 Zyklen (q3w).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Anforderung histopathologische Untersuchung (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Pathologieauftrag zum Stanzbiopsat: Histologie, Grading, Hormonrezeptor- und HER2-Status sowie Ki-67.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Anforderung Keimbahn-Testung gBRCA1 (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim triple-negativen Mammakarzinom.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Anforderung klinisches Staging (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Anforderung der klinischen Ausbreitungsdiagnostik (TNM-Klassifikation) vor Therapiebeginn.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Anforderung Koloskopie mit Biopsie (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Diagnostische Maßnahme des DiagnosticCarePlan.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Anforderung Nachsorge-Mammographie (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Geplante jährliche Nachsorge-Mammographie der operierten und der kontralateralen Brust zur Rezidiv-/Zweitkarzinom-Früherkennung (S3-Leitlinie Mammakarzinom / AGO).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Anforderung Stanzbiopsie Mamma (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Anforderung einer sonografisch gesteuerten Stanzbiopsie der Mamma links zur histologischen Sicherung des Tumorverdachts.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Behandelnde Onkologin (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Behandelnde Onkologin (Mamma, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Brusterhaltende Operation + Sentinel-Lymphknoten-Biopsie (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Durchgeführte lokale Therapie nach Abschluss der neoadjuvanten Systemtherapie: brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Brustzentrum (Custodian, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "CarePlan Custodian (Extension)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans (Custodian).\n\nÜbernahme der **MCC eCare Plan** Extension\n[custodian](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-custodian.html)\n(`http://hl7.org/fhir/us/mcc/StructureDefinition/custodian`). Es handelt sich um einen\nR5-Backport: In FHIR R5 wurde `CarePlan.author` entfernt; `CarePlan.custodian` benennt die\nfür Pflege und Wartung des Plans verantwortliche Partei. Der Custodian kann, muss aber kein\nContributor sein.\n\nHier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu\nvermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Diagnostischer CarePlan",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "CarePlan für die Tumordiagnostik auf Basis von `CarePlan`.\n\nErgänzend zum onkologischen Therapie-CarePlan (`OnkoCarePlan`) bildet dieses Profil den Weg\nzur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfads werden als\nAktivitäten abgebildet, deren Ergebnisse können\nüber `activity.outcomeReference` angebunden werden.\n\nDer diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (`OnkoCondition`)\nund ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.\n\nDiagnostikspezifische Ergänzungen:\n- Der Plan-Typ ist über `category` verpflichtend gekennzeichnet: `category.text`\n  muss den Wert \"Tumordiagnostik\" tragen. Weitere Categories können ergänzt\n  werden. Damit sind diagnostischer und Therapie-CarePlan unterscheidbar.\n\n**Abgrenzung:** Dieses Profil beschreibt den *Prozess* der Diagnosefindung.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Diagnostischer CarePlan – Tumordiagnostik (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpektomie) bei Mammakarzinom.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Grading G3 (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Histopathologisches Grading nach Elston-Ellis: G3 (schlecht differenziert).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "HER2/neu-Status – negativ (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "HER2/neu-Status: negativ (IHC 1+). Kodierung nach MII Mamma-Zusatzmodul (oBDS + Leitlinie).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Histologie / Morphologie (ICD-O-3, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Histologischer Befund der Stanzbiopsie: invasives Karzinom ohne speziellen Typ (NST).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Histopathologischer Befund (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Ergebnis der Diagnostik: histologische Sicherung eines Adenokarzinoms des Kolons.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Interdisziplinäres Tumorboard (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Tumorkonferenz, die die Therapieempfehlungen ausspricht (Requester der Tumorboard-Requests).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Keimbahn-Testung gBRCA1 – unauffällig (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim TNBC: keine (wahrscheinlich) pathogene Variante nachgewiesen.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Ki-67 Proliferationsindex (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Proliferationsmarker Ki-67: 70 % – hohe Proliferationsaktivität.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Klinisches TNM / UICC-Stadium (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Klinische Ausbreitungsdiagnostik vor Therapiebeginn: cT2 cN1 cM0, UICC-Stadium IIB.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Kolorektales Karzinom, metastasiert (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Mammakarzinom links, triple-negativ (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Adressierte Tumorerkrankung: invasives Mammakarzinom links (NST), ICD-10-GM C50.4. Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Diagnose (Condition)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**\n([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),\nVersion 2026.0.3).\n\nDieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,\nICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,\nFeststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`\nund `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen\nOnkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.\n\nFür die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das\nProfil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen\nlokalen Canonical bereit, auf den die übrigen Profile referenzieren.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Therapieintention (Extension)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Therapieintention (VS)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nDie deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen\nSNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Therapielinie",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Therapielinie – Art (VS)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein\nBeispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert\n`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code\n`Ambulatory chemotherapy` (315601005).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Therapiephase / Unter-Intention (VS)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nDeutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung\nergänzbar).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Therapieziel-Art",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Therapieziel-Art (VS)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologischer CarePlan",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`\n  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives Therapieziel sowie geplante (neoadjuvante Systemtherapie) und durchgeführte Maßnahmen (Operation, Ansprechbeurteilung) zusammenführt.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologischer CarePlan – mCRC palliativ (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR): trägt das Nachsorge-Ziel (Rezidivfreiheit, Funktion, Lebensqualität) und die geplante jährliche Mammographie als Maßnahme.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologisches Diagnosezeil",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Das onkologische Diagnoseziel wird im diagnostischen CarePlan verlinkt und hat zum Ziel, dass eine Tumordiagnostik gestellt werden kann.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologisches Therapieziel",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.\n\nDas Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))\nangelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über\n`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten\nErgebnissen (Verlaufs-Observations) verknüpft wird.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,\n  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).\n- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der\n  zugehörigen Behandlungslinie hinterlegt werden.\n- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE\n  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel\n  bezogen ausgewertet werden kann.\n\n`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab\n(z. B. erreicht, in Bearbeitung, nicht erreicht).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Patientin – Mammakarzinom (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Beispielpatientin mit primärem, triple-negativem Mammakarzinom (frühes Stadium).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Patientin – mCRC (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Beispielpatientin mit metastasiertem kolorektalem Karzinom.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Postneoadjuvantes TNM / pCR (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Pathologische Aufarbeitung des OP-Präparats nach neoadjuvanter Therapie: ypT0 ypN0 – pathologische Komplettremission (pCR).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Progesteronrezeptor-Status – negativ (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Immunhistochemischer Progesteronrezeptor-Status: negativ (<1 % positive Tumorzellkerne).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Sonografisch gesteuerte Stanzbiopsie der Mamma (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Diagnostische Prozedur zur Sicherung der Tumordiagnose: sonografisch gesteuerte Stanzbiopsie der Mamma links. Liefert das Material für Histologie, Grading und Rezeptor-/HER2-Bestimmung.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Stanzbiopsat Mamma links (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Gewebeprobe aus der Stanzbiopsie, an der die histopathologische und molekulare Diagnostik durchgeführt wurde.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapielinie 2 – Operation",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapielinie – Medikationsverordnung (Extension)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Referenz auf die `MedicationRequest`-Ressource(en), die den Anlass bzw. die Verordnung für\ndiese Therapielinie bilden.\n\n`EpisodeOfCare.referralRequest` ist im FHIR-Core auf `Reference(ServiceRequest)` beschränkt\nund kann in einem Profil nicht auf weitere Zieltypen erweitert werden (Profile dürfen\nReferenzziele nur einschränken, nicht erweitern). Für Therapielinien, deren Auslöser eine\nMedikationsverordnung statt eines ServiceRequest ist (z. B. eine antineoplastische\nSystemtherapie), wird daher diese Extension ergänzend zu `referralRequest` verwendet.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapieziel – Erhaltungstherapie / Stabilisierung (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Nachgelagertes Ziel der Erhaltungsphase (Deeskalation auf 5-FU/Bevacizumab nach Ansprechen). Demonstriert die predecessor-Beziehung als Gegenrichtung zum successor des Induktionsziels.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapieziel – Heilung & Brusterhalt (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC durch neoadjuvante Systemtherapie und anschließende Operation, bei gleichzeitigem Ziel des Brusterhalts (Funktionserhalt).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapieziel – kurative Resektion (abgelehnt, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "In der Tumorkonferenz erwogenes kuratives Ziel, das aufgrund der Metastasierung verworfen wurde. Demonstriert die Extension goal-reasonRejected.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapieziel – Lebensverlängerung & Symptomkontrolle (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Übergeordnetes palliatives Therapieziel: Lebensverlängerung bei gleichzeitiger Symptomkontrolle.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Transaction-Bundle – Mammakarzinom neoadjuvant (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Postbares Transaction-Bundle mit allen Instanzen des Mamma-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinien, Therapieziele, Tumorboard-Empfehlungen, Verlauf).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Transaction-Bundle – mCRC palliativ (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Postbares Transaction-Bundle mit allen Instanzen des mCRC-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinie, Therapieziele, Tumorboard-Empfehlungen, Verlauf).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Tumoransprechen / Disease Status (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen auf das Therapieziel bezieht (vgl. mCODE Cancer Disease Status).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Tumoransprechen / Disease Status – Komplettremission (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Verlaufs-Observation zum Krankheitsstatus nach neoadjuvanter Therapie und Operation: pathologische Komplettremission (vgl. mCODE Cancer Disease Status).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Tumorboard",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Tumorboard MedicationRequest",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Strukturierte Empfehlung des Tumorboards auf Basis von `MedicationRequest`.\n\nTumorboardspezifische Ergänzung:\n- Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Tumorboard ServiceRequest",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Strukturierte Empfehlung des Tumorboards auf Basis von `ServiceRequest`.\n\nTumorboardspezifische Ergänzung:\n- Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Tumorboard-Empfehlung – FOLFOX + Bevacizumab (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Vom Tumorboard empfohlene palliative Erstlinien-Systemtherapie (geplante Aktivität des Therapie-CarePlan).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Tumorboard-Empfehlung – Portimplantation (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Vom Tumorboard empfohlene Anlage eines Portkatheters für die systemische Therapie.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Tumorzentrum (Custodian, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Östrogenrezeptor-Status – negativ (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Immunhistochemischer Östrogenrezeptor-Status: negativ (<1 % positive Tumorzellkerne).",
       "target" : null
     },
     {
@@ -61,6 +835,72 @@
       "id" : "ImplementationGuide.definition.page.title",
       "context" : "ImplementationGuide.definition.page.title",
       "source" : "Startseite",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Therapieziele (Goals)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Empfehlungs- und Behandlungsplan",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Behandlungsepisoden (EpisodeOfCare)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Zielwerte und Messgrößen",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Anwendungsbeispiel (mCRC palliativ)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Anwendungsbeispiel (Mammakarzinom neoadjuvant)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Weitere Entität – Diabetes mellitus",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Weitere Entität – Asthma bronchiale",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Weitere Entität – Chronisch-entzündliche Darmerkrankungen",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Weitere Entität – Rheumatoide Arthritis",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Analysebericht (LG-01)",
       "target" : null
     },
     {

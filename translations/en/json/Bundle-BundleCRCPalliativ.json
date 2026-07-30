@@ -1,0 +1,253 @@
+{
+  "id" : "Bundle-BundleCRCPalliativ",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Musterfrau",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Erika",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Musterarzt",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Petra",
+      "target" : null
+    },
+    {
+      "id" : "Organization.name",
+      "context" : "Organization.name",
+      "source" : "Onkologisches Zentrum Musterklinik",
+      "target" : null
+    },
+    {
+      "id" : "CareTeam.name",
+      "context" : "CareTeam.name",
+      "source" : "Interdisziplinäres Tumorboard Kolorektales Karzinom",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Tumordiagnostik",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Colonoscopy",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Koloskopie mit Biopsieentnahme",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Pathology Synoptic report",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Histopathologie Kolonbiopsie",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.conclusion",
+      "context" : "DiagnosticReport.conclusion",
+      "source" : "Adenokarzinom des Kolons (C18.9), ICD-O-3 M8140/3.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Palliativ",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Induktionstherapie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Ambulatory chemotherapy",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Chief complaint",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "High Priority",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Replacement",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Successor",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "In Progress",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Lebensverlängerung",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Symptomkontrolle / Palliation",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Verlängerung des Gesamtüberlebens und Kontrolle tumorbedingter Symptome unter palliativer Systemtherapie.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Stage group.clinical Cancer",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Kurativ",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Heilung",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Kurative Resektion des Primärtumors mit kurativer Absicht.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Erhaltungstherapie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Predecessor",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Lebensqualität",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Erhalt des Therapieansprechens bei reduzierter Toxizität (Erhaltungstherapie) nach erfolgreicher Induktion.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tumor board Consult note",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "FOLFOX + Bevacizumab",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Implantable venous access port injection",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Implantation eines Portkatheters für die systemische Therapie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cancer disease progression",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Not detected",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cancer care plan",
+      "target" : null
+    }]
+  }]
+}

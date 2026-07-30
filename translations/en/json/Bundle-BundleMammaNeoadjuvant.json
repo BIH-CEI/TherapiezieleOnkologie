@@ -1,0 +1,553 @@
+{
+  "id" : "Bundle-BundleMammaNeoadjuvant",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Baumann",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Sabine",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Musterarzt",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Katrin",
+      "target" : null
+    },
+    {
+      "id" : "Organization.name",
+      "context" : "Organization.name",
+      "source" : "Zertifiziertes Brustzentrum Musterklinik",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Organizational team",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Core needle biopsy of breast (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Histopathology service (qualifier value)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Klinische Ausbreitungsdiagnostik / TNM-Staging",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Tumordiagnostik",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "High Priority",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "In Progress",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Diagnostic intent",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Diagnosesicherung für die Verdachtsdiagnose",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Primary tumor.clinical [Class] Cancer",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Regional lymph nodes.clinical [Class] Cancer",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Distant metastases.clinical [Class] Cancer",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Stage group.clinical Cancer",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "HER2 Ag [Interpretation] in Tissue",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Primary site Cancer",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Histologic grade [Score] in Breast cancer specimen by Nottingham",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Histology grade [Identifier] in Cancer specimen",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Invasives Mammakarzinom links, oberer äußerer Quadrant (NST), triple-negativ",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Mamma links, oberer äußerer Quadrant",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Diagnostic procedure (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Sonografisch gesteuerte Stanzbiopsie der Mamma links",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Specimen from breast obtained by core needle biopsy",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tissue specimen (specimen)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Stanzbiopsat (Gewebeprobe) Mamma links",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Core needle biopsy",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Structure of upper outer quadrant of breast",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Histology and Behavior ICD-O-3 Cancer",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Infiltrating duct carcinoma",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Invasives Mammakarzinom, NST (ICD-O-3 8500/3)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "G3: Poorly differentiated",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "schlecht differenziert",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "G3 – schlecht differenziert (Elston-Ellis)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "cT2 cN1 cM0 – UICC IIB",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Observation using immunohistochemistry (observable entity)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Negative",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Immunhistochemie: <1 % positive Kerne → ER-negativ.",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Immunhistochemie: <1 % positive Kerne → PR-negativ.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "HER2 [Interpretation] in Tissue",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "negativ",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "HER2-negativ",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Ki-67 Proliferationsindex (MIB-1)",
+      "target" : null
+    },
+    {
+      "id" : "Quantity.unit",
+      "context" : "Quantity.unit",
+      "source" : "%",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Neoadjuvant",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Kurativ",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Chemotherapy care",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Chief complaint",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Erhaltungstherapie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Predecessor",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Successor",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Achieved",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Heilung",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Funktionserhalt",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR).",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tumor board Consult note",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Surgical procedure",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Lumpectomy of breast (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Stage group.pathology Cancer",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "ypT0 ypN0 – pathologische Komplettremission (pCR)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cancer disease progression",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Not detected",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Pathologische Komplettremission (pCR, ypT0 ypN0) nach neoadjuvanter Systemtherapie.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cancer care plan",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Lebensqualität",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cancer outcome status",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Kein Hinweis auf Lokalrezidiv oder Fernmetastasen",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "MG Breast Screening",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Stabile bis verbesserte Lebensqualität im Verlauf",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Nachsorge-Mammographie beidseits (jährlich)",
+      "target" : null
+    }]
+  }]
+}

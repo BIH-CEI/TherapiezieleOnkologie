@@ -1,0 +1,31 @@
+{
+  "id" : "Procedure-ProcedureBiopsieMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Diagnostic procedure (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Core needle biopsy of breast (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Sonografisch gesteuerte Stanzbiopsie der Mamma links",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Mamma links, oberer äußerer Quadrant",
+      "target" : null
+    }]
+  }]
+}

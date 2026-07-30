@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Stage group.clinical Cancer"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "cT2 cN1 cM0 – UICC IIB"
+msgstr ""
+

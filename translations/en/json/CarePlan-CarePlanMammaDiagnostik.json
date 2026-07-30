@@ -1,0 +1,13 @@
+{
+  "id" : "CarePlan-CarePlanMammaDiagnostik",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Tumordiagnostik",
+      "target" : null
+    }]
+  }]
+}

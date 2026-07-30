@@ -1,0 +1,19 @@
+{
+  "id" : "Organization-Tumorboard",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Organizational team",
+      "target" : null
+    },
+    {
+      "id" : "Organization.name",
+      "context" : "Organization.name",
+      "source" : "Zertifiziertes Brustzentrum Musterklinik",
+      "target" : null
+    }]
+  }]
+}

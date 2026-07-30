@@ -1,0 +1,76 @@
+
+# Coding.display
+#: Coding.display
+msgid "High Priority"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "In Progress"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Diagnostic intent"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Diagnosesicherung für die Verdachtsdiagnose"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Primary tumor.clinical [Class] Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Regional lymph nodes.clinical [Class] Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Distant metastases.clinical [Class] Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Stage group.clinical Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "HER2 Ag [Interpretation] in Tissue"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Primary site Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Histology grade [Identifier] in Cancer specimen"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"
+msgstr ""
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ServiceRequest-ServiceRequestProcedure" original="Resource ServiceRequest-ServiceRequestProcedure" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ServiceRequest-ServiceRequestProcedure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tumor board Consult note</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ServiceRequest-ServiceRequestProcedure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Surgical procedure</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ServiceRequest-ServiceRequestProcedure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lumpectomy of breast (procedure)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,31 @@
+{
+  "id" : "Observation-ObsKi67Mamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Observation using immunohistochemistry (observable entity)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Ki-67 Proliferationsindex (MIB-1)",
+      "target" : null
+    },
+    {
+      "id" : "Quantity.unit",
+      "context" : "Quantity.unit",
+      "source" : "%",
+      "target" : null
+    }]
+  }]
+}

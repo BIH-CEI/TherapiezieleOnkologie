@@ -1,0 +1,31 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "OnkoTherapyGoalTypeVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "Onkologische Therapieziel-Art (VS)"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+

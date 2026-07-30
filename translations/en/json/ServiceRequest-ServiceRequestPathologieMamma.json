@@ -1,0 +1,19 @@
+{
+  "id" : "ServiceRequest-ServiceRequestPathologieMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Histopathology service (qualifier value)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67",
+      "target" : null
+    }]
+  }]
+}

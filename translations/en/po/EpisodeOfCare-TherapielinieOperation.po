@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "Kurativ"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Erhaltungstherapie"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Chief complaint"
+msgstr ""
+

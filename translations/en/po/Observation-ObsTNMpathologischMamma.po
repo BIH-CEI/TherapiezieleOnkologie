@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Stage group.pathology Cancer"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "ypT0 ypN0 – pathologische Komplettremission (pCR)"
+msgstr ""
+

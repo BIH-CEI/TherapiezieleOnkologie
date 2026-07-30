@@ -1,0 +1,115 @@
+{
+  "id" : "CodeSystem-onko-therapy-goal-type",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "CodeSystem.name",
+      "context" : "CodeSystem.name",
+      "source" : "OnkoTherapyGoalType",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.title",
+      "context" : "CodeSystem.title",
+      "source" : "Onkologische Therapieziel-Art",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.publisher",
+      "context" : "CodeSystem.publisher",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : null
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.description",
+      "context" : "CodeSystem.description",
+      "source" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Germany",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "Heilung",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Kuratives Ziel — vollständige Remission angestrebt.",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "Lebensverlängerung",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "Symptomkontrolle / Palliation",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Linderung von Symptomen und Krankheitslast.",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "Lebensqualität",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Erhalt oder Verbesserung von Funktion und Lebensqualität.",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "Funktionserhalt",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Erhalt körperlicher oder kognitiver Funktion.",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "Studienteilnahme",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Teilnahme an einer klinischen Studie als explizites Ziel.",
+      "target" : null
+    }]
+  }]
+}

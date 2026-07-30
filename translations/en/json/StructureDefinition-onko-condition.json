@@ -1,0 +1,49 @@
+{
+  "id" : "StructureDefinition-onko-condition",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "StructureDefinition.name",
+      "context" : "A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
+      "source" : "OnkoCondition",
+      "target" : "OnkoCondition"
+    },
+    {
+      "id" : "StructureDefinition.title",
+      "context" : "A short, descriptive, user-friendly title for the structure definition.",
+      "source" : "Onkologische Diagnose (Condition)",
+      "target" : "Oncological diagnosis condition"
+    },
+    {
+      "id" : "StructureDefinition.publisher",
+      "context" : "The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : "Berlin Institute of Health at Charité (BIH)"
+    },
+    {
+      "id" : "StructureDefinition.contact.name",
+      "context" : "The name of an individual to contact.",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : "Berlin Institute of Health at Charité (BIH)"
+    },
+    {
+      "id" : "StructureDefinition.mapping.MII-FHIR-to-MVGenomSeq/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "Onkologie LogicalModel MII Onkologie Mapping",
+      "target" : "Onkologie LogicalModel MII Onkologie Mapping"
+    },
+    {
+      "id" : "StructureDefinition.mapping.oBDS/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "Mapping FHIR zu oBDS",
+      "target" : "Mapping FHIR zu oBDS"
+    },
+    {
+      "id" : "StructureDefinition.mapping.LogicalModel/name",
+      "context" : "A name for the specification that is being mapped to.",
+      "source" : "FHIR-Profil zu LogicalModel Mapping",
+      "target" : "FHIR-Profil zu LogicalModel Mapping"
+    }]
+  }]
+}

@@ -1,0 +1,31 @@
+{
+  "id" : "Observation-ObsGradingMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Histologic grade [Score] in Breast cancer specimen by Nottingham",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "G3: Poorly differentiated",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "schlecht differenziert",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "G3 – schlecht differenziert (Elston-Ellis)",
+      "target" : null
+    }]
+  }]
+}

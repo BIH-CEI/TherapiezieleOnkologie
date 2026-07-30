@@ -1,0 +1,19 @@
+{
+  "id" : "MedicationRequest-MedicationRequestPembroAdjuvantMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tumor board Consult note",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), ambulant, ~9 Zyklen q3w",
+      "target" : null
+    }]
+  }]
+}

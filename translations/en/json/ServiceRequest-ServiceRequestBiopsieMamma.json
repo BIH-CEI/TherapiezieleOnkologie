@@ -1,0 +1,13 @@
+{
+  "id" : "ServiceRequest-ServiceRequestBiopsieMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Core needle biopsy of breast (procedure)",
+      "target" : null
+    }]
+  }]
+}

@@ -1,0 +1,13 @@
+{
+  "id" : "ServiceRequest-ServiceRequestGBRCAMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal",
+      "target" : null
+    }]
+  }]
+}

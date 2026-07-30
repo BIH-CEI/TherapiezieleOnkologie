@@ -1,0 +1,26 @@
+
+# Coding.display
+#: Coding.display
+msgid "HER2 [Interpretation] in Tissue"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Negative"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "negativ"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "HER2-negativ"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich."
+msgstr ""
+

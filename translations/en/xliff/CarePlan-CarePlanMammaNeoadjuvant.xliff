@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CarePlan-CarePlanMammaNeoadjuvant" original="Resource CarePlan-CarePlanMammaNeoadjuvant" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CarePlan-CarePlanMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer care plan</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

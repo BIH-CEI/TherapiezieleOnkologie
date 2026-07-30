@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "Cancer disease progression"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Not detected"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Pathologische Komplettremission (pCR, ypT0 ypN0) nach neoadjuvanter Systemtherapie."
+msgstr ""
+

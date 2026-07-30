@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="StructureDefinition-onko-condition" original="Resource StructureDefinition-onko-condition" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-onko-condition" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>OnkoCondition</source>
+        <target>OnkoCondition</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-condition" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>Onkologische Diagnose (Condition)</source>
+        <target>Oncological diagnosis condition</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-condition" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target>Berlin Institute of Health at Charité (BIH)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-condition" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target>Berlin Institute of Health at Charité (BIH)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-condition" resname="StructureDefinition.mapping.MII-FHIR-to-MVGenomSeq/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Onkologie LogicalModel MII Onkologie Mapping</source>
+        <target>Onkologie LogicalModel MII Onkologie Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-condition" resname="StructureDefinition.mapping.oBDS/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Mapping FHIR zu oBDS</source>
+        <target>Mapping FHIR zu oBDS</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-condition" resname="StructureDefinition.mapping.LogicalModel/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FHIR-Profil zu LogicalModel Mapping</source>
+        <target>FHIR-Profil zu LogicalModel Mapping</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

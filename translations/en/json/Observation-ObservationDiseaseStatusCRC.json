@@ -1,0 +1,19 @@
+{
+  "id" : "Observation-ObservationDiseaseStatusCRC",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cancer disease progression",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Not detected",
+      "target" : null
+    }]
+  }]
+}

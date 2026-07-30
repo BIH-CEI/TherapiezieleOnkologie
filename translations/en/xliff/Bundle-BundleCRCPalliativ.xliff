@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Bundle-BundleCRCPalliativ" original="Resource Bundle-BundleCRCPalliativ" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="HumanName.family">
+             <notes>
+               <note id="n1">HumanName.family</note>
+             </notes>
+        <source>Musterfrau</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="HumanName.given">
+             <notes>
+               <note id="n1">HumanName.given</note>
+             </notes>
+        <source>Erika</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="HumanName.family">
+             <notes>
+               <note id="n1">HumanName.family</note>
+             </notes>
+        <source>Musterarzt</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="HumanName.given">
+             <notes>
+               <note id="n1">HumanName.given</note>
+             </notes>
+        <source>Petra</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Organization.name">
+             <notes>
+               <note id="n1">Organization.name</note>
+             </notes>
+        <source>Onkologisches Zentrum Musterklinik</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CareTeam.name">
+             <notes>
+               <note id="n1">CareTeam.name</note>
+             </notes>
+        <source>Interdisziplinäres Tumorboard Kolorektales Karzinom</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Bösartige Neubildung: Kolon, nicht näher bezeichnet</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Tumordiagnostik</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Colonoscopy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Koloskopie mit Biopsieentnahme</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Pathology Synoptic report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Histopathologie Kolonbiopsie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="DiagnosticReport.conclusion">
+             <notes>
+               <note id="n1">DiagnosticReport.conclusion</note>
+             </notes>
+        <source>Adenokarzinom des Kolons (C18.9), ICD-O-3 M8140/3.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Palliativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Induktionstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Ambulatory chemotherapy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Chief complaint</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>High Priority</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Replacement</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Successor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>In Progress</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lebensverlängerung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Symptomkontrolle / Palliation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Verlängerung des Gesamtüberlebens und Kontrolle tumorbedingter Symptome unter palliativer Systemtherapie.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Stage group.clinical Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Kurativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Heilung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Kurative Resektion des Primärtumors mit kurativer Absicht.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Erhaltungstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Predecessor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lebensqualität</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Erhalt des Therapieansprechens bei reduzierter Toxizität (Erhaltungstherapie) nach erfolgreicher Induktion.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tumor board Consult note</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>FOLFOX + Bevacizumab</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Implantable venous access port injection</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Implantation eines Portkatheters für die systemische Therapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer disease progression</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Not detected</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer care plan</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

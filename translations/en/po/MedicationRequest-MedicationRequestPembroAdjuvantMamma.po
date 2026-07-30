@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Tumor board Consult note"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), ambulant, ~9 Zyklen q3w"
+msgstr ""
+

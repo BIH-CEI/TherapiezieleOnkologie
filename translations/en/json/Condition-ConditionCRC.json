@@ -1,0 +1,19 @@
+{
+  "id" : "Condition-ConditionCRC",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen",
+      "target" : null
+    }]
+  }]
+}

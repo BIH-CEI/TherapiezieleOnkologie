@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Tumor board Consult note"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"
+msgstr ""
+

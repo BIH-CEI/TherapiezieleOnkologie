@@ -1,0 +1,19 @@
+{
+  "id" : "CarePlan-CarePlanCRCPalliativ",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Palliativ",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Cancer care plan",
+      "target" : null
+    }]
+  }]
+}

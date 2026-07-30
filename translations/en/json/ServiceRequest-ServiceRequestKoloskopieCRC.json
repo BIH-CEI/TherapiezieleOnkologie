@@ -1,0 +1,19 @@
+{
+  "id" : "ServiceRequest-ServiceRequestKoloskopieCRC",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Colonoscopy",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Koloskopie mit Biopsieentnahme",
+      "target" : null
+    }]
+  }]
+}

@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Invasives Mammakarzinom links, oberer äußerer Quadrant (NST), triple-negativ"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Mamma links, oberer äußerer Quadrant"
+msgstr ""
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CarePlan-CarePlanCRCPalliativ" original="Resource CarePlan-CarePlanCRCPalliativ" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CarePlan-CarePlanCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Palliativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CarePlan-CarePlanCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer care plan</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

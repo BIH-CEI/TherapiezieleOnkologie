@@ -1,0 +1,6 @@
+
+# CareTeam.name
+#: CareTeam.name
+msgid "Interdisziplinäres Tumorboard Kolorektales Karzinom"
+msgstr ""
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Observation-ObsTNMpathologischMamma" original="Resource Observation-ObsTNMpathologischMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Observation-ObsTNMpathologischMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Stage group.pathology Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsTNMpathologischMamma" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>ypT0 ypN0 – pathologische Komplettremission (pCR)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

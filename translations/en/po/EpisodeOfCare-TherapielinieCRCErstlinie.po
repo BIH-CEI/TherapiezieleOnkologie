@@ -1,0 +1,21 @@
+
+# Coding.display
+#: Coding.display
+msgid "Palliativ"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Induktionstherapie"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Ambulatory chemotherapy"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Chief complaint"
+msgstr ""
+

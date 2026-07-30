@@ -1,0 +1,25 @@
+{
+  "id" : "Condition-ConditionMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Invasives Mammakarzinom links, oberer äußerer Quadrant (NST), triple-negativ",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Mamma links, oberer äußerer Quadrant",
+      "target" : null
+    }]
+  }]
+}

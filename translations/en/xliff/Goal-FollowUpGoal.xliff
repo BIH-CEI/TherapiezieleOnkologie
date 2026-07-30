@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Goal-FollowUpGoal" original="Resource Goal-FollowUpGoal" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Goal-FollowUpGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>High Priority</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Predecessor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>In Progress</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lebensqualität</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer outcome status</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Kein Hinweis auf Lokalrezidiv oder Fernmetastasen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>MG Breast Screening</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-FollowUpGoal" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Stabile bis verbesserte Lebensqualität im Verlauf</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
