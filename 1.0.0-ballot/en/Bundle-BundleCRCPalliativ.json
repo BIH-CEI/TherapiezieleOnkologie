@@ -1,0 +1,820 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "BundleCRCPalliativ",
+  "language" : "en",
+  "type" : "transaction",
+  "entry" : [{
+    "fullUrl" : "http://example.org/fhir/Patient/PatientinCRC",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "PatientinCRC",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : [{
+        "family" : "Musterfrau",
+        "given" : ["Erika"]
+      }],
+      "gender" : "female",
+      "birthDate" : "1961-09-12"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Practitioner/OnkologinCRC",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "OnkologinCRC",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : [{
+        "family" : "Musterarzt",
+        "given" : ["Petra"]
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Practitioner"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Organization/TumorzentrumCRC",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "TumorzentrumCRC",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : "Onkologisches Zentrum Musterklinik"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Organization"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/CareTeam/TumorboardCRC",
+    "resource" : {
+      "resourceType" : "CareTeam",
+      "id" : "TumorboardCRC",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "active",
+      "name" : "Interdisziplinäres Tumorboard Kolorektales Karzinom",
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "participant" : [{
+        "member" : {
+          "reference" : "Practitioner/OnkologinCRC"
+        }
+      }],
+      "managingOrganization" : [{
+        "reference" : "Organization/TumorzentrumCRC"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CareTeam"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Condition/ConditionCRC",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "ConditionCRC",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+        "valueDateTime" : "2026-01-20"
+      }],
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2026",
+          "code" : "C18.9",
+          "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+        }],
+        "text" : "Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "onsetDateTime" : "2026-01-20",
+      "recordedDate" : "2026-01-20"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/CarePlan/DiagnostikCarePlanCRC",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "DiagnostikCarePlanCRC",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+        "valueReference" : {
+          "reference" : "Organization/TumorzentrumCRC"
+        }
+      }],
+      "status" : "completed",
+      "intent" : "plan",
+      "category" : [{
+        "text" : "Tumordiagnostik"
+      }],
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "period" : {
+        "start" : "2026-01-05",
+        "end" : "2026-01-20"
+      },
+      "careTeam" : [{
+        "reference" : "CareTeam/TumorboardCRC"
+      }],
+      "addresses" : [{
+        "reference" : "Condition/ConditionCRC"
+      }],
+      "activity" : [{
+        "outcomeReference" : [{
+          "reference" : "DiagnosticReport/DiagnosticReportHistologieCRC"
+        }],
+        "reference" : {
+          "reference" : "ServiceRequest/ServiceRequestKoloskopieCRC"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/ServiceRequest/ServiceRequestKoloskopieCRC",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ServiceRequestKoloskopieCRC",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "73761001",
+          "display" : "Colonoscopy"
+        }],
+        "text" : "Koloskopie mit Biopsieentnahme"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/DiagnosticReport/DiagnosticReportHistologieCRC",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "DiagnosticReportHistologieCRC",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "60568-3",
+          "display" : "Pathology Synoptic report"
+        }],
+        "text" : "Histopathologie Kolonbiopsie"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "effectiveDateTime" : "2026-01-18",
+      "conclusion" : "Adenokarzinom des Kolons (C18.9), ICD-O-3 M8140/3."
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "DiagnosticReport"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/EpisodeOfCare/TherapielinieCRCErstlinie",
+    "resource" : {
+      "resourceType" : "EpisodeOfCare",
+      "id" : "TherapielinieCRCErstlinie",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "hauptintention",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "363676003",
+              "display" : "Palliativ"
+            }]
+          }
+        },
+        {
+          "url" : "phase",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "450827009",
+              "display" : "Induktionstherapie"
+            }]
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      }],
+      "status" : "active",
+      "type" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "315601005",
+          "display" : "Ambulatory chemotherapy"
+        }]
+      }],
+      "diagnosis" : [{
+        "condition" : {
+          "reference" : "Condition/ConditionCRC"
+        },
+        "role" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "code" : "CC",
+            "display" : "Chief complaint"
+          }]
+        },
+        "rank" : 1
+      }],
+      "patient" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/TumorzentrumCRC"
+      },
+      "period" : {
+        "start" : "2026-02-10"
+      },
+      "careManager" : {
+        "reference" : "Practitioner/OnkologinCRC"
+      },
+      "team" : [{
+        "reference" : "CareTeam/TumorboardCRC"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "EpisodeOfCare"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Goal/TherapiezielCRCLebensverlaengerung",
+    "resource" : {
+      "resourceType" : "Goal",
+      "id" : "TherapiezielCRCLebensverlaengerung",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "hauptintention",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "363676003",
+              "display" : "Palliativ"
+            }]
+          }
+        },
+        {
+          "url" : "phase",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "450827009",
+              "display" : "Induktionstherapie"
+            }]
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "extension" : [{
+          "url" : "individual",
+          "valueReference" : {
+            "reference" : "Patient/PatientinCRC"
+          }
+        },
+        {
+          "url" : "status",
+          "valueCode" : "agree"
+        },
+        {
+          "url" : "priority",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+              "code" : "high-priority",
+              "display" : "High Priority"
+            }]
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-acceptance"
+      },
+      {
+        "extension" : [{
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/goal-relationship-type",
+              "code" : "replacement",
+              "display" : "Replacement"
+            }]
+          }
+        },
+        {
+          "url" : "target",
+          "valueReference" : {
+            "reference" : "Goal/TherapiezielCRCKurativAbgelehnt"
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+      },
+      {
+        "extension" : [{
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/goal-relationship-type",
+              "code" : "successor",
+              "display" : "Successor"
+            }]
+          }
+        },
+        {
+          "url" : "target",
+          "valueReference" : {
+            "reference" : "Goal/TherapiezielCRCErhaltung"
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+      }],
+      "lifecycleStatus" : "active",
+      "achievementStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-achievement",
+          "code" : "in-progress",
+          "display" : "In Progress"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensverlaengerung",
+          "display" : "Lebensverlängerung"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "symptomkontrolle",
+          "display" : "Symptomkontrolle / Palliation"
+        }]
+      }],
+      "priority" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+          "code" : "high-priority",
+          "display" : "High Priority"
+        }]
+      },
+      "description" : {
+        "text" : "Verlängerung des Gesamtüberlebens und Kontrolle tumorbedingter Symptome unter palliativer Systemtherapie."
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "startDate" : "2026-02-10",
+      "target" : [{
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21908-9",
+            "display" : "Stage group.clinical Cancer"
+          }]
+        },
+        "dueDate" : "2026-08-10"
+      }],
+      "expressedBy" : {
+        "reference" : "Practitioner/OnkologinCRC"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionCRC"
+      }],
+      "outcomeReference" : [{
+        "reference" : "Observation/ObservationDiseaseStatusCRC"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Goal"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Goal/TherapiezielCRCKurativAbgelehnt",
+    "resource" : {
+      "resourceType" : "Goal",
+      "id" : "TherapiezielCRCKurativAbgelehnt",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "hauptintention",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "373808002",
+              "display" : "Kurativ"
+            }]
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-reasonRejected",
+        "valueCodeableConcept" : {
+          "text" : "Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar."
+        }
+      }],
+      "lifecycleStatus" : "rejected",
+      "category" : [{
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "heilung",
+          "display" : "Heilung"
+        }]
+      }],
+      "description" : {
+        "text" : "Kurative Resektion des Primärtumors mit kurativer Absicht."
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "expressedBy" : {
+        "reference" : "Practitioner/OnkologinCRC"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionCRC"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Goal"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Goal/TherapiezielCRCErhaltung",
+    "resource" : {
+      "resourceType" : "Goal",
+      "id" : "TherapiezielCRCErhaltung",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "hauptintention",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "363676003",
+              "display" : "Palliativ"
+            }]
+          }
+        },
+        {
+          "url" : "phase",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "1345242003",
+              "display" : "Erhaltungstherapie"
+            }]
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "extension" : [{
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/goal-relationship-type",
+              "code" : "predecessor",
+              "display" : "Predecessor"
+            }]
+          }
+        },
+        {
+          "url" : "target",
+          "valueReference" : {
+            "reference" : "Goal/TherapiezielCRCLebensverlaengerung"
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+      }],
+      "lifecycleStatus" : "proposed",
+      "category" : [{
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensverlaengerung",
+          "display" : "Lebensverlängerung"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensqualitaet",
+          "display" : "Lebensqualität"
+        }]
+      }],
+      "description" : {
+        "text" : "Erhalt des Therapieansprechens bei reduzierter Toxizität (Erhaltungstherapie) nach erfolgreicher Induktion."
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "expressedBy" : {
+        "reference" : "Practitioner/OnkologinCRC"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionCRC"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Goal"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationRequest/MedicationRequestFOLFOX",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "MedicationRequestFOLFOX",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "active",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85232-7",
+          "display" : "Tumor board Consult note"
+        }]
+      }],
+      "medicationCodeableConcept" : {
+        "text" : "FOLFOX + Bevacizumab"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "requester" : {
+        "reference" : "Practitioner/OnkologinCRC"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/ServiceRequest/ServiceRequestPortCRC",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ServiceRequestPortCRC",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "active",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85232-7",
+          "display" : "Tumor board Consult note"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1255694000",
+          "display" : "Implantable venous access port injection"
+        }],
+        "text" : "Implantation eines Portkatheters für die systemische Therapie"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "requester" : {
+        "reference" : "Practitioner/OnkologinCRC"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObservationDiseaseStatusCRC",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObservationDiseaseStatusCRC",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "97509-4",
+          "display" : "Cancer disease progression"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "effectiveDateTime" : "2026-05-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "260415000",
+          "display" : "Not detected"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/CarePlan/CarePlanCRCPalliativ",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "CarePlanCRCPalliativ",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "hauptintention",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "363676003",
+              "display" : "Palliativ"
+            }]
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+        "valueReference" : {
+          "reference" : "Organization/TumorzentrumCRC"
+        }
+      }],
+      "status" : "active",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "736252007",
+          "display" : "Cancer care plan"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/PatientinCRC"
+      },
+      "period" : {
+        "start" : "2026-02-10"
+      },
+      "author" : {
+        "reference" : "Practitioner/OnkologinCRC"
+      },
+      "careTeam" : [{
+        "reference" : "CareTeam/TumorboardCRC"
+      }],
+      "addresses" : [{
+        "reference" : "Condition/ConditionCRC"
+      }],
+      "supportingInfo" : [{
+        "reference" : "CarePlan/DiagnostikCarePlanCRC"
+      }],
+      "goal" : [{
+        "reference" : "Goal/TherapiezielCRCLebensverlaengerung"
+      }],
+      "activity" : [{
+        "outcomeReference" : [{
+          "reference" : "Observation/ObservationDiseaseStatusCRC"
+        }],
+        "reference" : {
+          "reference" : "MedicationRequest/MedicationRequestFOLFOX"
+        }
+      },
+      {
+        "reference" : {
+          "reference" : "ServiceRequest/ServiceRequestPortCRC"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  }]
+}

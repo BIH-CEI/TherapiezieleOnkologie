@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="TumorzentrumMamma"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Organization TumorzentrumMamma</b></p><a name="TumorzentrumMamma"> </a><a name="hcTumorzentrumMamma"> </a><p><b>name</b>: Zertifiziertes Brustzentrum Musterklinik</p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Organization TumorzentrumMamma</b></p><a name="en-TumorzentrumMamma"> </a><a name="en-hcTumorzentrumMamma"> </a><p><b>name</b>: Zertifiziertes Brustzentrum Musterklinik</p></div></div>
+  </text>
+  <name value="Zertifiziertes Brustzentrum Musterklinik"/>
+</Organization>

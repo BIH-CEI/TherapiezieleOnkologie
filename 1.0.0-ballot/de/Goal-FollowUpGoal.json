@@ -1,0 +1,153 @@
+{
+  "resourceType" : "Goal",
+  "id" : "FollowUpGoal",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Goal FollowUpGoal</b></p><a name=\"FollowUpGoal\"> </a><a name=\"hcFollowUpGoal\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-therapy-goal.html\">Onkologisches Therapieziel</a></p></div><blockquote><p><b>Goal acceptance</b></p><ul><li>individual: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></li><li>status: agree</li><li>priority: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}\">High Priority</span></li></ul></blockquote><blockquote><p><b>Goal: Related Goal</b></p><ul><li>type: <span title=\"Codes:{http://hl7.org/fhir/goal-relationship-type predecessor}\">Predecessor</span></li><li>target: <a href=\"Goal-DiagnosticGoal.html\">Goal: extension = ; lifecycleStatus = active; achievementStatus = In Progress; category = Diagnostic intent; priority = High Priority; description = ; start[x] = 2025-09-12</a></li></ul></blockquote><blockquote><p><b>Goal: Related Goal</b></p><ul><li>type: <span title=\"Codes:{http://hl7.org/fhir/goal-relationship-type predecessor}\">Predecessor</span></li><li>target: <a href=\"Goal-TherapiezielMammaHeilung.html\">Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = Achieved; category = Heilung,Funktionserhalt; priority = High Priority; description = ; start[x] = 2025-09-22</a></li></ul></blockquote><p><b>lifecycleStatus</b>: Planned</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type lebensqualitaet}\">Lebensqualität</span></p><p><b>priority</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}\">High Priority</span></p><p><b>description</b>: <span title=\"Codes:\">Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>start</b>: 2026-08-15</p><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21976-6}\">Cancer outcome status</span></p><p><b>detail</b>: <span title=\"Codes:\">Kein Hinweis auf Lokalrezidiv oder Fernmetastasen</span></p><p><b>due</b>: 2026-11-15</p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 24606-6}\">MG Breast Screening</span></p><p><b>detail</b>: <span title=\"Codes:\">Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis</span></p><p><b>due</b>: 2027-04-15</p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:\">Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff</span></p><p><b>detail</b>: <span title=\"Codes:\">Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:\">Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul</span></p><p><b>detail</b>: <span title=\"Codes:\">Stabile bis verbesserte Lebensqualität im Verlauf</span></p></blockquote><p><b>expressedBy</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsDiseaseStatusMamma.html\">Observation Cancer disease progression</a></p></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "individual",
+      "valueReference" : {
+        "reference" : "Patient/PatientinMamma"
+      }
+    },
+    {
+      "url" : "status",
+      "valueCode" : "agree"
+    },
+    {
+      "url" : "priority",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+          "code" : "high-priority",
+          "display" : "High Priority"
+        }]
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-acceptance"
+  },
+  {
+    "extension" : [{
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/goal-relationship-type",
+          "code" : "predecessor",
+          "display" : "Predecessor"
+        }]
+      }
+    },
+    {
+      "url" : "target",
+      "valueReference" : {
+        "reference" : "Goal/DiagnosticGoal"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+  },
+  {
+    "extension" : [{
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/goal-relationship-type",
+          "code" : "predecessor",
+          "display" : "Predecessor"
+        }]
+      }
+    },
+    {
+      "url" : "target",
+      "valueReference" : {
+        "reference" : "Goal/TherapiezielMammaHeilung"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+  }],
+  "lifecycleStatus" : "planned",
+  "achievementStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/goal-achievement",
+      "code" : "in-progress",
+      "display" : "In Progress"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+      "code" : "lebensqualitaet",
+      "display" : "Lebensqualität"
+    }]
+  }],
+  "priority" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+      "code" : "high-priority",
+      "display" : "High Priority"
+    }]
+  },
+  "description" : {
+    "text" : "Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "startDate" : "2026-08-15",
+  "target" : [{
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "21976-6",
+        "display" : "Cancer outcome status"
+      }]
+    },
+    "detailCodeableConcept" : {
+      "text" : "Kein Hinweis auf Lokalrezidiv oder Fernmetastasen"
+    },
+    "dueDate" : "2026-11-15"
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "24606-6",
+        "display" : "MG Breast Screening"
+      }]
+    },
+    "detailCodeableConcept" : {
+      "text" : "Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis"
+    },
+    "dueDate" : "2027-04-15"
+  },
+  {
+    "measure" : {
+      "text" : "Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff"
+    },
+    "detailCodeableConcept" : {
+      "text" : "Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit"
+    }
+  },
+  {
+    "measure" : {
+      "text" : "Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul"
+    },
+    "detailCodeableConcept" : {
+      "text" : "Stabile bis verbesserte Lebensqualität im Verlauf"
+    }
+  }],
+  "expressedBy" : {
+    "reference" : "Practitioner/OnkologinMamma"
+  },
+  "addresses" : [{
+    "reference" : "Condition/ConditionMamma"
+  }],
+  "outcomeReference" : [{
+    "reference" : "Observation/ObsDiseaseStatusMamma"
+  }]
+}

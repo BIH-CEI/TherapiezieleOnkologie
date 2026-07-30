@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ObsTNMpathologischMamma"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsTNMpathologischMamma</b></p><a name="ObsTNMpathologischMamma"> </a><a name="hcObsTNMpathologischMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 21902-2}">Stage group.pathology Cancer</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2026-04-07</p><p><b>value</b>: <span title="Codes:">ypT0 ypN0 – pathologische Komplettremission (pCR)</span></p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsTNMpathologischMamma</b></p><a name="en-ObsTNMpathologischMamma"> </a><a name="en-hcObsTNMpathologischMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 21902-2}">Stage group.pathology Cancer</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2026-04-07</p><p><b>value</b>: <span title="Codes:">ypT0 ypN0 – pathologische Komplettremission (pCR)</span></p></div></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="21902-2"/>
+      <display value="Stage group.pathology Cancer"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+  <effectiveDateTime value="2026-04-07"/>
+  <valueCodeableConcept>
+    <text value="ypT0 ypN0 – pathologische Komplettremission (pCR)"/>
+  </valueCodeableConcept>
+</Observation>

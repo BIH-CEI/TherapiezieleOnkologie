@@ -1,0 +1,21 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "ProcedureOperationMamma",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure ProcedureOperationMamma</b></p><a name=\"ProcedureOperationMamma\"> </a><a name=\"hcProcedureOperationMamma\"> </a><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 392021009}\">Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>performed</b>: 2026-04-02</p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure ProcedureOperationMamma</b></p><a name=\"en-ProcedureOperationMamma\"> </a><a name=\"en-hcProcedureOperationMamma\"> </a><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 392021009}\">Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>performed</b>: 2026-04-02</p></div></div>"
+  },
+  "status" : "completed",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "392021009",
+      "display" : "Lumpectomy of breast (procedure)"
+    }],
+    "text" : "Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "performedDateTime" : "2026-04-02"
+}

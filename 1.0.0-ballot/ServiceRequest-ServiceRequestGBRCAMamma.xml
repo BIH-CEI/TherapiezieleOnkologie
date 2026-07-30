@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ServiceRequestGBRCAMamma"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest ServiceRequestGBRCAMamma</b></p><a name="ServiceRequestGBRCAMamma"> </a><a name="hcServiceRequestGBRCAMamma"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://loinc.org 21639-0}">BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>authoredOn</b>: 2025-09-18</p><p><b>requester</b>: <a href="Practitioner-OnkologinMamma.html">Practitioner Katrin Musterarzt </a></p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest ServiceRequestGBRCAMamma</b></p><a name="en-ServiceRequestGBRCAMamma"> </a><a name="en-hcServiceRequestGBRCAMamma"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://loinc.org 21639-0}">BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>authoredOn</b>: 2025-09-18</p><p><b>requester</b>: <a href="Practitioner-OnkologinMamma.html">Practitioner Katrin Musterarzt </a></p></div></div>
+  </text>
+  <status value="completed"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="21639-0"/>
+      <display value="BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+  <authoredOn value="2025-09-18"/>
+  <requester>
+    <reference value="Practitioner/OnkologinMamma"/>
+  </requester>
+</ServiceRequest>

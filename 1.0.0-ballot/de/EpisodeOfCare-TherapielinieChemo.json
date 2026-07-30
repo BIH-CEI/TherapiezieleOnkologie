@@ -1,0 +1,75 @@
+{
+  "resourceType" : "EpisodeOfCare",
+  "id" : "TherapielinieChemo",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare TherapielinieChemo</b></p><a name=\"TherapielinieChemo\"> </a><a name=\"hcTherapielinieChemo\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-therapy-line.html\">Onkologische Therapielinie</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title=\"Codes:{http://snomed.info/sct 373847000}\">Neoadjuvant</span></li><li>phase: <span title=\"Codes:{http://snomed.info/sct 373808002}\">Kurativ</span></li></ul></blockquote><p><b>Therapielinie – Medikationsverordnung (Extension)</b>: <a href=\"MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html\">MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = </a></p><p><b>status</b>: Finished</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 385786002}\">Chemotherapy care</span></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td><td><b>Role</b></td><td><b>Rank</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}\">Chief complaint</span></td><td>1</td></tr></table><p><b>patient</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>managingOrganization</b>: <a href=\"Organization-Tumorboard.html\">Organization Zertifiziertes Brustzentrum Musterklinik</a></p><p><b>period</b>: 2025-10-01 --&gt; 2026-03-15</p><p><b>careManager</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "hauptintention",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "373847000",
+          "display" : "Neoadjuvant"
+        }]
+      }
+    },
+    {
+      "url" : "phase",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "373808002",
+          "display" : "Kurativ"
+        }]
+      }
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",
+    "valueReference" : {
+      "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+    }
+  }],
+  "status" : "finished",
+  "type" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "385786002",
+      "display" : "Chemotherapy care"
+    }]
+  }],
+  "diagnosis" : [{
+    "condition" : {
+      "reference" : "Condition/ConditionMamma"
+    },
+    "role" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+        "code" : "CC",
+        "display" : "Chief complaint"
+      }]
+    },
+    "rank" : 1
+  }],
+  "patient" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "managingOrganization" : {
+    "reference" : "Organization/Tumorboard"
+  },
+  "period" : {
+    "start" : "2025-10-01",
+    "end" : "2026-03-15"
+  },
+  "careManager" : {
+    "reference" : "Practitioner/OnkologinMamma"
+  }
+}

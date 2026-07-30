@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
-    "version" : "0.1.0",
+    "version" : "1.0.0-ballot",
     "status" : "draft",
     "name" : "OnkoTherapyGoalTypeVS",
     "title" : "Onkologische Therapieziel-Art (VS)",
@@ -13,7 +13,7 @@
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",
-    "version" : "0.1.0",
+    "version" : "1.0.0-ballot",
     "status" : "draft",
     "name" : "OnkoTherapyIntentVS",
     "title" : "Onkologische Therapieintention (VS)",
@@ -25,7 +25,7 @@
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-line-type",
-    "version" : "0.1.0",
+    "version" : "1.0.0-ballot",
     "status" : "draft",
     "name" : "OnkoTherapyLineTypeVS",
     "title" : "Onkologische Therapielinie – Art (VS)",
@@ -37,7 +37,7 @@
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase",
-    "version" : "0.1.0",
+    "version" : "1.0.0-ballot",
     "status" : "draft",
     "name" : "OnkoTherapyPhaseVS",
     "title" : "Onkologische Therapiephase / Unter-Intention (VS)",

@@ -1,7 +1,7 @@
 {
-  "version" : "0.1.0",
+  "version" : "1.0.0-ballot",
   "fhirVersion" : ["4.0.1"],
-  "date" : "20260729120029",
+  "date" : "20260730123635",
   "name" : "de.bih-cei.therapieziele-onkologie",
   "jurisdiction" : "urn:iso:std:iso:3166#DE"
 }

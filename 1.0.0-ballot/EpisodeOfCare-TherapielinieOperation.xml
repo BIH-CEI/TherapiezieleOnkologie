@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EpisodeOfCare xmlns="http://hl7.org/fhir">
+  <id value="TherapielinieOperation"/>
+  <meta>
+    <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: EpisodeOfCare TherapielinieOperation</b></p><a name="TherapielinieOperation"> </a><a name="hcTherapielinieOperation"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-onko-therapy-line.html">Onkologische Therapielinie</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title="Codes:{http://snomed.info/sct 373808002}">Kurativ</span></li></ul></blockquote><p><b>status</b>: Finished</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 1345242003}">Erhaltungstherapie</span></p><h3>Diagnoses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Condition</b></td><td><b>Role</b></td><td><b>Rank</b></td></tr><tr><td style="display: none">*</td><td><a href="Condition-ConditionMamma.html">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}">Chief complaint</span></td><td>1</td></tr></table><p><b>patient</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>managingOrganization</b>: <a href="Organization-Tumorboard.html">Organization Zertifiziertes Brustzentrum Musterklinik</a></p><p><b>period</b>: 2026-03-20 --&gt; 2026-04-06</p><p><b>referralRequest</b>: <a href="ServiceRequest-ServiceRequestProcedure.html">ServiceRequest Lumpectomy of breast (procedure)</a></p><p><b>careManager</b>: <a href="Practitioner-OnkologinMamma.html">Practitioner Katrin Musterarzt </a></p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: EpisodeOfCare TherapielinieOperation</b></p><a name="en-TherapielinieOperation"> </a><a name="en-hcTherapielinieOperation"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-onko-therapy-line.html">Onkologische Therapielinie</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title="Codes:{http://snomed.info/sct 373808002}">Kurativ</span></li></ul></blockquote><p><b>status</b>: Finished</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 1345242003}">Erhaltungstherapie</span></p><h3>Diagnoses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Condition</b></td><td><b>Role</b></td><td><b>Rank</b></td></tr><tr><td style="display: none">*</td><td><a href="Condition-ConditionMamma.html">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}">Chief complaint</span></td><td>1</td></tr></table><p><b>patient</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>managingOrganization</b>: <a href="Organization-Tumorboard.html">Organization Zertifiziertes Brustzentrum Musterklinik</a></p><p><b>period</b>: 2026-03-20 --&gt; 2026-04-06</p><p><b>referralRequest</b>: <a href="ServiceRequest-ServiceRequestProcedure.html">ServiceRequest Lumpectomy of breast (procedure)</a></p><p><b>careManager</b>: <a href="Practitioner-OnkologinMamma.html">Practitioner Katrin Musterarzt </a></p></div></div>
+  </text>
+  <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+    <extension url="hauptintention">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="373808002"/>
+          <display value="Kurativ"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <status value="finished"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1345242003"/>
+      <display value="Erhaltungstherapie"/>
+    </coding>
+  </type>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/ConditionMamma"/>
+    </condition>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+        <code value="CC"/>
+        <display value="Chief complaint"/>
+      </coding>
+    </role>
+    <rank value="1"/>
+  </diagnosis>
+  <patient>
+    <reference value="Patient/PatientinMamma"/>
+  </patient>
+  <managingOrganization>
+    <reference value="Organization/Tumorboard"/>
+  </managingOrganization>
+  <period>
+    <start value="2026-03-20"/>
+    <end value="2026-04-06"/>
+  </period>
+  <referralRequest>
+    <reference value="ServiceRequest/ServiceRequestProcedure"/>
+  </referralRequest>
+  <careManager>
+    <reference value="Practitioner/OnkologinMamma"/>
+  </careManager>
+</EpisodeOfCare>
