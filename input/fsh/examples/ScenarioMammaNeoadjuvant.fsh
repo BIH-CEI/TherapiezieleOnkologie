@@ -464,7 +464,6 @@ Usage: #example
 Title: "Therapieziel – Heilung & Brusterhalt (Beispiel)"
 Description: "Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC durch neoadjuvante Systemtherapie und anschließende Operation, bei gleichzeitigem Ziel des Brusterhalts (Funktionserhalt)."
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
-// goal-acceptance: Die Patientin stimmt dem kurativen Ziel mit hoher Priorität zu (MCCGoal)
 * extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
 * extension[acceptance].extension[status].valueCode = #agree
 * extension[acceptance].extension[priority].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
@@ -504,6 +503,61 @@ Description: "Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpe
 * subject = Reference(PatientinMamma)
 
 
+// ---------------------------------------------------------------------
+// Medikationsabgabe
+// ---------------------------------------------------------------------
+
+Instance: MedicationAdministrationPembroChemoNeoadjuvantMamma1
+InstanceOf: MedicationAdministration
+Usage: #example
+Title: "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 1/4 (KEYNOTE-522, Beispiel)"
+Description: "Dokumentierte Gabe (Zyklus 1 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."
+* status = #completed
+* medicationCodeableConcept.text = "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+* subject = Reference(PatientinMamma)
+* request = Reference(MedicationRequestPembroChemoNeoadjuvantMamma)
+* effectiveDateTime = "2025-10-01"
+* note.text = "Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+
+Instance: MedicationAdministrationPembroChemoNeoadjuvantMamma2
+InstanceOf: MedicationAdministration
+Usage: #example
+Title: "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 2/4 (KEYNOTE-522, Beispiel)"
+Description: "Dokumentierte Gabe (Zyklus 2 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."
+* status = #completed
+* medicationCodeableConcept.text = "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+* subject = Reference(PatientinMamma)
+* request = Reference(MedicationRequestPembroChemoNeoadjuvantMamma)
+* effectiveDateTime = "2025-11-01"
+* note.text = "Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+
+Instance: MedicationAdministrationPembroChemoNeoadjuvantMamma3
+InstanceOf: MedicationAdministration
+Usage: #example
+Title: "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 3/4 (KEYNOTE-522, Beispiel)"
+Description: "Dokumentierte Gabe (Zyklus 3 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."
+* status = #completed
+* medicationCodeableConcept.text = "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+* subject = Reference(PatientinMamma)
+* request = Reference(MedicationRequestPembroChemoNeoadjuvantMamma)
+* effectiveDateTime = "2026-02-10"
+* note.text = "Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+
+Instance: MedicationAdministrationPembroChemoNeoadjuvantMamma4
+InstanceOf: MedicationAdministration
+Usage: #example
+Title: "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 4/4 (KEYNOTE-522, Beispiel)"
+Description: "Dokumentierte Gabe (Zyklus 4 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."
+* status = #completed
+* medicationCodeableConcept.text = "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+* subject = Reference(PatientinMamma)
+* request = Reference(MedicationRequestPembroChemoNeoadjuvantMamma)
+* effectiveDateTime = "2026-03-15"
+* note.text = "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+
+
+
+
 
 // ---------------------------------------------------------------------
 // Geplante Systemtherapie vom Tumorboard (neoadjuvant)
@@ -514,7 +568,6 @@ InstanceOf: TumorboardMedicationRequest
 Usage: #example
 Title: "Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"
 Description: "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."
-// hier auch name von KEYNOTE-522 herausfinden, welcher typ usw. 
 * status = #completed
 * intent = #plan
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
@@ -584,7 +637,6 @@ InstanceOf: OnkoCarePlan
 Usage: #example
 Title: "Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)"
 Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives Therapieziel sowie geplante (neoadjuvante Systemtherapie) und durchgeführte Maßnahmen (Operation, Ansprechbeurteilung) zusammenführt."
-//* extension[therapyIntent].valueCodeableConcept = OnkoTherapyIntent#kurativ "Kurativ"
 // custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans (MCC R5-Backport)
 * extension[custodian].valueReference = Reference(TumorzentrumMamma)
 * status = #active
@@ -598,6 +650,10 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives T
 // Geplante Maßnahme: neoadjuvante Systemtherapie
 // Geplante Maßnahme: neoadjuvante Systemtherapie (Tumorboard-Empfehlung)
 * activity[0].reference = Reference(MedicationRequestPembroChemoNeoadjuvantMamma)
+* activity[0].outcomeReference[0] = Reference(MedicationAdministrationPembroChemoNeoadjuvantMamma1)
+* activity[0].outcomeReference[1] = Reference(MedicationAdministrationPembroChemoNeoadjuvantMamma2)
+* activity[0].outcomeReference[2] = Reference(MedicationAdministrationPembroChemoNeoadjuvantMamma3)
+* activity[0].outcomeReference[3] = Reference(MedicationAdministrationPembroChemoNeoadjuvantMamma4)
 // Geplante Maßnahme: OP-Empfehlung des Tumorboards → durchgeführte Operation
 * activity[1].reference = Reference(ServiceRequestProcedure)
 * activity[1].outcomeReference = Reference(ProcedureOperationMamma)

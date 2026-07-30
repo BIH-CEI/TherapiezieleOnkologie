@@ -21,10 +21,11 @@ Schemakonform zu KEYNOTE-522 – und **unabhängig vom pCR-Status** – schließ
 | 18.09.2025 | Anforderung Keimbahn-Testung gBRCA1/2 | [ServiceRequestGBRCAMamma](ServiceRequest-ServiceRequestGBRCAMamma.html) |
 | 22.09.2025 | Interdisziplinäre Tumorkonferenz: kuratives Konzept, OP vom Tumorboard vorgeschlagen, Neoadjuvante Chemo-/Immuntherapie (KEYNOTE-522) von Tumorboard vorgeschlagen; Therapieziel festgelegt | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.html), [TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.html), [FollowUpGoal](Goal-FollowUpGoal.html),[ServiceRequestProcedure](ServiceRequest-ServiceRequestProcedure.html), [MedicationRequestPembroChemoNeoadjuvantMamma](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html) |
 | 25.09.2025 | Keimbahn-Panel gBRCA1/2: unauffällig → Abschluss der Diagnostikphase | [ObsGBRCAMamma](Observation-ObsGBRCAMamma.html) |
-| 01.10.2025 – 15.03.2026 | Therapielinie neoadjuvante und kurative Chemotherapie | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.html) |
+| 01.10.2025 – 15.03.2026 | Therapielinie neoadjuvante und kurative Chemotherapie mit Medikationsabgabe | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.html), [MedicationAdministrationPembroChemoNeoadjuvantMamma1](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.html), [MedicationAdministrationPembroChemoNeoadjuvantMamma2](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.html), [MedicationAdministrationPembroChemoNeoadjuvantMamma3](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.html), [MedicationAdministrationPembroChemoNeoadjuvantMamma4](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.html)|
 | 20.03.2026 - 06.04.2026 | Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie, Therapielinie kurative Operation | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.html), [TherapielinieOperation](EpisodeOfCare-Therapielinieoperation.html)  |
 | 07.04.2026 | Pathologie des OP-Präparats: ypT0 ypN0 → pathologische Komplettremission (pCR); Disease Status | [ObsTNMpathologischMamma](Observation-ObsTNMpathologischMamma.html), [ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.html) |
 | ab 24.04.2026 (laufend) | Nachgelagerte, **ambulante** adjuvante Pembrolizumab-Monotherapie (KEYNOTE-522, ~9 Zyklen q3w); Therapielinie adjuvante Immuntherapie | [TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.html), [MedicationRequestPembroAdjuvantMamma](MedicationRequest-MedicationRequestPembroAdjuvantMamma.html) |
+
 
 ### Pathologisches und molekulares Profil
 
@@ -44,6 +45,11 @@ Das prätherapeutische Profil aus der Stanzbiopsie ist – leitlinienkonform –
 
 > Die Rezeptor-/HER2-Kodierung orientiert sich am **MII KDS-Modul Onkologie** (Mamma-Zusatzmodul, v2026.0.3). Die Marker sind hier als eigenständige `Observation`-Instanzen modelliert und über `subject` mit der Patientin verknüpft.
 
+### Graphische Darstellung des zeitlichen Verlaufs
+
+<img src="Beispiel_Mamma.png" alt="Graphische Darstellung des zeitlichen Verlaufs" style="width:100%;" />
+
+
 ### Informationsmodell
 
 Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Szenario: Der `OnkoCarePlan` ist das zentrale Steuerobjekt, das die adressierte Erkrankung (`addresses`), das übergeordnete Ziel (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity.reference` / `activity.outcomeReference`) zusammenführt. Die **neoadjuvante Therapielinie** dient dabei dem **kurativen Gesamtziel**: Die `OnkoTherapyLine` trägt die Intention `neoadjuvant`, während `OnkoCarePlan` und `OnkoTherapyGoal` die übergeordnete Intention `kurativ` tragen.
@@ -59,6 +65,7 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 | Durchgeführte Maßnahme (Operation) | `Procedure` | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.html) |
 | Tumoransprechen | `Observation` | [ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.html) |
 
+
 ### Verknüpfungen im Beispiel
 
 - **Therapieintention:** `kurativ` (Extension `onko-therapy-intent`) auf CarePlan und Therapieziel; die zugehörige Therapielinie trägt `neoadjuvant`.
@@ -71,3 +78,4 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 
 - **`goal-acceptance`** (MCCGoal): Die Patientin stimmt dem kurativen Ziel mit hoher Priorität zu (`status = agree`).
 - **`custodian`** (MCC CarePlan, R5-Backport): Das [Brustzentrum](Organization-TumorzentrumMamma.html) ist als für Pflege und Aktualisierung des Plans verantwortliche Stelle hinterlegt.
+

@@ -41,6 +41,9 @@ pages:
     title: Anwendungsbeispiel (mCRC palliativ)
   szenario-mamma.md:
     title: Anwendungsbeispiel (Mammakarzinom neoadjuvant)
+  szenario-mamma-abweichende-szenarios.md:
+    title: Abweichende Szenarios
+
   entitaet-diabetes.md:
     title: Weitere Entität – Diabetes mellitus
   entitaet-asthma.md:
@@ -49,6 +52,7 @@ pages:
     title: Weitere Entität – Chronisch-entzündliche Darmerkrankungen
   entitaet-rheuma.md:
     title: Weitere Entität – Rheumatoide Arthritis
+
   analysebericht.md:
     title: Analysebericht (LG-01)
   translationinfo.md:
@@ -76,6 +80,7 @@ menu:
   Anwendungsbeispiele:
     mCRC (palliativ): szenario-crc.html
     Mammakarzinom (neoadjuvant): szenario-mamma.html
+    Abweichende Szenarios: szenario-mamma-abweichende-szenarios.html
   Weitere Entitäten:
     Diabetes mellitus: entitaet-diabetes.html
     Asthma bronchiale: entitaet-asthma.html

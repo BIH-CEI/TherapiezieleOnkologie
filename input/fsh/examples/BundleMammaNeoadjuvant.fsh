@@ -146,6 +146,26 @@ Description: "Postbares Transaction-Bundle mit allen Instanzen des Mamma-Szenari
 * entry[=].request.method = #POST
 * entry[=].request.url = "MedicationRequest"
 
+* entry[+].fullUrl = "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"
+* entry[=].resource = MedicationAdministrationPembroChemoNeoadjuvantMamma1
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationAdministration"
+ 
+* entry[+].fullUrl = "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"
+* entry[=].resource = MedicationAdministrationPembroChemoNeoadjuvantMamma2
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationAdministration"
+ 
+* entry[+].fullUrl = "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"
+* entry[=].resource = MedicationAdministrationPembroChemoNeoadjuvantMamma3
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationAdministration"
+ 
+* entry[+].fullUrl = "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"
+* entry[=].resource = MedicationAdministrationPembroChemoNeoadjuvantMamma4
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationAdministration"
+
 * entry[+].fullUrl = "http://example.org/fhir/Procedure/ProcedureOperationMamma"
 * entry[=].resource = ProcedureOperationMamma
 * entry[=].request.method = #POST
