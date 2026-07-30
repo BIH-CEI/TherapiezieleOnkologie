@@ -1,0 +1,55 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "OnkoTherapyPhaseVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "Onkologische Therapiephase / Unter-Intention (VS)"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur
+Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,
+sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.
+Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung
+ergänzbar)."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Induktionstherapie"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Konsolidierungstherapie"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Intensivierungstherapie"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Erhaltungstherapie"
+msgstr ""
+

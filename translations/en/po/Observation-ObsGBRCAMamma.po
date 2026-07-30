@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Negative"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen."
+msgstr ""
+

@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "MG Breast Screening"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Nachsorge-Mammographie beidseits (jährlich)"
+msgstr ""
+

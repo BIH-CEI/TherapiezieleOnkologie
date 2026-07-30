@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Observation-ObsDiseaseStatusMamma" original="Resource Observation-ObsDiseaseStatusMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Observation-ObsDiseaseStatusMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer disease progression</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsDiseaseStatusMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Not detected</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsDiseaseStatusMamma" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Pathologische Komplettremission (pCR, ypT0 ypN0) nach neoadjuvanter Systemtherapie.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

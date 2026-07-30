@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Goal-TherapiezielCRCLebensverlaengerung" original="Resource Goal-TherapiezielCRCLebensverlaengerung" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Palliativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Induktionstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>High Priority</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Replacement</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Successor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>In Progress</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lebensverlängerung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Symptomkontrolle / Palliation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Verlängerung des Gesamtüberlebens und Kontrolle tumorbedingter Symptome unter palliativer Systemtherapie.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCLebensverlaengerung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Stage group.clinical Cancer</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

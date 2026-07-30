@@ -24,6 +24,10 @@
 // Biopsie; die pathologische Aufarbeitung zeigt eine pathologische
 // Komplettremission (pCR, ypT0 ypN0). Das Ansprechen wird über eine
 // Verlaufs-Observation (Disease Status) auf das Therapieziel bezogen.
+// Im Anschluss an die Operation folgt — schemakonform zu KEYNOTE-522 und
+// unabhängig vom pCR-Status — eine ambulante adjuvante Pembrolizumab-
+// Monotherapie (~9 Zyklen q3w) als nachgelagerte Therapielinie
+// (EpisodeOfCare).
 // =====================================================================
 
 Instance: PatientinMamma
@@ -240,10 +244,14 @@ Usage: #example
 Title: "Stanzbiopsat Mamma links (Beispiel)"
 Description: "Gewebeprobe aus der Stanzbiopsie, an der die histopathologische und molekulare Diagnostik durchgeführt wurde."
 * status = #available
-* type.coding = http://snomed.info/sct#119376003 "Tissue specimen (specimen)"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsySpecimenPart (spezifischer Biopsat-Typ + Entnahmemethode + codierter bodySite)
+* type.coding[0] = http://snomed.info/sct#122737001 "Specimen from breast obtained by core needle biopsy"
+* type.coding[1] = http://snomed.info/sct#119376003 "Tissue specimen (specimen)"
 * type.text = "Stanzbiopsat (Gewebeprobe) Mamma links"
 * subject = Reference(PatientinMamma)
 * collection.collectedDateTime = "2025-09-15"
+* collection.method = http://snomed.info/sct#9911007 "Core needle biopsy"
+* collection.bodySite.coding = http://snomed.info/sct#76365002 "Structure of upper outer quadrant of breast"
 * collection.bodySite.text = "Mamma links, oberer äußerer Quadrant"
 
 // ---------------------------------------------------------------------
@@ -256,10 +264,12 @@ Usage: #example
 Title: "Histologie / Morphologie (ICD-O-3, Beispiel)"
 Description: "Histologischer Befund der Stanzbiopsie: invasives Karzinom ohne speziellen Typ (NST)."
 * status = #final
-* code = http://loinc.org#33731-1 "Histology type in Cancer specimen Narrative"
-* valueCodeableConcept.coding.system = "urn:oid:2.16.840.1.113883.6.43.1"
-* valueCodeableConcept.coding.code = #8500/3
-* valueCodeableConcept.coding.display = "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyHistologicalTypeICDO3 (LOINC 59847-4, Wert als SNOMED-Morphologie)
+* code = http://loinc.org#59847-4 "Histology and Behavior ICD-O-3 Cancer"
+* valueCodeableConcept.coding[0] = http://snomed.info/sct#82711006 "Infiltrating duct carcinoma"
+* valueCodeableConcept.coding[1].system = "urn:oid:2.16.840.1.113883.6.43.1"
+* valueCodeableConcept.coding[1].code = #8500/3
+* valueCodeableConcept.coding[1].display = "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
 * valueCodeableConcept.text = "Invasives Mammakarzinom, NST (ICD-O-3 8500/3)"
 * specimen = Reference(SpecimenBiopsieMamma)
 * subject = Reference(PatientinMamma)
@@ -271,8 +281,10 @@ Usage: #example
 Title: "Grading G3 (Beispiel)"
 Description: "Histopathologisches Grading nach Elston-Ellis: G3 (schlecht differenziert)."
 * status = #final
-* code = http://loinc.org#33732-9 "Histology grade [Identifier] in Cancer specimen"
-* valueCodeableConcept.coding = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading#3 "schlecht differenziert"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyNottinghamGrade (LOINC 44648-4, Wert als SNOMED-Grade)
+* code = http://loinc.org#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+* valueCodeableConcept.coding[0] = http://snomed.info/sct#1155704001 "G3: Poorly differentiated"
+* valueCodeableConcept.coding[1] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading#3 "schlecht differenziert"
 * valueCodeableConcept.text = "G3 – schlecht differenziert (Elston-Ellis)"
 * specimen = Reference(SpecimenBiopsieMamma)
 * subject = Reference(PatientinMamma)
@@ -300,7 +312,9 @@ Usage: #example
 Title: "Östrogenrezeptor-Status – negativ (Beispiel)"
 Description: "Immunhistochemischer Östrogenrezeptor-Status: negativ (<1 % positive Tumorzellkerne)."
 * status = #final
-* code = http://loinc.org#40556-3 "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyERStatus (brustspezifischer LOINC + SNOMED-Methode IHC)
+* code.coding[0] = http://loinc.org#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[1] = http://snomed.info/sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * valueCodeableConcept = http://loinc.org#LA6577-6 "Negative"
 * note.text = "Immunhistochemie: <1 % positive Kerne → ER-negativ."
 * specimen = Reference(SpecimenBiopsieMamma)
@@ -313,7 +327,9 @@ Usage: #example
 Title: "Progesteronrezeptor-Status – negativ (Beispiel)"
 Description: "Immunhistochemischer Progesteronrezeptor-Status: negativ (<1 % positive Tumorzellkerne)."
 * status = #final
-* code = http://loinc.org#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyPRStatus (LOINC + SNOMED-Methode IHC)
+* code.coding[0] = http://loinc.org#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[1] = http://snomed.info/sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * valueCodeableConcept = http://loinc.org#LA6577-6 "Negative"
 * note.text = "Immunhistochemie: <1 % positive Kerne → PR-negativ."
 * specimen = Reference(SpecimenBiopsieMamma)
@@ -326,9 +342,11 @@ Usage: #example
 Title: "HER2/neu-Status – negativ (Beispiel)"
 Description: "HER2/neu-Status: negativ (IHC 1+). Kodierung nach MII Mamma-Zusatzmodul (oBDS + Leitlinie)."
 * status = #final
-* code = http://loinc.org#48676-1 "HER2 Ag [Interpretation] in Tissue"
-* valueCodeableConcept.coding[0] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds#N "negativ"
-* valueCodeableConcept.coding[1] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie#negativ "HER2-negativ"
+// Abgleich BreastCancerSpec: HER2Overall (LOINC 48676-1, Interpretation als LOINC-Answer); MII-Kodierung bleibt erhalten
+* code = http://loinc.org#48676-1 "HER2 [Interpretation] in Tissue"
+* valueCodeableConcept.coding[0] = http://loinc.org#LA6577-6 "Negative"
+* valueCodeableConcept.coding[1] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds#N "negativ"
+* valueCodeableConcept.coding[2] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie#negativ "HER2-negativ"
 * note.text = "Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich."
 * specimen = Reference(SpecimenBiopsieMamma)
 * subject = Reference(PatientinMamma)
@@ -340,6 +358,9 @@ Usage: #example
 Title: "Ki-67 Proliferationsindex (Beispiel)"
 Description: "Proliferationsmarker Ki-67: 70 % – hohe Proliferationsaktivität."
 * status = #final
+// Abgleich BreastCancerSpec: CoreNeedleBiopsyKi67 (LOINC 85330-9 + SNOMED-Methode IHC)
+* code.coding[0] = http://loinc.org#85330-9 "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+* code.coding[1] = http://snomed.info/sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Ki-67 Proliferationsindex (MIB-1)"
 * valueQuantity = 70 '%' "%"
 * specimen = Reference(SpecimenBiopsieMamma)
@@ -405,6 +426,34 @@ Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNO
 * referralRequest = Reference(ServiceRequestProcedure)
 * managingOrganization = Reference(Tumorboard)
 * careManager = Reference(OnkologinMamma)
+
+// ---------------------------------------------------------------------
+// Therapielinie (adjuvante Immuntherapie, LoT 3) — nachgelagert, ambulant
+// Vervollständigt das KEYNOTE-522-Schema: adjuvante Pembrolizumab-
+// Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status),
+// ~9 Zyklen q3w im ambulanten Setting. Zum Zeitpunkt der Darstellung noch
+// laufend (status = active).
+// ---------------------------------------------------------------------
+
+Instance: TherapieliniePembroAdjuvant
+InstanceOf: OnkoTherapyLine
+Usage: #example
+Title: "Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant"
+Description: "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept)."
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373846009 "Adjuvant"
+* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Erhaltungstherapie"
+* extension[medicationRequest].valueReference = Reference(MedicationRequestPembroAdjuvantMamma)
+* status = #active
+* type = http://snomed.info/sct#76334006 "Immunological therapy"
+* type.text = "Ambulante adjuvante Immuntherapie – Pembrolizumab-Monotherapie"
+* patient = Reference(PatientinMamma)
+* period.start = "2026-04-24"
+* diagnosis.condition = Reference(ConditionMamma)
+* diagnosis.rank = 1
+* diagnosis.role = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"
+* managingOrganization = Reference(Tumorboard)
+* careManager = Reference(OnkologinMamma)
+
 // ---------------------------------------------------------------------
 // Therapieziel (kurativ) mit Zielakzeptanz und Verlaufsergebnis
 // ---------------------------------------------------------------------
@@ -526,6 +575,22 @@ Description: "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapi
 * subject = Reference(PatientinMamma)
 
 // ---------------------------------------------------------------------
+// Geplante adjuvante Systemtherapie vom Tumorboard (nach der Operation)
+// Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie.
+// ---------------------------------------------------------------------
+
+Instance: MedicationRequestPembroAdjuvantMamma
+InstanceOf: TumorboardMedicationRequest
+Usage: #example
+Title: "Adjuvante Systemtherapie – Pembrolizumab-Monotherapie (KEYNOTE-522, Beispiel)"
+Description: "Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status), ambulant über ~9 Zyklen (q3w)."
+* status = #active
+* intent = #plan
+* category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
+* medicationCodeableConcept.text = "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), ambulant, ~9 Zyklen q3w"
+* subject = Reference(PatientinMamma)
+
+// ---------------------------------------------------------------------
 // Durchgeführte Operation nach neoadjuvanter Therapie
 // ---------------------------------------------------------------------
 
@@ -592,8 +657,10 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives T
 // Geplante Maßnahme: OP-Empfehlung des Tumorboards → durchgeführte Operation
 * activity[1].reference = Reference(ServiceRequestProcedure)
 * activity[1].outcomeReference = Reference(ProcedureOperationMamma)
+// Geplante Maßnahme: adjuvante Systemtherapie (Pembrolizumab-Monotherapie, ambulant)
+* activity[2].reference = Reference(MedicationRequestPembroAdjuvantMamma)
 // Dokumentiertes Ergebnis: Ansprechbeurteilung
-* activity[2].outcomeReference = Reference(ObsDiseaseStatusMamma)
+* activity[3].outcomeReference = Reference(ObsDiseaseStatusMamma)
 
 
 // ---------------------------------------------------------------------

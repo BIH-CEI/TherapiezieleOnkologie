@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="EpisodeOfCare-TherapielinieOperation" original="Resource EpisodeOfCare-TherapielinieOperation" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="EpisodeOfCare-TherapielinieOperation" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Kurativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="EpisodeOfCare-TherapielinieOperation" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Erhaltungstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="EpisodeOfCare-TherapielinieOperation" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Chief complaint</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

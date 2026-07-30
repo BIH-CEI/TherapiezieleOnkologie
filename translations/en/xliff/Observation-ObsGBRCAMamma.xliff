@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Observation-ObsGBRCAMamma" original="Resource Observation-ObsGBRCAMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Observation-ObsGBRCAMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsGBRCAMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Negative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsGBRCAMamma" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

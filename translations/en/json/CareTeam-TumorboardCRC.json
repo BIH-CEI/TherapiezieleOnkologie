@@ -1,0 +1,13 @@
+{
+  "id" : "CareTeam-TumorboardCRC",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "CareTeam.name",
+      "context" : "CareTeam.name",
+      "source" : "Interdisziplinäres Tumorboard Kolorektales Karzinom",
+      "target" : null
+    }]
+  }]
+}

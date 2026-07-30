@@ -1,0 +1,60 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "OnkoTherapyIntentVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "Onkologische Therapieintention (VS)"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
+
+Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
+Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen
+SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Kurativ"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Palliativ"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Neoadjuvant"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Adjuvant"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Supportiv"
+msgstr ""
+

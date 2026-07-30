@@ -18,6 +18,7 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -84,6 +85,12 @@ jobs:
             # IG-Publisher-Parameter (copyrightyear, releaselabel, i18n-*, translation-sources, excludettl) wurden erst post-R4 zur GuideParameterCode-Liste hinzugefügt; R4-Strikt-Validierung kennt sie nicht
             ||*GuideParameterCode*|
             ||*guide-parameter-code*|
+            # tx.fhir.org-Infrastrukturfehler (Timeout, verfallene Session-Cache, Sprachcode-Auflösung) — kein Inhaltsfehler, nur Server-Flakiness
+            ||*is not known to this server*|
+            ||*SocketTimeoutException*|
+            ||*timeout*|
+            ||*could not be determined for the code 'en'*|
+            ||*Unable to connect to terminology server*|
 
       - name: Upload validation artifacts
         if: always()
@@ -148,10 +155,12 @@ jobs:
           chmod +x _build.sh
           ./_build.sh build
 
-      - name: Deploy CI Build to GitHub Pages
+      - name: Deploy Build to GitHub Pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Version aus sushi-config lesen (z. B. 1.0.0-ballot) für den versionierten Pfad
+          VERSION=$(grep -E '^version:' sushi-config.yaml | head -1 | awk '{print $2}')
           # Discard build-generated changes to tracked files (e.g. translations/)
           # before switching branches. output/ is untracked and survives.
           git checkout -- . 2>/dev/null || true
@@ -161,13 +170,14 @@ jobs:
             git checkout --orphan gh-pages
             git rm -rf . 2>/dev/null || true
           fi
-          # Keep existing release versions, replace ci-build
+          # ci-build = beweglicher Stand von main; "$VERSION"/ = versionierter Snapshot (z. B. Ballot).
+          # Bestehende andere Release-Versionen bleiben unangetastet.
           rm -rf ci-build
           cp -r output ci-build
-          # Create index redirect if not exists
-          if [ ! -f index.html ]; then
-            echo '<html><head><meta http-equiv="refresh" content="0; url=ci-build/index.html"></head><body>Redirecting to <a href="ci-build/index.html">CI Build</a></body></html>' > index.html
-          fi
-          git add ci-build/ index.html
-          git commit -m "ci-build: $(date -u +%Y-%m-%dT%H:%M:%SZ)" --allow-empty
+          rm -rf "$VERSION"
+          cp -r output "$VERSION"
+          # Wurzel-Redirect auf die versionierte Ballot-Ausgabe (der Link, der geteilt wird)
+          echo "<html><head><meta http-equiv=\"refresh\" content=\"0; url=${VERSION}/index.html\"></head><body>Redirecting to <a href=\"${VERSION}/index.html\">${VERSION}</a></body></html>" > index.html
+          git add ci-build/ "$VERSION"/ index.html
+          git commit -m "publish ${VERSION}: $(date -u +%Y-%m-%dT%H:%M:%SZ)" --allow-empty
           git push origin gh-pages

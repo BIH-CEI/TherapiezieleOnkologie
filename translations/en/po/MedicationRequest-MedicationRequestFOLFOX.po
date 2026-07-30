@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Tumor board Consult note"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "FOLFOX + Bevacizumab"
+msgstr ""
+

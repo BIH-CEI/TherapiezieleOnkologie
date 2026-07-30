@@ -1,0 +1,66 @@
+
+# Coding.display
+#: Coding.display
+msgid "High Priority"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Predecessor"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "In Progress"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Lebensqualität"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Cancer outcome status"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Kein Hinweis auf Lokalrezidiv oder Fernmetastasen"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "MG Breast Screening"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Stabile bis verbesserte Lebensqualität im Verlauf"
+msgstr ""
+

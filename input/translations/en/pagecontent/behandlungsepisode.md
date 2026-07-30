@@ -1,5 +1,3 @@
-### Care episodes (`EpisodeOfCare`)
-
 An oncological course consists of **bounded phases of activity** — diagnostics, lines of
 therapy, surgery, surveillance, aftercare. Each is modelled as a **care episode** based on
 FHIR `EpisodeOfCare`: a bounded period of actively managed care with its own purpose

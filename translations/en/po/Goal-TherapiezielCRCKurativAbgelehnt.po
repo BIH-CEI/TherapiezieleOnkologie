@@ -1,0 +1,21 @@
+
+# Coding.display
+#: Coding.display
+msgid "Kurativ"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Heilung"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Kurative Resektion des Primärtumors mit kurativer Absicht."
+msgstr ""
+

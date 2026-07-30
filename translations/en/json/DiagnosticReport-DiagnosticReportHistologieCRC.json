@@ -1,0 +1,25 @@
+{
+  "id" : "DiagnosticReport-DiagnosticReportHistologieCRC",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Pathology Synoptic report",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Histopathologie Kolonbiopsie",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.conclusion",
+      "context" : "DiagnosticReport.conclusion",
+      "source" : "Adenokarzinom des Kolons (C18.9), ICD-O-3 M8140/3.",
+      "target" : null
+    }]
+  }]
+}

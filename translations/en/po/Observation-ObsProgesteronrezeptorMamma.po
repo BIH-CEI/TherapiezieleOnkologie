@@ -1,0 +1,21 @@
+
+# Coding.display
+#: Coding.display
+msgid "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Observation using immunohistochemistry (observable entity)"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Negative"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Immunhistochemie: <1 % positive Kerne → PR-negativ."
+msgstr ""
+

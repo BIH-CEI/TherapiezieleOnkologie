@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-onko-therapy-phase" original="Resource ValueSet-onko-therapy-phase" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>OnkoTherapyPhaseVS</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>Onkologische Therapiephase / Unter-Intention (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur
+Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,
+sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.
+Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung
+ergänzbar).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Induktionstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Konsolidierungstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Intensivierungstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Erhaltungstherapie</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CareTeam-TumorboardCRC" original="Resource CareTeam-TumorboardCRC" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CareTeam-TumorboardCRC" resname="CareTeam.name">
+             <notes>
+               <note id="n1">CareTeam.name</note>
+             </notes>
+        <source>Interdisziplinäres Tumorboard Kolorektales Karzinom</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

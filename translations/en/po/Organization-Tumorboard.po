@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Organizational team"
+msgstr ""
+
+# Organization.name
+#: Organization.name
+msgid "Zertifiziertes Brustzentrum Musterklinik"
+msgstr ""
+

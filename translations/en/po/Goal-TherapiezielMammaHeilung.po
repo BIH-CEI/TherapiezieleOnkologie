@@ -1,0 +1,46 @@
+
+# Coding.display
+#: Coding.display
+msgid "Kurativ"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "High Priority"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Predecessor"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Successor"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Achieved"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Heilung"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Funktionserhalt"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR)."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Stage group.clinical Cancer"
+msgstr ""
+

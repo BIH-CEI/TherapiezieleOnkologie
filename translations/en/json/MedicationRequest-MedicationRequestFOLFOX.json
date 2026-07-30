@@ -1,0 +1,19 @@
+{
+  "id" : "MedicationRequest-MedicationRequestFOLFOX",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tumor board Consult note",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "FOLFOX + Bevacizumab",
+      "target" : null
+    }]
+  }]
+}

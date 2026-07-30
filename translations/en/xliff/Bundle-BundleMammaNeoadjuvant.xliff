@@ -1,0 +1,645 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Bundle-BundleMammaNeoadjuvant" original="Resource Bundle-BundleMammaNeoadjuvant" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="HumanName.family">
+             <notes>
+               <note id="n1">HumanName.family</note>
+             </notes>
+        <source>Baumann</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="HumanName.given">
+             <notes>
+               <note id="n1">HumanName.given</note>
+             </notes>
+        <source>Sabine</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="HumanName.family">
+             <notes>
+               <note id="n1">HumanName.family</note>
+             </notes>
+        <source>Musterarzt</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="HumanName.given">
+             <notes>
+               <note id="n1">HumanName.given</note>
+             </notes>
+        <source>Katrin</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Organization.name">
+             <notes>
+               <note id="n1">Organization.name</note>
+             </notes>
+        <source>Zertifiziertes Brustzentrum Musterklinik</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Organizational team</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Core needle biopsy of breast (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Histopathology service (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Klinische Ausbreitungsdiagnostik / TNM-Staging</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Tumordiagnostik</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>High Priority</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>In Progress</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Diagnostic intent</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Diagnosesicherung für die Verdachtsdiagnose</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Primary tumor.clinical [Class] Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Regional lymph nodes.clinical [Class] Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Distant metastases.clinical [Class] Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Stage group.clinical Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Estrogen receptor Ag [Presence] in Tissue by Immune stain</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>HER2 Ag [Interpretation] in Tissue</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Primary site Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Histologic grade [Score] in Breast cancer specimen by Nottingham</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Histology grade [Identifier] in Cancer specimen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Invasives Mammakarzinom links, oberer äußerer Quadrant (NST), triple-negativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Mamma links, oberer äußerer Quadrant</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Diagnostic procedure (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Sonografisch gesteuerte Stanzbiopsie der Mamma links</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Specimen from breast obtained by core needle biopsy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tissue specimen (specimen)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Stanzbiopsat (Gewebeprobe) Mamma links</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Core needle biopsy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Structure of upper outer quadrant of breast</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Histology and Behavior ICD-O-3 Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Infiltrating duct carcinoma</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Invasives Mammakarzinom, NST (ICD-O-3 8500/3)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>G3: Poorly differentiated</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>schlecht differenziert</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>G3 – schlecht differenziert (Elston-Ellis)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>cT2 cN1 cM0 – UICC IIB</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Observation using immunohistochemistry (observable entity)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Negative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Immunhistochemie: &lt;1 % positive Kerne → ER-negativ.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Immunhistochemie: &lt;1 % positive Kerne → PR-negativ.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>HER2 [Interpretation] in Tissue</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>negativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>HER2-negativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Ki-67 Proliferationsindex (MIB-1)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Quantity.unit">
+             <notes>
+               <note id="n1">Quantity.unit</note>
+             </notes>
+        <source>%</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Neoadjuvant</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Kurativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Chemotherapy care</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Chief complaint</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Erhaltungstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Predecessor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Successor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Achieved</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Heilung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Funktionserhalt</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tumor board Consult note</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Surgical procedure</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lumpectomy of breast (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Stage group.pathology Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>ypT0 ypN0 – pathologische Komplettremission (pCR)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer disease progression</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Not detected</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Pathologische Komplettremission (pCR, ypT0 ypN0) nach neoadjuvanter Systemtherapie.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer care plan</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lebensqualität</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Cancer outcome status</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Kein Hinweis auf Lokalrezidiv oder Fernmetastasen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>MG Breast Screening</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Stabile bis verbesserte Lebensqualität im Verlauf</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Nachsorge-Mammographie beidseits (jährlich)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

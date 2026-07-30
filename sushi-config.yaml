@@ -4,11 +4,11 @@ name: TherapiezieleOnkologie
 title: Implementierungsleitfaden Therapieziele Onkologie
 description: Implementierungsleitfaden zur Dokumentation onkologischer Therapieziele in FHIR
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 1.0.0-ballot
 packageId: de.bih-cei.therapieziele-onkologie
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
-releaseLabel: ci-build
+releaseLabel: Ballot
 license: CC-BY-4.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#DE "Germany"
 publisher:
@@ -43,6 +43,16 @@ pages:
     title: Anwendungsbeispiel (Mammakarzinom neoadjuvant)
   szenario-mamma-abweichende-szenarios.md:
     title: Abweichende Szenarios
+
+  entitaet-diabetes.md:
+    title: Weitere Entität – Diabetes mellitus
+  entitaet-asthma.md:
+    title: Weitere Entität – Asthma bronchiale
+  entitaet-ced.md:
+    title: Weitere Entität – Chronisch-entzündliche Darmerkrankungen
+  entitaet-rheuma.md:
+    title: Weitere Entität – Rheumatoide Arthritis
+
   analysebericht.md:
     title: Analysebericht (LG-01)
   translationinfo.md:
@@ -71,6 +81,11 @@ menu:
     mCRC (palliativ): szenario-crc.html
     Mammakarzinom (neoadjuvant): szenario-mamma.html
     Abweichende Szenarios: szenario-mamma-abweichende-szenarios.html
+  Weitere Entitäten:
+    Diabetes mellitus: entitaet-diabetes.html
+    Asthma bronchiale: entitaet-asthma.html
+    Chronisch-entzündliche Darmerkrankungen: entitaet-ced.html
+    Rheumatoide Arthritis: entitaet-rheuma.html
   Analysebericht: analysebericht.html
   Artefakte: artifacts.html
 

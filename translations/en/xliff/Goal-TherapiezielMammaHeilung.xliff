@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Goal-TherapiezielMammaHeilung" original="Resource Goal-TherapiezielMammaHeilung" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Kurativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>High Priority</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Predecessor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Successor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Achieved</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Heilung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Funktionserhalt</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielMammaHeilung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Stage group.clinical Cancer</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

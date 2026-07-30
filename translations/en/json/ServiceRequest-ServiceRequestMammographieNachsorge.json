@@ -1,0 +1,19 @@
+{
+  "id" : "ServiceRequest-ServiceRequestMammographieNachsorge",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "MG Breast Screening",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Nachsorge-Mammographie beidseits (jährlich)",
+      "target" : null
+    }]
+  }]
+}

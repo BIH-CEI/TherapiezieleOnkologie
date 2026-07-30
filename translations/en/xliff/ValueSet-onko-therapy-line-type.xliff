@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-onko-therapy-line-type" original="Resource ValueSet-onko-therapy-line-type" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>OnkoTherapyLineTypeVS</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>Onkologische Therapielinie – Art (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.
+
+Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein
+Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert
+`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code
+`Ambulatory chemotherapy` (315601005).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Chemotherapy care</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Ambulatory chemotherapy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Radiation therapy care</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Immunological therapy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-line-type" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Hormone therapy</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,5 +1,3 @@
-### Analysebericht LG-01
-
 Liefergegenstand **LG-01** des Gematik-Auftrags C002717 (BIH-CEI). Dieser Bericht analysiert sechs internationale und nationale FHIR-/Standardisierungs-Quellen auf Übertragbarkeit für die deutsche Spezifikation „Onkologische Therapieziele" und leitet daraus die Architekturentscheidung für diesen Implementation Guide ab.
 
 **Stand:** Entwurf · Mai 2026  
@@ -724,7 +722,7 @@ Baustein für Liefergegenstand LG-01 · Gematik-Auftrag · BIH-CEI
 
 Die Spezifikation beruht auf vier Schichten mit klarer Rollenverteilung und einem expliziten Fallback-Pfad:
 
-![Vier-Schichten-Architektur](architektur_stack.png)
+<img src="architektur_stack.png" alt="Vier-Schichten-Architektur" style="display:block; float:none; width:100%; max-width:820px; height:auto; margin:0 auto;"/>
 
 ##### Rollen der vier Schichten
 

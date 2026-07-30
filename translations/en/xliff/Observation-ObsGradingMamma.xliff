@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Observation-ObsGradingMamma" original="Resource Observation-ObsGradingMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Observation-ObsGradingMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Histologic grade [Score] in Breast cancer specimen by Nottingham</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsGradingMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>G3: Poorly differentiated</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsGradingMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>schlecht differenziert</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsGradingMamma" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>G3 – schlecht differenziert (Elston-Ellis)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

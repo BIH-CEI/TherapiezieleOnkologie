@@ -1,0 +1,19 @@
+{
+  "id" : "Observation-ObsTNMpathologischMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Stage group.pathology Cancer",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "ypT0 ypN0 – pathologische Komplettremission (pCR)",
+      "target" : null
+    }]
+  }]
+}

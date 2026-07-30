@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ServiceRequest-ServiceRequestKoloskopieCRC" original="Resource ServiceRequest-ServiceRequestKoloskopieCRC" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ServiceRequest-ServiceRequestKoloskopieCRC" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Colonoscopy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ServiceRequest-ServiceRequestKoloskopieCRC" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Koloskopie mit Biopsieentnahme</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

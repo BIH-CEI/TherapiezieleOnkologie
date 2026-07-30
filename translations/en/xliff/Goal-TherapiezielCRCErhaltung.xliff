@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Goal-TherapiezielCRCErhaltung" original="Resource Goal-TherapiezielCRCErhaltung" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Goal-TherapiezielCRCErhaltung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Palliativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCErhaltung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Erhaltungstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCErhaltung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Predecessor</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCErhaltung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lebensverlängerung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCErhaltung" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lebensqualität</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-TherapiezielCRCErhaltung" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Erhalt des Therapieansprechens bei reduzierter Toxizität (Erhaltungstherapie) nach erfolgreicher Induktion.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

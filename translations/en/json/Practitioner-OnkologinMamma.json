@@ -1,0 +1,19 @@
+{
+  "id" : "Practitioner-OnkologinMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Musterarzt",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Katrin",
+      "target" : null
+    }]
+  }]
+}

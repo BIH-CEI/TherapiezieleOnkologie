@@ -1,0 +1,51 @@
+
+# Coding.display
+#: Coding.display
+msgid "Palliativ"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Induktionstherapie"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "High Priority"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Replacement"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Successor"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "In Progress"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Lebensverlängerung"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Symptomkontrolle / Palliation"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Verlängerung des Gesamtüberlebens und Kontrolle tumorbedingter Symptome unter palliativer Systemtherapie."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Stage group.clinical Cancer"
+msgstr ""
+

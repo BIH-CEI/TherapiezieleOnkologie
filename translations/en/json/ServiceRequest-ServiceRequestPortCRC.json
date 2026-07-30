@@ -1,0 +1,25 @@
+{
+  "id" : "ServiceRequest-ServiceRequestPortCRC",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tumor board Consult note",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Implantable venous access port injection",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Implantation eines Portkatheters für die systemische Therapie",
+      "target" : null
+    }]
+  }]
+}

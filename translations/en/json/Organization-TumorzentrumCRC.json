@@ -1,0 +1,13 @@
+{
+  "id" : "Organization-TumorzentrumCRC",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Organization.name",
+      "context" : "Organization.name",
+      "source" : "Onkologisches Zentrum Musterklinik",
+      "target" : null
+    }]
+  }]
+}

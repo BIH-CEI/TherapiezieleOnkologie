@@ -1,0 +1,13 @@
+{
+  "id" : "ServiceRequest-ServiceRequestStagingMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Klinische Ausbreitungsdiagnostik / TNM-Staging",
+      "target" : null
+    }]
+  }]
+}

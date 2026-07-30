@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Goal-DiagnosticGoal" original="Resource Goal-DiagnosticGoal" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>High Priority</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>In Progress</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Diagnostic intent</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Diagnosesicherung für die Verdachtsdiagnose</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Primary tumor.clinical [Class] Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Regional lymph nodes.clinical [Class] Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Distant metastases.clinical [Class] Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Stage group.clinical Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Estrogen receptor Ag [Presence] in Tissue by Immune stain</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>HER2 Ag [Interpretation] in Tissue</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Primary site Cancer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Histologic grade [Score] in Breast cancer specimen by Nottingham</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Histology grade [Identifier] in Cancer specimen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Goal-DiagnosticGoal" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

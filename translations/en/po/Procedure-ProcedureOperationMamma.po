@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Lumpectomy of breast (procedure)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie"
+msgstr ""
+

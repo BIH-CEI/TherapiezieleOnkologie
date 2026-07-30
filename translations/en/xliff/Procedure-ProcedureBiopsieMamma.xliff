@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Procedure-ProcedureBiopsieMamma" original="Resource Procedure-ProcedureBiopsieMamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Procedure-ProcedureBiopsieMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Diagnostic procedure (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Procedure-ProcedureBiopsieMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Core needle biopsy of breast (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Procedure-ProcedureBiopsieMamma" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Sonografisch gesteuerte Stanzbiopsie der Mamma links</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Procedure-ProcedureBiopsieMamma" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Mamma links, oberer äußerer Quadrant</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

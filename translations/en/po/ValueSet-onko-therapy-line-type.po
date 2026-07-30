@@ -1,0 +1,61 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "OnkoTherapyLineTypeVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "Onkologische Therapielinie – Art (VS)"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.
+
+Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein
+Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert
+`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code
+`Ambulatory chemotherapy` (315601005)."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Chemotherapy care"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Ambulatory chemotherapy"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Radiation therapy care"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Immunological therapy"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Hormone therapy"
+msgstr ""
+

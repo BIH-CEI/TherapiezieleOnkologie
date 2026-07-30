@@ -1,5 +1,3 @@
-### Targets and measures (`Goal.target`)
-
 A therapy goal becomes **measurable** through targets. FHIR `Goal.target` has three parts:
 **`target.measure`** (the tracked parameter, coded, e.g. LOINC/SNOMED), **`target.detail`**
 (the intended value/range) and **`target.due`** (the deadline). A goal may carry several

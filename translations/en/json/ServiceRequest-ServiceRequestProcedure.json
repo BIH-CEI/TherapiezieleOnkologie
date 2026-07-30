@@ -1,0 +1,25 @@
+{
+  "id" : "ServiceRequest-ServiceRequestProcedure",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tumor board Consult note",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Surgical procedure",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Lumpectomy of breast (procedure)",
+      "target" : null
+    }]
+  }]
+}

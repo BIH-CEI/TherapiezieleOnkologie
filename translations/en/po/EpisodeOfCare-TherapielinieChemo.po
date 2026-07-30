@@ -1,0 +1,21 @@
+
+# Coding.display
+#: Coding.display
+msgid "Neoadjuvant"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Kurativ"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Chemotherapy care"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Chief complaint"
+msgstr ""
+

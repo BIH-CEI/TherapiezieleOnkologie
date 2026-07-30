@@ -1,0 +1,31 @@
+{
+  "id" : "Observation-ObsEstrogenrezeptorMamma",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Observation using immunohistochemistry (observable entity)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Negative",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Immunhistochemie: <1 % positive Kerne → ER-negativ.",
+      "target" : null
+    }]
+  }]
+}

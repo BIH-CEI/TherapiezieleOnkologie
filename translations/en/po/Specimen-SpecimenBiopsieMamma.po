@@ -1,0 +1,31 @@
+
+# Coding.display
+#: Coding.display
+msgid "Specimen from breast obtained by core needle biopsy"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Tissue specimen (specimen)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Stanzbiopsat (Gewebeprobe) Mamma links"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Core needle biopsy"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Structure of upper outer quadrant of breast"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Mamma links, oberer äußerer Quadrant"
+msgstr ""
+

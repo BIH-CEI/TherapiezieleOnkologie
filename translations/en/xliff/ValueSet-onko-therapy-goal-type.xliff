@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-onko-therapy-goal-type" original="Resource ValueSet-onko-therapy-goal-type" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-onko-therapy-goal-type" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>OnkoTherapyGoalTypeVS</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-goal-type" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>Onkologische Therapieziel-Art (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-goal-type" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-goal-type" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-goal-type" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-goal-type" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

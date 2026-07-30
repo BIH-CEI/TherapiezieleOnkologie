@@ -1,0 +1,21 @@
+
+# Coding.display
+#: Coding.display
+msgid "Histology and Behavior ICD-O-3 Cancer"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Infiltrating duct carcinoma"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Invasives Mammakarzinom, NST (ICD-O-3 8500/3)"
+msgstr ""
+

@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "Tumor board Consult note"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Implantable venous access port injection"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Implantation eines Portkatheters für die systemische Therapie"
+msgstr ""
+

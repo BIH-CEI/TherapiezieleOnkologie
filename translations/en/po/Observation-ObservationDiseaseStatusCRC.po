@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Cancer disease progression"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Not detected"
+msgstr ""
+

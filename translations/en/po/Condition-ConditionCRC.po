@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen"
+msgstr ""
+

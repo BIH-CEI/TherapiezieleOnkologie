@@ -1,0 +1,21 @@
+
+# Coding.display
+#: Coding.display
+msgid "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Observation using immunohistochemistry (observable entity)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Ki-67 Proliferationsindex (MIB-1)"
+msgstr ""
+
+# Quantity.unit
+#: Quantity.unit
+msgid "%"
+msgstr ""
+

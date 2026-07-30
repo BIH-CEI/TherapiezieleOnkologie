@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Observation-ObsHER2Mamma" original="Resource Observation-ObsHER2Mamma" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Observation-ObsHER2Mamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>HER2 [Interpretation] in Tissue</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsHER2Mamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Negative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsHER2Mamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>negativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsHER2Mamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>HER2-negativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-ObsHER2Mamma" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

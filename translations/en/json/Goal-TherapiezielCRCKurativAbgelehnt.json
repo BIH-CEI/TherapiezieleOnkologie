@@ -1,0 +1,31 @@
+{
+  "id" : "Goal-TherapiezielCRCKurativAbgelehnt",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Kurativ",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Heilung",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Kurative Resektion des Primärtumors mit kurativer Absicht.",
+      "target" : null
+    }]
+  }]
+}

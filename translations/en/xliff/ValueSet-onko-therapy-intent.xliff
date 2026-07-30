@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-onko-therapy-intent" original="Resource ValueSet-onko-therapy-intent" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>OnkoTherapyIntentVS</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>Onkologische Therapieintention (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
+
+Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
+Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen
+SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Kurativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Palliativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Neoadjuvant</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Adjuvant</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Supportiv</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,6 @@
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Klinische Ausbreitungsdiagnostik / TNM-Staging"
+msgstr ""
+
