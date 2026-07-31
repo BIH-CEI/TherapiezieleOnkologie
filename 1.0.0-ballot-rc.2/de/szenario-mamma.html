@@ -244,6 +244,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Schemakonform zu KEYNOTE-522 – und <strong>unabhängig vom pCR-Status</strong> – schließt sich an die Operation eine <strong>ambulante adjuvante Pembrolizumab-Monotherapie</strong> (~9 Zyklen q3w) an. Sie ist als <strong>nachgelagerte Therapielinie</strong> (<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code> / <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>, ambulant) modelliert und zum Zeitpunkt der Darstellung noch laufend (<code class="language-plaintext highlighter-rouge">status = active</code>).</p>
 
+<p><strong>EnLiST-Sicht:</strong> Beide systemischen Abschnitte sind <strong>eine</strong> Line of Therapy
+(<code class="language-plaintext highlighter-rouge">eLoT 1.0</code>) — die neoadjuvante Klinik-Episode <strong>führt</strong> die Linie
+(<code class="language-plaintext highlighter-rouge">enlist-lot</code> samt gemeinsamer <code class="language-plaintext highlighter-rouge">lineId</code>), die ambulante adjuvante Episode ist
+<strong>ausführendes Segment</strong> derselben Linie (<code class="language-plaintext highlighter-rouge">enlist-line-segment</code>, gleiche
+<code class="language-plaintext highlighter-rouge">lineId</code>, keine eigene Designation). Der adjuvante Medikations-Request trägt den
+Änderungstyp <em>Same LoT</em> (prospektiv geplant, kein Y-Inkrement); die
+dazwischenliegende Operation bleibt als lokoregionale Episode außerhalb der
+Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>). Siehe <a href="behandlungsepisode.html">Behandlungsepisoden</a>.</p>
+
 <h3 id="zeitlicher-verlauf">Zeitlicher Verlauf</h3>
 
 <table>
@@ -493,7 +502,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-31 14:18:00 +0000">
+  <span title="2026-07-31 14:32:00 +0000">
     2026-07-31
   </span>
 

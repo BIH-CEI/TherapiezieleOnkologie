@@ -14,6 +14,8 @@ Nach Abschluss der neoadjuvanten Therapie erfolgt eine **brusterhaltende Operati
 
 Schemakonform zu KEYNOTE-522 – und **unabhängig vom pCR-Status** – schließt sich an die Operation eine **ambulante adjuvante Pembrolizumab-Monotherapie** (~9 Zyklen q3w) an. Sie ist als **nachgelagerte Therapielinie** (`OnkoTherapyLine` / `EpisodeOfCare`, ambulant) modelliert und zum Zeitpunkt der Darstellung noch laufend (`status = active`).
 
+**EnLiST-Sicht:** Beide systemischen Abschnitte sind **eine** Line of Therapy (`eLoT 1.0`) — die neoadjuvante Klinik-Episode **führt** die Linie (`enlist-lot` samt gemeinsamer `lineId`), die ambulante adjuvante Episode ist **ausführendes Segment** derselben Linie (`enlist-line-segment`, gleiche `lineId`, keine eigene Designation). Der adjuvante Medikations-Request trägt den Änderungstyp **Same LoT** (prospektiv geplant, kein Y-Inkrement); die dazwischenliegende Operation bleibt als lokoregionale Episode außerhalb der Zählung (`not-counted`). Siehe [Behandlungsepisoden](behandlungsepisode.md).
+
 ### Zeitlicher Verlauf
 
 | | | |

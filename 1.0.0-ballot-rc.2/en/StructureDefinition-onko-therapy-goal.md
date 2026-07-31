@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T14:18:27+00:00",
+  "date" : "2026-07-31T14:32:24+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
