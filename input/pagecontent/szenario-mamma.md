@@ -60,7 +60,9 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 | Tumorerkrankung | `OnkoCondition` | [ConditionMamma](Condition-ConditionMamma.html) |
 | Versorgungsplan | `OnkoCarePlan` | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.html) |
 | Therapieziel | `OnkoTherapyGoal` | [TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.html) |
-| Therapielinie (LoT 1) | `OnkoTherapyLine` | [TherapielinieMammaNeoadjuvant](EpisodeOfCare-TherapielinieMammaNeoadjuvant.html) |
+| Therapielinie 1 (neoadjuvante Chemo-/Immuntherapie) | `OnkoTherapyLine` | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.html) |
+| Therapielinie 2 (Operation) | `OnkoTherapyLine` | [TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.html) |
+| Therapielinie 3 (adjuvante Immuntherapie) | `OnkoTherapyLine` | [TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.html) |
 | Geplante Maßnahme (Systemtherapie) | `MedicationRequest` | [MedicationRequestPembroChemoNeoadjuvantMamma](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html) |
 | Durchgeführte Maßnahme (Operation) | `Procedure` | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.html) |
 | Tumoransprechen | `Observation` | [ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.html) |

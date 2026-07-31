@@ -128,7 +128,7 @@ Description: "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim 
 Instance: CarePlanMammaDiagnostik
 InstanceOf: DiagnosticCarePlan
 Usage: #example
-Title: "Diagnostischer CarePlan"
+Title: "Diagnostischer CarePlan (Beispiel Mamma)"
 Description: "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."
 * status = #active
 * intent = #plan
@@ -343,7 +343,7 @@ Title: "HER2/neu-Status – negativ (Beispiel)"
 Description: "HER2/neu-Status: negativ (IHC 1+). Kodierung nach MII Mamma-Zusatzmodul (oBDS + Leitlinie)."
 * status = #final
 // Abgleich BreastCancerSpec: HER2Overall (LOINC 48676-1, Interpretation als LOINC-Answer); MII-Kodierung bleibt erhalten
-* code = http://loinc.org#48676-1 "HER2 [Interpretation] in Tissue"
+* code = http://loinc.org#48676-1 "HER2 Ag [Interpretation] in Tissue"
 * valueCodeableConcept.coding[0] = http://loinc.org#LA6577-6 "Negative"
 * valueCodeableConcept.coding[1] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds#N "negativ"
 * valueCodeableConcept.coding[2] = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie#negativ "HER2-negativ"
@@ -388,8 +388,8 @@ InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie"
 Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
-* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373847000 "Neoadjuvant"
-* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373847000 "Neoadjuvant intent"
+* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
 * status = #finished
 * type = http://snomed.info/sct#385786002  "Chemotherapy care"
 * diagnosis.condition = Reference(ConditionMamma)
@@ -414,9 +414,9 @@ InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 2 – Operation"
 Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
-* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
 * status = #finished
-* type = http://snomed.info/sct#1345242003 "Erhaltungstherapie"
+* type = http://snomed.info/sct#387713003 "Surgical procedure"
 * patient = Reference(PatientinMamma)
 * period.start = "2026-03-20"
 * period.end = "2026-04-06"
@@ -440,8 +440,8 @@ InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant"
 Description: "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept)."
-* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373846009 "Adjuvant"
-* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Erhaltungstherapie"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373846009 "Adjuvant - intent"
+* extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Maintenance antineoplastic therapy"
 * extension[medicationRequest].valueReference = Reference(MedicationRequestPembroAdjuvantMamma)
 * status = #active
 * type = http://snomed.info/sct#76334006 "Immunological therapy"
@@ -463,7 +463,7 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Therapieziel – Heilung & Brusterhalt (Beispiel)"
 Description: "Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC durch neoadjuvante Systemtherapie und anschließende Operation, bei gleichzeitigem Ziel des Brusterhalts (Funktionserhalt)."
-* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Kurativ"
+* extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
 * extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
 * extension[acceptance].extension[status].valueCode = #agree
 * extension[acceptance].extension[priority].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
@@ -692,7 +692,7 @@ Description: "Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (C
 * target[0].detailCodeableConcept.text = "Kein Hinweis auf Lokalrezidiv oder Fernmetastasen"
 * target[0].dueDate = "2026-11-15"
 // Bildgebung: jährliche Mammographie der operierten und kontralateralen Brust
-* target[1].measure = http://loinc.org#24606-6 "MG Breast Screening"
+* target[1].measure = http://loinc.org#24606-6 "Mammografie"
 * target[1].detailCodeableConcept.text = "Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis"
 * target[1].dueDate = "2027-04-15"
 // Funktion / Nebenwirkung nach Sentinel-Lymphknoten-Biopsie: Armfunktion, Lymphödem
@@ -727,7 +727,7 @@ Title: "Anforderung Nachsorge-Mammographie (Beispiel)"
 Description: "Geplante jährliche Nachsorge-Mammographie der operierten und der kontralateralen Brust zur Rezidiv-/Zweitkarzinom-Früherkennung (S3-Leitlinie Mammakarzinom / AGO)."
 * status = #active
 * intent = #plan
-* code = http://loinc.org#24606-6 "MG Breast Screening"
+* code = http://loinc.org#24606-6 "Mammografie"
 * code.text = "Nachsorge-Mammographie beidseits (jährlich)"
 * subject = Reference(PatientinMamma)
 * occurrenceDateTime = "2027-04-15"

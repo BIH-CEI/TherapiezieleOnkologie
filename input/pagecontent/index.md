@@ -15,6 +15,6 @@ Der initiale Profilsatz folgt der im [Analysebericht](analysebericht.html) festg
 - **[OnkoTherapyGoal](StructureDefinition-onko-therapy-goal.html)** — strukturiertes Therapieziel mit codierter Zielart (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität).
 - **[OnkoTherapyIntent](StructureDefinition-onko-therapy-intent.html)** — Extension für die Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).
 
-Begleitende Terminologien: [OnkoTherapyGoalType](CodeSystem-onko-therapy-goal-type.html) und [OnkoTherapyIntent](CodeSystem-onko-therapy-intent.html).
+Begleitende Terminologien: [OnkoTherapyGoalType](CodeSystem-onko-therapy-goal-type.html) und [OnkoTherapyIntent](ValueSet-onko-therapy-intent.html).
 
 Der CPG-on-FHIR-Primärpfad (`PlanDefinition`, `ActivityDefinition`, `Library`) und die MII-KDS-Anbindung folgen in späteren Iterationen.
