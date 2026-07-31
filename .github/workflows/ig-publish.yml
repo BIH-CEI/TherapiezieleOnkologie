@@ -138,6 +138,9 @@ jobs:
             ||*unable to determine the type it applies to*|
             # Mapping-Identitäts-URIs (z. B. http://hl7.org/fhir am Logical Model) sind nicht auflösbar — kein Inhaltsfehler
             ||*No definition could be found for URL value*|
+            # Bundle-interne Profil-Matches scheitern am fehlenden MII-Parent-Snapshot im Standalone-Validator;
+            # der IG Publisher validiert dieselben Bundles mit vollem Snapshot-Kontext auf 0 Errors (Autorität)
+            ||*Unable to find a profile match for*|
             # Wrong Display Name (case sensitivity, TX version mismatch)
             ||*Wrong Display Name*|
             # Unknown codes (TX server LOINC/SNOMED version)
