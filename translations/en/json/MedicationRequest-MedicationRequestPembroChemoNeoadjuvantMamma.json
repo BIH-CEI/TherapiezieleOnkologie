@@ -6,6 +6,12 @@
     "entries" : [{
       "id" : "Coding.display",
       "context" : "Coding.display",
+      "source" : "New LoT",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
       "source" : "Tumor board Consult note",
       "target" : null
     },

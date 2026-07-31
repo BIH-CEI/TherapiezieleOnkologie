@@ -55,3 +55,8 @@ Tumorboardspezifische Ergänzung:
 * insert Label(performer, Durchführende/r, Für die Umsetzung vorgesehene Person oder Stelle.)
 * insert Translation(performer ^short, en, Performer)
 * insert Translation(performer ^definition, en, Person or party intended to carry out the recommendation.)
+// EnLiST-Änderungstyp der Therapieänderung (New / Modified / Same)
+* extension contains EnlistChangeTypeExt named changeType 0..1 MS
+* insert Label(extension[changeType], EnLiST-Änderungstyp, Änderungstyp nach EnLiST — new\, modified oder same.)
+* insert Translation(extension[changeType] ^short, en, EnLiST change type)
+* insert Translation(extension[changeType] ^definition, en, EnLiST change type — new\, modified or same.)

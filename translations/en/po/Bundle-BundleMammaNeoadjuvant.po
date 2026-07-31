@@ -364,6 +364,11 @@ msgstr ""
 msgid "Lumpectomy of breast (procedure)"
 msgstr ""
 
+# Coding.display
+#: Coding.display
+msgid "New LoT"
+msgstr ""
+
 # CodeableConcept.text
 #: CodeableConcept.text
 msgid "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"

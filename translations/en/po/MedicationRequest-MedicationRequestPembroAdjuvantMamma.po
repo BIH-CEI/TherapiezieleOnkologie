@@ -1,6 +1,11 @@
 
 # Coding.display
 #: Coding.display
+msgid "Same LoT"
+msgstr ""
+
+# Coding.display
+#: Coding.display
 msgid "Tumor board Consult note"
 msgstr ""
 

@@ -72,6 +72,48 @@ Wirkstoffwechsel wegen Intoleranz (z. B. Letrozol → Anastrozol, `eLoT 1.0 → 
 entkoppelt Setting und Intention ausdrücklich (kurative Oligometastasen-Therapie
 im advanced Setting, palliative Frühphasen-Therapie).
 
+### Eine Linie über mehrere Einrichtungen — Führung und Ausführung
+
+`EpisodeOfCare` ist **organisationsgebunden**. Eine Line of Therapy, die
+sektorübergreifend läuft (z. B. stationäre neoadjuvante Systemtherapie →
+ambulantes adjuvantes Pembrolizumab), zerfällt daher organisatorisch in mehrere
+Episoden — **ohne** dass die Linie ihre Identität verliert:
+
+- Die **führende Episode** (main contributor — typischerweise die koordinierende
+  Stelle, z. B. das Tumorzentrum) trägt die EnLiST-Designation (`enlist-lot`)
+  samt gemeinsamer `lineId` — **genau einmal je Linie**.
+- **Ausführende Einrichtungen** dokumentieren autonom eigene Episoden und
+  markieren sie als Segmente (`enlist-line-segment`) mit derselben `lineId` —
+  ohne eigene Designation.
+- Bei **gleichem Ort und Sektor** fallen Führung und Ausführung in einer
+  einzigen Episode zusammen (der Normalfall, z. B. im mCRC-Beispiel). Die Wahl
+  der Form trifft die dokumentierende Stelle — **kein Automatismus**.
+
+Die LoT-Zählung bleibt damit trivial: Gezählt werden ausschließlich Träger von
+`enlist-lot`; Segmente können nie doppelt zählen.
+
+### Anschluss an Versorgungskontakte (ISiK/KBV) und MII-Prozeduren
+
+Findet die vorgeschlagene Therapielinien-Modellierung Zustimmung, ist sie der
+**Andockpunkt in beide Richtungen** der Versorgungsdokumentation:
+
+- **Kontakte aus der Versorgung:** `Encounter` aus dem Krankenhausumfeld
+  (**ISiK**) wie aus der vertragsärztlichen Versorgung (**KBV**) verweisen über
+  das Standard-Element `Encounter.episodeOfCare` auf die jeweilige
+  (Segment-)Episode — die einzelnen Kontakte hängen sich an die Linie, ohne dass
+  dieser Leitfaden Encounter selbst profilieren muss (bewusst out of scope).
+- **MII-Prozeduren:** Die im MII KDS Onkologie als `Procedure` mit
+  `performedPeriod` modellierten Therapieblöcke — **systemische Therapie,
+  Strahlentherapie und Operationen** — bleiben unverändert und werden verkabelt:
+  über die Standard-Extension `workflow-episodeOfCare` (Procedure → Episode)
+  bzw. im MII-only-Pfad direkt über `enlist-lot`/`enlist-line-segment` an der
+  Procedure selbst (die MII-SYST-Procedure trägt Intention, Stellung zur OP und
+  Zeitraum ohnehin bereits — die LoT-Angabe fügt sich dort nativ ein).
+
+So entsteht die durchgehende Kette **Kontakt (Encounter) → Segment/Episode →
+Linie (LoT) → Ziel** — von der einzelnen Ambulanz-Sitzung bis zur strategischen
+Therapieintention.
+
 ### Episode ≠ Prozedur ≠ Kontakt
 
 Wichtige Abgrenzung am Beispiel Chirurgie: Die **Operation selbst** ist ein

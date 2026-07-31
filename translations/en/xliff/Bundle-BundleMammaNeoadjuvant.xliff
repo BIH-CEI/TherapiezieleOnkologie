@@ -514,6 +514,13 @@
         <source>Lumpectomy of breast (procedure)</source>
         <target></target>
       </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>New LoT</source>
+        <target></target>
+      </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
              <notes>
                <note id="n1">CodeableConcept.text</note>

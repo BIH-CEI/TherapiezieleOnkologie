@@ -2,7 +2,7 @@ Profile: OnkoTherapyLine
 Parent: EpisodeOfCare
 Id: onko-therapy-line
 Title: "Onkologische Therapielinie"
-Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`."
+Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein **fachliches Kontinuum** mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist. Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`."
 * insert Translation(^title, en, Oncological line of therapy)
 * insert Translation(^description, en, An oncological line of therapy based on EpisodeOfCare\, EnLiST-conformant. A line of therapy is a treatment segment with a defined intent and a defined tumor condition\, ended by a clinical event such as progression\, toxicity\, patient wish\, end of study or planned switch.)
 
@@ -10,6 +10,7 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
     OnkoTherapyIntentExt named therapyIntent 1..1 MS and
     OnkoTherapyLineMedicationRequestExt named medicationRequest 0..* MS and
     EnlistLotExt named lot 0..1 MS and
+    EnlistLineSegmentExt named lineSegment 0..1 MS and
     EnlistCountableExt named countable 0..1 MS
 * insert Label(extension[therapyIntent], Therapieintention, Strukturierte Therapieintention der Behandlungslinie – Hauptintention und optionale Behandlungsphase.)
 * insert Translation(extension[therapyIntent] ^short, en, Therapy intent)
@@ -23,7 +24,10 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
 * insert Label(extension[countable], EnLiST-Zählstatus, Zählstatus nach EnLiST — counted oder not-counted.)
 * insert Translation(extension[countable] ^short, en, EnLiST countability)
 * insert Translation(extension[countable] ^definition, en, EnLiST countability — counted or not-counted.)
-* obeys onko-enlist-1
+* insert Label(extension[lineSegment], EnLiST-Linien-Segment, Segment-Marker einer ausführenden Einrichtung — gemeinsame lineId\, keine eigene Designation.)
+* insert Translation(extension[lineSegment] ^short, en, EnLiST line segment)
+* insert Translation(extension[lineSegment] ^definition, en, Segment marker of an executing organisation — shared lineId\, no designation of its own.)
+* obeys onko-enlist-1 and onko-enlist-3 and onko-enlist-4
 
 * status 1..1 MS
 * insert Label(status, Status, Status der Therapielinie – z. B. active\, onhold\, finished\, cancelled.)
@@ -100,3 +104,15 @@ Invariant: onko-enlist-1
 Description: "Eine EnLiST-LoT-Designation (enlist-lot) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist."
 Severity: #error
 Expression: "extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() implies extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists()"
+
+// Rückrichtung: Wer zählt, trägt Designation oder Segment-Marker.
+Invariant: onko-enlist-3
+Description: "Zählstatus 'counted' erfordert eine EnLiST-Designation (enlist-lot, führende Episode) oder einen Segment-Marker (enlist-line-segment, ausführende Episode)."
+Severity: #error
+Expression: "extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists() implies (extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() or extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment').exists())"
+
+// Führung und Segment schließen sich an derselben Episode aus.
+Invariant: onko-enlist-4
+Description: "enlist-lot (führende Episode) und enlist-line-segment (ausführendes Segment) dürfen nicht an derselben Episode vorliegen."
+Severity: #error
+Expression: "(extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() and extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment').exists()).not()"

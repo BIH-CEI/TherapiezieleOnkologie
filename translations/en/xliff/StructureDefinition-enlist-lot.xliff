@@ -49,38 +49,53 @@
              <notes>
                <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
              </notes>
-        <source>EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:
+        <source>EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:
 
 - `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),
-  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**
-  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse
-  zählt **getrennt**.
-- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht
-  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
-- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT
-  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem
-  X-Inkrement.
+  **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.
+- `line` (X) — Zahl der *New LoTs* im Setting; neue Linie nur bei klinischer
+  Progression (cPD) oder fehlendem adäquatem Ansprechen.
+- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT;
+  0 = unmodifiziert, Reset bei jedem X-Inkrement.
 - `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1&quot;.
+- `lineId` — Identifier der Linie (System
+  `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet
+  ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional,
+  wenn die Linie aus genau einer Episode besteht.
 
-Die Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*
-(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die
-Designation nicht.</source>
-        <target>EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:
+**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle —
+an der **führenden Episode** (main contributor, `managingOrganization` = die
+koordinierende Stelle) oder, wo keine Episodenführung existiert, an der
+systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,
+nicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)
+verändern die Designation nicht.</source>
+        <target>EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:
 
 - `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),
-  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**
-  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse
-  zählt **getrennt**.
-- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht
-  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
-- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT
-  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem
-  X-Inkrement.
+  **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.
+- `line` (X) — Zahl der *New LoTs* im Setting; neue Linie nur bei klinischer
+  Progression (cPD) oder fehlendem adäquatem Ansprechen.
+- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT;
+  0 = unmodifiziert, Reset bei jedem X-Inkrement.
 - `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1&quot;.
+- `lineId` — Identifier der Linie (System
+  `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet
+  ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional,
+  wenn die Linie aus genau einer Episode besteht.
 
-Die Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*
-(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die
-Designation nicht.</target>
+**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle —
+an der **führenden Episode** (main contributor, `managingOrganization` = die
+koordinierende Stelle) oder, wo keine Episodenführung existiert, an der
+systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,
+nicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)
+verändern die Designation nicht.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-enlist-lot" resname="StructureDefinition.element.Extension/constraint">
+             <notes>
+               <note id="n1">Text that can be used to describe the constraint in messages identifying that the constraint has been violated.</note>
+             </notes>
+        <source>Die notation (falls vorhanden) muss aus setting, line und modification zusammengesetzt sein (z. B. 'eLoT 1.0').</source>
+        <target>Die notation (falls vorhanden) muss aus setting, line und modification zusammengesetzt sein (z. B. 'eLoT 1.0').</target>
       </trans-unit>
       <trans-unit id="StructureDefinition-enlist-lot" resname="StructureDefinition.element.Extension.extension:setting/short">
              <notes>
@@ -137,6 +152,20 @@ Designation nicht.</target>
              </notes>
         <source>Gesamtdarstellung der Designation, z. B. aLoT 2.1</source>
         <target>Display form of the designation, e.g. aLoT 2.1</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-enlist-lot" resname="StructureDefinition.element.Extension.extension:lineId/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Linien-Identifier</source>
+        <target>Line identifier</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-enlist-lot" resname="StructureDefinition.element.Extension.extension:lineId/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Gemeinsamer Identifier der Linie — verkettet ausführende Segmente mit der geführten Linie.</source>
+        <target>Shared identifier of the line — links executing segments to the led line.</target>
       </trans-unit>
     </body>
   </file>

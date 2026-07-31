@@ -15,8 +15,8 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 - Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,
   Erhaltung, palliativ, supportiv).
 - `goal` referenziert das Profil `OnkoTherapyGoal`.
-- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`
-  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.
+- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die
+  Standard-Extension `workflow-episodeOfCare` verknüpft.
 
 Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des
 realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine

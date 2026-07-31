@@ -21,6 +21,13 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>Zählt in der LoT-Zählung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="EpisodeOfCare-TherapieliniePembroAdjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Immunological therapy</source>
         <target></target>
       </trans-unit>

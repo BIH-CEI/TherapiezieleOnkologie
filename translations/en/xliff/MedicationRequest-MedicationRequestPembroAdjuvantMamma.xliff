@@ -7,6 +7,13 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>Same LoT</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="MedicationRequest-MedicationRequestPembroAdjuvantMamma" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Tumor board Consult note</source>
         <target></target>
       </trans-unit>

@@ -394,11 +394,15 @@ Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNO
 * meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373847000 "Neoadjuvant intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
-// EnLiST: perioperative Systemtherapie zählt im frühen Setting — eLoT 1.0
+// EnLiST: perioperative Systemtherapie zählt im frühen Setting — eLoT 1.0.
+// Diese Episode FÜHRT die Linie (main contributor: Brustzentrum); die ambulante
+// adjuvante Episode ist ausführendes Segment derselben Linie (gemeinsame lineId).
 * extension[lot].extension[setting].valueCodeableConcept = EnlistLotSetting#eLoT "eLoT — frühes Setting"
 * extension[lot].extension[line].valuePositiveInt = 1
 * extension[lot].extension[modification].valueUnsignedInt = 0
 * extension[lot].extension[notation].valueString = "eLoT 1.0"
+* extension[lot].extension[lineId].valueIdentifier.system = "https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line"
+* extension[lot].extension[lineId].valueIdentifier.value = "mamma-baumann-elot-1"
 * extension[countable].valueCodeableConcept = EnlistCountable#counted "Zählt in der LoT-Zählung"
 * status = #finished
 * type = http://snomed.info/sct#385786002  "Chemotherapy care"
@@ -456,6 +460,12 @@ Description: "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrol
 * meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373846009 "Adjuvant - intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Maintenance antineoplastic therapy"
+// EnLiST: ausführendes Segment derselben Linie (eLoT 1.0) — KEINE eigene
+// Designation; Verkettung mit der führenden Episode über die gemeinsame lineId.
+// Zählstatus counted via Segment-Marker (Invariante onko-enlist-3).
+* extension[lineSegment].valueIdentifier.system = "https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line"
+* extension[lineSegment].valueIdentifier.value = "mamma-baumann-elot-1"
+* extension[countable].valueCodeableConcept = EnlistCountable#counted "Zählt in der LoT-Zählung"
 * extension[medicationRequest].valueReference = Reference(MedicationRequestPembroAdjuvantMamma)
 * status = #active
 * type = http://snomed.info/sct#76334006 "Immunological therapy"
@@ -585,6 +595,8 @@ Usage: #example
 Title: "Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"
 Description: "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."
 * meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"
+// EnLiST-Änderungstyp: eröffnet die Linie (New LoT — eLoT 1.0)
+* extension[changeType].valueCodeableConcept = EnlistChangeType#new "New LoT"
 * status = #completed
 * intent = #plan
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
@@ -602,6 +614,10 @@ Usage: #example
 Title: "Adjuvante Systemtherapie – Pembrolizumab-Monotherapie (KEYNOTE-522, Beispiel)"
 Description: "Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status), ambulant über ~9 Zyklen (q3w)."
 * meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"
+// EnLiST-Änderungstyp: prospektiv geplante Fortsetzung derselben Linie (Same LoT,
+// kein Y-Inkrement — deshalb keine neue Designation; kein priorPrescription,
+// da keine Ersetzung: die Sequenz liegt im Therapiekonzept, nicht in der Kette)
+* extension[changeType].valueCodeableConcept = EnlistChangeType#same "Same LoT"
 * status = #active
 * intent = #plan
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"

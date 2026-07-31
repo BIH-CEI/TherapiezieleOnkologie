@@ -442,6 +442,12 @@
       "target" : null
     },
     {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "New LoT",
+      "target" : null
+    },
+    {
       "id" : "CodeableConcept.text",
       "context" : "CodeableConcept.text",
       "source" : "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)",

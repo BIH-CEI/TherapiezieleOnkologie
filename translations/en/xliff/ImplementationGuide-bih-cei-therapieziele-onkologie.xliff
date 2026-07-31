@@ -270,6 +270,26 @@ Diagnostikspezifische Ergänzungen:
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
+        <source>EnLiST-Linien-Segment (Extension)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Markiert einen **ausführenden Behandlungsabschnitt** (Episode einer ausführenden
+Einrichtung bzw. eine Therapie-`Procedure`) als Segment einer geführten Line of
+Therapy. Trägt **keine eigene Designation**, sondern nur die gemeinsame
+`lineId` der Linie (siehe `enlist-lot.lineId` an der führenden Episode).
+So bleibt jede ausführende Instanz autonom dokumentationsfähig, ohne die
+LoT-Zählung zu duplizieren — Auswerter zählen ausschließlich Träger von
+`enlist-lot`.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
         <source>EnLiST-LoT-Designation (Extension)</source>
         <target></target>
       </trans-unit>
@@ -277,22 +297,26 @@ Diagnostikspezifische Ergänzungen:
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:
+        <source>EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:
 
 - `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),
-  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**
-  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse
-  zählt **getrennt**.
-- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht
-  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
-- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT
-  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem
-  X-Inkrement.
+  **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.
+- `line` (X) — Zahl der *New LoTs* im Setting; neue Linie nur bei klinischer
+  Progression (cPD) oder fehlendem adäquatem Ansprechen.
+- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT;
+  0 = unmodifiziert, Reset bei jedem X-Inkrement.
 - `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1&quot;.
+- `lineId` — Identifier der Linie (System
+  `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet
+  ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional,
+  wenn die Linie aus genau einer Episode besteht.
 
-Die Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*
-(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die
-Designation nicht.</source>
+**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle —
+an der **führenden Episode** (main contributor, `managingOrganization` = die
+koordinierende Stelle) oder, wo keine Episodenführung existiert, an der
+systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,
+nicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)
+verändern die Designation nicht.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -349,10 +373,10 @@ Designation nicht.</source>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf
-einer EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);
-`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale
-Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder
-Management-Abschnitt.</source>
+einer EnLiST-Zählachse (Designation in `enlist-lot` an der führenden Episode
+bzw. Segment-Marker `enlist-line-segment`); `not-counted` — außerhalb jeder
+LoT-Zählung, z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie,
+Ablation) oder Management-Abschnitt.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -367,6 +391,25 @@ Management-Abschnitt.</source>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Alle Zählstatus-Werte nach EnLiST.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>EnLiST-Änderungstyp (Extension)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>EnLiST-Änderungstyp einer Therapieänderung auf Request-Ebene: **new** (eröffnet
+eine neue Linie, X+1 — nur bei Progression/fehlendem Ansprechen), **modified**
+(Y+1 — nicht-progressionsbedingte Änderung; bei Ersetzung eines Vorgängers
+zusätzlich `priorPrescription`) oder **same** (prospektiv geplante Änderung
+inkl. Erhaltungstherapie — Designation unverändert). Die Sequenz geplanter
+Blöcke liegt in der RequestGroup, nicht in `priorPrescription`.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -644,7 +687,7 @@ des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergän
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`.</source>
+        <source>Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein **fachliches Kontinuum** mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist. Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -736,8 +779,8 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 - Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,
   Erhaltung, palliativ, supportiv).
 - `goal` referenziert das Profil `OnkoTherapyGoal`.
-- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`
-  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.
+- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die
+  Standard-Extension `workflow-episodeOfCare` verknüpft.
 
 Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des
 realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine
