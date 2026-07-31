@@ -21,6 +21,9 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────╯
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.onkologie: 2026.0.3
+  # Explizit für die Standalone-Validierung: löst u. a. die vom MII-Diagnoseprofil
+  # geerbte mii-ex-meta-license-codeable-Extension auf (sonst Validator-Error).
+  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.0
 
 # ╭───────────────────────────────────── Pages ────────────────────────────────────╮
 # │ Default-language pages live in input/pagecontent/. Translated copies live in   │

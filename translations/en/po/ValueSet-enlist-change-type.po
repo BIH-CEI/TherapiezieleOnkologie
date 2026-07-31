@@ -1,0 +1,31 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "EnlistChangeTypeVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "EnLiST-Änderungstypen (ValueSet)"
+msgstr "EnLiST change types value set"
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Alle EnLiST-Änderungstypen."
+msgstr "All EnLiST change types."
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+

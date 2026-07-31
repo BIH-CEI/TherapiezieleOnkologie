@@ -130,6 +130,7 @@ InstanceOf: DiagnosticCarePlan
 Usage: #example
 Title: "Diagnostischer CarePlan (Beispiel Mamma)"
 Description: "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
 * status = #active
 * intent = #plan
 * category.text = "Tumordiagnostik" 
@@ -161,6 +162,7 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Onkologisches Diagnosezeil"
 Description: "Das onkologische Diagnoseziel wird im diagnostischen CarePlan verlinkt und hat zum Ziel, dass eine Tumordiagnostik gestellt werden kann."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
 * extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
 * extension[acceptance].extension[status].valueCode = #agree
 * extension[acceptance].extension[priority].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
@@ -207,6 +209,7 @@ InstanceOf: OnkoCondition
 Usage: #example
 Title: "Mammakarzinom links, triple-negativ (Beispiel)"
 Description: "Adressierte Tumorerkrankung: invasives Mammakarzinom links (NST), ICD-10-GM C50.4. Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
@@ -388,8 +391,15 @@ InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie"
 Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373847000 "Neoadjuvant intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
+// EnLiST: perioperative Systemtherapie zählt im frühen Setting — eLoT 1.0
+* extension[lot].extension[setting].valueCodeableConcept = EnlistLotSetting#eLoT "eLoT — frühes Setting"
+* extension[lot].extension[line].valuePositiveInt = 1
+* extension[lot].extension[modification].valueUnsignedInt = 0
+* extension[lot].extension[notation].valueString = "eLoT 1.0"
+* extension[countable].valueCodeableConcept = EnlistCountable#counted "Zählt in der LoT-Zählung"
 * status = #finished
 * type = http://snomed.info/sct#385786002  "Chemotherapy care"
 * diagnosis.condition = Reference(ConditionMamma)
@@ -414,6 +424,7 @@ InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 2 – Operation"
 Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
 // EnLiST: lokoregionale Behandlungslinie — im EnLiST-Framework nicht mitgezählt
 * extension[countable].valueCodeableConcept = EnlistCountable#not-counted "Zählt nicht"
@@ -442,6 +453,7 @@ InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant"
 Description: "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373846009 "Adjuvant - intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Maintenance antineoplastic therapy"
 * extension[medicationRequest].valueReference = Reference(MedicationRequestPembroAdjuvantMamma)
@@ -465,6 +477,7 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Therapieziel – Heilung & Brusterhalt (Beispiel)"
 Description: "Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC durch neoadjuvante Systemtherapie und anschließende Operation, bei gleichzeitigem Ziel des Brusterhalts (Funktionserhalt)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
 * extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
 * extension[acceptance].extension[status].valueCode = #agree
@@ -497,6 +510,7 @@ InstanceOf: TumorboardServiceRequest
 Usage: #example
 Title: "Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen"
 Description: "Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpektomie) bei Mammakarzinom."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"
 * status = #active
 * intent = #proposal
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
@@ -570,6 +584,7 @@ InstanceOf: TumorboardMedicationRequest
 Usage: #example
 Title: "Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"
 Description: "Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"
 * status = #completed
 * intent = #plan
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
@@ -586,6 +601,7 @@ InstanceOf: TumorboardMedicationRequest
 Usage: #example
 Title: "Adjuvante Systemtherapie – Pembrolizumab-Monotherapie (KEYNOTE-522, Beispiel)"
 Description: "Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status), ambulant über ~9 Zyklen (q3w)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"
 * status = #active
 * intent = #plan
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
@@ -639,6 +655,7 @@ InstanceOf: OnkoCarePlan
 Usage: #example
 Title: "Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)"
 Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives Therapieziel sowie geplante (neoadjuvante Systemtherapie) und durchgeführte Maßnahmen (Operation, Ansprechbeurteilung) zusammenführt."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"
 // custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans (MCC R5-Backport)
 * extension[custodian].valueReference = Reference(TumorzentrumMamma)
 * status = #active
@@ -675,6 +692,7 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung"
 Description: "Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
 * extension[acceptance].extension[individual].valueReference = Reference(PatientinMamma)
 * extension[acceptance].extension[status].valueCode = #agree
 * extension[acceptance].extension[priority].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/goal-priority#high-priority "High Priority"
@@ -741,6 +759,7 @@ InstanceOf: OnkoCarePlan
 Usage: #example
 Title: "Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)"
 Description: "Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR): trägt das Nachsorge-Ziel (Rezidivfreiheit, Funktion, Lebensqualität) und die geplante jährliche Mammographie als Maßnahme."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"
 // custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans
 * extension[custodian].valueReference = Reference(TumorzentrumMamma)
 * status = #active

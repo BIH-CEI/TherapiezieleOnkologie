@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CodeSystem-enlist-lot-setting" original="Resource CodeSystem-enlist-lot-setting" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.name">
+             <notes>
+               <note id="n1">CodeSystem.name</note>
+             </notes>
+        <source>EnlistLotSetting</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.title">
+             <notes>
+               <note id="n1">CodeSystem.title</note>
+             </notes>
+        <source>EnLiST-Setting-Achsen</source>
+        <target>EnLiST setting axes</target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.publisher">
+             <notes>
+               <note id="n1">CodeSystem.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.description">
+             <notes>
+               <note id="n1">CodeSystem.description</note>
+             </notes>
+        <source>Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).</source>
+        <target>The three separately counted setting axes of the EnLiST notation: eLoT early, aLoT advanced, iLoT investigational.</target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>eLoT — frühes Setting</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>aLoT — fortgeschrittenes Setting</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>iLoT — investigational</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-lot-setting" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

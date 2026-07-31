@@ -1,19 +1,19 @@
 {
-  "id" : "CodeSystem-enlist-countable",
+  "id" : "CodeSystem-enlist-lot-setting",
   "baseLang" : "de",
   "languages" : [{
     "targetLang" : "en",
     "entries" : [{
       "id" : "CodeSystem.name",
       "context" : "CodeSystem.name",
-      "source" : "EnlistCountable",
+      "source" : "EnlistLotSetting",
       "target" : null
     },
     {
       "id" : "CodeSystem.title",
       "context" : "CodeSystem.title",
-      "source" : "EnLiST-Zählstatus",
-      "target" : "EnLiST countability"
+      "source" : "EnLiST-Setting-Achsen",
+      "target" : "EnLiST setting axes"
     },
     {
       "id" : "CodeSystem.publisher",
@@ -30,8 +30,8 @@
     {
       "id" : "CodeSystem.description",
       "context" : "CodeSystem.description",
-      "source" : "Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie).",
-      "target" : "Countability of a treatment line per EnLiST: on a LoT counting axis — counted — or outside any count — not-counted, e.g. a locoregional treatment line."
+      "source" : "Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).",
+      "target" : "The three separately counted setting axes of the EnLiST notation: eLoT early, aLoT advanced, iLoT investigational."
     },
     {
       "id" : "Coding.display",
@@ -42,25 +42,37 @@
     {
       "id" : "CodeSystem.concept.display",
       "context" : "CodeSystem.concept.display",
-      "source" : "Zählt in der LoT-Zählung",
+      "source" : "eLoT — frühes Setting",
       "target" : null
     },
     {
       "id" : "CodeSystem.concept.definition",
       "context" : "CodeSystem.concept.definition",
-      "source" : "Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot.",
+      "source" : "Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie.",
       "target" : null
     },
     {
       "id" : "CodeSystem.concept.display",
       "context" : "CodeSystem.concept.display",
-      "source" : "Zählt nicht",
+      "source" : "aLoT — fortgeschrittenes Setting",
       "target" : null
     },
     {
       "id" : "CodeSystem.concept.definition",
       "context" : "CodeSystem.concept.definition",
-      "source" : "Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt.",
+      "source" : "Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation.",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "iLoT — investigational",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse.",
       "target" : null
     }]
   }]

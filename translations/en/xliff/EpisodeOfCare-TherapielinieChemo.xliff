@@ -21,6 +21,20 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>eLoT — frühes Setting</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="EpisodeOfCare-TherapielinieChemo" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Zählt in der LoT-Zählung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="EpisodeOfCare-TherapielinieChemo" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Chemotherapy care</source>
         <target></target>
       </trans-unit>

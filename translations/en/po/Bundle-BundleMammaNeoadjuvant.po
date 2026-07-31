@@ -296,6 +296,16 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
+msgid "eLoT — frühes Setting"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Zählt in der LoT-Zählung"
+msgstr ""
+
+# Coding.display
+#: Coding.display
 msgid "Chemotherapy care"
 msgstr ""
 

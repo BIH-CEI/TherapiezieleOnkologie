@@ -134,6 +134,10 @@ jobs:
           filters: |
             # Profile without snapshot (validator cannot validate without snapshot)
             ||*has no snapshot*|
+            # Folge fehlender Parent-Snapshots (MII) im Standalone-Kontext
+            ||*unable to determine the type it applies to*|
+            # Mapping-Identitäts-URIs (z. B. http://hl7.org/fhir am Logical Model) sind nicht auflösbar — kein Inhaltsfehler
+            ||*No definition could be found for URL value*|
             # Wrong Display Name (case sensitivity, TX version mismatch)
             ||*Wrong Display Name*|
             # Unknown codes (TX server LOINC/SNOMED version)

@@ -270,17 +270,57 @@ Diagnostikspezifische Ergänzungen:
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
-        <source>EnLiST-Liniennummer (Extension)</source>
+        <source>EnLiST-LoT-Designation (Extension)</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Nummer der systemischen Therapielinie (Line of Therapy, LoT) nach EnLiST-Notation
-(1 = Erstlinie, 2 = Zweitlinie, …). Nur für Linien, die in die Zählung eingehen
-(`enlist-countable = counted`); die Nummer wird dokumentiert erfasst, nicht aus den
-Daten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.</source>
+        <source>EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:
+
+- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),
+  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**
+  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse
+  zählt **getrennt**.
+- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht
+  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
+- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT
+  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem
+  X-Inkrement.
+- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1&quot;.
+
+Die Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*
+(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die
+Designation nicht.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>EnLiST-Setting-Achsen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>EnLiST-Setting-Achsen (ValueSet)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Alle EnLiST-Setting-Achsen.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -294,7 +334,7 @@ Daten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.</sour
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).</source>
+        <source>Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie).</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -308,10 +348,11 @@ Daten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.</sour
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein
-(`counted`), ist sie außerhalb der Zählung (`not-counted`, z. B. lokoregionale
-Behandlungslinie) oder eine investigationale Studientherapie (`investigational`,
-EnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).</source>
+        <source>Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf
+einer EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);
+`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale
+Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder
+Management-Abschnitt.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -326,6 +367,34 @@ EnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).</source
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Alle Zählstatus-Werte nach EnLiST.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>EnLiST-Änderungstypen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>EnLiST-Änderungstypen (ValueSet)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Alle EnLiST-Änderungstypen.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">

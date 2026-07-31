@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-enlist-lot-setting" original="Resource ValueSet-enlist-lot-setting" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-enlist-lot-setting" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>EnlistLotSettingVS</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-enlist-lot-setting" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>EnLiST-Setting-Achsen (ValueSet)</source>
+        <target>EnLiST setting axes value set</target>
+      </trans-unit>
+      <trans-unit id="ValueSet-enlist-lot-setting" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-enlist-lot-setting" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-enlist-lot-setting" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>Alle EnLiST-Setting-Achsen.</source>
+        <target>All EnLiST setting axes.</target>
+      </trans-unit>
+      <trans-unit id="ValueSet-enlist-lot-setting" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -35,8 +35,8 @@
              <notes>
                <note id="n1">CodeSystem.description</note>
              </notes>
-        <source>Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).</source>
-        <target>Countability of a treatment line per EnLiST: within the LoT count, outside the count, or investigational study therapy — iLoT.</target>
+        <source>Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie).</source>
+        <target>Countability of a treatment line per EnLiST: on a LoT counting axis — counted — or outside any count — not-counted, e.g. a locoregional treatment line.</target>
       </trans-unit>
       <trans-unit id="CodeSystem-enlist-countable" resname="Coding.display">
              <notes>
@@ -56,7 +56,7 @@
              <notes>
                <note id="n1">CodeSystem.concept.definition</note>
              </notes>
-        <source>Systemische Therapielinie, die nach EnLiST in die Linien-Zählung eingeht.</source>
+        <source>Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.display">
@@ -70,21 +70,7 @@
              <notes>
                <note id="n1">CodeSystem.concept.definition</note>
              </notes>
-        <source>Behandlungslinie außerhalb der EnLiST-Zählung — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation).</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.display">
-             <notes>
-               <note id="n1">CodeSystem.concept.display</note>
-             </notes>
-        <source>iLoT — Studientherapie</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.definition">
-             <notes>
-               <note id="n1">CodeSystem.concept.definition</note>
-             </notes>
-        <source>Investigational Line of Therapy nach EnLiST: Studientherapie, separat notiert statt regulär gezählt.</source>
+        <source>Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt.</source>
         <target></target>
       </trans-unit>
     </body>

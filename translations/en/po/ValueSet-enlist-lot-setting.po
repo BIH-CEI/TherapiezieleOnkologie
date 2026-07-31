@@ -1,0 +1,31 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "EnlistLotSettingVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "EnLiST-Setting-Achsen (ValueSet)"
+msgstr "EnLiST setting axes value set"
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Alle EnLiST-Setting-Achsen."
+msgstr "All EnLiST setting axes."
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+

@@ -196,15 +196,47 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "EnLiST-Liniennummer (Extension)"
+msgid "EnLiST-LoT-Designation (Extension)"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "Nummer der systemischen Therapielinie (Line of Therapy, LoT) nach EnLiST-Notation
-(1 = Erstlinie, 2 = Zweitlinie, …). Nur für Linien, die in die Zählung eingehen
-(`enlist-countable = counted`); die Nummer wird dokumentiert erfasst, nicht aus den
-Daten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens."
+msgid "EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:
+
+- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),
+  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**
+  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse
+  zählt **getrennt**.
+- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht
+  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
+- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT
+  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem
+  X-Inkrement.
+- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".
+
+Die Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*
+(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die
+Designation nicht."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "EnLiST-Setting-Achsen"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational)."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "EnLiST-Setting-Achsen (ValueSet)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Alle EnLiST-Setting-Achsen."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -214,7 +246,7 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT)."
+msgid "Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie)."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -224,10 +256,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein
-(`counted`), ist sie außerhalb der Zählung (`not-counted`, z. B. lokoregionale
-Behandlungslinie) oder eine investigationale Studientherapie (`investigational`,
-EnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt)."
+msgid "Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf
+einer EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);
+`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale
+Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder
+Management-Abschnitt."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -238,6 +271,26 @@ msgstr ""
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "Alle Zählstatus-Werte nach EnLiST."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "EnLiST-Änderungstypen"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "EnLiST-Änderungstypen (ValueSet)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Alle EnLiST-Änderungstypen."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name

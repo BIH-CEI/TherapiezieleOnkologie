@@ -9,7 +9,7 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
 * extension contains
     OnkoTherapyIntentExt named therapyIntent 1..1 MS and
     OnkoTherapyLineMedicationRequestExt named medicationRequest 0..* MS and
-    EnlistLineNumberExt named lineNumber 0..1 MS and
+    EnlistLotExt named lot 0..1 MS and
     EnlistCountableExt named countable 0..1 MS
 * insert Label(extension[therapyIntent], Therapieintention, Strukturierte Therapieintention der Behandlungslinie – Hauptintention und optionale Behandlungsphase.)
 * insert Translation(extension[therapyIntent] ^short, en, Therapy intent)
@@ -17,12 +17,12 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
 * insert Label(extension[medicationRequest], Medikationsverordnung, Referenz auf Medikationsverordnungen\, die den Anlass für diese Therapielinie bilden – Ergänzung zu referralRequest\, das auf ServiceRequest beschränkt ist.)
 * insert Translation(extension[medicationRequest] ^short, en, Medication request)
 * insert Translation(extension[medicationRequest] ^definition, en, Reference to the medication requests giving rise to this line of therapy – complements referralRequest\, which is restricted to ServiceRequest.)
-* insert Label(extension[lineNumber], EnLiST-Liniennummer, Nummer der systemischen Therapielinie nach EnLiST — nur für Linien\, die in die LoT-Zählung eingehen.)
-* insert Translation(extension[lineNumber] ^short, en, EnLiST line number)
-* insert Translation(extension[lineNumber] ^definition, en, Number of the systemic line of therapy per EnLiST — only for lines that enter the LoT count.)
-* insert Label(extension[countable], EnLiST-Zählstatus, Zählstatus nach EnLiST — counted\, not-counted oder investigational / iLoT.)
+* insert Label(extension[lot], EnLiST-LoT-Designation, X.Y-Designation je Setting-Achse — eLoT\, aLoT oder iLoT — nach EnLiST.)
+* insert Translation(extension[lot] ^short, en, EnLiST LoT designation)
+* insert Translation(extension[lot] ^definition, en, X.Y designation per setting axis — eLoT\, aLoT or iLoT — per EnLiST.)
+* insert Label(extension[countable], EnLiST-Zählstatus, Zählstatus nach EnLiST — counted oder not-counted.)
 * insert Translation(extension[countable] ^short, en, EnLiST countability)
-* insert Translation(extension[countable] ^definition, en, EnLiST countability — counted\, not-counted or investigational iLoT.)
+* insert Translation(extension[countable] ^definition, en, EnLiST countability — counted or not-counted.)
 * obeys onko-enlist-1
 
 * status 1..1 MS
@@ -95,8 +95,8 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
 * insert Translation(referralRequest ^short, en, Referral request)
 * insert Translation(referralRequest ^definition, en, Requests giving rise to this line of therapy\, e.g. a referral or procedure request.)
 
-// EnLiST-Invariante: Eine Liniennummer setzt voraus, dass die Linie zählt.
+// EnLiST-Invariante: Eine LoT-Designation setzt voraus, dass die Linie zählt.
 Invariant: onko-enlist-1
-Description: "Eine EnLiST-Liniennummer (enlist-linenumber) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist."
+Description: "Eine EnLiST-LoT-Designation (enlist-lot) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist."
 Severity: #error
-Expression: "extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber').exists() implies extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists()"
+Expression: "extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() implies extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists()"

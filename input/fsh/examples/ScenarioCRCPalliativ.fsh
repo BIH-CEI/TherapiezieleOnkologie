@@ -69,6 +69,7 @@ InstanceOf: OnkoCondition
 Usage: #example
 Title: "Kolorektales Karzinom, metastasiert (Beispiel)"
 Description: "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
@@ -90,6 +91,7 @@ InstanceOf: DiagnosticCarePlan
 Usage: #example
 Title: "Diagnostischer CarePlan – Tumordiagnostik (Beispiel)"
 Description: "Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
 * extension[custodian].valueReference = Reference(TumorzentrumCRC)
 * status = #completed
 * intent = #plan
@@ -136,11 +138,15 @@ InstanceOf: OnkoTherapyLine
 Usage: #example
 Title: "Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)"
 Description: "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
 // Zwei-Achsen-Intention: Hauptintention palliativ + Phase Induktionstherapie
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliative intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#450827009 "Induction chemotherapy"
-// EnLiST: systemische Erstlinie, geht in die LoT-Zählung ein
-* extension[lineNumber].valuePositiveInt = 1
+// EnLiST: metastasierte Situation — aLoT 1.0 (erste New LoT im advanced Setting)
+* extension[lot].extension[setting].valueCodeableConcept = EnlistLotSetting#aLoT "aLoT — fortgeschrittenes Setting"
+* extension[lot].extension[line].valuePositiveInt = 1
+* extension[lot].extension[modification].valueUnsignedInt = 0
+* extension[lot].extension[notation].valueString = "aLoT 1.0"
 * extension[countable].valueCodeableConcept = EnlistCountable#counted "Zählt in der LoT-Zählung"
 * status = #active
 * type = http://snomed.info/sct#315601005 "Ambulatory chemotherapy"
@@ -162,6 +168,7 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Therapieziel – Lebensverlängerung & Symptomkontrolle (Beispiel)"
 Description: "Übergeordnetes palliatives Therapieziel: Lebensverlängerung bei gleichzeitiger Symptomkontrolle."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
 // Zwei-Achsen-Intention: palliativ + Induktionsphase (dieses Ziel gilt für die Induktion)
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliative intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#450827009 "Induction chemotherapy"
@@ -194,6 +201,7 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Therapieziel – kurative Resektion (abgelehnt, Beispiel)"
 Description: "In der Tumorkonferenz erwogenes kuratives Ziel, das aufgrund der Metastasierung verworfen wurde. Demonstriert die Extension goal-reasonRejected."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
 // goal-reasonRejected: Begründung für die Ablehnung des Ziels (MCCGoal)
 * extension[reasonRejected].valueCodeableConcept.text = "Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar."
@@ -209,6 +217,7 @@ InstanceOf: OnkoTherapyGoal
 Usage: #example
 Title: "Therapieziel – Erhaltungstherapie / Stabilisierung (Beispiel)"
 Description: "Nachgelagertes Ziel der Erhaltungsphase (Deeskalation auf 5-FU/Bevacizumab nach Ansprechen). Demonstriert die predecessor-Beziehung als Gegenrichtung zum successor des Induktionsziels."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"
 // Zwei-Achsen-Intention: palliativ + Erhaltungsphase
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliative intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Maintenance antineoplastic therapy"
@@ -232,6 +241,7 @@ InstanceOf: TumorboardMedicationRequest
 Usage: #example
 Title: "Tumorboard-Empfehlung – FOLFOX + Bevacizumab (Beispiel)"
 Description: "Vom Tumorboard empfohlene palliative Erstlinien-Systemtherapie (geplante Aktivität des Therapie-CarePlan)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"
 * status = #active
 * intent = #plan
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
@@ -244,6 +254,7 @@ InstanceOf: TumorboardServiceRequest
 Usage: #example
 Title: "Tumorboard-Empfehlung – Portimplantation (Beispiel)"
 Description: "Vom Tumorboard empfohlene Anlage eines Portkatheters für die systemische Therapie."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"
 * status = #active
 * intent = #plan
 * category[tumorboardConsult] = http://loinc.org#85232-7 "Tumor board Consult note"
@@ -276,6 +287,7 @@ InstanceOf: OnkoCarePlan
 Usage: #example
 Title: "Onkologischer CarePlan – mCRC palliativ (Beispiel)"
 Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliative intent"
 // custodian: verantwortliche Stelle für Pflege/Aktualisierung des Plans (MCC R5-Backport)
 * extension[custodian].valueReference = Reference(TumorzentrumCRC)

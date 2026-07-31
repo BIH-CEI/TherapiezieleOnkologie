@@ -210,13 +210,37 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
-      "source" : "EnLiST-Liniennummer (Extension)",
+      "source" : "EnLiST-LoT-Designation (Extension)",
       "target" : null
     },
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Nummer der systemischen Therapielinie (Line of Therapy, LoT) nach EnLiST-Notation\n(1 = Erstlinie, 2 = Zweitlinie, …). Nur für Linien, die in die Zählung eingehen\n(`enlist-countable = counted`); die Nummer wird dokumentiert erfasst, nicht aus den\nDaten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.",
+      "source" : "EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**\n  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse\n  zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht\n  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT\n  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem\n  X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n\nDie Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*\n(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die\nDesignation nicht.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "EnLiST-Setting-Achsen",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "EnLiST-Setting-Achsen (ValueSet)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Alle EnLiST-Setting-Achsen.",
       "target" : null
     },
     {
@@ -228,7 +252,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).",
+      "source" : "Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie).",
       "target" : null
     },
     {
@@ -240,7 +264,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein\n(`counted`), ist sie außerhalb der Zählung (`not-counted`, z. B. lokoregionale\nBehandlungslinie) oder eine investigationale Studientherapie (`investigational`,\nEnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).",
+      "source" : "Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf\neiner EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);\n`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale\nBehandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder\nManagement-Abschnitt.",
       "target" : null
     },
     {
@@ -253,6 +277,30 @@
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
       "source" : "Alle Zählstatus-Werte nach EnLiST.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "EnLiST-Änderungstypen",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "EnLiST-Änderungstypen (ValueSet)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Alle EnLiST-Änderungstypen.",
       "target" : null
     },
     {

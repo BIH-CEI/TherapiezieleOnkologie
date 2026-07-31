@@ -119,6 +119,13 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>aLoT — fortgeschrittenes Setting</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Zählt in der LoT-Zählung</source>
         <target></target>
       </trans-unit>

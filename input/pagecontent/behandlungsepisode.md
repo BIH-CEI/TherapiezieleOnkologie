@@ -47,6 +47,31 @@ Der Oberbegriff **Behandlungslinie** umfasst zwei Modalitätsklassen:
 > Tumorentitäten hinweg ist begrenzt. Die Spalte „In LoT-Zählung?" ist entsprechend
 > **im Kontext der jeweiligen Entität** zu lesen.
 
+### Linienwechsel ≠ Zielwechsel
+
+EnLiST notiert Linien als **X.Y je Setting-Achse** (eLoT früh · aLoT
+fortgeschritten · iLoT investigational, getrennt gezählt): X zählt **New LoTs**
+(nur bei Progression oder fehlendem Ansprechen), Y zählt **Modified LoTs**
+(nicht-progressionsbedingte Änderungen), **Same LoTs** (prospektiv geplante
+Änderungen inkl. Erhaltung) verändern die Designation nicht. Diese Ereignisse
+liegen auf der **Maßnahmen-Achse** — sie lösen **nie automatisch** eine
+Ziel-Operation aus:
+
+| EnLiST-Ereignis | Auslöser | Episodenziel | Übergeordnetes Ziel |
+|---|---|---|---|
+| **Same LoT** (X.Y bleibt) | prospektiv geplant: Dosis, Pause, Erhaltung | bleibt — *oder* `successor`, wenn ein Phasenziel erreicht ist | bleibt |
+| **Modified LoT** (Y+1) | Intoleranz, Wirkstoffwechsel ohne Progression | **bleibt** (nur die Maßnahme ändert sich) | bleibt |
+| **New LoT** (X+1) | Progression / fehlendes Ansprechen | i. d. R. neu — altes Ziel abgeschlossen, oft `not-achieved` | bleibt, solange die Intention stabil ist |
+| **New LoT + Strategiewechsel** (oft eLoT→aLoT) | Progression macht die Intention unhaltbar | neu | **`replacement`** |
+
+Belege in beide Richtungen: Im [mCRC-Szenario](szenario-crc.html) überdauert das
+übergeordnete Ziel mehrere palliative Linien; der Übergang Induktion → Erhaltung
+ist dort ein **Zielwechsel ohne Linienwechsel** (Erhaltung = *Same LoT*); ein
+Wirkstoffwechsel wegen Intoleranz (z. B. Letrozol → Anastrozol, `eLoT 1.0 → 1.1`)
+ändert **gar kein Ziel**. Auch der Setting-Wechsel koppelt nicht 1:1 — EnLiST
+entkoppelt Setting und Intention ausdrücklich (kurative Oligometastasen-Therapie
+im advanced Setting, palliative Frühphasen-Therapie).
+
 ### Episode ≠ Prozedur ≠ Kontakt
 
 Wichtige Abgrenzung am Beispiel Chirurgie: Die **Operation selbst** ist ein

@@ -21,8 +21,8 @@ msgstr ""
 
 # CodeSystem.description
 #: CodeSystem.description
-msgid "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT)."
-msgstr "Countability of a treatment line per EnLiST: within the LoT count, outside the count, or investigational study therapy — iLoT."
+msgid "Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie)."
+msgstr "Countability of a treatment line per EnLiST: on a LoT counting axis — counted — or outside any count — not-counted, e.g. a locoregional treatment line."
 
 # Coding.display
 #: Coding.display
@@ -36,7 +36,7 @@ msgstr ""
 
 # CodeSystem.concept.definition
 #: CodeSystem.concept.definition
-msgid "Systemische Therapielinie, die nach EnLiST in die Linien-Zählung eingeht."
+msgid "Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot."
 msgstr ""
 
 # CodeSystem.concept.display
@@ -46,16 +46,6 @@ msgstr ""
 
 # CodeSystem.concept.definition
 #: CodeSystem.concept.definition
-msgid "Behandlungslinie außerhalb der EnLiST-Zählung — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation)."
-msgstr ""
-
-# CodeSystem.concept.display
-#: CodeSystem.concept.display
-msgid "iLoT — Studientherapie"
-msgstr ""
-
-# CodeSystem.concept.definition
-#: CodeSystem.concept.definition
-msgid "Investigational Line of Therapy nach EnLiST: Studientherapie, separat notiert statt regulär gezählt."
+msgid "Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt."
 msgstr ""
 
