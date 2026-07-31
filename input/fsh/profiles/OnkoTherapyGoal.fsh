@@ -13,7 +13,7 @@ Ergebnissen (Verlaufs-Observations) verknüpft wird.
 
 Onkologiespezifische Ergänzungen gegenüber MCC:
 - Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,
-  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).
+  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt).
 - Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der
   zugehörigen Behandlungslinie hinterlegt werden.
 - `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE
@@ -59,9 +59,9 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 // Zielart (onkologiespezifische ValueSet-Bindung)
 * category 1..*
 * category from OnkoTherapyGoalTypeVS (extensible)
-* insert Label(category, Zielart, Art des onkologischen Therapieziels – Heilung\, Lebensverlängerung\, Symptomkontrolle\, Lebensqualität\, Funktionserhalt\, Studienteilnahme.)
+* insert Label(category, Zielart, Art des onkologischen Therapieziels – Heilung\, Lebensverlängerung\, Symptomkontrolle\, Lebensqualität\, Funktionserhalt.)
 * insert Translation(category ^short, en, Goal category)
-* insert Translation(category ^definition, en, Type of oncological therapy goal – cure\, life prolongation\, symptom control\, quality of life\, preservation of function\, study participation.)
+* insert Translation(category ^definition, en, Type of oncological therapy goal – cure\, life prolongation\, symptom control\, quality of life\, preservation of function.)
 
 // Priorisierung konkurrierender Ziele
 * priority MS

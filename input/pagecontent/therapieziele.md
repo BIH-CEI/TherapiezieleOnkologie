@@ -8,8 +8,49 @@ dieses Leitfadens und wird als FHIR-`Goal` im Profil
 Ein Therapieziel beantwortet **nicht** „*was wird getan*" (das sind Maßnahmen wie
 `ServiceRequest`/`MedicationRequest`), sondern „*was soll erreicht werden*". Die
 **Zielart** wird codiert aus [OnkoTherapyGoalType](CodeSystem-onko-therapy-goal-type.html):
-Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt,
-Studienteilnahme.
+Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt.
+Studienteilnahme ist bewusst **keine** Zielart — sie ist ein *Mittel* (investigationale
+Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand.
+
+### Zielart ist nicht Therapieintention — zwei Achsen
+
+Die **Zielart** (`Goal.category`) und die **Therapieintention**
+([OnkoTherapyIntent](StructureDefinition-onko-therapy-intent.html), SNOMED-Hierarchie
+`362961001 | Procedure by intent`) beantworten verschiedene Fragen und dürfen nicht
+vermengt werden:
+
+| | Therapieintention | Zielart |
+|---|---|---|
+| **Frage** | *Mit welcher Ausrichtung wird behandelt?* | *Welcher Zustand soll erreicht werden?* |
+| **Perspektive** | Prozedur / Therapielinie | Patient:in / Outcome |
+| **Werte** | kurativ, palliativ, neoadjuvant, adjuvant, supportiv | Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt |
+| **Ort** | Extension an Episode (Pflicht), Plan, Ziel | `Goal.category` |
+
+Die Achsen **korrelieren, sind aber nicht redundant**: Im
+[mCRC-Szenario](szenario-crc.html) bleibt die Intention `palliativ`, während die Zielart
+zwischen Lebensverlängerung und Erhaltung wechselt; im
+[Mamma-Szenario](szenario-mamma.html) trägt die *neoadjuvante* Linie das *kurative*
+Gesamtziel. Eine Achse allein könnte beides nicht ausdrücken.
+
+Für die patientenzentrierten Zielarten gilt: **Die Kategorie folgt der
+Erfassungsebene, nicht dem Instrument.** Symptombezogen erfasst (Skala oder erfragte
+Symptomlast) → Symptomkontrolle; auf eine konkrete, benennbare Funktion oder Struktur
+bezogen → Funktionserhalt; global patientenberichtet — per standardisiertem PROM
+*oder* strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch) →
+Lebensqualität. Für ein gegebenes `target` ist damit genau eine Kategorie richtig;
+die Kombination mehrerer Kategorien an einem Ziel bleibt möglich, wo tatsächlich
+mehrere Zielzustände verfolgt werden (z. B. Heilung **und** Brusterhalt).
+
+**Funktionserhalt** ist dabei ein patientenpriorisiertes Ziel, das die Auswahl der
+Maßnahmen in *beide* Richtungen steuern kann — Deeskalation der Operation
+(Kontinenz-, Larynxerhalt) ebenso wie Intensivierung der Vortherapie (neoadjuvante
+Systemtherapie, die den Brusterhalt erst ermöglicht) — und dessen Erreichen
+eigenständig nachgehalten wird: Es kann scheitern (`not-achieved`), während das
+kurative Ziel weiter verfolgt wird.
+
+Die semantische Verankerung der Zielarten in SNOMED CT (Zielzustands-Konzepte, nicht
+Intent-Qualifier) dokumentiert die ConceptMap
+[Zielarten → SNOMED CT](ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html).
 
 ### Das Ziel ist primär — der Plan folgt
 
