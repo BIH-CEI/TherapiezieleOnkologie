@@ -6,7 +6,7 @@ Er entsteht im Rahmen der BIH-CEI / Gematik-Onkologie-Kooperation und wird auf D
 
 #### Erste Profile
 
-<img src="profile-overview.png" alt="Profil-Übersicht" style="display:block; float:none; width:100%; max-width:820px; height:auto; margin:1em auto;"/>
+<img src="profil-uebersicht.png" alt="Profil-Übersicht" style="display:block; float:none; width:100%; max-width:820px; height:auto; margin:1em auto;"/>
 
 Der initiale Profilsatz folgt der im [Analysebericht](analysebericht.html) festgelegten Vier-Schichten-Architektur und bildet den **CarePlan-/Goal-Fallback-Pfad** ab:
 

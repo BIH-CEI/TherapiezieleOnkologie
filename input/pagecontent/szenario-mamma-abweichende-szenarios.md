@@ -10,7 +10,7 @@ Die Therapie wird wie geplant fortgeführt und abgeschlossen, die Dosis wird jed
 
 **Beispiel:** Die Tumorboard-Empfehlung wird umgesetzt, pro geplanter Abgabe entsteht ein `MedicationRequest`. Nach 2 von 6 Zyklen wird die Dosis reduziert. Die noch offenen Requests werden gestoppt und durch neue ersetzt, gebündelt in einem neuen `CarePlan`. Das Tumorboard wird dafür nicht erneut einberufen.
 
-<img src="Dosisänderung.png" alt="Szenario 1: Reguläres Ende mit Dosisanpassung, in diesem Fall Dosisreduktion" style="width:100%;" />
+<img src="abweichung-dosisanpassung.png" alt="Szenario 1: Reguläres Ende mit Dosisanpassung, in diesem Fall Dosisreduktion" style="width:100%;" />
 
 **Merkmale:**
 - Die noch nicht durchgeführten `MedicationRequests` erhalten den Status `stopped`; im `statusReason` kann der entsprechende Code angegeben werden.
@@ -31,7 +31,7 @@ Die Therapie wird planmäßig abgeschlossen, ein oder mehrere Wirkstoffe des Reg
 
 **Beispiel:** Nach 2 von 6 Zyklen wird ein Wirkstoff ausgetauscht. Wie beim Dosiswechsel werden offene `MedicationRequests` gestoppt und in einem neuen `CarePlan` ersetzt. Ein reiner Austausch bleibt inhaltlich von der ursprünglichen Tumorboard-Empfehlung gedeckt (meist auf Ebene der Therapieklasse), das Tumorboard wird daher nie erneut einberufen.
 
-<img src="Substanzwechsel.png" alt="Szenario 2: Reguläres Ende mit Substanzwechsel" style="width:100%;" />
+<img src="abweichung-substanzwechsel.png" alt="Szenario 2: Reguläres Ende mit Substanzwechsel" style="width:100%;" />
 
 **Merkmale:**
 
@@ -56,7 +56,7 @@ Die Therapielinie wird vorzeitig beendet, da eine behandlungsassoziierte Nebenwi
 
 **Beispiel:** Nach 2 von 6 Zyklen treten schwerwiegende Nebenwirkungen ein, sodass die Chemotherapie abgebrochen werden muss. Das Tumorboard wird erneut einberufen und ein neuer `CarePlan` mit entsprechendem `TherapieIntent`, `Goals` und Behandlungsvorschlägen erstellt. Ein bereits geplanter `ServiceRequest` (z. B. für begleitende Diagnostik) wird dabei unverändert aus dem bisherigen CarePlan in den neu erstellten CarePlan übernommen.
 
-<img src="Nebenwirkung.png" alt="Szenario 3: Abbruch wegen Nebenwirkung" style="width:100%;" />
+<img src="abweichung-nebenwirkung.png" alt="Szenario 3: Abbruch wegen Nebenwirkung" style="width:100%;" />
 
 **Merkmale:**
 
@@ -74,7 +74,7 @@ Die Therapielinie wird vorzeitig beendet, da unter der Behandlung ein Progress d
 
 **Beispiel:** Nach 3 Zyklen findet ein Progress der Erkrankung statt. Dies führt dazu, dass die initiale Therapie so nicht weitergeführt werden kann. Da zu Beginn aber bereits ein potenzieller Progress der Erkrankung im ersten Tumorboard mit eingeplant wurde, wurde bereits ein `CarePlan` erstellt, welcher umgesetzt werden soll, sobald es zu einem Progress kommt.
 
-<img src="Progress.png" alt="Szenario 4: Abbruch wegen Progress" style="width:100%;" />
+<img src="abweichung-progress.png" alt="Szenario 4: Abbruch wegen Progress" style="width:100%;" />
 
 **Merkmale:**
 
@@ -94,7 +94,7 @@ Die Therapielinie wird aus Gründen beendet, die nicht unmittelbar in der Erkran
 **Beispiel:** Der Grund ist medizinisch nicht begründet, z. B. Patient zieht weg, Arzt-Patienten-Verhältnis gestört, Unfall. Die Tumorboard-Empfehlung selbst bleibt inhaltlich unverändert gültig, `MedicationRequest` und `ServiceRequest` laufen weiter mit Status `active`. Es ändern sich nur die Verantwortlichen, `requester`, `performer` bzw. `careManager` werden aktualisiert, kein Statuswechsel, kein Ersatz.
 
 
-<img src="Sonstige_Gründe.png" alt="Szenario 5: Abbruch aus anderen Gründen" style="width:100%;" />
+<img src="abweichung-sonstige-gruende.png" alt="Szenario 5: Abbruch aus anderen Gründen" style="width:100%;" />
 
 
 **Merkmale:**
@@ -107,7 +107,7 @@ Die Patientin verstirbt während der laufenden Therapielinie.
 
 **Beispiel:** Die Patientin verstirbt während der Behandlung. Dementsprechend wird die Patientenressource geändert. Folglich müssen die noch offenen Ressourcen im Status angepasst werden. 
 
-<img src="Verstorben.png" alt="Szenario 6: Versterben der Patientin" style="width:100%;" />
+<img src="abweichung-verstorben.png" alt="Szenario 6: Versterben der Patientin" style="width:100%;" />
 
 **Merkmale:**
 
