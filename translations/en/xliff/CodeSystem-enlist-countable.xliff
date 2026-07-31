@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CodeSystem-enlist-countable" original="Resource CodeSystem-enlist-countable" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.name">
+             <notes>
+               <note id="n1">CodeSystem.name</note>
+             </notes>
+        <source>EnlistCountable</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.title">
+             <notes>
+               <note id="n1">CodeSystem.title</note>
+             </notes>
+        <source>EnLiST-Zählstatus</source>
+        <target>EnLiST countability</target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.publisher">
+             <notes>
+               <note id="n1">CodeSystem.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.description">
+             <notes>
+               <note id="n1">CodeSystem.description</note>
+             </notes>
+        <source>Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).</source>
+        <target>Countability of a treatment line per EnLiST: within the LoT count, outside the count, or investigational study therapy — iLoT.</target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Zählt in der LoT-Zählung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Systemische Therapielinie, die nach EnLiST in die Linien-Zählung eingeht.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Zählt nicht</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Behandlungslinie außerhalb der EnLiST-Zählung — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>iLoT — Studientherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-enlist-countable" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Investigational Line of Therapy nach EnLiST: Studientherapie, separat notiert statt regulär gezählt.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

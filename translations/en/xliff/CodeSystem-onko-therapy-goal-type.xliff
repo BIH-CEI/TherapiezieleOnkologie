@@ -84,7 +84,7 @@
              <notes>
                <note id="n1">CodeSystem.concept.definition</note>
              </notes>
-        <source>Linderung von Symptomen und Krankheitslast.</source>
+        <source>Zielzustand einer definierten Symptomlast; symptombezogen erfasst — über Symptomskala oder erfragte Symptomlast.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.display">
@@ -98,7 +98,7 @@
              <notes>
                <note id="n1">CodeSystem.concept.definition</note>
              </notes>
-        <source>Erhalt oder Verbesserung von Funktion und Lebensqualität.</source>
+        <source>Erhalt oder Verbesserung der globalen, patientenberichteten Lebensqualität; erfasst per standardisiertem PROM oder strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch).</source>
         <target></target>
       </trans-unit>
       <trans-unit id="CodeSystem-onko-therapy-goal-type" resname="CodeSystem.concept.display">
@@ -112,7 +112,7 @@
              <notes>
                <note id="n1">CodeSystem.concept.definition</note>
              </notes>
-        <source>Erhalt körperlicher oder kognitiver Funktion.</source>
+        <source>Erhalt einer konkret benannten Körperfunktion oder -struktur (z. B. Brusterhalt, Kontinenz, Fertilität); patientenpriorisiertes Ziel, das die Maßnahmenwahl in beide Richtungen steuert und eigenständig nachgehalten wird.</source>
         <target></target>
       </trans-unit>
     </body>

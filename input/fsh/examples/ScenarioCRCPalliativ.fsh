@@ -139,6 +139,9 @@ Description: "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Indukti
 // Zwei-Achsen-Intention: Hauptintention palliativ + Phase Induktionstherapie
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliative intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#450827009 "Induction chemotherapy"
+// EnLiST: systemische Erstlinie, geht in die LoT-Zählung ein
+* extension[lineNumber].valuePositiveInt = 1
+* extension[countable].valueCodeableConcept = EnlistCountable#counted "Zählt in der LoT-Zählung"
 * status = #active
 * type = http://snomed.info/sct#315601005 "Ambulatory chemotherapy"
 * patient = Reference(PatientinCRC)

@@ -4,6 +4,10 @@ Dieser Implementierungsleitfaden definiert FHIR-Profile zur Dokumentation **onko
 
 Er entsteht im Rahmen der BIH-CEI / Gematik-Onkologie-Kooperation und wird auf Deutsch mit englischer Übersetzung veröffentlicht.
 
+#### Profile und Verlauf im Überblick
+
+{% include konzept-verlauf-prozess.svg %}
+
 #### Erste Profile
 
 <img src="profil-uebersicht.png" alt="Profil-Übersicht" style="display:block; float:none; width:100%; max-width:820px; height:auto; margin:1em auto;"/>

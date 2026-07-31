@@ -434,6 +434,13 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>Zählt nicht</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Surgical procedure</source>
         <target></target>
       </trans-unit>

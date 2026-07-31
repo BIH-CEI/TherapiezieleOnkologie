@@ -102,6 +102,12 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
+      "source" : "Zählt in der LoT-Zählung",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
       "source" : "Ambulatory chemotherapy",
       "target" : null
     },

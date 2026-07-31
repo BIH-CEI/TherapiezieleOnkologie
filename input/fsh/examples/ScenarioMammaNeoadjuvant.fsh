@@ -415,6 +415,8 @@ Usage: #example
 Title: "Therapielinie 2 – Operation"
 Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
+// EnLiST: lokoregionale Behandlungslinie — im EnLiST-Framework nicht mitgezählt
+* extension[countable].valueCodeableConcept = EnlistCountable#not-counted "Zählt nicht"
 * status = #finished
 * type = http://snomed.info/sct#387713003 "Surgical procedure"
 * patient = Reference(PatientinMamma)

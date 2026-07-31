@@ -14,6 +14,13 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>Zählt nicht</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="EpisodeOfCare-TherapielinieOperation" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Surgical procedure</source>
         <target></target>
       </trans-unit>

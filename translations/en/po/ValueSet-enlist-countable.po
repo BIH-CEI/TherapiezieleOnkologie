@@ -1,0 +1,31 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "EnlistCountableVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "EnLiST-Zählstatus (ValueSet)"
+msgstr "EnLiST countability value set"
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Alle Zählstatus-Werte nach EnLiST."
+msgstr "All EnLiST countability values."
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+

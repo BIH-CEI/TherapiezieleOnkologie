@@ -1,0 +1,79 @@
+{
+  "id" : "CodeSystem-enlist-countable",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "CodeSystem.name",
+      "context" : "CodeSystem.name",
+      "source" : "EnlistCountable",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.title",
+      "context" : "CodeSystem.title",
+      "source" : "EnLiST-Zählstatus",
+      "target" : "EnLiST countability"
+    },
+    {
+      "id" : "CodeSystem.publisher",
+      "context" : "CodeSystem.publisher",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : null
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.description",
+      "context" : "CodeSystem.description",
+      "source" : "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).",
+      "target" : "Countability of a treatment line per EnLiST: within the LoT count, outside the count, or investigational study therapy — iLoT."
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Germany",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "Zählt in der LoT-Zählung",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Systemische Therapielinie, die nach EnLiST in die Linien-Zählung eingeht.",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "Zählt nicht",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Behandlungslinie außerhalb der EnLiST-Zählung — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation).",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.display",
+      "context" : "CodeSystem.concept.display",
+      "source" : "iLoT — Studientherapie",
+      "target" : null
+    },
+    {
+      "id" : "CodeSystem.concept.definition",
+      "context" : "CodeSystem.concept.definition",
+      "source" : "Investigational Line of Therapy nach EnLiST: Studientherapie, separat notiert statt regulär gezählt.",
+      "target" : null
+    }]
+  }]
+}

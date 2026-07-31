@@ -210,6 +210,54 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "EnLiST-Liniennummer (Extension)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Nummer der systemischen Therapielinie (Line of Therapy, LoT) nach EnLiST-Notation\n(1 = Erstlinie, 2 = Zweitlinie, …). Nur für Linien, die in die Zählung eingehen\n(`enlist-countable = counted`); die Nummer wird dokumentiert erfasst, nicht aus den\nDaten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "EnLiST-Zählstatus",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "EnLiST-Zählstatus (Extension)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein\n(`counted`), ist sie außerhalb der Zählung (`not-counted`, z. B. lokoregionale\nBehandlungslinie) oder eine investigationale Studientherapie (`investigational`,\nEnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "EnLiST-Zählstatus (ValueSet)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Alle Zählstatus-Werte nach EnLiST.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
       "source" : "Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen",
       "target" : null
     },

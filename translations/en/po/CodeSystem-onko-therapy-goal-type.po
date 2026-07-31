@@ -56,7 +56,7 @@ msgstr ""
 
 # CodeSystem.concept.definition
 #: CodeSystem.concept.definition
-msgid "Linderung von Symptomen und Krankheitslast."
+msgid "Zielzustand einer definierten Symptomlast; symptombezogen erfasst — über Symptomskala oder erfragte Symptomlast."
 msgstr ""
 
 # CodeSystem.concept.display
@@ -66,7 +66,7 @@ msgstr ""
 
 # CodeSystem.concept.definition
 #: CodeSystem.concept.definition
-msgid "Erhalt oder Verbesserung von Funktion und Lebensqualität."
+msgid "Erhalt oder Verbesserung der globalen, patientenberichteten Lebensqualität; erfasst per standardisiertem PROM oder strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch)."
 msgstr ""
 
 # CodeSystem.concept.display
@@ -76,6 +76,6 @@ msgstr ""
 
 # CodeSystem.concept.definition
 #: CodeSystem.concept.definition
-msgid "Erhalt körperlicher oder kognitiver Funktion."
+msgid "Erhalt einer konkret benannten Körperfunktion oder -struktur (z. B. Brusterhalt, Kontinenz, Fertilität); patientenpriorisiertes Ziel, das die Maßnahmenwahl in beide Richtungen steuert und eigenständig nachgehalten wird."
 msgstr ""
 
