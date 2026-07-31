@@ -57,6 +57,7 @@ und Band C (Content-Modell-Detail) bauen darauf auf.
 | [0021](0021-multimodale-orchestrierung-requestgroup.md) | Multimodale, sequenzierte/konkurrente Ansätze als `RequestGroup` / `RequestOrchestration` | accepted | 2026-07-24 |
 | [0022](0022-zweistufige-vorlagen-cpg-protokollkatalog.md) | Zweistufige Vorlagen: CPG-Leitlinie → Empfehlungsplan, Protokollkatalog → Behandlungsplan | accepted | 2026-07-27 |
 | [0023](0023-target-measure-leitlinienversioniert.md) | `Goal.target.measure` ist leitlinienversioniert und an die normative Quelle gebunden | proposed | 2026-07-29 |
+| [0024](0024-zielart-taxonomie-zwei-achsen.md) | Zielart-Taxonomie: zwei Achsen, Kategorie folgt Erfassungsebene, Studienteilnahme entfällt | accepted | 2026-07-31 |
 
 ## Workflow
 
