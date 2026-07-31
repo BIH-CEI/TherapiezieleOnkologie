@@ -1,20 +1,37 @@
 name: Release IG Version
 
+# Release-Flow:
+#   - GitHub-Release mit Tag 1.0.0-ballot-rc.1, -rc.2, … (Haken "pre-release") →
+#     statischer Snapshot unter gh-pages/<tag>/, Root-Redirect bleibt unberührt.
+#   - Finales GitHub-Release mit Tag 1.0.0-ballot (kein pre-release-Haken) →
+#     Snapshot unter gh-pages/1.0.0-ballot/ UND Root-Redirect zeigt darauf.
+#   Ein führendes "v" im Tag wird entfernt. Manuell via workflow_dispatch möglich.
+
 on:
   release:
     types: [published]
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to publish (e.g. 0.9.0)'
+        description: 'Version to publish (z. B. 1.0.0-ballot-rc.1)'
         required: true
+      prerelease:
+        description: 'Als Pre-Release behandeln (Root-Redirect nicht anfassen)'
+        type: boolean
+        default: true
 
 permissions:
   contents: write
 
+# Gleiche Gruppe wie ig-publish: nie zwei gleichzeitige gh-pages-Pushes
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   release:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -58,17 +75,40 @@ jobs:
           curl -L -o input-cache/publisher.jar \
             https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
 
+      # Terminologie-Cache wie im Publish-Workflow — ohne ihn läuft der
+      # Publisher-Build gegen tx.fhir.org in Richtung Timeout.
+      - name: Cache Terminologie-Antworten (txcache)
+        uses: actions/cache@v4
+        with:
+          path: input-cache/txcache
+          key: txcache-release-${{ github.run_id }}
+          restore-keys: |
+            txcache-release-
+            txcache-build-
+            txcache-
+
       - name: Determine version
         id: version
         run: |
           if [ "${{ github.event_name }}" = "release" ]; then
             VERSION="${{ github.event.release.tag_name }}"
-            VERSION="${VERSION#v}"
+            PRERELEASE="${{ github.event.release.prerelease }}"
           else
             VERSION="${{ github.event.inputs.version }}"
+            PRERELEASE="${{ github.event.inputs.prerelease }}"
           fi
+          VERSION="${VERSION#v}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Publishing version: $VERSION"
+          echo "prerelease=$PRERELEASE" >> $GITHUB_OUTPUT
+          echo "Publishing version: $VERSION (prerelease: $PRERELEASE)"
+
+      # Der Snapshot soll sich selbst korrekt ausweisen: sushi-config-Version
+      # auf den Release-Tag setzen (z. B. 1.0.0-ballot-rc.1 statt 1.0.0-ballot).
+      - name: Stamp release version into sushi-config
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          sed -i "s/^version: .*/version: $VERSION/" sushi-config.yaml
+          grep '^version:' sushi-config.yaml
 
       - name: Build IG
         run: |
@@ -78,18 +118,29 @@ jobs:
       - name: Deploy Release to GitHub Pages
         run: |
           VERSION="${{ steps.version.outputs.version }}"
+          PRERELEASE="${{ steps.version.outputs.prerelease }}"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin gh-pages:gh-pages 2>/dev/null || git checkout --orphan gh-pages
-          git checkout gh-pages
-          # Add versioned directory (never overwrite existing releases)
+          # Build-generierte Änderungen an getrackten Dateien (translations/,
+          # sushi-config-Stempel) verwerfen, sonst scheitert der Branch-Wechsel.
+          git checkout -- . 2>/dev/null || true
+          if git fetch origin gh-pages:gh-pages 2>/dev/null; then
+            git checkout -f gh-pages
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . 2>/dev/null || true
+          fi
+          # Statischer, versionierter Snapshot — bestehende Releases bleiben unangetastet
           if [ -d "$VERSION" ]; then
-            echo "WARNING: Version $VERSION already exists, overwriting"
+            echo "WARNUNG: Version $VERSION existiert bereits und wird ersetzt"
             rm -rf "$VERSION"
           fi
           cp -r output "$VERSION"
-          # Update index to point to latest release
-          echo "<html><head><meta http-equiv=\"refresh\" content=\"0; url=${VERSION}/index.html\"></head><body>Redirecting to <a href=\"${VERSION}/index.html\">${VERSION}</a> | <a href=\"ci-build/index.html\">CI Build</a></body></html>" > index.html
-          git add "$VERSION/" index.html
-          git commit -m "release: ${VERSION}"
+          git add "$VERSION/"
+          # Root-Redirect nur beim finalen Release (kein Pre-Release)
+          if [ "$PRERELEASE" != "true" ]; then
+            echo "<html><head><meta http-equiv=\"refresh\" content=\"0; url=${VERSION}/index.html\"></head><body>Redirecting to <a href=\"${VERSION}/index.html\">${VERSION}</a> | <a href=\"ci-build/index.html\">CI Build</a></body></html>" > index.html
+            git add index.html
+          fi
+          git commit -m "release: ${VERSION}" --allow-empty
           git push origin gh-pages
