@@ -45,7 +45,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T13:16:40+00:00",
+  "date" : "2026-07-31T13:26:52+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
