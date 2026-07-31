@@ -30,6 +30,14 @@ EnLiST designates lines as **X.Y per setting axis** (eLoT early · aLoT advanced
 
 Evidence in both directions: in the [mCRC scenario](szenario-crc.md) the overarching goal outlives several palliative lines; induction → maintenance is a **goal change without a line change** (maintenance = **same LoT**); an agent switch for intolerance (`eLoT 1.0 → 1.1`) changes **no goal at all**. EnLiST also explicitly decouples setting and intent.
 
+### One line across organisations — leadership and execution
+
+`EpisodeOfCare` is **bound to an organisation**. A line of therapy that runs across sectors (inpatient neoadjuvant systemic therapy → ambulatory adjuvant pembrolizumab) therefore splits into several episodes — without losing its identity: the **leading episode** (main contributor, typically the coordinating tumor centre) carries the EnLiST designation (`enlist-lot`) with a shared `lineId` — **exactly once per line**; **executing organisations** document their own episodes autonomously and mark them as segments (`enlist-line-segment`) with the same `lineId`, without a designation of their own. With the same site and sector, leadership and execution coincide in a single episode (the normal case); the documenting party chooses the form — **no automatism**. Counting stays trivial: only carriers of `enlist-lot` are counted.
+
+### Connecting encounters (ISiK/KBV) and MII procedures
+
+If the proposed line-of-therapy modelling meets approval, it becomes the docking point in both directions: **encounters** from hospital care (**ISiK**) and ambulatory care (**KBV**) attach via the standard element `Encounter.episodeOfCare`; the **MII procedures** with `performedPeriod` — systemic therapy, radiotherapy and surgery — remain unchanged and are wired via the standard extension `workflow-episodeOfCare`, or, in an MII-only path, carry `enlist-lot`/`enlist-line-segment` directly. This yields the continuous chain **encounter → segment/episode → line (LoT) → goal**.
+
 ### Episode ≠ procedure ≠ encounter
 
 The surgery itself is a `Procedure`; the **perioperative journey** (planning, consent, the operation, post-op stay, rehabilitation, monitoring) spans several `Encounter`s and **is** the episode. Care episodes link to the treatment plan via the `workflow-episodeOfCare` extension; `Encounter` itself is out of scope of this guide.

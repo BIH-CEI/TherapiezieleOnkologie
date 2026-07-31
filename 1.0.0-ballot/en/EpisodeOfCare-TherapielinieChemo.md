@@ -19,10 +19,11 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 * line: 1
 * modification: 0
 * notation: eLoT 1.0
+* lineId: `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`/mamma-baumann-elot-1
 
 **EnLiST-Zählstatus (Extension)**: Zählt in der LoT-Zählung
 
-**Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
+**Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: extension = New LoT; status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
 
 **status**: Finished
 
@@ -99,6 +100,13 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
     {
       "url" : "notation",
       "valueString" : "eLoT 1.0"
+    },
+    {
+      "url" : "lineId",
+      "valueIdentifier" : {
+        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line",
+        "value" : "mamma-baumann-elot-1"
+      }
     }],
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"
   },

@@ -11,7 +11,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-31T13:45:11+00:00",
+  "date" : "2026-07-31T14:14:54+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -934,10 +934,22 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/enlist-line-segment"
+      },
+      "name" : "EnLiST-Linien-Segment (Extension)",
+      "description" : "Markiert einen **ausführenden Behandlungsabschnitt** (Episode einer ausführenden\nEinrichtung bzw. eine Therapie-`Procedure`) als Segment einer geführten Line of\nTherapy. Trägt **keine eigene Designation**, sondern nur die gemeinsame\n`lineId` der Linie (siehe `enlist-lot.lineId` an der führenden Episode).\nSo bleibt jede ausführende Instanz autonom dokumentationsfähig, ohne die\nLoT-Zählung zu duplizieren — Auswerter zählen ausschließlich Träger von\n`enlist-lot`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/enlist-lot"
       },
       "name" : "EnLiST-LoT-Designation (Extension)",
-      "description" : "EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**\n  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse\n  zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht\n  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT\n  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem\n  X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n\nDie Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*\n(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die\nDesignation nicht.",
+      "description" : "EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* im Setting; neue Linie nur bei klinischer\n  Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT;\n  0 = unmodifiziert, Reset bei jedem X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n- `lineId` — Identifier der Linie (System\n  `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet\n  ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional,\n  wenn die Linie aus genau einer Episode besteht.\n\n**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle —\nan der **führenden Episode** (main contributor, `managingOrganization` = die\nkoordinierende Stelle) oder, wo keine Episodenführung existiert, an der\nsystemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,\nnicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)\nverändern die Designation nicht.",
       "exampleBoolean" : false
     },
     {
@@ -985,7 +997,7 @@
         "reference" : "StructureDefinition/enlist-countable"
       },
       "name" : "EnLiST-Zählstatus (Extension)",
-      "description" : "Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf\neiner EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);\n`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale\nBehandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder\nManagement-Abschnitt.",
+      "description" : "Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf\neiner EnLiST-Zählachse (Designation in `enlist-lot` an der führenden Episode\nbzw. Segment-Marker `enlist-line-segment`); `not-counted` — außerhalb jeder\nLoT-Zählung, z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie,\nAblation) oder Management-Abschnitt.",
       "exampleBoolean" : false
     },
     {
@@ -998,6 +1010,18 @@
       },
       "name" : "EnLiST-Zählstatus (ValueSet)",
       "description" : "Alle Zählstatus-Werte nach EnLiST.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/enlist-change"
+      },
+      "name" : "EnLiST-Änderungstyp (Extension)",
+      "description" : "EnLiST-Änderungstyp einer Therapieänderung auf Request-Ebene: **new** (eröffnet\neine neue Linie, X+1 — nur bei Progression/fehlendem Ansprechen), **modified**\n(Y+1 — nicht-progressionsbedingte Änderung; bei Ersetzung eines Vorgängers\nzusätzlich `priorPrescription`) oder **same** (prospektiv geplante Änderung\ninkl. Erhaltungstherapie — Designation unverändert). Die Sequenz geplanter\nBlöcke liegt in der RequestGroup, nicht in `priorPrescription`.",
       "exampleBoolean" : false
     },
     {
@@ -1213,7 +1237,7 @@
         "reference" : "StructureDefinition/onko-therapy-line"
       },
       "name" : "Onkologische Therapielinie",
-      "description" : "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`.",
+      "description" : "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein **fachliches Kontinuum** mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist. Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`.",
       "exampleBoolean" : false
     },
     {
@@ -1273,7 +1297,7 @@
         "reference" : "StructureDefinition/onko-care-plan"
       },
       "name" : "Onkologischer CarePlan",
-      "description" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`\n  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
+      "description" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die\n  Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
       "exampleBoolean" : false
     },
     {

@@ -232,6 +232,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#one-profile-many-types" id="markdown-toc-one-profile-many-types">One profile, many types</a></li>
   <li><a href="#systemic-line-of-therapy-vs-locoregional-treatment-line" id="markdown-toc-systemic-line-of-therapy-vs-locoregional-treatment-line">Systemic line of therapy vs. locoregional treatment line</a></li>
   <li><a href="#line-change--goal-change" id="markdown-toc-line-change--goal-change">Line change ≠ goal change</a></li>
+  <li><a href="#one-line-across-organisations--leadership-and-execution" id="markdown-toc-one-line-across-organisations--leadership-and-execution">One line across organisations — leadership and execution</a></li>
+  <li><a href="#connecting-encounters-isikkbv-and-mii-procedures" id="markdown-toc-connecting-encounters-isikkbv-and-mii-procedures">Connecting encounters (ISiK/KBV) and MII procedures</a></li>
   <li><a href="#episode--procedure--encounter" id="markdown-toc-episode--procedure--encounter">Episode ≠ procedure ≠ encounter</a></li>
 </ul>
 
@@ -248,7 +250,7 @@ FHIR <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>: a 
 of therapy, locoregional treatment line, active surveillance / watchful waiting, aftercare.
 The list is open (e.g. induction/consolidation/maintenance for haematological disease).</p>
 
-<svg width="100%" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<svg width="100%" viewBox="0 0 680 396" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
 <title>Behandlungsepisoden: ein Profil, viele Arten, drei Modalitätsspuren</title>
 <desc>Zeitstrahl mit Behandlungsepisoden in drei Spuren: systemische Therapielinien (EnLiST, in der LoT-Zaehlung), lokoregionale Behandlungslinien (nicht gezaehlt) und informative bzw. Management-Abschnitte. Alle sind dasselbe EpisodeOfCare-Profil, die Art steht in type. Die Operation selbst ist ein Procedure innerhalb der perioperativen Episode.</desc>
 <defs>
@@ -267,6 +269,12 @@ The list is open (e.g. induction/consolidation/maintenance for haematological di
 
 <line x1="140" y1="111" x2="655" y2="111" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
 <line x1="140" y1="185" x2="655" y2="185" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
+
+<rect x="262" y="38" width="292" height="144" rx="10" fill="none" stroke="#534AB7" stroke-width="1.4" stroke-dasharray="6,5" />
+<line x1="554" y1="96" x2="558" y2="96" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3" />
+<text x="560" y="86" font-size="9" font-weight="500" fill="#534AB7">übergeordnete kurative</text>
+<text x="560" y="100" font-size="9" font-weight="500" fill="#534AB7">Episode — Gesamtkonzept</text>
+<text x="560" y="114" font-size="8.5" fill="#5F5E5A">die Unterlinien darin</text>
 
 <g><rect x="145" y="198" width="115" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
 <text x="202" y="218" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Diagnostiklinie</text>
@@ -292,10 +300,12 @@ The list is open (e.g. induction/consolidation/maintenance for haematological di
 
 <text x="40" y="302" font-size="9.5" fill="#5F5E5A">Perioperative Episode = die Reise (Planung → OP → Reha); die OP selbst ist ein Procedure, einzelne Kontakte sind Encounter.</text>
 <text x="40" y="318" font-size="9.5" fill="#5F5E5A">In die LoT-Zählung (EnLiST) gehen nur systemische Linien ein — lokoregionale Linien und Management-Abschnitte nicht.</text>
+<text x="40" y="334" font-size="9.5" fill="#5F5E5A">Die kurative Gesamt-Episode klammert die Unterlinien — neoadjuvante Systemtherapie, OP, adjuvante Therapie — zu einem Konzept.</text>
 
-<rect x="40" y="342" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="353" font-size="11" fill="#5F5E5A">Behandlungsepisode (EpisodeOfCare — ein Profil)</text>
-<circle cx="342" cy="348" r="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="357" y="353" font-size="11" fill="#5F5E5A">LoT-Zähler</text>
-<circle cx="435" cy="348" r="3" fill="#534AB7" /><text x="446" y="353" font-size="11" fill="#5F5E5A">Procedure (Ereignis)</text>
+<rect x="40" y="358" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="369" font-size="11" fill="#5F5E5A">Behandlungsepisode (EpisodeOfCare — ein Profil)</text>
+<circle cx="342" cy="364" r="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="357" y="369" font-size="11" fill="#5F5E5A">LoT-Zähler</text>
+<circle cx="435" cy="364" r="3" fill="#534AB7" /><text x="446" y="369" font-size="11" fill="#5F5E5A">Procedure (Ereignis)</text>
+<rect x="560" y="358" width="18" height="13" rx="4" fill="none" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3" /><text x="584" y="369" font-size="11" fill="#5F5E5A">Gesamtkonzept</text>
 </svg>
 
 <h3 id="systemic-line-of-therapy-vs-locoregional-treatment-line">Systemic line of therapy vs. locoregional treatment line</h3>
@@ -365,6 +375,31 @@ overarching goal outlives several palliative lines; induction → maintenance is
 for intolerance (<code class="language-plaintext highlighter-rouge">eLoT 1.0 → 1.1</code>) changes <strong>no goal at all</strong>. EnLiST also
 explicitly decouples setting and intent.</p>
 
+<h3 id="one-line-across-organisations--leadership-and-execution">One line across organisations — leadership and execution</h3>
+
+<p><code class="language-plaintext highlighter-rouge">EpisodeOfCare</code> is <strong>bound to an organisation</strong>. A line of therapy that runs
+across sectors (inpatient neoadjuvant systemic therapy → ambulatory adjuvant
+pembrolizumab) therefore splits into several episodes — without losing its
+identity: the <strong>leading episode</strong> (main contributor, typically the coordinating
+tumor centre) carries the EnLiST designation (<code class="language-plaintext highlighter-rouge">enlist-lot</code>) with a shared
+<code class="language-plaintext highlighter-rouge">lineId</code> — <strong>exactly once per line</strong>; <strong>executing organisations</strong> document their
+own episodes autonomously and mark them as segments (<code class="language-plaintext highlighter-rouge">enlist-line-segment</code>) with
+the same <code class="language-plaintext highlighter-rouge">lineId</code>, without a designation of their own. With the same site and
+sector, leadership and execution coincide in a single episode (the normal case);
+the documenting party chooses the form — <strong>no automatism</strong>. Counting stays
+trivial: only carriers of <code class="language-plaintext highlighter-rouge">enlist-lot</code> are counted.</p>
+
+<h3 id="connecting-encounters-isikkbv-and-mii-procedures">Connecting encounters (ISiK/KBV) and MII procedures</h3>
+
+<p>If the proposed line-of-therapy modelling meets approval, it becomes the docking
+point in both directions: <strong>encounters</strong> from hospital care (<strong>ISiK</strong>) and
+ambulatory care (<strong>KBV</strong>) attach via the standard element
+<code class="language-plaintext highlighter-rouge">Encounter.episodeOfCare</code>; the <strong>MII procedures</strong> with <code class="language-plaintext highlighter-rouge">performedPeriod</code> —
+systemic therapy, radiotherapy and surgery — remain unchanged and are wired via
+the standard extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code>, or, in an MII-only path,
+carry <code class="language-plaintext highlighter-rouge">enlist-lot</code>/<code class="language-plaintext highlighter-rouge">enlist-line-segment</code> directly. This yields the continuous
+chain <strong>encounter → segment/episode → line (LoT) → goal</strong>.</p>
+
 <h3 id="episode--procedure--encounter">Episode ≠ procedure ≠ encounter</h3>
 
 <p>The surgery itself is a <code class="language-plaintext highlighter-rouge">Procedure</code>; the <strong>perioperative journey</strong> (planning, consent, the
@@ -400,7 +435,7 @@ episode. Care episodes link to the treatment plan via the <code class="language-
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-31 13:45:00 +0000">
+  <span title="2026-07-31 14:14:00 +0000">
     2026-07-31
   </span>
 

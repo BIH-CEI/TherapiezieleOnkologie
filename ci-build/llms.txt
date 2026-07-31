@@ -53,7 +53,9 @@
 
 ### Extensions
 
+* [EnLiST-Änderungstyp (Extension)](de/StructureDefinition-enlist-change.md)
 * [EnLiST-Zählstatus (Extension)](de/StructureDefinition-enlist-countable.md)
+* [EnLiST-Linien-Segment (Extension)](de/StructureDefinition-enlist-line-segment.md)
 * [EnLiST-LoT-Designation (Extension)](de/StructureDefinition-enlist-lot.md)
 * [CarePlan Custodian (Extension)](de/StructureDefinition-onko-careplan-custodian.md)
 * [Onkologische Therapieintention (Extension)](de/StructureDefinition-onko-therapy-intent.md)

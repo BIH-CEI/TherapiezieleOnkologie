@@ -14,7 +14,11 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 * hauptintention: Adjuvant - intent
 * phase: Maintenance antineoplastic therapy
 
-**Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroAdjuvantMamma.md)
+**EnLiST-Linien-Segment (Extension)**: `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`/mamma-baumann-elot-1
+
+**EnLiST-Zählstatus (Extension)**: Zählt in der LoT-Zählung
+
+**Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: extension = Same LoT; status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroAdjuvantMamma.md)
 
 **status**: Active
 
@@ -68,6 +72,23 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
       }
     }],
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment",
+    "valueIdentifier" : {
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line",
+      "value" : "mamma-baumann-elot-1"
+    }
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+        "code" : "counted",
+        "display" : "Zählt in der LoT-Zählung"
+      }]
+    }
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",

@@ -5,10 +5,24 @@
   "jurisdiction": "DE",
   "extensions": [
     {
+      "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change",
+      "title": "EnLiST-Änderungstyp (Extension)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
       "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
       "title": "EnLiST-Zählstatus (Extension)",
       "types": [
         "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment",
+      "title": "EnLiST-Linien-Segment (Extension)",
+      "types": [
+        "Identifier"
       ]
     },
     {
@@ -19,6 +33,7 @@
         "positiveInt",
         "unsignedInt",
         "string",
+        "Identifier",
         "base64Binary",
         "boolean",
         "canonical",
@@ -277,8 +292,15 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
+    "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change": [
+      "Bundle.entry.resource",
+      "MedicationRequest"
+    ],
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable": [
       "Bundle.entry.resource",
+      "EpisodeOfCare"
+    ],
+    "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment": [
       "EpisodeOfCare"
     ],
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot": [

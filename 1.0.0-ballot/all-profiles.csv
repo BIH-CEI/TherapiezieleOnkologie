@@ -157,12 +157,32 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Maßnahmentyp","prozedur (Operation, Bestrahlung, Diagnostik) oder medikation (Systemtherapie).","","","","","","","","","",,,,,"",,,,"TherapiezielDreieck.versorgungsplan.massnahme.typ",1,1,"",""
 "TherapiezielDreieck","TherapiezielDreieck.versorgungsplan.massnahme.anforderung","TherapiezielDreieck.versorgungsplan.massnahme.anforderung","","","",1,1,"","","","Reference {[]} {[]}
 ","Anforderung","Die zugehörige Anforderung (Prozedur- bzw. Medikations-Request).","","","","","","","","","",,,,,"",,,,"TherapiezielDreieck.versorgungsplan.massnahme.anforderung",1,1,"",""
+"enlist-change","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","EnLiST-Änderungstyp (Extension)","EnLiST-Änderungstyp einer Therapieänderung auf Request-Ebene: **new** (eröffnet
+eine neue Linie, X+1 — nur bei Progression/fehlendem Ansprechen), **modified**
+(Y+1 — nicht-progressionsbedingte Änderung; bei Ersetzung eines Vorgängers
+zusätzlich `priorPrescription`) oder **same** (prospektiv geplante Änderung
+inkl. Erhaltungstherapie — Designation unverändert). Die Sequenz geplanter
+Blöcke liegt in der RequestGroup, nicht in `priorPrescription`.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"enlist-change","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"enlist-change","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"enlist-change","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"enlist-change","Extension.value[x]","Extension.value[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Änderungstyp","EnLiST-Änderungstyp — new, modified oder same.","","","","","","","","","",,"required","","https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type","",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
 "enlist-countable","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
 ","EnLiST-Zählstatus (Extension)","Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf
-einer EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);
-`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale
-Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder
-Management-Abschnitt.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+einer EnLiST-Zählachse (Designation in `enlist-lot` an der führenden Episode
+bzw. Segment-Marker `enlist-line-segment`); `not-counted` — außerhalb jeder
+LoT-Zählung, z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie,
+Ablation) oder Management-Abschnitt.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "enlist-countable","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
@@ -176,25 +196,50 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "enlist-countable","Extension.value[x]","Extension.value[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Zählstatus","Zählstatus nach EnLiST — counted oder not-counted.","","","","","","","","","",,"required","","https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable","",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"enlist-lot","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","EnLiST-LoT-Designation (Extension)","EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:
-
-- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),
-  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**
-  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse
-  zählt **getrennt**.
-- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht
-  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
-- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT
-  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem
-  X-Inkrement.
-- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1"".
-
-Die Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*
-(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die
-Designation nicht.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+"enlist-line-segment","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","EnLiST-Linien-Segment (Extension)","Markiert einen **ausführenden Behandlungsabschnitt** (Episode einer ausführenden
+Einrichtung bzw. eine Therapie-`Procedure`) als Segment einer geführten Line of
+Therapy. Trägt **keine eigene Designation**, sondern nur die gemeinsame
+`lineId` der Linie (siehe `enlist-lot.lineId` an der führenden Episode).
+So bleibt jede ausführende Instanz autonom dokumentationsfähig, ohne die
+LoT-Zählung zu duplizieren — Auswerter zählen ausschließlich Träger von
+`enlist-lot`.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"enlist-line-segment","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"enlist-line-segment","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"enlist-line-segment","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"enlist-line-segment","Extension.value[x]","Extension.value[x]","","","",1,1,"","","","Identifier {[]} {[]}
+","Linien-Identifier","Identifier der Linie, zu der dieses Segment gehört.","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"enlist-lot","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","EnLiST-LoT-Designation (Extension)","EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:
+
+- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),
+  **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.
+- `line` (X) — Zahl der *New LoTs* im Setting; neue Linie nur bei klinischer
+  Progression (cPD) oder fehlendem adäquatem Ansprechen.
+- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT;
+  0 = unmodifiziert, Reset bei jedem X-Inkrement.
+- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1"".
+- `lineId` — Identifier der Linie (System
+  `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet
+  ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional,
+  wenn die Linie aus genau einer Episode besteht.
+
+**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle —
+an der **führenden Episode** (main contributor, `managingOrganization` = die
+koordinierende Stelle) oder, wo keine Episodenführung existiert, an der
+systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,
+nicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)
+verändern die Designation nicht.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}onko-enlist-2:Die notation (falls vorhanden) muss aus setting, line und modification zusammengesetzt sein (z. B. 'eLoT 1.0'). {extension.where(url = 'notation').exists() implies extension.where(url = 'notation').value = extension.where(url = 'setting').value.ofType(CodeableConcept).coding.first().code + ' ' + extension.where(url = 'line').value.toString() + '.' + extension.where(url = 'modification').value.toString()}"
 "enlist-lot","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "enlist-lot","Extension.extension","Extension.extension","","","",3,*,"","","","Extension {[]} {[]}
@@ -255,6 +300,20 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "enlist-lot","Extension.extension:notation.url","Extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""notation""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
 "enlist-lot","Extension.extension:notation.value[x]","Extension.extension.value[x]","","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"enlist-lot","Extension.extension:lineId","Extension.extension","lineId","","",0,1,"Y","","","Extension {[]} {[]}
+","Linien-Identifier","Gemeinsamer Identifier der Linie — verkettet ausführende Segmente mit der geführten Linie.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"enlist-lot","Extension.extension:lineId.id","Extension.extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"enlist-lot","Extension.extension:lineId.extension","Extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"enlist-lot","Extension.extension:lineId.url","Extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""lineId""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"enlist-lot","Extension.extension:lineId.value[x]","Extension.extension.value[x]","","","",0,1,"","","","Identifier {[]} {[]}
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "enlist-lot","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
@@ -1790,7 +1849,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "onko-therapy-line","EpisodeOfCare","EpisodeOfCare","","Case Program Problem
 ","",0,*,"","","","null {[]} {[]}
 ","An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility","An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.","","","","","","","","","",,,,,"",,,,"EpisodeOfCare",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
-dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}onko-enlist-1:Eine EnLiST-LoT-Designation (enlist-lot) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist. {extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() implies extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists()}"
+dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}onko-enlist-1:Eine EnLiST-LoT-Designation (enlist-lot) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist. {extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() implies extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists()}onko-enlist-3:Zählstatus 'counted' erfordert eine EnLiST-Designation (enlist-lot, führende Episode) oder einen Segment-Marker (enlist-line-segment, ausführende Episode). {extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists() implies (extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() or extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment').exists())}onko-enlist-4:enlist-lot (führende Episode) und enlist-line-segment (ausführendes Segment) dürfen nicht an derselben Episode vorliegen. {(extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() and extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment').exists()).not()}"
 "onko-therapy-line","EpisodeOfCare.id","EpisodeOfCare.id","","","",0,1,"","","Y","id {[]} {[]}
 ","Logical id of this artifact","The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.","The only time that a resource does not have an id is when it is being submitted to the server using a create operation.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
 "onko-therapy-line","EpisodeOfCare.meta","EpisodeOfCare.meta","","","",0,1,"","","Y","Meta {[]} {[]}
@@ -1823,6 +1882,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "onko-therapy-line","EpisodeOfCare.extension:lot","EpisodeOfCare.extension","lot","","",0,1,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot]]} {[]}
 ","EnLiST-LoT-Designation","X.Y-Designation je Setting-Achse — eLoT, aLoT oder iLoT — nach EnLiST.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}onko-enlist-2:Die notation (falls vorhanden) muss aus setting, line und modification zusammengesetzt sein (z. B. 'eLoT 1.0'). {extension.where(url = 'notation').exists() implies extension.where(url = 'notation').value = extension.where(url = 'setting').value.ofType(CodeableConcept).coding.first().code + ' ' + extension.where(url = 'line').value.toString() + '.' + extension.where(url = 'modification').value.toString()}"
+"onko-therapy-line","EpisodeOfCare.extension:lineSegment","EpisodeOfCare.extension","lineSegment","","",0,1,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment]]} {[]}
+","EnLiST-Linien-Segment","Segment-Marker einer ausführenden Einrichtung — gemeinsame lineId, keine eigene Designation.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "onko-therapy-line","EpisodeOfCare.extension:countable","EpisodeOfCare.extension","countable","","",0,1,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable]]} {[]}
@@ -1939,9 +2002,13 @@ htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
 "onko-tumorboard-medication-request","MedicationRequest.contained","MedicationRequest.contained","","inline resources
 anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Contained, inline Resources","These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"",""
-"onko-tumorboard-medication-request","MedicationRequest.extension","MedicationRequest.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"onko-tumorboard-medication-request","MedicationRequest.extension","MedicationRequest.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"onko-tumorboard-medication-request","MedicationRequest.extension:changeType","MedicationRequest.extension","changeType","","",0,1,"Y","","","Extension {[CanonicalType[https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change]]} {[]}
+","EnLiST-Änderungstyp","Änderungstyp nach EnLiST — new, modified oder same.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "onko-tumorboard-medication-request","MedicationRequest.modifierExtension","MedicationRequest.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}

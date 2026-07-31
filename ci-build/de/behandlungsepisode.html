@@ -225,6 +225,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#ein-profil-viele-arten" id="markdown-toc-ein-profil-viele-arten">Ein Profil, viele Arten</a></li>
   <li><a href="#systemische-therapielinie-vs-lokoregionale-behandlungslinie" id="markdown-toc-systemische-therapielinie-vs-lokoregionale-behandlungslinie">Systemische Therapielinie vs. lokoregionale Behandlungslinie</a></li>
   <li><a href="#linienwechsel--zielwechsel" id="markdown-toc-linienwechsel--zielwechsel">Linienwechsel ≠ Zielwechsel</a></li>
+  <li><a href="#eine-linie-über-mehrere-einrichtungen--führung-und-ausführung" id="markdown-toc-eine-linie-über-mehrere-einrichtungen--führung-und-ausführung">Eine Linie über mehrere Einrichtungen — Führung und Ausführung</a></li>
+  <li><a href="#anschluss-an-versorgungskontakte-isikkbv-und-mii-prozeduren" id="markdown-toc-anschluss-an-versorgungskontakte-isikkbv-und-mii-prozeduren">Anschluss an Versorgungskontakte (ISiK/KBV) und MII-Prozeduren</a></li>
   <li><a href="#episode--prozedur--kontakt" id="markdown-toc-episode--prozedur--kontakt">Episode ≠ Prozedur ≠ Kontakt</a></li>
   <li><a href="#verknüpfung-mit-dem-versorgungsplan" id="markdown-toc-verknüpfung-mit-dem-versorgungsplan">Verknüpfung mit dem Versorgungsplan</a></li>
   <li><a href="#beispiele" id="markdown-toc-beispiele">Beispiele</a></li>
@@ -284,7 +286,7 @@ extensible). Häufige Arten:</p>
 Konsolidierung/Erhaltung bei hämatologischen Erkrankungen) lassen sich ergänzen, ohne
 das Modell zu ändern.</p>
 
-<svg width="100%" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<svg width="100%" viewBox="0 0 680 396" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
 <title>Behandlungsepisoden: ein Profil, viele Arten, drei Modalitätsspuren</title>
 <desc>Zeitstrahl mit Behandlungsepisoden in drei Spuren: systemische Therapielinien (EnLiST, in der LoT-Zaehlung), lokoregionale Behandlungslinien (nicht gezaehlt) und informative bzw. Management-Abschnitte. Alle sind dasselbe EpisodeOfCare-Profil, die Art steht in type. Die Operation selbst ist ein Procedure innerhalb der perioperativen Episode.</desc>
 <defs>
@@ -303,6 +305,12 @@ das Modell zu ändern.</p>
 
 <line x1="140" y1="111" x2="655" y2="111" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
 <line x1="140" y1="185" x2="655" y2="185" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
+
+<rect x="262" y="38" width="292" height="144" rx="10" fill="none" stroke="#534AB7" stroke-width="1.4" stroke-dasharray="6,5" />
+<line x1="554" y1="96" x2="558" y2="96" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3" />
+<text x="560" y="86" font-size="9" font-weight="500" fill="#534AB7">übergeordnete kurative</text>
+<text x="560" y="100" font-size="9" font-weight="500" fill="#534AB7">Episode — Gesamtkonzept</text>
+<text x="560" y="114" font-size="8.5" fill="#5F5E5A">die Unterlinien darin</text>
 
 <g><rect x="145" y="198" width="115" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
 <text x="202" y="218" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Diagnostiklinie</text>
@@ -328,10 +336,12 @@ das Modell zu ändern.</p>
 
 <text x="40" y="302" font-size="9.5" fill="#5F5E5A">Perioperative Episode = die Reise (Planung → OP → Reha); die OP selbst ist ein Procedure, einzelne Kontakte sind Encounter.</text>
 <text x="40" y="318" font-size="9.5" fill="#5F5E5A">In die LoT-Zählung (EnLiST) gehen nur systemische Linien ein — lokoregionale Linien und Management-Abschnitte nicht.</text>
+<text x="40" y="334" font-size="9.5" fill="#5F5E5A">Die kurative Gesamt-Episode klammert die Unterlinien — neoadjuvante Systemtherapie, OP, adjuvante Therapie — zu einem Konzept.</text>
 
-<rect x="40" y="342" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="353" font-size="11" fill="#5F5E5A">Behandlungsepisode (EpisodeOfCare — ein Profil)</text>
-<circle cx="342" cy="348" r="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="357" y="353" font-size="11" fill="#5F5E5A">LoT-Zähler</text>
-<circle cx="435" cy="348" r="3" fill="#534AB7" /><text x="446" y="353" font-size="11" fill="#5F5E5A">Procedure (Ereignis)</text>
+<rect x="40" y="358" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="369" font-size="11" fill="#5F5E5A">Behandlungsepisode (EpisodeOfCare — ein Profil)</text>
+<circle cx="342" cy="364" r="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="357" y="369" font-size="11" fill="#5F5E5A">LoT-Zähler</text>
+<circle cx="435" cy="364" r="3" fill="#534AB7" /><text x="446" y="369" font-size="11" fill="#5F5E5A">Procedure (Ereignis)</text>
+<rect x="560" y="358" width="18" height="13" rx="4" fill="none" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3" /><text x="584" y="369" font-size="11" fill="#5F5E5A">Gesamtkonzept</text>
 </svg>
 
 <h3 id="systemische-therapielinie-vs-lokoregionale-behandlungslinie">Systemische Therapielinie vs. lokoregionale Behandlungslinie</h3>
@@ -416,6 +426,52 @@ Wirkstoffwechsel wegen Intoleranz (z. B. Letrozol → Anastrozol, <code class="l
 entkoppelt Setting und Intention ausdrücklich (kurative Oligometastasen-Therapie
 im advanced Setting, palliative Frühphasen-Therapie).</p>
 
+<h3 id="eine-linie-über-mehrere-einrichtungen--führung-und-ausführung">Eine Linie über mehrere Einrichtungen — Führung und Ausführung</h3>
+
+<p><code class="language-plaintext highlighter-rouge">EpisodeOfCare</code> ist <strong>organisationsgebunden</strong>. Eine Line of Therapy, die
+sektorübergreifend läuft (z. B. stationäre neoadjuvante Systemtherapie →
+ambulantes adjuvantes Pembrolizumab), zerfällt daher organisatorisch in mehrere
+Episoden — <strong>ohne</strong> dass die Linie ihre Identität verliert:</p>
+
+<ul>
+  <li>Die <strong>führende Episode</strong> (main contributor — typischerweise die koordinierende
+Stelle, z. B. das Tumorzentrum) trägt die EnLiST-Designation (<code class="language-plaintext highlighter-rouge">enlist-lot</code>)
+samt gemeinsamer <code class="language-plaintext highlighter-rouge">lineId</code> — <strong>genau einmal je Linie</strong>.</li>
+  <li><strong>Ausführende Einrichtungen</strong> dokumentieren autonom eigene Episoden und
+markieren sie als Segmente (<code class="language-plaintext highlighter-rouge">enlist-line-segment</code>) mit derselben <code class="language-plaintext highlighter-rouge">lineId</code> —
+ohne eigene Designation.</li>
+  <li>Bei <strong>gleichem Ort und Sektor</strong> fallen Führung und Ausführung in einer
+einzigen Episode zusammen (der Normalfall, z. B. im mCRC-Beispiel). Die Wahl
+der Form trifft die dokumentierende Stelle — <strong>kein Automatismus</strong>.</li>
+</ul>
+
+<p>Die LoT-Zählung bleibt damit trivial: Gezählt werden ausschließlich Träger von
+<code class="language-plaintext highlighter-rouge">enlist-lot</code>; Segmente können nie doppelt zählen.</p>
+
+<h3 id="anschluss-an-versorgungskontakte-isikkbv-und-mii-prozeduren">Anschluss an Versorgungskontakte (ISiK/KBV) und MII-Prozeduren</h3>
+
+<p>Findet die vorgeschlagene Therapielinien-Modellierung Zustimmung, ist sie der
+<strong>Andockpunkt in beide Richtungen</strong> der Versorgungsdokumentation:</p>
+
+<ul>
+  <li><strong>Kontakte aus der Versorgung:</strong> <code class="language-plaintext highlighter-rouge">Encounter</code> aus dem Krankenhausumfeld
+(<strong>ISiK</strong>) wie aus der vertragsärztlichen Versorgung (<strong>KBV</strong>) verweisen über
+das Standard-Element <code class="language-plaintext highlighter-rouge">Encounter.episodeOfCare</code> auf die jeweilige
+(Segment-)Episode — die einzelnen Kontakte hängen sich an die Linie, ohne dass
+dieser Leitfaden Encounter selbst profilieren muss (bewusst out of scope).</li>
+  <li><strong>MII-Prozeduren:</strong> Die im MII KDS Onkologie als <code class="language-plaintext highlighter-rouge">Procedure</code> mit
+<code class="language-plaintext highlighter-rouge">performedPeriod</code> modellierten Therapieblöcke — <strong>systemische Therapie,
+Strahlentherapie und Operationen</strong> — bleiben unverändert und werden verkabelt:
+über die Standard-Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code> (Procedure → Episode)
+bzw. im MII-only-Pfad direkt über <code class="language-plaintext highlighter-rouge">enlist-lot</code>/<code class="language-plaintext highlighter-rouge">enlist-line-segment</code> an der
+Procedure selbst (die MII-SYST-Procedure trägt Intention, Stellung zur OP und
+Zeitraum ohnehin bereits — die LoT-Angabe fügt sich dort nativ ein).</li>
+</ul>
+
+<p>So entsteht die durchgehende Kette <strong>Kontakt (Encounter) → Segment/Episode →
+Linie (LoT) → Ziel</strong> — von der einzelnen Ambulanz-Sitzung bis zur strategischen
+Therapieintention.</p>
+
 <h3 id="episode--prozedur--kontakt">Episode ≠ Prozedur ≠ Kontakt</h3>
 
 <p>Wichtige Abgrenzung am Beispiel Chirurgie: Die <strong>Operation selbst</strong> ist ein
@@ -480,7 +536,7 @@ anschließende Operation als getrennte Abschnitte.</li>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-31 13:45:00 +0000">
+  <span title="2026-07-31 14:14:00 +0000">
     2026-07-31
   </span>
 

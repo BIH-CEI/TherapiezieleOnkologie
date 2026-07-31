@@ -10,6 +10,8 @@
 
 Profile: [Tumorboard MedicationRequest](StructureDefinition-onko-tumorboard-medication-request.md)
 
+**EnLiST-Änderungstyp (Extension)**: Same LoT
+
 **status**: Active
 
 **intent**: Plan
@@ -31,6 +33,16 @@ Profile: [Tumorboard MedicationRequest](StructureDefinition-onko-tumorboard-medi
   "meta" : {
     "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"]
   },
+  "extension" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+        "code" : "same",
+        "display" : "Same LoT"
+      }]
+    }
+  }],
   "status" : "active",
   "intent" : "plan",
   "category" : [{

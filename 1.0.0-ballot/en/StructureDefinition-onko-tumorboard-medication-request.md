@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-tumorboard-m
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T13:45:11+00:00",
+  "date" : "2026-07-31T14:14:54+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -111,6 +111,58 @@ Other representations of profile: [CSV](../StructureDefinition-onko-tumorboard-m
     "element" : [{
       "id" : "MedicationRequest",
       "path" : "MedicationRequest"
+    },
+    {
+      "id" : "MedicationRequest.extension",
+      "path" : "MedicationRequest.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "MedicationRequest.extension:changeType",
+      "path" : "MedicationRequest.extension",
+      "sliceName" : "changeType",
+      "short" : "EnLiST-Änderungstyp",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST change type"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Änderungstyp nach EnLiST — new, modified oder same.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST change type — new, modified or same."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "MedicationRequest.status",

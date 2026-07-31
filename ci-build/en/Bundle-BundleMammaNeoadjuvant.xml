@@ -1022,6 +1022,12 @@
           <extension url="notation">
             <valueString value="eLoT 1.0"/>
           </extension>
+          <extension url="lineId">
+            <valueIdentifier>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line"/>
+              <value value="mamma-baumann-elot-1"/>
+            </valueIdentifier>
+          </extension>
         </extension>
         <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable">
           <valueCodeableConcept>
@@ -1345,8 +1351,17 @@
         </meta>
         <language value="en"/>
         <text>
-          <status value="generated"/>
+          <status value="extensions"/>
         </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type"/>
+              <code value="new"/>
+              <display value="New LoT"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
         <status value="completed"/>
         <intent value="plan"/>
         <category>

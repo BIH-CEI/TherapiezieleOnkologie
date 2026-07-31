@@ -33,11 +33,11 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 * [MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2025-11-01; note = Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.md)
 * [MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2026-02-10; note = Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.md)
 * [MedicationAdministration: status = completed; medication[x] = ; effective[x] = 2026-03-15; note = Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.md)
-**reference**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
+**reference**: [MedicationRequest: extension = New LoT; status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
 
 > **activity****outcomeReference**: [Procedure Lumpectomy of breast (procedure)](Procedure-ProcedureOperationMamma.md)**reference**: [ServiceRequest Lumpectomy of breast (procedure)](ServiceRequest-ServiceRequestProcedure.md)
 
-> **activity****reference**: [MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroAdjuvantMamma.md)
+> **activity****reference**: [MedicationRequest: extension = Same LoT; status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroAdjuvantMamma.md)
 
 > **activity****outcomeReference**: [Observation Cancer disease progression](Observation-ObsDiseaseStatusMamma.md)
 

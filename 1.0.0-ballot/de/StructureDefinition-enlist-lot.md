@@ -2,14 +2,15 @@
 
 ## Extension: EnLiST-LoT-Designation (Extension) 
 
-EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:
+EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:
 
-* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT** (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse zählt **getrennt**.
-* `line` (X) — Zahl der **New LoTs** in diesem Setting; eine neue Linie entsteht nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
-* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem X-Inkrement.
+* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.
+* `line` (X) — Zahl der **New LoTs** im Setting; neue Linie nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
+* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT; 0 = unmodifiziert, Reset bei jedem X-Inkrement.
 * `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1".
+* `lineId` — Identifier der Linie (System `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional, wenn die Linie aus genau einer Episode besteht.
 
-Die Designation wird **dokumentiert erfasst, nicht berechnet**. **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die Designation nicht.
+**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle — an der **führenden Episode** (main contributor, `managingOrganization` = die koordinierende Stelle) oder, wo keine Episodenführung existiert, an der systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst, nicht berechnet; **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltung) verändern die Designation nicht.
 
 **Context of Use**
 
@@ -35,6 +36,8 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 #### Terminology Bindings (Differential)
 
+#### Constraints
+
 #### Terminology Bindings
 
 #### Constraints
@@ -43,18 +46,21 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Complex Extension: EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**: 
-* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT** (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse zählt **getrennt**.
-* `line` (X) — Zahl der **New LoTs** in diesem Setting; eine neue Linie entsteht nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
-* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem X-Inkrement.
+Complex Extension: EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**: 
+* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.
+* `line` (X) — Zahl der **New LoTs** im Setting; neue Linie nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
+* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT; 0 = unmodifiziert, Reset bei jedem X-Inkrement.
 * `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1".
- Die Designation wird **dokumentiert erfasst, nicht berechnet**. **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die Designation nicht.
+* `lineId` — Identifier der Linie (System `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional, wenn die Linie aus genau einer Episode besteht.
+ **Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle — an der **führenden Episode** (main contributor, `managingOrganization` = die koordinierende Stelle) oder, wo keine Episodenführung existiert, an der systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst, nicht berechnet; **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltung) verändern die Designation nicht.
 
  **Differential-AnsichtDifferential View** 
 
 Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
 
 #### Terminology Bindings (Differential)
+
+#### Constraints
 
  **Snapshot-Ansicht** 
 
@@ -66,12 +72,13 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Complex Extension: EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**: 
-* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT** (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse zählt **getrennt**.
-* `line` (X) — Zahl der **New LoTs** in diesem Setting; eine neue Linie entsteht nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
-* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem X-Inkrement.
+Complex Extension: EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**: 
+* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.
+* `line` (X) — Zahl der **New LoTs** im Setting; neue Linie nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
+* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT; 0 = unmodifiziert, Reset bei jedem X-Inkrement.
 * `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1".
- Die Designation wird **dokumentiert erfasst, nicht berechnet**. **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die Designation nicht.
+* `lineId` — Identifier der Linie (System `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional, wenn die Linie aus genau einer Episode besteht.
+ **Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle — an der **führenden Episode** (main contributor, `managingOrganization` = die koordinierende Stelle) oder, wo keine Episodenführung existiert, an der systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst, nicht berechnet; **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltung) verändern die Designation nicht.
 
  
 
@@ -103,7 +110,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-lot.c
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T13:45:11+00:00",
+  "date" : "2026-07-31T14:14:54+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -112,7 +119,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-lot.c
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**\n  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse\n  zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht\n  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT\n  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem\n  X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n\nDie Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*\n(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die\nDesignation nicht.",
+  "description" : "EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* im Setting; neue Linie nur bei klinischer\n  Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT;\n  0 = unmodifiziert, Reset bei jedem X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n- `lineId` — Identifier der Linie (System\n  `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet\n  ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional,\n  wenn die Linie aus genau einer Episode besteht.\n\n**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle —\nan der **führenden Episode** (main contributor, `managingOrganization` = die\nkoordinierende Stelle) oder, wo keine Episodenführung existiert, an der\nsystemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,\nnicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)\nverändern die Designation nicht.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -121,7 +128,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-lot.c
       },
       {
         "url" : "content",
-        "valueString" : "EnLiST designation of the systemic line of therapy in X.Y notation per setting axis: setting — eLoT early, aLoT advanced or iLoT investigational, each counted separately; line X — number of new LoTs, incremented only on clinical progression or lack of adequate response; modification Y — number of modified LoTs since the last new LoT, 0 when unmodified; notation — optional display such as aLoT 2.1. The designation is recorded, not computed."
+        "valueString" : "EnLiST designation of the systemic line of therapy in X.Y notation per setting axis. The line of therapy is a clinical continuum that may span multiple organisation-bound episodes; the designation exists exactly once per line — on the leading episode or, in the MII-only path, on the systemic therapy procedure. Executing segments link via the shared lineId. Recorded, not computed."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -144,6 +151,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-lot.c
   "context" : [{
     "type" : "element",
     "expression" : "EpisodeOfCare"
+  },
+  {
+    "type" : "element",
+    "expression" : "Procedure"
   }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
@@ -153,7 +164,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-lot.c
       "id" : "Extension",
       "path" : "Extension",
       "short" : "EnLiST-LoT-Designation (Extension)",
-      "definition" : "EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**\n  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse\n  zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht\n  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT\n  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem\n  X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n\nDie Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*\n(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die\nDesignation nicht."
+      "definition" : "EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* im Setting; neue Linie nur bei klinischer\n  Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT;\n  0 = unmodifiziert, Reset bei jedem X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n- `lineId` — Identifier der Linie (System\n  `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet\n  ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional,\n  wenn die Linie aus genau einer Episode besteht.\n\n**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle —\nan der **führenden Episode** (main contributor, `managingOrganization` = die\nkoordinierende Stelle) oder, wo keine Episodenführung existiert, an der\nsystemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,\nnicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)\nverändern die Designation nicht.",
+      "constraint" : [{
+        "key" : "onko-enlist-2",
+        "severity" : "warning",
+        "human" : "Die notation (falls vorhanden) muss aus setting, line und modification zusammengesetzt sein (z. B. 'eLoT 1.0').",
+        "expression" : "extension.where(url = 'notation').exists() implies extension.where(url = 'notation').value = extension.where(url = 'setting').value.ofType(CodeableConcept).coding.first().code + ' ' + extension.where(url = 'line').value.toString() + '.' + extension.where(url = 'modification').value.toString()",
+        "source" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"
+      }]
     },
     {
       "id" : "Extension.extension",
@@ -373,6 +391,59 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-lot.c
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "string"
+      }]
+    },
+    {
+      "id" : "Extension.extension:lineId",
+      "path" : "Extension.extension",
+      "sliceName" : "lineId",
+      "short" : "Linien-Identifier",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Line identifier"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Gemeinsamer Identifier der Linie — verkettet ausführende Segmente mit der geführten Linie.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Shared identifier of the line — links executing segments to the led line."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:lineId.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:lineId.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "lineId"
+    },
+    {
+      "id" : "Extension.extension:lineId.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "Identifier"
       }]
     },
     {

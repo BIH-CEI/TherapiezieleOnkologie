@@ -6,9 +6,19 @@
   },
   "language" : "de",
   "text" : {
-    "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest MedicationRequestPembroAdjuvantMamma</b></p><a name=\"MedicationRequestPembroAdjuvantMamma\"> </a><a name=\"hcMedicationRequestPembroAdjuvantMamma\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-tumorboard-medication-request.html\">Tumorboard MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 85232-7}\">Tumor board Consult note</span></p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), ambulant, ~9 Zyklen q3w</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p></div>"
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest MedicationRequestPembroAdjuvantMamma</b></p><a name=\"MedicationRequestPembroAdjuvantMamma\"> </a><a name=\"hcMedicationRequestPembroAdjuvantMamma\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-tumorboard-medication-request.html\">Tumorboard MedicationRequest</a></p></div><p><b>EnLiST-Änderungstyp (Extension)</b>: <span title=\"Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type same}\">Same LoT</span></p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 85232-7}\">Tumor board Consult note</span></p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), ambulant, ~9 Zyklen q3w</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p></div>"
   },
+  "extension" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+        "code" : "same",
+        "display" : "Same LoT"
+      }]
+    }
+  }],
   "status" : "active",
   "intent" : "plan",
   "category" : [{

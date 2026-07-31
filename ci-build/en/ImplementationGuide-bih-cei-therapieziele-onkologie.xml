@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-07-31T13:45:11+00:00"/>
+  <date value="2026-07-31T14:14:54+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -726,10 +726,21 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/enlist-line-segment"/>
+      </reference>
+      <name value="EnLiST-Linien-Segment (Extension)"/>
+      <description value="Markiert einen **ausführenden Behandlungsabschnitt** (Episode einer ausführenden&#xA;Einrichtung bzw. eine Therapie-`Procedure`) als Segment einer geführten Line of&#xA;Therapy. Trägt **keine eigene Designation**, sondern nur die gemeinsame&#xA;`lineId` der Linie (siehe `enlist-lot.lineId` an der führenden Episode).&#xA;So bleibt jede ausführende Instanz autonom dokumentationsfähig, ohne die&#xA;LoT-Zählung zu duplizieren — Auswerter zählen ausschließlich Träger von&#xA;`enlist-lot`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/enlist-lot"/>
       </reference>
       <name value="EnLiST-LoT-Designation (Extension)"/>
-      <description value="EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:&#xA;&#xA;- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),&#xA;  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**&#xA;  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse&#xA;  zählt **getrennt**.&#xA;- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht&#xA;  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.&#xA;- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT&#xA;  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem&#xA;  X-Inkrement.&#xA;- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1&quot;.&#xA;&#xA;Die Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*&#xA;(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die&#xA;Designation nicht."/>
+      <description value="EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:&#xA;&#xA;- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),&#xA;  **aLoT** (advanced) oder **iLoT** (investigational). Jede Achse zählt **getrennt**.&#xA;- `line` (X) — Zahl der *New LoTs* im Setting; neue Linie nur bei klinischer&#xA;  Progression (cPD) oder fehlendem adäquatem Ansprechen.&#xA;- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT;&#xA;  0 = unmodifiziert, Reset bei jedem X-Inkrement.&#xA;- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1&quot;.&#xA;- `lineId` — Identifier der Linie (System&#xA;  `https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line`), verkettet&#xA;  ausführende Segmente (`enlist-line-segment`) mit der geführten Linie. Optional,&#xA;  wenn die Linie aus genau einer Episode besteht.&#xA;&#xA;**Genau-einmal-Regel:** Die Designation liegt je Linie an genau einer Stelle —&#xA;an der **führenden Episode** (main contributor, `managingOrganization` = die&#xA;koordinierende Stelle) oder, wo keine Episodenführung existiert, an der&#xA;systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,&#xA;nicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)&#xA;verändern die Designation nicht."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -773,7 +784,7 @@
         <reference value="StructureDefinition/enlist-countable"/>
       </reference>
       <name value="EnLiST-Zählstatus (Extension)"/>
-      <description value="Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf&#xA;einer EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);&#xA;`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale&#xA;Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder&#xA;Management-Abschnitt."/>
+      <description value="Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf&#xA;einer EnLiST-Zählachse (Designation in `enlist-lot` an der führenden Episode&#xA;bzw. Segment-Marker `enlist-line-segment`); `not-counted` — außerhalb jeder&#xA;LoT-Zählung, z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie,&#xA;Ablation) oder Management-Abschnitt."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -785,6 +796,17 @@
       </reference>
       <name value="EnLiST-Zählstatus (ValueSet)"/>
       <description value="Alle Zählstatus-Werte nach EnLiST."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/enlist-change"/>
+      </reference>
+      <name value="EnLiST-Änderungstyp (Extension)"/>
+      <description value="EnLiST-Änderungstyp einer Therapieänderung auf Request-Ebene: **new** (eröffnet&#xA;eine neue Linie, X+1 — nur bei Progression/fehlendem Ansprechen), **modified**&#xA;(Y+1 — nicht-progressionsbedingte Änderung; bei Ersetzung eines Vorgängers&#xA;zusätzlich `priorPrescription`) oder **same** (prospektiv geplante Änderung&#xA;inkl. Erhaltungstherapie — Designation unverändert). Die Sequenz geplanter&#xA;Blöcke liegt in der RequestGroup, nicht in `priorPrescription`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -982,7 +1004,7 @@
         <reference value="StructureDefinition/onko-therapy-line"/>
       </reference>
       <name value="Onkologische Therapielinie"/>
-      <description value="Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`."/>
+      <description value="Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein **fachliches Kontinuum** mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist. Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1037,7 +1059,7 @@
         <reference value="StructureDefinition/onko-care-plan"/>
       </reference>
       <name value="Onkologischer CarePlan"/>
-      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`&#xA;  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
+      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die&#xA;  Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

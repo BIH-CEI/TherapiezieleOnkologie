@@ -47,11 +47,25 @@
   "name" : "TherapiezielDreieck"
 },
 {
+  "id" : "enlist-change",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistChangeTypeExt"
+},
+{
   "id" : "enlist-countable",
   "type" : "StructureDefinition",
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
   "version" : "1.0.0-ballot",
   "name" : "EnlistCountableExt"
+},
+{
+  "id" : "enlist-line-segment",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistLineSegmentExt"
 },
 {
   "id" : "enlist-lot",

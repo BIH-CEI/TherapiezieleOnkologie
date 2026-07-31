@@ -353,7 +353,7 @@ lokalen Canonical bereit, auf den die übrigen Profile referenzieren.</p>
                </a>
             </td>
             <td>
-<p>Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> erfolgt über <code class="language-plaintext highlighter-rouge">CarePlan.encounter</code> → <code class="language-plaintext highlighter-rouge">Encounter.episodeOfCare</code> oder die Standard-Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code>.</p>
+<p>Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>, EnLiST-konform. Eine Therapielinie ist ein <strong>fachliches Kontinuum</strong> mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code> organisationsgebunden ist. Die EnLiST-Designation (<code class="language-plaintext highlighter-rouge">enlist-lot</code>) trägt je Linie <strong>genau eine führende Episode</strong> (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (<code class="language-plaintext highlighter-rouge">enlist-line-segment</code>) mit gemeinsamer <code class="language-plaintext highlighter-rouge">lineId</code>. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> erfolgt über die Standard-Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code>.</p>
 </td>
          </tr>
          <tr>
@@ -378,8 +378,8 @@ Maßnahmen (<code class="language-plaintext highlighter-rouge">activity</code>) 
   <li>Therapieintention über die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> (kurativ, neoadjuvant, adjuvant,
 Erhaltung, palliativ, supportiv).</li>
   <li><code class="language-plaintext highlighter-rouge">goal</code> referenziert das Profil <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>.</li>
-  <li>Therapielinien (<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, Basis <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>) werden über <code class="language-plaintext highlighter-rouge">CarePlan.encounter</code>
-bzw. die Standard-Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code> verknüpft.</li>
+  <li>Therapielinien (<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, Basis <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>) werden über die
+Standard-Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code> verknüpft.</li>
 </ul>
 
 <p>Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des
@@ -485,6 +485,24 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-enlist-line-segment.html"
+                  title="StructureDefinition/enlist-line-segment">
+                  <span title="StructureDefinition/enlist-line-segment">EnLiST-Linien-Segment (Extension)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Markiert einen <strong>ausführenden Behandlungsabschnitt</strong> (Episode einer ausführenden
+Einrichtung bzw. eine Therapie-<code class="language-plaintext highlighter-rouge">Procedure</code>) als Segment einer geführten Line of
+Therapy. Trägt <strong>keine eigene Designation</strong>, sondern nur die gemeinsame
+<code class="language-plaintext highlighter-rouge">lineId</code> der Linie (siehe <code class="language-plaintext highlighter-rouge">enlist-lot.lineId</code> an der führenden Episode).
+So bleibt jede ausführende Instanz autonom dokumentationsfähig, ohne die
+LoT-Zählung zu duplizieren — Auswerter zählen ausschließlich Träger von
+<code class="language-plaintext highlighter-rouge">enlist-lot</code>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-enlist-lot.html"
                   title="StructureDefinition/enlist-lot">
                   <span title="StructureDefinition/enlist-lot">EnLiST-LoT-Designation (Extension)
@@ -492,24 +510,28 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
                </a>
             </td>
             <td>
-<p>EnLiST-Designation der systemischen Therapielinie in <strong>X.Y-Notation je Setting</strong>:</p>
+<p>EnLiST-Designation der systemischen Line of Therapy in <strong>X.Y-Notation je Setting</strong>:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">setting</code> — die Zählachse: <strong>eLoT</strong> (early: neoadjuvant, adjuvant, perioperativ),
-<strong>aLoT</strong> (advanced: lokal fortgeschritten oder metastasiert) oder <strong>iLoT</strong>
-(investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse
-zählt <strong>getrennt</strong>.</li>
-  <li><code class="language-plaintext highlighter-rouge">line</code> (X) — Zahl der <em>New LoTs</em> in diesem Setting; eine neue Linie entsteht
-nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.</li>
-  <li><code class="language-plaintext highlighter-rouge">modification</code> (Y) — Zahl der <em>Modified LoTs</em> seit der letzten New LoT
-(nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem
-X-Inkrement.</li>
+<strong>aLoT</strong> (advanced) oder <strong>iLoT</strong> (investigational). Jede Achse zählt <strong>getrennt</strong>.</li>
+  <li><code class="language-plaintext highlighter-rouge">line</code> (X) — Zahl der <em>New LoTs</em> im Setting; neue Linie nur bei klinischer
+Progression (cPD) oder fehlendem adäquatem Ansprechen.</li>
+  <li><code class="language-plaintext highlighter-rouge">modification</code> (Y) — Zahl der <em>Modified LoTs</em> seit der letzten New LoT;
+0 = unmodifiziert, Reset bei jedem X-Inkrement.</li>
   <li><code class="language-plaintext highlighter-rouge">notation</code> — optionale Gesamtdarstellung, z. B. „aLoT 2.1".</li>
+  <li><code class="language-plaintext highlighter-rouge">lineId</code> — Identifier der Linie (System
+<code class="language-plaintext highlighter-rouge">https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line</code>), verkettet
+ausführende Segmente (<code class="language-plaintext highlighter-rouge">enlist-line-segment</code>) mit der geführten Linie. Optional,
+wenn die Linie aus genau einer Episode besteht.</li>
 </ul>
 
-<p>Die Designation wird <strong>dokumentiert erfasst, nicht berechnet</strong>. <em>Same LoTs</em>
-(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die
-Designation nicht.</p>
+<p><strong>Genau-einmal-Regel:</strong> Die Designation liegt je Linie an genau einer Stelle —
+an der <strong>führenden Episode</strong> (main contributor, <code class="language-plaintext highlighter-rouge">managingOrganization</code> = die
+koordinierende Stelle) oder, wo keine Episodenführung existiert, an der
+systemischen Therapie-<code class="language-plaintext highlighter-rouge">Procedure</code> (MII-Pfad). Sie wird dokumentiert erfasst,
+nicht berechnet; <em>Same LoTs</em> (prospektiv geplante Änderungen inkl. Erhaltung)
+verändern die Designation nicht.</p>
 </td>
          </tr>
          <tr>
@@ -522,10 +544,27 @@ Designation nicht.</p>
             </td>
             <td>
 <p>Zählstatus der Behandlungslinie nach EnLiST: <code class="language-plaintext highlighter-rouge">counted</code> — die Linie liegt auf
-einer EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension <code class="language-plaintext highlighter-rouge">enlist-lot</code>);
-<code class="language-plaintext highlighter-rouge">not-counted</code> — außerhalb jeder LoT-Zählung, z. B. lokoregionale
-Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder
-Management-Abschnitt.</p>
+einer EnLiST-Zählachse (Designation in <code class="language-plaintext highlighter-rouge">enlist-lot</code> an der führenden Episode
+bzw. Segment-Marker <code class="language-plaintext highlighter-rouge">enlist-line-segment</code>); <code class="language-plaintext highlighter-rouge">not-counted</code> — außerhalb jeder
+LoT-Zählung, z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie,
+Ablation) oder Management-Abschnitt.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-enlist-change.html"
+                  title="StructureDefinition/enlist-change">
+                  <span title="StructureDefinition/enlist-change">EnLiST-Änderungstyp (Extension)
+</span>
+               </a>
+            </td>
+            <td>
+<p>EnLiST-Änderungstyp einer Therapieänderung auf Request-Ebene: <strong>new</strong> (eröffnet
+eine neue Linie, X+1 — nur bei Progression/fehlendem Ansprechen), <strong>modified</strong>
+(Y+1 — nicht-progressionsbedingte Änderung; bei Ersetzung eines Vorgängers
+zusätzlich <code class="language-plaintext highlighter-rouge">priorPrescription</code>) oder <strong>same</strong> (prospektiv geplante Änderung
+inkl. Erhaltungstherapie — Designation unverändert). Die Sequenz geplanter
+Blöcke liegt in der RequestGroup, nicht in <code class="language-plaintext highlighter-rouge">priorPrescription</code>.</p>
 </td>
          </tr>
          <tr>
@@ -1460,7 +1499,7 @@ Konsolidierung ergänzbar).</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-31 13:45:00 +0000">
+  <span title="2026-07-31 14:14:00 +0000">
     2026-07-31
   </span>
 

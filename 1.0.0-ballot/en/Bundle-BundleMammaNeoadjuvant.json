@@ -1011,6 +1011,13 @@
         {
           "url" : "notation",
           "valueString" : "eLoT 1.0"
+        },
+        {
+          "url" : "lineId",
+          "valueIdentifier" : {
+            "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line",
+            "value" : "mamma-baumann-elot-1"
+          }
         }],
         "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"
       },
@@ -1349,8 +1356,18 @@
       },
       "language" : "en",
       "text" : {
-        "status" : "generated"
+        "status" : "extensions"
       },
+      "extension" : [{
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+            "code" : "new",
+            "display" : "New LoT"
+          }]
+        }
+      }],
       "status" : "completed",
       "intent" : "plan",
       "category" : [{
