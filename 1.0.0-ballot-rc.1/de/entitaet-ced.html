@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Weitere Entität – Chronisch-entzündliche Darmerkrankungen - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.1 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/entitaet-ced.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Weitere Entität – Chronisch-entzündliche Darmerkrankungen</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Weitere Entität – Chronisch-entzündliche Darmerkrankungen</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#die-zielstruktur-der-ced" id="markdown-toc-die-zielstruktur-der-ced">Die Zielstruktur der CED</a></li>
+  <li><a href="#abbildung-auf-das-modell" id="markdown-toc-abbildung-auf-das-modell">Abbildung auf das Modell</a></li>
+  <li><a href="#was-der-transfer-zeigt" id="markdown-toc-was-der-transfer-zeigt">Was der Transfer zeigt</a></li>
+  <li><a href="#semantische-annotationen-codesysteme" id="markdown-toc-semantische-annotationen-codesysteme">Semantische Annotationen (Codesysteme)</a></li>
+  <li><a href="#leitlinien-und-quellen" id="markdown-toc-leitlinien-und-quellen">Leitlinien und Quellen</a></li>
+</ul>
+
+</div>
+<p>Diese Seite prüft das <a href="therapieziele.html">Therapieziel-Modell</a> an den <strong>chronisch-
+entzündlichen Darmerkrankungen (CED)</strong> – <strong>Morbus Crohn</strong> und <strong>Colitis ulcerosa</strong> (zwei
+Formen dauerhafter Darmentzündung, die in Schüben verläuft). Die Frage ist nicht „wie
+behandelt man CED", sondern: <strong>Trägt dieselbe Struktur</strong> – übergeordnetes Ziel plus
+messbare Etappenziele mit <code class="language-plaintext highlighter-rouge">target.measure</code> / <code class="language-plaintext highlighter-rouge">target.detail</code> / <code class="language-plaintext highlighter-rouge">target.due</code> (<em>woran</em>
+gemessen wird, <em>welcher Wert</em> das Ziel ist, <em>bis wann</em>) – <strong>auch hier?</strong></p>
+
+<h3 id="die-zielstruktur-der-ced">Die Zielstruktur der CED</h3>
+
+<ul>
+  <li><strong>Übergeordnetes Ziel:</strong> <strong>anhaltende Beschwerdefreiheit ohne Kortison</strong> (steroidfreie
+Remission) und <strong>Vermeidung von Komplikationen und Operationen</strong>. Eine strategische
+Grundausrichtung, hier <strong>auf Rückbildung (Remission) ausgerichtet</strong>.</li>
+  <li><strong>Phasenstruktur:</strong> CED zeigt am klarsten das <strong>Erst-Löschen-dann-Halten</strong>-Muster:
+<strong>Remissionsinduktion</strong> (den akuten Schub zum Abklingen bringen) → <strong>Remissionserhalt</strong>
+(den ruhigen Zustand bewahren). Zwei klar getrennte Phasen mit <strong>unterschiedlichen
+Zielgrößen</strong>.</li>
+  <li><strong>„Treat to target" (Behandeln nach Zielwert):</strong> In der Leitlinie (STRIDE-II) ist die
+Zielstaffel festgelegt – vom Ansprechen der Beschwerden über echte Beschwerdefreiheit und
+normale Laborwerte bis zur <strong>Abheilung der Darmschleimhaut</strong> (in der Darmspiegelung
+sichtbar).</li>
+</ul>
+
+<svg width="100%" viewBox="0 0 680 470" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Phasen und Zielstaffel der CED</title>
+<desc>Zwei Behandlungsphasen auf einem Zeitpfeil – Remissionsinduktion und Remissionserhalt – und darunter die dreistufige Zielstaffel nach STRIDE-II: Beschwerden, Laborwerte, Schleimhautheilung. Jede Stufe traegt Zielgroesse (target.measure) und Zielwert (target.detail).</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+<marker id="argn" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#0F6E56" /></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<line x1="40" y1="84" x2="628" y2="84" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)" />
+<text x="640" y="88" font-size="11" fill="#5F5E5A">Zeit</text>
+
+<g><rect x="40" y="24" width="285" height="46" rx="8" fill="#EEEDFE" stroke="#534AB7" />
+<text x="182" y="43" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Remissionsinduktion</text>
+<text x="182" y="60" text-anchor="middle" font-size="11" fill="#534AB7">den akuten Schub zum Abklingen bringen</text></g>
+<line x1="328" y1="47" x2="352" y2="47" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<g><rect x="355" y="24" width="285" height="46" rx="8" fill="#EEEDFE" stroke="#534AB7" />
+<text x="497" y="43" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Remissionserhalt</text>
+<text x="497" y="60" text-anchor="middle" font-size="11" fill="#534AB7">den ruhigen Zustand bewahren</text></g>
+
+<g><rect x="470" y="98" width="170" height="38" rx="6" fill="#F1EFE8" stroke="#5F5E5A" />
+<text x="555" y="114" text-anchor="middle" font-size="10.5" fill="#2C2C2A">dabei: Remission</text>
+<text x="555" y="128" text-anchor="middle" font-size="10.5" fill="#2C2C2A">ohne Kortison (steroidfrei)</text></g>
+
+<text x="40" y="150" font-size="12" font-weight="500" fill="#5F5E5A">Zielstaffel „treat to target“ (STRIDE-II):</text>
+
+<path d="M145,330 L145,283 L242,283" fill="none" stroke="#0F6E56" stroke-width="1.6" marker-end="url(#argn)" />
+<path d="M340,245 L340,198 L437,198" fill="none" stroke="#0F6E56" stroke-width="1.6" marker-end="url(#argn)" />
+
+<g><rect x="50" y="330" width="190" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="145" y="352" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">1 · Beschwerden</text>
+<text x="145" y="370" text-anchor="middle" font-size="11.5" fill="#04342C">klinische Remission</text>
+<text x="145" y="386" text-anchor="middle" font-size="10.5" fill="#0F6E56">CDAI/HBI · Mayo/SCCAI</text></g>
+
+<g><rect x="245" y="245" width="190" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="340" y="267" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">2 · Laborwerte</text>
+<text x="340" y="285" text-anchor="middle" font-size="11.5" fill="#04342C">Calprotectin &lt; 150–250 µg/g</text>
+<text x="340" y="301" text-anchor="middle" font-size="10.5" fill="#0F6E56">LOINC 38445-3 · CRP 1988-5</text></g>
+
+<g><rect x="440" y="160" width="190" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="535" y="182" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">3 · Schleimhautheilung</text>
+<text x="535" y="200" text-anchor="middle" font-size="11.5" fill="#04342C">abgeheilte Schleimhaut</text>
+<text x="535" y="216" text-anchor="middle" font-size="10" fill="#0F6E56">SES-CD/Mayo · OPS 1-650</text></g>
+
+<text x="50" y="432" font-size="11" fill="#5F5E5A">je Stufe: Zielgröße (target.measure) + Zielwert (target.detail) · Scores ohne Code: measure.text</text>
+
+<rect x="40" y="444" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="455" font-size="11.5" fill="#5F5E5A">Behandlungsphase</text>
+<rect x="180" y="444" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="199" y="455" font-size="11.5" fill="#5F5E5A">Ziel / Zielstufe</text>
+<rect x="305" y="444" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="324" y="455" font-size="11.5" fill="#5F5E5A">Hinweis</text>
+<line x1="400" y1="450" x2="430" y2="450" stroke="#0F6E56" stroke-width="1.6" marker-end="url(#argn)" /><text x="436" y="455" font-size="11.5" fill="#5F5E5A">nächste Zielstufe</text>
+</svg>
+
+<h3 id="abbildung-auf-das-modell">Abbildung auf das Modell</h3>
+
+<p>„Zielgröße" = <em>woran</em> gemessen wird, „Zielwert" = <em>welcher Wert</em> als erreicht gilt,
+„Ergebnis" = die tatsächliche Messung.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ebene / Ausrichtung</th>
+      <th>Zielgröße (<code class="language-plaintext highlighter-rouge">target.measure</code>)</th>
+      <th>Zielwert (<code class="language-plaintext highlighter-rouge">target.detail</code>)</th>
+      <th>Ergebnis (<code class="language-plaintext highlighter-rouge">outcomeReference</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Übergeordnet</strong> (auf Remission ausgerichtet)</td>
+      <td>— (strategisch)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Induktion – Beschwerden</td>
+      <td>Aktivitäts-Punktwert (Fragebögen/Scores wie CDAI/HBI bzw. Mayo/SCCAI) — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>Beschwerdefreiheit (klinische Remission)</td>
+      <td>Score-Erhebung</td>
+    </tr>
+    <tr>
+      <td>Induktion/Erhalt – Laborwerte</td>
+      <td>Calprotectin im Stuhl (Entzündungsmarker) — LOINC <code class="language-plaintext highlighter-rouge">38445-3</code>; CRP (Entzündungswert im Blut) <code class="language-plaintext highlighter-rouge">1988-5</code></td>
+      <td>Calprotectin &lt; 150–250 µg/g; CRP normal</td>
+      <td>Messungen</td>
+    </tr>
+    <tr>
+      <td>Erhalt – Darmspiegelung</td>
+      <td>Schleimhaut-Befund in der Endoskopie (Scores SES-CD bzw. Mayo) — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>abgeheilte Schleimhaut</td>
+      <td>Endoskopie-Befund</td>
+    </tr>
+    <tr>
+      <td>Erhalt – ohne Kortison</td>
+      <td>Kortison-Einsatz — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>Remission ohne Kortison</td>
+      <td>Medikationsstatus</td>
+    </tr>
+    <tr>
+      <td>Begleit – Blutarmut</td>
+      <td>Hämoglobin (roter Blutfarbstoff) — LOINC <code class="language-plaintext highlighter-rouge">718-7</code></td>
+      <td>Normalisierung</td>
+      <td>Messung</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die <strong>Medikamente</strong> – entzündungshemmende Darmmittel (5-ASA/Mesalazin), Kortison (im
+Schub), klassische Immundämpfer (Azathioprin, Methotrexat) und die zielgerichteten
+<strong>Biologika und modernen Tabletten</strong> (Antikörper und kleine Moleküle gegen einzelne
+Entzündungswege, z. B. Anti-TNF, Vedolizumab, Ustekinumab, JAK-Hemmer) – sind im Modell
+<strong>Maßnahmen</strong> (<code class="language-plaintext highlighter-rouge">MedicationRequest</code>), nicht das Ziel.</p>
+
+<blockquote>
+  <p><strong>Rasch wachsendes Arsenal (2022–2024).</strong> Neu hinzugekommen sind die <strong>S1P-Modulatoren</strong>
+(Ozanimod, Etrasimod – als Tablette bei Colitis ulcerosa), weitere zielgerichtete
+Antikörper der <strong>Interleukin-23-Klasse</strong> (Risankizumab – Morbus Crohn 2022, Colitis
+ulcerosa 2024; Mirikizumab – Colitis ulcerosa 2023) und der <strong>JAK-Hemmer Upadacitinib</strong>
+(beide Erkrankungen). Die <strong>Zielgrößen</strong> (Beschwerden → Laborwerte → Schleimhautheilung)
+bleiben stabil, während sich die <strong>Mittel</strong> schnell erweitern – ein Beleg, warum Ziel und
+Maßnahme im Modell getrennt gehören.</p>
+</blockquote>
+
+<h3 id="was-der-transfer-zeigt">Was der Transfer zeigt</h3>
+
+<p>CED belegt den Transfer am deutlichsten: eine <strong>echte Erst-Löschen-dann-Halten-Phasenlogik</strong>
+mit <strong>phasenspezifischen Zielgrößen</strong> (Beschwerden → Laborwerte → Schleimhautheilung), die
+sich genau in <code class="language-plaintext highlighter-rouge">Goal.target</code> je Behandlungsabschnitt abbilden lassen. <strong>Allgemeingültig</strong> ist
+die Struktur; <strong>krankheitsspezifisch</strong> sind die Punktwerte und Schwellen.</p>
+
+<h3 id="semantische-annotationen-codesysteme">Semantische Annotationen (Codesysteme)</h3>
+
+<p>Unabhängig von der Erklärung oben – so werden die Inhalte <strong>maschinenlesbar</strong> codiert. Die
+Codes sind gegen den MII-Terminologieserver geprüft (ICD-10-GM 2026, SNOMED CT 2026-07-01,
+ATC 2026, LOINC, OPS 2026).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Codesystem(e)</th>
+      <th>Beispiel-Codes (validiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Diagnose</strong></td>
+      <td>ICD-10-GM · SNOMED CT</td>
+      <td>Morbus Crohn <code class="language-plaintext highlighter-rouge">K50.9</code> / SNOMED <code class="language-plaintext highlighter-rouge">34000006</code> · Colitis ulcerosa <code class="language-plaintext highlighter-rouge">K51.9</code> / SNOMED <code class="language-plaintext highlighter-rouge">64766004</code></td>
+    </tr>
+    <tr>
+      <td><strong>Diagnostik / Messwerte</strong></td>
+      <td>LOINC · OPS (Endoskopie)</td>
+      <td><code class="language-plaintext highlighter-rouge">38445-3</code> Calprotectin (Stuhl) · <code class="language-plaintext highlighter-rouge">1988-5</code> CRP · <code class="language-plaintext highlighter-rouge">718-7</code> Hämoglobin; Koloskopie OPS <code class="language-plaintext highlighter-rouge">1-650</code> / SNOMED <code class="language-plaintext highlighter-rouge">73761001</code></td>
+    </tr>
+    <tr>
+      <td><strong>Therapien (Prozeduren)</strong></td>
+      <td>OPS · SNOMED CT</td>
+      <td>endoskopische Diagnostik/Therapie OPS <code class="language-plaintext highlighter-rouge">1-650</code> (Koloskopie); Darmresektion (chirurgisch)</td>
+    </tr>
+    <tr>
+      <td><strong>Medikation</strong></td>
+      <td>ATC</td>
+      <td><code class="language-plaintext highlighter-rouge">A07EC02</code> Mesalazin · <code class="language-plaintext highlighter-rouge">H02AB</code> Glucocorticoide · <code class="language-plaintext highlighter-rouge">L04A</code> Immunsuppressiva: <code class="language-plaintext highlighter-rouge">L04AB</code> TNF-Inhibitoren · <code class="language-plaintext highlighter-rouge">L04AC</code> Interleukin-Inhibitoren (Ustekinumab, IL-23) · <code class="language-plaintext highlighter-rouge">L04AE</code> S1P-Modulatoren · <code class="language-plaintext highlighter-rouge">L04AF</code> JAK-Inhibitoren · <code class="language-plaintext highlighter-rouge">L04AG</code> monoklonale Antikörper (Vedolizumab)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="leitlinien-und-quellen">Leitlinien und Quellen</h3>
+
+<ul>
+  <li>Deutsche Gesellschaft für Gastroenterologie, Verdauungs- und Stoffwechselkrankheiten
+(DGVS). <em>S3-Leitlinie Diagnostik und Therapie des Morbus Crohn.</em> Version 4.1, März 2024
+(Living Guideline), AWMF-Reg.-Nr. 021-004.
+<a href="https://www.dgvs.de/leitlinien/unterer-gi-trakt/morbus-crohn/">dgvs.de</a> (abgerufen
+29.07.2026).</li>
+  <li>DGVS. <em>S3-Leitlinie Colitis ulcerosa.</em> Version 7.0, November 2025, AWMF-Reg.-Nr.
+021-009. <a href="https://register.awmf.org/de/leitlinien/detail/021-009">register.awmf.org/de/leitlinien/detail/021-009</a>
+(abgerufen 29.07.2026).</li>
+  <li><em>Europäisch:</em> Torres J, Bonovas S, Doherty G, et al. (ECCO). <em>ECCO Guidelines on
+Therapeutics in Crohn's Disease: Medical Treatment.</em> J Crohns Colitis 2020;14(1):4–22.
+DOI <a href="https://doi.org/10.1093/ecco-jcc/jjz180">10.1093/ecco-jcc/jjz180</a> (2024
+aktualisiert, JCC 18(10):1531).</li>
+  <li><em>Europäisch:</em> Raine T, Bonovas S, Burisch J, et al. (ECCO). <em>ECCO Guidelines on
+Therapeutics in Ulcerative Colitis: Medical Treatment.</em> J Crohns Colitis
+2022;16(1):2–17. DOI
+<a href="https://doi.org/10.1093/ecco-jcc/jjab178">10.1093/ecco-jcc/jjab178</a>.</li>
+  <li>Turner D, Ricciuto A, Lewis A, et al. <em>STRIDE-II: An Update on the Selecting Therapeutic
+Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International
+Organization for the Study of IBD (IOIBD).</em> Gastroenterology 2021;160(5):1570–1583. DOI
+<a href="https://doi.org/10.1053/j.gastro.2020.12.031">10.1053/j.gastro.2020.12.031</a>. — Staffel
+der Behandlungsziele („treat to target").</li>
+</ul>
+
+<p>→ Zurück zur <a href="therapieziele.html">Übersicht der Therapieziele</a> ·
+<a href="goal-target-measure.html">Zielwerte und Messgrößen</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-31 13:52:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

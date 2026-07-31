@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Weitere Entität – Asthma bronchiale - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.1 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/entitaet-asthma.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Weitere Entität – Asthma bronchiale</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Weitere Entität – Asthma bronchiale</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#die-zielstruktur-des-asthmas" id="markdown-toc-die-zielstruktur-des-asthmas">Die Zielstruktur des Asthmas</a></li>
+  <li><a href="#abbildung-auf-das-modell" id="markdown-toc-abbildung-auf-das-modell">Abbildung auf das Modell</a></li>
+  <li><a href="#was-der-transfer-zeigt" id="markdown-toc-was-der-transfer-zeigt">Was der Transfer zeigt</a></li>
+  <li><a href="#semantische-annotationen-codesysteme" id="markdown-toc-semantische-annotationen-codesysteme">Semantische Annotationen (Codesysteme)</a></li>
+  <li><a href="#leitlinien-und-quellen" id="markdown-toc-leitlinien-und-quellen">Leitlinien und Quellen</a></li>
+</ul>
+
+</div>
+<p>Diese Seite prüft das <a href="therapieziele.html">Therapieziel-Modell</a> an einer <strong>nicht-
+onkologischen Entität</strong> (Erkrankung außerhalb der Krebsmedizin): dem <strong>Asthma bronchiale</strong>
+(der chronisch-entzündlichen, anfallsartig verengenden Atemwegserkrankung). Die Frage ist
+nicht „wie behandelt man Asthma", sondern: <strong>Trägt dieselbe Struktur</strong> – übergeordnetes Ziel
+plus messbare Etappenziele mit <code class="language-plaintext highlighter-rouge">target.measure</code> / <code class="language-plaintext highlighter-rouge">target.detail</code> / <code class="language-plaintext highlighter-rouge">target.due</code> (<em>woran</em>
+gemessen wird, <em>welcher Wert</em> das Ziel ist, <em>bis wann</em>) – <strong>auch hier?</strong></p>
+
+<h3 id="die-zielstruktur-des-asthmas">Die Zielstruktur des Asthmas</h3>
+
+<ul>
+  <li><strong>Übergeordnetes Ziel:</strong> <strong>Asthmakontrolle</strong> – Beschwerdefreiheit im Alltag, normale
+Belastbarkeit und <strong>keine schweren Anfälle</strong> (Exazerbationen = akute, oft
+behandlungsbedürftige Verschlechterungen). Wie „kurativ/palliativ" (auf Heilung vs. auf
+Linderung) in der Krebsmedizin eine <strong>strategische Grundausrichtung</strong>, hier
+<strong>kontrollierend</strong>; heilbar ist Asthma nicht.</li>
+  <li><strong>Phasenstruktur:</strong> typisch ist das <strong>Hoch- und Herunterstufen</strong> (englisch „step-up /
+step-down" im GINA-Stufenschema) – erst die Kontrolle <em>erreichen</em>, dann auf die
+<strong>geringste noch wirksame Therapie zurückfahren</strong>. Eine eigene Phasenlogik (anders als das
+Induktion→Erhalt-Muster bei CED/Rheuma).</li>
+</ul>
+
+<svg width="100%" viewBox="0 0 680 480" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Asthma: zusammengesetztes Kontrollziel und GINA-Stufenschema (step-up / step-down)</title>
+<desc>Oben das zusammengesetzte Ziel Asthmakontrolle (ACT, FEV1, keine schweren Anfaelle) und die regelmaessige Kontrollpruefung. Unten das GINA-Stufenschema als Treppe: bei fehlender Kontrolle hochstufen, bei anhaltender Kontrolle herunterstufen auf die geringste wirksame Stufe; Ziel des Herunterstufens ist der Verzicht auf Kortisontabletten.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+<marker id="argn" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#0F6E56" /></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<g><rect x="40" y="20" width="290" height="96" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="185" y="40" text-anchor="middle" font-size="12.5" font-weight="500" fill="#04342C">Ziel: Asthmakontrolle (zusammengesetzt)</text>
+<text x="185" y="57" text-anchor="middle" font-size="11" fill="#04342C">ACT ≥ 20 (Beschwerden) — measure.text</text>
+<text x="185" y="72" text-anchor="middle" font-size="11" fill="#04342C">FEV1: bester persönlicher Wert — LOINC 20150-9</text>
+<text x="185" y="87" text-anchor="middle" font-size="11" fill="#04342C">0 schwere Anfälle pro Jahr — measure.text</text>
+<text x="185" y="104" text-anchor="middle" font-size="10.5" fill="#0F6E56">ein Goal, mehrere target-Zeilen</text></g>
+
+<line x1="388" y1="68" x2="332" y2="68" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<text x="360" y="60" text-anchor="middle" font-size="10.5" fill="#5F5E5A">Abgleich</text>
+
+<g><rect x="390" y="32" width="250" height="72" rx="8" fill="#FAECE7" stroke="#D85A30" />
+<text x="515" y="54" text-anchor="middle" font-size="12" font-weight="500" fill="#4A1B0C">Kontrolle prüfen (alle 1–3 Monate)</text>
+<text x="515" y="72" text-anchor="middle" font-size="10.5" fill="#4A1B0C">ACT · Spirometrie · Anfalls-Doku</text>
+<text x="515" y="88" text-anchor="middle" font-size="10.5" fill="#993C1D">Observation → achievementStatus</text></g>
+
+<path d="M515,106 L548,194" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#argr)" />
+<text x="550" y="146" font-size="10.5" fill="#5F5E5A">Ergebnis</text>
+<text x="550" y="160" font-size="10.5" fill="#5F5E5A">steuert die Stufe</text>
+
+<line x1="95" y1="330" x2="540" y2="180" stroke="#534AB7" stroke-width="1.8" marker-end="url(#arp)" />
+<text x="60" y="236" font-size="10.5" fill="#534AB7">Kontrolle nicht erreicht →</text>
+<text x="60" y="250" font-size="10.5" fill="#534AB7">hochstufen (step-up)</text>
+
+<line x1="560" y1="250" x2="150" y2="392" stroke="#0F6E56" stroke-width="1.8" marker-end="url(#argn)" />
+<text x="460" y="330" font-size="10.5" fill="#0F6E56">kontrolliert (2–3 Monate) →</text>
+<text x="460" y="344" font-size="10.5" fill="#0F6E56">herunterstufen (step-down)</text>
+
+<g><rect x="40" y="350" width="96" height="40" rx="6" fill="#EEEDFE" stroke="#534AB7" /><text x="88" y="375" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Stufe 1</text></g>
+<g><rect x="155" y="312" width="96" height="40" rx="6" fill="#EEEDFE" stroke="#534AB7" /><text x="203" y="337" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Stufe 2</text></g>
+<g><rect x="270" y="274" width="96" height="40" rx="6" fill="#EEEDFE" stroke="#534AB7" /><text x="318" y="299" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Stufe 3</text></g>
+<g><rect x="385" y="236" width="96" height="40" rx="6" fill="#EEEDFE" stroke="#534AB7" /><text x="433" y="261" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Stufe 4</text></g>
+<g><rect x="500" y="198" width="96" height="40" rx="6" fill="#EEEDFE" stroke="#534AB7" /><text x="548" y="223" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Stufe 5</text></g>
+
+<g><rect x="430" y="370" width="210" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="535" y="388" text-anchor="middle" font-size="11.5" font-weight="500" fill="#04342C">Ziel des Herunterstufens</text>
+<text x="535" y="404" text-anchor="middle" font-size="10.5" fill="#04342C">ohne Kortisontabletten (OCS = 0)</text>
+<text x="535" y="419" text-anchor="middle" font-size="10" fill="#0F6E56">target.detail · measure.text</text></g>
+
+<text x="40" y="425" font-size="10.5" fill="#5F5E5A">GINA-Stufenschema: Therapieintensität —</text>
+<text x="40" y="439" font-size="10.5" fill="#5F5E5A">Maßnahmen (MedicationRequest), nicht das Ziel</text>
+
+<rect x="40" y="458" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="469" font-size="11.5" fill="#5F5E5A">Therapiestufe (Maßnahme)</text>
+<rect x="230" y="458" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="249" y="469" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="295" y="458" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30" /><text x="314" y="469" font-size="11.5" fill="#5F5E5A">Messung</text>
+<text x="400" y="469" font-size="10.5" fill="#5F5E5A">Scores ohne Code: measure.text</text>
+</svg>
+
+<h3 id="abbildung-auf-das-modell">Abbildung auf das Modell</h3>
+
+<p>„Zielgröße" = <em>woran</em> gemessen wird, „Zielwert" = <em>welcher Wert</em> als erreicht gilt,
+„Ergebnis" = die tatsächliche Messung.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ebene / Ausrichtung</th>
+      <th>Zielgröße (<code class="language-plaintext highlighter-rouge">target.measure</code>)</th>
+      <th>Zielwert (<code class="language-plaintext highlighter-rouge">target.detail</code>)</th>
+      <th>Ergebnis (<code class="language-plaintext highlighter-rouge">outcomeReference</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Übergeordnet</strong> (kontrollierend)</td>
+      <td>— (strategisch)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Beschwerde-Kontrolle</td>
+      <td>Asthma-Kontroll-Test (ACT – kurzer Fragebogen) — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>≥ 20 (gut kontrolliert)</td>
+      <td>Fragebogen</td>
+    </tr>
+    <tr>
+      <td>Lungenfunktion</td>
+      <td>FEV1 (Einsekundenkapazität – Luftmenge in 1 s ausgeatmet) — LOINC <code class="language-plaintext highlighter-rouge">20150-9</code>; FEV1/FVC <code class="language-plaintext highlighter-rouge">19926-5</code></td>
+      <td>bester persönlicher Wert / Normbereich</td>
+      <td>Lungenfunktionstest (Spirometrie)</td>
+    </tr>
+    <tr>
+      <td>Anfallsfreiheit</td>
+      <td>schwere Anfälle pro Jahr — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>0</td>
+      <td>Verlaufsdoku</td>
+    </tr>
+    <tr>
+      <td>Entzündungs-Steuerung (für Biologika)</td>
+      <td>FeNO (Entzündungsmarker in der Atemluft) — <code class="language-plaintext highlighter-rouge">measure.text</code>; eosinophile Blutzellen <code class="language-plaintext highlighter-rouge">26449-9</code></td>
+      <td>Rückgang / Ansprechen</td>
+      <td>Messungen</td>
+    </tr>
+    <tr>
+      <td>Herunterstufen</td>
+      <td>benötigte Kortison-Tablettendosis — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>ohne Kortisontabletten (Ziel)</td>
+      <td>Medikationsstatus</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die <strong>Medikamente</strong> – Kortison-Sprays (ICS), die Kombination ICS-Formoterol (wirkt als
+Bedarfs- <em>und</em> Dauermittel), langwirksame Bronchien-Erweiterer (LABA/LAMA),
+Leukotrien-Hemmer und die <strong>Biologika</strong> (zielgerichtete Antikörper gegen einzelne
+Entzündungsbotenstoffe, z. B. gegen IgE oder Interleukin-5) – sind im Modell <strong>Maßnahmen</strong>
+(<code class="language-plaintext highlighter-rouge">MedicationRequest</code>), nicht das Ziel.</p>
+
+<blockquote>
+  <p><strong>Jüngerer Umbruch.</strong> Seit <strong>GINA 2019</strong> wird das alleinige Benutzen eines reinen
+Notfall-Sprays (kurzwirksamer Bronchien-Erweiterer, „SABA") <strong>nicht mehr empfohlen</strong> – es
+schützt nicht vor schweren Anfällen. Bedarfsmittel der Wahl ist heute ein <strong>Spray mit
+entzündungshemmendem Anteil</strong> (niedrigdosiertes ICS-Formoterol), das schwere Anfälle um
+~60–65 % senkt. Ein Strategiewechsel, der die Bedarfstherapie neu definiert – während
+ältere Notfallspray-Schemata in der Versorgung noch nebeneinander bestehen.</p>
+</blockquote>
+
+<h3 id="was-der-transfer-zeigt">Was der Transfer zeigt</h3>
+
+<p><strong>Allgemeingültig</strong> bleibt die Struktur; <strong>krankheitsspezifisch</strong> ist, dass das eigentliche
+Ziel ein <strong>zusammengesetzter Zustand</strong> ist (Beschwerden <em>und</em> Lungenfunktion <em>und</em>
+Anfallsfreiheit) – also <strong>mehrere Zielgrößen gleichzeitig</strong> – und dass die Phasenlogik ein
+<strong>Herunterstufen</strong> kennt. Erneut ein Beleg, dass die Ausrichtungen/Phasen <strong>erweiterbar</strong>
+sein müssen.</p>
+
+<h3 id="semantische-annotationen-codesysteme">Semantische Annotationen (Codesysteme)</h3>
+
+<p>Unabhängig von der Erklärung oben – so werden die Inhalte <strong>maschinenlesbar</strong> codiert. Die
+Codes sind gegen den MII-Terminologieserver geprüft (ICD-10-GM 2026, SNOMED CT 2026-07-01,
+ATC 2026, LOINC).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Codesystem(e)</th>
+      <th>Beispiel-Codes (validiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Diagnose</strong></td>
+      <td>ICD-10-GM · SNOMED CT</td>
+      <td><code class="language-plaintext highlighter-rouge">J45.9</code> Asthma bronchiale · SNOMED <code class="language-plaintext highlighter-rouge">195967001</code> <em>Asthma</em></td>
+    </tr>
+    <tr>
+      <td><strong>Diagnostik / Messwerte</strong></td>
+      <td>LOINC</td>
+      <td><code class="language-plaintext highlighter-rouge">20150-9</code> FEV1 · <code class="language-plaintext highlighter-rouge">19926-5</code> FEV1/FVC · <code class="language-plaintext highlighter-rouge">26449-9</code> Eosinophile im Blut; FeNO/ACT-Score als <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+    </tr>
+    <tr>
+      <td><strong>Therapien (Prozeduren)</strong></td>
+      <td>OPS · SNOMED CT</td>
+      <td>Inhalationstherapie (überwiegend medikamentös)</td>
+    </tr>
+    <tr>
+      <td><strong>Medikation</strong></td>
+      <td>ATC</td>
+      <td><code class="language-plaintext highlighter-rouge">R03</code> Mittel bei obstruktiven Atemwegserkrankungen: <code class="language-plaintext highlighter-rouge">R03BA</code> inhalative Glucocorticoide (ICS) · <code class="language-plaintext highlighter-rouge">R03AK</code> ICS+LABA-Kombination · <code class="language-plaintext highlighter-rouge">R03AC</code> Beta2-Agonisten (SABA/LABA) · <code class="language-plaintext highlighter-rouge">R03BB</code> Anticholinergika (LAMA) · <code class="language-plaintext highlighter-rouge">R03DC</code> Leukotrienrezeptor-Antagonisten · <code class="language-plaintext highlighter-rouge">R03DX</code> Biologika (systemisch)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="leitlinien-und-quellen">Leitlinien und Quellen</h3>
+
+<ul>
+  <li>Bundesärztekammer (BÄK), Kassenärztliche Bundesvereinigung (KBV), AWMF. <em>Nationale
+VersorgungsLeitlinie Asthma.</em> Version 5, 23.08.2024 (gültig bis 14.08.2029),
+AWMF-Reg.-Nr. nvl-002. <a href="https://www.leitlinien.de/themen/asthma">leitlinien.de/themen/asthma</a>
+(abgerufen 29.07.2026).</li>
+  <li>Global Initiative for Asthma (GINA). <em>Global Strategy for Asthma Management and
+Prevention – 2025 Update.</em> GINA, Mai 2025.
+<a href="https://ginasthma.org/2025-gina-strategy-report/">ginasthma.org/2025-gina-strategy-report</a>
+(abgerufen 29.07.2026).</li>
+  <li><em>Europäisch:</em> Holguin F, Cardet JC, Chung KF, et al. <em>Management of severe asthma: a
+European Respiratory Society/American Thoracic Society guideline.</em> Eur Respir J
+2020;55:1900588. DOI
+<a href="https://doi.org/10.1183/13993003.00588-2019">10.1183/13993003.00588-2019</a>. — betrifft
+das <strong>schwere</strong> Asthma (Einteilung nach Entzündungstyp, Biologika).</li>
+</ul>
+
+<p>→ Zurück zur <a href="therapieziele.html">Übersicht der Therapieziele</a> ·
+<a href="goal-target-measure.html">Zielwerte und Messgrößen</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-31 13:52:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

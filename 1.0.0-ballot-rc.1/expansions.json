@@ -1,0 +1,885 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "0118da24-b5b5-4c80-81d7-fc7e49508f1e",
+  "meta" : {
+    "lastUpdated" : "2026-07-31T13:52:27.982+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-change-type.html\">codesystem EnLiST-Änderungstypen v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-new\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-new\">new</a></td><td/><td>Neue Linie (X+1): klinische Progression (cPD) oder fehlendes adäquates Ansprechen.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;new&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;new&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-modified\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-modified\">modified</a></td><td/><td>Modifizierte Linie (Y+1): nicht-progressionsbedingte Änderung — Intoleranz, Hinzunahme/Wechsel eines Wirkstoffs, finanzielle oder logistische Gründe.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;modified&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;modified&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-same\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-same\">same</a></td><td/><td>Unveränderte Designation: prospektiv geplante Änderungen — Dosis, Zeitplan, Applikationsweg, Erhaltungstherapie, Therapiepause mit unveränderter Reintroduktion.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;same&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;same&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistChangeTypeVS",
+      "title" : "EnLiST-Änderungstypen (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST change types value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:8ca59f8b-3158-4ab5-b7d1-777f0ca03c6e",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "new"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "modified"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "same"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-change-type.html\">codesystem EnLiST-Änderungstypen v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-new\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-new\">new</a></td><td/><td>Neue Linie (X+1): klinische Progression (cPD) oder fehlendes adäquates Ansprechen.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;new&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;new&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-modified\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-modified\">modified</a></td><td/><td>Modifizierte Linie (Y+1): nicht-progressionsbedingte Änderung — Intoleranz, Hinzunahme/Wechsel eines Wirkstoffs, finanzielle oder logistische Gründe.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;modified&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;modified&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-same\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-same\">same</a></td><td/><td>Unveränderte Designation: prospektiv geplante Änderungen — Dosis, Zeitplan, Applikationsweg, Erhaltungstherapie, Therapiepause mit unveränderter Reintroduktion.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;same&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;same&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistChangeTypeVS",
+      "title" : "EnLiST-Änderungstypen (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST change types value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:8ca59f8b-3158-4ab5-b7d1-777f0ca03c6e",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "new"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "modified"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "same"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-change-type.html\">codesystem EnLiST-Änderungstypen v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-new\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-new\">new</a></td><td>New LoT</td><td>Neue Linie (X+1): klinische Progression (cPD) oder fehlendes adäquates Ansprechen.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;new&quot;, &quot;display&quot;: &quot;New LoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;new&quot;&gt;&lt;display value=&quot;New LoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-modified\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-modified\">modified</a></td><td>Modified LoT</td><td>Modifizierte Linie (Y+1): nicht-progressionsbedingte Änderung — Intoleranz, Hinzunahme/Wechsel eines Wirkstoffs, finanzielle oder logistische Gründe.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;modified&quot;, &quot;display&quot;: &quot;Modified LoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;modified&quot;&gt;&lt;display value=&quot;Modified LoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type-same\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-change-type.html#enlist-change-type-same\">same</a></td><td>Same LoT</td><td>Unveränderte Designation: prospektiv geplante Änderungen — Dosis, Zeitplan, Applikationsweg, Erhaltungstherapie, Therapiepause mit unveränderter Reintroduktion.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;same&quot;, &quot;display&quot;: &quot;Same LoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;same&quot;&gt;&lt;display value=&quot;Same LoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistChangeTypeVS",
+      "title" : "EnLiST-Änderungstypen (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST change types value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:1abbc5cd-1b9b-47b8-bee7-c8f3ffaaccca",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "new",
+          "display" : "New LoT"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "modified",
+          "display" : "Modified LoT"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+          "code" : "same",
+          "display" : "Same LoT"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-countable.html\">codesystem EnLiST-Zählstatus v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable-counted\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-countable.html#enlist-countable-counted\">counted</a></td><td/><td>Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;counted&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;counted&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable-not-counted\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-countable.html#enlist-countable-not-counted\">not-counted</a></td><td/><td>Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;not-counted&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;not-counted&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistCountableVS",
+      "title" : "EnLiST-Zählstatus (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST countability value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:00c14ab5-e5be-4b22-b987-6166df331ff0",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+          "code" : "counted"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+          "code" : "not-counted"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-countable.html\">codesystem EnLiST-Zählstatus v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable-counted\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-countable.html#enlist-countable-counted\">counted</a></td><td/><td>Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;counted&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;counted&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable-not-counted\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-countable.html#enlist-countable-not-counted\">not-counted</a></td><td/><td>Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;not-counted&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;not-counted&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistCountableVS",
+      "title" : "EnLiST-Zählstatus (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST countability value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:00c14ab5-e5be-4b22-b987-6166df331ff0",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+          "code" : "counted"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+          "code" : "not-counted"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-countable.html\">codesystem EnLiST-Zählstatus v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable-counted\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-countable.html#enlist-countable-counted\">counted</a></td><td>Zählt in der LoT-Zählung</td><td>Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;counted&quot;, &quot;display&quot;: &quot;Zählt in der LoT-Zählung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;counted&quot;&gt;&lt;display value=&quot;Zählt in der LoT-Zählung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable-not-counted\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-countable.html#enlist-countable-not-counted\">not-counted</a></td><td>Zählt nicht</td><td>Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;not-counted&quot;, &quot;display&quot;: &quot;Zählt nicht&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;not-counted&quot;&gt;&lt;display value=&quot;Zählt nicht&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistCountableVS",
+      "title" : "EnLiST-Zählstatus (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST countability value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:dba80c0c-1067-4f4f-8df5-af8f3578d3fa",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+          "code" : "counted",
+          "display" : "Zählt in der LoT-Zählung"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+          "code" : "not-counted",
+          "display" : "Zählt nicht"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-lot-setting.html\">codesystem EnLiST-Setting-Achsen v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-eLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-eLoT\">eLoT</a></td><td/><td>Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;eLoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;eLoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-aLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-aLoT\">aLoT</a></td><td/><td>Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;aLoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;aLoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-iLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-iLoT\">iLoT</a></td><td/><td>Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;iLoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;iLoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistLotSettingVS",
+      "title" : "EnLiST-Setting-Achsen (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST setting axes value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:b20639af-b443-4de1-9b8c-b680c401bbd1",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "eLoT"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "aLoT"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "iLoT"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-lot-setting.html\">codesystem EnLiST-Setting-Achsen v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-eLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-eLoT\">eLoT</a></td><td/><td>Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;eLoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;eLoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-aLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-aLoT\">aLoT</a></td><td/><td>Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;aLoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;aLoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-iLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-iLoT\">iLoT</a></td><td/><td>Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;iLoT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;iLoT&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistLotSettingVS",
+      "title" : "EnLiST-Setting-Achsen (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST setting axes value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:b20639af-b443-4de1-9b8c-b680c401bbd1",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "eLoT"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "aLoT"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "iLoT"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-enlist-lot-setting.html\">codesystem EnLiST-Setting-Achsen v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-eLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-eLoT\">eLoT</a></td><td>eLoT — frühes Setting</td><td>Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;eLoT&quot;, &quot;display&quot;: &quot;eLoT — frühes Setting&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;eLoT&quot;&gt;&lt;display value=&quot;eLoT — frühes Setting&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-aLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-aLoT\">aLoT</a></td><td>aLoT — fortgeschrittenes Setting</td><td>Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;aLoT&quot;, &quot;display&quot;: &quot;aLoT — fortgeschrittenes Setting&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;aLoT&quot;&gt;&lt;display value=&quot;aLoT — fortgeschrittenes Setting&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting-iLoT\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-enlist-lot-setting.html#enlist-lot-setting-iLoT\">iLoT</a></td><td>iLoT — investigational</td><td>Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;iLoT&quot;, &quot;display&quot;: &quot;iLoT — investigational&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;iLoT&quot;&gt;&lt;display value=&quot;iLoT — investigational&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "EnlistLotSettingVS",
+      "title" : "EnLiST-Setting-Achsen (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST setting axes value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "draft",
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:d5ede1cb-9490-4c78-86cc-5d3ccc6dbabe",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "eLoT",
+          "display" : "eLoT — frühes Setting"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "aLoT",
+          "display" : "aLoT — fortgeschrittenes Setting"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "iLoT",
+          "display" : "iLoT — investigational"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-onko-therapy-goal-type.html\">codesystem Onkologische Therapieziel-Art v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 5 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b><a href=\"https://browser.ihtsdotools.org/\">Zielarten → SNOMED CT (Zielzustände)</a></b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-heilung\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-heilung\">heilung</a></td><td/><td>Kuratives Ziel — vollständige Remission angestrebt.</td><td><span title=\"EQUIVALENT\">~</span><a href=\"http://snomed.info/id/371001000\">371001000</a><i>(Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;heilung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;heilung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensverlaengerung\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensverlaengerung\">lebensverlaengerung</a></td><td/><td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td><td><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/445320007\">445320007</a><i>(SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;lebensverlaengerung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-symptomkontrolle\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-symptomkontrolle\">symptomkontrolle</a></td><td/><td>Zielzustand einer definierten Symptomlast; symptombezogen erfasst — über Symptomskala oder erfragte Symptomlast.</td><td><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/1149243003\">1149243003</a><i>(Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode.)</i><br/><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/225353007\">225353007</a><i>(Regime/Therapy — das Mittel, nicht der Zielzustand.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;symptomkontrolle&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensqualitaet\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensqualitaet\">lebensqualitaet</a></td><td/><td>Erhalt oder Verbesserung der globalen, patientenberichteten Lebensqualität; erfasst per standardisiertem PROM oder strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch).</td><td><span title=\"EQUIVALENT\">~</span><a href=\"http://snomed.info/id/1156447008\">1156447008</a><i>(Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;lebensqualitaet&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-funktionserhalt\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-funktionserhalt\">funktionserhalt</a></td><td/><td>Erhalt einer konkret benannten Körperfunktion oder -struktur (z. B. Brusterhalt, Kontinenz, Fertilität); patientenpriorisiertes Ziel, das die Maßnahmenwahl in beide Richtungen steuert und eigenständig nachgehalten wird.</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "OnkoTherapyGoalTypeVS",
+      "title" : "Onkologische Therapieziel-Art (VS)",
+      "status" : "draft",
+      "experimental" : true,
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:75550dc1-e4d0-4d1a-ac86-5b8680744565",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 5,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "heilung"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensverlaengerung"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "symptomkontrolle"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensqualitaet"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "funktionserhalt"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-onko-therapy-goal-type.html\">codesystem Onkologische Therapieziel-Art v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 5 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b><a href=\"https://browser.ihtsdotools.org/\">Zielarten → SNOMED CT (Zielzustände)</a></b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-heilung\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-heilung\">heilung</a></td><td/><td>Kuratives Ziel — vollständige Remission angestrebt.</td><td><span title=\"EQUIVALENT\">~</span><a href=\"http://snomed.info/id/371001000\">371001000</a><i>(Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;heilung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;heilung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensverlaengerung\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensverlaengerung\">lebensverlaengerung</a></td><td/><td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td><td><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/445320007\">445320007</a><i>(SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;lebensverlaengerung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-symptomkontrolle\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-symptomkontrolle\">symptomkontrolle</a></td><td/><td>Zielzustand einer definierten Symptomlast; symptombezogen erfasst — über Symptomskala oder erfragte Symptomlast.</td><td><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/1149243003\">1149243003</a><i>(Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode.)</i><br/><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/225353007\">225353007</a><i>(Regime/Therapy — das Mittel, nicht der Zielzustand.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;symptomkontrolle&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensqualitaet\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensqualitaet\">lebensqualitaet</a></td><td/><td>Erhalt oder Verbesserung der globalen, patientenberichteten Lebensqualität; erfasst per standardisiertem PROM oder strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch).</td><td><span title=\"EQUIVALENT\">~</span><a href=\"http://snomed.info/id/1156447008\">1156447008</a><i>(Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;lebensqualitaet&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-funktionserhalt\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-funktionserhalt\">funktionserhalt</a></td><td/><td>Erhalt einer konkret benannten Körperfunktion oder -struktur (z. B. Brusterhalt, Kontinenz, Fertilität); patientenpriorisiertes Ziel, das die Maßnahmenwahl in beide Richtungen steuert und eigenständig nachgehalten wird.</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "OnkoTherapyGoalTypeVS",
+      "title" : "Onkologische Therapieziel-Art (VS)",
+      "status" : "draft",
+      "experimental" : true,
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:75550dc1-e4d0-4d1a-ac86-5b8680744565",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 5,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "heilung"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensverlaengerung"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "symptomkontrolle"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensqualitaet"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "funktionserhalt"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-onko-therapy-goal-type.html\">codesystem Onkologische Therapieziel-Art v1.0.0-ballot-rc.1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot-rc.1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 5 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b><a href=\"https://browser.ihtsdotools.org/\">Zielarten → SNOMED CT (Zielzustände)</a></b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-heilung\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-heilung\">heilung</a></td><td>Heilung</td><td>Kuratives Ziel — vollständige Remission angestrebt.</td><td><span title=\"EQUIVALENT\">~</span><a href=\"http://snomed.info/id/371001000\">371001000</a><i>(Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;heilung&quot;, &quot;display&quot;: &quot;Heilung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;heilung&quot;&gt;&lt;display value=&quot;Heilung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensverlaengerung\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensverlaengerung\">lebensverlaengerung</a></td><td>Lebensverlängerung</td><td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td><td><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/445320007\">445320007</a><i>(SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;, &quot;display&quot;: &quot;Lebensverlängerung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;lebensverlaengerung&quot;&gt;&lt;display value=&quot;Lebensverlängerung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-symptomkontrolle\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-symptomkontrolle\">symptomkontrolle</a></td><td>Symptomkontrolle / Palliation</td><td>Zielzustand einer definierten Symptomlast; symptombezogen erfasst — über Symptomskala oder erfragte Symptomlast.</td><td><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/1149243003\">1149243003</a><i>(Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode.)</i><br/><span title=\"RELATEDTO\">?</span><a href=\"http://snomed.info/id/225353007\">225353007</a><i>(Regime/Therapy — das Mittel, nicht der Zielzustand.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;, &quot;display&quot;: &quot;Symptomkontrolle / Palliation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;symptomkontrolle&quot;&gt;&lt;display value=&quot;Symptomkontrolle / Palliation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-lebensqualitaet\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-lebensqualitaet\">lebensqualitaet</a></td><td>Lebensqualität</td><td>Erhalt oder Verbesserung der globalen, patientenberichteten Lebensqualität; erfasst per standardisiertem PROM oder strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch).</td><td><span title=\"EQUIVALENT\">~</span><a href=\"http://snomed.info/id/1156447008\">1156447008</a><i>(Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite.)</i></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;, &quot;display&quot;: &quot;Lebensqualität&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;lebensqualitaet&quot;&gt;&lt;display value=&quot;Lebensqualität&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-funktionserhalt\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-funktionserhalt\">funktionserhalt</a></td><td>Funktionserhalt</td><td>Erhalt einer konkret benannten Körperfunktion oder -struktur (z. B. Brusterhalt, Kontinenz, Fertilität); patientenpriorisiertes Ziel, das die Maßnahmenwahl in beide Richtungen steuert und eigenständig nachgehalten wird.</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot-rc.1&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;, &quot;display&quot;: &quot;Funktionserhalt&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot-rc.1&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;display value=&quot;Funktionserhalt&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+      "version" : "1.0.0-ballot-rc.1",
+      "name" : "OnkoTherapyGoalTypeVS",
+      "title" : "Onkologische Therapieziel-Art (VS)",
+      "status" : "draft",
+      "experimental" : true,
+      "date" : "2026-07-31T13:52:27+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:a564618c-4372-493a-a323-c34403a239f1",
+        "timestamp" : "2026-07-31T13:53:53+00:00",
+        "total" : 5,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot-rc.1"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "heilung",
+          "display" : "Heilung"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensverlaengerung",
+          "display" : "Lebensverlängerung"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "symptomkontrolle",
+          "display" : "Symptomkontrolle / Palliation"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensqualitaet",
+          "display" : "Lebensqualität"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "funktionserhalt",
+          "display" : "Funktionserhalt"
+        }]
+      }
+    }
+  }]
+}

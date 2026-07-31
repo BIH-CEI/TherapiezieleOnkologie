@@ -1,0 +1,128 @@
+# de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.1: Implementierungsleitfaden Therapieziele Onkologie(de)
+
+## Pages
+
+* [Startseite](de/index.md)
+* [Hinweise zur Übersetzung](de/translationinfo.md)
+* [Analysebericht (LG-01)](de/analysebericht.md)
+* [Anwendungsbeispiel (Mammakarzinom neoadjuvant)](de/szenario-mamma.md)
+* [Weitere Entität – Rheumatoide Arthritis](de/entitaet-rheuma.md)
+* [Weitere Entität – Diabetes mellitus](de/entitaet-diabetes.md)
+* [Artefaktübersicht](de/artifacts.md)
+* [Empfehlungs- und Behandlungsplan](de/empfehlung-behandlung.md)
+* [Therapieziele (Goals)](de/therapieziele.md)
+* [Weitere Entität – Asthma bronchiale](de/entitaet-asthma.md)
+* [Weitere Entität – Chronisch-entzündliche Darmerkrankungen](de/entitaet-ced.md)
+* [Anwendungsbeispiel (mCRC palliativ)](de/szenario-crc.md)
+* [Behandlungsepisoden (EpisodeOfCare)](de/behandlungsepisode.md)
+* [Zielwerte und Messgrößen](de/goal-target-measure.md)
+* [Abweichende Szenarios](de/szenario-mamma-abweichende-szenarios.md)
+
+## Resources
+
+### CodeSystems
+
+* [EnLiST-Änderungstypen](de/CodeSystem-enlist-change-type.md)
+* [EnLiST-Zählstatus](de/CodeSystem-enlist-countable.md)
+* [EnLiST-Setting-Achsen](de/CodeSystem-enlist-lot-setting.md)
+* [Onkologische Therapieziel-Art](de/CodeSystem-onko-therapy-goal-type.md)
+
+### ValueSets
+
+* [EnLiST-Änderungstypen (ValueSet)](de/ValueSet-enlist-change-type.md)
+* [EnLiST-Zählstatus (ValueSet)](de/ValueSet-enlist-countable.md)
+* [EnLiST-Setting-Achsen (ValueSet)](de/ValueSet-enlist-lot-setting.md)
+* [Onkologische Therapieziel-Art (VS)](de/ValueSet-onko-therapy-goal-type.md)
+* [Onkologische Therapieintention (VS)](de/ValueSet-onko-therapy-intent.md)
+* [Onkologische Therapielinie – Art (VS)](de/ValueSet-onko-therapy-line-type.md)
+* [Onkologische Therapiephase / Unter-Intention (VS)](de/ValueSet-onko-therapy-phase.md)
+
+### Logicals
+
+* [Therapieziel-Dreieck (logisches Modell)](de/StructureDefinition-TherapiezielDreieck.md)
+
+### Resource Profiles
+
+* [Onkologischer CarePlan](de/StructureDefinition-onko-care-plan.md)
+* [Onkologische Diagnose (Condition)](de/StructureDefinition-onko-condition.md)
+* [Diagnostischer CarePlan](de/StructureDefinition-onko-diagnostic-care-plan.md)
+* [Onkologisches Therapieziel](de/StructureDefinition-onko-therapy-goal.md)
+* [Onkologische Therapielinie](de/StructureDefinition-onko-therapy-line.md)
+* [Tumorboard MedicationRequest](de/StructureDefinition-onko-tumorboard-medication-request.md)
+* [Tumorboard ServiceRequest](de/StructureDefinition-onko-tumorboard-service-request.md)
+
+### Extensions
+
+* [EnLiST-Zählstatus (Extension)](de/StructureDefinition-enlist-countable.md)
+* [EnLiST-LoT-Designation (Extension)](de/StructureDefinition-enlist-lot.md)
+* [CarePlan Custodian (Extension)](de/StructureDefinition-onko-careplan-custodian.md)
+* [Onkologische Therapieintention (Extension)](de/StructureDefinition-onko-therapy-intent.md)
+* [Therapielinie – Medikationsverordnung (Extension)](de/StructureDefinition-onko-therapy-line-medication-request.md)
+
+### ConceptMaps
+
+* [Zielarten → SNOMED CT (Zielzustände)](de/ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.md)
+
+### ImplementationGuides
+
+* [Implementierungsleitfaden Therapieziele Onkologie](de/ImplementationGuide-bih-cei-therapieziele-onkologie.md)
+
+### Examples
+
+* [BundleCRCPalliativ (Bundle)](de/Bundle-BundleCRCPalliativ.md)
+* [BundleMammaNeoadjuvant (Bundle)](de/Bundle-BundleMammaNeoadjuvant.md)
+* [CarePlanCRCPalliativ (CarePlan)](de/CarePlan-CarePlanCRCPalliativ.md)
+* [CarePlanMammaDiagnostik (CarePlan)](de/CarePlan-CarePlanMammaDiagnostik.md)
+* [CarePlanMammaNachsorge (CarePlan)](de/CarePlan-CarePlanMammaNachsorge.md)
+* [CarePlanMammaNeoadjuvant (CarePlan)](de/CarePlan-CarePlanMammaNeoadjuvant.md)
+* [DiagnostikCarePlanCRC (CarePlan)](de/CarePlan-DiagnostikCarePlanCRC.md)
+* [Interdisziplinäres Tumorboard Kolorektales Karzinom (CareTeam)](de/CareTeam-TumorboardCRC.md)
+* [ConditionCRC (Condition)](de/Condition-ConditionCRC.md)
+* [ConditionMamma (Condition)](de/Condition-ConditionMamma.md)
+* [DiagnosticReportHistologieCRC (DiagnosticReport)](de/DiagnosticReport-DiagnosticReportHistologieCRC.md)
+* [TherapielinieCRCErstlinie (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieCRCErstlinie.md)
+* [TherapielinieChemo (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieChemo.md)
+* [TherapielinieOperation (EpisodeOfCare)](de/EpisodeOfCare-TherapielinieOperation.md)
+* [TherapieliniePembroAdjuvant (EpisodeOfCare)](de/EpisodeOfCare-TherapieliniePembroAdjuvant.md)
+* [DiagnosticGoal (Goal)](de/Goal-DiagnosticGoal.md)
+* [FollowUpGoal (Goal)](de/Goal-FollowUpGoal.md)
+* [TherapiezielCRCErhaltung (Goal)](de/Goal-TherapiezielCRCErhaltung.md)
+* [TherapiezielCRCKurativAbgelehnt (Goal)](de/Goal-TherapiezielCRCKurativAbgelehnt.md)
+* [TherapiezielCRCLebensverlaengerung (Goal)](de/Goal-TherapiezielCRCLebensverlaengerung.md)
+* [TherapiezielMammaHeilung (Goal)](de/Goal-TherapiezielMammaHeilung.md)
+* [MedicationAdministrationPembroChemoNeoadjuvantMamma1 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.md)
+* [MedicationAdministrationPembroChemoNeoadjuvantMamma2 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.md)
+* [MedicationAdministrationPembroChemoNeoadjuvantMamma3 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.md)
+* [MedicationAdministrationPembroChemoNeoadjuvantMamma4 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.md)
+* [MedicationRequestFOLFOX (MedicationRequest)](de/MedicationRequest-MedicationRequestFOLFOX.md)
+* [MedicationRequestPembroAdjuvantMamma (MedicationRequest)](de/MedicationRequest-MedicationRequestPembroAdjuvantMamma.md)
+* [MedicationRequestPembroChemoNeoadjuvantMamma (MedicationRequest)](de/MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
+* [ObsDiseaseStatusMamma (Observation)](de/Observation-ObsDiseaseStatusMamma.md)
+* [ObsEstrogenrezeptorMamma (Observation)](de/Observation-ObsEstrogenrezeptorMamma.md)
+* [ObsGBRCAMamma (Observation)](de/Observation-ObsGBRCAMamma.md)
+* [ObsGradingMamma (Observation)](de/Observation-ObsGradingMamma.md)
+* [ObsHER2Mamma (Observation)](de/Observation-ObsHER2Mamma.md)
+* [ObsHistologieMamma (Observation)](de/Observation-ObsHistologieMamma.md)
+* [ObsKi67Mamma (Observation)](de/Observation-ObsKi67Mamma.md)
+* [ObsProgesteronrezeptorMamma (Observation)](de/Observation-ObsProgesteronrezeptorMamma.md)
+* [ObsTNMklinischMamma (Observation)](de/Observation-ObsTNMklinischMamma.md)
+* [ObsTNMpathologischMamma (Observation)](de/Observation-ObsTNMpathologischMamma.md)
+* [ObservationDiseaseStatusCRC (Observation)](de/Observation-ObservationDiseaseStatusCRC.md)
+* [Zertifiziertes Brustzentrum Musterklinik (Organization)](de/Organization-Tumorboard.md)
+* [Onkologisches Zentrum Musterklinik (Organization)](de/Organization-TumorzentrumCRC.md)
+* [Zertifiziertes Brustzentrum Musterklinik (Organization)](de/Organization-TumorzentrumMamma.md)
+* [PatientinCRC (Patient)](de/Patient-PatientinCRC.md)
+* [PatientinMamma (Patient)](de/Patient-PatientinMamma.md)
+* [OnkologinCRC (Practitioner)](de/Practitioner-OnkologinCRC.md)
+* [OnkologinMamma (Practitioner)](de/Practitioner-OnkologinMamma.md)
+* [ProcedureBiopsieMamma (Procedure)](de/Procedure-ProcedureBiopsieMamma.md)
+* [ProcedureOperationMamma (Procedure)](de/Procedure-ProcedureOperationMamma.md)
+* [ServiceRequestBiopsieMamma (ServiceRequest)](de/ServiceRequest-ServiceRequestBiopsieMamma.md)
+* [ServiceRequestGBRCAMamma (ServiceRequest)](de/ServiceRequest-ServiceRequestGBRCAMamma.md)
+* [ServiceRequestKoloskopieCRC (ServiceRequest)](de/ServiceRequest-ServiceRequestKoloskopieCRC.md)
+* [ServiceRequestMammographieNachsorge (ServiceRequest)](de/ServiceRequest-ServiceRequestMammographieNachsorge.md)
+* [ServiceRequestPathologieMamma (ServiceRequest)](de/ServiceRequest-ServiceRequestPathologieMamma.md)
+* [ServiceRequestPortCRC (ServiceRequest)](de/ServiceRequest-ServiceRequestPortCRC.md)
+* [ServiceRequestProcedure (ServiceRequest)](de/ServiceRequest-ServiceRequestProcedure.md)
+* [ServiceRequestStagingMamma (ServiceRequest)](de/ServiceRequest-ServiceRequestStagingMamma.md)
+* [SpecimenBiopsieMamma (Specimen)](de/Specimen-SpecimenBiopsieMamma.md)

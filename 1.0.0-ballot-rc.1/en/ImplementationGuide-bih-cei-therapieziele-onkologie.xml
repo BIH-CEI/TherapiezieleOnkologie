@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="bih-cei-therapieziele-onkologie"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide bih-cei-therapieziele-onkologie</b></p><a name="en-bih-cei-therapieziele-onkologie"> </a><a name="en-hcbih-cei-therapieziele-onkologie"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>TherapiezieleOnkologie</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.de/fhir/therapieziele-onkologie/ImplementationGuide/bih-cei-therapieziele-onkologie</pre><div><p>Implementierungsleitfaden zur Dokumentation onkologischer Therapieziele in FHIR</p>
+</div></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ImplementationGuide/bih-cei-therapieziele-onkologie"/>
+  <version value="1.0.0-ballot-rc.1"/>
+  <name value="TherapiezieleOnkologie"/>
+  <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
+  <status value="draft"/>
+  <date value="2026-07-31T13:52:27+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="Implementierungsleitfaden zur Dokumentation onkologischer Therapieziele in FHIR"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="de.bih-cei.therapieziele-onkologie"/>
+  <license value="CC-BY-4.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.3.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_onkologie">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.onkologie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+    <version value="2026.0.3"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_meta">
+    <uri value="https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.meta"/>
+    <version value="2026.0.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2026+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Ballot"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="de"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="i18n-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="translation-sources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/translations/en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://bih-cei.de/fhir/therapieziele-onkologie/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="wantGen-ttl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="wantGen-ttl-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2026+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Ballot"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="de"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="i18n-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="translation-sources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/translations/en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://bih-cei.de/fhir/therapieziele-onkologie/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="wantGen-ttl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="wantGen-ttl-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/MedicationRequestPembroAdjuvantMamma"/>
+      </reference>
+      <name value="Adjuvante Systemtherapie – Pembrolizumab-Monotherapie (KEYNOTE-522, Beispiel)"/>
+      <description value="Adjuvante Phase des KEYNOTE-522-Schemas: Pembrolizumab-Monotherapie im Anschluss an die Operation (unabhängig vom pCR-Status), ambulant über ~9 Zyklen (q3w)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestPathologieMamma"/>
+      </reference>
+      <name value="Anforderung histopathologische Untersuchung (Beispiel)"/>
+      <description value="Pathologieauftrag zum Stanzbiopsat: Histologie, Grading, Hormonrezeptor- und HER2-Status sowie Ki-67."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestGBRCAMamma"/>
+      </reference>
+      <name value="Anforderung Keimbahn-Testung gBRCA1 (Beispiel)"/>
+      <description value="Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim triple-negativen Mammakarzinom."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestStagingMamma"/>
+      </reference>
+      <name value="Anforderung klinisches Staging (Beispiel)"/>
+      <description value="Anforderung der klinischen Ausbreitungsdiagnostik (TNM-Klassifikation) vor Therapiebeginn."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestKoloskopieCRC"/>
+      </reference>
+      <name value="Anforderung Koloskopie mit Biopsie (Beispiel)"/>
+      <description value="Diagnostische Maßnahme des DiagnosticCarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestMammographieNachsorge"/>
+      </reference>
+      <name value="Anforderung Nachsorge-Mammographie (Beispiel)"/>
+      <description value="Geplante jährliche Nachsorge-Mammographie der operierten und der kontralateralen Brust zur Rezidiv-/Zweitkarzinom-Früherkennung (S3-Leitlinie Mammakarzinom / AGO)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestBiopsieMamma"/>
+      </reference>
+      <name value="Anforderung Stanzbiopsie Mamma (Beispiel)"/>
+      <description value="Anforderung einer sonografisch gesteuerten Stanzbiopsie der Mamma links zur histologischen Sicherung des Tumorverdachts."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/OnkologinCRC"/>
+      </reference>
+      <name value="Behandelnde Onkologin (Beispiel)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/OnkologinMamma"/>
+      </reference>
+      <name value="Behandelnde Onkologin (Mamma, Beispiel)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/ProcedureOperationMamma"/>
+      </reference>
+      <name value="Brusterhaltende Operation + Sentinel-Lymphknoten-Biopsie (Beispiel)"/>
+      <description value="Durchgeführte lokale Therapie nach Abschluss der neoadjuvanten Systemtherapie: brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/TumorzentrumMamma"/>
+      </reference>
+      <name value="Brustzentrum (Custodian, Beispiel)"/>
+      <description value="Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-careplan-custodian"/>
+      </reference>
+      <name value="CarePlan Custodian (Extension)"/>
+      <description value="Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans (Custodian).&#xA;&#xA;Übernahme der **MCC eCare Plan** Extension&#xA;[custodian](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-custodian.html)&#xA;(`http://hl7.org/fhir/us/mcc/StructureDefinition/custodian`). Es handelt sich um einen&#xA;R5-Backport: In FHIR R5 wurde `CarePlan.author` entfernt; `CarePlan.custodian` benennt die&#xA;für Pflege und Wartung des Plans verantwortliche Partei. Der Custodian kann, muss aber kein&#xA;Contributor sein.&#xA;&#xA;Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu&#xA;vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-diagnostic-care-plan"/>
+      </reference>
+      <name value="Diagnostischer CarePlan"/>
+      <description value="CarePlan für die Tumordiagnostik auf Basis von `CarePlan`.&#xA;&#xA;Ergänzend zum onkologischen Therapie-CarePlan (`OnkoCarePlan`) bildet dieses Profil den Weg&#xA;zur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfads werden als&#xA;Aktivitäten abgebildet, deren Ergebnisse können&#xA;über `activity.outcomeReference` angebunden werden.&#xA;&#xA;Der diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (`OnkoCondition`)&#xA;und ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.&#xA;&#xA;Diagnostikspezifische Ergänzungen:&#xA;- Der Plan-Typ ist über `category` verpflichtend gekennzeichnet: `category.text`&#xA;  muss den Wert &quot;Tumordiagnostik&quot; tragen. Weitere Categories können ergänzt&#xA;  werden. Damit sind diagnostischer und Therapie-CarePlan unterscheidbar.&#xA;&#xA;**Abgrenzung:** Dieses Profil beschreibt den *Prozess* der Diagnosefindung."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/CarePlanMammaDiagnostik"/>
+      </reference>
+      <name value="Diagnostischer CarePlan (Beispiel Mamma)"/>
+      <description value="Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/DiagnostikCarePlanCRC"/>
+      </reference>
+      <name value="Diagnostischer CarePlan – Tumordiagnostik (Beispiel)"/>
+      <description value="Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/enlist-lot"/>
+      </reference>
+      <name value="EnLiST-LoT-Designation (Extension)"/>
+      <description value="EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:&#xA;&#xA;- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),&#xA;  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**&#xA;  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse&#xA;  zählt **getrennt**.&#xA;- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht&#xA;  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.&#xA;- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT&#xA;  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem&#xA;  X-Inkrement.&#xA;- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1&quot;.&#xA;&#xA;Die Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*&#xA;(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die&#xA;Designation nicht."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/enlist-lot-setting"/>
+      </reference>
+      <name value="EnLiST-Setting-Achsen"/>
+      <description value="Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/enlist-lot-setting"/>
+      </reference>
+      <name value="EnLiST-Setting-Achsen (ValueSet)"/>
+      <description value="Alle EnLiST-Setting-Achsen."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/enlist-countable"/>
+      </reference>
+      <name value="EnLiST-Zählstatus"/>
+      <description value="Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/enlist-countable"/>
+      </reference>
+      <name value="EnLiST-Zählstatus (Extension)"/>
+      <description value="Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf&#xA;einer EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);&#xA;`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale&#xA;Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder&#xA;Management-Abschnitt."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/enlist-countable"/>
+      </reference>
+      <name value="EnLiST-Zählstatus (ValueSet)"/>
+      <description value="Alle Zählstatus-Werte nach EnLiST."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/enlist-change-type"/>
+      </reference>
+      <name value="EnLiST-Änderungstypen"/>
+      <description value="Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/enlist-change-type"/>
+      </reference>
+      <name value="EnLiST-Änderungstypen (ValueSet)"/>
+      <description value="Alle EnLiST-Änderungstypen."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestProcedure"/>
+      </reference>
+      <name value="Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen"/>
+      <description value="Empfehlung des Tumorboards: operative Entfernung des Tumors (Lumpektomie) bei Mammakarzinom."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+      </reference>
+      <name value="Geplante Systemtherapie – Pembrolizumab + Chemotherapie (KEYNOTE-522, Beispiel)"/>
+      <description value="Geplante Aktivität des CarePlan: neoadjuvante Chemo-/Immuntherapie nach KEYNOTE-522 (Pembrolizumab + Carboplatin/Paclitaxel → Pembrolizumab + EC)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsGradingMamma"/>
+      </reference>
+      <name value="Grading G3 (Beispiel)"/>
+      <description value="Histopathologisches Grading nach Elston-Ellis: G3 (schlecht differenziert)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsHER2Mamma"/>
+      </reference>
+      <name value="HER2/neu-Status – negativ (Beispiel)"/>
+      <description value="HER2/neu-Status: negativ (IHC 1+). Kodierung nach MII Mamma-Zusatzmodul (oBDS + Leitlinie)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsHistologieMamma"/>
+      </reference>
+      <name value="Histologie / Morphologie (ICD-O-3, Beispiel)"/>
+      <description value="Histologischer Befund der Stanzbiopsie: invasives Karzinom ohne speziellen Typ (NST)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReportHistologieCRC"/>
+      </reference>
+      <name value="Histopathologischer Befund (Beispiel)"/>
+      <description value="Ergebnis der Diagnostik: histologische Sicherung eines Adenokarzinoms des Kolons."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CareTeam"/>
+      </extension>
+      <reference>
+        <reference value="CareTeam/TumorboardCRC"/>
+      </reference>
+      <name value="Interdisziplinäres Tumorboard (Beispiel)"/>
+      <description value="Tumorkonferenz, die die Therapieempfehlungen ausspricht (Requester der Tumorboard-Requests)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsGBRCAMamma"/>
+      </reference>
+      <name value="Keimbahn-Testung gBRCA1 – unauffällig (Beispiel)"/>
+      <description value="Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim TNBC: keine (wahrscheinlich) pathogene Variante nachgewiesen."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsKi67Mamma"/>
+      </reference>
+      <name value="Ki-67 Proliferationsindex (Beispiel)"/>
+      <description value="Proliferationsmarker Ki-67: 70 % – hohe Proliferationsaktivität."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsTNMklinischMamma"/>
+      </reference>
+      <name value="Klinisches TNM / UICC-Stadium (Beispiel)"/>
+      <description value="Klinische Ausbreitungsdiagnostik vor Therapiebeginn: cT2 cN1 cM0, UICC-Stadium IIB."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ConditionCRC"/>
+      </reference>
+      <name value="Kolorektales Karzinom, metastasiert (Beispiel)"/>
+      <description value="Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ConditionMamma"/>
+      </reference>
+      <name value="Mammakarzinom links, triple-negativ (Beispiel)"/>
+      <description value="Adressierte Tumorerkrankung: invasives Mammakarzinom links (NST), ICD-10-GM C50.4. Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-condition"/>
+      </reference>
+      <name value="Onkologische Diagnose (Condition)"/>
+      <description value="Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**&#xA;([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),&#xA;Version 2026.0.3).&#xA;&#xA;Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,&#xA;ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,&#xA;Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`&#xA;und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen&#xA;Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.&#xA;&#xA;Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das&#xA;Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen&#xA;lokalen Canonical bereit, auf den die übrigen Profile referenzieren."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-therapy-intent"/>
+      </reference>
+      <name value="Onkologische Therapieintention (Extension)"/>
+      <description value="Strukturierte Codierung der Therapieintention über zwei Achsen:&#xA;&#xA;- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,&#xA;  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.&#xA;- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention&#xA;  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.&#xA;&#xA;So lässt sich z. B. „kurativ + Induktionsphase&quot; gleichzeitig ausdrücken. Verwendet in&#xA;OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE&#xA;`procedure-intent`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-therapy-intent"/>
+      </reference>
+      <name value="Onkologische Therapieintention (VS)"/>
+      <description value="Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.&#xA;&#xA;Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.&#xA;Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar&#xA;gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten&#xA;des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-therapy-line"/>
+      </reference>
+      <name value="Onkologische Therapielinie"/>
+      <description value="Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein Behandlungsabschnitt mit einer bestimmten Intention und einer definierten Tumorerkrankung, der durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird. Die Verbindung zu einem `OnkoCarePlan` erfolgt über `CarePlan.encounter` → `Encounter.episodeOfCare` oder die Standard-Extension `workflow-episodeOfCare`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-therapy-line-type"/>
+      </reference>
+      <name value="Onkologische Therapielinie – Art (VS)"/>
+      <description value="Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.&#xA;&#xA;Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein&#xA;Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert&#xA;`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code&#xA;`Ambulatory chemotherapy` (315601005)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-therapy-phase"/>
+      </reference>
+      <name value="Onkologische Therapiephase / Unter-Intention (VS)"/>
+      <description value="Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur&#xA;Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,&#xA;sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.&#xA;Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen&#xA;Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.&#xA;Konsolidierung ergänzbar)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/onko-therapy-goal-type"/>
+      </reference>
+      <name value="Onkologische Therapieziel-Art"/>
+      <description value="Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-therapy-goal-type"/>
+      </reference>
+      <name value="Onkologische Therapieziel-Art (VS)"/>
+      <description value="ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-care-plan"/>
+      </reference>
+      <name value="Onkologischer CarePlan"/>
+      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über `CarePlan.encounter`&#xA;  bzw. die Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/CarePlanMammaNeoadjuvant"/>
+      </reference>
+      <name value="Onkologischer CarePlan – Mamma neoadjuvant/kurativ (Beispiel)"/>
+      <description value="Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives Therapieziel sowie geplante (neoadjuvante Systemtherapie) und durchgeführte Maßnahmen (Operation, Ansprechbeurteilung) zusammenführt."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/CarePlanCRCPalliativ"/>
+      </reference>
+      <name value="Onkologischer CarePlan – mCRC palliativ (Beispiel)"/>
+      <description value="Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives Therapieziel sowie geplante und durchgeführte Maßnahmen zusammenführt."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/CarePlanMammaNachsorge"/>
+      </reference>
+      <name value="Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)"/>
+      <description value="Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR): trägt das Nachsorge-Ziel (Rezidivfreiheit, Funktion, Lebensqualität) und die geplante jährliche Mammographie als Maßnahme."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/DiagnosticGoal"/>
+      </reference>
+      <name value="Onkologisches Diagnosezeil"/>
+      <description value="Das onkologische Diagnoseziel wird im diagnostischen CarePlan verlinkt und hat zum Ziel, dass eine Tumordiagnostik gestellt werden kann."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-therapy-goal"/>
+      </reference>
+      <name value="Onkologisches Therapieziel"/>
+      <description value="Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.&#xA;&#xA;Das Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))&#xA;angelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über&#xA;`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten&#xA;Ergebnissen (Verlaufs-Observations) verknüpft wird.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,&#xA;  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt).&#xA;- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der&#xA;  zugehörigen Behandlungslinie hinterlegt werden.&#xA;- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE&#xA;  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel&#xA;  bezogen ausgewertet werden kann.&#xA;&#xA;`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab&#xA;(z. B. erreicht, in Bearbeitung, nicht erreicht)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/PatientinMamma"/>
+      </reference>
+      <name value="Patientin – Mammakarzinom (Beispiel)"/>
+      <description value="Beispielpatientin mit primärem, triple-negativem Mammakarzinom (frühes Stadium)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/PatientinCRC"/>
+      </reference>
+      <name value="Patientin – mCRC (Beispiel)"/>
+      <description value="Beispielpatientin mit metastasiertem kolorektalem Karzinom."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsTNMpathologischMamma"/>
+      </reference>
+      <name value="Postneoadjuvantes TNM / pCR (Beispiel)"/>
+      <description value="Pathologische Aufarbeitung des OP-Präparats nach neoadjuvanter Therapie: ypT0 ypN0 – pathologische Komplettremission (pCR)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsProgesteronrezeptorMamma"/>
+      </reference>
+      <name value="Progesteronrezeptor-Status – negativ (Beispiel)"/>
+      <description value="Immunhistochemischer Progesteronrezeptor-Status: negativ (&lt;1 % positive Tumorzellkerne)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/ProcedureBiopsieMamma"/>
+      </reference>
+      <name value="Sonografisch gesteuerte Stanzbiopsie der Mamma (Beispiel)"/>
+      <description value="Diagnostische Prozedur zur Sicherung der Tumordiagnose: sonografisch gesteuerte Stanzbiopsie der Mamma links. Liefert das Material für Histologie, Grading und Rezeptor-/HER2-Bestimmung."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/SpecimenBiopsieMamma"/>
+      </reference>
+      <name value="Stanzbiopsat Mamma links (Beispiel)"/>
+      <description value="Gewebeprobe aus der Stanzbiopsie, an der die histopathologische und molekulare Diagnostik durchgeführt wurde."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/TherapielinieCRCErstlinie"/>
+      </reference>
+      <name value="Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)"/>
+      <description value="Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/TherapielinieChemo"/>
+      </reference>
+      <name value="Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie"/>
+      <description value="Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/TherapielinieOperation"/>
+      </reference>
+      <name value="Therapielinie 2 – Operation"/>
+      <description value="Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/TherapieliniePembroAdjuvant"/>
+      </reference>
+      <name value="Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant"/>
+      <description value="Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-therapy-line-medication-request"/>
+      </reference>
+      <name value="Therapielinie – Medikationsverordnung (Extension)"/>
+      <description value="Referenz auf die `MedicationRequest`-Ressource(en), die den Anlass bzw. die Verordnung für&#xA;diese Therapielinie bilden.&#xA;&#xA;`EpisodeOfCare.referralRequest` ist im FHIR-Core auf `Reference(ServiceRequest)` beschränkt&#xA;und kann in einem Profil nicht auf weitere Zieltypen erweitert werden (Profile dürfen&#xA;Referenzziele nur einschränken, nicht erweitern). Für Therapielinien, deren Auslöser eine&#xA;Medikationsverordnung statt eines ServiceRequest ist (z. B. eine antineoplastische&#xA;Systemtherapie), wird daher diese Extension ergänzend zu `referralRequest` verwendet."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/TherapiezielCRCErhaltung"/>
+      </reference>
+      <name value="Therapieziel – Erhaltungstherapie / Stabilisierung (Beispiel)"/>
+      <description value="Nachgelagertes Ziel der Erhaltungsphase (Deeskalation auf 5-FU/Bevacizumab nach Ansprechen). Demonstriert die predecessor-Beziehung als Gegenrichtung zum successor des Induktionsziels."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/TherapiezielMammaHeilung"/>
+      </reference>
+      <name value="Therapieziel – Heilung &amp; Brusterhalt (Beispiel)"/>
+      <description value="Übergeordnetes kuratives Therapieziel: Heilung des frühen TNBC durch neoadjuvante Systemtherapie und anschließende Operation, bei gleichzeitigem Ziel des Brusterhalts (Funktionserhalt)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/TherapiezielCRCKurativAbgelehnt"/>
+      </reference>
+      <name value="Therapieziel – kurative Resektion (abgelehnt, Beispiel)"/>
+      <description value="In der Tumorkonferenz erwogenes kuratives Ziel, das aufgrund der Metastasierung verworfen wurde. Demonstriert die Extension goal-reasonRejected."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/TherapiezielCRCLebensverlaengerung"/>
+      </reference>
+      <name value="Therapieziel – Lebensverlängerung &amp; Symptomkontrolle (Beispiel)"/>
+      <description value="Übergeordnetes palliatives Therapieziel: Lebensverlängerung bei gleichzeitiger Symptomkontrolle."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/TherapiezielDreieck"/>
+      </reference>
+      <name value="Therapieziel-Dreieck (logisches Modell)"/>
+      <description value="Logisches Modell der drei Kernkonzepte des Leitfadens und ihrer Beziehungen:&#xA;&#xA;- **Behandlungsepisode** — *wer* behandelt, in welchem Rahmen (Art, Intention,&#xA;  Zeitraum, verantwortliche Organisation),&#xA;- **Therapieziel** — *was* erreicht werden soll (Zielart, messbarer Zielwert,&#xA;  Erreichungsgrad),&#xA;- **Versorgungsplan** — *welche Maßnahmen* geplant sind (Tumorboard-Empfehlung&#xA;  bzw. Behandlungsplan mit den geplanten Anforderungen).&#xA;&#xA;Das Ziel geht dem Plan voraus; der Plan **verfolgt** das Ziel (`verfolgtesZiel`)&#xA;und ist seiner **Episode zugeordnet** (`episode`). Zwischen Ziel und Episode gibt&#xA;es **keine direkte Referenz** — die Zuordnung ergibt sich implizit über den Plan&#xA;(siehe schematische Darstellung)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BundleMammaNeoadjuvant"/>
+      </reference>
+      <name value="Transaction-Bundle – Mammakarzinom neoadjuvant (Beispiel)"/>
+      <description value="Postbares Transaction-Bundle mit allen Instanzen des Mamma-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinien, Therapieziele, Tumorboard-Empfehlungen, Verlauf)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BundleCRCPalliativ"/>
+      </reference>
+      <name value="Transaction-Bundle – mCRC palliativ (Beispiel)"/>
+      <description value="Postbares Transaction-Bundle mit allen Instanzen des mCRC-Szenarios (Patientin, Akteure, Diagnostik, Diagnose, Therapielinie, Therapieziele, Tumorboard-Empfehlungen, Verlauf)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObservationDiseaseStatusCRC"/>
+      </reference>
+      <name value="Tumoransprechen / Disease Status (Beispiel)"/>
+      <description value="Verlaufs-Observation zum Krankheitsstatus, die das Tumoransprechen auf das Therapieziel bezieht (vgl. mCODE Cancer Disease Status)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsDiseaseStatusMamma"/>
+      </reference>
+      <name value="Tumoransprechen / Disease Status – Komplettremission (Beispiel)"/>
+      <description value="Verlaufs-Observation zum Krankheitsstatus nach neoadjuvanter Therapie und Operation: pathologische Komplettremission (vgl. mCODE Cancer Disease Status)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/Tumorboard"/>
+      </reference>
+      <name value="Tumorboard"/>
+      <description value="Verantwortliche Stelle für Pflege und Aktualisierung des Versorgungsplans."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-tumorboard-medication-request"/>
+      </reference>
+      <name value="Tumorboard MedicationRequest"/>
+      <description value="Strukturierte Empfehlung des Tumorboards auf Basis von `MedicationRequest`.&#xA;&#xA;Tumorboardspezifische Ergänzung:&#xA;- Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-tumorboard-service-request"/>
+      </reference>
+      <name value="Tumorboard ServiceRequest"/>
+      <description value="Strukturierte Empfehlung des Tumorboards auf Basis von `ServiceRequest`.&#xA;&#xA;Tumorboardspezifische Ergänzung:&#xA;- Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/MedicationRequestFOLFOX"/>
+      </reference>
+      <name value="Tumorboard-Empfehlung – FOLFOX + Bevacizumab (Beispiel)"/>
+      <description value="Vom Tumorboard empfohlene palliative Erstlinien-Systemtherapie (geplante Aktivität des Therapie-CarePlan)."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ServiceRequestPortCRC"/>
+      </reference>
+      <name value="Tumorboard-Empfehlung – Portimplantation (Beispiel)"/>
+      <description value="Vom Tumorboard empfohlene Anlage eines Portkatheters für die systemische Therapie."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/TumorzentrumCRC"/>
+      </reference>
+      <name value="Tumorzentrum (Custodian, Beispiel)"/>
+      <description value="Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"/>
+      </reference>
+      <name value="Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 1/4 (KEYNOTE-522, Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 1 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"/>
+      </reference>
+      <name value="Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 2/4 (KEYNOTE-522, Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 2 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"/>
+      </reference>
+      <name value="Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 3/4 (KEYNOTE-522, Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 3 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"/>
+      </reference>
+      <name value="Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 4/4 (KEYNOTE-522, Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 4 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/FollowUpGoal"/>
+      </reference>
+      <name value="Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung"/>
+      <description value="Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/ConceptMapOnkoTherapyGoalTypeSct"/>
+      </reference>
+      <name value="Zielarten → SNOMED CT (Zielzustände)"/>
+      <description value="Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (`equivalence`) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObsEstrogenrezeptorMamma"/>
+      </reference>
+      <name value="Östrogenrezeptor-Status – negativ (Beispiel)"/>
+      <description value="Immunhistochemischer Östrogenrezeptor-Status: negativ (&lt;1 % positive Tumorzellkerne)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Startseite"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="therapieziele.html"/>
+        </extension>
+        <nameUrl value="therapieziele.html"/>
+        <title value="Therapieziele (Goals)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="empfehlung-behandlung.html"/>
+        </extension>
+        <nameUrl value="empfehlung-behandlung.html"/>
+        <title value="Empfehlungs- und Behandlungsplan"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="behandlungsepisode.html"/>
+        </extension>
+        <nameUrl value="behandlungsepisode.html"/>
+        <title value="Behandlungsepisoden (EpisodeOfCare)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="goal-target-measure.html"/>
+        </extension>
+        <nameUrl value="goal-target-measure.html"/>
+        <title value="Zielwerte und Messgrößen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="szenario-crc.html"/>
+        </extension>
+        <nameUrl value="szenario-crc.html"/>
+        <title value="Anwendungsbeispiel (mCRC palliativ)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="szenario-mamma.html"/>
+        </extension>
+        <nameUrl value="szenario-mamma.html"/>
+        <title value="Anwendungsbeispiel (Mammakarzinom neoadjuvant)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="szenario-mamma-abweichende-szenarios.html"/>
+        </extension>
+        <nameUrl value="szenario-mamma-abweichende-szenarios.html"/>
+        <title value="Abweichende Szenarios"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="entitaet-diabetes.html"/>
+        </extension>
+        <nameUrl value="entitaet-diabetes.html"/>
+        <title value="Weitere Entität – Diabetes mellitus"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="entitaet-asthma.html"/>
+        </extension>
+        <nameUrl value="entitaet-asthma.html"/>
+        <title value="Weitere Entität – Asthma bronchiale"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="entitaet-ced.html"/>
+        </extension>
+        <nameUrl value="entitaet-ced.html"/>
+        <title value="Weitere Entität – Chronisch-entzündliche Darmerkrankungen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="entitaet-rheuma.html"/>
+        </extension>
+        <nameUrl value="entitaet-rheuma.html"/>
+        <title value="Weitere Entität – Rheumatoide Arthritis"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="analysebericht.html"/>
+        </extension>
+        <nameUrl value="analysebericht.html"/>
+        <title value="Analysebericht (LG-01)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="translationinfo.html"/>
+        </extension>
+        <nameUrl value="translationinfo.html"/>
+        <title value="Hinweise zur Übersetzung"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/assets"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

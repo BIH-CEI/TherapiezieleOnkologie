@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Anwendungsbeispiel (mCRC palliativ) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.1 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/szenario-crc.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Anwendungsbeispiel (mCRC palliativ)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Anwendungsbeispiel (mCRC palliativ)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#klinische-erzählung" id="markdown-toc-klinische-erzählung">Klinische Erzählung</a></li>
+  <li><a href="#informationsmodell" id="markdown-toc-informationsmodell">Informationsmodell</a></li>
+  <li><a href="#verknüpfungen-im-beispiel" id="markdown-toc-verknüpfungen-im-beispiel">Verknüpfungen im Beispiel</a></li>
+  <li><a href="#aus-mcc-übernommene-extensions-im-beispiel" id="markdown-toc-aus-mcc-übernommene-extensions-im-beispiel">Aus MCC übernommene Extensions im Beispiel</a></li>
+</ul>
+
+</div>
+<p>Diese Seite zeigt – in Anlehnung an die <a href="https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current">szenariobasierte Darstellung des MII IG Modul Onkologie</a> – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens nutzt: <code class="language-plaintext highlighter-rouge">OnkoCondition</code>, <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code>, <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>, <code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code> und <code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>.</p>
+
+<h3 id="klinische-erzählung">Klinische Erzählung</h3>
+
+<p>Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonkarzinom (mCRC, Lebermetastasen) vor. Der <strong>Diagnostikpfad</strong> – Koloskopie mit Biopsie und histopathologische Sicherung – wird über einen <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code> abgebildet und mündet in die gesicherte Diagnose (<code class="language-plaintext highlighter-rouge">OnkoCondition</code>). Das interdisziplinäre <strong>Tumorboard</strong> (<code class="language-plaintext highlighter-rouge">CareTeam</code>) empfiehlt eine <strong>palliative Systemtherapie</strong> (FOLFOX + Bevacizumab, <code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code>) sowie die Anlage eines <strong>Portkatheters</strong> (<code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>). Die übergeordneten Therapieziele sind <strong>Lebensverlängerung</strong> und <strong>Symptomkontrolle</strong>. Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet.</p>
+
+<h3 id="informationsmodell">Informationsmodell</h3>
+
+<p>Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> ist das zentrale Steuerobjekt, das die adressierte Erkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>), das übergeordnete Ziel (<code class="language-plaintext highlighter-rouge">goal</code>) sowie geplante und durchgeführte Maßnahmen (<code class="language-plaintext highlighter-rouge">activity.reference</code> / <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code>) zusammenführt.</p>
+
+<p>Der folgende Referenzgraph zeigt die <strong>Kernbeziehungen des Therapie-CarePlan</strong> (die vollständige Ressourcenliste inkl. Diagnostikpfad und Tumorboard steht in der Tabelle unten). Durchgezogene Pfeile sind fachliche Referenzen (mit Feldnamen), gestrichelte Pfeile die <code class="language-plaintext highlighter-rouge">subject</code>-Referenzen aller Ressourcen auf die Patientin (zu einem „subject-Bus" zusammengefasst). Der Graph ist gerichtet und <strong>zyklenfrei</strong> — jede Referenz verweist vom referenzierenden auf das referenzierte Resource, ohne Rückkanten.</p>
+
+<svg width="100%" viewBox="0 0 680 600" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Referenzgraph (Therapie-Kern) des Beispiel-Szenarios mCRC palliativ</title>
+<desc>Geordneter, zyklenfreier Graph der Kernbeziehungen des Therapie-CarePlan. Durchgezogene Pfeile sind fachliche Referenzen mit Feldnamen, gestrichelte Pfeile die subject-Referenzen aller Ressourcen auf die Patientin, zusammengefasst zu einem subject-Bus.</desc>
+<defs>
+<marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+<marker id="arg" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<path d="M130,88 L190,48" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L190,268" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L190,468" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L370,148" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L540,88" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,88 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M310,48 L370,428" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M310,48 L370,148" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M310,48 L560,60" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M310,60 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M130,448 L570,116" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M490,428 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+<path d="M490,428 L518,428 L518,100 L540,100" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" />
+
+<path d="M150,508 L540,508" fill="none" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arg)" />
+<path d="M130,116 L150,116 L150,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M130,476 L160,476 L160,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M310,48 L330,48 L330,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M310,268 L340,268 L340,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M370,176 L355,176 L355,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M490,428 L520,428 L520,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<path d="M600,116 L665,116 L665,520 L660,520" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arg)" />
+
+<text x="160" y="52" text-anchor="middle" font-size="11.5" fill="#5F5E5A">goal</text>
+<text x="255" y="226" text-anchor="middle" font-size="11.5" fill="#5F5E5A">activity.reference</text>
+<text x="255" y="425" text-anchor="middle" font-size="11.5" fill="#5F5E5A">custodian</text>
+<text x="430" y="108" text-anchor="middle" font-size="11.5" fill="#5F5E5A">activity.outcomeReference</text>
+<text x="478" y="80" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
+<text x="475" y="277" text-anchor="middle" font-size="11.5" fill="#5F5E5A">author</text>
+<text x="340" y="236" text-anchor="middle" font-size="11.5" fill="#5F5E5A">relatedGoal</text>
+<text x="336" y="122" text-anchor="middle" font-size="11.5" fill="#5F5E5A">outcomeReference</text>
+<text x="300" y="304" text-anchor="middle" font-size="11.5" fill="#5F5E5A">diagnosis.condition</text>
+<text x="432" y="42" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
+<text x="452" y="232" text-anchor="middle" font-size="11.5" fill="#5F5E5A">expressedBy</text>
+<text x="520" y="378" text-anchor="middle" font-size="11.5" fill="#5F5E5A">expressedBy</text>
+<text x="533" y="252" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
+<text x="200" y="500" text-anchor="middle" font-size="11.5" fill="#5F5E5A">subject (von allen Ressourcen)</text>
+
+<g><rect x="10" y="60" width="120" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" /><text x="70" y="84" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">CarePlan</text><text x="70" y="102" text-anchor="middle" font-size="11.5" fill="#534AB7">OnkoCarePlan</text></g>
+<g><rect x="10" y="420" width="120" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" /><text x="70" y="444" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Therapielinie</text><text x="70" y="462" text-anchor="middle" font-size="11.5" fill="#534AB7">OnkoTherapyLine</text></g>
+<g><rect x="190" y="20" width="120" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="250" y="44" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Ziel (palliativ)</text><text x="250" y="62" text-anchor="middle" font-size="11.5" fill="#0F6E56">OnkoTherapyGoal</text></g>
+<g><rect x="190" y="240" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30" /><text x="250" y="264" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">Systemtherapie</text><text x="250" y="282" text-anchor="middle" font-size="11.5" fill="#993C1D">TumorboardMedReq</text></g>
+<g><rect x="190" y="440" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" /><text x="250" y="464" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Tumorzentrum</text><text x="250" y="482" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Organization</text></g>
+<g><rect x="370" y="120" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30" /><text x="430" y="144" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">Disease Status</text><text x="430" y="162" text-anchor="middle" font-size="11.5" fill="#993C1D">Observation</text></g>
+<g><rect x="370" y="400" width="120" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="430" y="424" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Ziel (abgelehnt)</text><text x="430" y="442" text-anchor="middle" font-size="11.5" fill="#0F6E56">OnkoTherapyGoal</text></g>
+<g><rect x="540" y="60" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30" /><text x="600" y="84" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">Diagnose</text><text x="600" y="102" text-anchor="middle" font-size="11.5" fill="#993C1D">OnkoCondition</text></g>
+<g><rect x="540" y="300" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" /><text x="600" y="324" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Onkologin</text><text x="600" y="342" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Practitioner</text></g>
+<g><rect x="540" y="480" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" /><text x="600" y="504" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Patientin</text><text x="600" y="522" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Patient</text></g>
+
+<rect x="40" y="560" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="571" font-size="11.5" fill="#5F5E5A">Plan</text>
+<rect x="108" y="560" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="127" y="571" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="170" y="560" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30" /><text x="189" y="571" font-size="11.5" fill="#5F5E5A">Klinik</text>
+<rect x="242" y="560" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="261" y="571" font-size="11.5" fill="#5F5E5A">Akteur</text>
+<line x1="330" y1="567" x2="360" y2="567" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)" /><text x="366" y="571" font-size="11.5" fill="#5F5E5A">Referenz</text>
+<line x1="448" y1="567" x2="478" y2="567" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arg)" /><text x="484" y="571" font-size="11.5" fill="#5F5E5A">subject (Patientenbezug)</text>
+</svg>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Ressource / Profil</th>
+      <th>Beispiel-Instanz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient:in</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code></td>
+      <td><a href="Patient-PatientinCRC.html">PatientinCRC</a></td>
+    </tr>
+    <tr>
+      <td>Tumorerkrankung</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoCondition</code></td>
+      <td><a href="Condition-ConditionCRC.html">ConditionCRC</a></td>
+    </tr>
+    <tr>
+      <td>Diagnostik-Plan</td>
+      <td><code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code></td>
+      <td><a href="CarePlan-DiagnostikCarePlanCRC.html">DiagnostikCarePlanCRC</a></td>
+    </tr>
+    <tr>
+      <td>Diagnostik-Anforderung</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest</code></td>
+      <td><a href="ServiceRequest-ServiceRequestKoloskopieCRC.html">ServiceRequestKoloskopieCRC</a></td>
+    </tr>
+    <tr>
+      <td>Diagnostik-Ergebnis</td>
+      <td><code class="language-plaintext highlighter-rouge">DiagnosticReport</code></td>
+      <td><a href="DiagnosticReport-DiagnosticReportHistologieCRC.html">DiagnosticReportHistologieCRC</a></td>
+    </tr>
+    <tr>
+      <td>Therapie-Plan</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoCarePlan</code></td>
+      <td><a href="CarePlan-CarePlanCRCPalliativ.html">CarePlanCRCPalliativ</a></td>
+    </tr>
+    <tr>
+      <td>Therapielinie (LoT 1)</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></td>
+      <td><a href="EpisodeOfCare-TherapielinieCRCErstlinie.html">TherapielinieCRCErstlinie</a></td>
+    </tr>
+    <tr>
+      <td>Therapieziel (palliativ)</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code></td>
+      <td><a href="Goal-TherapiezielCRCLebensverlaengerung.html">TherapiezielCRCLebensverlaengerung</a></td>
+    </tr>
+    <tr>
+      <td>Therapieziel (abgelehnt)</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code></td>
+      <td><a href="Goal-TherapiezielCRCKurativAbgelehnt.html">TherapiezielCRCKurativAbgelehnt</a></td>
+    </tr>
+    <tr>
+      <td>Therapieziel (Erhaltung)</td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code></td>
+      <td><a href="Goal-TherapiezielCRCErhaltung.html">TherapiezielCRCErhaltung</a></td>
+    </tr>
+    <tr>
+      <td>Tumorboard</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam</code></td>
+      <td><a href="CareTeam-TumorboardCRC.html">TumorboardCRC</a></td>
+    </tr>
+    <tr>
+      <td>Empfehlung Systemtherapie</td>
+      <td><code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code></td>
+      <td><a href="MedicationRequest-MedicationRequestFOLFOX.html">MedicationRequestFOLFOX</a></td>
+    </tr>
+    <tr>
+      <td>Empfehlung Portanlage</td>
+      <td><code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code></td>
+      <td><a href="ServiceRequest-ServiceRequestPortCRC.html">ServiceRequestPortCRC</a></td>
+    </tr>
+    <tr>
+      <td>Tumoransprechen</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation</code></td>
+      <td><a href="Observation-ObservationDiseaseStatusCRC.html">ObservationDiseaseStatusCRC</a></td>
+    </tr>
+    <tr>
+      <td>Custodian / Zentrum</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td><a href="Organization-TumorzentrumCRC.html">TumorzentrumCRC</a></td>
+    </tr>
+    <tr>
+      <td>Behandlerin</td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner</code></td>
+      <td><a href="Practitioner-OnkologinCRC.html">OnkologinCRC</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="verknüpfungen-im-beispiel">Verknüpfungen im Beispiel</h3>
+
+<ul>
+  <li><strong>Diagnostikpfad:</strong> Der <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code> (<code class="language-plaintext highlighter-rouge">category.text = "Tumordiagnostik"</code>) adressiert dieselbe <code class="language-plaintext highlighter-rouge">OnkoCondition</code> und führt geplante Anforderung (<code class="language-plaintext highlighter-rouge">activity.reference</code> → <code class="language-plaintext highlighter-rouge">ServiceRequest</code> Koloskopie) und Ergebnis (<code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> Histologie) zusammen. Der Therapie-CarePlan verweist über <code class="language-plaintext highlighter-rouge">supportingInfo</code> auf den Diagnostik-CarePlan.</li>
+  <li><strong>Tumorboard:</strong> Die Empfehlungen (<code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code>, <code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>) tragen im <code class="language-plaintext highlighter-rouge">category</code> den LOINC-Code <code class="language-plaintext highlighter-rouge">85232-7</code> (Tumor board Consult note); das <code class="language-plaintext highlighter-rouge">CareTeam</code> ist als <code class="language-plaintext highlighter-rouge">careTeam</code> am Therapie-CarePlan und als <code class="language-plaintext highlighter-rouge">team</code> an der Therapielinie hinterlegt.</li>
+  <li><strong>Therapieintention (zwei Achsen):</strong> Die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> codiert <code class="language-plaintext highlighter-rouge">hauptintention</code> (hier <code class="language-plaintext highlighter-rouge">palliativ</code>, SNOMED <code class="language-plaintext highlighter-rouge">363676003</code>) und optional <code class="language-plaintext highlighter-rouge">phase</code> (hier <code class="language-plaintext highlighter-rouge">Induktionstherapie</code>, SNOMED <code class="language-plaintext highlighter-rouge">450827009</code>). So ist „palliativ + Induktionsphase" gleichzeitig ausdrückbar; die Codes sind extensible gebunden.</li>
+  <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert die <code class="language-plaintext highlighter-rouge">OnkoCondition</code> (geerbt vom <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a>, v2026.0.3).</li>
+  <li><strong>CarePlan → Ziel:</strong> <code class="language-plaintext highlighter-rouge">goal</code> referenziert das <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> (Kategorien Lebensverlängerung + Symptomkontrolle).</li>
+  <li><strong>Geplant vs. durchgeführt:</strong> <code class="language-plaintext highlighter-rouge">activity.reference</code> → geplante Maßnahmen (Tumorboard-Empfehlungen); <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → dokumentiertes Ergebnis (<code class="language-plaintext highlighter-rouge">Observation</code>).</li>
+  <li><strong>Ziel → Ergebnis:</strong> <code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> bindet die Verlaufs-Observation (Disease Status), wodurch der <code class="language-plaintext highlighter-rouge">achievementStatus</code> (hier <code class="language-plaintext highlighter-rouge">in-progress</code>) auswertbar wird.</li>
+</ul>
+
+<h3 id="aus-mcc-übernommene-extensions-im-beispiel">Aus MCC übernommene Extensions im Beispiel</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">goal-acceptance</code></strong> (MCCGoal): Die Patientin stimmt dem palliativen Ziel mit hoher Priorität zu (<code class="language-plaintext highlighter-rouge">status = agree</code>).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">goal-reasonRejected</code></strong> (MCCGoal): Das in der Tumorkonferenz erwogene kurative Ziel (<a href="Goal-TherapiezielCRCKurativAbgelehnt.html">TherapiezielCRCKurativAbgelehnt</a>, <code class="language-plaintext highlighter-rouge">lifecycleStatus = rejected</code>) trägt die Ablehnungsbegründung (nicht resektable Metastasierung).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">goal-relationship</code></strong> (MCCGoal): Das Induktionsziel (<a href="Goal-TherapiezielCRCLebensverlaengerung.html">TherapiezielCRCLebensverlaengerung</a>) ist gleich zweifach verknüpft — als <code class="language-plaintext highlighter-rouge">replacement</code> mit dem abgelehnten kurativen Ziel und als <code class="language-plaintext highlighter-rouge">successor</code> mit dem nachgelagerten Erhaltungsziel (<a href="Goal-TherapiezielCRCErhaltung.html">TherapiezielCRCErhaltung</a>), das seinerseits als <code class="language-plaintext highlighter-rouge">predecessor</code> zurückverweist.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">custodian</code></strong> (MCC CarePlan, R5-Backport): Das <a href="Organization-TumorzentrumCRC.html">Tumorzentrum</a> ist als für Pflege und Aktualisierung des Plans verantwortliche Stelle hinterlegt.</li>
+</ul>
+
+<h4 id="goal-relationship--bedeutung-der-beziehungstypen"><code class="language-plaintext highlighter-rouge">goal-relationship</code> – Bedeutung der Beziehungstypen</h4>
+
+<p>Codesystem <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/goal-relationship-type</code>. Die Beziehung wird immer aus Sicht des <em>Quell-Ziels</em> (das die Extension trägt) auf das <em>Ziel-Ziel</em> (<code class="language-plaintext highlighter-rouge">target</code>) angegeben:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Typ</th>
+      <th>Bedeutung</th>
+      <th>im Beispiel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">predecessor</code></td>
+      <td>Das Ziel-Ziel muss <strong>vorher</strong> erreicht werden.</td>
+      <td>Erhaltungsziel → predecessor → Induktionsziel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">successor</code></td>
+      <td>Das Ziel-Ziel ist das angestrebte Ziel, <strong>nachdem</strong> dieses erreicht ist.</td>
+      <td>Induktionsziel → successor → Erhaltungsziel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">replacement</code></td>
+      <td>Dieses Ziel wurde <strong>durch</strong> das Ziel-Ziel <strong>ersetzt</strong>.</td>
+      <td>palliatives Ziel → replacement → abgelehntes kuratives Ziel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">milestone</code></td>
+      <td>Das Ziel-Ziel ist ein <strong>Teilschritt</strong> dieses Ziels.</td>
+      <td>(nicht im Beispiel)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">predecessor</code> und <code class="language-plaintext highlighter-rouge">successor</code> sind zueinander invers: Induktions- und Erhaltungsziel verweisen wechselseitig aufeinander und bilden so die zeitliche Sequenz ab.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-31 13:52:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

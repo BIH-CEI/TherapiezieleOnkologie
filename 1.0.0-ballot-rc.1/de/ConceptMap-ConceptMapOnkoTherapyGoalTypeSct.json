@@ -1,0 +1,91 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "ConceptMapOnkoTherapyGoalTypeSct",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap ConceptMapOnkoTherapyGoalTypeSct</b></p><a name=\"ConceptMapOnkoTherapyGoalTypeSct\"> </a><a name=\"hcConceptMapOnkoTherapyGoalTypeSct\"> </a><p>Mapping from <a href=\"ValueSet-onko-therapy-goal-type.html\">Onkologische Therapieziel-Art (VS)</a> to <a href=\"https://browser.ihtsdotools.org/\">All Codes SCT ValueSet</a></p><br/><p>Mapping from <a href=\"CodeSystem-onko-therapy-goal-type.html\">Onkologische Therapieziel-Art</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\">SNOMED CT (all versions)</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from <a href=\"CodeSystem-onko-therapy-goal-type.html\" title=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type\">Onkologische Therapieziel-Art</a></td><td/><td colspan=\"2\"><b>Codes</b> from <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\" title=\"http://snomed.info/sct\">SNOMED CT (all versions)</a></td><td/></tr><tr><td style=\"border-right-width: 0px\">heilung</td><td style=\"border-left-width: 0px\">Heilung</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">371001000</td><td style=\"border-left-width: 0px\">Patient cured</td><td>Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|.</td></tr><tr><td style=\"border-right-width: 0px\">lebensverlaengerung</td><td style=\"border-left-width: 0px\">Lebensverlängerung</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td style=\"border-right-width: 0px\">445320007</td><td style=\"border-left-width: 0px\">Survival time</td><td>SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|.</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">symptomkontrolle</td><td style=\"border-left-width: 0px; border-bottom-style: none\">Symptomkontrolle / Palliation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td style=\"border-right-width: 0px\">1149243003</td><td style=\"border-left-width: 0px\">Managing to control symptoms</td><td>Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode.</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td style=\"border-right-width: 0px\">225353007</td><td style=\"border-left-width: 0px\">Symptom control</td><td>Regime/Therapy — das Mittel, nicht der Zielzustand.</td></tr><tr><td style=\"border-right-width: 0px\">lebensqualitaet</td><td style=\"border-left-width: 0px\">Lebensqualität</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">1156447008</td><td style=\"border-left-width: 0px\">Good quality of life</td><td>Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite.</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">funktionserhalt</td><td style=\"border-left-width: 0px\">Funktionserhalt</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Kein generisches SNOMED-Konzept 'Funktionserhalt als Zielzustand'. Die konkrete Funktion wird je Ziel über target.measure benannt (z. B. 284773001 |Ability to perform personal care activity|, Fertilität via 389093003 |Fertility care|); ein Sammel-Mapping wäre irreführend.</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ConceptMap/ConceptMapOnkoTherapyGoalTypeSct",
+  "version" : "1.0.0-ballot-rc.1",
+  "title" : "Zielarten → SNOMED CT (Zielzustände)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-07-31T13:52:27+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (`equivalence`) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "sourceCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+  "targetCanonical" : "http://snomed.info/sct?fhir_vs",
+  "group" : [{
+    "source" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+    "target" : "http://snomed.info/sct",
+    "element" : [{
+      "code" : "heilung",
+      "display" : "Heilung",
+      "target" : [{
+        "code" : "371001000",
+        "display" : "Patient cured",
+        "equivalence" : "equivalent",
+        "comment" : "Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|."
+      }]
+    },
+    {
+      "code" : "lebensverlaengerung",
+      "display" : "Lebensverlängerung",
+      "target" : [{
+        "code" : "445320007",
+        "display" : "Survival time",
+        "equivalence" : "relatedto",
+        "comment" : "SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|."
+      }]
+    },
+    {
+      "code" : "symptomkontrolle",
+      "display" : "Symptomkontrolle / Palliation",
+      "target" : [{
+        "code" : "1149243003",
+        "display" : "Managing to control symptoms",
+        "equivalence" : "relatedto",
+        "comment" : "Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode."
+      },
+      {
+        "code" : "225353007",
+        "display" : "Symptom control",
+        "equivalence" : "relatedto",
+        "comment" : "Regime/Therapy — das Mittel, nicht der Zielzustand."
+      }]
+    },
+    {
+      "code" : "lebensqualitaet",
+      "display" : "Lebensqualität",
+      "target" : [{
+        "code" : "1156447008",
+        "display" : "Good quality of life",
+        "equivalence" : "equivalent",
+        "comment" : "Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite."
+      }]
+    },
+    {
+      "code" : "funktionserhalt",
+      "display" : "Funktionserhalt",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Kein generisches SNOMED-Konzept 'Funktionserhalt als Zielzustand'. Die konkrete Funktion wird je Ziel über target.measure benannt (z. B. 284773001 |Ability to perform personal care activity|, Fertilität via 389093003 |Fertility care|); ein Sammel-Mapping wäre irreführend."
+      }]
+    }]
+  }]
+}

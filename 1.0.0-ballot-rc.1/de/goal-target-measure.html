@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Zielwerte und Messgrößen - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.1 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/goal-target-measure.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Zielwerte und Messgrößen</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Zielwerte und Messgrößen</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#vor-allem-auf-ebene-der-therapieepisoden" id="markdown-toc-vor-allem-auf-ebene-der-therapieepisoden">Vor allem auf Ebene der Therapieepisoden</a></li>
+  <li><a href="#zielwert--ergebnis" id="markdown-toc-zielwert--ergebnis">Zielwert ≠ Ergebnis</a></li>
+  <li><a href="#verlauf-gehört-in-die-observation-nicht-in-den-status" id="markdown-toc-verlauf-gehört-in-die-observation-nicht-in-den-status">Verlauf gehört in die Observation, nicht in den Status</a></li>
+  <li><a href="#typische-messgrößen-entlang-des-verlaufs" id="markdown-toc-typische-messgrößen-entlang-des-verlaufs">Typische Messgrößen entlang des Verlaufs</a></li>
+  <li><a href="#messgrößen-ändern-sich--deshalb-an-die-leitlinie-binden" id="markdown-toc-messgrößen-ändern-sich--deshalb-an-die-leitlinie-binden">Messgrößen ändern sich — deshalb an die Leitlinie binden</a></li>
+  <li><a href="#modalität-ist-kein-endpunkt" id="markdown-toc-modalität-ist-kein-endpunkt">Modalität ist kein Endpunkt</a></li>
+  <li><a href="#weitere-typische-zielgrößen" id="markdown-toc-weitere-typische-zielgrößen">Weitere typische Zielgrößen</a></li>
+  <li><a href="#beispiele" id="markdown-toc-beispiele">Beispiele</a></li>
+</ul>
+
+</div>
+<p>Ein Therapieziel wird <strong>messbar</strong>, indem es einen oder mehrere Zielwerte trägt. FHIR
+<code class="language-plaintext highlighter-rouge">Goal.target</code> gliedert das in drei Elemente:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">target.measure</code></strong> — die <em>Messgröße</em>, an der die Zielerreichung beurteilt wird
+(codiert, z. B. LOINC/SNOMED). „Woran erkennt man, ob das Ziel erreicht ist?"</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">target.detail[x]</code></strong> — der <em>angestrebte Wert bzw. Wertebereich</em> der Messgröße.
+„Welcher Wert gilt als Zielerreichung?"</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">target.due[x]</code></strong> — der <em>Zieltermin</em> bzw. die Frist.</li>
+</ul>
+
+<p>Ein Ziel kann <strong>mehrere</strong> Targets tragen (z. B. Krankheitsstatus <em>und</em> Bildgebung
+<em>und</em> Funktion).</p>
+
+<svg width="100%" viewBox="0 0 680 430" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Anatomie des Goal.target: Messgröße, Zielwert, Frist — und das Ergebnis</title>
+<desc>Links das Episodenziel mit den drei target-Elementen measure (woran), detail (welcher Wert) und due (bis wann) sowie dem achievementStatus; rechts die evidenzierende Verlaufs-Observation, verbunden ueber outcomeReference. Unten: Messgroessen sind leitlinienversioniert, alte und neue Groesse koexistieren und werden ueber relatedArtifact bzw. instantiatesCanonical an ihre Leitlinienquelle gebunden.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+</defs>
+
+<g><rect x="40" y="30" width="310" height="170" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="195" y="52" text-anchor="middle" font-size="12.5" font-weight="500" fill="#04342C">Episodenziel (Goal)</text>
+<text x="195" y="67" text-anchor="middle" font-size="9.5" fill="#0F6E56">mit messbarem target</text>
+<text x="58" y="92" font-size="10" font-weight="600" fill="#04342C">measure — Woran?</text>
+<text x="58" y="105" font-size="9.5" fill="#0F6E56">Krankheitsstatus — LOINC 21976-6</text>
+<line x1="52" y1="113" x2="338" y2="113" stroke="#BFE3D6" stroke-width="1" />
+<text x="58" y="128" font-size="10" font-weight="600" fill="#04342C">detail — Welcher Wert?</text>
+<text x="58" y="141" font-size="9.5" fill="#0F6E56">„kein Tumornachweis“ (Not detected)</text>
+<line x1="52" y1="149" x2="338" y2="149" stroke="#BFE3D6" stroke-width="1" />
+<text x="58" y="164" font-size="10" font-weight="600" fill="#04342C">due — Bis wann?</text>
+<text x="58" y="177" font-size="9.5" fill="#0F6E56">Frist bzw. Zieltermin</text>
+<text x="58" y="192" font-size="9" fill="#0F6E56">achievementStatus: in-progress → achieved (Zustands-Codes)</text></g>
+
+<g><rect x="460" y="60" width="180" height="108" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4" />
+<text x="550" y="82" text-anchor="middle" font-size="11.5" font-weight="500" fill="#4A1B0C">Verlaufs-Observation</text>
+<text x="550" y="98" text-anchor="middle" font-size="9.5" fill="#4A1B0C">„Not detected“</text>
+<text x="550" y="111" text-anchor="middle" font-size="8.5" fill="#993C1D">LOINC 97509-4 · SCT 260415000</text>
+<text x="550" y="130" text-anchor="middle" font-size="9" fill="#4A1B0C">zeitgestempelt,</text>
+<text x="550" y="142" text-anchor="middle" font-size="9" fill="#4A1B0C">Bezugspunkt selbst definiert</text></g>
+
+<line x1="352" y1="110" x2="458" y2="110" stroke="#534AB7" stroke-width="1.7" marker-end="url(#arp)" />
+<text x="405" y="100" text-anchor="middle" font-size="9.5" font-weight="500" fill="#534AB7">outcomeReference</text>
+<text x="405" y="124" text-anchor="middle" font-size="9" fill="#5F5E5A">Ergebnis,</text>
+<text x="405" y="136" text-anchor="middle" font-size="9" fill="#5F5E5A">pro Ziel eigen</text>
+
+<text x="40" y="226" font-size="11" font-weight="500" fill="#5F5E5A">Zielwert (Absicht) ≠ Ergebnis (Beobachtung) — der target darf über Ziele gleich sein, das Ergebnis wird nie geteilt.</text>
+
+<text x="40" y="256" font-size="11.5" font-weight="500" fill="#5F5E5A">Messgrößen sind leitlinienversioniert — Alt und Neu koexistieren:</text>
+
+<g><rect x="40" y="268" width="190" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="135" y="288" text-anchor="middle" font-size="11" font-weight="500" fill="#04342C">measure: DAS28</text>
+<text x="135" y="303" text-anchor="middle" font-size="9" fill="#0F6E56">Leitlinienstand alt</text></g>
+
+<g><rect x="250" y="268" width="210" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="355" y="288" text-anchor="middle" font-size="10" font-weight="500" fill="#04342C">measure: ACR-EULAR · SDAI/CDAI</text>
+<text x="355" y="303" text-anchor="middle" font-size="9" fill="#0F6E56">EULAR 2025</text></g>
+
+<g><rect x="520" y="268" width="120" height="48" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.3" />
+<text x="580" y="288" text-anchor="middle" font-size="11" font-weight="500" fill="#2C2C2A">Leitlinie</text>
+<text x="580" y="303" text-anchor="middle" font-size="9" fill="#5F5E5A">(Version)</text></g>
+
+<path d="M135,318 L135,338 L578,338 L578,318" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#arp)" />
+<path d="M355,318 L355,338" fill="none" stroke="#534AB7" stroke-width="1.4" />
+<text x="300" y="352" text-anchor="middle" font-size="9.5" fill="#534AB7">relatedArtifact / instantiatesCanonical — Herkunft und Gültigkeit</text>
+
+<text x="40" y="382" font-size="10" fill="#5F5E5A">„Remission nach DAS28“ ≠ „Remission nach ACR-EULAR“ — erst der Leitlinienbezug macht parallele Stände vergleichbar.</text>
+
+<rect x="40" y="402" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="59" y="413" font-size="11" fill="#5F5E5A">Ziel / Messgröße</text>
+<rect x="170" y="402" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30" /><text x="189" y="413" font-size="11" fill="#5F5E5A">Beobachtung</text>
+<rect x="285" y="402" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="304" y="413" font-size="11" fill="#5F5E5A">Quelle / Hinweis</text>
+<line x1="420" y1="408" x2="450" y2="408" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" /><text x="456" y="413" font-size="11" fill="#5F5E5A">Referenz</text>
+</svg>
+
+<h3 id="vor-allem-auf-ebene-der-therapieepisoden">Vor allem auf Ebene der Therapieepisoden</h3>
+
+<p>Diese messbare <code class="language-plaintext highlighter-rouge">target</code>-Logik betrifft <strong>vor allem die
+<a href="therapieziele.html">Episodenziele</a></strong> der einzelnen Therapieepisoden — dort werden
+konkrete klinische Parameter (Krankheitsstatus, Staging, Ansprechen …) als Zielgröße
+gesetzt.</p>
+
+<p>Das <strong>übergeordnete Behandlungsziel</strong> trägt dagegen in der Regel <strong>keine messbare
+Zielgröße</strong>, sondern die <strong>strategische Intention</strong> (kurativ vs. palliativ). Deren
+Festlegung ist kein Laborwert, sondern eine <strong>klinische Einordnung</strong> — abhängig von der
+<strong>Krebsindikation</strong> und davon, ab welchem <strong>Staging/Grading</strong> eine kurative Behandlung
+(z. B. Operabilität/Resektabilität) nicht mehr möglich ist.</p>
+
+<h3 id="zielwert--ergebnis">Zielwert ≠ Ergebnis</h3>
+
+<p>Sauber zu trennen sind der <strong>angestrebte</strong> Wert und das <strong>beobachtete</strong> Ergebnis:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Goal.target</code> ist der <strong>Zielwert</strong> (die Absicht). Derselbe Zielwert <strong>darf über
+mehrere Ziele gleich</strong> sein — Behandlungs- und Nachsorgeziel können denselben
+Krankheitsstatus anstreben, weil die Absicht über Heilung → Surveillance durchläuft.</li>
+  <li><code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> ist das <strong>Ergebnis</strong> — die evidenzierende <code class="language-plaintext highlighter-rouge">Observation</code>. Sie
+ist <strong>pro Ziel eigen</strong> und phasengerecht und bleibt <strong>leer</strong>, solange kein Ergebnis
+beobachtet wurde.</li>
+</ul>
+
+<h3 id="verlauf-gehört-in-die-observation-nicht-in-den-status">Verlauf gehört in die Observation, nicht in den Status</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Goal.achievementStatus</code> verwendet <strong>nur Zustands-Codes</strong>: <code class="language-plaintext highlighter-rouge">in-progress</code>, <code class="language-plaintext highlighter-rouge">achieved</code>,
+<code class="language-plaintext highlighter-rouge">not-achieved</code>, <code class="language-plaintext highlighter-rouge">not-attainable</code>. Die <strong>Trajektorie</strong> („besser/schlechter",
+Tumoransprechen) wird <strong>nicht</strong> hier abgelegt — das Feld ist einwertig und ohne
+Historie, und „verbessert gegenüber <em>was?</em>" (Baseline vs. Nadir) ist ohne Bezugspunkt
+nicht bestimmbar. Ansprechen und Verlauf liegen deshalb in den
+<code class="language-plaintext highlighter-rouge">outcomeReference</code>-<strong>Observations</strong> (z. B. RECIST, mCODE Cancer Disease Status), die
+zeitgestempelt sind und ihren Bezugspunkt selbst definieren.</p>
+
+<h3 id="typische-messgrößen-entlang-des-verlaufs">Typische Messgrößen entlang des Verlaufs</h3>
+
+<p>Diese Messgrößen gelten <strong>generell</strong>, nicht nur für ein einzelnes Szenario — das
+<a href="szenario-mamma.html">Mamma-Szenario</a> dient hier lediglich der Illustration (nicht
+damit gleichsetzen). Einige sind <strong>entitätsspezifisch</strong> (z. B. ER/PR/HER2 und das
+Nottingham-Grading beim Mammakarzinom, Arm-/Lymphödem-Status nach Axilla-Eingriff),
+andere <strong>allgemein</strong> (TNM, Stadiengruppe, Krankheitsstatus):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ziel-Phase</th>
+      <th>Messgröße (<code class="language-plaintext highlighter-rouge">target.measure</code>)</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Diagnostik</td>
+      <td>Klinisches TNM (cT / cN / cM)</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">21905-5</code> / <code class="language-plaintext highlighter-rouge">21906-3</code> / <code class="language-plaintext highlighter-rouge">21907-1</code></td>
+    </tr>
+    <tr>
+      <td>Diagnostik</td>
+      <td>Stadiengruppe (klinisch)</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">21908-9</code></td>
+    </tr>
+    <tr>
+      <td>Diagnostik</td>
+      <td>Östrogen-/Progesteronrezeptor, HER2</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">40556-3</code> / <code class="language-plaintext highlighter-rouge">85339-0</code> / <code class="language-plaintext highlighter-rouge">48676-1</code></td>
+    </tr>
+    <tr>
+      <td>Diagnostik</td>
+      <td>Grading (Nottingham)</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">44648-4</code></td>
+    </tr>
+    <tr>
+      <td>Behandlung (kurativ)</td>
+      <td>Stadiengruppe (Ansprechen → pCR)</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">21908-9</code></td>
+    </tr>
+    <tr>
+      <td>Nachsorge</td>
+      <td>Krankheitsstatus / Rezidivfreiheit</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">21976-6</code></td>
+    </tr>
+    <tr>
+      <td>Nachsorge</td>
+      <td>Arm-/Schulterfunktion, Lymphödem</td>
+      <td>Freitext (<code class="language-plaintext highlighter-rouge">measure.text</code>)</td>
+    </tr>
+    <tr>
+      <td>Nachsorge</td>
+      <td>Lebensqualität (PROM, EORTC QLQ-C30/BR23)</td>
+      <td>Freitext, Anbindung via PCO</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Das zugehörige <strong>Ergebnis</strong> wird als Verlaufs-<code class="language-plaintext highlighter-rouge">Observation</code> geführt, z. B. der
+Krankheitsstatus „kein Tumornachweis" (LOINC <code class="language-plaintext highlighter-rouge">97509-4</code>, SNOMED <code class="language-plaintext highlighter-rouge">260415000</code> <em>Not
+detected</em>), und über <code class="language-plaintext highlighter-rouge">outcomeReference</code> auf das jeweilige Ziel bezogen.</p>
+
+<blockquote>
+  <p><strong>Hinweis.</strong> Nicht jede Messgröße muss codiert sein — wo (noch) kein passender Code
+existiert (Funktion, PROM), ist <code class="language-plaintext highlighter-rouge">measure.text</code> zulässig. Für patientenberichtete
+Endpunkte ist die Anbindung an das <a href="https://hl7.org/fhir/us/pco/">PCO IG</a> vorgesehen,
+statt sie hier eigen zu modellieren.</p>
+</blockquote>
+
+<h3 id="messgrößen-ändern-sich--deshalb-an-die-leitlinie-binden">Messgrößen ändern sich — deshalb an die Leitlinie binden</h3>
+
+<p>Welche Größe ein Ziel misst, ist <strong>keine zeitlose Konstante</strong>, sondern folgt dem jeweils
+gültigen Leitlinienstand — und der ändert sich. Beispiel: In der <strong>rheumatoiden
+Arthritis</strong> war der <strong>DAS28</strong> (ein zusammengesetzter Aktivitäts-Punktwert) lange die
+Remissions-Messgröße; das <strong>EULAR-2025-Update rät davon ausdrücklich ab</strong> (der DAS28
+überschätzt Remission unter modernen Entzündungshemmern wie IL-6-/JAK-Hemmern) und
+stellt auf die <strong>ACR-EULAR-Kriterien (Boolean) bzw. SDAI/CDAI</strong> um (siehe
+<a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>).</p>
+
+<p>Entscheidend: <strong>Nicht alle stellen gleichzeitig um.</strong> Register, Standorte und Systeme
+sind zu jedem Zeitpunkt auf <em>unterschiedlichem</em> Leitlinienstand — alte und neue Messgröße
+<strong>koexistieren</strong>. Eine „Remission" nach DAS28 ist nicht dieselbe wie eine nach ACR-EULAR;
+ohne Herkunftsangabe vergleicht man Unvergleichbares.</p>
+
+<p>Das Muster ist <strong>nicht RA-spezifisch</strong> — dieselbe Verschiebung zeigt sich quer durch die
+<a href="therapieziele.html">weiteren Entitäten</a>: <strong>HbA1c → kardiorenaler Endpunkt / Time-in-Range</strong>
+(<a href="entitaet-diabetes.html">Diabetes</a>), <strong>SABA → antiinflammatorischer Reliever</strong>
+(<a href="entitaet-asthma.html">Asthma</a>) und <strong>symptombasiert → Calprotectin/Endoskopie</strong>
+(<a href="entitaet-ced.html">CED</a>). In allen Fällen laufen Alt- und Neu-Größe eine Zeit lang
+parallel.</p>
+
+<p>Für die Modellierung folgt daraus zweierlei:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">target.measure</code> ist <strong>versionsabhängig und austauschbar</strong>, kein hartkodierter Wert.
+Die Zielgröße trägt ihren <strong>Herkunfts- und Gültigkeitskontext</strong> mit (welche Leitlinie,
+welche Fassung).</li>
+  <li>Zielgrößen werden an ihre <strong>normative Leitlinienquelle</strong> gebunden — über die
+Verlinkungs-Mechanik aus CPG-on-FHIR (<code class="language-plaintext highlighter-rouge">relatedArtifact</code> / <code class="language-plaintext highlighter-rouge">instantiatesCanonical</code>,
+siehe <a href="analysebericht.html">Analysebericht</a>) — statt einen Zahlenwert als zeitlose
+Wahrheit zu behaupten. So bleiben parallele Stände <strong>unterscheidbar und vergleichbar</strong>.</li>
+</ul>
+
+<h3 id="modalität-ist-kein-endpunkt">Modalität ist kein Endpunkt</h3>
+
+<p>Nicht jedes klinische Verfahren ist eine geeignete Zielgröße. Eine
+<strong>Nachsorge-Mammographie</strong> etwa ist ein <strong>Verfahren zur Beurteilung</strong>, <strong>kein
+Endpunkt</strong> — der Endpunkt ist der <strong>Krankheitsstatus / die Rezidivfreiheit</strong> (LOINC
+<code class="language-plaintext highlighter-rouge">21976-6</code>), den die Mammographie <em>feststellen hilft</em>. <code class="language-plaintext highlighter-rouge">target.measure</code> trägt den
+<strong>gemessenen Zielzustand</strong>, nicht die Modalität, mit der er erhoben wird (die
+Mammographie selbst gehört als geplante Maßnahme in einen <code class="language-plaintext highlighter-rouge">ServiceRequest</code>).</p>
+
+<h3 id="weitere-typische-zielgrößen">Weitere typische Zielgrößen</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Zweck</th>
+      <th>Messgröße</th>
+      <th>Code (LOINC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ansprechen (neoadjuvant)</td>
+      <td>Tumorgröße, max. Durchmesser (mm)</td>
+      <td><code class="language-plaintext highlighter-rouge">33728-7</code></td>
+    </tr>
+    <tr>
+      <td>Chirurgisches Ergebnis</td>
+      <td>Resektionsstatus (R0/R1/R2)</td>
+      <td><code class="language-plaintext highlighter-rouge">84892-9</code></td>
+    </tr>
+    <tr>
+      <td>Toxizitäts-/Labormonitoring</td>
+      <td>Leukozyten (z. B. Leukopenie)</td>
+      <td><code class="language-plaintext highlighter-rouge">6690-2</code></td>
+    </tr>
+    <tr>
+      <td>Tumormarker-Monitoring</td>
+      <td>PSA (Prostata)</td>
+      <td><code class="language-plaintext highlighter-rouge">2857-1</code></td>
+    </tr>
+    <tr>
+      <td>Tumormarker-Monitoring</td>
+      <td>CA-125 (Ovar)</td>
+      <td><code class="language-plaintext highlighter-rouge">10334-1</code></td>
+    </tr>
+    <tr>
+      <td>Tumormarker-Monitoring</td>
+      <td>CEA (gastrointestinal)</td>
+      <td><code class="language-plaintext highlighter-rouge">2039-6</code></td>
+    </tr>
+    <tr>
+      <td>Tumormarker-Monitoring</td>
+      <td>CA 15-3 (Mamma)</td>
+      <td><code class="language-plaintext highlighter-rouge">6875-9</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Tumormarker sind vor allem im <strong>Verlaufsmonitoring</strong> relevant; ihr sinnvoller Einsatz
+ist <strong>entitäts- und situationsabhängig</strong> (Marker × Entität × Situation). So ist
+<strong>CA-125 beim Ovarialkarzinom</strong> ein etablierter Monitoring-Endpunkt (GCIG-CA-125-
+Ansprech-/Progressionskriterien), während die routinemäßige <strong>CA-15-3-Bestimmung in der
+asymptomatischen kurativen Mamma-Nachsorge</strong> leitlinienkonform <em>nicht</em> empfohlen wird.
+CA-125 ist dabei der <strong>Ovarial-</strong>, CA 15-3 der <strong>Mamma-Marker</strong> — nicht austauschbar.</p>
+
+<h3 id="beispiele">Beispiele</h3>
+
+<ul>
+  <li><a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a> — Diagnostik-, Heilungs- und
+Nachsorgeziel mit je eigenen Targets.</li>
+  <li><a href="szenario-crc.html">mCRC (palliativ)</a> — Ziele Lebensverlängerung/Symptomkontrolle mit
+Bezug auf die Verlaufs-Observation.</li>
+</ul>
+
+<p>→ Zurück zur <a href="therapieziele.html">Übersicht der Therapieziele</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-31 13:52:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

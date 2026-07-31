@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ObsEstrogenrezeptorMamma"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation ObsEstrogenrezeptorMamma</b></p><a name="en-ObsEstrogenrezeptorMamma"> </a><a name="en-hcObsEstrogenrezeptorMamma"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 85337-4}, {http://snomed.info/sct 1234806008}">Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title="Codes:{http://loinc.org LA6577-6}">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → ER-negativ.</p>
+</div></blockquote><p><b>specimen</b>: <a href="Specimen-SpecimenBiopsieMamma.html">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="85337-4"/>
+      <display value="Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1234806008"/>
+      <display value="Observation using immunohistochemistry (observable entity)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+  <effectiveDateTime value="2025-09-17"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA6577-6"/>
+      <display value="Negative"/>
+    </coding>
+  </valueCodeableConcept>
+  <note>
+    <text value="Immunhistochemie: &lt;1 % positive Kerne → ER-negativ."/>
+  </note>
+  <specimen>
+    <reference value="Specimen/SpecimenBiopsieMamma"/>
+  </specimen>
+</Observation>

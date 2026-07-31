@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Weitere Entität – Rheumatoide Arthritis - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.1 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/entitaet-rheuma.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Weitere Entität – Rheumatoide Arthritis</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Weitere Entität – Rheumatoide Arthritis</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+<p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#die-zielstruktur-der-ra" id="markdown-toc-die-zielstruktur-der-ra">Die Zielstruktur der RA</a></li>
+  <li><a href="#abbildung-auf-das-modell" id="markdown-toc-abbildung-auf-das-modell">Abbildung auf das Modell</a></li>
+  <li><a href="#was-der-transfer-zeigt" id="markdown-toc-was-der-transfer-zeigt">Was der Transfer zeigt</a></li>
+  <li><a href="#semantische-annotationen-codesysteme" id="markdown-toc-semantische-annotationen-codesysteme">Semantische Annotationen (Codesysteme)</a></li>
+  <li><a href="#leitlinien-und-quellen" id="markdown-toc-leitlinien-und-quellen">Leitlinien und Quellen</a></li>
+</ul>
+
+</div>
+<p>Diese Seite prüft das <a href="therapieziele.html">Therapieziel-Modell</a> an der <strong>rheumatoiden
+Arthritis (RA)</strong> – der häufigsten entzündlichen Gelenkerkrankung, bei der das Immunsystem
+die Gelenke angreift; stellvertretend für den rheumatischen Formenkreis. Die Frage ist nicht
+„wie behandelt man RA", sondern: <strong>Trägt dieselbe Struktur</strong> – übergeordnetes Ziel plus
+messbare Etappenziele mit <code class="language-plaintext highlighter-rouge">target.measure</code> / <code class="language-plaintext highlighter-rouge">target.detail</code> / <code class="language-plaintext highlighter-rouge">target.due</code> (<em>woran</em>
+gemessen wird, <em>welcher Wert</em> das Ziel ist, <em>bis wann</em>) – <strong>auch hier?</strong></p>
+
+<h3 id="die-zielstruktur-der-ra">Die Zielstruktur der RA</h3>
+
+<ul>
+  <li><strong>Übergeordnetes Ziel:</strong> <strong>anhaltende Remission</strong> (weitgehende Rückbildung der Entzündung)
+oder – wo nicht erreichbar – <strong>niedrige Krankheitsaktivität</strong>, dazu <strong>Verhinderung
+bleibender Gelenkschäden</strong> und <strong>Erhalt der Funktion/Beweglichkeit</strong>. Eine strategische
+Grundausrichtung, hier <strong>auf Remission ausgerichtet</strong>; eine echte Heilung (dauerhaft ganz
+ohne Medikamente) ist laut EULAR 2025 „extremely rare" (äußerst selten).</li>
+  <li><strong>„Treat to target" (Behandeln nach Zielwert):</strong> Die RA ist das <strong>Musterbeispiel</strong> dafür –
+ein <strong>festgelegter Zielwert</strong> (Remission bzw. niedrige Aktivität), <strong>engmaschige Messung</strong>
+(alle 1–3 Monate) und <strong>Anpassung der Therapie, bis das Ziel erreicht ist</strong>: mindestens
+50 % weniger Krankheitsaktivität nach 3 Monaten, volle Zielerreichung nach 6 Monaten.</li>
+  <li><strong>Phasenstruktur:</strong> <strong>Erst herunterbringen</strong> (bis das Ziel erreicht ist) → <strong>dann halten</strong>
+– dasselbe Erst-Löschen-dann-Halten-Muster wie bei CED.</li>
+</ul>
+
+<svg width="100%" viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Treat-to-target-Regelkreis der rheumatoiden Arthritis</title>
+<desc>Regelkreis: Ziel festlegen (Remission nach ACR-EULAR bzw. SDAI/CDAI), behandeln, alle 1 bis 3 Monate messen, bei Zielverfehlung Therapie anpassen, bei Zielerreichung halten. Darunter die Etappen: nach 3 Monaten mindestens 50 Prozent Reduktion, nach 6 Monaten Zielerreichung (target.due).</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<g><rect x="40" y="40" width="190" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="135" y="62" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">Ziel festlegen</text>
+<text x="135" y="80" text-anchor="middle" font-size="11" fill="#04342C">Remission: SDAI ≤ 3,3 · CDAI ≤ 2,8</text>
+<text x="135" y="96" text-anchor="middle" font-size="10.5" fill="#0F6E56">Goal.target · measure.text</text></g>
+
+<line x1="232" y1="76" x2="278" y2="76" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+
+<g><rect x="280" y="40" width="160" height="72" rx="8" fill="#FAECE7" stroke="#D85A30" />
+<text x="360" y="62" text-anchor="middle" font-size="13" font-weight="500" fill="#4A1B0C">Behandeln</text>
+<text x="360" y="80" text-anchor="middle" font-size="10.5" fill="#4A1B0C">DMARD, ggf. Biologikum/JAK</text>
+<text x="360" y="96" text-anchor="middle" font-size="10.5" fill="#993C1D">MedicationRequest</text></g>
+
+<line x1="442" y1="76" x2="488" y2="76" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+
+<g><rect x="490" y="40" width="150" height="72" rx="8" fill="#FAECE7" stroke="#D85A30" />
+<text x="565" y="58" text-anchor="middle" font-size="13" font-weight="500" fill="#4A1B0C">Messen</text>
+<text x="565" y="74" text-anchor="middle" font-size="10.5" fill="#4A1B0C">SDAI/CDAI · CRP/BSG</text>
+<text x="565" y="88" text-anchor="middle" font-size="10.5" fill="#4A1B0C">alle 1–3 Monate</text>
+<text x="565" y="102" text-anchor="middle" font-size="9.5" fill="#993C1D">CRP 1988-5 · BSG 30341-2</text></g>
+
+<line x1="565" y1="114" x2="565" y2="146" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+
+<polygon points="565,148 645,192 565,236 485,192" fill="#EEEDFE" stroke="#534AB7" />
+<text x="565" y="196" text-anchor="middle" font-size="12" font-weight="500" fill="#26215C">Ziel erreicht?</text>
+
+<line x1="483" y1="192" x2="234" y2="192" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<text x="458" y="184" font-size="11" fill="#5F5E5A">ja</text>
+
+<g><rect x="40" y="156" width="190" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="135" y="178" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">Halten</text>
+<text x="135" y="196" text-anchor="middle" font-size="11" fill="#04342C">Remission dauerhaft halten</text>
+<text x="135" y="212" text-anchor="middle" font-size="10.5" fill="#0F6E56">HAQ · Röntgen: measure.text</text></g>
+
+<path d="M565,238 L565,278 L442,278" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<text x="574" y="260" font-size="11" fill="#5F5E5A">nein</text>
+
+<g><rect x="280" y="250" width="160" height="56" rx="8" fill="#FAECE7" stroke="#D85A30" />
+<text x="360" y="272" text-anchor="middle" font-size="12.5" font-weight="500" fill="#4A1B0C">Therapie anpassen</text>
+<text x="360" y="290" text-anchor="middle" font-size="10.5" fill="#4A1B0C">eskalieren / umstellen</text></g>
+
+<line x1="360" y1="248" x2="360" y2="114" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+
+<g><rect x="40" y="250" width="200" height="66" rx="8" fill="#F1EFE8" stroke="#5F5E5A" />
+<text x="140" y="266" text-anchor="middle" font-size="10.5" font-weight="500" fill="#2C2C2A">DAS28: als Remissionsmaß</text>
+<text x="140" y="280" text-anchor="middle" font-size="10.5" fill="#2C2C2A">nicht mehr empfohlen (EULAR 2025) —</text>
+<text x="140" y="294" text-anchor="middle" font-size="10.5" fill="#2C2C2A">unter IL-6-/JAK-Hemmern verzerrt;</text>
+<text x="140" y="308" text-anchor="middle" font-size="10.5" fill="#2C2C2A">stattdessen ACR-EULAR · SDAI/CDAI</text></g>
+
+<line x1="60" y1="356" x2="620" y2="356" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)" />
+<line x1="60" y1="350" x2="60" y2="362" stroke="#5F5E5A" stroke-width="1.2" />
+<line x1="200" y1="350" x2="200" y2="362" stroke="#5F5E5A" stroke-width="1.2" />
+<line x1="430" y1="350" x2="430" y2="362" stroke="#5F5E5A" stroke-width="1.2" />
+<text x="60" y="378" text-anchor="middle" font-size="11" fill="#5F5E5A">Therapiebeginn</text>
+<text x="200" y="378" text-anchor="middle" font-size="11" fill="#5F5E5A">3 Monate:</text>
+<text x="200" y="392" text-anchor="middle" font-size="11" fill="#5F5E5A">≥ 50 % Reduktion der Aktivität</text>
+<text x="430" y="378" text-anchor="middle" font-size="11" fill="#5F5E5A">6 Monate:</text>
+<text x="430" y="392" text-anchor="middle" font-size="11" fill="#5F5E5A">Ziel erreicht (target.due)</text>
+
+<rect x="40" y="414" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="59" y="425" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="100" y="414" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30" /><text x="119" y="425" font-size="11.5" fill="#5F5E5A">Maßnahme / Messung</text>
+<rect x="255" y="414" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="274" y="425" font-size="11.5" fill="#5F5E5A">Entscheidung</text>
+<rect x="365" y="414" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="384" y="425" font-size="11.5" fill="#5F5E5A">Hinweis</text>
+<text x="460" y="425" font-size="10.5" fill="#5F5E5A">Scores ohne Code: measure.text</text>
+</svg>
+
+<h3 id="abbildung-auf-das-modell">Abbildung auf das Modell</h3>
+
+<p>„Zielgröße" = <em>woran</em> gemessen wird, „Zielwert" = <em>welcher Wert</em> als erreicht gilt,
+„Ergebnis" = die tatsächliche Messung. Krankheitsaktivität wird über zusammengesetzte
+Punktwerte („Scores") erfasst.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ebene / Ausrichtung</th>
+      <th>Zielgröße (<code class="language-plaintext highlighter-rouge">target.measure</code>)</th>
+      <th>Zielwert (<code class="language-plaintext highlighter-rouge">target.detail</code>)</th>
+      <th>Ergebnis (<code class="language-plaintext highlighter-rouge">outcomeReference</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Übergeordnet</strong> (auf Remission ausgerichtet)</td>
+      <td>— (strategisch)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Herunterbringen – Aktivität</td>
+      <td>Remissions-Kriterien nach ACR-EULAR bzw. Punktwerte SDAI/CDAI — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>Remission (SDAI ≤ 3,3 / CDAI ≤ 2,8) oder niedrige Aktivität; ≥ 50 % Reduktion nach 3 Mon., Ziel nach 6 Mon. (<code class="language-plaintext highlighter-rouge">target.due</code>)</td>
+      <td>Score-Erhebung</td>
+    </tr>
+    <tr>
+      <td>Herunterbringen – Entzündung</td>
+      <td>CRP (Entzündungswert im Blut) — LOINC <code class="language-plaintext highlighter-rouge">1988-5</code>; BSG (Blutsenkung) <code class="language-plaintext highlighter-rouge">30341-2</code></td>
+      <td>Normalisierung</td>
+      <td>Messungen</td>
+    </tr>
+    <tr>
+      <td>Halten – Funktion</td>
+      <td>HAQ (Fragebogen zur Alltagsfähigkeit) — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>Erhalt/Verbesserung</td>
+      <td>Fragebogen</td>
+    </tr>
+    <tr>
+      <td>Halten – Gelenkschäden</td>
+      <td>Fortschreiten im Röntgen — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>kein Fortschreiten</td>
+      <td>Bildgebung</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>DAS28 taugt nicht (mehr) als Remissions-Zielwert.</strong> Der <strong>DAS28</strong> („Disease Activity
+Score" über 28 Gelenke) verrechnet die Zahl geschwollener und druckschmerzhafter Gelenke,
+einen Entzündungslaborwert (CRP <em>oder</em> Blutsenkung) und die Selbsteinschätzung des
+Patienten zu <em>einer</em> Zahl (grob: &lt; 2,6 = „Remission"). Das EULAR-2025-Update rät
+ausdrücklich davon ab: Weil der DAS28 stark am Entzündungslabor hängt und moderne
+Wirkstoffe (IL-6- bzw. JAK-Hemmer) genau dieses Labor senken, <em>ohne</em> dass die Gelenke
+ebenso gut sind, täuscht er Remission vor. Maßgeblich sind stattdessen die
+<strong>ACR-EULAR-Kriterien</strong> bzw. die Punktwerte <strong>SDAI/CDAI</strong>. Fürs Modell heißt das:
+<code class="language-plaintext highlighter-rouge">target.measure</code> trägt das ACR-EULAR-/SDAI-/CDAI-Kriterium, nicht den DAS28 – ein
+Musterfall für <a href="goal-target-measure.html">wechselnde, an die Leitlinie gebundene Messgrößen</a>.</p>
+</blockquote>
+
+<p>Die <strong>Medikamente</strong> – die Basismedikamente „DMARDs" (krankheitsmodifizierende Antirheumatika:
+Methotrexat als Standard-Basismittel, Leflunomid, Sulfasalazin, Hydroxychloroquin), kurzzeitig
+<strong>Kortison</strong> zur Überbrückung, sowie die neueren zielgerichteten <strong>Biologika</strong> (Antikörper
+gegen einzelne Entzündungsbotenstoffe wie TNF oder Interleukin-6) und die <strong>JAK-Hemmer</strong>
+(zielgerichtete Tabletten) – sind im Modell <strong>Maßnahmen</strong> (<code class="language-plaintext highlighter-rouge">MedicationRequest</code>), nicht das
+Ziel.</p>
+
+<h3 id="was-der-transfer-zeigt">Was der Transfer zeigt</h3>
+
+<p>Die RA macht den <strong>Kern des Modells</strong> sichtbar: Ein <strong>festgelegter Zielzustand</strong> (Remission
+nach ACR-EULAR bzw. SDAI/CDAI) mit <strong>Frist</strong> (3-/6-Monats-Etappen) und <strong>schrittweiser
+Nachsteuerung</strong> ist genau das, was <code class="language-plaintext highlighter-rouge">Goal.target</code> + Verlaufs-Messung abbilden.
+<strong>Allgemeingültig</strong> ist die Struktur; <strong>krankheitsspezifisch</strong> sind Punktwert und Schwelle –
+und die Warnung, dass die <em>Wahl</em> der Messgröße (ACR-EULAR statt DAS28) das Ergebnis verzerren
+kann.</p>
+
+<h3 id="semantische-annotationen-codesysteme">Semantische Annotationen (Codesysteme)</h3>
+
+<p>Unabhängig von der Erklärung oben – so werden die Inhalte <strong>maschinenlesbar</strong> codiert. Die
+Codes sind gegen den MII-Terminologieserver geprüft (ICD-10-GM 2026, SNOMED CT 2026-07-01,
+ATC 2026, LOINC).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Codesystem(e)</th>
+      <th>Beispiel-Codes (validiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Diagnose</strong></td>
+      <td>ICD-10-GM · SNOMED CT</td>
+      <td><code class="language-plaintext highlighter-rouge">M05.9</code> seropositive / <code class="language-plaintext highlighter-rouge">M06.99</code> sonstige chronische Polyarthritis · SNOMED <code class="language-plaintext highlighter-rouge">69896004</code> <em>Rheumatoid arthritis</em></td>
+    </tr>
+    <tr>
+      <td><strong>Diagnostik / Messwerte</strong></td>
+      <td>LOINC</td>
+      <td><code class="language-plaintext highlighter-rouge">1988-5</code> CRP · <code class="language-plaintext highlighter-rouge">30341-2</code> BSG (Blutsenkung) · <code class="language-plaintext highlighter-rouge">11572-5</code> Rheumafaktor · <code class="language-plaintext highlighter-rouge">33935-8</code> Anti-CCP (ACPA); Scores DAS28/SDAI/CDAI/HAQ als <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+    </tr>
+    <tr>
+      <td><strong>Therapien (Prozeduren)</strong></td>
+      <td>OPS · SNOMED CT</td>
+      <td>überwiegend medikamentös; Gelenkprozeduren bei Spätschäden</td>
+    </tr>
+    <tr>
+      <td><strong>Medikation</strong></td>
+      <td>ATC</td>
+      <td><code class="language-plaintext highlighter-rouge">L04AX03</code> Methotrexat · <code class="language-plaintext highlighter-rouge">H02AB</code> Glucocorticoide · <code class="language-plaintext highlighter-rouge">M01A</code> NSAR · <code class="language-plaintext highlighter-rouge">L04A</code> Immunsuppressiva: <code class="language-plaintext highlighter-rouge">L04AB</code> TNF-Inhibitoren · <code class="language-plaintext highlighter-rouge">L04AC</code> Interleukin-Inhibitoren (Tocilizumab/IL-6) · <code class="language-plaintext highlighter-rouge">L04AF</code> JAK-Inhibitoren</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="leitlinien-und-quellen">Leitlinien und Quellen</h3>
+
+<ul>
+  <li><em>Europäisch (maßgeblich):</em> Smolen JS, Edwards CJ, Konzett V, et al. <em>EULAR
+recommendations for the management of rheumatoid arthritis with synthetic and biologic
+disease-modifying antirheumatic drugs: 2025 update.</em> Ann Rheum Dis 2026;85:991–1009. DOI
+<a href="https://doi.org/10.1016/j.ard.2026.01.023">10.1016/j.ard.2026.01.023</a> (Open Access). —
+Vorgänger: <em>2022 update</em>, Ann Rheum Dis 2023;82(1):3–18, DOI
+<a href="https://doi.org/10.1136/ard-2022-223356">10.1136/ard-2022-223356</a>.</li>
+  <li>Fiehn C, Holle J, Iking-Konert C, et al. (DGRh). <em>S2e-Leitlinie: Therapie der
+rheumatoiden Arthritis mit krankheitsmodifizierenden Medikamenten.</em> AWMF-Reg.-Nr.
+060-004, Juli 2018 (in Überarbeitung); Z Rheumatol 2018. DOI
+<a href="https://doi.org/10.1007/s00393-018-0481-y">10.1007/s00393-018-0481-y</a>.</li>
+</ul>
+
+<p>→ Zurück zur <a href="therapieziele.html">Übersicht der Therapieziele</a> ·
+<a href="goal-target-measure.html">Zielwerte und Messgrößen</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-31 13:52:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

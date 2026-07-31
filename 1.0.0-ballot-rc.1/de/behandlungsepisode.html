@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Behandlungsepisoden (EpisodeOfCare) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.1 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/behandlungsepisode.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Behandlungsepisoden (EpisodeOfCare)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Behandlungsepisoden (EpisodeOfCare)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#ein-profil-viele-arten" id="markdown-toc-ein-profil-viele-arten">Ein Profil, viele Arten</a></li>
+  <li><a href="#systemische-therapielinie-vs-lokoregionale-behandlungslinie" id="markdown-toc-systemische-therapielinie-vs-lokoregionale-behandlungslinie">Systemische Therapielinie vs. lokoregionale Behandlungslinie</a></li>
+  <li><a href="#linienwechsel--zielwechsel" id="markdown-toc-linienwechsel--zielwechsel">Linienwechsel ≠ Zielwechsel</a></li>
+  <li><a href="#episode--prozedur--kontakt" id="markdown-toc-episode--prozedur--kontakt">Episode ≠ Prozedur ≠ Kontakt</a></li>
+  <li><a href="#verknüpfung-mit-dem-versorgungsplan" id="markdown-toc-verknüpfung-mit-dem-versorgungsplan">Verknüpfung mit dem Versorgungsplan</a></li>
+  <li><a href="#beispiele" id="markdown-toc-beispiele">Beispiele</a></li>
+</ul>
+
+</div>
+<p>Ein onkologischer Verlauf besteht aus <strong>abgegrenzten Abschnitten klinischer
+Aktivität</strong> — Diagnostik, Therapielinien, Operation, Überwachung, Nachsorge. Jeder
+solche Abschnitt wird als <strong>Behandlungsepisode</strong> auf Basis von FHIR <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>
+abgebildet: ein begrenzter Zeitraum aktiv gemanagter Versorgung mit eigenem Zweck
+(Intention), Periode, Status/Statusverlauf und verantwortlicher Organisation.</p>
+
+<h3 id="ein-profil-viele-arten">Ein Profil, viele Arten</h3>
+
+<p>Statt eines Profils je Abschnittstyp gibt es <strong>ein generelles Behandlungsepisode-
+Profil</strong>; die <strong>Art</strong> der Episode wird über <code class="language-plaintext highlighter-rouge">EpisodeOfCare.type</code> codiert (offen/
+extensible). Häufige Arten:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Art</th>
+      <th>Nicht-therapeutisch / therapeutisch</th>
+      <th>In LoT-Zählung?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Diagnostiklinie</strong> (Staging, molekulare Charakterisierung)</td>
+      <td>informativ</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>Systemische Therapielinie</strong> (Line of Therapy)</td>
+      <td>therapeutisch, systemisch</td>
+      <td><strong>ja</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Lokoregionale Behandlungslinie</strong> (Chirurgie, Strahlentherapie, Ablation)</td>
+      <td>therapeutisch, lokoregional</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <td><strong>Active Surveillance / Watchful Waiting</strong></td>
+      <td>Management</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>Nachsorge / Surveillance</strong></td>
+      <td>Management</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Diese Liste ist <strong>offen</strong>: entitätsspezifische Abschnitte (z. B. Induktion/
+Konsolidierung/Erhaltung bei hämatologischen Erkrankungen) lassen sich ergänzen, ohne
+das Modell zu ändern.</p>
+
+<svg width="100%" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Behandlungsepisoden: ein Profil, viele Arten, drei Modalitätsspuren</title>
+<desc>Zeitstrahl mit Behandlungsepisoden in drei Spuren: systemische Therapielinien (EnLiST, in der LoT-Zaehlung), lokoregionale Behandlungslinien (nicht gezaehlt) und informative bzw. Management-Abschnitte. Alle sind dasselbe EpisodeOfCare-Profil, die Art steht in type. Die Operation selbst ist ein Procedure innerhalb der perioperativen Episode.</desc>
+<defs>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<text x="40" y="24" font-size="11.5" font-weight="500" fill="#5F5E5A">Ein Profil — viele Arten: EpisodeOfCare.type unterscheidet, die Struktur bleibt gleich.</text>
+
+<text x="30" y="66" font-size="10.5" font-weight="500" fill="#2C2C2A">systemisch</text>
+<text x="30" y="80" font-size="9" fill="#0F6E56">EnLiST — zählt (LoT)</text>
+<text x="30" y="138" font-size="10.5" font-weight="500" fill="#2C2C2A">lokoregional</text>
+<text x="30" y="152" font-size="9" fill="#5F5E5A">im EnLiST-Framework</text>
+<text x="30" y="164" font-size="9" fill="#5F5E5A">nicht mitgezählt</text>
+<text x="30" y="214" font-size="10.5" font-weight="500" fill="#2C2C2A">informativ /</text>
+<text x="30" y="228" font-size="9" fill="#5F5E5A">Management</text>
+
+<line x1="140" y1="111" x2="655" y2="111" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
+<line x1="140" y1="185" x2="655" y2="185" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
+
+<g><rect x="145" y="198" width="115" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="202" y="218" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Diagnostiklinie</text>
+<text x="202" y="233" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Diagnostik</text></g>
+
+<g><rect x="270" y="50" width="135" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="337" y="70" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Systemische Linie</text>
+<text x="337" y="85" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Therapielinie</text>
+<circle cx="400" cy="54" r="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2" />
+<text x="400" y="58" text-anchor="middle" font-size="8.5" font-weight="600" fill="#04342C">1L</text></g>
+
+<g><rect x="415" y="124" width="130" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="480" y="141" text-anchor="middle" font-size="9.5" font-weight="500" fill="#26215C">Perioperative Episode</text>
+<circle cx="452" cy="155" r="3" fill="#534AB7" />
+<text x="460" y="159" font-size="8.5" fill="#534AB7">OP = Procedure</text></g>
+
+<g><rect x="555" y="198" width="105" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="607" y="218" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Nachsorge</text>
+<text x="607" y="233" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Surveillance</text></g>
+
+<line x1="145" y1="272" x2="648" y2="272" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)" />
+<text x="656" y="276" font-size="10.5" fill="#5F5E5A">Zeit</text>
+
+<text x="40" y="302" font-size="9.5" fill="#5F5E5A">Perioperative Episode = die Reise (Planung → OP → Reha); die OP selbst ist ein Procedure, einzelne Kontakte sind Encounter.</text>
+<text x="40" y="318" font-size="9.5" fill="#5F5E5A">In die LoT-Zählung (EnLiST) gehen nur systemische Linien ein — lokoregionale Linien und Management-Abschnitte nicht.</text>
+
+<rect x="40" y="342" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="353" font-size="11" fill="#5F5E5A">Behandlungsepisode (EpisodeOfCare — ein Profil)</text>
+<circle cx="342" cy="348" r="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="357" y="353" font-size="11" fill="#5F5E5A">LoT-Zähler</text>
+<circle cx="435" cy="348" r="3" fill="#534AB7" /><text x="446" y="353" font-size="11" fill="#5F5E5A">Procedure (Ereignis)</text>
+</svg>
+
+<h3 id="systemische-therapielinie-vs-lokoregionale-behandlungslinie">Systemische Therapielinie vs. lokoregionale Behandlungslinie</h3>
+
+<p>Der Oberbegriff <strong>Behandlungslinie</strong> umfasst zwei Modalitätsklassen:</p>
+
+<ul>
+  <li>Die <strong>systemische Therapielinie</strong> (Line of Therapy, LoT) folgt der internationalen
+Konsensnotation <strong>EnLiST</strong> (<a href="https://doi.org/10.1016/j.annonc.2026.02.008">Saini et al., <em>Ann Oncol</em> 2026</a>)
+und wird in die <strong>Linien-Zählung</strong> aufgenommen. Eine Linie ist ein Abschnitt aktiver Systemtherapie mit definierter
+Intention, beendet durch ein klinisches Ereignis (Progress, Toxizität,
+Patientenwunsch, Studienende, geplanter Wechsel).</li>
+  <li>Die <strong>lokoregionale Behandlungslinie</strong> (Chirurgie, Strahlentherapie, Ablation) wird
+von EnLiST <strong>nicht</strong> abgedeckt und <strong>nicht</strong> mitgezählt — sie bildet eine eigene
+Modalitätsspur.</li>
+</ul>
+
+<blockquote>
+  <p><strong>Einordnung EnLiST.</strong> EnLiST ist ein paneuropäischer Delphi-Konsens zur
+<strong>Standardisierung der Linien-Bezeichnung bei soliden Tumoren</strong> — bewusst begrenzt
+auf <strong>systemische</strong> Therapie. Für <strong>hämatologische</strong> Erkrankungen gilt eine
+<strong>separate</strong> Adaptation (andere Achse: Induktion/Konsolidierung/Erhaltung), und das
+Framework befindet sich noch im „road testing" (ESMO 2026–2027). Die <strong>LoT-Zählung
+ist damit kein universeller, entitätsübergreifender Score</strong>, sondern eine Struktur-
+und Notationskonvention innerhalb ihres Geltungsbereichs; ihre Vergleichbarkeit über
+Tumorentitäten hinweg ist begrenzt. Die Spalte „In LoT-Zählung?" ist entsprechend
+<strong>im Kontext der jeweiligen Entität</strong> zu lesen.</p>
+</blockquote>
+
+<h3 id="linienwechsel--zielwechsel">Linienwechsel ≠ Zielwechsel</h3>
+
+<p>EnLiST notiert Linien als <strong>X.Y je Setting-Achse</strong> (eLoT früh · aLoT
+fortgeschritten · iLoT investigational, getrennt gezählt): X zählt <strong>New LoTs</strong>
+(nur bei Progression oder fehlendem Ansprechen), Y zählt <strong>Modified LoTs</strong>
+(nicht-progressionsbedingte Änderungen), <strong>Same LoTs</strong> (prospektiv geplante
+Änderungen inkl. Erhaltung) verändern die Designation nicht. Diese Ereignisse
+liegen auf der <strong>Maßnahmen-Achse</strong> — sie lösen <strong>nie automatisch</strong> eine
+Ziel-Operation aus:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>EnLiST-Ereignis</th>
+      <th>Auslöser</th>
+      <th>Episodenziel</th>
+      <th>Übergeordnetes Ziel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Same LoT</strong> (X.Y bleibt)</td>
+      <td>prospektiv geplant: Dosis, Pause, Erhaltung</td>
+      <td>bleibt — <em>oder</em> <code class="language-plaintext highlighter-rouge">successor</code>, wenn ein Phasenziel erreicht ist</td>
+      <td>bleibt</td>
+    </tr>
+    <tr>
+      <td><strong>Modified LoT</strong> (Y+1)</td>
+      <td>Intoleranz, Wirkstoffwechsel ohne Progression</td>
+      <td><strong>bleibt</strong> (nur die Maßnahme ändert sich)</td>
+      <td>bleibt</td>
+    </tr>
+    <tr>
+      <td><strong>New LoT</strong> (X+1)</td>
+      <td>Progression / fehlendes Ansprechen</td>
+      <td>i. d. R. neu — altes Ziel abgeschlossen, oft <code class="language-plaintext highlighter-rouge">not-achieved</code></td>
+      <td>bleibt, solange die Intention stabil ist</td>
+    </tr>
+    <tr>
+      <td><strong>New LoT + Strategiewechsel</strong> (oft eLoT→aLoT)</td>
+      <td>Progression macht die Intention unhaltbar</td>
+      <td>neu</td>
+      <td><strong><code class="language-plaintext highlighter-rouge">replacement</code></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Belege in beide Richtungen: Im <a href="szenario-crc.html">mCRC-Szenario</a> überdauert das
+übergeordnete Ziel mehrere palliative Linien; der Übergang Induktion → Erhaltung
+ist dort ein <strong>Zielwechsel ohne Linienwechsel</strong> (Erhaltung = <em>Same LoT</em>); ein
+Wirkstoffwechsel wegen Intoleranz (z. B. Letrozol → Anastrozol, <code class="language-plaintext highlighter-rouge">eLoT 1.0 → 1.1</code>)
+ändert <strong>gar kein Ziel</strong>. Auch der Setting-Wechsel koppelt nicht 1:1 — EnLiST
+entkoppelt Setting und Intention ausdrücklich (kurative Oligometastasen-Therapie
+im advanced Setting, palliative Frühphasen-Therapie).</p>
+
+<h3 id="episode--prozedur--kontakt">Episode ≠ Prozedur ≠ Kontakt</h3>
+
+<p>Wichtige Abgrenzung am Beispiel Chirurgie: Die <strong>Operation selbst</strong> ist ein
+punktuelles Ereignis (<code class="language-plaintext highlighter-rouge">Procedure</code>). Die <strong>perisurgische Reise</strong> dagegen — Planung,
+Aufklärung/Consent, Eingriff, postoperativer Aufenthalt, Rehabilitation,
+postoperatives Monitoring — erstreckt sich über <strong>mehrere Kontakte</strong> (<code class="language-plaintext highlighter-rouge">Encounter</code>) und
+<em>ist</em> die Behandlungsepisode. Kurz: <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code> (Periode) ≠ <code class="language-plaintext highlighter-rouge">Procedure</code> (Ereignis)
+≠ <code class="language-plaintext highlighter-rouge">Encounter</code> (einzelner Kontakt).</p>
+
+<h3 id="verknüpfung-mit-dem-versorgungsplan">Verknüpfung mit dem Versorgungsplan</h3>
+
+<p>Die Behandlungsepisode wird mit dem <a href="empfehlung-behandlung.html">Behandlungsplan</a> über
+die Standard-Extension <strong><code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code></strong> verknüpft (direkt am <code class="language-plaintext highlighter-rouge">CarePlan</code>,
+<code class="language-plaintext highlighter-rouge">Reference(EpisodeOfCare)</code>) — nicht über <code class="language-plaintext highlighter-rouge">CarePlan.encounter</code> (das nur den
+<em>erstellenden</em> Kontakt bezeichnet). <code class="language-plaintext highlighter-rouge">Encounter</code> selbst ist bewusst außerhalb des
+Scopes dieses Leitfadens.</p>
+
+<blockquote>
+  <p><strong>Zielmodell.</strong> Das generelle <code class="language-plaintext highlighter-rouge">Behandlungsepisode</code>-Profil (Art über <code class="language-plaintext highlighter-rouge">type</code>,
+art-spezifische Angaben in Extensions) löst das aktuell auf aktive Therapie verengte
+Profil <a href="StructureDefinition-onko-therapy-line.html"><code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></a> ab und wird im
+laufenden Ausbau umgesetzt. Die EnLiST-Konformität der systemischen Linien bleibt
+dabei erhalten.</p>
+</blockquote>
+
+<h3 id="beispiele">Beispiele</h3>
+
+<ul>
+  <li><a href="szenario-crc.html">mCRC (palliativ)</a> — Diagnostikpfad und systemische Erstlinie
+(<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>).</li>
+  <li><a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a> — neoadjuvante Systemtherapie und
+anschließende Operation als getrennte Abschnitte.</li>
+</ul>
+
+<p>→ Weiter: <a href="goal-target-measure.html">Zielwerte und Messgrößen</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-31 13:52:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

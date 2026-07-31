@@ -1,0 +1,61 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "enlist-change-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet enlist-change-type</b></p><a name=\"enlist-change-type\"> </a><a name=\"hcenlist-change-type\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-enlist-change-type.html\"><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0-ballot-rc.1</span></li></ul></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet enlist-change-type</b></p><a name=\"en-enlist-change-type\"> </a><a name=\"en-hcenlist-change-type\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-enlist-change-type.html\"><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0-ballot-rc.1</span></li></ul></div></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+  "version" : "1.0.0-ballot-rc.1",
+  "name" : "EnlistChangeTypeVS",
+  "title" : "EnLiST-Änderungstypen (ValueSet)",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "EnLiST change types value set"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "status" : "draft",
+  "date" : "2026-07-31T13:52:27+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "Alle EnLiST-Änderungstypen.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "All EnLiST change types."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type"
+    }]
+  }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="OnkologinMamma"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Practitioner OnkologinMamma</b></p><a name="OnkologinMamma"> </a><a name="hcOnkologinMamma"> </a><p><b>name</b>: Katrin Musterarzt </p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Practitioner OnkologinMamma</b></p><a name="en-OnkologinMamma"> </a><a name="en-hcOnkologinMamma"> </a><p><b>name</b>: Katrin Musterarzt </p></div></div>
+  </text>
+  <name>
+    <family value="Musterarzt"/>
+    <given value="Katrin"/>
+  </name>
+</Practitioner>

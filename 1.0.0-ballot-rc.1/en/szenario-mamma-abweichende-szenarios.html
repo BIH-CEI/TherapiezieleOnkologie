@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Abweichende Szenarios - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.1 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/szenario-mamma-abweichende-szenarios.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Abweichende Szenarios</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Abweichende Szenarios</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+<p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#reguläres-ende-mit-dosisanpassung" id="markdown-toc-reguläres-ende-mit-dosisanpassung">Reguläres Ende mit Dosisanpassung</a></li>
+  <li><a href="#reguläres-ende-mit-substanzwechsel" id="markdown-toc-reguläres-ende-mit-substanzwechsel">Reguläres Ende mit Substanzwechsel</a></li>
+  <li><a href="#abbruch-wegen-nebenwirkung" id="markdown-toc-abbruch-wegen-nebenwirkung">Abbruch wegen Nebenwirkung</a></li>
+  <li><a href="#abbruch-wegen-progress" id="markdown-toc-abbruch-wegen-progress">Abbruch wegen Progress</a></li>
+  <li><a href="#abbruch-aus-anderen-gründen" id="markdown-toc-abbruch-aus-anderen-gründen">Abbruch aus anderen Gründen</a></li>
+  <li><a href="#versterben-der-patientin" id="markdown-toc-versterben-der-patientin">Versterben der Patientin</a></li>
+</ul>
+
+</div>
+<p>Diese Seite ergänzt das <a href="szenario-mamma.html">Anwendungsbeispiel Mammakarzinom (neoadjuvant)</a> um Verlaufsabweichungen vom dort beschriebenen Standardverlauf. Während das Hauptbeispiel einen unkomplizierten Verlauf mit pathologischer Komplettremission zeigt, treten in der klinischen Praxis regelmäßig Abweichungen von der ursprünglichen Therapieplanung auf, von planmäßigen Anpassungen bis hin zum vorzeitigen Abbruch der Therapielinie.</p>
+
+<p>Für jedes der folgenden Szenarien wird gezeigt, wie sich das jeweilige klinische Ereignis auf <strong>Ressourcenebene</strong> abbilden lässt: welche Elemente sich ändern (z. B. <code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">statusReason</code>), welche Verknüpfungen neu entstehen (z. B. <code class="language-plaintext highlighter-rouge">priorPrescription</code>, <code class="language-plaintext highlighter-rouge">reasonReference</code>) und welche Auswirkungen dies auf Therapielinie (<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>) und Therapieziel (<code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>) hat.</p>
+
+<p>Die unten aufgeführten, beispielhaften Szenarien sind rein informativ und daher nicht in Bundles dargestellt.</p>
+
+<h3 id="reguläres-ende-mit-dosisanpassung">Reguläres Ende mit Dosisanpassung</h3>
+
+<p>Die Therapie wird wie geplant fortgeführt und abgeschlossen, die Dosis wird jedoch im Verlauf angepasst.</p>
+
+<p><strong>Beispiel:</strong> Die Tumorboard-Empfehlung wird umgesetzt, pro geplanter Abgabe entsteht ein <code class="language-plaintext highlighter-rouge">MedicationRequest</code>. Nach 2 von 6 Zyklen wird die Dosis reduziert. Die noch offenen Requests werden gestoppt und durch neue ersetzt, gebündelt in einem neuen <code class="language-plaintext highlighter-rouge">CarePlan</code>. Das Tumorboard wird dafür nicht erneut einberufen.</p>
+
+<p><img src="abweichung-dosisanpassung.png" alt="Szenario 1: Reguläres Ende mit Dosisanpassung, in diesem Fall Dosisreduktion" style="width:100%;" /></p>
+
+<p><strong>Merkmale:</strong></p>
+<ul>
+  <li>Die noch nicht durchgeführten <code class="language-plaintext highlighter-rouge">MedicationRequests</code> erhalten den Status <code class="language-plaintext highlighter-rouge">stopped</code>; im <code class="language-plaintext highlighter-rouge">statusReason</code> kann der entsprechende Code angegeben werden.</li>
+  <li>Beim ursprünglichen <code class="language-plaintext highlighter-rouge">CarePlan</code> wird der Status auf <code class="language-plaintext highlighter-rouge">revoked</code> gesetzt. Ein neu erstellter <code class="language-plaintext highlighter-rouge">CarePlan</code> enthält die neuen <code class="language-plaintext highlighter-rouge">MedicationRequests</code> mit der angepassten Dosis, übernimmt aber die übrigen Merkmale des ursprünglichen CarePlans.</li>
+  <li>Die Tumorboard-Empfehlung bleibt unverändert bestehen.</li>
+</ul>
+
+<h3 id="reguläres-ende-mit-substanzwechsel">Reguläres Ende mit Substanzwechsel</h3>
+
+<p>Die Therapie wird planmäßig abgeschlossen, ein oder mehrere Wirkstoffe des Regimes werden im Verlauf jedoch angepasst (ausgetauscht, ergänzt oder abgesetzt). <strong>Abgrenzung</strong>: gemeint ist immer ein Wirkstoffwechsel, nicht ein Arzneimittel- oder Präparatewechsel. Ein Fertigarzneimittel-Austausch bei gleichem Wirkstoff erzeugt weder einen neuen CarePlan noch einen Statuswechsel.</p>
+
+<p><strong>Unterkategorien eines Substanzwechsels:</strong></p>
+
+<ul>
+  <li>Wirkstoff wird ausgetauscht</li>
+  <li>Neuer Wirkstoff kommt hinzu</li>
+  <li>Wirkstoff fällt weg</li>
+</ul>
+
+<p><strong>Beispiel:</strong> Nach 2 von 6 Zyklen wird ein Wirkstoff ausgetauscht. Wie beim Dosiswechsel werden offene <code class="language-plaintext highlighter-rouge">MedicationRequests</code> gestoppt und in einem neuen <code class="language-plaintext highlighter-rouge">CarePlan</code> ersetzt. Ein reiner Austausch bleibt inhaltlich von der ursprünglichen Tumorboard-Empfehlung gedeckt (meist auf Ebene der Therapieklasse), das Tumorboard wird daher nie erneut einberufen.</p>
+
+<p><img src="abweichung-substanzwechsel.png" alt="Szenario 2: Reguläres Ende mit Substanzwechsel" style="width:100%;" /></p>
+
+<p><strong>Merkmale:</strong></p>
+
+<ul>
+  <li>Wirkstoff wird ausgetauscht:
+    <ul>
+      <li>Die noch nicht durchgeführten <code class="language-plaintext highlighter-rouge">MedicationRequests</code> erhalten den Status <code class="language-plaintext highlighter-rouge">stopped</code>; im <code class="language-plaintext highlighter-rouge">statusReason</code> kann der entsprechende Code angegeben werden.</li>
+      <li>Beim ursprünglichen <code class="language-plaintext highlighter-rouge">CarePlan</code> wird der Status auf <code class="language-plaintext highlighter-rouge">revoked</code> gesetzt. Ein neu erstellter <code class="language-plaintext highlighter-rouge">CarePlan</code> enthält die neuen <code class="language-plaintext highlighter-rouge">MedicationRequests</code>, übernimmt aber die übrigen Merkmale (beispielsweise <code class="language-plaintext highlighter-rouge">TherapieIntent</code>) des ursprünglichen CarePlans.</li>
+      <li>Das Tumorboard wird nicht neu einberufen, die Empfehlungen des Tumorboards bleiben somit bestehen.</li>
+    </ul>
+  </li>
+  <li>Neuer Wirkstoff kommt hinzu:
+    <ul>
+      <li>Die noch nicht durchgeführten <code class="language-plaintext highlighter-rouge">MedicationRequests</code> erhalten den Status <code class="language-plaintext highlighter-rouge">stopped</code>; im <code class="language-plaintext highlighter-rouge">statusReason</code> kann der entsprechende Code angegeben werden.</li>
+      <li>Beim ursprünglichen <code class="language-plaintext highlighter-rouge">CarePlan</code> wird der Status auf <code class="language-plaintext highlighter-rouge">revoked</code> gesetzt. Ein neu erstellter <code class="language-plaintext highlighter-rouge">CarePlan</code> enthält die neuen <code class="language-plaintext highlighter-rouge">MedicationRequests</code>.</li>
+      <li>Es kann sein, dass das Tumorboard neu einberufen werden muss; somit können sich die neuen Empfehlungen ändern und dementsprechend auch die Merkmale, die sonst vom ursprünglichen CarePlan übernommen würden.</li>
+    </ul>
+  </li>
+  <li>Wirkstoff fällt weg:
+    <ul>
+      <li>Die noch nicht durchgeführten <code class="language-plaintext highlighter-rouge">MedicationRequests</code> erhalten den Status <code class="language-plaintext highlighter-rouge">stopped</code>; im <code class="language-plaintext highlighter-rouge">statusReason</code> kann der entsprechende Code angegeben werden.</li>
+      <li>Es werden keine neuen <code class="language-plaintext highlighter-rouge">MedicationRequests</code> erstellt, es sei denn es handelt sich um eine Medikationskombination, welche in einem <code class="language-plaintext highlighter-rouge">MedicationRequest</code> abgebildet wird. Hierfür muss dann ein neuer <code class="language-plaintext highlighter-rouge">CarePlan</code> erstellt werden. Wenn das Tumorboard neu einberufen werden muss, können sich auch hier die Merkmale des ursprünglichen CarePlans ändern. Andernfalls bleiben die Merkmale gleich.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="abbruch-wegen-nebenwirkung">Abbruch wegen Nebenwirkung</h3>
+
+<p>Die Therapielinie wird vorzeitig beendet, da eine behandlungsassoziierte Nebenwirkung die Fortführung nicht zulässt.</p>
+
+<p><strong>Beispiel:</strong> Nach 2 von 6 Zyklen treten schwerwiegende Nebenwirkungen ein, sodass die Chemotherapie abgebrochen werden muss. Das Tumorboard wird erneut einberufen und ein neuer <code class="language-plaintext highlighter-rouge">CarePlan</code> mit entsprechendem <code class="language-plaintext highlighter-rouge">TherapieIntent</code>, <code class="language-plaintext highlighter-rouge">Goals</code> und Behandlungsvorschlägen erstellt. Ein bereits geplanter <code class="language-plaintext highlighter-rouge">ServiceRequest</code> (z. B. für begleitende Diagnostik) wird dabei unverändert aus dem bisherigen CarePlan in den neu erstellten CarePlan übernommen.</p>
+
+<p><img src="abweichung-nebenwirkung.png" alt="Szenario 3: Abbruch wegen Nebenwirkung" style="width:100%;" /></p>
+
+<p><strong>Merkmale:</strong></p>
+
+<ul>
+  <li>Die noch nicht durchgeführten <code class="language-plaintext highlighter-rouge">MedicationRequests</code> erhalten den Status <code class="language-plaintext highlighter-rouge">stopped</code>; im <code class="language-plaintext highlighter-rouge">statusReason</code> kann der entsprechende Code angegeben werden.</li>
+  <li>Soll ein bereits geplanter <code class="language-plaintext highlighter-rouge">ServiceRequest</code> nicht mehr durchgeführt werden, wird dessen Status auf <code class="language-plaintext highlighter-rouge">revoked</code> gesetzt.</li>
+  <li>Beim ursprünglichen <code class="language-plaintext highlighter-rouge">CarePlan</code> wird der Status auf <code class="language-plaintext highlighter-rouge">revoked</code> gesetzt.</li>
+  <li>Die aufgetretenen Nebenwirkungen werden in <code class="language-plaintext highlighter-rouge">Observations</code> abgebildet. Diese können dann entsprechend als <code class="language-plaintext highlighter-rouge">reasonReference</code> bei der neuen Medikation verlinkt werden.</li>
+  <li>Das Tumorboard wird neu einberufen, daraus entsteht ein neuer <code class="language-plaintext highlighter-rouge">CarePlan</code>. Dieser enthält die neue Behandlungstherapie und kann einen anderen <code class="language-plaintext highlighter-rouge">TherapieIntent</code> sowie andere <code class="language-plaintext highlighter-rouge">Goals</code> besitzen.</li>
+</ul>
+
+<h3 id="abbruch-wegen-progress">Abbruch wegen Progress</h3>
+
+<p>Die Therapielinie wird vorzeitig beendet, da unter der Behandlung ein Progress der Erkrankung festgestellt wird.</p>
+
+<p><strong>Beispiel:</strong> Nach 3 Zyklen findet ein Progress der Erkrankung statt. Dies führt dazu, dass die initiale Therapie so nicht weitergeführt werden kann. Da zu Beginn aber bereits ein potenzieller Progress der Erkrankung im ersten Tumorboard mit eingeplant wurde, wurde bereits ein <code class="language-plaintext highlighter-rouge">CarePlan</code> erstellt, welcher umgesetzt werden soll, sobald es zu einem Progress kommt.</p>
+
+<p><img src="abweichung-progress.png" alt="Szenario 4: Abbruch wegen Progress" style="width:100%;" /></p>
+
+<p><strong>Merkmale:</strong></p>
+
+<ul>
+  <li>Die noch nicht durchgeführten <code class="language-plaintext highlighter-rouge">MedicationRequests</code> erhalten den Status <code class="language-plaintext highlighter-rouge">stopped</code>; im <code class="language-plaintext highlighter-rouge">statusReason</code> kann der entsprechende Code angegeben werden.</li>
+  <li>Soll ein bereits geplanter <code class="language-plaintext highlighter-rouge">ServiceRequest</code> nicht mehr durchgeführt werden, wird dessen Status auf <code class="language-plaintext highlighter-rouge">revoked</code> gesetzt.</li>
+  <li>Beim ursprünglichen <code class="language-plaintext highlighter-rouge">CarePlan</code> wird der Status auf <code class="language-plaintext highlighter-rouge">revoked</code> gesetzt.</li>
+  <li>Wurde beim ersten Tumorboard bereits ein <code class="language-plaintext highlighter-rouge">CarePlan</code> für den Progressfall vorbereitet, wird dessen Status nun auf <code class="language-plaintext highlighter-rouge">active</code> gesetzt, statt einen neuen CarePlan zu erstellen.</li>
+  <li>Falls beim erstmaligen Treffen des Tumorboards kein CarePlan für einen Progress beschlossen wurde, muss das Tumorboard neu einberufen werden. Daraus entsteht ein neuer <code class="language-plaintext highlighter-rouge">CarePlan</code>. Dieser enthält die neue Behandlungstherapie und kann einen anderen <code class="language-plaintext highlighter-rouge">TherapieIntent</code> sowie andere <code class="language-plaintext highlighter-rouge">Goals</code> besitzen.</li>
+</ul>
+
+<h3 id="abbruch-aus-anderen-gründen">Abbruch aus anderen Gründen</h3>
+
+<p>Die Therapielinie wird aus Gründen beendet, die nicht unmittelbar in der Erkrankung oder der Therapie selbst liegen.</p>
+
+<p><strong>Beispiel:</strong> Der Grund ist medizinisch nicht begründet, z. B. Patient zieht weg, Arzt-Patienten-Verhältnis gestört, Unfall. Die Tumorboard-Empfehlung selbst bleibt inhaltlich unverändert gültig, <code class="language-plaintext highlighter-rouge">MedicationRequest</code> und <code class="language-plaintext highlighter-rouge">ServiceRequest</code> laufen weiter mit Status <code class="language-plaintext highlighter-rouge">active</code>. Es ändern sich nur die Verantwortlichen, <code class="language-plaintext highlighter-rouge">requester</code>, <code class="language-plaintext highlighter-rouge">performer</code> bzw. <code class="language-plaintext highlighter-rouge">careManager</code> werden aktualisiert, kein Statuswechsel, kein Ersatz.</p>
+
+<p><img src="abweichung-sonstige-gruende.png" alt="Szenario 5: Abbruch aus anderen Gründen" style="width:100%;" /></p>
+
+<p><strong>Merkmale:</strong></p>
+<ul>
+  <li>Die Empfehlung des Tumorboards bleibt inhaltlich und im Status unverändert <code class="language-plaintext highlighter-rouge">active</code>. Es ändern sich nur die Referenzen auf die Verantwortlichen — <code class="language-plaintext highlighter-rouge">requester</code>, <code class="language-plaintext highlighter-rouge">performer</code> bzw. <code class="language-plaintext highlighter-rouge">careManager</code> — auf den Ressourcen selbst, ohne dass diese ersetzt, gestoppt oder neu angelegt werden.</li>
+</ul>
+
+<h3 id="versterben-der-patientin">Versterben der Patientin</h3>
+
+<p>Die Patientin verstirbt während der laufenden Therapielinie.</p>
+
+<p><strong>Beispiel:</strong> Die Patientin verstirbt während der Behandlung. Dementsprechend wird die Patientenressource geändert. Folglich müssen die noch offenen Ressourcen im Status angepasst werden.</p>
+
+<p><img src="abweichung-verstorben.png" alt="Szenario 6: Versterben der Patientin" style="width:100%;" /></p>
+
+<p><strong>Merkmale:</strong></p>
+
+<ul>
+  <li>In der Patientenressource wird das Element <code class="language-plaintext highlighter-rouge">Patient.deceasedBoolean</code> auf <code class="language-plaintext highlighter-rouge">true</code> gesetzt.</li>
+  <li>Alle noch offenen Ressourcen wie <code class="language-plaintext highlighter-rouge">MedicationRequest</code>, <code class="language-plaintext highlighter-rouge">ServiceRequest</code>, <code class="language-plaintext highlighter-rouge">CarePlan</code> und <code class="language-plaintext highlighter-rouge">Goal</code> müssen auf den entsprechenden Abbruchstatus gesetzt werden. Falls ein <code class="language-plaintext highlighter-rouge">statusReason</code> bei der Ressource vorhanden ist, kann der entsprechende Code angegeben werden.</li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-31 13:52:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
