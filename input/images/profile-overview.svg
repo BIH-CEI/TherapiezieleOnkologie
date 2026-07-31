@@ -48,13 +48,9 @@
       <text x="162" y="130" text-anchor="middle" font-weight="600">Lebens-</text>
       <text x="162" y="146" text-anchor="middle" font-weight="600">qualität</text>
 
-      <rect x="16" y="172" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
-      <text x="62" y="190" text-anchor="middle" font-weight="600">Funktions-</text>
-      <text x="62" y="206" text-anchor="middle" font-weight="600">erhalt</text>
-
-      <rect x="116" y="172" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
-      <text x="162" y="190" text-anchor="middle" font-weight="600">Studien-</text>
-      <text x="162" y="206" text-anchor="middle" font-weight="600">teilnahme</text>
+      <rect x="66" y="172" width="92" height="48" rx="4" fill="#ffffff" stroke="#222"/>
+      <text x="112" y="190" text-anchor="middle" font-weight="600">Funktions-</text>
+      <text x="112" y="206" text-anchor="middle" font-weight="600">erhalt</text>
     </g>
     <text x="112" y="244" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">Goal.category</text>
     <text x="112" y="260" text-anchor="middle" font-size="10" fill="#5a4044" font-style="italic">onko-therapy-goal-type</text>
