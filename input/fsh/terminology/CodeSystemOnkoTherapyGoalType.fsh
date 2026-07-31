@@ -10,6 +10,6 @@ Description: "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebens
 
 * #heilung "Heilung" "Kuratives Ziel — vollständige Remission angestrebt."
 * #lebensverlaengerung "Lebensverlängerung" "Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist."
-* #symptomkontrolle "Symptomkontrolle / Palliation" "Linderung von Symptomen und Krankheitslast."
-* #lebensqualitaet "Lebensqualität" "Erhalt oder Verbesserung von Funktion und Lebensqualität."
-* #funktionserhalt "Funktionserhalt" "Erhalt körperlicher oder kognitiver Funktion."
+* #symptomkontrolle "Symptomkontrolle / Palliation" "Zielzustand einer definierten Symptomlast; symptombezogen erfasst — über Symptomskala oder erfragte Symptomlast."
+* #lebensqualitaet "Lebensqualität" "Erhalt oder Verbesserung der globalen, patientenberichteten Lebensqualität; erfasst per standardisiertem PROM oder strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch)."
+* #funktionserhalt "Funktionserhalt" "Erhalt einer konkret benannten Körperfunktion oder -struktur (z. B. Brusterhalt, Kontinenz, Fertilität); patientenpriorisiertes Ziel, das die Maßnahmenwahl in beide Richtungen steuert und eigenständig nachgehalten wird."

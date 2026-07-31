@@ -57,7 +57,7 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 * insert Translation(achievementStatus ^definition, en, Degree of goal achievement\, e.g. achieved\, in progress\, not achieved.)
 
 // Zielart (onkologiespezifische ValueSet-Bindung)
-* category 1..*
+* category 1..* MS
 * category from OnkoTherapyGoalTypeVS (extensible)
 * insert Label(category, Zielart, Art des onkologischen Therapieziels – Heilung\, Lebensverlängerung\, Symptomkontrolle\, Lebensqualität\, Funktionserhalt.)
 * insert Translation(category ^short, en, Goal category)

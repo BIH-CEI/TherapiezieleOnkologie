@@ -34,6 +34,10 @@ Diagnostikspezifische Ergänzungen:
 * insert Label(status, Status, Status des Diagnostik-Plans – z. B. active\, completed.)
 * insert Translation(status ^short, en, Status)
 * insert Translation(status ^definition, en, Status of the diagnostic care plan – e.g. active\, completed.)
+* intent MS
+* insert Label(intent, Planart, Art des Plans – typischerweise plan für den Diagnostikplan.)
+* insert Translation(intent ^short, en, Intent)
+* insert Translation(intent ^definition, en, Kind of plan – typically plan for the diagnostic care plan.)
 
 // Kategorisierung: Tumordiagnostik (Pflicht)
 * category 1..* MS
@@ -67,6 +71,12 @@ Diagnostikspezifische Ergänzungen:
 * insert Translation(addresses ^definition, en, Reference to the tumor diagnosis addressed by the diagnostic care plan. Initially a suspected diagnosis with verificationStatus provisional or unconfirmed; after confirmation the same Condition is updated to confirmed\, so the reference stays stable throughout.)
 
 // Diagnostische Maßnahmen: geplant vs. durchgeführt
+* goal MS
+* goal only Reference(OnkoTherapyGoal)
+* insert Label(goal, Diagnoseziel, Ziel des Diagnostikplans – z. B. Diagnosesicherung mit Staging und Rezeptorstatus.)
+* insert Translation(goal ^short, en, Diagnostic goal)
+* insert Translation(goal ^definition, en, Goal of the diagnostic plan – e.g. confirming the diagnosis including staging and receptor status.)
+
 * activity MS
 * insert Label(activity, Diagnostische Maßnahmen, Geplante bzw. durchgeführte Schritte des Diagnosepfads.)
 * insert Translation(activity ^short, en, Diagnostic activities)

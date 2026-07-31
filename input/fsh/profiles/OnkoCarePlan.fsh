@@ -28,21 +28,27 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 // Therapieintention (onkologiespezifisch) und Custodian (übernommen aus MCC)
 * extension contains
     OnkoTherapyIntentExt named therapyIntent 0..1 and
-    OnkoCarePlanCustodianExt named custodian 0..* MS
+    OnkoCarePlanCustodianExt named custodian 0..* MS and
+    http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare named episodeOfCare 0..1 MS
 * insert Label(extension[therapyIntent], Therapieintention, Strukturierte Therapieintention des Versorgungsplans – Hauptintention und optionale Behandlungsphase.)
 * insert Translation(extension[therapyIntent] ^short, en, Therapy intent)
 * insert Translation(extension[therapyIntent] ^definition, en, Structured therapy intent of the care plan – main intent and optional treatment phase.)
 * insert Label(extension[custodian], Custodian, Für Pflege und Aktualisierung des Plans verantwortliche Stelle – R5-Backport aus MCC.)
 * insert Translation(extension[custodian] ^short, en, Custodian)
 * insert Translation(extension[custodian] ^definition, en, Party responsible for maintaining the care plan – R5 backport adopted from MCC.)
+* insert Label(extension[episodeOfCare], Behandlungsepisode, Behandlungsepisode bzw. Therapielinie\, in deren Rahmen der Plan umgesetzt wird.)
+* insert Translation(extension[episodeOfCare] ^short, en, Episode of care)
+* insert Translation(extension[episodeOfCare] ^definition, en, Episode of care or line of therapy in which this plan is carried out.)
 
 // MCCCarePlan Kernattribute
 * status 1..1 MS
 * insert Label(status, Status, Status des Versorgungsplans – z. B. draft\, active\, completed\, revoked.)
 * insert Translation(status ^short, en, Status)
 * insert Translation(status ^definition, en, Status of the care plan – e.g. draft\, active\, completed\, revoked.)
-//* intent 1..1 MS
-//* intent = #plan (exactly)
+* intent MS
+* insert Label(intent, Planart, Art des Plans – proposal/plan = Empfehlungsplan des Tumorboards\, plan/order = Behandlungsplan.)
+* insert Translation(intent ^short, en, Intent)
+* insert Translation(intent ^definition, en, Kind of plan – proposal/plan = tumor board recommendation plan\, plan/order = treatment plan.)
 
 // Kategorisierung des Plans
 * category MS
