@@ -14,6 +14,10 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 * hauptintention: Palliative intent
 * phase: Induction chemotherapy
 
+**EnLiST-Liniennummer (Extension)**: 1
+
+**EnLiST-Zählstatus (Extension)**: Zählt in der LoT-Zählung
+
 **status**: Active
 
 **type**: Ambulatory chemotherapy
@@ -68,6 +72,20 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
       }
     }],
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber",
+    "valuePositiveInt" : 1
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+        "code" : "counted",
+        "display" : "Zählt in der LoT-Zählung"
+      }]
+    }
   }],
   "status" : "active",
   "type" : [{

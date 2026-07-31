@@ -12,6 +12,10 @@
 <code>http://www.orpha.net</code>        </a>
       </li>
       <li>
+        <a href="EpisodeOfCare-TherapielinieOperation.html">
+<code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable</code>        </a>
+      </li>
+      <li>
         <a href="Goal-TherapiezielMammaHeilung.html">
 <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>        </a>
       </li>
@@ -79,9 +83,9 @@ ISO maintains the copyright on the country codes, and controls its use carefully
 :                 <a href="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html">ConceptMap/ConceptMapOnkoTherapyGoalTypeSct</a>
 ,                 <a href="StructureDefinition-onko-diagnostic-care-plan.html">DiagnosticCarePlan</a>
                 <span onClick="document.getElementById('ips_2').innerHTML = document.getElementById('ips2_2').innerHTML" id="ips_2">
-... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 16 more</span>                </span>
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 20 more</span>                </span>
                 <span style="display: none" id="ips2_2">
-, <a href="StructureDefinition-onko-care-plan.html">OnkoCarePlan</a>, <a href="StructureDefinition-onko-careplan-custodian.html">OnkoCarePlanCustodianExt</a>, <a href="StructureDefinition-onko-condition.html">OnkoCondition</a>, <a href="StructureDefinition-onko-therapy-goal.html">OnkoTherapyGoal</a>, <a href="CodeSystem-onko-therapy-goal-type.html">OnkoTherapyGoalType</a>, <a href="ValueSet-onko-therapy-goal-type.html">OnkoTherapyGoalTypeVS</a>, <a href="StructureDefinition-onko-therapy-intent.html">OnkoTherapyIntentExt</a>, <a href="ValueSet-onko-therapy-intent.html">OnkoTherapyIntentVS</a>, <a href="StructureDefinition-onko-therapy-line.html">OnkoTherapyLine</a>, <a href="StructureDefinition-onko-therapy-line-medication-request.html">OnkoTherapyLineMedicationRequestExt</a>, <a href="ValueSet-onko-therapy-line-type.html">OnkoTherapyLineTypeVS</a>, <a href="ValueSet-onko-therapy-phase.html">OnkoTherapyPhaseVS</a>, <a href="StructureDefinition-TherapiezielDreieck.html">TherapiezielDreieck</a>, <a href="index.html">TherapiezieleOnkologie</a>, <a href="StructureDefinition-onko-tumorboard-medication-request.html">TumorboardMedicationRequest</a> and <a href="StructureDefinition-onko-tumorboard-service-request.html">TumorboardServiceRequest</a>                </span>
+, <a href="CodeSystem-enlist-countable.html">EnlistCountable</a>, <a href="StructureDefinition-enlist-countable.html">EnlistCountableExt</a>, <a href="ValueSet-enlist-countable.html">EnlistCountableVS</a>, <a href="StructureDefinition-enlist-linenumber.html">EnlistLineNumberExt</a>, <a href="StructureDefinition-onko-care-plan.html">OnkoCarePlan</a>, <a href="StructureDefinition-onko-careplan-custodian.html">OnkoCarePlanCustodianExt</a>, <a href="StructureDefinition-onko-condition.html">OnkoCondition</a>, <a href="StructureDefinition-onko-therapy-goal.html">OnkoTherapyGoal</a>, <a href="CodeSystem-onko-therapy-goal-type.html">OnkoTherapyGoalType</a>, <a href="ValueSet-onko-therapy-goal-type.html">OnkoTherapyGoalTypeVS</a>, <a href="StructureDefinition-onko-therapy-intent.html">OnkoTherapyIntentExt</a>, <a href="ValueSet-onko-therapy-intent.html">OnkoTherapyIntentVS</a>, <a href="StructureDefinition-onko-therapy-line.html">OnkoTherapyLine</a>, <a href="StructureDefinition-onko-therapy-line-medication-request.html">OnkoTherapyLineMedicationRequestExt</a>, <a href="ValueSet-onko-therapy-line-type.html">OnkoTherapyLineTypeVS</a>, <a href="ValueSet-onko-therapy-phase.html">OnkoTherapyPhaseVS</a>, <a href="StructureDefinition-TherapiezielDreieck.html">TherapiezielDreieck</a>, <a href="index.html">TherapiezieleOnkologie</a>, <a href="StructureDefinition-onko-tumorboard-medication-request.html">TumorboardMedicationRequest</a> and <a href="StructureDefinition-onko-tumorboard-service-request.html">TumorboardServiceRequest</a>                </span>
               </li>
 
 
@@ -539,7 +543,7 @@ Mapping from           <a href="ValueSet-onko-therapy-goal-type.html">Onkologisc
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
           Erstellt 
-            <span title="2026-07-31 12:21:00 +0000">
+            <span title="2026-07-31 12:58:00 +0000">
     2026-07-31
   </span>
 
@@ -1115,7 +1119,7 @@ rheumatoiden Arthritis mit krankheitsmodifizierenden Medikamenten.</em>
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
           Generated 
-            <span title="2026-07-31 12:21:00 +0000">
+            <span title="2026-07-31 12:58:00 +0000">
     2026-07-31
   </span>
 
@@ -1195,12 +1199,6 @@ abweichung-substanzwechsel.png          <br/>
         <td>
 abweichung-verstorben.png          <br/>
           <img src="abweichung-verstorben.png" alt="abweichung-verstorben.png" width="600px" height="auto"/>
-        </td>
-      </tr>
-      <tr>
-        <td>
-architektur-stack.png          <br/>
-          <img src="architektur-stack.png" alt="architektur-stack.png" width="600px" height="auto"/>
         </td>
       </tr>
       <tr>

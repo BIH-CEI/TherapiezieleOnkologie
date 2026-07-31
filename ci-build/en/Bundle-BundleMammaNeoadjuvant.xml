@@ -1072,6 +1072,15 @@
             </valueCodeableConcept>
           </extension>
         </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable"/>
+              <code value="not-counted"/>
+              <display value="Zählt nicht"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
         <status value="finished"/>
         <type>
           <coding>

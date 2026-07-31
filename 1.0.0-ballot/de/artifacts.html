@@ -478,6 +478,36 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-enlist-linenumber.html"
+                  title="StructureDefinition/enlist-linenumber">
+                  <span title="StructureDefinition/enlist-linenumber">EnLiST-Liniennummer (Extension)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nummer der systemischen Therapielinie (Line of Therapy, LoT) nach EnLiST-Notation
+(1 = Erstlinie, 2 = Zweitlinie, …). Nur für Linien, die in die Zählung eingehen
+(<code class="language-plaintext highlighter-rouge">enlist-countable = counted</code>); die Nummer wird dokumentiert erfasst, nicht aus den
+Daten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-enlist-countable.html"
+                  title="StructureDefinition/enlist-countable">
+                  <span title="StructureDefinition/enlist-countable">EnLiST-Zählstatus (Extension)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein
+(<code class="language-plaintext highlighter-rouge">counted</code>), ist sie außerhalb der Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>, z. B. lokoregionale
+Behandlungslinie) oder eine investigationale Studientherapie (<code class="language-plaintext highlighter-rouge">investigational</code>,
+EnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-onko-therapy-intent.html"
                   title="StructureDefinition/onko-therapy-intent">
                   <span title="StructureDefinition/onko-therapy-intent">Onkologische Therapieintention (Extension)
@@ -526,6 +556,17 @@ Systemtherapie), wird daher diese Extension ergänzend zu <code class="language-
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-enlist-countable.html" title="ValueSet/enlist-countable">
+                  <span title="ValueSet/enlist-countable">EnLiST-Zählstatus (ValueSet)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Alle Zählstatus-Werte nach EnLiST.</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="ValueSet-onko-therapy-intent.html"
@@ -597,6 +638,18 @@ Konsolidierung ergänzbar).</p>
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-enlist-countable.html"
+                  title="CodeSystem/enlist-countable">
+                  <span title="CodeSystem/enlist-countable">EnLiST-Zählstatus
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-onko-therapy-goal-type.html"
@@ -1337,7 +1390,7 @@ Konsolidierung ergänzbar).</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-31 12:21:00 +0000">
+  <span title="2026-07-31 12:58:00 +0000">
     2026-07-31
   </span>
 

@@ -1059,6 +1059,16 @@
           }
         }],
         "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+            "code" : "not-counted",
+            "display" : "Zählt nicht"
+          }]
+        }
       }],
       "status" : "finished",
       "type" : [{

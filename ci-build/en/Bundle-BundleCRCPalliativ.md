@@ -266,7 +266,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"EpisodeOfCare_TherapielinieCRCErstlinie\"> </a><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare TherapielinieCRCErstlinie</b></p><a name=\"TherapielinieCRCErstlinie\"> </a><a name=\"hcTherapielinieCRCErstlinie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-therapy-line.html\">Onkologische Therapielinie</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title=\"Codes:{http://snomed.info/sct 363676003}\">Palliative intent</span></li><li>phase: <span title=\"Codes:{http://snomed.info/sct 450827009}\">Induction chemotherapy</span></li></ul></blockquote><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 315601005}\">Ambulatory chemotherapy</span></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td><td><b>Role</b></td><td><b>Rank</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-ConditionCRC.html\">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}\">Chief complaint</span></td><td>1</td></tr></table><p><b>patient</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>managingOrganization</b>: <a href=\"Organization-TumorzentrumCRC.html\">Organization Onkologisches Zentrum Musterklinik</a></p><p><b>period</b>: 2026-02-10 --&gt; (ongoing)</p><p><b>careManager</b>: <a href=\"Practitioner-OnkologinCRC.html\">Practitioner Petra Musterarzt </a></p><p><b>team</b>: <a href=\"CareTeam-TumorboardCRC.html\">CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom</a></p></div></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"EpisodeOfCare_TherapielinieCRCErstlinie\"> </a><p class=\"res-header-id\"><b>Generated Narrative: EpisodeOfCare TherapielinieCRCErstlinie</b></p><a name=\"TherapielinieCRCErstlinie\"> </a><a name=\"hcTherapielinieCRCErstlinie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-therapy-line.html\">Onkologische Therapielinie</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title=\"Codes:{http://snomed.info/sct 363676003}\">Palliative intent</span></li><li>phase: <span title=\"Codes:{http://snomed.info/sct 450827009}\">Induction chemotherapy</span></li></ul></blockquote><p><b>EnLiST-Liniennummer (Extension)</b>: 1</p><p><b>EnLiST-Zählstatus (Extension)</b>: <span title=\"Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable counted}\">Zählt in der LoT-Zählung</span></p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 315601005}\">Ambulatory chemotherapy</span></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td><td><b>Role</b></td><td><b>Rank</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-ConditionCRC.html\">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}\">Chief complaint</span></td><td>1</td></tr></table><p><b>patient</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>managingOrganization</b>: <a href=\"Organization-TumorzentrumCRC.html\">Organization Onkologisches Zentrum Musterklinik</a></p><p><b>period</b>: 2026-02-10 --&gt; (ongoing)</p><p><b>careManager</b>: <a href=\"Practitioner-OnkologinCRC.html\">Practitioner Petra Musterarzt </a></p><p><b>team</b>: <a href=\"CareTeam-TumorboardCRC.html\">CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom</a></p></div></div>"
       },
       "extension" : [{
         "extension" : [{
@@ -290,6 +290,20 @@
           }
         }],
         "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber",
+        "valuePositiveInt" : 1
+      },
+      {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+            "code" : "counted",
+            "display" : "Zählt in der LoT-Zählung"
+          }]
+        }
       }],
       "status" : "active",
       "type" : [{

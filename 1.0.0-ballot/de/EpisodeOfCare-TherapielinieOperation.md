@@ -13,6 +13,8 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 > **Onkologische Therapieintention (Extension)**
 * hauptintention: Curative - procedure intent
 
+**EnLiST-Zählstatus (Extension)**: Zählt nicht
+
 **status**: Finished
 
 **type**: Surgical procedure
@@ -57,6 +59,16 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
       }
     }],
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+        "code" : "not-counted",
+        "display" : "Zählt nicht"
+      }]
+    }
   }],
   "status" : "finished",
   "type" : [{

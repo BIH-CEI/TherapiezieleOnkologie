@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:21:47+00:00",
+  "date" : "2026-07-31T12:58:15+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -99,7 +99,14 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
   "differential" : {
     "element" : [{
       "id" : "EpisodeOfCare",
-      "path" : "EpisodeOfCare"
+      "path" : "EpisodeOfCare",
+      "constraint" : [{
+        "key" : "onko-enlist-1",
+        "severity" : "error",
+        "human" : "Eine EnLiST-Liniennummer (enlist-linenumber) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist.",
+        "expression" : "extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber').exists() implies extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists()",
+        "source" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+      }]
     },
     {
       "id" : "EpisodeOfCare.extension",
@@ -191,6 +198,86 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.extension:lineNumber",
+      "path" : "EpisodeOfCare.extension",
+      "sliceName" : "lineNumber",
+      "short" : "EnLiST-Liniennummer",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST line number"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Nummer der systemischen Therapielinie nach EnLiST — nur für Linien, die in die LoT-Zählung eingehen.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Number of the systemic line of therapy per EnLiST — only for lines that enter the LoT count."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "EpisodeOfCare.extension:countable",
+      "path" : "EpisodeOfCare.extension",
+      "sliceName" : "countable",
+      "short" : "EnLiST-Zählstatus",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST countability"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Zählstatus nach EnLiST — counted, not-counted oder investigational / iLoT.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST countability — counted, not-counted or investigational iLoT."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable"]
       }],
       "mustSupport" : true
     },

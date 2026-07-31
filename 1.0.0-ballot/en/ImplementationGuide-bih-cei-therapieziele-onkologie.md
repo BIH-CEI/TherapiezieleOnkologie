@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-31T12:21:47+00:00",
+  "date" : "2026-07-31T12:58:15+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -984,6 +984,70 @@
       "name" : "Diagnostischer CarePlan – Tumordiagnostik (Beispiel)",
       "description" : "Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan.",
       "exampleCanonical" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-enlist-linenumber.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/enlist-linenumber"
+      },
+      "name" : "EnLiST-Liniennummer (Extension)",
+      "description" : "Nummer der systemischen Therapielinie (Line of Therapy, LoT) nach EnLiST-Notation\n(1 = Erstlinie, 2 = Zweitlinie, …). Nur für Linien, die in die Zählung eingehen\n(`enlist-countable = counted`); die Nummer wird dokumentiert erfasst, nicht aus den\nDaten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-enlist-countable.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/enlist-countable"
+      },
+      "name" : "EnLiST-Zählstatus",
+      "description" : "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-enlist-countable.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/enlist-countable"
+      },
+      "name" : "EnLiST-Zählstatus (Extension)",
+      "description" : "Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein\n(`counted`), ist sie außerhalb der Zählung (`not-counted`, z. B. lokoregionale\nBehandlungslinie) oder eine investigationale Studientherapie (`investigational`,\nEnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-enlist-countable.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/enlist-countable"
+      },
+      "name" : "EnLiST-Zählstatus (ValueSet)",
+      "description" : "Alle Zählstatus-Werte nach EnLiST.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{

@@ -560,8 +560,6 @@ Baustein für Liefergegenstand LG-01 · Gematik-Auftrag · BIH-CEI
 
 Die Spezifikation beruht auf vier Schichten mit klarer Rollenverteilung und einem expliziten Fallback-Pfad:
 
-![](architektur-stack.png)
-
 ##### Rollen der vier Schichten
 
 **Schicht 1 – Therapielinien-Strukturachse (EnLiST):** liefert die internationale Konsensnotation für Linien, Settings und Änderungstypen. Definiert **was** gezählt wird und **wie** es dargestellt wird. Konzeptionell, nicht profiltechnisch.

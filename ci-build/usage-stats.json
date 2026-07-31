@@ -5,6 +5,20 @@
   "jurisdiction": "DE",
   "extensions": [
     {
+      "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+      "title": "EnLiST-Zählstatus (Extension)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber",
+      "title": "EnLiST-Liniennummer (Extension)",
+      "types": [
+        "positiveInt"
+      ]
+    },
+    {
       "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
       "title": "CarePlan Custodian (Extension)",
       "types": [
@@ -177,12 +191,16 @@
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/translation": [
+      "CodeSystem.description",
+      "CodeSystem.title",
       "StructureDefinition.description",
       "StructureDefinition.differential.element.definition",
       "StructureDefinition.differential.element.short",
       "StructureDefinition.snapshot.element.definition",
       "StructureDefinition.snapshot.element.short",
-      "StructureDefinition.title"
+      "StructureDefinition.title",
+      "ValueSet.description",
+      "ValueSet.title"
     ],
     "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare": [
       "CarePlan"
@@ -205,6 +223,14 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
+    ],
+    "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable": [
+      "Bundle.entry.resource",
+      "EpisodeOfCare"
+    ],
+    "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber": [
+      "Bundle.entry.resource",
+      "EpisodeOfCare"
     ],
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian": [
       "Bundle.entry.resource",

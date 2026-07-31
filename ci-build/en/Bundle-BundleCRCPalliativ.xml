@@ -287,6 +287,18 @@
             </valueCodeableConcept>
           </extension>
         </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber">
+          <valuePositiveInt value="1"/>
+        </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable"/>
+              <code value="counted"/>
+              <display value="Zählt in der LoT-Zählung"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
         <status value="active"/>
         <type>
           <coding>

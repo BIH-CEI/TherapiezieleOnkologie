@@ -1380,7 +1380,52 @@ https://hl7.org/fhir/us/mcode/STU4/</p>
 
 <p>Die Spezifikation beruht auf vier Schichten mit klarer Rollenverteilung und einem expliziten Fallback-Pfad:</p>
 
-<p><img src="architektur-stack.png" alt="Vier-Schichten-Architektur" style="display:block; float:none; width:100%; max-width:820px; height:auto; margin:0 auto;" /></p>
+<svg width="100%" viewBox="0 0 680 560" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Vier-Schichten-Architektur als Straße zum Horizont</title>
+<desc>Die vier Schichten als perspektivische Strasse: vorn breit die Foundation Schicht 4 Datenelemente und Terminologie (MII Onkologie), dahinter Schicht 3 Plan- und Ziel-Logik (CarePlan/Goal), Schicht 2 computable Repraesentation (CPG-on-FHIR), am Horizont Schicht 1 Therapielinien-Strukturachse (EnLiST). Rechts fasst eine geschweifte Klammer die Schichten 1 und 2; daneben die darauf aufbauenden Anwendungen CDSS und Studieneinschluss. Links der Doppelpfeil: ressourcensparender Verweis auf die Leitlinie bei Adhaerenz versus explizite CarePlans in Sonderfaellen.</desc>
+<defs>
+<marker id="argrE" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+<marker id="argrS" markerWidth="10" markerHeight="10" refX="1" refY="4" orient="auto"><path d="M9,0 L0,4 L9,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<line x1="20" y1="120" x2="660" y2="120" stroke="#C9C7C0" stroke-width="1" />
+<polygon points="235,180 325,180 280,120" fill="#F1EFE8" fill-opacity="0.5" stroke="#C9C7C0" stroke-width="0.8" />
+
+<polygon points="176,260 384,260 325,180 235,180" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="280" y="212" text-anchor="middle" font-size="9.5" font-weight="500" fill="#04342C">Schicht 1 — EnLiST</text>
+<text x="280" y="228" text-anchor="middle" font-size="8.5" fill="#04342C">Therapielinien-Strukturachse</text>
+<text x="280" y="243" text-anchor="middle" font-size="8" fill="#0F6E56">Linien · Settings · Änderungstypen</text>
+
+<polygon points="124,330 436,330 384,260 176,260" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4" />
+<text x="280" y="288" text-anchor="middle" font-size="10" font-weight="500" fill="#4A1B0C">Schicht 2 — Computable Repräsentation (CPG-on-FHIR)</text>
+<text x="280" y="306" text-anchor="middle" font-size="9" fill="#993C1D">PlanDefinition · ActivityDefinition · Library</text>
+
+<polygon points="72,400 488,400 436,330 124,330" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="280" y="358" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Schicht 3 — Plan- &amp; Ziel-Logik (CarePlan / Goal)</text>
+<text x="280" y="376" text-anchor="middle" font-size="9" fill="#534AB7">explizite Pläne in Sonderfällen — Abweichung · keine computable Leitlinie</text>
+
+<polygon points="20,470 540,470 488,400 72,400" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.4" />
+<text x="280" y="428" text-anchor="middle" font-size="11" font-weight="500" fill="#2C2C2A">Schicht 4 — Datenelemente &amp; Terminologie (MII Onkologie)</text>
+<text x="280" y="446" text-anchor="middle" font-size="9.5" fill="#5F5E5A">Foundation: primäre Interoperabilitätsbasis · EHDS-Anschluss via IPS/EPS-Mapping</text>
+
+<path d="M470,180 C485,180 488,186 488,202 L488,237 C488,249 492,253 502,255 C492,257 488,261 488,273 L488,308 C488,324 485,330 470,330" fill="none" stroke="#5F5E5A" stroke-width="1.6" />
+
+<text x="592" y="190" text-anchor="middle" font-size="9.5" fill="#5F5E5A">darauf aufbauend:</text>
+<g><rect x="510" y="200" width="164" height="46" rx="8" fill="#FFFFFF" stroke="#0F6E56" stroke-width="1.4" />
+<text x="592" y="219" text-anchor="middle" font-size="11.5" font-weight="500" fill="#04342C">CDSS</text>
+<text x="592" y="235" text-anchor="middle" font-size="8" fill="#0F6E56">klinische Entscheidungsunterstützung</text></g>
+<g><rect x="510" y="262" width="164" height="46" rx="8" fill="#FFFFFF" stroke="#0F6E56" stroke-width="1.4" />
+<text x="592" y="281" text-anchor="middle" font-size="11.5" font-weight="500" fill="#04342C">Studieneinschluss</text>
+<text x="592" y="297" text-anchor="middle" font-size="8" fill="#0F6E56">computable Eligibility-Kriterien</text></g>
+
+<text x="8" y="240" font-size="9" fill="#5F5E5A">ressourcensparend: Verweis auf</text>
+<text x="8" y="253" font-size="9" fill="#5F5E5A">die Leitlinie bei Adhärenz</text>
+<line x1="14" y1="265" x2="14" y2="455" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-start="url(#argrS)" marker-end="url(#argrE)" />
+<text x="8" y="486" font-size="9" fill="#5F5E5A">explizite CarePlans in Sonderfällen</text>
+
+<text x="340" y="512" text-anchor="middle" font-size="10.5" fill="#5F5E5A">Foundation vorn — jede Schicht baut auf der davorliegenden auf; die Straße führt zum Horizont.</text>
+<text x="340" y="530" text-anchor="middle" font-size="10.5" fill="#5F5E5A">CDSS und Studieneinschluss entstehen aus der EnLiST-Struktur (1) und den computable Leitlinien (2).</text>
+</svg>
 
 <h5 id="rollen-der-vier-schichten">Rollen der vier Schichten</h5>
 
@@ -1518,7 +1563,7 @@ https://hl7.org/fhir/us/mcode/STU4/</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-31 12:21:00 +0000">
+  <span title="2026-07-31 12:58:00 +0000">
     2026-07-31
   </span>
 

@@ -12,6 +12,18 @@
     "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
   },
   {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+    "version" : "1.0.0-ballot",
+    "status" : "draft",
+    "name" : "EnlistCountableVS",
+    "title" : "EnLiST-Zählstatus (ValueSet)",
+    "description" : "Alle Zählstatus-Werte nach EnLiST.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable"],
+    "uses" : {
+    },
+    "StructureDefinition-enlist-countable.html" : "EnLiST-Zählstatus (Extension)"
+  },
+  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
     "version" : "1.0.0-ballot",
     "status" : "draft",
@@ -21,8 +33,8 @@
     "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",

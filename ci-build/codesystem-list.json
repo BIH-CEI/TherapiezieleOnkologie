@@ -1,5 +1,16 @@
 {
   "codeSystems" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+    "version" : "1.0.0-ballot",
+    "status" : "draft",
+    "name" : "EnlistCountable",
+    "title" : "EnLiST-Zählstatus",
+    "description" : "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).",
+    "uses" : {
+    },
+    "ValueSet-enlist-countable.html" : "EnLiST-Zählstatus (ValueSet)"
+  },
+  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
     "version" : "1.0.0-ballot",
     "status" : "draft",
@@ -8,7 +19,7 @@
     "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
     "uses" : {
     },
-    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)",
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)"
   }]
 }
