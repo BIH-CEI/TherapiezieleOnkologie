@@ -57,6 +57,49 @@ jobs:
           JAVA_VALIDATOR_VERSION="${{ vars.JAVA_VALIDATOR_VERSION || '6.5.7' }}"
           wget -q "https://github.com/hapifhir/org.hl7.fhir.core/releases/download/${JAVA_VALIDATOR_VERSION}/validator_cli.jar" -O validator_cli.jar
 
+      # Terminologieserver: MII SU-TermServ via mTLS-nginx-Proxy, sobald das
+      # Client-Zertifikat als Secret hinterlegt ist (MII_TERMSERV_CERT als
+      # base64-p12, MII_TERMSERV_PW als Passwort); sonst Fallback tx.fhir.org.
+      # Muster: SenologieOnFHIR bzw. MII kerndatensatz-meta.
+      - name: Setup TX Proxy (MII Ontoserver)
+        id: txproxy
+        env:
+          MII_TERMSERV_CERT: ${{ secrets.MII_TERMSERV_CERT }}
+          MII_TERMSERV_PW: ${{ secrets.MII_TERMSERV_PW }}
+        run: |
+          if [ -z "$MII_TERMSERV_CERT" ]; then
+            echo "Kein MII-TermServ-Zertifikat hinterlegt — Validierung gegen tx.fhir.org."
+            echo "tx=http://tx.fhir.org" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          mkdir -p nginx/certs
+          curl -sSL -o nginx/nginx.conf \
+            https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-meta/refs/heads/master/.github/workflows/nginx.conf
+          echo "$MII_TERMSERV_CERT" | base64 -d > nginx/certs/client.p12
+          openssl pkcs12 -in nginx/certs/client.p12 -clcerts -nokeys \
+            -out nginx/certs/client-cert.pem -passin pass:$MII_TERMSERV_PW
+          openssl pkcs12 -in nginx/certs/client.p12 -nocerts \
+            -out nginx/certs/client-key-encrypted.key \
+            -passin pass:$MII_TERMSERV_PW -passout pass:$MII_TERMSERV_PW
+          openssl rsa -in nginx/certs/client-key-encrypted.key \
+            -out nginx/certs/client-key.key -passin pass:$MII_TERMSERV_PW
+          docker run -d --name nginx-proxy \
+            -v $PWD/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+            -v $PWD/nginx/certs:/etc/nginx/certs:ro \
+            -p 8090:80 nginx:alpine
+          sleep 5
+          for i in {1..5}; do
+            if curl --silent --fail http://localhost:8090/fhir/metadata > /dev/null; then
+              echo "NGINX TX proxy is ready."
+              echo "tx=http://localhost:8090/fhir" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Waiting for NGINX... attempt $i"
+            sleep 2
+          done
+          echo "Proxy nicht erreichbar — Fallback auf tx.fhir.org."
+          echo "tx=http://tx.fhir.org" >> "$GITHUB_OUTPUT"
+
       - name: Run Java Validator
         run: |
           IG_DEPS=$(jq -r '(.dependencies // {}) | to_entries | map("-ig " + .key + "#" + .value) | join(" ")' package.json)
@@ -67,7 +110,7 @@ jobs:
             ${{ vars.JAVA_VALIDATION_OPTIONS || '-output-style compact -advisor-file advisor.json -resolution-context file:fsh-generated/resources/ -show-message-ids -txLog txlog.html -forPublication -verbose -html-output validation.html -output validation.json' }} \
             $UNESCAPED_IG_DEPS \
             -ig fsh-generated/resources \
-            -tx http://tx.fhir.org || true
+            -tx ${{ steps.txproxy.outputs.tx }} || true
 
       - name: Render Validation Results
         if: always()
