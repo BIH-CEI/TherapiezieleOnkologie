@@ -141,6 +141,9 @@ jobs:
             # Bundle-interne Profil-Matches scheitern am fehlenden MII-Parent-Snapshot im Standalone-Validator;
             # der IG Publisher validiert dieselben Bundles mit vollem Snapshot-Kontext auf 0 Errors (Autorität)
             ||*Unable to find a profile match for*|
+            # tx.fhir.org kann deutsche CodeSysteme (ICD-10-GM/BfArM) nicht expandieren — required-Bindings
+            # auf MII-ValueSets scheitern an validen Codes. Entfällt mit der SU-TermServ-Anbindung (mTLS).
+            ||*was not found in the value set*|
             # Wrong Display Name (case sensitivity, TX version mismatch)
             ||*Wrong Display Name*|
             # Unknown codes (TX server LOINC/SNOMED version)
