@@ -55,7 +55,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Goal.achievementStatus","Goal.achievementStatus","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","Erreichungsgrad","Grad der Zielerreichung, z. B. erreicht, in Bearbeitung, nicht erreicht.","","","","","","","","","",,"preferred","Indicates the progression, or lack thereof, towards the goal against the target.","http://hl7.org/fhir/ValueSet/goal-achievement|4.0.1","",,,,"Goal.achievementStatus",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".statusCode achieved = complete sustaining = active"
-"Goal.category","Goal.category","","","",1,*,"","","Y","CodeableConcept {[]} {[]}
+"Goal.category","Goal.category","","","",1,*,"Y","","Y","CodeableConcept {[]} {[]}
 ","Zielart","Art des onkologischen Therapieziels – Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt.","","Allows goals to be filtered and sorted.","","","","","","","",,"extensible","","https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
 "Goal.priority","Goal.priority","","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}

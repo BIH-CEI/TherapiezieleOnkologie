@@ -184,6 +184,9 @@
       "StructureDefinition.snapshot.element.short",
       "StructureDefinition.title"
     ],
+    "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare": [
+      "CarePlan"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
       "ImplementationGuide.definition"
     ],

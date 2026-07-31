@@ -42,13 +42,14 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 ** Summary **
 
 Mandatory: 3 elements
- Must-Support: 12 elements
+ Must-Support: 14 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+* [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
 
 **Extensions**
 
@@ -77,13 +78,14 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 ** Summary **
 
 Mandatory: 3 elements
- Must-Support: 12 elements
+ Must-Support: 14 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+* [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
 
 **Extensions**
 
@@ -121,7 +123,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-diagnos
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:16:37+00:00",
+  "date" : "2026-07-31T12:21:47+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -261,6 +263,39 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-diagnos
           {
             "url" : "content",
             "valueString" : "Status of the diagnostic care plan – e.g. active, completed."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.intent",
+      "path" : "CarePlan.intent",
+      "short" : "Planart",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Intent"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Art des Plans – typischerweise plan für den Diagnostikplan.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Kind of plan – typically plan for the diagnostic care plan."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -512,6 +547,43 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-diagnos
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.goal",
+      "path" : "CarePlan.goal",
+      "short" : "Diagnoseziel",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnostic goal"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Ziel des Diagnostikplans – z. B. Diagnosesicherung mit Staging und Rezeptorstatus.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Goal of the diagnostic plan – e.g. confirming the diagnosis including staging and receptor status."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+      }],
       "mustSupport" : true
     },
     {

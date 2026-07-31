@@ -14,7 +14,7 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 
 **Usages:**
 
-* Refer to this Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
+* Refer to this Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md) and [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan.md)
 * Examples for this Profile: [Goal/DiagnosticGoal](Goal-DiagnosticGoal.md), [Goal/FollowUpGoal](Goal-FollowUpGoal.md), [Goal/TherapiezielCRCErhaltung](Goal-TherapiezielCRCErhaltung.md), [Goal/TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md)... Show 2 more, [Goal/TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md) and [Goal/TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-goal.json)
@@ -46,7 +46,7 @@ Diese Struktur ist abgeleitet von [Goal](http://hl7.org/fhir/R4/goal.html)
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 18 elements
+ Must-Support: 19 elements
 
 **Structures**
 
@@ -92,7 +92,7 @@ Diese Struktur ist abgeleitet von [Goal](http://hl7.org/fhir/R4/goal.html)
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 18 elements
+ Must-Support: 19 elements
 
 **Structures**
 
@@ -145,7 +145,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:16:37+00:00",
+  "date" : "2026-07-31T12:21:47+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -470,6 +470,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
         }]
       },
       "min" : 1,
+      "mustSupport" : true,
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"

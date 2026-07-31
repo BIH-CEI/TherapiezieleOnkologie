@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "Onkologische Therapieziel-Art",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-31T12:16:37+00:00",
+  "date" : "2026-07-31T12:21:47+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -60,17 +60,17 @@ This Code system is referenced in the definition of the following value sets:
   {
     "code" : "symptomkontrolle",
     "display" : "Symptomkontrolle / Palliation",
-    "definition" : "Linderung von Symptomen und Krankheitslast."
+    "definition" : "Zielzustand einer definierten Symptomlast; symptombezogen erfasst — über Symptomskala oder erfragte Symptomlast."
   },
   {
     "code" : "lebensqualitaet",
     "display" : "Lebensqualität",
-    "definition" : "Erhalt oder Verbesserung von Funktion und Lebensqualität."
+    "definition" : "Erhalt oder Verbesserung der globalen, patientenberichteten Lebensqualität; erfasst per standardisiertem PROM oder strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch)."
   },
   {
     "code" : "funktionserhalt",
     "display" : "Funktionserhalt",
-    "definition" : "Erhalt körperlicher oder kognitiver Funktion."
+    "definition" : "Erhalt einer konkret benannten Körperfunktion oder -struktur (z. B. Brusterhalt, Kontinenz, Fertilität); patientenpriorisiertes Ziel, das die Maßnahmenwahl in beide Richtungen steuert und eigenständig nachgehalten wird."
   }]
 }
 

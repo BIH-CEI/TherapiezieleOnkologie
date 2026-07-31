@@ -43,7 +43,7 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 13 elements
+ Must-Support: 15 elements
 
 **Structures**
 
@@ -60,6 +60,7 @@ This structure refers to these extensions:
 
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent](StructureDefinition-onko-therapy-intent.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian](StructureDefinition-onko-careplan-custodian.md)
+* [http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-workflow-episodeOfCare.html)
 
  **Schlüsselelemente-Ansicht** 
 
@@ -82,7 +83,7 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 ** Summary **
 
 Mandatory: 1 element
- Must-Support: 13 elements
+ Must-Support: 15 elements
 
 **Structures**
 
@@ -99,6 +100,7 @@ This structure refers to these extensions:
 
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent](StructureDefinition-onko-therapy-intent.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian](StructureDefinition-onko-careplan-custodian.md)
+* [http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-workflow-episodeOfCare.html)
 
  
 
@@ -130,7 +132,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:16:37+00:00",
+  "date" : "2026-07-31T12:21:47+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -283,6 +285,46 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
       "mustSupport" : true
     },
     {
+      "id" : "CarePlan.extension:episodeOfCare",
+      "path" : "CarePlan.extension",
+      "sliceName" : "episodeOfCare",
+      "short" : "Behandlungsepisode",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Episode of care"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Behandlungsepisode bzw. Therapielinie, in deren Rahmen der Plan umgesetzt wird.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Episode of care or line of therapy in which this plan is carried out."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare"]
+      }],
+      "mustSupport" : true
+    },
+    {
       "id" : "CarePlan.instantiatesCanonical",
       "path" : "CarePlan.instantiatesCanonical",
       "short" : "Zugrunde liegende PlanDefinition",
@@ -342,6 +384,39 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           {
             "url" : "content",
             "valueString" : "Status of the care plan – e.g. draft, active, completed, revoked."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.intent",
+      "path" : "CarePlan.intent",
+      "short" : "Planart",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Intent"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Art des Plans – proposal/plan = Empfehlungsplan des Tumorboards, plan/order = Behandlungsplan.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Kind of plan – proposal/plan = tumor board recommendation plan, plan/order = treatment plan."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

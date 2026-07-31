@@ -113,8 +113,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.232"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
     "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
@@ -340,11 +340,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
     "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
     "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
     "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
     "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
   },
@@ -516,8 +516,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
     "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
@@ -589,8 +589,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.111"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
     "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {

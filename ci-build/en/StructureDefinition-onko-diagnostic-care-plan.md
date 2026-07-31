@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-diagnostic-c
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:16:37+00:00",
+  "date" : "2026-07-31T12:21:47+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -185,6 +185,39 @@ Other representations of profile: [CSV](../StructureDefinition-onko-diagnostic-c
           {
             "url" : "content",
             "valueString" : "Status of the diagnostic care plan – e.g. active, completed."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.intent",
+      "path" : "CarePlan.intent",
+      "short" : "Planart",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Intent"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Art des Plans – typischerweise plan für den Diagnostikplan.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Kind of plan – typically plan for the diagnostic care plan."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -436,6 +469,43 @@ Other representations of profile: [CSV](../StructureDefinition-onko-diagnostic-c
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.goal",
+      "path" : "CarePlan.goal",
+      "short" : "Diagnoseziel",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnostic goal"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Ziel des Diagnostikplans – z. B. Diagnosesicherung mit Staging und Rezeptorstatus.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Goal of the diagnostic plan – e.g. confirming the diagnosis including staging and receptor status."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+      }],
       "mustSupport" : true
     },
     {
