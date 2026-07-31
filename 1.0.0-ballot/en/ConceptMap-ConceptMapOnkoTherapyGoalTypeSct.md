@@ -18,7 +18,7 @@ Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit S
   "title" : "Zielarten → SNOMED CT (Zielzustände)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-31T13:26:52+00:00",
+  "date" : "2026-07-31T13:33:02+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
