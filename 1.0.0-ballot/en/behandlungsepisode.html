@@ -251,13 +251,18 @@ of therapy, locoregional treatment line, active surveillance / watchful waiting,
 The list is open (e.g. induction/consolidation/maintenance for haematological disease).</p>
 
 <svg width="100%" viewBox="0 0 680 396" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
-<title>Behandlungsepisoden: ein Profil, viele Arten, drei Modalitätsspuren</title>
-<desc>Zeitstrahl mit Behandlungsepisoden in drei Spuren: systemische Therapielinien (EnLiST, in der LoT-Zaehlung), lokoregionale Behandlungslinien (nicht gezaehlt) und informative bzw. Management-Abschnitte. Alle sind dasselbe EpisodeOfCare-Profil, die Art steht in type. Die Operation selbst ist ein Procedure innerhalb der perioperativen Episode.</desc>
+<title>Behandlungsepisoden: ein Profil, drei Spuren — führende Linie und ausführendes Segment</title>
+<desc>Zeitstrahl mit Behandlungsepisoden in drei Spuren. Systemische Spur: die fuehrende Episode der Linie (neoadjuvant, traegt die EnLiST-Designation eLoT 1.0 samt lineId) und das ausfuehrende adjuvante Segment (ambulant, gleiche lineId, keine eigene Designation), verkettet ueber die lineId. Lokoregionale Spur: die perioperative Episode (not-counted, zeitlich ueberlappend; die OP selbst ist ein Procedure). Informative Spur: die Diagnostiklinie. Die Klammer des kurativen Gesamtkonzepts bilden Ziel und Plan, keine Episode.</desc>
 <defs>
 <marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
 </defs>
 
-<text x="40" y="24" font-size="11.5" font-weight="500" fill="#5F5E5A">Ein Profil — viele Arten: EpisodeOfCare.type unterscheidet, die Struktur bleibt gleich.</text>
+<text x="40" y="22" font-size="11.5" font-weight="500" fill="#5F5E5A">Ein Profil — viele Arten: EpisodeOfCare.type unterscheidet, die Struktur bleibt gleich.</text>
+
+<line x1="265" y1="40" x2="655" y2="40" stroke="#0F6E56" stroke-width="1.2" />
+<line x1="265" y1="40" x2="265" y2="45" stroke="#0F6E56" stroke-width="1.2" />
+<line x1="655" y1="40" x2="655" y2="45" stroke="#0F6E56" stroke-width="1.2" />
+<text x="460" y="35" text-anchor="middle" font-size="8.5" fill="#0F6E56">kuratives Gesamtkonzept — Klammer: Ziel + Plan (keine Episode)</text>
 
 <text x="30" y="66" font-size="10.5" font-weight="500" fill="#2C2C2A">systemisch</text>
 <text x="30" y="80" font-size="9" fill="#0F6E56">EnLiST — zählt (LoT)</text>
@@ -270,42 +275,42 @@ The list is open (e.g. induction/consolidation/maintenance for haematological di
 <line x1="140" y1="111" x2="655" y2="111" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
 <line x1="140" y1="185" x2="655" y2="185" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
 
-<rect x="262" y="38" width="292" height="144" rx="10" fill="none" stroke="#534AB7" stroke-width="1.4" stroke-dasharray="6,5" />
-<line x1="554" y1="96" x2="558" y2="96" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3" />
-<text x="560" y="86" font-size="9" font-weight="500" fill="#534AB7">übergeordnete kurative</text>
-<text x="560" y="100" font-size="9" font-weight="500" fill="#534AB7">Episode — Gesamtkonzept</text>
-<text x="560" y="114" font-size="8.5" fill="#5F5E5A">die Unterlinien darin</text>
+<line x1="404" y1="76" x2="518" y2="76" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3" />
+<text x="461" y="69" text-anchor="middle" font-size="7.5" fill="#534AB7">gemeinsame lineId</text>
+
+<g><rect x="262" y="52" width="140" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="332" y="67" text-anchor="middle" font-size="9" font-weight="500" fill="#26215C">Systemische Linie — führend</text>
+<text x="332" y="80" text-anchor="middle" font-size="8" fill="#26215C">neoadjuvant · stationär (Klinik)</text>
+<text x="332" y="93" text-anchor="middle" font-size="8" fill="#534AB7">trägt Designation + lineId</text>
+<rect x="352" y="45" width="52" height="13" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.1" />
+<text x="378" y="55" text-anchor="middle" font-size="7.5" font-weight="600" fill="#04342C">eLoT 1.0</text></g>
+
+<g><rect x="520" y="52" width="135" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="587" y="67" text-anchor="middle" font-size="9" font-weight="500" fill="#26215C">Adjuvantes Segment</text>
+<text x="587" y="80" text-anchor="middle" font-size="8" fill="#26215C">ambulant · Pembrolizumab</text>
+<text x="587" y="93" text-anchor="middle" font-size="8" fill="#534AB7">keine eigene Designation</text></g>
+
+<g><rect x="415" y="126" width="110" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="470" y="141" text-anchor="middle" font-size="8.5" font-weight="500" fill="#26215C">Perioperative Episode</text>
+<circle cx="432" cy="153" r="3" fill="#534AB7" />
+<text x="440" y="156" font-size="7.5" fill="#534AB7">OP = Procedure</text>
+<text x="470" y="168" text-anchor="middle" font-size="7.5" fill="#5F5E5A">not-counted · überlappt</text></g>
 
 <g><rect x="145" y="198" width="115" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
-<text x="202" y="218" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Diagnostiklinie</text>
+<text x="202" y="218" text-anchor="middle" font-size="10" font-weight="500" fill="#26215C">Diagnostiklinie</text>
 <text x="202" y="233" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Diagnostik</text></g>
-
-<g><rect x="270" y="50" width="135" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
-<text x="337" y="70" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Systemische Linie</text>
-<text x="337" y="85" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Therapielinie</text>
-<circle cx="400" cy="54" r="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2" />
-<text x="400" y="58" text-anchor="middle" font-size="8.5" font-weight="600" fill="#04342C">1L</text></g>
-
-<g><rect x="415" y="124" width="130" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
-<text x="480" y="141" text-anchor="middle" font-size="9.5" font-weight="500" fill="#26215C">Perioperative Episode</text>
-<circle cx="452" cy="155" r="3" fill="#534AB7" />
-<text x="460" y="159" font-size="8.5" fill="#534AB7">OP = Procedure</text></g>
-
-<g><rect x="555" y="198" width="105" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
-<text x="607" y="218" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Nachsorge</text>
-<text x="607" y="233" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Surveillance</text></g>
 
 <line x1="145" y1="272" x2="648" y2="272" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)" />
 <text x="656" y="276" font-size="10.5" fill="#5F5E5A">Zeit</text>
 
 <text x="40" y="302" font-size="9.5" fill="#5F5E5A">Perioperative Episode = die Reise (Planung → OP → Reha); die OP selbst ist ein Procedure, einzelne Kontakte sind Encounter.</text>
-<text x="40" y="318" font-size="9.5" fill="#5F5E5A">In die LoT-Zählung (EnLiST) gehen nur systemische Linien ein — lokoregionale Linien und Management-Abschnitte nicht.</text>
-<text x="40" y="334" font-size="9.5" fill="#5F5E5A">Die kurative Gesamt-Episode klammert die Unterlinien — neoadjuvante Systemtherapie, OP, adjuvante Therapie — zu einem Konzept.</text>
+<text x="40" y="318" font-size="9.5" fill="#5F5E5A">In die LoT-Zählung (EnLiST) gehen nur Träger von enlist-lot ein — lokoregionale Linien und Segmente zählen nicht (mit).</text>
+<text x="40" y="334" font-size="9.5" fill="#5F5E5A">Die führende Episode trägt die Designation (eLoT 1.0 + lineId); ausführende Segmente verketten sich über dieselbe lineId.</text>
 
 <rect x="40" y="358" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="369" font-size="11" fill="#5F5E5A">Behandlungsepisode (EpisodeOfCare — ein Profil)</text>
-<circle cx="342" cy="364" r="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="357" y="369" font-size="11" fill="#5F5E5A">LoT-Zähler</text>
-<circle cx="435" cy="364" r="3" fill="#534AB7" /><text x="446" y="369" font-size="11" fill="#5F5E5A">Procedure (Ereignis)</text>
-<rect x="560" y="358" width="18" height="13" rx="4" fill="none" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3" /><text x="584" y="369" font-size="11" fill="#5F5E5A">Gesamtkonzept</text>
+<rect x="322" y="358" width="36" height="13" rx="6" fill="#E1F5EE" stroke="#0F6E56" /><text x="364" y="369" font-size="11" fill="#5F5E5A">Designation</text>
+<circle cx="452" cy="364" r="3" fill="#534AB7" /><text x="462" y="369" font-size="11" fill="#5F5E5A">Procedure</text>
+<line x1="545" y1="364" x2="575" y2="364" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3" /><text x="581" y="369" font-size="11" fill="#5F5E5A">lineId-Verkettung</text>
 </svg>
 
 <h3 id="systemic-line-of-therapy-vs-locoregional-treatment-line">Systemic line of therapy vs. locoregional treatment line</h3>
@@ -435,7 +440,7 @@ episode. Care episodes link to the treatment plan via the <code class="language-
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-31 14:14:00 +0000">
+  <span title="2026-07-31 14:25:00 +0000">
     2026-07-31
   </span>
 
