@@ -1,5 +1,14 @@
 {
   "codeSystems" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+    "version" : "1.0.0-ballot",
+    "status" : "draft",
+    "name" : "EnlistChangeTypeVS",
+    "title" : "EnLiST-Änderungstypen (ValueSet)",
+    "description" : "Alle EnLiST-Änderungstypen.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type"]
+  },
+  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
     "version" : "1.0.0-ballot",
     "status" : "draft",
@@ -12,6 +21,18 @@
     "StructureDefinition-enlist-countable.html" : "EnLiST-Zählstatus (Extension)"
   },
   {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+    "version" : "1.0.0-ballot",
+    "status" : "draft",
+    "name" : "EnlistLotSettingVS",
+    "title" : "EnLiST-Setting-Achsen (ValueSet)",
+    "description" : "Alle EnLiST-Setting-Achsen.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting"],
+    "uses" : {
+    },
+    "StructureDefinition-enlist-lot.html" : "EnLiST-LoT-Designation (Extension)"
+  },
+  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
     "version" : "1.0.0-ballot",
     "status" : "draft",
@@ -21,8 +42,8 @@
     "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"],
     "uses" : {
     },
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",

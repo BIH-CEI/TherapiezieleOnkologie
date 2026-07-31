@@ -2,7 +2,7 @@
 
 ## Extension: EnLiST countability extension 
 
-EnLiST countability of the treatment line: counted in the LoT count, not counted — e.g. locoregional treatment line — or investigational study therapy per EnLiST iLoT notation, recorded separately instead of counted.
+EnLiST countability of the treatment line: counted — the line lies on an EnLiST counting axis, detailed in the enlist-lot extension; not-counted — outside any LoT count, e.g. a locoregional treatment line or a management segment.
 
 **Context of Use**
 
@@ -11,7 +11,7 @@ EnLiST countability of the treatment line: counted in the LoT count, not counted
 **Usages:**
 
 * Use this Extension: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
-* Examples for this Extension: [Bundle/BundleCRCPalliativ](Bundle-BundleCRCPalliativ.md), [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md), [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md) and [EpisodeOfCare/TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md)
+* Examples for this Extension: [Bundle/BundleCRCPalliativ](Bundle-BundleCRCPalliativ.md), [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md), [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md), [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md) and [EpisodeOfCare/TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-enlist-countable.json)
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-countable.
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:58:15+00:00",
+  "date" : "2026-07-31T13:16:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -58,7 +58,7 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-countable.
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein\n(`counted`), ist sie außerhalb der Zählung (`not-counted`, z. B. lokoregionale\nBehandlungslinie) oder eine investigationale Studientherapie (`investigational`,\nEnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).",
+  "description" : "Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf\neiner EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);\n`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale\nBehandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder\nManagement-Abschnitt.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -67,7 +67,7 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-countable.
       },
       {
         "url" : "content",
-        "valueString" : "EnLiST countability of the treatment line: counted in the LoT count, not counted — e.g. locoregional treatment line — or investigational study therapy per EnLiST iLoT notation, recorded separately instead of counted."
+        "valueString" : "EnLiST countability of the treatment line: counted — the line lies on an EnLiST counting axis, detailed in the enlist-lot extension; not-counted — outside any LoT count, e.g. a locoregional treatment line or a management segment."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -99,7 +99,7 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-countable.
       "id" : "Extension",
       "path" : "Extension",
       "short" : "EnLiST-Zählstatus (Extension)",
-      "definition" : "Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein\n(`counted`), ist sie außerhalb der Zählung (`not-counted`, z. B. lokoregionale\nBehandlungslinie) oder eine investigationale Studientherapie (`investigational`,\nEnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt)."
+      "definition" : "Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf\neiner EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);\n`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale\nBehandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder\nManagement-Abschnitt."
     },
     {
       "id" : "Extension.extension",
@@ -128,7 +128,7 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-countable.
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Zählstatus nach EnLiST — counted, not-counted oder investigational / iLoT.",
+      "definition" : "Zählstatus nach EnLiST — counted oder not-counted.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -137,7 +137,7 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-countable.
           },
           {
             "url" : "content",
-            "valueString" : "EnLiST countability — counted, not-counted or investigational iLoT."
+            "valueString" : "EnLiST countability — counted or not-counted."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

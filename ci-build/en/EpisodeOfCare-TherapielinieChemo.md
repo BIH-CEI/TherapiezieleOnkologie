@@ -14,6 +14,14 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 * hauptintention: Neoadjuvant intent
 * phase: Curative - procedure intent
 
+> **EnLiST-LoT-Designation (Extension)**
+* setting: eLoT — frühes Setting
+* line: 1
+* modification: 0
+* notation: eLoT 1.0
+
+**EnLiST-Zählstatus (Extension)**: Zählt in der LoT-Zählung
+
 **Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
 
 **status**: Finished
@@ -68,6 +76,41 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
       }
     }],
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+  },
+  {
+    "extension" : [{
+      "url" : "setting",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "eLoT",
+          "display" : "eLoT — frühes Setting"
+        }]
+      }
+    },
+    {
+      "url" : "line",
+      "valuePositiveInt" : 1
+    },
+    {
+      "url" : "modification",
+      "valueUnsignedInt" : 0
+    },
+    {
+      "url" : "notation",
+      "valueString" : "eLoT 1.0"
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+        "code" : "counted",
+        "display" : "Zählt in der LoT-Zählung"
+      }]
+    }
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",

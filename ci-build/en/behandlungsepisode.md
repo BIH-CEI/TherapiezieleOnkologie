@@ -17,6 +17,19 @@ The umbrella term **treatment line** has two modality classes: the **systemic li
 
 > **Note on EnLiST.** EnLiST standardises line designation for **solid tumours** and **systemic** therapy only; haematological disease uses a separate adaptation, and the framework is still in "road testing" (2026–2027). The LoT count is therefore **not a universal cross-entity score**; read the "counted?" column in the context of the entity.
 
+### Line change ≠ goal change
+
+EnLiST designates lines as **X.Y per setting axis** (eLoT early · aLoT advanced · iLoT investigational, counted separately): X counts **new LoTs** (only on progression or lack of adequate response), Y counts **modified LoTs** (non-progression-related changes); **same LoTs** (prospectively planned changes including maintenance) leave the designation unchanged. These events live on the **measures axis** — they never trigger a goal operation automatically:
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **Same LoT**(X.Y unchanged) | prospectively planned: dose, pause, maintenance | unchanged —**or**`successor`when a phase goal is achieved | unchanged |
+| **Modified LoT**(Y+1) | intolerance, agent switch without progression | **unchanged**(only the measure changes) | unchanged |
+| **New LoT**(X+1) | progression / lack of response | usually new — previous goal closed, often`not-achieved` | unchanged while the intent holds |
+| **New LoT + strategy change**(often eLoT→aLoT) | progression invalidates the intent | new | **`replacement`** |
+
+Evidence in both directions: in the [mCRC scenario](szenario-crc.md) the overarching goal outlives several palliative lines; induction → maintenance is a **goal change without a line change** (maintenance = **same LoT**); an agent switch for intolerance (`eLoT 1.0 → 1.1`) changes **no goal at all**. EnLiST also explicitly decouples setting and intent.
+
 ### Episode ≠ procedure ≠ encounter
 
 The surgery itself is a `Procedure`; the **perioperative journey** (planning, consent, the operation, post-op stay, rehabilitation, monitoring) spans several `Encounter`s and **is** the episode. Care episodes link to the treatment plan via the `workflow-episodeOfCare` extension; `Encounter` itself is out of scope of this guide.

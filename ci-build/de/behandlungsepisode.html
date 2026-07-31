@@ -224,6 +224,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#ein-profil-viele-arten" id="markdown-toc-ein-profil-viele-arten">Ein Profil, viele Arten</a></li>
   <li><a href="#systemische-therapielinie-vs-lokoregionale-behandlungslinie" id="markdown-toc-systemische-therapielinie-vs-lokoregionale-behandlungslinie">Systemische Therapielinie vs. lokoregionale Behandlungslinie</a></li>
+  <li><a href="#linienwechsel--zielwechsel" id="markdown-toc-linienwechsel--zielwechsel">Linienwechsel ≠ Zielwechsel</a></li>
   <li><a href="#episode--prozedur--kontakt" id="markdown-toc-episode--prozedur--kontakt">Episode ≠ Prozedur ≠ Kontakt</a></li>
   <li><a href="#verknüpfung-mit-dem-versorgungsplan" id="markdown-toc-verknüpfung-mit-dem-versorgungsplan">Verknüpfung mit dem Versorgungsplan</a></li>
   <li><a href="#beispiele" id="markdown-toc-beispiele">Beispiele</a></li>
@@ -360,6 +361,61 @@ Tumorentitäten hinweg ist begrenzt. Die Spalte „In LoT-Zählung?" ist entspre
 <strong>im Kontext der jeweiligen Entität</strong> zu lesen.</p>
 </blockquote>
 
+<h3 id="linienwechsel--zielwechsel">Linienwechsel ≠ Zielwechsel</h3>
+
+<p>EnLiST notiert Linien als <strong>X.Y je Setting-Achse</strong> (eLoT früh · aLoT
+fortgeschritten · iLoT investigational, getrennt gezählt): X zählt <strong>New LoTs</strong>
+(nur bei Progression oder fehlendem Ansprechen), Y zählt <strong>Modified LoTs</strong>
+(nicht-progressionsbedingte Änderungen), <strong>Same LoTs</strong> (prospektiv geplante
+Änderungen inkl. Erhaltung) verändern die Designation nicht. Diese Ereignisse
+liegen auf der <strong>Maßnahmen-Achse</strong> — sie lösen <strong>nie automatisch</strong> eine
+Ziel-Operation aus:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>EnLiST-Ereignis</th>
+      <th>Auslöser</th>
+      <th>Episodenziel</th>
+      <th>Übergeordnetes Ziel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Same LoT</strong> (X.Y bleibt)</td>
+      <td>prospektiv geplant: Dosis, Pause, Erhaltung</td>
+      <td>bleibt — <em>oder</em> <code class="language-plaintext highlighter-rouge">successor</code>, wenn ein Phasenziel erreicht ist</td>
+      <td>bleibt</td>
+    </tr>
+    <tr>
+      <td><strong>Modified LoT</strong> (Y+1)</td>
+      <td>Intoleranz, Wirkstoffwechsel ohne Progression</td>
+      <td><strong>bleibt</strong> (nur die Maßnahme ändert sich)</td>
+      <td>bleibt</td>
+    </tr>
+    <tr>
+      <td><strong>New LoT</strong> (X+1)</td>
+      <td>Progression / fehlendes Ansprechen</td>
+      <td>i. d. R. neu — altes Ziel abgeschlossen, oft <code class="language-plaintext highlighter-rouge">not-achieved</code></td>
+      <td>bleibt, solange die Intention stabil ist</td>
+    </tr>
+    <tr>
+      <td><strong>New LoT + Strategiewechsel</strong> (oft eLoT→aLoT)</td>
+      <td>Progression macht die Intention unhaltbar</td>
+      <td>neu</td>
+      <td><strong><code class="language-plaintext highlighter-rouge">replacement</code></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Belege in beide Richtungen: Im <a href="szenario-crc.html">mCRC-Szenario</a> überdauert das
+übergeordnete Ziel mehrere palliative Linien; der Übergang Induktion → Erhaltung
+ist dort ein <strong>Zielwechsel ohne Linienwechsel</strong> (Erhaltung = <em>Same LoT</em>); ein
+Wirkstoffwechsel wegen Intoleranz (z. B. Letrozol → Anastrozol, <code class="language-plaintext highlighter-rouge">eLoT 1.0 → 1.1</code>)
+ändert <strong>gar kein Ziel</strong>. Auch der Setting-Wechsel koppelt nicht 1:1 — EnLiST
+entkoppelt Setting und Intention ausdrücklich (kurative Oligometastasen-Therapie
+im advanced Setting, palliative Frühphasen-Therapie).</p>
+
 <h3 id="episode--prozedur--kontakt">Episode ≠ Prozedur ≠ Kontakt</h3>
 
 <p>Wichtige Abgrenzung am Beispiel Chirurgie: Die <strong>Operation selbst</strong> ist ein
@@ -424,7 +480,7 @@ anschließende Operation als getrennte Abschnitte.</li>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-31 12:58:00 +0000">
+  <span title="2026-07-31 13:16:00 +0000">
     2026-07-31
   </span>
 

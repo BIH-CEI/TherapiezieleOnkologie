@@ -284,8 +284,29 @@
         "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
       },
       {
-        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber",
-        "valuePositiveInt" : 1
+        "extension" : [{
+          "url" : "setting",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+              "code" : "aLoT",
+              "display" : "aLoT — fortgeschrittenes Setting"
+            }]
+          }
+        },
+        {
+          "url" : "line",
+          "valuePositiveInt" : 1
+        },
+        {
+          "url" : "modification",
+          "valueUnsignedInt" : 0
+        },
+        {
+          "url" : "notation",
+          "valueString" : "aLoT 1.0"
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"
       },
       {
         "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",

@@ -54,7 +54,7 @@ This structure refers to these extensions:
 
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent](StructureDefinition-onko-therapy-intent.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request](StructureDefinition-onko-therapy-line-medication-request.md)
-* [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber](StructureDefinition-enlist-linenumber.md)
+* [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot](StructureDefinition-enlist-lot.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable](StructureDefinition-enlist-countable.md)
 
  **Schlüsselelemente-Ansicht** 
@@ -96,7 +96,7 @@ This structure refers to these extensions:
 
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent](StructureDefinition-onko-therapy-intent.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request](StructureDefinition-onko-therapy-line-medication-request.md)
-* [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber](StructureDefinition-enlist-linenumber.md)
+* [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot](StructureDefinition-enlist-lot.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable](StructureDefinition-enlist-countable.md)
 
  
@@ -129,7 +129,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:58:15+00:00",
+  "date" : "2026-07-31T13:16:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -187,8 +187,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "constraint" : [{
         "key" : "onko-enlist-1",
         "severity" : "error",
-        "human" : "Eine EnLiST-Liniennummer (enlist-linenumber) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist.",
-        "expression" : "extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber').exists() implies extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists()",
+        "human" : "Eine EnLiST-LoT-Designation (enlist-lot) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist.",
+        "expression" : "extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot').exists() implies extension.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable').value.ofType(CodeableConcept).coding.where(code = 'counted').exists()",
         "source" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
       }]
     },
@@ -286,10 +286,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "mustSupport" : true
     },
     {
-      "id" : "EpisodeOfCare.extension:lineNumber",
+      "id" : "EpisodeOfCare.extension:lot",
       "path" : "EpisodeOfCare.extension",
-      "sliceName" : "lineNumber",
-      "short" : "EnLiST-Liniennummer",
+      "sliceName" : "lot",
+      "short" : "EnLiST-LoT-Designation",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -298,12 +298,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           },
           {
             "url" : "content",
-            "valueString" : "EnLiST line number"
+            "valueString" : "EnLiST LoT designation"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Nummer der systemischen Therapielinie nach EnLiST — nur für Linien, die in die LoT-Zählung eingehen.",
+      "definition" : "X.Y-Designation je Setting-Achse — eLoT, aLoT oder iLoT — nach EnLiST.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -312,7 +312,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           },
           {
             "url" : "content",
-            "valueString" : "Number of the systemic line of therapy per EnLiST — only for lines that enter the LoT count."
+            "valueString" : "X.Y designation per setting axis — eLoT, aLoT or iLoT — per EnLiST."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -321,7 +321,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber"]
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"]
       }],
       "mustSupport" : true
     },
@@ -343,7 +343,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Zählstatus nach EnLiST — counted, not-counted oder investigational / iLoT.",
+      "definition" : "Zählstatus nach EnLiST — counted oder not-counted.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -352,7 +352,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           },
           {
             "url" : "content",
-            "valueString" : "EnLiST countability — counted, not-counted or investigational iLoT."
+            "valueString" : "EnLiST countability — counted or not-counted."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

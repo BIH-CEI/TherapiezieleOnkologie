@@ -14,7 +14,11 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 * hauptintention: Palliative intent
 * phase: Induction chemotherapy
 
-**EnLiST-Liniennummer (Extension)**: 1
+> **EnLiST-LoT-Designation (Extension)**
+* setting: aLoT — fortgeschrittenes Setting
+* line: 1
+* modification: 0
+* notation: aLoT 1.0
 
 **EnLiST-Zählstatus (Extension)**: Zählt in der LoT-Zählung
 
@@ -74,8 +78,29 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
   },
   {
-    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber",
-    "valuePositiveInt" : 1
+    "extension" : [{
+      "url" : "setting",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+          "code" : "aLoT",
+          "display" : "aLoT — fortgeschrittenes Setting"
+        }]
+      }
+    },
+    {
+      "url" : "line",
+      "valuePositiveInt" : 1
+    },
+    {
+      "url" : "modification",
+      "valueUnsignedInt" : 0
+    },
+    {
+      "url" : "notation",
+      "valueString" : "aLoT 1.0"
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",

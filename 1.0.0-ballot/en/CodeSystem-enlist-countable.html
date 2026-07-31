@@ -49,8 +49,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15.19"}
-    h3,h4,h5,h6{--heading-prefix:"15.19"}</style>
+    <style type="text/css">h2{--heading-prefix:"15.22"}
+    h3,h4,h5,h6{--heading-prefix:"15.22"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -291,7 +291,7 @@
   </table>
 
 <p>
-<p>Countability of a treatment line per EnLiST: within the LoT count, outside the count, or investigational study therapy — iLoT.</p>
+<p>Countability of a treatment line per EnLiST: on a LoT counting axis — counted — or outside any count — not-counted, e.g. a locoregional treatment line.</p>
 
 </p>
 
@@ -312,13 +312,10 @@
 <table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
 <tr><td style="white-space:nowrap">counted<a name="enlist-countable-counted"> </a></td>
 <td>Zählt in der LoT-Zählung</td>
-<td>Systemische Therapielinie, die nach EnLiST in die Linien-Zählung eingeht.</td></tr>
+<td>Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot.</td></tr>
 <tr><td style="white-space:nowrap">not-counted<a name="enlist-countable-not-counted"> </a></td>
 <td>Zählt nicht</td>
-<td>Behandlungslinie außerhalb der EnLiST-Zählung — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation).</td></tr>
-<tr><td style="white-space:nowrap">investigational<a name="enlist-countable-investigational"> </a></td>
-<td>iLoT — Studientherapie</td>
-<td>Investigational Line of Therapy nach EnLiST: Studientherapie, separat notiert statt regulär gezählt.</td></tr></table></div>
+<td>Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt.</td></tr></table></div>
 
   <hr/>
   <p>
@@ -358,7 +355,7 @@
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-31 12:58:00 +0000">
+  <span title="2026-07-31 13:16:00 +0000">
     2026-07-31
   </span>
 

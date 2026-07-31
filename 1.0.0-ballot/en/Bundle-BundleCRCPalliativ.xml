@@ -287,8 +287,25 @@
             </valueCodeableConcept>
           </extension>
         </extension>
-        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-linenumber">
-          <valuePositiveInt value="1"/>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot">
+          <extension url="setting">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting"/>
+                <code value="aLoT"/>
+                <display value="aLoT — fortgeschrittenes Setting"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="line">
+            <valuePositiveInt value="1"/>
+          </extension>
+          <extension url="modification">
+            <valueUnsignedInt value="0"/>
+          </extension>
+          <extension url="notation">
+            <valueString value="aLoT 1.0"/>
+          </extension>
         </extension>
         <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable">
           <valueCodeableConcept>

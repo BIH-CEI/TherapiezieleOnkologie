@@ -478,17 +478,31 @@ vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</p>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-enlist-linenumber.html"
-                  title="StructureDefinition/enlist-linenumber">
-                  <span title="StructureDefinition/enlist-linenumber">EnLiST-Liniennummer (Extension)
+               <a href="StructureDefinition-enlist-lot.html"
+                  title="StructureDefinition/enlist-lot">
+                  <span title="StructureDefinition/enlist-lot">EnLiST-LoT-Designation (Extension)
 </span>
                </a>
             </td>
             <td>
-<p>Nummer der systemischen Therapielinie (Line of Therapy, LoT) nach EnLiST-Notation
-(1 = Erstlinie, 2 = Zweitlinie, …). Nur für Linien, die in die Zählung eingehen
-(<code class="language-plaintext highlighter-rouge">enlist-countable = counted</code>); die Nummer wird dokumentiert erfasst, nicht aus den
-Daten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.</p>
+<p>EnLiST-Designation der systemischen Therapielinie in <strong>X.Y-Notation je Setting</strong>:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">setting</code> — die Zählachse: <strong>eLoT</strong> (early: neoadjuvant, adjuvant, perioperativ),
+<strong>aLoT</strong> (advanced: lokal fortgeschritten oder metastasiert) oder <strong>iLoT</strong>
+(investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse
+zählt <strong>getrennt</strong>.</li>
+  <li><code class="language-plaintext highlighter-rouge">line</code> (X) — Zahl der <em>New LoTs</em> in diesem Setting; eine neue Linie entsteht
+nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.</li>
+  <li><code class="language-plaintext highlighter-rouge">modification</code> (Y) — Zahl der <em>Modified LoTs</em> seit der letzten New LoT
+(nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem
+X-Inkrement.</li>
+  <li><code class="language-plaintext highlighter-rouge">notation</code> — optionale Gesamtdarstellung, z. B. „aLoT 2.1".</li>
+</ul>
+
+<p>Die Designation wird <strong>dokumentiert erfasst, nicht berechnet</strong>. <em>Same LoTs</em>
+(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die
+Designation nicht.</p>
 </td>
          </tr>
          <tr>
@@ -500,10 +514,11 @@ Daten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.</p>
                </a>
             </td>
             <td>
-<p>Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein
-(<code class="language-plaintext highlighter-rouge">counted</code>), ist sie außerhalb der Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>, z. B. lokoregionale
-Behandlungslinie) oder eine investigationale Studientherapie (<code class="language-plaintext highlighter-rouge">investigational</code>,
-EnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).</p>
+<p>Zählstatus der Behandlungslinie nach EnLiST: <code class="language-plaintext highlighter-rouge">counted</code> — die Linie liegt auf
+einer EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension <code class="language-plaintext highlighter-rouge">enlist-lot</code>);
+<code class="language-plaintext highlighter-rouge">not-counted</code> — außerhalb jeder LoT-Zählung, z. B. lokoregionale
+Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder
+Management-Abschnitt.</p>
 </td>
          </tr>
          <tr>
@@ -558,6 +573,18 @@ Systemtherapie), wird daher diese Extension ergänzend zu <code class="language-
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-enlist-lot-setting.html"
+                  title="ValueSet/enlist-lot-setting">
+                  <span title="ValueSet/enlist-lot-setting">EnLiST-Setting-Achsen (ValueSet)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Alle EnLiST-Setting-Achsen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-enlist-countable.html" title="ValueSet/enlist-countable">
                   <span title="ValueSet/enlist-countable">EnLiST-Zählstatus (ValueSet)
 </span>
@@ -565,6 +592,18 @@ Systemtherapie), wird daher diese Extension ergänzend zu <code class="language-
             </td>
             <td>
 <p>Alle Zählstatus-Werte nach EnLiST.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-enlist-change-type.html"
+                  title="ValueSet/enlist-change-type">
+                  <span title="ValueSet/enlist-change-type">EnLiST-Änderungstypen (ValueSet)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Alle EnLiST-Änderungstypen.</p>
 </td>
          </tr>
          <tr>
@@ -640,6 +679,18 @@ Konsolidierung ergänzbar).</p>
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-enlist-lot-setting.html"
+                  title="CodeSystem/enlist-lot-setting">
+                  <span title="CodeSystem/enlist-lot-setting">EnLiST-Setting-Achsen
+</span>
+               </a>
+            </td>
+            <td>
+<p>Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-enlist-countable.html"
                   title="CodeSystem/enlist-countable">
                   <span title="CodeSystem/enlist-countable">EnLiST-Zählstatus
@@ -647,7 +698,19 @@ Konsolidierung ergänzbar).</p>
                </a>
             </td>
             <td>
-<p>Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).</p>
+<p>Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-enlist-change-type.html"
+                  title="CodeSystem/enlist-change-type">
+                  <span title="CodeSystem/enlist-change-type">EnLiST-Änderungstypen
+</span>
+               </a>
+            </td>
+            <td>
+<p>Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene.</p>
 </td>
          </tr>
          <tr>
@@ -1390,7 +1453,7 @@ Konsolidierung ergänzbar).</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-31 12:58:00 +0000">
+  <span title="2026-07-31 13:16:00 +0000">
     2026-07-31
   </span>
 

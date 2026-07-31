@@ -3,7 +3,7 @@
 ## CodeSystem: EnLiST-Zählstatus 
 
  
-Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT). 
+Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie). 
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
@@ -39,7 +39,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:58:15+00:00",
+  "date" : "2026-07-31T13:16:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -48,7 +48,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).",
+  "description" : "Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie).",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -57,7 +57,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       },
       {
         "url" : "content",
-        "valueString" : "Countability of a treatment line per EnLiST: within the LoT count, outside the count, or investigational study therapy — iLoT."
+        "valueString" : "Countability of a treatment line per EnLiST: on a LoT counting axis — counted — or outside any count — not-counted, e.g. a locoregional treatment line."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -71,21 +71,16 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 3,
+  "count" : 2,
   "concept" : [{
     "code" : "counted",
     "display" : "Zählt in der LoT-Zählung",
-    "definition" : "Systemische Therapielinie, die nach EnLiST in die Linien-Zählung eingeht."
+    "definition" : "Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot."
   },
   {
     "code" : "not-counted",
     "display" : "Zählt nicht",
-    "definition" : "Behandlungslinie außerhalb der EnLiST-Zählung — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation)."
-  },
-  {
-    "code" : "investigational",
-    "display" : "iLoT — Studientherapie",
-    "definition" : "Investigational Line of Therapy nach EnLiST: Studientherapie, separat notiert statt regulär gezählt."
+    "definition" : "Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt."
   }]
 }
 

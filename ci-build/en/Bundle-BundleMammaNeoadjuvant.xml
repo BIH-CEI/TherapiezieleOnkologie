@@ -1003,6 +1003,35 @@
             </valueCodeableConcept>
           </extension>
         </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot">
+          <extension url="setting">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting"/>
+                <code value="eLoT"/>
+                <display value="eLoT — frühes Setting"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="line">
+            <valuePositiveInt value="1"/>
+          </extension>
+          <extension url="modification">
+            <valueUnsignedInt value="0"/>
+          </extension>
+          <extension url="notation">
+            <valueString value="eLoT 1.0"/>
+          </extension>
+        </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable"/>
+              <code value="counted"/>
+              <display value="Zählt in der LoT-Zählung"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
         <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request">
           <valueReference>
             <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>

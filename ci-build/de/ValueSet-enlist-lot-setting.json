@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "enlist-lot-setting",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet enlist-lot-setting</b></p><a name=\"enlist-lot-setting\"> </a><a name=\"hcenlist-lot-setting\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-enlist-lot-setting.html\"><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0-ballot</span></li></ul></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistLotSettingVS",
+  "title" : "EnLiST-Setting-Achsen (ValueSet)",
+  "status" : "draft",
+  "date" : "2026-07-31T13:16:40+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "Alle EnLiST-Setting-Achsen.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting"
+    }]
+  }
+}

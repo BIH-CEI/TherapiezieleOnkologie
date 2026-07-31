@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-07-31T12:58:15+00:00",
+  "date" : "2026-07-31T13:16:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -59,6 +59,12 @@
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.onkologie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.onkologie",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.onkologie",
     "version" : "2026.0.3"
+  },
+  {
+    "id" : "de_medizininformatikinitiative_kerndatensatz_meta",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
+    "packageId" : "de.medizininformatikinitiative.kerndatensatz.meta",
+    "version" : "2026.0.0"
   }],
   "definition" : {
     "extension" : [{
@@ -992,13 +998,45 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-enlist-linenumber.html"
+        "valueUri" : "StructureDefinition-enlist-lot.html"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/enlist-linenumber"
+        "reference" : "StructureDefinition/enlist-lot"
       },
-      "name" : "EnLiST-Liniennummer (Extension)",
-      "description" : "Nummer der systemischen Therapielinie (Line of Therapy, LoT) nach EnLiST-Notation\n(1 = Erstlinie, 2 = Zweitlinie, …). Nur für Linien, die in die Zählung eingehen\n(`enlist-countable = counted`); die Nummer wird dokumentiert erfasst, nicht aus den\nDaten berechnet — die EnLiST-Zählregeln sind Konvention des Leitfadens.",
+      "name" : "EnLiST-LoT-Designation (Extension)",
+      "description" : "EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**\n  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse\n  zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht\n  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT\n  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem\n  X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n\nDie Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*\n(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die\nDesignation nicht.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-enlist-lot-setting.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/enlist-lot-setting"
+      },
+      "name" : "EnLiST-Setting-Achsen",
+      "description" : "Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-enlist-lot-setting.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/enlist-lot-setting"
+      },
+      "name" : "EnLiST-Setting-Achsen (ValueSet)",
+      "description" : "Alle EnLiST-Setting-Achsen.",
       "exampleBoolean" : false
     },
     {
@@ -1014,7 +1052,7 @@
         "reference" : "CodeSystem/enlist-countable"
       },
       "name" : "EnLiST-Zählstatus",
-      "description" : "Zählstatus einer Behandlungslinie nach EnLiST (Saini et al., Ann Oncol 2026): in der LoT-Zählung, außerhalb der Zählung oder investigationale Studientherapie (iLoT).",
+      "description" : "Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie).",
       "exampleBoolean" : false
     },
     {
@@ -1030,7 +1068,7 @@
         "reference" : "StructureDefinition/enlist-countable"
       },
       "name" : "EnLiST-Zählstatus (Extension)",
-      "description" : "Zählstatus der Behandlungslinie nach EnLiST: geht die Linie in die LoT-Zählung ein\n(`counted`), ist sie außerhalb der Zählung (`not-counted`, z. B. lokoregionale\nBehandlungslinie) oder eine investigationale Studientherapie (`investigational`,\nEnLiST-Notation „iLoT“ — separat notiert statt regulär gezählt).",
+      "description" : "Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf\neiner EnLiST-Zählachse (eLoT/aLoT/iLoT; Details in der Extension `enlist-lot`);\n`not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale\nBehandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder\nManagement-Abschnitt.",
       "exampleBoolean" : false
     },
     {
@@ -1047,6 +1085,38 @@
       },
       "name" : "EnLiST-Zählstatus (ValueSet)",
       "description" : "Alle Zählstatus-Werte nach EnLiST.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-enlist-change-type.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/enlist-change-type"
+      },
+      "name" : "EnLiST-Änderungstypen",
+      "description" : "Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-enlist-change-type.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/enlist-change-type"
+      },
+      "name" : "EnLiST-Änderungstypen (ValueSet)",
+      "description" : "Alle EnLiST-Änderungstypen.",
       "exampleBoolean" : false
     },
     {

@@ -1,0 +1,49 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "enlist-lot-setting",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem enlist-lot-setting</b></p><a name=\"enlist-lot-setting\"> </a><a name=\"hcenlist-lot-setting\"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">eLoT<a name=\"enlist-lot-setting-eLoT\"> </a></td><td>eLoT — frühes Setting</td><td>Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie.</td></tr><tr><td style=\"white-space:nowrap\">aLoT<a name=\"enlist-lot-setting-aLoT\"> </a></td><td>aLoT — fortgeschrittenes Setting</td><td>Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation.</td></tr><tr><td style=\"white-space:nowrap\">iLoT<a name=\"enlist-lot-setting-iLoT\"> </a></td><td>iLoT — investigational</td><td>Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse.</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistLotSetting",
+  "title" : "EnLiST-Setting-Achsen",
+  "status" : "draft",
+  "date" : "2026-07-31T13:16:40+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "eLoT",
+    "display" : "eLoT — frühes Setting",
+    "definition" : "Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie."
+  },
+  {
+    "code" : "aLoT",
+    "display" : "aLoT — fortgeschrittenes Setting",
+    "definition" : "Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation."
+  },
+  {
+    "code" : "iLoT",
+    "display" : "iLoT — investigational",
+    "definition" : "Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse."
+  }]
+}

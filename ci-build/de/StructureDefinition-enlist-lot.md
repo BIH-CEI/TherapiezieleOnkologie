@@ -1,0 +1,391 @@
+# EnLiST-LoT-Designation (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
+
+## Extension: EnLiST-LoT-Designation (Extension) 
+
+EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:
+
+* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT** (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse zählt **getrennt**.
+* `line` (X) — Zahl der **New LoTs** in diesem Setting; eine neue Linie entsteht nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
+* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem X-Inkrement.
+* `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1".
+
+Die Designation wird **dokumentiert erfasst, nicht berechnet**. **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die Designation nicht.
+
+**Context of Use**
+
+**Usage info**
+
+**Usages:**
+
+* Use this Extension: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+* Examples for this Extension: [Bundle/BundleCRCPalliativ](Bundle-BundleCRCPalliativ.md), [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md), [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md) and [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-enlist-lot.json)
+
+### Formale Ansichten des Extension-Inhalts
+
+ [Beschreibung von Profilen, Differentials, Snapshots und deren Repräsentationen](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+*  [Differential-Tabelle](#tabs-diff) 
+*  [Snapshot-Tabelle](#tabs-snap) 
+*  [Statistiken/Referenzen](#tabs-summ) 
+*  [Alle](#tabs-all) 
+
+Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
+
+#### Terminology Bindings (Differential)
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
+
+** Summary **
+
+Complex Extension: EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**: 
+* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT** (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse zählt **getrennt**.
+* `line` (X) — Zahl der **New LoTs** in diesem Setting; eine neue Linie entsteht nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
+* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem X-Inkrement.
+* `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1".
+ Die Designation wird **dokumentiert erfasst, nicht berechnet**. **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die Designation nicht.
+
+ **Differential-AnsichtDifferential View** 
+
+Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
+
+#### Terminology Bindings (Differential)
+
+ **Snapshot-Ansicht** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
+
+** Summary **
+
+Complex Extension: EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**: 
+* `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ), **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT** (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse zählt **getrennt**.
+* `line` (X) — Zahl der **New LoTs** in diesem Setting; eine neue Linie entsteht nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.
+* `modification` (Y) — Zahl der **Modified LoTs** seit der letzten New LoT (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem X-Inkrement.
+* `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1".
+ Die Designation wird **dokumentiert erfasst, nicht berechnet**. **Same LoTs** (prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die Designation nicht.
+
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-lot.csv), [Excel](../StructureDefinition-enlist-lot.xlsx), [Schematron](../StructureDefinition-enlist-lot.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "enlist-lot",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistLotExt",
+  "title" : "EnLiST-LoT-Designation (Extension)",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "EnLiST LoT designation extension"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "status" : "draft",
+  "date" : "2026-07-31T13:16:40+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**\n  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse\n  zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht\n  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT\n  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem\n  X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n\nDie Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*\n(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die\nDesignation nicht.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "EnLiST designation of the systemic line of therapy in X.Y notation per setting axis: setting — eLoT early, aLoT advanced or iLoT investigational, each counted separately; line X — number of new LoTs, incremented only on clinical progression or lack of adequate response; modification Y — number of modified LoTs since the last new LoT, 0 when unmodified; notation — optional display such as aLoT 2.1. The designation is recorded, not computed."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
+  "kind" : "complex-type",
+  "abstract" : false,
+  "context" : [{
+    "type" : "element",
+    "expression" : "EpisodeOfCare"
+  }],
+  "type" : "Extension",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "EnLiST-LoT-Designation (Extension)",
+      "definition" : "EnLiST-Designation der systemischen Therapielinie in **X.Y-Notation je Setting**:\n\n- `setting` — die Zählachse: **eLoT** (early: neoadjuvant, adjuvant, perioperativ),\n  **aLoT** (advanced: lokal fortgeschritten oder metastasiert) oder **iLoT**\n  (investigational: ausschließlich nicht zugelassene Komponenten). Jede Achse\n  zählt **getrennt**.\n- `line` (X) — Zahl der *New LoTs* in diesem Setting; eine neue Linie entsteht\n  nur bei klinischer Progression (cPD) oder fehlendem adäquatem Ansprechen.\n- `modification` (Y) — Zahl der *Modified LoTs* seit der letzten New LoT\n  (nicht-progressionsbedingte Änderungen); 0 = unmodifiziert, Reset bei jedem\n  X-Inkrement.\n- `notation` — optionale Gesamtdarstellung, z. B. „aLoT 2.1\".\n\nDie Designation wird **dokumentiert erfasst, nicht berechnet**. *Same LoTs*\n(prospektiv geplante Änderungen inkl. Erhaltungstherapie) verändern die\nDesignation nicht."
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "min" : 3
+    },
+    {
+      "id" : "Extension.extension:setting",
+      "path" : "Extension.extension",
+      "sliceName" : "setting",
+      "short" : "Setting-Achse",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Setting axis"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Zählachse nach EnLiST — eLoT, aLoT oder iLoT; jede Achse zählt getrennt.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "EnLiST counting axis — eLoT, aLoT or iLoT; each axis is counted separately."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:setting.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:setting.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "setting"
+    },
+    {
+      "id" : "Extension.extension:setting.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting"
+      }
+    },
+    {
+      "id" : "Extension.extension:line",
+      "path" : "Extension.extension",
+      "sliceName" : "line",
+      "short" : "Liniennummer X",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Line number X"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Zahl der New LoTs im Setting — neue Linie nur bei Progression oder fehlendem Ansprechen.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Number of new LoTs within the setting — a new line only on progression or lack of adequate response."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:line.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:line.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "line"
+    },
+    {
+      "id" : "Extension.extension:line.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "positiveInt"
+      }]
+    },
+    {
+      "id" : "Extension.extension:modification",
+      "path" : "Extension.extension",
+      "sliceName" : "modification",
+      "short" : "Modifikationszähler Y",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Modification counter Y"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Zahl der Modified LoTs seit der letzten New LoT — 0 = unmodifiziert, Reset bei jedem X-Inkrement.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Number of modified LoTs since the last new LoT — 0 when unmodified, reset on each X increment."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:modification.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:modification.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "modification"
+    },
+    {
+      "id" : "Extension.extension:modification.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "unsignedInt"
+      }]
+    },
+    {
+      "id" : "Extension.extension:notation",
+      "path" : "Extension.extension",
+      "sliceName" : "notation",
+      "short" : "Notation",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Notation"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Gesamtdarstellung der Designation, z. B. aLoT 2.1",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Display form of the designation, e.g. aLoT 2.1"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1"
+    },
+    {
+      "id" : "Extension.extension:notation.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:notation.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "notation"
+    },
+    {
+      "id" : "Extension.extension:notation.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "max" : "0"
+    }]
+  }
+}
+
+```

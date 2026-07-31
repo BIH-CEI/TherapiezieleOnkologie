@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-careplan-cus
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T12:58:15+00:00",
+  "date" : "2026-07-31T13:16:40+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
