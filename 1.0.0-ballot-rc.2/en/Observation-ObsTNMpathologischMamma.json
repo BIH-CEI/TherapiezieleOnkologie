@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObsTNMpathologischMamma",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsTNMpathologischMamma</b></p><a name=\"en-ObsTNMpathologischMamma\"> </a><a name=\"en-hcObsTNMpathologischMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21902-2}\">Stage group.pathology Cancer</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2026-04-07</p><p><b>value</b>: <span title=\"Codes:\">ypT0 ypN0 – pathologische Komplettremission (pCR)</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "21902-2",
+      "display" : "Stage group.pathology Cancer"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "effectiveDateTime" : "2026-04-07",
+  "valueCodeableConcept" : {
+    "text" : "ypT0 ypN0 – pathologische Komplettremission (pCR)"
+  }
+}

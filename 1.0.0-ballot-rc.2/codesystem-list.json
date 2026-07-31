@@ -1,0 +1,47 @@
+{
+  "codeSystems" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "EnlistChangeType",
+    "title" : "EnLiST-Änderungstypen",
+    "description" : "Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene.",
+    "uses" : {
+    },
+    "ValueSet-enlist-change-type.html" : "EnLiST-Änderungstypen (ValueSet)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "EnlistCountable",
+    "title" : "EnLiST-Zählstatus",
+    "description" : "Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie).",
+    "uses" : {
+    },
+    "ValueSet-enlist-countable.html" : "EnLiST-Zählstatus (ValueSet)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "EnlistLotSetting",
+    "title" : "EnLiST-Setting-Achsen",
+    "description" : "Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).",
+    "uses" : {
+    },
+    "ValueSet-enlist-lot-setting.html" : "EnLiST-Setting-Achsen (ValueSet)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "OnkoTherapyGoalType",
+    "title" : "Onkologische Therapieziel-Art",
+    "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
+    "uses" : {
+    },
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)"
+  }]
+}

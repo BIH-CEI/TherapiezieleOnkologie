@@ -1,0 +1,81 @@
+{
+  "resourceType" : "Goal",
+  "id" : "TherapiezielCRCErhaltung",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Goal TherapiezielCRCErhaltung</b></p><a name=\"TherapiezielCRCErhaltung\"> </a><a name=\"hcTherapiezielCRCErhaltung\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-therapy-goal.html\">Onkologisches Therapieziel</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title=\"Codes:{http://snomed.info/sct 363676003}\">Palliative intent</span></li><li>phase: <span title=\"Codes:{http://snomed.info/sct 1345242003}\">Maintenance antineoplastic therapy</span></li></ul></blockquote><blockquote><p><b>Goal: Related Goal</b></p><ul><li>type: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-relationship-type predecessor}\">Predecessor</span></li><li>target: <a href=\"Goal-TherapiezielCRCLebensverlaengerung.html\">Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10</a></li></ul></blockquote><p><b>lifecycleStatus</b>: Proposed</p><p><b>category</b>: <span title=\"Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type lebensverlaengerung}\">Lebensverlängerung</span>, <span title=\"Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type lebensqualitaet}\">Lebensqualität</span></p><p><b>description</b>: <span title=\"Codes:\">Erhalt des Therapieansprechens bei reduzierter Toxizität (Erhaltungstherapie) nach erfolgreicher Induktion.</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>expressedBy</b>: <a href=\"Practitioner-OnkologinCRC.html\">Practitioner Petra Musterarzt </a></p><p><b>addresses</b>: <a href=\"Condition-ConditionCRC.html\">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></p></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "hauptintention",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "363676003",
+          "display" : "Palliative intent"
+        }]
+      }
+    },
+    {
+      "url" : "phase",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1345242003",
+          "display" : "Maintenance antineoplastic therapy"
+        }]
+      }
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+  },
+  {
+    "extension" : [{
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-relationship-type",
+          "code" : "predecessor",
+          "display" : "Predecessor"
+        }]
+      }
+    },
+    {
+      "url" : "target",
+      "valueReference" : {
+        "reference" : "Goal/TherapiezielCRCLebensverlaengerung"
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+  }],
+  "lifecycleStatus" : "proposed",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+      "code" : "lebensverlaengerung",
+      "display" : "Lebensverlängerung"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+      "code" : "lebensqualitaet",
+      "display" : "Lebensqualität"
+    }]
+  }],
+  "description" : {
+    "text" : "Erhalt des Therapieansprechens bei reduzierter Toxizität (Erhaltungstherapie) nach erfolgreicher Induktion."
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinCRC"
+  },
+  "expressedBy" : {
+    "reference" : "Practitioner/OnkologinCRC"
+  },
+  "addresses" : [{
+    "reference" : "Condition/ConditionCRC"
+  }]
+}

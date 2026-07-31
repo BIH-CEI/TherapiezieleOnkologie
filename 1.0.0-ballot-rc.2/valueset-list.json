@@ -1,0 +1,87 @@
+{
+  "codeSystems" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "EnlistChangeTypeVS",
+    "title" : "EnLiST-Änderungstypen (ValueSet)",
+    "description" : "Alle EnLiST-Änderungstypen.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type"],
+    "uses" : {
+    },
+    "StructureDefinition-enlist-change.html" : "EnLiST-Änderungstyp (Extension)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "EnlistCountableVS",
+    "title" : "EnLiST-Zählstatus (ValueSet)",
+    "description" : "Alle Zählstatus-Werte nach EnLiST.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable"],
+    "uses" : {
+    },
+    "StructureDefinition-enlist-countable.html" : "EnLiST-Zählstatus (Extension)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "EnlistLotSettingVS",
+    "title" : "EnLiST-Setting-Achsen (ValueSet)",
+    "description" : "Alle EnLiST-Setting-Achsen.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting"],
+    "uses" : {
+    },
+    "StructureDefinition-enlist-lot.html" : "EnLiST-LoT-Designation (Extension)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "OnkoTherapyGoalTypeVS",
+    "title" : "Onkologische Therapieziel-Art (VS)",
+    "description" : "ValueSet der zugelassenen Codes für die Zielart eines onkologischen Therapieziels.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"],
+    "uses" : {
+    },
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "OnkoTherapyIntentVS",
+    "title" : "Onkologische Therapieintention (VS)",
+    "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-line-type",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "OnkoTherapyLineTypeVS",
+    "title" : "Onkologische Therapielinie – Art (VS)",
+    "description" : "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein\nBeispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert\n`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code\n`Ambulatory chemotherapy` (315601005).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase",
+    "version" : "1.0.0-ballot-rc.2",
+    "status" : "draft",
+    "name" : "OnkoTherapyPhaseVS",
+    "title" : "Onkologische Therapiephase / Unter-Intention (VS)",
+    "description" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen\nBegriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.\nKonsolidierung ergänzbar).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"
+  }]
+}

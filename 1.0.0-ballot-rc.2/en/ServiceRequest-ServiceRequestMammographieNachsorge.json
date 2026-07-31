@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "ServiceRequestMammographieNachsorge",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ServiceRequestMammographieNachsorge</b></p><a name=\"en-ServiceRequestMammographieNachsorge\"> </a><a name=\"en-hcServiceRequestMammographieNachsorge\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 24606-6}\">Nachsorge-Mammographie beidseits (jährlich)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>occurrence</b>: 2027-04-15</p><p><b>requester</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>reasonReference</b>: <a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p></div>"
+  },
+  "status" : "active",
+  "intent" : "plan",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "24606-6",
+      "display" : "Mammografie"
+    }],
+    "text" : "Nachsorge-Mammographie beidseits (jährlich)"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "occurrenceDateTime" : "2027-04-15",
+  "requester" : {
+    "reference" : "Practitioner/OnkologinMamma"
+  },
+  "reasonReference" : [{
+    "reference" : "Condition/ConditionMamma"
+  }]
+}

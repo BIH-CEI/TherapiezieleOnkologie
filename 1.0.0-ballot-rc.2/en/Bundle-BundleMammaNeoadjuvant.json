@@ -1,0 +1,1933 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "BundleMammaNeoadjuvant",
+  "language" : "en",
+  "type" : "transaction",
+  "entry" : [{
+    "fullUrl" : "http://example.org/fhir/Patient/PatientinMamma",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "PatientinMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : [{
+        "family" : "Baumann",
+        "given" : ["Sabine"]
+      }],
+      "gender" : "female",
+      "birthDate" : "1977-06-24"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Practitioner/OnkologinMamma",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "OnkologinMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : [{
+        "family" : "Musterarzt",
+        "given" : ["Katrin"]
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Practitioner"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Organization/TumorzentrumMamma",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "TumorzentrumMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : "Zertifiziertes Brustzentrum Musterklinik"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Organization"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Organization/Tumorboard",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "Tumorboard",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "identifier" : [{
+        "system" : "https://www.musterklinik.de/fhir/sid/organisationen",
+        "value" : "tumorboard-brust-001"
+      }],
+      "active" : true,
+      "type" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code" : "team",
+          "display" : "Organizational team"
+        }]
+      }],
+      "name" : "Zertifiziertes Brustzentrum Musterklinik"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Organization"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/ServiceRequest/ServiceRequestBiopsieMamma",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ServiceRequestBiopsieMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "44578009",
+          "display" : "Core needle biopsy of breast (procedure)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "authoredOn" : "2025-09-12",
+      "requester" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/ServiceRequest/ServiceRequestPathologieMamma",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ServiceRequestPathologieMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "788124003",
+          "display" : "Histopathology service (qualifier value)"
+        }],
+        "text" : "Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "authoredOn" : "2025-09-15",
+      "requester" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      },
+      "specimen" : [{
+        "reference" : "Specimen/SpecimenBiopsieMamma"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/ServiceRequest/ServiceRequestStagingMamma",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ServiceRequestStagingMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "text" : "Klinische Ausbreitungsdiagnostik / TNM-Staging"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "authoredOn" : "2025-09-15",
+      "requester" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/ServiceRequest/ServiceRequestGBRCAMamma",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ServiceRequestGBRCAMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "21639-0",
+          "display" : "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "authoredOn" : "2025-09-18",
+      "requester" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/CarePlan/CarePlanMammaDiagnostik",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "CarePlanMammaDiagnostik",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "active",
+      "intent" : "plan",
+      "category" : [{
+        "text" : "Tumordiagnostik"
+      }],
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "author" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionMamma"
+      }],
+      "goal" : [{
+        "reference" : "Goal/DiagnosticGoal"
+      }],
+      "activity" : [{
+        "outcomeReference" : [{
+          "reference" : "Procedure/ProcedureBiopsieMamma"
+        }],
+        "reference" : {
+          "reference" : "ServiceRequest/ServiceRequestBiopsieMamma"
+        }
+      },
+      {
+        "outcomeReference" : [{
+          "reference" : "Observation/ObsHistologieMamma"
+        },
+        {
+          "reference" : "Observation/ObsGradingMamma"
+        },
+        {
+          "reference" : "Observation/ObsEstrogenrezeptorMamma"
+        },
+        {
+          "reference" : "Observation/ObsProgesteronrezeptorMamma"
+        },
+        {
+          "reference" : "Observation/ObsHER2Mamma"
+        },
+        {
+          "reference" : "Observation/ObsKi67Mamma"
+        }],
+        "reference" : {
+          "reference" : "ServiceRequest/ServiceRequestPathologieMamma"
+        }
+      },
+      {
+        "outcomeReference" : [{
+          "reference" : "Observation/ObsTNMklinischMamma"
+        }],
+        "reference" : {
+          "reference" : "ServiceRequest/ServiceRequestStagingMamma"
+        }
+      },
+      {
+        "outcomeReference" : [{
+          "reference" : "Observation/ObsGBRCAMamma"
+        }],
+        "reference" : {
+          "reference" : "ServiceRequest/ServiceRequestGBRCAMamma"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Goal/DiagnosticGoal",
+    "resource" : {
+      "resourceType" : "Goal",
+      "id" : "DiagnosticGoal",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "individual",
+          "valueReference" : {
+            "reference" : "Patient/PatientinMamma"
+          }
+        },
+        {
+          "url" : "status",
+          "valueCode" : "agree"
+        },
+        {
+          "url" : "priority",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+              "code" : "high-priority",
+              "display" : "High Priority"
+            }]
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-acceptance"
+      }],
+      "lifecycleStatus" : "active",
+      "achievementStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-achievement",
+          "code" : "in-progress",
+          "display" : "In Progress"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "261004008",
+          "display" : "Diagnostic intent"
+        }]
+      }],
+      "priority" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+          "code" : "high-priority",
+          "display" : "High Priority"
+        }]
+      },
+      "description" : {
+        "text" : "Diagnosesicherung für die Verdachtsdiagnose"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "startDate" : "2025-09-12",
+      "target" : [{
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21905-5",
+            "display" : "Primary tumor.clinical [Class] Cancer"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21906-3",
+            "display" : "Regional lymph nodes.clinical [Class] Cancer"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21907-1",
+            "display" : "Distant metastases.clinical [Class] Cancer"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21908-9",
+            "display" : "Stage group.clinical Cancer"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "40556-3",
+            "display" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "85339-0",
+            "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "48676-1",
+            "display" : "HER2 Ag [Interpretation] in Tissue"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21855-2",
+            "display" : "Primary site Cancer"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "44648-4",
+            "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "33732-9",
+            "display" : "Histology grade [Identifier] in Cancer specimen"
+          }]
+        }
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "85347-3",
+            "display" : "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"
+          }]
+        }
+      }],
+      "expressedBy" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionMamma"
+      }],
+      "outcomeReference" : [{
+        "reference" : "Observation/ObsDiseaseStatusMamma"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Goal"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Condition/ConditionMamma",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "ConditionMamma",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+        "valueDateTime" : "2025-09-15"
+      }],
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2026",
+          "code" : "C50.4",
+          "display" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+        }],
+        "text" : "Invasives Mammakarzinom links, oberer äußerer Quadrant (NST), triple-negativ"
+      },
+      "bodySite" : [{
+        "text" : "Mamma links, oberer äußerer Quadrant"
+      }],
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "onsetDateTime" : "2025-09-15",
+      "recordedDate" : "2025-09-15"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Procedure/ProcedureBiopsieMamma",
+    "resource" : {
+      "resourceType" : "Procedure",
+      "id" : "ProcedureBiopsieMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "category" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "103693007",
+          "display" : "Diagnostic procedure (procedure)"
+        }]
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "44578009",
+          "display" : "Core needle biopsy of breast (procedure)"
+        }],
+        "text" : "Sonografisch gesteuerte Stanzbiopsie der Mamma links"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "performedDateTime" : "2025-09-15",
+      "reasonReference" : [{
+        "reference" : "Condition/ConditionMamma"
+      }],
+      "bodySite" : [{
+        "text" : "Mamma links, oberer äußerer Quadrant"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Procedure"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Specimen/SpecimenBiopsieMamma",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "SpecimenBiopsieMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "122737001",
+          "display" : "Specimen from breast obtained by core needle biopsy"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "119376003",
+          "display" : "Tissue specimen (specimen)"
+        }],
+        "text" : "Stanzbiopsat (Gewebeprobe) Mamma links"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "collection" : {
+        "collectedDateTime" : "2025-09-15",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "9911007",
+            "display" : "Core needle biopsy"
+          }]
+        },
+        "bodySite" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "76365002",
+            "display" : "Structure of upper outer quadrant of breast"
+          }],
+          "text" : "Mamma links, oberer äußerer Quadrant"
+        }
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Specimen"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsHistologieMamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsHistologieMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "59847-4",
+          "display" : "Histology and Behavior ICD-O-3 Cancer"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-09-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "82711006",
+          "display" : "Infiltrating duct carcinoma"
+        },
+        {
+          "system" : "urn:oid:2.16.840.1.113883.6.43.1",
+          "code" : "8500/3",
+          "display" : "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
+        }],
+        "text" : "Invasives Mammakarzinom, NST (ICD-O-3 8500/3)"
+      },
+      "specimen" : {
+        "reference" : "Specimen/SpecimenBiopsieMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsGradingMamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsGradingMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "44648-4",
+          "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-09-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1155704001",
+          "display" : "G3: Poorly differentiated"
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
+          "code" : "3",
+          "display" : "schlecht differenziert"
+        }],
+        "text" : "G3 – schlecht differenziert (Elston-Ellis)"
+      },
+      "specimen" : {
+        "reference" : "Specimen/SpecimenBiopsieMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsTNMklinischMamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsTNMklinischMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "21908-9",
+          "display" : "Stage group.clinical Cancer"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-09-16",
+      "valueCodeableConcept" : {
+        "text" : "cT2 cN1 cM0 – UICC IIB"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsEstrogenrezeptorMamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsEstrogenrezeptorMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85337-4",
+          "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-09-17",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA6577-6",
+          "display" : "Negative"
+        }]
+      },
+      "note" : [{
+        "text" : "Immunhistochemie: <1 % positive Kerne → ER-negativ."
+      }],
+      "specimen" : {
+        "reference" : "Specimen/SpecimenBiopsieMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsProgesteronrezeptorMamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsProgesteronrezeptorMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85339-0",
+          "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-09-17",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA6577-6",
+          "display" : "Negative"
+        }]
+      },
+      "note" : [{
+        "text" : "Immunhistochemie: <1 % positive Kerne → PR-negativ."
+      }],
+      "specimen" : {
+        "reference" : "Specimen/SpecimenBiopsieMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsHER2Mamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsHER2Mamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "48676-1",
+          "display" : "HER2 Ag [Interpretation] in Tissue"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-09-17",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA6577-6",
+          "display" : "Negative"
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds",
+          "code" : "N",
+          "display" : "negativ"
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie",
+          "code" : "negativ",
+          "display" : "HER2-negativ"
+        }]
+      },
+      "note" : [{
+        "text" : "Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich."
+      }],
+      "specimen" : {
+        "reference" : "Specimen/SpecimenBiopsieMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsKi67Mamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsKi67Mamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85330-9",
+          "display" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1234806008",
+          "display" : "Observation using immunohistochemistry (observable entity)"
+        }],
+        "text" : "Ki-67 Proliferationsindex (MIB-1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-09-17",
+      "valueQuantity" : {
+        "value" : 70,
+        "unit" : "%",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "%"
+      },
+      "specimen" : {
+        "reference" : "Specimen/SpecimenBiopsieMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsGBRCAMamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsGBRCAMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "21639-0",
+          "display" : "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-09-25",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "260385009",
+          "display" : "Negative"
+        }]
+      },
+      "note" : [{
+        "text" : "gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen."
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/EpisodeOfCare/TherapielinieChemo",
+    "resource" : {
+      "resourceType" : "EpisodeOfCare",
+      "id" : "TherapielinieChemo",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "hauptintention",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "373847000",
+              "display" : "Neoadjuvant intent"
+            }]
+          }
+        },
+        {
+          "url" : "phase",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "373808002",
+              "display" : "Curative - procedure intent"
+            }]
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "extension" : [{
+          "url" : "setting",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+              "code" : "eLoT",
+              "display" : "eLoT — frühes Setting"
+            }]
+          }
+        },
+        {
+          "url" : "line",
+          "valuePositiveInt" : 1
+        },
+        {
+          "url" : "modification",
+          "valueUnsignedInt" : 0
+        },
+        {
+          "url" : "notation",
+          "valueString" : "eLoT 1.0"
+        },
+        {
+          "url" : "lineId",
+          "valueIdentifier" : {
+            "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line",
+            "value" : "mamma-baumann-elot-1"
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot"
+      },
+      {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+            "code" : "counted",
+            "display" : "Zählt in der LoT-Zählung"
+          }]
+        }
+      },
+      {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",
+        "valueReference" : {
+          "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+        }
+      }],
+      "status" : "finished",
+      "type" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "385786002",
+          "display" : "Chemotherapy care"
+        }]
+      }],
+      "diagnosis" : [{
+        "condition" : {
+          "reference" : "Condition/ConditionMamma"
+        },
+        "role" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "code" : "CC",
+            "display" : "Chief complaint"
+          }]
+        },
+        "rank" : 1
+      }],
+      "patient" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/Tumorboard"
+      },
+      "period" : {
+        "start" : "2025-10-01",
+        "end" : "2026-03-15"
+      },
+      "careManager" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "EpisodeOfCare"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/EpisodeOfCare/TherapielinieOperation",
+    "resource" : {
+      "resourceType" : "EpisodeOfCare",
+      "id" : "TherapielinieOperation",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "hauptintention",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "373808002",
+              "display" : "Curative - procedure intent"
+            }]
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+            "code" : "not-counted",
+            "display" : "Zählt nicht"
+          }]
+        }
+      }],
+      "status" : "finished",
+      "type" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "387713003",
+          "display" : "Surgical procedure"
+        }]
+      }],
+      "diagnosis" : [{
+        "condition" : {
+          "reference" : "Condition/ConditionMamma"
+        },
+        "role" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+            "code" : "CC",
+            "display" : "Chief complaint"
+          }]
+        },
+        "rank" : 1
+      }],
+      "patient" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/Tumorboard"
+      },
+      "period" : {
+        "start" : "2026-03-20",
+        "end" : "2026-04-06"
+      },
+      "referralRequest" : [{
+        "reference" : "ServiceRequest/ServiceRequestProcedure"
+      }],
+      "careManager" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "EpisodeOfCare"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Goal/TherapiezielMammaHeilung",
+    "resource" : {
+      "resourceType" : "Goal",
+      "id" : "TherapiezielMammaHeilung",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "hauptintention",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "373808002",
+              "display" : "Curative - procedure intent"
+            }]
+          }
+        }],
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+      },
+      {
+        "extension" : [{
+          "url" : "individual",
+          "valueReference" : {
+            "reference" : "Patient/PatientinMamma"
+          }
+        },
+        {
+          "url" : "status",
+          "valueCode" : "agree"
+        },
+        {
+          "url" : "priority",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+              "code" : "high-priority",
+              "display" : "High Priority"
+            }]
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-acceptance"
+      },
+      {
+        "extension" : [{
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://hl7.org/fhir/goal-relationship-type",
+              "code" : "predecessor",
+              "display" : "Predecessor"
+            }]
+          }
+        },
+        {
+          "url" : "target",
+          "valueReference" : {
+            "reference" : "Goal/DiagnosticGoal"
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+      },
+      {
+        "extension" : [{
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://hl7.org/fhir/goal-relationship-type",
+              "code" : "successor",
+              "display" : "Successor"
+            }]
+          }
+        },
+        {
+          "url" : "target",
+          "valueReference" : {
+            "reference" : "Goal/FollowUpGoal"
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+      }],
+      "lifecycleStatus" : "active",
+      "achievementStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-achievement",
+          "code" : "achieved",
+          "display" : "Achieved"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "heilung",
+          "display" : "Heilung"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "funktionserhalt",
+          "display" : "Funktionserhalt"
+        }]
+      }],
+      "priority" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+          "code" : "high-priority",
+          "display" : "High Priority"
+        }]
+      },
+      "description" : {
+        "text" : "Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR)."
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "startDate" : "2025-09-22",
+      "target" : [{
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21908-9",
+            "display" : "Stage group.clinical Cancer"
+          }]
+        },
+        "dueDate" : "2026-04-15"
+      }],
+      "expressedBy" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionMamma"
+      }],
+      "outcomeReference" : [{
+        "reference" : "Observation/ObsDiseaseStatusMamma"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Goal"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/ServiceRequest/ServiceRequestProcedure",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ServiceRequestProcedure",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "active",
+      "intent" : "proposal",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85232-7",
+          "display" : "Tumor board Consult note"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "387713003",
+          "display" : "Surgical procedure"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "392021009",
+          "display" : "Lumpectomy of breast (procedure)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "MedicationRequestPembroChemoNeoadjuvantMamma",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+            "code" : "new",
+            "display" : "New LoT"
+          }]
+        }
+      }],
+      "status" : "completed",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85232-7",
+          "display" : "Tumor board Consult note"
+        }]
+      }],
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma1",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-10-01",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma2",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2025-11-01",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma3",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-02-10",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroChemoNeoadjuvantMamma4",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-03-15",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Procedure/ProcedureOperationMamma",
+    "resource" : {
+      "resourceType" : "Procedure",
+      "id" : "ProcedureOperationMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "392021009",
+          "display" : "Lumpectomy of breast (procedure)"
+        }],
+        "text" : "Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "performedDateTime" : "2026-04-02"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Procedure"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsTNMpathologischMamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsTNMpathologischMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "21902-2",
+          "display" : "Stage group.pathology Cancer"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-04-07",
+      "valueCodeableConcept" : {
+        "text" : "ypT0 ypN0 – pathologische Komplettremission (pCR)"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Observation/ObsDiseaseStatusMamma",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ObsDiseaseStatusMamma",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "97509-4",
+          "display" : "Cancer disease progression"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-04-07",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "260415000",
+          "display" : "Not detected"
+        }]
+      },
+      "note" : [{
+        "text" : "Pathologische Komplettremission (pCR, ypT0 ypN0) nach neoadjuvanter Systemtherapie."
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/CarePlan/CarePlanMammaNeoadjuvant",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "CarePlanMammaNeoadjuvant",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+        "valueReference" : {
+          "reference" : "Organization/TumorzentrumMamma"
+        }
+      }],
+      "status" : "active",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "736252007",
+          "display" : "Cancer care plan"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "period" : {
+        "start" : "2025-09-22"
+      },
+      "author" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionMamma"
+      }],
+      "goal" : [{
+        "reference" : "Goal/TherapiezielMammaHeilung"
+      }],
+      "activity" : [{
+        "outcomeReference" : [{
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"
+        },
+        {
+          "reference" : "MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"
+        }],
+        "reference" : {
+          "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
+        }
+      },
+      {
+        "outcomeReference" : [{
+          "reference" : "Procedure/ProcedureOperationMamma"
+        }],
+        "reference" : {
+          "reference" : "ServiceRequest/ServiceRequestProcedure"
+        }
+      },
+      {
+        "reference" : {
+          "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+        }
+      },
+      {
+        "outcomeReference" : [{
+          "reference" : "Observation/ObsDiseaseStatusMamma"
+        }]
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Goal/FollowUpGoal",
+    "resource" : {
+      "resourceType" : "Goal",
+      "id" : "FollowUpGoal",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "individual",
+          "valueReference" : {
+            "reference" : "Patient/PatientinMamma"
+          }
+        },
+        {
+          "url" : "status",
+          "valueCode" : "agree"
+        },
+        {
+          "url" : "priority",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+              "code" : "high-priority",
+              "display" : "High Priority"
+            }]
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-acceptance"
+      },
+      {
+        "extension" : [{
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://hl7.org/fhir/goal-relationship-type",
+              "code" : "predecessor",
+              "display" : "Predecessor"
+            }]
+          }
+        },
+        {
+          "url" : "target",
+          "valueReference" : {
+            "reference" : "Goal/DiagnosticGoal"
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+      },
+      {
+        "extension" : [{
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://hl7.org/fhir/goal-relationship-type",
+              "code" : "predecessor",
+              "display" : "Predecessor"
+            }]
+          }
+        },
+        {
+          "url" : "target",
+          "valueReference" : {
+            "reference" : "Goal/TherapiezielMammaHeilung"
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/goal-relationship"
+      }],
+      "lifecycleStatus" : "planned",
+      "achievementStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-achievement",
+          "code" : "in-progress",
+          "display" : "In Progress"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+          "code" : "lebensqualitaet",
+          "display" : "Lebensqualität"
+        }]
+      }],
+      "priority" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+          "code" : "high-priority",
+          "display" : "High Priority"
+        }]
+      },
+      "description" : {
+        "text" : "Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "startDate" : "2026-08-15",
+      "target" : [{
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "21976-6",
+            "display" : "Cancer outcome status"
+          }]
+        },
+        "detailCodeableConcept" : {
+          "text" : "Kein Hinweis auf Lokalrezidiv oder Fernmetastasen"
+        },
+        "dueDate" : "2026-11-15"
+      },
+      {
+        "measure" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "24606-6",
+            "display" : "Mammografie"
+          }]
+        },
+        "detailCodeableConcept" : {
+          "text" : "Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis"
+        },
+        "dueDate" : "2027-04-15"
+      },
+      {
+        "measure" : {
+          "text" : "Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff"
+        },
+        "detailCodeableConcept" : {
+          "text" : "Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit"
+        }
+      },
+      {
+        "measure" : {
+          "text" : "Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul"
+        },
+        "detailCodeableConcept" : {
+          "text" : "Stabile bis verbesserte Lebensqualität im Verlauf"
+        }
+      }],
+      "expressedBy" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionMamma"
+      }],
+      "outcomeReference" : [{
+        "reference" : "Observation/ObsDiseaseStatusMamma"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Goal"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/ServiceRequest/ServiceRequestMammographieNachsorge",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ServiceRequestMammographieNachsorge",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "active",
+      "intent" : "plan",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "24606-6",
+          "display" : "Mammografie"
+        }],
+        "text" : "Nachsorge-Mammographie beidseits (jährlich)"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "occurrenceDateTime" : "2027-04-15",
+      "requester" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      },
+      "reasonReference" : [{
+        "reference" : "Condition/ConditionMamma"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/CarePlan/CarePlanMammaNachsorge",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "CarePlanMammaNachsorge",
+      "meta" : {
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
+      },
+      "language" : "en",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+        "valueReference" : {
+          "reference" : "Organization/TumorzentrumMamma"
+        }
+      }],
+      "status" : "active",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "736252007",
+          "display" : "Cancer care plan"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "period" : {
+        "start" : "2026-08-15"
+      },
+      "author" : {
+        "reference" : "Practitioner/OnkologinMamma"
+      },
+      "addresses" : [{
+        "reference" : "Condition/ConditionMamma"
+      }],
+      "goal" : [{
+        "reference" : "Goal/FollowUpGoal"
+      }],
+      "activity" : [{
+        "reference" : {
+          "reference" : "ServiceRequest/ServiceRequestMammographieNachsorge"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  }]
+}

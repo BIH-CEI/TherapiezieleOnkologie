@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "OnkologinMamma",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner OnkologinMamma</b></p><a name=\"en-OnkologinMamma\"> </a><a name=\"en-hcOnkologinMamma\"> </a><p><b>name</b>: Katrin Musterarzt </p></div>"
+  },
+  "name" : [{
+    "family" : "Musterarzt",
+    "given" : ["Katrin"]
+  }]
+}

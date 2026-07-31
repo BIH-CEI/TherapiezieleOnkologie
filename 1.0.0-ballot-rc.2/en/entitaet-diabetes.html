@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Weitere Entität – Diabetes mellitus - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.2 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/entitaet-diabetes.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Weitere Entität – Diabetes mellitus</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Weitere Entität – Diabetes mellitus</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+<p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#die-zielstruktur-des-diabetes" id="markdown-toc-die-zielstruktur-des-diabetes">Die Zielstruktur des Diabetes</a></li>
+  <li><a href="#abbildung-auf-das-modell" id="markdown-toc-abbildung-auf-das-modell">Abbildung auf das Modell</a></li>
+  <li><a href="#fragebögen-als-messbare-zielgröße--mit-auslösenden-schwellen" id="markdown-toc-fragebögen-als-messbare-zielgröße--mit-auslösenden-schwellen">Fragebögen als messbare Zielgröße – mit auslösenden Schwellen</a></li>
+  <li><a href="#wo-die-ziele-leben-ddmp--epa" id="markdown-toc-wo-die-ziele-leben-ddmp--epa">Wo die Ziele „leben" (dDMP / ePA)</a></li>
+  <li><a href="#was-der-transfer-zeigt" id="markdown-toc-was-der-transfer-zeigt">Was der Transfer zeigt</a></li>
+  <li><a href="#semantische-annotationen-codesysteme" id="markdown-toc-semantische-annotationen-codesysteme">Semantische Annotationen (Codesysteme)</a></li>
+  <li><a href="#leitlinien-und-quellen" id="markdown-toc-leitlinien-und-quellen">Leitlinien und Quellen</a></li>
+</ul>
+
+</div>
+<p>Diese Seite prüft das <a href="therapieziele.html">Therapieziel-Modell</a> an einer <strong>nicht-
+onkologischen Entität</strong> (also einer Erkrankung außerhalb der Krebsmedizin): dem
+<strong>Diabetes mellitus Typ 2</strong> (der „Alterszucker", die häufige Zuckerkrankheit mit
+Insulinresistenz). Die Frage ist nicht „wie behandelt man Diabetes" (das ist
+Lehrbuchstoff), sondern: <strong>Passt dieselbe Struktur</strong> – ein übergeordnetes Ziel plus
+messbare Etappenziele mit <code class="language-plaintext highlighter-rouge">target.measure</code> / <code class="language-plaintext highlighter-rouge">target.detail</code> / <code class="language-plaintext highlighter-rouge">target.due</code> (also: <em>woran</em>
+man die Zielerreichung misst, <em>welcher Wert</em> als erreicht gilt, <em>bis wann</em>) – <strong>auch hier?</strong></p>
+
+<p>Der Diabetes ist dafür ein besonders lehrreicher Fall, weil das deutsche <strong>DMP</strong>
+(Disease-Management-Programm – ein geregeltes Dauerbehandlungs-Programm der Krankenkassen
+für chronisch Kranke) – und in seiner digitalen Fortschreibung das <strong>dDMP</strong> – die
+Versorgungsziele bereits <strong>festschreibt</strong> und teils an messbare Schwellenwerte bindet.</p>
+
+<h3 id="die-zielstruktur-des-diabetes">Die Zielstruktur des Diabetes</h3>
+
+<ul>
+  <li><strong>Übergeordnetes Ziel:</strong> laut <a href="https://www.g-ba.de/richtlinien/83/">DMP-Richtlinie</a> die
+<strong>Erhöhung der Lebenserwartung</strong>, die <strong>Erhaltung/Verbesserung der Lebensqualität</strong> sowie
+die <strong>Vermeidung von Folgeschäden</strong> (an Augen, Nieren, Nerven, Herz und Gefäßen). Das ist
+– wie „kurativ/palliativ" (auf Heilung vs. auf Linderung ausgerichtet) in der Krebsmedizin
+– eine <strong>strategische Grundausrichtung</strong>; heilbar im Sinne der Krebsmedizin ist der
+Diabetes nicht.</li>
+  <li><strong>Phasenstruktur:</strong> feiner als zunächst gedacht. In der <strong>Frühphase</strong> des Typ-2-Diabetes
+ist die <strong>Remission</strong> (Rückbildung – normale Blutzuckerwerte <em>ohne</em> Medikamente) ein
+realistisches Ziel (konsequente Lebensstiländerung; [Birkenfeld 2024]) – das dDMP soll es
+für neu Aufgenommene <strong>ausdrücklich benennen</strong>. Danach folgt die <strong>dauerhafte Kontrolle</strong>
+mit parallelen <strong>Schutzzielen</strong> für Herz/Kreislauf und Nieren. Also: <em>Frühphase (auf
+Rückbildung aus)</em> → <em>Erhalt/Kontrolle</em>.</li>
+</ul>
+
+<svg width="100%" viewBox="0 0 680 500" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Zielstruktur des Typ-2-Diabetes: Phasen, parallele Schutzziele und PROM-Schwellen</title>
+<desc>Oben das uebergeordnete strategische Ziel, darunter die Phasen Fruehphase (Remission) und Erhalt (dauerhafte Kontrolle) mit ihren HbA1c-Zielen, dann die parallel laufenden Schutzziele fuer Herz-Kreislauf und Nieren, unten der PROM-Regelkreis des dDMP: Fragebogen-Erhebung, Schwelle, automatisch ausgeloeste Reaktion.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<g><rect x="40" y="16" width="600" height="42" rx="8" fill="#F1EFE8" stroke="#5F5E5A" />
+<text x="340" y="33" text-anchor="middle" font-size="12" font-weight="500" fill="#2C2C2A">Übergeordnetes Ziel (strategisch, ohne Zielwert)</text>
+<text x="340" y="50" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Lebenserwartung erhöhen · Lebensqualität erhalten · Folgeschäden vermeiden</text></g>
+
+<g><rect x="40" y="78" width="260" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7" />
+<text x="170" y="97" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Frühphase</text></g>
+<line x1="302" y1="93" x2="326" y2="93" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<g><rect x="330" y="78" width="310" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7" />
+<text x="485" y="97" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Erhalt / dauerhafte Kontrolle</text></g>
+
+<g><rect x="40" y="116" width="260" height="58" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="170" y="136" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">Remission</text>
+<text x="170" y="152" text-anchor="middle" font-size="11" fill="#04342C">HbA1c &lt; 6,5 % ohne Medikation</text>
+<text x="170" y="167" text-anchor="middle" font-size="10.5" fill="#0F6E56">Lebensstil — LOINC 4548-4</text></g>
+<g><rect x="330" y="116" width="310" height="58" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="485" y="136" text-anchor="middle" font-size="13" font-weight="500" fill="#04342C">Blutzucker-Kontrolle</text>
+<text x="485" y="152" text-anchor="middle" font-size="11" fill="#04342C">HbA1c 6,5–7,5 % (individuell)</text>
+<text x="485" y="167" text-anchor="middle" font-size="10.5" fill="#0F6E56">LOINC 4548-4 · neu daneben: Time-in-Range (measure.text)</text></g>
+
+<text x="40" y="198" font-size="11" font-weight="500" fill="#5F5E5A">parallel, dauerhaft (Organschutz):</text>
+<g><rect x="40" y="206" width="600" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="340" y="223" text-anchor="middle" font-size="11.5" fill="#04342C">Herz-Kreislauf-Schutz — Blutdruck &lt; 140/90 mmHg · LDL nach Risiko</text>
+<text x="340" y="240" text-anchor="middle" font-size="10.5" fill="#0F6E56">LOINC 8480-6 / 8462-4 · 13457-7</text></g>
+<g><rect x="40" y="258" width="600" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="340" y="275" text-anchor="middle" font-size="11.5" fill="#04342C">Nierenschutz — eGFR stabil · Albumin/Kreatinin-Quotient &lt; 30 mg/g</text>
+<text x="340" y="292" text-anchor="middle" font-size="10.5" fill="#0F6E56">LOINC 62238-1 · 9318-7</text></g>
+
+<text x="40" y="330" font-size="11" font-weight="500" fill="#5F5E5A">Lebensqualität als messbare Zielgröße (PROMs im dDMP):</text>
+
+<g><rect x="40" y="340" width="190" height="68" rx="8" fill="#FAECE7" stroke="#D85A30" />
+<text x="135" y="360" text-anchor="middle" font-size="12.5" font-weight="500" fill="#4A1B0C">Fragebogen-Erhebung</text>
+<text x="135" y="376" text-anchor="middle" font-size="10.5" fill="#4A1B0C">WHO-5 · PAID, alle 2 Wochen</text>
+<text x="135" y="392" text-anchor="middle" font-size="10" fill="#993C1D">per App/ePA · measure.text</text></g>
+<line x1="232" y1="374" x2="268" y2="374" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<g><rect x="270" y="340" width="190" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" />
+<text x="365" y="360" text-anchor="middle" font-size="12.5" font-weight="500" fill="#04342C">Schwelle (target.detail)</text>
+<text x="365" y="376" text-anchor="middle" font-size="10.5" fill="#04342C">Ziel: WHO-5 ≥ 13 · PAID &lt; 40</text>
+<text x="365" y="392" text-anchor="middle" font-size="10.5" fill="#0F6E56">Alarm: WHO-5 &lt; 10 · PAID ≥ 40</text></g>
+<line x1="462" y1="374" x2="498" y2="374" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<g><rect x="500" y="340" width="140" height="68" rx="8" fill="#F1EFE8" stroke="#5F5E5A" />
+<text x="570" y="360" text-anchor="middle" font-size="12.5" font-weight="500" fill="#2C2C2A">Reaktion</text>
+<text x="570" y="376" text-anchor="middle" font-size="10.5" fill="#2C2C2A">Praxis aufsuchen,</text>
+<text x="570" y="390" text-anchor="middle" font-size="10.5" fill="#2C2C2A">Terminvermittlung</text></g>
+
+<path d="M570,410 L570,436 L135,436 L135,412" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#argr)" />
+<text x="352" y="450" text-anchor="middle" font-size="10.5" fill="#5F5E5A">weiter regelmäßig erheben → achievementStatus fortschreiben</text>
+
+<rect x="40" y="468" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="479" font-size="11.5" fill="#5F5E5A">Phase</text>
+<rect x="110" y="468" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="129" y="479" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="170" y="468" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30" /><text x="189" y="479" font-size="11.5" fill="#5F5E5A">Messung / PROM</text>
+<rect x="300" y="468" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="319" y="479" font-size="11.5" fill="#5F5E5A">Hinweis / Reaktion</text>
+<text x="450" y="479" font-size="10.5" fill="#5F5E5A">PROMs/Scores ohne Code: measure.text</text>
+</svg>
+
+<h3 id="abbildung-auf-das-modell">Abbildung auf das Modell</h3>
+
+<p>Zur Tabelle: „Zielgröße" = <em>woran</em> gemessen wird, „Zielwert" = <em>welcher Wert</em> als erreicht
+gilt, „Ergebnis" = die tatsächliche Messung, die man dagegenhält. Die <code class="language-plaintext highlighter-rouge">LOINC</code>-Kürzel sind
+international standardisierte Codes für den jeweiligen Messwert.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ebene / Ausrichtung</th>
+      <th>Zielgröße (<code class="language-plaintext highlighter-rouge">target.measure</code>)</th>
+      <th>Zielwert (<code class="language-plaintext highlighter-rouge">target.detail</code>)</th>
+      <th>Ergebnis (<code class="language-plaintext highlighter-rouge">outcomeReference</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Übergeordnet</strong> (Lebenserwartung, Lebensqualität, Folgeschäden vermeiden)</td>
+      <td>— (strategisch)</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>Frühphase – Remission</strong></td>
+      <td>HbA1c (Langzeit-Blutzucker, ~3 Monate) ohne Medikamente — LOINC <code class="language-plaintext highlighter-rouge">4548-4</code></td>
+      <td>Remission (HbA1c &lt; 6,5 % ohne Medikation)</td>
+      <td>HbA1c-Messung</td>
+    </tr>
+    <tr>
+      <td>Blutzucker-Kontrolle/Erhalt</td>
+      <td>HbA1c <code class="language-plaintext highlighter-rouge">4548-4</code></td>
+      <td>6,5 – 7,5 % (individuell)</td>
+      <td>HbA1c-Messung</td>
+    </tr>
+    <tr>
+      <td>Herz-Kreislauf-Schutz</td>
+      <td>Blutdruck <code class="language-plaintext highlighter-rouge">8480-6</code>/<code class="language-plaintext highlighter-rouge">8462-4</code>; LDL („schlechtes" Cholesterin) <code class="language-plaintext highlighter-rouge">13457-7</code></td>
+      <td>&lt; 140/90 mmHg; LDL je nach Risiko</td>
+      <td>Messungen</td>
+    </tr>
+    <tr>
+      <td>Nierenschutz</td>
+      <td>eGFR (geschätzte Nierenleistung) <code class="language-plaintext highlighter-rouge">62238-1</code>; Eiweiß-im-Urin-Quotient <code class="language-plaintext highlighter-rouge">9318-7</code></td>
+      <td>Nierenleistung stabil; Eiweiß-Quotient &lt; 30 mg/g</td>
+      <td>Messungen</td>
+    </tr>
+    <tr>
+      <td><strong>Lebensqualität / Belastung</strong></td>
+      <td>Patienten-Fragebogen (WHO-5, PAID, DDS) — <code class="language-plaintext highlighter-rouge">measure.text</code></td>
+      <td>z. B. WHO-5 ≥ 13; PAID &lt; 40</td>
+      <td>Fragebogen-Erhebung</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die <strong>Medikamente</strong> (Metformin, SGLT2-Hemmer, GLP-1-Wirkstoffe, DPP-4-Hemmer,
+Sulfonylharnstoffe, Insulin – verschiedene Gruppen blutzuckersenkender Mittel) sind im
+Modell <strong>Maßnahmen</strong> (<code class="language-plaintext highlighter-rouge">MedicationRequest</code>), <strong>nicht</strong> das Ziel – die Trennung „<em>was wird
+getan</em>" vs. „<em>was soll erreicht werden</em>" aus der <a href="therapieziele.html">Therapieziel-Seite</a>.</p>
+
+<blockquote>
+  <p><strong>Jüngere Zielverschiebung.</strong> Die große Diabetes-Fachgesellschaften-Leitlinie (ADA/EASD)
+2022/2023 hat den Fokus vom <strong>reinen Blutzucker-Ziel</strong> hin zum <strong>Organschutz</strong> verschoben:
+SGLT2-Hemmer und GLP-1-Wirkstoffe werden bei hohem Herz-/Nierenrisiko gegeben –
+<strong>unabhängig vom Blutzuckerwert</strong>, weil ihr Nutzen <em>nicht</em> an der Zuckersenkung hängt.
+Damit tritt neben den Blutzucker-Zielwert ein <strong>Herz-/Nieren-Ergebnisziel</strong>. Parallel
+etabliert sich mit der <strong>kontinuierlichen Zuckermessung (CGM)</strong> die „Time-in-Range" (der
+Anteil der Zeit im Zielbereich) als <strong>zweite Blutzucker-Messgröße neben dem HbA1c</strong> –
+alte und neue Größe bestehen nebeneinander, genau wie im
+<a href="goal-target-measure.html">Messgrößen-Prinzip</a> beschrieben.</p>
+</blockquote>
+
+<h3 id="fragebögen-als-messbare-zielgröße--mit-auslösenden-schwellen">Fragebögen als messbare Zielgröße – mit auslösenden Schwellen</h3>
+
+<p>Das übergeordnete Ziel „Lebensqualität" wird über <strong>von Patienten selbst ausgefüllte
+Fragebögen</strong> (englisch: Patient-Reported Outcome Measures, <strong>PROMs</strong>) messbar gemacht – der
+stärkste Beleg, dass eine Zielgröße auch <strong>etwas anderes als einen Laborwert</strong> sein kann. Im
+dDMP werden solche Fragebögen regelmäßig (z. B. alle zwei Wochen über eine Gesundheits-App
+oder die elektronische Patientenakte) erhoben und an <strong>Schwellenwerte</strong> gebunden, die
+automatisch eine Reaktion auslösen:</p>
+
+<ul>
+  <li><strong>WHO-5</strong> (kurzer Fragebogen zum Wohlbefinden, 5 Fragen): Wert <strong>&lt; 10</strong> → Empfehlung, die
+betreuende Praxis aufzusuchen.</li>
+  <li><strong>PAID</strong> („Problem Areas in Diabetes", 20 Fragen, Skala 0–100): <strong>≥ 40</strong> zeigt eine hohe
+seelische Belastung durch den Diabetes an → Warnhinweis, Terminvermittlung.</li>
+</ul>
+
+<p>Im Modell ist das <strong>genau</strong> die Kette <code class="language-plaintext highlighter-rouge">Goal.target</code> (Schwelle = Zielwert) → Verlaufs-
+Messung (Fragebogen-Wert als Ergebnis) → <code class="language-plaintext highlighter-rouge">achievementStatus</code> (Stand der Zielerreichung).
+Die Anbindung solcher Patienten-Fragebögen ist in <a href="goal-target-measure.html">Zielwerte und
+Messgrößen</a> bereits vorgesehen; das dDMP zeigt den konkreten
+Ablauf dazu.</p>
+
+<h3 id="wo-die-ziele-leben-ddmp--epa">Wo die Ziele „leben" (dDMP / ePA)</h3>
+
+<p>Im digitalen DMP wird der <strong>Behandlungsplan in der elektronischen Patientenakte (ePA)</strong>
+hinterlegt, die Dokumentation fein (bis zu einzelnen Laborwerten und Tagebucheinträgen)
+geführt und über sichere Kanäle geteilt. Für die technische Modellierung heißt das: die hier
+beschriebenen Zielobjekte haben im dDMP einen <strong>realen Ablage- und Austauschort</strong> – der
+Transfer des Modells ist nicht nur theoretisch, sondern trifft eine bereits gesetzlich
+angelegte Struktur (§ 137f SGB V, dDMP ab 2027).</p>
+
+<h3 id="was-der-transfer-zeigt">Was der Transfer zeigt</h3>
+
+<p><strong>Allgemeingültig</strong> ist die Struktur: übergeordnetes Ziel + messbare Zielwerte + Ergebnis-
+Messung. <strong>Krankheitsspezifisch</strong> sind nur die konkreten Werte und eine <strong>eigene
+Phasenlogik</strong> (Frühphasen-Remission neben parallelen Dauer-/Schutzzielen). Dass hier
+<strong>Fragebögen</strong> und <strong>Laborwerte</strong> gleichberechtigt als Zielgrößen auftreten und das DMP
+daran <strong>automatische Reaktionen</strong> knüpft, zeigt zweierlei: Die Ausrichtungen/Phasen müssen
+<strong>erweiterbar</strong> bleiben, und eine Zielgröße muss <strong>sowohl codierte Laborwerte als auch
+textuelle Fragebogen-Werte</strong> tragen können.</p>
+
+<h3 id="semantische-annotationen-codesysteme">Semantische Annotationen (Codesysteme)</h3>
+
+<p>Unabhängig von der Erklärung oben – so werden die Inhalte <strong>maschinenlesbar</strong> codiert. Die
+Codes sind gegen den MII-Terminologieserver geprüft (ICD-10-GM 2026, SNOMED CT 2026-07-01,
+ATC 2026, LOINC).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Codesystem(e)</th>
+      <th>Beispiel-Codes (validiert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Diagnose</strong></td>
+      <td>ICD-10-GM · SNOMED CT</td>
+      <td><code class="language-plaintext highlighter-rouge">E11.9</code> Diabetes mellitus Typ 2 · SNOMED <code class="language-plaintext highlighter-rouge">44054006</code> <em>Type 2 diabetes mellitus</em></td>
+    </tr>
+    <tr>
+      <td><strong>Diagnostik / Messwerte</strong></td>
+      <td>LOINC</td>
+      <td><code class="language-plaintext highlighter-rouge">4548-4</code> HbA1c · <code class="language-plaintext highlighter-rouge">62238-1</code> eGFR (CKD-EPI) · <code class="language-plaintext highlighter-rouge">9318-7</code> Albumin/Kreatinin (Urin) · <code class="language-plaintext highlighter-rouge">13457-7</code> LDL-Cholesterin · <code class="language-plaintext highlighter-rouge">8480-6</code>/<code class="language-plaintext highlighter-rouge">8462-4</code> Blutdruck</td>
+    </tr>
+    <tr>
+      <td><strong>Therapien (Prozeduren)</strong></td>
+      <td>OPS · SNOMED CT</td>
+      <td>überwiegend medikamentös; nicht-medikamentös z. B. Diabetes-Schulung, Ernährungstherapie</td>
+    </tr>
+    <tr>
+      <td><strong>Medikation</strong></td>
+      <td>ATC</td>
+      <td><code class="language-plaintext highlighter-rouge">A10</code> Antidiabetika: <code class="language-plaintext highlighter-rouge">A10BA02</code> Metformin · <code class="language-plaintext highlighter-rouge">A10BK</code> SGLT2-Inhibitoren · <code class="language-plaintext highlighter-rouge">A10BJ</code> GLP-1-Rezeptoragonisten · <code class="language-plaintext highlighter-rouge">A10BH</code> DPP-4-Inhibitoren · <code class="language-plaintext highlighter-rouge">A10BB</code> Sulfonylharnstoffe · <code class="language-plaintext highlighter-rouge">A10A</code> Insuline</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="leitlinien-und-quellen">Leitlinien und Quellen</h3>
+
+<ul>
+  <li>Bundesärztekammer (BÄK), Kassenärztliche Bundesvereinigung (KBV), AWMF. <em>Nationale
+VersorgungsLeitlinie Typ-2-Diabetes.</em> Version 3, 15.05.2023 (gültig bis 15.05.2028),
+AWMF-Reg.-Nr. nvl-001. <a href="https://www.leitlinien.de/themen/diabetes">leitlinien.de/themen/diabetes</a>
+(abgerufen 29.07.2026).</li>
+  <li>Deutsche Diabetes Gesellschaft (DDG) (Hrsg.). <em>Therapie des Typ-2-Diabetes.</em>
+Praxisempfehlung, 2025 (Diabetologie und Stoffwechsel, Suppl.).
+<a href="https://www.ddg.info/fileadmin/user_upload/05_Behandlung/01_Leitlinien/Praxisempfehlungen/2025/PE_Therapie_Typ-2-Diabetes_2025.pdf">ddg.info (PDF)</a></li>
+  <li><em>Europäisch:</em> Davies MJ, Aroda VR, Collins BS, et al. <em>Management of Hyperglycaemia in
+Type 2 Diabetes, 2022. A Consensus Report by the American Diabetes Association (ADA) and
+the European Association for the Study of Diabetes (EASD).</em> Diabetologia
+2022;65:1925–1966. DOI
+<a href="https://doi.org/10.1007/s00125-022-05787-2">10.1007/s00125-022-05787-2</a>.</li>
+  <li>Gemeinsamer Bundesausschuss (G-BA). <em>DMP-Anforderungen-Richtlinie (DMP-A-RL)</em> – Anlage
+Diabetes mellitus Typ 2 (Versorgungsziele des DMP).
+<a href="https://www.g-ba.de/richtlinien/83/">g-ba.de/richtlinien/83</a> (abgerufen 29.07.2026).</li>
+  <li>Caumanns J, Timpel P (_fbeta GmbH). <em>Patientenpfade im digitalen DMP Diabetes –
+Potenziale der Digitalisierung in die Versorgung von Menschen mit chronischen
+Erkrankungen bringen.</em> Hrsg. Bertelsmann Stiftung, Gütersloh, August 2025. DOI
+<a href="https://doi.org/10.11586/2025055">10.11586/2025055</a>. — Quelle für Versorgungsziele,
+PROMs (WHO-5, PAID, DDS) und die dDMP/ePA-Struktur.</li>
+</ul>
+
+<p>→ Zurück zur <a href="therapieziele.html">Übersicht der Therapieziele</a> ·
+<a href="goal-target-measure.html">Zielwerte und Messgrößen</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-31 14:18:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

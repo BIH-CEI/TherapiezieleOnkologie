@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObsTNMklinischMamma",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsTNMklinischMamma</b></p><a name=\"ObsTNMklinischMamma\"> </a><a name=\"hcObsTNMklinischMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21908-9}\">Stage group.clinical Cancer</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-16</p><p><b>value</b>: <span title=\"Codes:\">cT2 cN1 cM0 – UICC IIB</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "21908-9",
+      "display" : "Stage group.clinical Cancer"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "effectiveDateTime" : "2025-09-16",
+  "valueCodeableConcept" : {
+    "text" : "cT2 cN1 cM0 – UICC IIB"
+  }
+}

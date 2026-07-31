@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Therapieziele (Goals) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot-rc.2 - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/therapieziele.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Therapieziele (Goals)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot-rc.2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Therapieziele (Goals)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#therapieziele--worum-es-in-diesem-leitfaden-geht" id="markdown-toc-therapieziele--worum-es-in-diesem-leitfaden-geht">Therapieziele — worum es in diesem Leitfaden geht</a></li>
+  <li><a href="#zielart-ist-nicht-therapieintention--zwei-achsen" id="markdown-toc-zielart-ist-nicht-therapieintention--zwei-achsen">Zielart ist nicht Therapieintention — zwei Achsen</a></li>
+  <li><a href="#das-ziel-ist-primär--der-plan-folgt" id="markdown-toc-das-ziel-ist-primär--der-plan-folgt">Das Ziel ist primär — der Plan folgt</a></li>
+  <li><a href="#zwei-ebenen-übergeordnetes-ziel-und-episodenziele" id="markdown-toc-zwei-ebenen-übergeordnetes-ziel-und-episodenziele">Zwei Ebenen: übergeordnetes Ziel und Episodenziele</a></li>
+  <li><a href="#über-die-onkologie-hinaus--weitere-intentionen-und-entitäten" id="markdown-toc-über-die-onkologie-hinaus--weitere-intentionen-und-entitäten">Über die Onkologie hinaus — weitere Intentionen und Entitäten</a></li>
+  <li><a href="#ein-strategiewechsel-ersetzt-das-ziel--er-ändert-es-nicht" id="markdown-toc-ein-strategiewechsel-ersetzt-das-ziel--er-ändert-es-nicht">Ein Strategiewechsel ersetzt das Ziel — er ändert es nicht</a></li>
+  <li><a href="#die-intention-wird-bei-der-therapieempfehlung-gesetzt" id="markdown-toc-die-intention-wird-bei-der-therapieempfehlung-gesetzt">Die Intention wird bei der Therapieempfehlung gesetzt</a></li>
+  <li><a href="#beispiele" id="markdown-toc-beispiele">Beispiele</a></li>
+</ul>
+
+</div>
+<h3 id="therapieziele--worum-es-in-diesem-leitfaden-geht">Therapieziele — worum es in diesem Leitfaden geht</h3>
+
+<p>Ein <strong>Therapieziel</strong> ist der gemeinsam von Patient:in und Behandlungsteam festgelegte,
+angestrebte Zustand einer onkologischen Behandlung. Es ist der zentrale Gegenstand
+dieses Leitfadens und wird als FHIR-<code class="language-plaintext highlighter-rouge">Goal</code> im Profil
+<a href="StructureDefinition-onko-therapy-goal.html"><code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code></a> abgebildet.</p>
+
+<p>Ein Therapieziel beantwortet <strong>nicht</strong> „<em>was wird getan</em>" (das sind Maßnahmen wie
+<code class="language-plaintext highlighter-rouge">ServiceRequest</code>/<code class="language-plaintext highlighter-rouge">MedicationRequest</code>), sondern „<em>was soll erreicht werden</em>". Die
+<strong>Zielart</strong> wird codiert aus <a href="CodeSystem-onko-therapy-goal-type.html">OnkoTherapyGoalType</a>:
+Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt.
+Studienteilnahme ist bewusst <strong>keine</strong> Zielart — sie ist ein <em>Mittel</em> (investigationale
+Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand.</p>
+
+<h3 id="zielart-ist-nicht-therapieintention--zwei-achsen">Zielart ist nicht Therapieintention — zwei Achsen</h3>
+
+<p>Die <strong>Zielart</strong> (<code class="language-plaintext highlighter-rouge">Goal.category</code>) und die <strong>Therapieintention</strong>
+(<a href="StructureDefinition-onko-therapy-intent.html">OnkoTherapyIntent</a>, SNOMED-Hierarchie
+<code class="language-plaintext highlighter-rouge">362961001 | Procedure by intent</code>) beantworten verschiedene Fragen und dürfen nicht
+vermengt werden:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Therapieintention</th>
+      <th>Zielart</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Frage</strong></td>
+      <td><em>Mit welcher Ausrichtung wird behandelt?</em></td>
+      <td><em>Welcher Zustand soll erreicht werden?</em></td>
+    </tr>
+    <tr>
+      <td><strong>Perspektive</strong></td>
+      <td>Prozedur / Therapielinie</td>
+      <td>Patient:in / Outcome</td>
+    </tr>
+    <tr>
+      <td><strong>Werte</strong></td>
+      <td>kurativ, palliativ, neoadjuvant, adjuvant, supportiv</td>
+      <td>Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt</td>
+    </tr>
+    <tr>
+      <td><strong>Ort</strong></td>
+      <td>Extension an Episode (Pflicht), Plan, Ziel</td>
+      <td><code class="language-plaintext highlighter-rouge">Goal.category</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die Achsen <strong>korrelieren, sind aber nicht redundant</strong>: Im
+<a href="szenario-crc.html">mCRC-Szenario</a> bleibt die Intention <code class="language-plaintext highlighter-rouge">palliativ</code>, während die Zielart
+zwischen Lebensverlängerung und Erhaltung wechselt; im
+<a href="szenario-mamma.html">Mamma-Szenario</a> trägt die <em>neoadjuvante</em> Linie das <em>kurative</em>
+Gesamtziel. Eine Achse allein könnte beides nicht ausdrücken.</p>
+
+<p>Für die patientenzentrierten Zielarten gilt: <strong>Die Kategorie folgt der
+Erfassungsebene, nicht dem Instrument.</strong> Symptombezogen erfasst (Skala oder erfragte
+Symptomlast) → Symptomkontrolle; auf eine konkrete, benennbare Funktion oder Struktur
+bezogen → Funktionserhalt; global patientenberichtet — per standardisiertem PROM
+<em>oder</em> strukturiertem Interview (z. B. SEIQoL-DW, Zielklärungsgespräch) →
+Lebensqualität. Für ein gegebenes <code class="language-plaintext highlighter-rouge">target</code> ist damit genau eine Kategorie richtig;
+die Kombination mehrerer Kategorien an einem Ziel bleibt möglich, wo tatsächlich
+mehrere Zielzustände verfolgt werden (z. B. Heilung <strong>und</strong> Brusterhalt).</p>
+
+<p><strong>Funktionserhalt</strong> ist dabei ein patientenpriorisiertes Ziel, das die Auswahl der
+Maßnahmen in <em>beide</em> Richtungen steuern kann — Deeskalation der Operation
+(Kontinenz-, Larynxerhalt) ebenso wie Intensivierung der Vortherapie (neoadjuvante
+Systemtherapie, die den Brusterhalt erst ermöglicht) — und dessen Erreichen
+eigenständig nachgehalten wird: Es kann scheitern (<code class="language-plaintext highlighter-rouge">not-achieved</code>), während das
+kurative Ziel weiter verfolgt wird.</p>
+
+<p>Die semantische Verankerung der Zielarten in SNOMED CT (Zielzustands-Konzepte, nicht
+Intent-Qualifier) dokumentiert die ConceptMap
+<a href="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html">Zielarten → SNOMED CT</a>.</p>
+
+<h3 id="das-ziel-ist-primär--der-plan-folgt">Das Ziel ist primär — der Plan folgt</h3>
+
+<p>Ein <code class="language-plaintext highlighter-rouge">Goal</code> ist eine <strong>eigenständige Ressource, die dem Versorgungsplan vorausgeht</strong>:
+Zuerst wird — im Rahmen der Therapieempfehlung (siehe unten) — das Ziel festgelegt,
+dann folgt der <code class="language-plaintext highlighter-rouge">CarePlan</code> zu seiner Erfüllung. <code class="language-plaintext highlighter-rouge">CarePlan.goal</code> ist daher eine
+<em>Verfolgungs-Referenz</em>, <strong>kein Besitz</strong>: derselbe Zielgegenstand kann von mehreren
+Plänen verfolgt werden, und das Ziel „gehört" keinem einzelnen Plan.</p>
+
+<p>Dieses Muster ist an den <a href="https://build.fhir.org/ig/HL7/fhir-us-mcc/">HL7 US MCC eCare Plan</a>
+angelehnt: das Therapieziel ist ein referenzierbares, eigenständiges Steuerobjekt.</p>
+
+<h3 id="zwei-ebenen-übergeordnetes-ziel-und-episodenziele">Zwei Ebenen: übergeordnetes Ziel und Episodenziele</h3>
+
+<p>Therapieziele treten auf <strong>zwei Ebenen</strong> auf:</p>
+
+<ul>
+  <li><strong>Übergeordnetes Behandlungsziel</strong> — genau <strong>ein zu jedem Zeitpunkt aktives</strong> Ziel,
+das die <em>strategische</em> Ausrichtung trägt: <strong>kurativ</strong> vs. <strong>palliativ</strong>. Es
+repräsentiert „worauf die Gesamtbehandlung hinauswill".</li>
+  <li><strong>Episodenziele</strong> — optionale, spezifischere Ziele, die einem konkreten
+Behandlungsabschnitt zugeordnet sind (z. B. „pathologische Komplettremission unter
+neoadjuvanter Therapie" oder „Rezidivfreiheit in der Nachsorge").</li>
+</ul>
+
+<p>Die Zielart des übergeordneten Ziels wird durch die Extension
+<a href="StructureDefinition-onko-therapy-intent.html"><code class="language-plaintext highlighter-rouge">OnkoTherapyIntent</code></a> präzisiert
+(kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).</p>
+
+<svg width="100%" viewBox="0 0 680 360" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Zwei Ebenen der Therapieziele und der Strategiewechsel</title>
+<desc>Ebene 1: genau ein aktives uebergeordnetes Behandlungsziel je Zeitpunkt; beim Strategiewechsel (Progress) wird es abgeschlossen und durch ein neues ersetzt (replacement). Ebene 2: optionale Episodenziele je Behandlungsabschnitt, bei erfolgreichem Abschluss als Journey verkettet (successor). Unten der Zeitpfeil.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+<marker id="argn" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#0F6E56" /></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<text x="40" y="26" font-size="11.5" font-weight="500" fill="#5F5E5A">Ebene 1 — übergeordnetes Behandlungsziel (genau ein aktives je Zeitpunkt)</text>
+
+<g><rect x="40" y="36" width="270" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="175" y="58" text-anchor="middle" font-size="12.5" font-weight="500" fill="#04342C">Übergeordnet: kurativ</text>
+<text x="175" y="75" text-anchor="middle" font-size="10" fill="#0F6E56">Heilung angestrebt</text></g>
+<text x="175" y="105" text-anchor="middle" font-size="9.5" fill="#5F5E5A">abgeschlossen: cancelled + not-attainable</text>
+
+<line x1="314" y1="63" x2="366" y2="63" stroke="#534AB7" stroke-width="1.8" marker-end="url(#arp)" />
+<text x="340" y="52" text-anchor="middle" font-size="9.5" font-weight="500" fill="#534AB7">replacement</text>
+
+<g><rect x="370" y="36" width="270" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="505" y="58" text-anchor="middle" font-size="12.5" font-weight="500" fill="#04342C">Übergeordnet: palliativ</text>
+<text x="505" y="75" text-anchor="middle" font-size="9.5" fill="#0F6E56">Lebensverlängerung · Symptomkontrolle</text></g>
+
+<line x1="340" y1="96" x2="340" y2="124" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<line x1="340" y1="142" x2="340" y2="252" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" />
+<text x="348" y="112" font-size="9.5" fill="#5F5E5A">Progress</text>
+
+<text x="40" y="136" font-size="11.5" font-weight="500" fill="#5F5E5A">Ebene 2 — Episodenziele (optional, dem Behandlungsabschnitt zugeordnet)</text>
+
+<g><rect x="40" y="146" width="125" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="102" y="168" text-anchor="middle" font-size="10" font-weight="500" fill="#04342C">Tumorverkleinerung</text>
+<text x="102" y="184" text-anchor="middle" font-size="9.5" fill="#0F6E56">neoadjuvant</text></g>
+
+<line x1="167" y1="173" x2="183" y2="173" stroke="#0F6E56" stroke-width="1.6" marker-end="url(#argn)" />
+
+<g><rect x="185" y="146" width="125" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="247" y="168" text-anchor="middle" font-size="11" font-weight="500" fill="#04342C">Rezidivfreiheit</text>
+<text x="247" y="184" text-anchor="middle" font-size="9.5" fill="#0F6E56">Nachsorge</text></g>
+
+<g><rect x="370" y="146" width="190" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="465" y="168" text-anchor="middle" font-size="11.5" font-weight="500" fill="#04342C">Symptomkontrolle</text>
+<text x="465" y="184" text-anchor="middle" font-size="9.5" fill="#0F6E56">1. palliative Linie</text></g>
+
+<line x1="40" y1="252" x2="628" y2="252" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)" />
+<text x="640" y="256" font-size="11" fill="#5F5E5A">Zeit</text>
+
+<text x="40" y="282" font-size="10.5" fill="#5F5E5A">Strategiewechsel (Progress): das übergeordnete Ziel wird abgeschlossen und durch ein neues ersetzt (replacement) —</text>
+<text x="40" y="298" font-size="10.5" fill="#5F5E5A">die Historie „erst kurativ, dann palliativ“ bleibt erhalten. Erfolgreiche Ziele verketten sich als Journey (successor).</text>
+
+<rect x="40" y="322" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="59" y="333" font-size="11" fill="#5F5E5A">Ziel</text>
+<line x1="100" y1="328" x2="130" y2="328" stroke="#0F6E56" stroke-width="1.6" marker-end="url(#argn)" /><text x="136" y="333" font-size="11" fill="#5F5E5A">successor (Journey)</text>
+<line x1="250" y1="328" x2="280" y2="328" stroke="#534AB7" stroke-width="1.8" marker-end="url(#arp)" /><text x="286" y="333" font-size="11" fill="#5F5E5A">replacement (Pivot)</text>
+<line x1="400" y1="328" x2="430" y2="328" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" /><text x="436" y="333" font-size="11" fill="#5F5E5A">klinisches Ereignis</text>
+</svg>
+
+<blockquote>
+  <p><strong>Zielmodell.</strong> Die saubere Trennung „ein aktives übergeordnetes Ziel + optionale
+Episodenziele" sowie die Behandlung eines Strategiewechsels (s. u.) sind
+architektonisch festgelegt und werden im laufenden Ausbau des Profilsatzes
+umgesetzt.</p>
+</blockquote>
+
+<h3 id="über-die-onkologie-hinaus--weitere-intentionen-und-entitäten">Über die Onkologie hinaus — weitere Intentionen und Entitäten</h3>
+
+<p>Die oben genannten Zielarten und die Intentionen kurativ/palliativ sind <strong>nicht
+abschließend</strong>. Andere Entitäten kennen weitere, spezialisierte Intentionen bzw.
+Behandlungsphasen — hämatologische Erkrankungen etwa <strong>Induktion</strong>, <strong>Konsolidierung</strong>
+und <strong>Erhaltungstherapie</strong>. Zielart und Intention sind deshalb bewusst <strong>offen
+(extensible)</strong> kodiert.</p>
+
+<p>Der zugrunde liegende Aufbau — ein übergeordnetes Ziel plus Phasen-/Episodenziele — ist
+<strong>erkrankungsübergreifend</strong> tragfähig. Für ausgewählte weitere Erkrankungen zeigen
+<strong>eigene Seiten</strong> denselben Aufbau mit entitätsspezifischen Werten:
+<a href="entitaet-diabetes.html">Diabetes mellitus</a>, <a href="entitaet-asthma.html">Asthma bronchiale</a>,
+<a href="entitaet-ced.html">chronisch-entzündliche Darmerkrankungen</a> und
+<a href="entitaet-rheuma.html">rheumatoide Arthritis</a>. Sie illustrieren die Bandbreite der
+Phasenlogik — von Frühphasen-Remission plus paralleler Dauerkontrolle (Diabetes) über
+Step-up/Step-down (Asthma) bis Induktion→Erhalt (CED, Rheuma) — und, am Diabetes, wie
+das digitale DMP diese Ziele samt patientenberichteter Messgrößen bereits kodifiziert.</p>
+
+<h3 id="ein-strategiewechsel-ersetzt-das-ziel--er-ändert-es-nicht">Ein Strategiewechsel ersetzt das Ziel — er ändert es nicht</h3>
+
+<p>Die strategische Intention ist <strong>nicht stabil</strong>: Eine kurativ behandelte Erkrankung
+kann bei Progress in eine <strong>palliative</strong> Situation übergehen. Ein solcher Wechsel ist
+ein klinisch hochbedeutsames, nachvollziehbar zu dokumentierendes Ereignis.</p>
+
+<p>Deshalb wird das übergeordnete Ziel bei einem Wechsel <strong>nicht in-place geändert</strong>,
+sondern <strong>abgeschlossen und durch ein neues ersetzt</strong> (verknüpft über die
+Ziel-Beziehung <code class="language-plaintext highlighter-rouge">replacement</code>/<code class="language-plaintext highlighter-rouge">successor</code>). So bleibt die Aussage „erst wurde Heilung
+angestrebt, dann Palliation" als Historie erhalten — statt in einem überschriebenen
+Feld verloren zu gehen.</p>
+
+<h3 id="die-intention-wird-bei-der-therapieempfehlung-gesetzt">Die Intention wird bei der Therapieempfehlung gesetzt</h3>
+
+<p>Der entscheidende Punkt: <strong>Die strategische Intention (kurativ/palliativ) wird dort
+festgelegt, wo die Therapie <em>empfohlen</em> wird</strong> — typischerweise im interdisziplinären
+<strong>Tumorboard</strong>, nachdem die Diagnostik die für Grading und Staging nötige Information
+geliefert hat. Das Board synthetisiert aus Leitlinien, Studien, internen SOPs und
+Expertenmeinung eine <strong>Empfehlung</strong>; im Zuge dieser Empfehlung — und der
+anschließenden partizipativen Entscheidungsfindung mit der Patient:in — entsteht das
+übergeordnete Behandlungsziel.</p>
+
+<p>Daraus folgt eine wichtige Unterscheidung, die die nächste Seite entfaltet: die
+<strong>Empfehlung</strong> (was das Board vorschlägt) und die <strong>tatsächliche Behandlung</strong> (was —
+ggf. an anderen Einrichtungen — umgesetzt wird) sind <strong>verschiedene Gegenstände</strong> mit
+unterschiedlicher Detailtiefe und zeitlicher wie organisatorischer Entkopplung.</p>
+
+<p>→ Weiter: <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a></p>
+
+<h3 id="beispiele">Beispiele</h3>
+
+<ul>
+  <li><a href="szenario-crc.html">Anwendungsbeispiel mCRC (palliativ)</a> — übergeordnetes Ziel
+<em>Lebensverlängerung</em> + <em>Symptomkontrolle</em>, inkl. eines abgelehnten kurativen Ziels.</li>
+  <li><a href="szenario-mamma.html">Anwendungsbeispiel Mammakarzinom (neoadjuvant)</a> — kuratives
+übergeordnetes Ziel mit Episodenzielen entlang Therapie und Nachsorge.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot-rc.2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-07-31 14:18:00 +0000">
+    2026-07-31
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,82 @@
+# Therapieziel – kurative Resektion (abgelehnt, Beispiel) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot-rc.2
+
+## Example Goal: Therapieziel – kurative Resektion (abgelehnt, Beispiel)
+
+-------
+
+**English**
+
+-------
+
+Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
+
+> **Onkologische Therapieintention (Extension)**
+* hauptintention: Curative - procedure intent
+
+**Goal Reason Rejected**: Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar.
+
+**lifecycleStatus**: Rejected
+
+**category**: Heilung
+
+**description**: Kurative Resektion des Primärtumors mit kurativer Absicht.
+
+**subject**: [Erika Musterfrau Female, DoB: 1961-09-12](Patient-PatientinCRC.md)
+
+**expressedBy**: [Practitioner Petra Musterarzt ](Practitioner-OnkologinCRC.md)
+
+**addresses**: [Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet](Condition-ConditionCRC.md)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Goal",
+  "id" : "TherapiezielCRCKurativAbgelehnt",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "hauptintention",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "373808002",
+          "display" : "Curative - procedure intent"
+        }]
+      }
+    }],
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-reasonRejected",
+    "valueCodeableConcept" : {
+      "text" : "Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar."
+    }
+  }],
+  "lifecycleStatus" : "rejected",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+      "code" : "heilung",
+      "display" : "Heilung"
+    }]
+  }],
+  "description" : {
+    "text" : "Kurative Resektion des Primärtumors mit kurativer Absicht."
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinCRC"
+  },
+  "expressedBy" : {
+    "reference" : "Practitioner/OnkologinCRC"
+  },
+  "addresses" : [{
+    "reference" : "Condition/ConditionCRC"
+  }]
+}
+
+```

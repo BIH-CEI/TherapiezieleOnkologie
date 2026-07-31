@@ -1,0 +1,1927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="BundleMammaNeoadjuvant"/>
+  <language value="en"/>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Patient/PatientinMamma"/>
+    <resource>
+      <Patient>
+        <id value="PatientinMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="Baumann"/>
+          <given value="Sabine"/>
+        </name>
+        <gender value="female"/>
+        <birthDate value="1977-06-24"/>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Practitioner/OnkologinMamma"/>
+    <resource>
+      <Practitioner>
+        <id value="OnkologinMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="Musterarzt"/>
+          <given value="Katrin"/>
+        </name>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Organization/TumorzentrumMamma"/>
+    <resource>
+      <Organization>
+        <id value="TumorzentrumMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name value="Zertifiziertes Brustzentrum Musterklinik"/>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Organization/Tumorboard"/>
+    <resource>
+      <Organization>
+        <id value="Tumorboard"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <system value="https://www.musterklinik.de/fhir/sid/organisationen"/>
+          <value value="tumorboard-brust-001"/>
+        </identifier>
+        <active value="true"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="team"/>
+            <display value="Organizational team"/>
+          </coding>
+        </type>
+        <name value="Zertifiziertes Brustzentrum Musterklinik"/>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/ServiceRequest/ServiceRequestBiopsieMamma"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequestBiopsieMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <intent value="order"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44578009"/>
+            <display value="Core needle biopsy of breast (procedure)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <authoredOn value="2025-09-12"/>
+        <requester>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </requester>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/ServiceRequest/ServiceRequestPathologieMamma"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequestPathologieMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <intent value="order"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="788124003"/>
+            <display value="Histopathology service (qualifier value)"/>
+          </coding>
+          <text value="Histopathologische Untersuchung inkl. Rezeptor-/HER2-Status und Ki-67"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <authoredOn value="2025-09-15"/>
+        <requester>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </requester>
+        <specimen>
+          <reference value="Specimen/SpecimenBiopsieMamma"/>
+        </specimen>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/ServiceRequest/ServiceRequestStagingMamma"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequestStagingMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <intent value="order"/>
+        <code>
+          <text value="Klinische Ausbreitungsdiagnostik / TNM-Staging"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <authoredOn value="2025-09-15"/>
+        <requester>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </requester>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/ServiceRequest/ServiceRequestGBRCAMamma"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequestGBRCAMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <intent value="order"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="21639-0"/>
+            <display value="BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <authoredOn value="2025-09-18"/>
+        <requester>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </requester>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/CarePlan/CarePlanMammaDiagnostik"/>
+    <resource>
+      <CarePlan>
+        <id value="CarePlanMammaDiagnostik"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="plan"/>
+        <category>
+          <text value="Tumordiagnostik"/>
+        </category>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <author>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </author>
+        <addresses>
+          <reference value="Condition/ConditionMamma"/>
+        </addresses>
+        <goal>
+          <reference value="Goal/DiagnosticGoal"/>
+        </goal>
+        <activity>
+          <outcomeReference>
+            <reference value="Procedure/ProcedureBiopsieMamma"/>
+          </outcomeReference>
+          <reference>
+            <reference value="ServiceRequest/ServiceRequestBiopsieMamma"/>
+          </reference>
+        </activity>
+        <activity>
+          <outcomeReference>
+            <reference value="Observation/ObsHistologieMamma"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="Observation/ObsGradingMamma"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="Observation/ObsEstrogenrezeptorMamma"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="Observation/ObsProgesteronrezeptorMamma"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="Observation/ObsHER2Mamma"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="Observation/ObsKi67Mamma"/>
+          </outcomeReference>
+          <reference>
+            <reference value="ServiceRequest/ServiceRequestPathologieMamma"/>
+          </reference>
+        </activity>
+        <activity>
+          <outcomeReference>
+            <reference value="Observation/ObsTNMklinischMamma"/>
+          </outcomeReference>
+          <reference>
+            <reference value="ServiceRequest/ServiceRequestStagingMamma"/>
+          </reference>
+        </activity>
+        <activity>
+          <outcomeReference>
+            <reference value="Observation/ObsGBRCAMamma"/>
+          </outcomeReference>
+          <reference>
+            <reference value="ServiceRequest/ServiceRequestGBRCAMamma"/>
+          </reference>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Goal/DiagnosticGoal"/>
+    <resource>
+      <Goal>
+        <id value="DiagnosticGoal"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-acceptance">
+          <extension url="individual">
+            <valueReference>
+              <reference value="Patient/PatientinMamma"/>
+            </valueReference>
+          </extension>
+          <extension url="status">
+            <valueCode value="agree"/>
+          </extension>
+          <extension url="priority">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+                <code value="high-priority"/>
+                <display value="High Priority"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <lifecycleStatus value="active"/>
+        <achievementStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+            <code value="in-progress"/>
+            <display value="In Progress"/>
+          </coding>
+        </achievementStatus>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="261004008"/>
+            <display value="Diagnostic intent"/>
+          </coding>
+        </category>
+        <priority>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+            <code value="high-priority"/>
+            <display value="High Priority"/>
+          </coding>
+        </priority>
+        <description>
+          <text value="Diagnosesicherung für die Verdachtsdiagnose"/>
+        </description>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <startDate value="2025-09-12"/>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="21905-5"/>
+              <display value="Primary tumor.clinical [Class] Cancer"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="21906-3"/>
+              <display value="Regional lymph nodes.clinical [Class] Cancer"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="21907-1"/>
+              <display value="Distant metastases.clinical [Class] Cancer"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="21908-9"/>
+              <display value="Stage group.clinical Cancer"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="40556-3"/>
+              <display value="Estrogen receptor Ag [Presence] in Tissue by Immune stain"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="85339-0"/>
+              <display value="Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48676-1"/>
+              <display value="HER2 Ag [Interpretation] in Tissue"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="21855-2"/>
+              <display value="Primary site Cancer"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="44648-4"/>
+              <display value="Histologic grade [Score] in Breast cancer specimen by Nottingham"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="33732-9"/>
+              <display value="Histology grade [Identifier] in Cancer specimen"/>
+            </coding>
+          </measure>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="85347-3"/>
+              <display value="Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"/>
+            </coding>
+          </measure>
+        </target>
+        <expressedBy>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </expressedBy>
+        <addresses>
+          <reference value="Condition/ConditionMamma"/>
+        </addresses>
+        <outcomeReference>
+          <reference value="Observation/ObsDiseaseStatusMamma"/>
+        </outcomeReference>
+      </Goal>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Goal"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Condition/ConditionMamma"/>
+    <resource>
+      <Condition>
+        <id value="ConditionMamma"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2025-09-15"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2026"/>
+            <code value="C50.4"/>
+            <display value="Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"/>
+          </coding>
+          <text value="Invasives Mammakarzinom links, oberer äußerer Quadrant (NST), triple-negativ"/>
+        </code>
+        <bodySite>
+          <text value="Mamma links, oberer äußerer Quadrant"/>
+        </bodySite>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <onsetDateTime value="2025-09-15"/>
+        <recordedDate value="2025-09-15"/>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Procedure/ProcedureBiopsieMamma"/>
+    <resource>
+      <Procedure>
+        <id value="ProcedureBiopsieMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="103693007"/>
+            <display value="Diagnostic procedure (procedure)"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44578009"/>
+            <display value="Core needle biopsy of breast (procedure)"/>
+          </coding>
+          <text value="Sonografisch gesteuerte Stanzbiopsie der Mamma links"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <performedDateTime value="2025-09-15"/>
+        <reasonReference>
+          <reference value="Condition/ConditionMamma"/>
+        </reasonReference>
+        <bodySite>
+          <text value="Mamma links, oberer äußerer Quadrant"/>
+        </bodySite>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Specimen/SpecimenBiopsieMamma"/>
+    <resource>
+      <Specimen>
+        <id value="SpecimenBiopsieMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="available"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="122737001"/>
+            <display value="Specimen from breast obtained by core needle biopsy"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="119376003"/>
+            <display value="Tissue specimen (specimen)"/>
+          </coding>
+          <text value="Stanzbiopsat (Gewebeprobe) Mamma links"/>
+        </type>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <collection>
+          <collectedDateTime value="2025-09-15"/>
+          <method>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="9911007"/>
+              <display value="Core needle biopsy"/>
+            </coding>
+          </method>
+          <bodySite>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="76365002"/>
+              <display value="Structure of upper outer quadrant of breast"/>
+            </coding>
+            <text value="Mamma links, oberer äußerer Quadrant"/>
+          </bodySite>
+        </collection>
+      </Specimen>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Specimen"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsHistologieMamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsHistologieMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="59847-4"/>
+            <display value="Histology and Behavior ICD-O-3 Cancer"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-09-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="82711006"/>
+            <display value="Infiltrating duct carcinoma"/>
+          </coding>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.6.43.1"/>
+            <code value="8500/3"/>
+            <display value="Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"/>
+          </coding>
+          <text value="Invasives Mammakarzinom, NST (ICD-O-3 8500/3)"/>
+        </valueCodeableConcept>
+        <specimen>
+          <reference value="Specimen/SpecimenBiopsieMamma"/>
+        </specimen>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsGradingMamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsGradingMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="44648-4"/>
+            <display value="Histologic grade [Score] in Breast cancer specimen by Nottingham"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-09-15"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1155704001"/>
+            <display value="G3: Poorly differentiated"/>
+          </coding>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading"/>
+            <code value="3"/>
+            <display value="schlecht differenziert"/>
+          </coding>
+          <text value="G3 – schlecht differenziert (Elston-Ellis)"/>
+        </valueCodeableConcept>
+        <specimen>
+          <reference value="Specimen/SpecimenBiopsieMamma"/>
+        </specimen>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsTNMklinischMamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsTNMklinischMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="21908-9"/>
+            <display value="Stage group.clinical Cancer"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-09-16"/>
+        <valueCodeableConcept>
+          <text value="cT2 cN1 cM0 – UICC IIB"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsEstrogenrezeptorMamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsEstrogenrezeptorMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85337-4"/>
+            <display value="Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1234806008"/>
+            <display value="Observation using immunohistochemistry (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-09-17"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6577-6"/>
+            <display value="Negative"/>
+          </coding>
+        </valueCodeableConcept>
+        <note>
+          <text value="Immunhistochemie: &lt;1 % positive Kerne → ER-negativ."/>
+        </note>
+        <specimen>
+          <reference value="Specimen/SpecimenBiopsieMamma"/>
+        </specimen>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsProgesteronrezeptorMamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsProgesteronrezeptorMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85339-0"/>
+            <display value="Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1234806008"/>
+            <display value="Observation using immunohistochemistry (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-09-17"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6577-6"/>
+            <display value="Negative"/>
+          </coding>
+        </valueCodeableConcept>
+        <note>
+          <text value="Immunhistochemie: &lt;1 % positive Kerne → PR-negativ."/>
+        </note>
+        <specimen>
+          <reference value="Specimen/SpecimenBiopsieMamma"/>
+        </specimen>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsHER2Mamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsHER2Mamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="48676-1"/>
+            <display value="HER2 Ag [Interpretation] in Tissue"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-09-17"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6577-6"/>
+            <display value="Negative"/>
+          </coding>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds"/>
+            <code value="N"/>
+            <display value="negativ"/>
+          </coding>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie"/>
+            <code value="negativ"/>
+            <display value="HER2-negativ"/>
+          </coding>
+        </valueCodeableConcept>
+        <note>
+          <text value="Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich."/>
+        </note>
+        <specimen>
+          <reference value="Specimen/SpecimenBiopsieMamma"/>
+        </specimen>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsKi67Mamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsKi67Mamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85330-9"/>
+            <display value="Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1234806008"/>
+            <display value="Observation using immunohistochemistry (observable entity)"/>
+          </coding>
+          <text value="Ki-67 Proliferationsindex (MIB-1)"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-09-17"/>
+        <valueQuantity>
+          <value value="70"/>
+          <unit value="%"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueQuantity>
+        <specimen>
+          <reference value="Specimen/SpecimenBiopsieMamma"/>
+        </specimen>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsGBRCAMamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsGBRCAMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="21639-0"/>
+            <display value="BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-09-25"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+        </valueCodeableConcept>
+        <note>
+          <text value="gBRCA1/2: keine (wahrscheinlich) pathogene Variante (Klasse 4/5) nachgewiesen."/>
+        </note>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/EpisodeOfCare/TherapielinieChemo"/>
+    <resource>
+      <EpisodeOfCare>
+        <id value="TherapielinieChemo"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+          <extension url="hauptintention">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="373847000"/>
+                <display value="Neoadjuvant intent"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="phase">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="373808002"/>
+                <display value="Curative - procedure intent"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot">
+          <extension url="setting">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting"/>
+                <code value="eLoT"/>
+                <display value="eLoT — frühes Setting"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="line">
+            <valuePositiveInt value="1"/>
+          </extension>
+          <extension url="modification">
+            <valueUnsignedInt value="0"/>
+          </extension>
+          <extension url="notation">
+            <valueString value="eLoT 1.0"/>
+          </extension>
+          <extension url="lineId">
+            <valueIdentifier>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/sid/enlist-line"/>
+              <value value="mamma-baumann-elot-1"/>
+            </valueIdentifier>
+          </extension>
+        </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable"/>
+              <code value="counted"/>
+              <display value="Zählt in der LoT-Zählung"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request">
+          <valueReference>
+            <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+          </valueReference>
+        </extension>
+        <status value="finished"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385786002"/>
+            <display value="Chemotherapy care"/>
+          </coding>
+        </type>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/ConditionMamma"/>
+          </condition>
+          <role>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="CC"/>
+              <display value="Chief complaint"/>
+            </coding>
+          </role>
+          <rank value="1"/>
+        </diagnosis>
+        <patient>
+          <reference value="Patient/PatientinMamma"/>
+        </patient>
+        <managingOrganization>
+          <reference value="Organization/Tumorboard"/>
+        </managingOrganization>
+        <period>
+          <start value="2025-10-01"/>
+          <end value="2026-03-15"/>
+        </period>
+        <careManager>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </careManager>
+      </EpisodeOfCare>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="EpisodeOfCare"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/EpisodeOfCare/TherapielinieOperation"/>
+    <resource>
+      <EpisodeOfCare>
+        <id value="TherapielinieOperation"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+          <extension url="hauptintention">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="373808002"/>
+                <display value="Curative - procedure intent"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable"/>
+              <code value="not-counted"/>
+              <display value="Zählt nicht"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="finished"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </type>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/ConditionMamma"/>
+          </condition>
+          <role>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="CC"/>
+              <display value="Chief complaint"/>
+            </coding>
+          </role>
+          <rank value="1"/>
+        </diagnosis>
+        <patient>
+          <reference value="Patient/PatientinMamma"/>
+        </patient>
+        <managingOrganization>
+          <reference value="Organization/Tumorboard"/>
+        </managingOrganization>
+        <period>
+          <start value="2026-03-20"/>
+          <end value="2026-04-06"/>
+        </period>
+        <referralRequest>
+          <reference value="ServiceRequest/ServiceRequestProcedure"/>
+        </referralRequest>
+        <careManager>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </careManager>
+      </EpisodeOfCare>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="EpisodeOfCare"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Goal/TherapiezielMammaHeilung"/>
+    <resource>
+      <Goal>
+        <id value="TherapiezielMammaHeilung"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+          <extension url="hauptintention">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="373808002"/>
+                <display value="Curative - procedure intent"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-acceptance">
+          <extension url="individual">
+            <valueReference>
+              <reference value="Patient/PatientinMamma"/>
+            </valueReference>
+          </extension>
+          <extension url="status">
+            <valueCode value="agree"/>
+          </extension>
+          <extension url="priority">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+                <code value="high-priority"/>
+                <display value="High Priority"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-relationship">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/goal-relationship-type"/>
+                <code value="predecessor"/>
+                <display value="Predecessor"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="target">
+            <valueReference>
+              <reference value="Goal/DiagnosticGoal"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-relationship">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/goal-relationship-type"/>
+                <code value="successor"/>
+                <display value="Successor"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="target">
+            <valueReference>
+              <reference value="Goal/FollowUpGoal"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <lifecycleStatus value="active"/>
+        <achievementStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+            <code value="achieved"/>
+            <display value="Achieved"/>
+          </coding>
+        </achievementStatus>
+        <category>
+          <coding>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="heilung"/>
+            <display value="Heilung"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="funktionserhalt"/>
+            <display value="Funktionserhalt"/>
+          </coding>
+        </category>
+        <priority>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+            <code value="high-priority"/>
+            <display value="High Priority"/>
+          </coding>
+        </priority>
+        <description>
+          <text value="Kurative Behandlung des frühen triple-negativen Mammakarzinoms mittels neoadjuvanter Systemtherapie und brusterhaltender Operation; Erreichen einer pathologischen Komplettremission (pCR)."/>
+        </description>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <startDate value="2025-09-22"/>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="21908-9"/>
+              <display value="Stage group.clinical Cancer"/>
+            </coding>
+          </measure>
+          <dueDate value="2026-04-15"/>
+        </target>
+        <expressedBy>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </expressedBy>
+        <addresses>
+          <reference value="Condition/ConditionMamma"/>
+        </addresses>
+        <outcomeReference>
+          <reference value="Observation/ObsDiseaseStatusMamma"/>
+        </outcomeReference>
+      </Goal>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Goal"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/ServiceRequest/ServiceRequestProcedure"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequestProcedure"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="proposal"/>
+        <category>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85232-7"/>
+            <display value="Tumor board Consult note"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="392021009"/>
+            <display value="Lumpectomy of breast (procedure)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+    <resource>
+      <MedicationRequest>
+        <id value="MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type"/>
+              <code value="new"/>
+              <display value="New LoT"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85232-7"/>
+            <display value="Tumor board Consult note"/>
+          </coding>
+        </category>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+      </MedicationRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroChemoNeoadjuvantMamma1"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-10-01"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroChemoNeoadjuvantMamma2"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2025-11-01"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroChemoNeoadjuvantMamma3"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-02-10"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroChemoNeoadjuvantMamma4"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-03-15"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Procedure/ProcedureOperationMamma"/>
+    <resource>
+      <Procedure>
+        <id value="ProcedureOperationMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="392021009"/>
+            <display value="Lumpectomy of breast (procedure)"/>
+          </coding>
+          <text value="Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <performedDateTime value="2026-04-02"/>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsTNMpathologischMamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsTNMpathologischMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="21902-2"/>
+            <display value="Stage group.pathology Cancer"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-04-07"/>
+        <valueCodeableConcept>
+          <text value="ypT0 ypN0 – pathologische Komplettremission (pCR)"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Observation/ObsDiseaseStatusMamma"/>
+    <resource>
+      <Observation>
+        <id value="ObsDiseaseStatusMamma"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="97509-4"/>
+            <display value="Cancer disease progression"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-04-07"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260415000"/>
+            <display value="Not detected"/>
+          </coding>
+        </valueCodeableConcept>
+        <note>
+          <text value="Pathologische Komplettremission (pCR, ypT0 ypN0) nach neoadjuvanter Systemtherapie."/>
+        </note>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/CarePlan/CarePlanMammaNeoadjuvant"/>
+    <resource>
+      <CarePlan>
+        <id value="CarePlanMammaNeoadjuvant"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian">
+          <valueReference>
+            <reference value="Organization/TumorzentrumMamma"/>
+          </valueReference>
+        </extension>
+        <status value="active"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="736252007"/>
+            <display value="Cancer care plan"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <period>
+          <start value="2025-09-22"/>
+        </period>
+        <author>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </author>
+        <addresses>
+          <reference value="Condition/ConditionMamma"/>
+        </addresses>
+        <goal>
+          <reference value="Goal/TherapiezielMammaHeilung"/>
+        </goal>
+        <activity>
+          <outcomeReference>
+            <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma1"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma2"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma3"/>
+          </outcomeReference>
+          <outcomeReference>
+            <reference value="MedicationAdministration/MedicationAdministrationPembroChemoNeoadjuvantMamma4"/>
+          </outcomeReference>
+          <reference>
+            <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
+          </reference>
+        </activity>
+        <activity>
+          <outcomeReference>
+            <reference value="Procedure/ProcedureOperationMamma"/>
+          </outcomeReference>
+          <reference>
+            <reference value="ServiceRequest/ServiceRequestProcedure"/>
+          </reference>
+        </activity>
+        <activity>
+          <reference>
+            <reference value="MedicationRequest/MedicationRequestPembroAdjuvantMamma"/>
+          </reference>
+        </activity>
+        <activity>
+          <outcomeReference>
+            <reference value="Observation/ObsDiseaseStatusMamma"/>
+          </outcomeReference>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/Goal/FollowUpGoal"/>
+    <resource>
+      <Goal>
+        <id value="FollowUpGoal"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-acceptance">
+          <extension url="individual">
+            <valueReference>
+              <reference value="Patient/PatientinMamma"/>
+            </valueReference>
+          </extension>
+          <extension url="status">
+            <valueCode value="agree"/>
+          </extension>
+          <extension url="priority">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+                <code value="high-priority"/>
+                <display value="High Priority"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-relationship">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/goal-relationship-type"/>
+                <code value="predecessor"/>
+                <display value="Predecessor"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="target">
+            <valueReference>
+              <reference value="Goal/DiagnosticGoal"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/goal-relationship">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/goal-relationship-type"/>
+                <code value="predecessor"/>
+                <display value="Predecessor"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="target">
+            <valueReference>
+              <reference value="Goal/TherapiezielMammaHeilung"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <lifecycleStatus value="planned"/>
+        <achievementStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+            <code value="in-progress"/>
+            <display value="In Progress"/>
+          </coding>
+        </achievementStatus>
+        <category>
+          <coding>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+            <code value="lebensqualitaet"/>
+            <display value="Lebensqualität"/>
+          </coding>
+        </category>
+        <priority>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-priority"/>
+            <code value="high-priority"/>
+            <display value="High Priority"/>
+          </coding>
+        </priority>
+        <description>
+          <text value="Monitoring der Lebensqualität und des Krankheitsstatus nach der onkologischen Erkrankung und Therapie"/>
+        </description>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <startDate value="2026-08-15"/>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="21976-6"/>
+              <display value="Cancer outcome status"/>
+            </coding>
+          </measure>
+          <detailCodeableConcept>
+            <text value="Kein Hinweis auf Lokalrezidiv oder Fernmetastasen"/>
+          </detailCodeableConcept>
+          <dueDate value="2026-11-15"/>
+        </target>
+        <target>
+          <measure>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="24606-6"/>
+              <display value="Mammografie"/>
+            </coding>
+          </measure>
+          <detailCodeableConcept>
+            <text value="Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis"/>
+          </detailCodeableConcept>
+          <dueDate value="2027-04-15"/>
+        </target>
+        <target>
+          <measure>
+            <text value="Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff"/>
+          </measure>
+          <detailCodeableConcept>
+            <text value="Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit"/>
+          </detailCodeableConcept>
+        </target>
+        <target>
+          <measure>
+            <text value="Gesundheitsbezogene Lebensqualität (PROM, EORTC QLQ-C30 / BR23) – MII PRO-Modul"/>
+          </measure>
+          <detailCodeableConcept>
+            <text value="Stabile bis verbesserte Lebensqualität im Verlauf"/>
+          </detailCodeableConcept>
+        </target>
+        <expressedBy>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </expressedBy>
+        <addresses>
+          <reference value="Condition/ConditionMamma"/>
+        </addresses>
+        <outcomeReference>
+          <reference value="Observation/ObsDiseaseStatusMamma"/>
+        </outcomeReference>
+      </Goal>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Goal"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/ServiceRequest/ServiceRequestMammographieNachsorge"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequestMammographieNachsorge"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="plan"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="24606-6"/>
+            <display value="Mammografie"/>
+          </coding>
+          <text value="Nachsorge-Mammographie beidseits (jährlich)"/>
+        </code>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <occurrenceDateTime value="2027-04-15"/>
+        <requester>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </requester>
+        <reasonReference>
+          <reference value="Condition/ConditionMamma"/>
+        </reasonReference>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/CarePlan/CarePlanMammaNachsorge"/>
+    <resource>
+      <CarePlan>
+        <id value="CarePlanMammaNachsorge"/>
+        <meta>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian">
+          <valueReference>
+            <reference value="Organization/TumorzentrumMamma"/>
+          </valueReference>
+        </extension>
+        <status value="active"/>
+        <intent value="plan"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="736252007"/>
+            <display value="Cancer care plan"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <period>
+          <start value="2026-08-15"/>
+        </period>
+        <author>
+          <reference value="Practitioner/OnkologinMamma"/>
+        </author>
+        <addresses>
+          <reference value="Condition/ConditionMamma"/>
+        </addresses>
+        <goal>
+          <reference value="Goal/FollowUpGoal"/>
+        </goal>
+        <activity>
+          <reference>
+            <reference value="ServiceRequest/ServiceRequestMammographieNachsorge"/>
+          </reference>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="CarePlan"/>
+    </request>
+  </entry>
+</Bundle>

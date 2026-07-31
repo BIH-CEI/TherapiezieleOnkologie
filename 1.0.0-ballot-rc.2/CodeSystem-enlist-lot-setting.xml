@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="enlist-lot-setting"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem enlist-lot-setting</b></p><a name="enlist-lot-setting"> </a><a name="hcenlist-lot-setting"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">eLoT<a name="enlist-lot-setting-eLoT"> </a></td><td>eLoT — frühes Setting</td><td>Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie.</td></tr><tr><td style="white-space:nowrap">aLoT<a name="enlist-lot-setting-aLoT"> </a></td><td>aLoT — fortgeschrittenes Setting</td><td>Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation.</td></tr><tr><td style="white-space:nowrap">iLoT<a name="enlist-lot-setting-iLoT"> </a></td><td>iLoT — investigational</td><td>Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse.</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem enlist-lot-setting</b></p><a name="en-enlist-lot-setting"> </a><a name="en-hcenlist-lot-setting"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">eLoT<a name="en-enlist-lot-setting-eLoT"> </a></td><td>eLoT — frühes Setting</td><td>Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie.</td></tr><tr><td style="white-space:nowrap">aLoT<a name="en-enlist-lot-setting-aLoT"> </a></td><td>aLoT — fortgeschrittenes Setting</td><td>Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation.</td></tr><tr><td style="white-space:nowrap">iLoT<a name="en-enlist-lot-setting-iLoT"> </a></td><td>iLoT — investigational</td><td>Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse.</td></tr></table></div></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting"/>
+  <version value="1.0.0-ballot-rc.2"/>
+  <name value="EnlistLotSetting"/>
+  <title value="EnLiST-Setting-Achsen">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="EnLiST setting axes"/>
+      </extension>
+    </extension>
+  </title>
+  <status value="draft"/>
+  <date value="2026-07-31T14:18:27+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational).">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="The three separately counted setting axes of the EnLiST notation: eLoT early, aLoT advanced, iLoT investigational."/>
+      </extension>
+    </extension>
+  </description>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="eLoT"/>
+    <display value="eLoT — frühes Setting"/>
+    <definition value="Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie."/>
+  </concept>
+  <concept>
+    <code value="aLoT"/>
+    <display value="aLoT — fortgeschrittenes Setting"/>
+    <definition value="Advanced-stage Line of Therapy: lokal fortgeschrittene oder metastasierte Situation."/>
+  </concept>
+  <concept>
+    <code value="iLoT"/>
+    <display value="iLoT — investigational"/>
+    <definition value="Investigational Line of Therapy: Systemtherapie mit ausschließlich nicht EMA/FDA-zugelassenen Komponenten, unabhängig vom Setting; eigene Zählachse."/>
+  </concept>
+</CodeSystem>

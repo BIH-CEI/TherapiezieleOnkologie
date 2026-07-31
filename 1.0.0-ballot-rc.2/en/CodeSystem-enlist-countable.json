@@ -1,0 +1,44 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "enlist-countable",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem enlist-countable</b></p><a name=\"en-enlist-countable\"> </a><a name=\"en-hcenlist-countable\"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">counted<a name=\"en-enlist-countable-counted\"> </a></td><td>Zählt in der LoT-Zählung</td><td>Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot.</td></tr><tr><td style=\"white-space:nowrap\">not-counted<a name=\"en-enlist-countable-not-counted\"> </a></td><td>Zählt nicht</td><td>Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt.</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+  "version" : "1.0.0-ballot-rc.2",
+  "name" : "EnlistCountable",
+  "title" : "EnLiST countability",
+  "status" : "draft",
+  "date" : "2026-07-31T14:18:27+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "Countability of a treatment line per EnLiST: on a LoT counting axis — counted — or outside any count — not-counted, e.g. a locoregional treatment line.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "counted",
+    "display" : "Zählt in der LoT-Zählung",
+    "definition" : "Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot."
+  },
+  {
+    "code" : "not-counted",
+    "display" : "Zählt nicht",
+    "definition" : "Behandlungslinie außerhalb jeder EnLiST-Zählachse — z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt."
+  }]
+}

@@ -1,0 +1,57 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "onko-therapy-line-type",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet onko-therapy-line-type</b></p><a name=\"en-onko-therapy-line-type\"> </a><a name=\"en-hconko-therapy-line-type\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/385786002\">385786002</a></td><td>Chemotherapy care</td></tr><tr><td><a href=\"http://snomed.info/id/315601005\">315601005</a></td><td>Ambulatory chemotherapy</td></tr><tr><td><a href=\"http://snomed.info/id/385798007\">385798007</a></td><td>Radiation therapy care</td></tr><tr><td><a href=\"http://snomed.info/id/76334006\">76334006</a></td><td>Immunological therapy</td></tr><tr><td><a href=\"http://snomed.info/id/169413002\">169413002</a></td><td>Hormone therapy</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-line-type",
+  "version" : "1.0.0-ballot-rc.2",
+  "name" : "OnkoTherapyLineTypeVS",
+  "title" : "Onkologische Therapielinie – Art (VS)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-07-31T14:18:27+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein\nBeispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert\n`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code\n`Ambulatory chemotherapy` (315601005).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "385786002",
+        "display" : "Chemotherapy care"
+      },
+      {
+        "code" : "315601005",
+        "display" : "Ambulatory chemotherapy"
+      },
+      {
+        "code" : "385798007",
+        "display" : "Radiation therapy care"
+      },
+      {
+        "code" : "76334006",
+        "display" : "Immunological therapy"
+      },
+      {
+        "code" : "169413002",
+        "display" : "Hormone therapy"
+      }]
+    }]
+  }
+}

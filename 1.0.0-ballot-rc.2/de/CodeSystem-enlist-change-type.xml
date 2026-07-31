@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="enlist-change-type"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem enlist-change-type</b></p><a name="enlist-change-type"> </a><a name="hcenlist-change-type"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">new<a name="enlist-change-type-new"> </a></td><td>New LoT</td><td>Neue Linie (X+1): klinische Progression (cPD) oder fehlendes adäquates Ansprechen.</td></tr><tr><td style="white-space:nowrap">modified<a name="enlist-change-type-modified"> </a></td><td>Modified LoT</td><td>Modifizierte Linie (Y+1): nicht-progressionsbedingte Änderung — Intoleranz, Hinzunahme/Wechsel eines Wirkstoffs, finanzielle oder logistische Gründe.</td></tr><tr><td style="white-space:nowrap">same<a name="enlist-change-type-same"> </a></td><td>Same LoT</td><td>Unveränderte Designation: prospektiv geplante Änderungen — Dosis, Zeitplan, Applikationsweg, Erhaltungstherapie, Therapiepause mit unveränderter Reintroduktion.</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type"/>
+  <version value="1.0.0-ballot-rc.2"/>
+  <name value="EnlistChangeType"/>
+  <title value="EnLiST-Änderungstypen"/>
+  <status value="draft"/>
+  <date value="2026-07-31T14:18:27+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="new"/>
+    <display value="New LoT"/>
+    <definition value="Neue Linie (X+1): klinische Progression (cPD) oder fehlendes adäquates Ansprechen."/>
+  </concept>
+  <concept>
+    <code value="modified"/>
+    <display value="Modified LoT"/>
+    <definition value="Modifizierte Linie (Y+1): nicht-progressionsbedingte Änderung — Intoleranz, Hinzunahme/Wechsel eines Wirkstoffs, finanzielle oder logistische Gründe."/>
+  </concept>
+  <concept>
+    <code value="same"/>
+    <display value="Same LoT"/>
+    <definition value="Unveränderte Designation: prospektiv geplante Änderungen — Dosis, Zeitplan, Applikationsweg, Erhaltungstherapie, Therapiepause mit unveränderter Reintroduktion."/>
+  </concept>
+</CodeSystem>
