@@ -59,6 +59,8 @@ overarching goal is **not mutated** but **closed and replaced** by a new one (li
 `replacement`); a *successfully completed* goal, by contrast, hands off to its follow-up
 goal via `predecessor`/`successor`.
 
+{% include konzept-therapieziele-ebenen.svg %}
+
 ### The intent is set at the point of recommendation
 
 The strategic intent is fixed where therapy is **recommended** — typically the

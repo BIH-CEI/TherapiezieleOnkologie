@@ -1,7 +1,7 @@
 
 # Coding.display
 #: Coding.display
-msgid "Palliativ"
+msgid "Palliative intent"
 msgstr ""
 
 # Coding.display

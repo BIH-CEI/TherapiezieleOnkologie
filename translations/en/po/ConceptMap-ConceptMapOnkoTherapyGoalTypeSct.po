@@ -1,0 +1,106 @@
+
+# ConceptMap.title
+#: ConceptMap.title
+msgid "Zielarten → SNOMED CT (Zielzustände)"
+msgstr ""
+
+# ConceptMap.publisher
+#: ConceptMap.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ConceptMap.description
+#: ConceptMap.description
+msgid "Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (`equivalence`) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ConceptMap.group.element.display
+#: ConceptMap.group.element.display
+msgid "Heilung"
+msgstr ""
+
+# ConceptMap.group.element.target.display
+#: ConceptMap.group.element.target.display
+msgid "Patient cured"
+msgstr ""
+
+# ConceptMap.group.element.target.comment
+#: ConceptMap.group.element.target.comment
+msgid "Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|."
+msgstr ""
+
+# ConceptMap.group.element.display
+#: ConceptMap.group.element.display
+msgid "Lebensverlängerung"
+msgstr ""
+
+# ConceptMap.group.element.target.display
+#: ConceptMap.group.element.target.display
+msgid "Survival time"
+msgstr ""
+
+# ConceptMap.group.element.target.comment
+#: ConceptMap.group.element.target.comment
+msgid "SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|."
+msgstr ""
+
+# ConceptMap.group.element.display
+#: ConceptMap.group.element.display
+msgid "Symptomkontrolle / Palliation"
+msgstr ""
+
+# ConceptMap.group.element.target.display
+#: ConceptMap.group.element.target.display
+msgid "Managing to control symptoms"
+msgstr ""
+
+# ConceptMap.group.element.target.comment
+#: ConceptMap.group.element.target.comment
+msgid "Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode."
+msgstr ""
+
+# ConceptMap.group.element.target.display
+#: ConceptMap.group.element.target.display
+msgid "Symptom control"
+msgstr ""
+
+# ConceptMap.group.element.target.comment
+#: ConceptMap.group.element.target.comment
+msgid "Regime/Therapy — das Mittel, nicht der Zielzustand."
+msgstr ""
+
+# ConceptMap.group.element.display
+#: ConceptMap.group.element.display
+msgid "Lebensqualität"
+msgstr ""
+
+# ConceptMap.group.element.target.display
+#: ConceptMap.group.element.target.display
+msgid "Good quality of life"
+msgstr ""
+
+# ConceptMap.group.element.target.comment
+#: ConceptMap.group.element.target.comment
+msgid "Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite."
+msgstr ""
+
+# ConceptMap.group.element.display
+#: ConceptMap.group.element.display
+msgid "Funktionserhalt"
+msgstr ""
+
+# ConceptMap.group.element.target.comment
+#: ConceptMap.group.element.target.comment
+msgid "Kein generisches SNOMED-Konzept 'Funktionserhalt als Zielzustand'. Die konkrete Funktion wird je Ziel über target.measure benannt (z. B. 284773001 |Ability to perform personal care activity|, Fertilität via 389093003 |Fertility care|); ein Sammel-Mapping wäre irreführend."
+msgstr ""
+

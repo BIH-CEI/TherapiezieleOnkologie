@@ -1,0 +1,61 @@
+
+# CodeSystem.name
+#: CodeSystem.name
+msgid "SctTherapiezieleDeSupplement"
+msgstr ""
+
+# CodeSystem.title
+#: CodeSystem.title
+msgid "SNOMED CT – deutsche Displays (Supplement)"
+msgstr ""
+
+# CodeSystem.publisher
+#: CodeSystem.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# CodeSystem.description
+#: CodeSystem.description
+msgid "Supplement zu SNOMED CT mit den deutschen Anzeigetexten der in diesem Leitfaden verwendeten Konzepte für Therapieintention und Behandlungsphase."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# CodeSystem.concept.display
+#: CodeSystem.concept.display
+msgid "Palliativ"
+msgstr ""
+
+# CodeSystem.concept.display
+#: CodeSystem.concept.display
+msgid "Kurativ"
+msgstr ""
+
+# CodeSystem.concept.display
+#: CodeSystem.concept.display
+msgid "Neoadjuvant"
+msgstr ""
+
+# CodeSystem.concept.display
+#: CodeSystem.concept.display
+msgid "Adjuvant"
+msgstr ""
+
+# CodeSystem.concept.display
+#: CodeSystem.concept.display
+msgid "Induktionstherapie"
+msgstr ""
+
+# CodeSystem.concept.display
+#: CodeSystem.concept.display
+msgid "Erhaltungstherapie"
+msgstr ""
+

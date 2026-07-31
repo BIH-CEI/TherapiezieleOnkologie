@@ -3,6 +3,8 @@ A therapy goal becomes **measurable** through targets. FHIR `Goal.target` has th
 (the intended value/range) and **`target.due`** (the deadline). A goal may carry several
 targets.
 
+{% include konzept-target-anatomie.svg %}
+
 ### Mainly at the level of therapy episodes
 
 This measurable `target` logic applies mainly to the **episode goals** of the individual

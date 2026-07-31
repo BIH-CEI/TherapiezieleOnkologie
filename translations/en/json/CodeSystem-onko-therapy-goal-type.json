@@ -30,7 +30,7 @@
     {
       "id" : "CodeSystem.description",
       "context" : "CodeSystem.description",
-      "source" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+      "source" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
       "target" : null
     },
     {
@@ -97,18 +97,6 @@
       "id" : "CodeSystem.concept.definition",
       "context" : "CodeSystem.concept.definition",
       "source" : "Erhalt körperlicher oder kognitiver Funktion.",
-      "target" : null
-    },
-    {
-      "id" : "CodeSystem.concept.display",
-      "context" : "CodeSystem.concept.display",
-      "source" : "Studienteilnahme",
-      "target" : null
-    },
-    {
-      "id" : "CodeSystem.concept.definition",
-      "context" : "CodeSystem.concept.definition",
-      "source" : "Teilnahme an einer klinischen Studie als explizites Ziel.",
       "target" : null
     }]
   }]

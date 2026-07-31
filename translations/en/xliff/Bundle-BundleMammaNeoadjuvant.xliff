@@ -357,13 +357,6 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>HER2 [Interpretation] in Tissue</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
-             <notes>
-               <note id="n1">Coding.display</note>
-             </notes>
         <source>negativ</source>
         <target></target>
       </trans-unit>
@@ -413,14 +406,14 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Neoadjuvant</source>
+        <source>Neoadjuvant intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Kurativ</source>
+        <source>Curative - procedure intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
@@ -441,7 +434,7 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Erhaltungstherapie</source>
+        <source>Surgical procedure</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
@@ -497,13 +490,6 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Surgical procedure</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
-             <notes>
-               <note id="n1">Coding.display</note>
-             </notes>
         <source>Lumpectomy of breast (procedure)</source>
         <target></target>
       </trans-unit>
@@ -512,6 +498,41 @@
                <note id="n1">CodeableConcept.text</note>
              </notes>
         <source>Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
@@ -595,7 +616,7 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>MG Breast Screening</source>
+        <source>Mammografie</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">

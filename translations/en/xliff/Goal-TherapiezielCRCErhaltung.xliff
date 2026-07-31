@@ -7,14 +7,14 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Palliativ</source>
+        <source>Palliative intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Goal-TherapiezielCRCErhaltung" resname="Coding.display">
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Erhaltungstherapie</source>
+        <source>Maintenance antineoplastic therapy</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Goal-TherapiezielCRCErhaltung" resname="Coding.display">

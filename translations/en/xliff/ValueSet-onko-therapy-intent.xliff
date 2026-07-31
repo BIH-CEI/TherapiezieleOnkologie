@@ -38,8 +38,9 @@
         <source>Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
 
 Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
-Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen
-SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</source>
+Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
+gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
+des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-intent" resname="Coding.display">
@@ -53,35 +54,35 @@ SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt 
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Kurativ</source>
+        <source>Curative - procedure intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Palliativ</source>
+        <source>Palliative intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Neoadjuvant</source>
+        <source>Neoadjuvant intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Adjuvant</source>
+        <source>Adjuvant - intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Supportiv</source>
+        <source>Supportive - procedure intent</source>
         <target></target>
       </trans-unit>
     </body>

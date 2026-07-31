@@ -306,12 +306,6 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "HER2 [Interpretation] in Tissue",
-      "target" : null
-    },
-    {
-      "id" : "Coding.display",
-      "context" : "Coding.display",
       "source" : "negativ",
       "target" : null
     },
@@ -354,13 +348,13 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Neoadjuvant",
+      "source" : "Neoadjuvant intent",
       "target" : null
     },
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Kurativ",
+      "source" : "Curative - procedure intent",
       "target" : null
     },
     {
@@ -378,7 +372,7 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Erhaltungstherapie",
+      "source" : "Surgical procedure",
       "target" : null
     },
     {
@@ -426,12 +420,6 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Surgical procedure",
-      "target" : null
-    },
-    {
-      "id" : "Coding.display",
-      "context" : "Coding.display",
       "source" : "Lumpectomy of breast (procedure)",
       "target" : null
     },
@@ -439,6 +427,36 @@
       "id" : "CodeableConcept.text",
       "context" : "CodeableConcept.text",
       "source" : "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst",
       "target" : null
     },
     {
@@ -510,7 +528,7 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "MG Breast Screening",
+      "source" : "Mammografie",
       "target" : null
     },
     {

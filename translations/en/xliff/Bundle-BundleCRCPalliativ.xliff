@@ -105,14 +105,14 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Palliativ</source>
+        <source>Palliative intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Induktionstherapie</source>
+        <source>Induction chemotherapy</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">
@@ -189,7 +189,7 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Kurativ</source>
+        <source>Curative - procedure intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleCRCPalliativ" resname="CodeableConcept.text">
@@ -217,7 +217,7 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Erhaltungstherapie</source>
+        <source>Maintenance antineoplastic therapy</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleCRCPalliativ" resname="Coding.display">

@@ -7,7 +7,7 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Kurativ</source>
+        <source>Curative - procedure intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Goal-TherapiezielCRCKurativAbgelehnt" resname="CodeableConcept.text">

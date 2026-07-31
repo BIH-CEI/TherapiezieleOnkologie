@@ -184,6 +184,12 @@
       "target" : null
     },
     {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Diagnostischer CarePlan (Beispiel Mamma)",
+      "target" : null
+    },
+    {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
       "source" : "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose.",
@@ -378,7 +384,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nDie deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen\nSNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+      "source" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
       "target" : null
     },
     {
@@ -414,7 +420,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nDeutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung\nergänzbar).",
+      "source" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen\nBegriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.\nKonsolidierung ergänzbar).",
       "target" : null
     },
     {
@@ -426,7 +432,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+      "source" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
       "target" : null
     },
     {
@@ -510,7 +516,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.\n\nDas Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))\nangelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über\n`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten\nErgebnissen (Verlaufs-Observations) verknüpft wird.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,\n  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).\n- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der\n  zugehörigen Behandlungslinie hinterlegt werden.\n- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE\n  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel\n  bezogen ausgewertet werden kann.\n\n`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab\n(z. B. erreicht, in Bearbeitung, nicht erreicht).",
+      "source" : "Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.\n\nDas Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))\nangelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über\n`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten\nErgebnissen (Verlaufs-Observations) verknüpft wird.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,\n  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt).\n- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der\n  zugehörigen Behandlungslinie hinterlegt werden.\n- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE\n  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel\n  bezogen ausgewertet werden kann.\n\n`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab\n(z. B. erreicht, in Bearbeitung, nicht erreicht).",
       "target" : null
     },
     {
@@ -690,6 +696,18 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapieziel-Dreieck (logisches Modell)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Logisches Modell der drei Kernkonzepte des Leitfadens und ihrer Beziehungen:\n\n- **Behandlungsepisode** — *wer* behandelt, in welchem Rahmen (Art, Intention,\n  Zeitraum, verantwortliche Organisation),\n- **Therapieziel** — *was* erreicht werden soll (Zielart, messbarer Zielwert,\n  Erreichungsgrad),\n- **Versorgungsplan** — *welche Maßnahmen* geplant sind (Tumorboard-Empfehlung\n  bzw. Behandlungsplan mit den geplanten Anforderungen).\n\nDas Ziel geht dem Plan voraus; der Plan **verfolgt** das Ziel (`verfolgtesZiel`)\nund ist seiner **Episode zugeordnet** (`episode`). Zwischen Ziel und Episode gibt\nes **keine direkte Referenz** — die Zuordnung ergibt sich implizit über den Plan\n(siehe schematische Darstellung).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
       "source" : "Transaction-Bundle – Mammakarzinom neoadjuvant (Beispiel)",
       "target" : null
     },
@@ -804,6 +822,54 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 1/4 (KEYNOTE-522, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Dokumentierte Gabe (Zyklus 1 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 2/4 (KEYNOTE-522, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Dokumentierte Gabe (Zyklus 2 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 3/4 (KEYNOTE-522, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Dokumentierte Gabe (Zyklus 3 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 4/4 (KEYNOTE-522, Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Dokumentierte Gabe (Zyklus 4 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
       "source" : "Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung",
       "target" : null
     },
@@ -811,6 +877,18 @@
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
       "source" : "Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Zielarten → SNOMED CT (Zielzustände)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (`equivalence`) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet.",
       "target" : null
     },
     {
@@ -871,6 +949,12 @@
       "id" : "ImplementationGuide.definition.page.title",
       "context" : "ImplementationGuide.definition.page.title",
       "source" : "Anwendungsbeispiel (Mammakarzinom neoadjuvant)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.page.title",
+      "context" : "ImplementationGuide.definition.page.title",
+      "source" : "Abweichende Szenarios",
       "target" : null
     },
     {

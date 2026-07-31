@@ -21,7 +21,7 @@ msgstr ""
 
 # CodeSystem.description
 #: CodeSystem.description
-msgid "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung)."
+msgid "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015)."
 msgstr ""
 
 # Coding.display
@@ -77,15 +77,5 @@ msgstr ""
 # CodeSystem.concept.definition
 #: CodeSystem.concept.definition
 msgid "Erhalt körperlicher oder kognitiver Funktion."
-msgstr ""
-
-# CodeSystem.concept.display
-#: CodeSystem.concept.display
-msgid "Studienteilnahme"
-msgstr ""
-
-# CodeSystem.concept.definition
-#: CodeSystem.concept.definition
-msgid "Teilnahme an einer klinischen Studie als explizites Ziel."
 msgstr ""
 

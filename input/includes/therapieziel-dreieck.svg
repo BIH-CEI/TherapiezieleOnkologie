@@ -1,0 +1,68 @@
+<svg width="100%" viewBox="0 0 680 570" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Therapieziel-Dreieck: Behandlungsepisode, Therapieziel und Versorgungsplan</title>
+<desc>Dreieck der drei Kernressourcen: oben das Therapieziel (Goal, was soll erreicht werden), unten links die Behandlungsepisode (EpisodeOfCare, wer behandelt in welchem Rahmen), unten rechts der Versorgungsplan (CarePlan, was sind die geplanten Massnahmen). Der Plan verfolgt das Ziel (CarePlan.goal) und ist der Episode zugeordnet (Extension workflow-episodeOfCare); Ziel und Episode sind nur implizit ueber den Plan verknuepft. In der Mitte die Patientin als gemeinsames subject.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7"/></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A"/></marker>
+</defs>
+
+<line x1="524" y1="328" x2="416" y2="142" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<text x="496" y="230" font-size="11" fill="#534AB7">goal</text>
+<text x="496" y="244" font-size="10.5" fill="#5F5E5A">verfolgt das Ziel</text>
+
+<line x1="408" y1="410" x2="274" y2="410" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<text x="340" y="399" text-anchor="middle" font-size="9.5" fill="#534AB7">workflow-episodeOfCare</text>
+<text x="340" y="425" text-anchor="middle" font-size="10" fill="#5F5E5A">gehört zur Episode</text>
+
+<line x1="150" y1="328" x2="264" y2="142" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4"/>
+<text x="40" y="230" font-size="10.5" fill="#5F5E5A">keine direkte Referenz —</text>
+<text x="40" y="244" font-size="10.5" fill="#5F5E5A">implizit über den Plan</text>
+
+<circle cx="340" cy="255" r="36" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="340" y="251" text-anchor="middle" font-size="11.5" font-weight="500" fill="#2C2C2A">Patientin</text>
+<text x="340" y="266" text-anchor="middle" font-size="10" fill="#5F5E5A">subject</text>
+<line x1="340" y1="218" x2="340" y2="140" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4"/>
+<line x1="312" y1="278" x2="230" y2="330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4"/>
+<line x1="368" y1="278" x2="450" y2="330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4"/>
+
+<g><rect x="205" y="16" width="270" height="122" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4"/>
+<text x="352" y="38" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Therapieziel</text>
+<text x="352" y="54" text-anchor="middle" font-size="10.5" fill="#0F6E56">Goal — was soll erreicht werden?</text>
+<circle cx="248" cy="96" r="18" fill="none" stroke="#0F6E56" stroke-width="1.4"/>
+<circle cx="248" cy="96" r="11" fill="none" stroke="#0F6E56" stroke-width="1.2"/>
+<circle cx="248" cy="96" r="4" fill="#0F6E56"/>
+<text x="282" y="78" font-size="10.5" fill="#04342C">Zielart: Heilung · Symptomkontrolle · …</text>
+<text x="282" y="94" font-size="10.5" fill="#04342C">Zielwert: Größe · Wert · Frist (target)</text>
+<text x="282" y="110" font-size="10.5" fill="#04342C">Erreichungsgrad (achievementStatus)</text>
+<text x="282" y="126" font-size="10.5" fill="#04342C">Ergebnis (outcomeReference)</text></g>
+
+<g><rect x="16" y="330" width="254" height="160" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.4"/>
+<text x="143" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Behandlungsepisode</text>
+<text x="143" y="368" text-anchor="middle" font-size="10.5" fill="#5F5E5A">EpisodeOfCare — wer behandelt?</text>
+<line x1="36" y1="394" x2="250" y2="394" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)"/>
+<rect x="60" y="387" width="120" height="14" rx="4" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="120" y="398" text-anchor="middle" font-size="9.5" fill="#26215C">period (Zeitraum)</text>
+<text x="36" y="424" font-size="10.5" fill="#2C2C2A">Art: Therapielinie · Diagnostiklinie · …</text>
+<text x="36" y="440" font-size="10.5" fill="#2C2C2A">Intention: kurativ · palliativ · … (Ext.)</text>
+<text x="36" y="456" font-size="10.5" fill="#2C2C2A">Team / Organisation</text>
+<text x="36" y="476" font-size="10" fill="#5F5E5A">der Rahmen, in dem behandelt wird</text></g>
+
+<g><rect x="410" y="330" width="254" height="160" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4"/>
+<text x="537" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Versorgungsplan</text>
+<text x="537" y="368" text-anchor="middle" font-size="10.5" fill="#534AB7">CarePlan — was ist geplant?</text>
+<rect x="430" y="382" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2"/><path d="M432,388 L435,391 L440,384" fill="none" stroke="#534AB7" stroke-width="1.4"/>
+<text x="448" y="392" font-size="10.5" fill="#26215C">ServiceRequest — OP · Radiatio · …</text>
+<rect x="430" y="402" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2"/><path d="M432,408 L435,411 L440,404" fill="none" stroke="#534AB7" stroke-width="1.4"/>
+<text x="448" y="412" font-size="10.5" fill="#26215C">MedicationRequest — Systemtherapie</text>
+<rect x="430" y="422" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2"/>
+<text x="448" y="432" font-size="10.5" fill="#26215C">… (activity.reference)</text>
+<text x="430" y="456" font-size="10.5" fill="#2C2C2A">Empfehlung (Tumorboard) → Behandlung</text>
+<text x="430" y="472" font-size="10" fill="#5F5E5A">basedOn: Plan erfüllt Empfehlung</text></g>
+
+<rect x="20" y="518" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="39" y="529" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="80" y="518" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="99" y="529" font-size="11.5" fill="#5F5E5A">Plan</text>
+<rect x="145" y="518" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="164" y="529" font-size="11.5" fill="#5F5E5A">Episode / Akteur</text>
+<line x1="290" y1="524" x2="320" y2="524" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/><text x="326" y="529" font-size="11.5" fill="#5F5E5A">Referenz</text>
+<line x1="405" y1="524" x2="435" y2="524" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4"/><text x="441" y="529" font-size="11.5" fill="#5F5E5A">implizite Beziehung / Patientenbezug</text>
+<text x="20" y="554" font-size="10.5" fill="#5F5E5A">Das Ziel geht dem Plan voraus: erst Ziel (Shared Decision / Tumorboard), dann Plan — CarePlan.goal ist Verfolgung, kein Besitz.</text>
+</svg>

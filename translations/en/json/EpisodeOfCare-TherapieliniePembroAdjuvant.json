@@ -6,13 +6,13 @@
     "entries" : [{
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Adjuvant",
+      "source" : "Adjuvant - intent",
       "target" : null
     },
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Erhaltungstherapie",
+      "source" : "Maintenance antineoplastic therapy",
       "target" : null
     },
     {

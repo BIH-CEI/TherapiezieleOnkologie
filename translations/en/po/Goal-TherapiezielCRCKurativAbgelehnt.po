@@ -1,7 +1,7 @@
 
 # Coding.display
 #: Coding.display
-msgid "Kurativ"
+msgid "Curative - procedure intent"
 msgstr ""
 
 # CodeableConcept.text

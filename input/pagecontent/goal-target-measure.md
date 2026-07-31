@@ -10,6 +10,8 @@ Ein Therapieziel wird **messbar**, indem es einen oder mehrere Zielwerte trägt.
 Ein Ziel kann **mehrere** Targets tragen (z. B. Krankheitsstatus *und* Bildgebung
 *und* Funktion).
 
+{% include konzept-target-anatomie.svg %}
+
 ### Vor allem auf Ebene der Therapieepisoden
 
 Diese messbare `target`-Logik betrifft **vor allem die

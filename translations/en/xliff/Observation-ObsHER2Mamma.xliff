@@ -7,7 +7,7 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>HER2 [Interpretation] in Tissue</source>
+        <source>HER2 Ag [Interpretation] in Tissue</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Observation-ObsHER2Mamma" resname="Coding.display">

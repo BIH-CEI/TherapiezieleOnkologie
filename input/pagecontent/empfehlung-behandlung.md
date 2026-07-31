@@ -14,6 +14,8 @@ Erbrachte sind verschiedene Gegenstände**.
   konkreten Behandlungsabschnitts. Er trägt das jeweilige **Episodenziel** und die
   real durchgeführten bzw. konkret geplanten Maßnahmen.
 
+{% include konzept-empfehlung-behandlung.svg %}
+
 ### Unterschiedliche Detailtiefe
 
 Der Empfehlungsplan ist bewusst **grobkörnig**: „welche Strategie, welche Modalitäten,

@@ -38,8 +38,9 @@
         <source>Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur
 Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,
 sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.
-Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung
-ergänzbar).</source>
+Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen
+Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.
+Konsolidierung ergänzbar).</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-phase" resname="Coding.display">
@@ -53,28 +54,28 @@ ergänzbar).</source>
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Induktionstherapie</source>
+        <source>Induction chemotherapy</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.compose.include.concept.display">
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Konsolidierungstherapie</source>
+        <source>Consolidation antineoplastic chemotherapy</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.compose.include.concept.display">
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Intensivierungstherapie</source>
+        <source>Intensification antineoplastic therapy regimen</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-phase" resname="ValueSet.compose.include.concept.display">
              <notes>
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
-        <source>Erhaltungstherapie</source>
+        <source>Maintenance antineoplastic therapy</source>
         <target></target>
       </trans-unit>
     </body>

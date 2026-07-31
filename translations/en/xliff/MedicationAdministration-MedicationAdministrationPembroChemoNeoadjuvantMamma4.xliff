@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4" original="Resource MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -251,11 +251,6 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "HER2 [Interpretation] in Tissue"
-msgstr ""
-
-# Coding.display
-#: Coding.display
 msgid "negativ"
 msgstr ""
 
@@ -291,12 +286,12 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Neoadjuvant"
+msgid "Neoadjuvant intent"
 msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Kurativ"
+msgid "Curative - procedure intent"
 msgstr ""
 
 # Coding.display
@@ -311,7 +306,7 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Erhaltungstherapie"
+msgid "Surgical procedure"
 msgstr ""
 
 # Coding.display
@@ -351,17 +346,37 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Surgical procedure"
-msgstr ""
-
-# Coding.display
-#: Coding.display
 msgid "Lumpectomy of breast (procedure)"
 msgstr ""
 
 # CodeableConcept.text
 #: CodeableConcept.text
 msgid "Pembrolizumab + Carboplatin/Paclitaxel, gefolgt von Pembrolizumab + Epirubicin/Cyclophosphamid (KEYNOTE-522)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 1 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 2 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 3 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
 msgstr ""
 
 # CodeableConcept.text
@@ -421,7 +436,7 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "MG Breast Screening"
+msgid "Mammografie"
 msgstr ""
 
 # CodeableConcept.text

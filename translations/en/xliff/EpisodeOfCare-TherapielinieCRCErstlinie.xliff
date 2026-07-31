@@ -7,14 +7,14 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Palliativ</source>
+        <source>Palliative intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="EpisodeOfCare-TherapielinieCRCErstlinie" resname="Coding.display">
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Induktionstherapie</source>
+        <source>Induction chemotherapy</source>
         <target></target>
       </trans-unit>
       <trans-unit id="EpisodeOfCare-TherapielinieCRCErstlinie" resname="Coding.display">

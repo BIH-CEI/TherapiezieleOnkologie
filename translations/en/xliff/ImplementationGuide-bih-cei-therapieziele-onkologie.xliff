@@ -238,6 +238,13 @@ Diagnostikspezifische Ergänzungen:
 **Abgrenzung:** Dieses Profil beschreibt den *Prozess* der Diagnosefindung.</source>
         <target></target>
       </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Diagnostischer CarePlan (Beispiel Mamma)</source>
+        <target></target>
+      </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
@@ -490,8 +497,9 @@ OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig
         <source>Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
 
 Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
-Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen
-SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</source>
+Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
+gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
+des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -541,8 +549,9 @@ Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlu
         <source>Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur
 Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,
 sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.
-Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung
-ergänzbar).</source>
+Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen
+Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.
+Konsolidierung ergänzbar).</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -556,7 +565,7 @@ ergänzbar).</source>
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).</source>
+        <source>Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -681,7 +690,7 @@ Ergebnissen (Verlaufs-Observations) verknüpft wird.
 
 Onkologiespezifische Ergänzungen gegenüber MCC:
 - Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,
-  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).
+  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt).
 - Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der
   zugehörigen Behandlungslinie hinterlegt werden.
 - `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE
@@ -906,6 +915,32 @@ Systemtherapie), wird daher diese Extension ergänzend zu `referralRequest` verw
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
+        <source>Therapieziel-Dreieck (logisches Modell)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Logisches Modell der drei Kernkonzepte des Leitfadens und ihrer Beziehungen:
+
+- **Behandlungsepisode** — *wer* behandelt, in welchem Rahmen (Art, Intention,
+  Zeitraum, verantwortliche Organisation),
+- **Therapieziel** — *was* erreicht werden soll (Zielart, messbarer Zielwert,
+  Erreichungsgrad),
+- **Versorgungsplan** — *welche Maßnahmen* geplant sind (Tumorboard-Empfehlung
+  bzw. Behandlungsplan mit den geplanten Anforderungen).
+
+Das Ziel geht dem Plan voraus; der Plan **verfolgt** das Ziel (`verfolgtesZiel`)
+und ist seiner **Episode zugeordnet** (`episode`). Zwischen Ziel und Episode gibt
+es **keine direkte Referenz** — die Zuordnung ergibt sich implizit über den Plan
+(siehe schematische Darstellung).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
         <source>Transaction-Bundle – Mammakarzinom neoadjuvant (Beispiel)</source>
         <target></target>
       </trans-unit>
@@ -1045,6 +1080,62 @@ Tumorboardspezifische Ergänzung:
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
+        <source>Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 1/4 (KEYNOTE-522, Beispiel)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Dokumentierte Gabe (Zyklus 1 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 2/4 (KEYNOTE-522, Beispiel)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Dokumentierte Gabe (Zyklus 2 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 3/4 (KEYNOTE-522, Beispiel)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Dokumentierte Gabe (Zyklus 3 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 4/4 (KEYNOTE-522, Beispiel)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Dokumentierte Gabe (Zyklus 4 von 4, KEYNOTE-522 Phase 1) im Rahmen der neoadjuvanten Chemo-/Immuntherapie, referenziert auf den zugehörigen MedicationRequest aus dem Tumorboard-CarePlan.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
         <source>Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung</source>
         <target></target>
       </trans-unit>
@@ -1053,6 +1144,20 @@ Tumorboardspezifische Ergänzung:
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Zielarten → SNOMED CT (Zielzustände)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (`equivalence`) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -1123,6 +1228,13 @@ Tumorboardspezifische Ergänzung:
                <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
         <source>Anwendungsbeispiel (Mammakarzinom neoadjuvant)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.page.title">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
+             </notes>
+        <source>Abweichende Szenarios</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.page.title">

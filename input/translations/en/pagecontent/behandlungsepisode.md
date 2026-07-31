@@ -10,6 +10,8 @@ Rather than one profile per phase type, there is **one general care-episode prof
 of therapy, locoregional treatment line, active surveillance / watchful waiting, aftercare.
 The list is open (e.g. induction/consolidation/maintenance for haematological disease).
 
+{% include konzept-behandlungsepisoden.svg %}
+
 ### Systemic line of therapy vs. locoregional treatment line
 
 The umbrella term **treatment line** has two modality classes: the **systemic line of

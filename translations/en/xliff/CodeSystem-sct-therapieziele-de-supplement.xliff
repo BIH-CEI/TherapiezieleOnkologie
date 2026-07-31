@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CodeSystem-sct-therapieziele-de-supplement" original="Resource CodeSystem-sct-therapieziele-de-supplement" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.name">
+             <notes>
+               <note id="n1">CodeSystem.name</note>
+             </notes>
+        <source>SctTherapiezieleDeSupplement</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.title">
+             <notes>
+               <note id="n1">CodeSystem.title</note>
+             </notes>
+        <source>SNOMED CT – deutsche Displays (Supplement)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.publisher">
+             <notes>
+               <note id="n1">CodeSystem.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.description">
+             <notes>
+               <note id="n1">CodeSystem.description</note>
+             </notes>
+        <source>Supplement zu SNOMED CT mit den deutschen Anzeigetexten der in diesem Leitfaden verwendeten Konzepte für Therapieintention und Behandlungsphase.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Palliativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Kurativ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Neoadjuvant</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Adjuvant</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Induktionstherapie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-sct-therapieziele-de-supplement" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Erhaltungstherapie</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -24,8 +24,9 @@ msgstr ""
 msgid "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
 
 Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
-Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen
-SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."
+Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
+gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
+des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."
 msgstr ""
 
 # Coding.display
@@ -35,26 +36,26 @@ msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Kurativ"
+msgid "Curative - procedure intent"
 msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Palliativ"
+msgid "Palliative intent"
 msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Neoadjuvant"
+msgid "Neoadjuvant intent"
 msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Adjuvant"
+msgid "Adjuvant - intent"
 msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Supportiv"
+msgid "Supportive - procedure intent"
 msgstr ""
 

@@ -1,7 +1,7 @@
 
 # Coding.display
 #: Coding.display
-msgid "MG Breast Screening"
+msgid "Mammografie"
 msgstr ""
 
 # CodeableConcept.text

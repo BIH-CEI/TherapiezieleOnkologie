@@ -7,7 +7,7 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>MG Breast Screening</source>
+        <source>Mammografie</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ServiceRequest-ServiceRequestMammographieNachsorge" resname="CodeableConcept.text">

@@ -1,0 +1,155 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" original="Resource ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.title">
+             <notes>
+               <note id="n1">ConceptMap.title</note>
+             </notes>
+        <source>Zielarten → SNOMED CT (Zielzustände)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.publisher">
+             <notes>
+               <note id="n1">ConceptMap.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.description">
+             <notes>
+               <note id="n1">ConceptMap.description</note>
+             </notes>
+        <source>Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (`equivalence`) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.display</note>
+             </notes>
+        <source>Heilung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.display</note>
+             </notes>
+        <source>Patient cured</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.comment">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.comment</note>
+             </notes>
+        <source>Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.display</note>
+             </notes>
+        <source>Lebensverlängerung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.display</note>
+             </notes>
+        <source>Survival time</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.comment">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.comment</note>
+             </notes>
+        <source>SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.display</note>
+             </notes>
+        <source>Symptomkontrolle / Palliation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.display</note>
+             </notes>
+        <source>Managing to control symptoms</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.comment">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.comment</note>
+             </notes>
+        <source>Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.display</note>
+             </notes>
+        <source>Symptom control</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.comment">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.comment</note>
+             </notes>
+        <source>Regime/Therapy — das Mittel, nicht der Zielzustand.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.display</note>
+             </notes>
+        <source>Lebensqualität</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.display</note>
+             </notes>
+        <source>Good quality of life</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.comment">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.comment</note>
+             </notes>
+        <source>Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.display">
+             <notes>
+               <note id="n1">ConceptMap.group.element.display</note>
+             </notes>
+        <source>Funktionserhalt</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct" resname="ConceptMap.group.element.target.comment">
+             <notes>
+               <note id="n1">ConceptMap.group.element.target.comment</note>
+             </notes>
+        <source>Kein generisches SNOMED-Konzept 'Funktionserhalt als Zielzustand'. Die konkrete Funktion wird je Ziel über target.measure benannt (z. B. 284773001 |Ability to perform personal care activity|, Fertilität via 389093003 |Fertility care|); ein Sammel-Mapping wäre irreführend.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -7,14 +7,14 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Neoadjuvant</source>
+        <source>Neoadjuvant intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="EpisodeOfCare-TherapielinieChemo" resname="Coding.display">
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Kurativ</source>
+        <source>Curative - procedure intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="EpisodeOfCare-TherapielinieChemo" resname="Coding.display">

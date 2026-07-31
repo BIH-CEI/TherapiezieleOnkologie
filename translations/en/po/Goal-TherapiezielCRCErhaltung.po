@@ -1,12 +1,12 @@
 
 # Coding.display
 #: Coding.display
-msgid "Palliativ"
+msgid "Palliative intent"
 msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Erhaltungstherapie"
+msgid "Maintenance antineoplastic therapy"
 msgstr ""
 
 # Coding.display

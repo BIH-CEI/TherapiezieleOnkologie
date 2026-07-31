@@ -126,8 +126,8 @@
     {
       "id" : "StructureDefinition.element.Goal.category/definition",
       "context" : "Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).",
-      "source" : "Art des onkologischen Therapieziels – Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme.",
-      "target" : "Type of oncological therapy goal – cure, life prolongation, symptom control, quality of life, preservation of function, study participation."
+      "source" : "Art des onkologischen Therapieziels – Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt.",
+      "target" : "Type of oncological therapy goal – cure, life prolongation, symptom control, quality of life, preservation of function."
     },
     {
       "id" : "StructureDefinition.element.Goal.priority/short",

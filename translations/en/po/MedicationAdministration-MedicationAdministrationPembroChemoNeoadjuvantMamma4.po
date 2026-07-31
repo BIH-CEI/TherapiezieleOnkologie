@@ -1,0 +1,11 @@
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Pembrolizumab + Carboplatin (q3w), Paclitaxel wöchentlich begleitend (KEYNOTE-522, Phase 1)"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+msgstr ""
+

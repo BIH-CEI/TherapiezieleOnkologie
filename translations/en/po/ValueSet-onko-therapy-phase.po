@@ -24,8 +24,9 @@ msgstr ""
 msgid "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur
 Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,
 sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.
-Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung
-ergänzbar)."
+Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen
+Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.
+Konsolidierung ergänzbar)."
 msgstr ""
 
 # Coding.display
@@ -35,21 +36,21 @@ msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Induktionstherapie"
+msgid "Induction chemotherapy"
 msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Konsolidierungstherapie"
+msgid "Consolidation antineoplastic chemotherapy"
 msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Intensivierungstherapie"
+msgid "Intensification antineoplastic therapy regimen"
 msgstr ""
 
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
-msgid "Erhaltungstherapie"
+msgid "Maintenance antineoplastic therapy"
 msgstr ""
 

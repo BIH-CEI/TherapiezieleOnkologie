@@ -30,7 +30,7 @@
     {
       "id" : "ValueSet.description",
       "context" : "ValueSet.description",
-      "source" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nDie deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen\nSNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+      "source" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
       "target" : null
     },
     {
@@ -42,31 +42,31 @@
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Kurativ",
+      "source" : "Curative - procedure intent",
       "target" : null
     },
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Palliativ",
+      "source" : "Palliative intent",
       "target" : null
     },
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Neoadjuvant",
+      "source" : "Neoadjuvant intent",
       "target" : null
     },
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Adjuvant",
+      "source" : "Adjuvant - intent",
       "target" : null
     },
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Supportiv",
+      "source" : "Supportive - procedure intent",
       "target" : null
     }]
   }]

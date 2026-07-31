@@ -1,12 +1,12 @@
 
 # Coding.display
 #: Coding.display
-msgid "Neoadjuvant"
+msgid "Neoadjuvant intent"
 msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Kurativ"
+msgid "Curative - procedure intent"
 msgstr ""
 
 # Coding.display

@@ -30,7 +30,7 @@
     {
       "id" : "ValueSet.description",
       "context" : "ValueSet.description",
-      "source" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nDeutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung\nergänzbar).",
+      "source" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen\nBegriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.\nKonsolidierung ergänzbar).",
       "target" : null
     },
     {
@@ -42,25 +42,25 @@
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Induktionstherapie",
+      "source" : "Induction chemotherapy",
       "target" : null
     },
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Konsolidierungstherapie",
+      "source" : "Consolidation antineoplastic chemotherapy",
       "target" : null
     },
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Intensivierungstherapie",
+      "source" : "Intensification antineoplastic therapy regimen",
       "target" : null
     },
     {
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Erhaltungstherapie",
+      "source" : "Maintenance antineoplastic therapy",
       "target" : null
     }]
   }]

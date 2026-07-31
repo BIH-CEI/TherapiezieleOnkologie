@@ -22,6 +22,8 @@ Diese Liste ist **offen**: entitätsspezifische Abschnitte (z. B. Induktion/
 Konsolidierung/Erhaltung bei hämatologischen Erkrankungen) lassen sich ergänzen, ohne
 das Modell zu ändern.
 
+{% include konzept-behandlungsepisoden.svg %}
+
 ### Systemische Therapielinie vs. lokoregionale Behandlungslinie
 
 Der Oberbegriff **Behandlungslinie** umfasst zwei Modalitätsklassen:

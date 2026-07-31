@@ -78,6 +78,8 @@ Die Zielart des übergeordneten Ziels wird durch die Extension
 [`OnkoTherapyIntent`](StructureDefinition-onko-therapy-intent.html) präzisiert
 (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).
 
+{% include konzept-therapieziele-ebenen.svg %}
+
 > **Zielmodell.** Die saubere Trennung „ein aktives übergeordnetes Ziel + optionale
 > Episodenziele" sowie die Behandlung eines Strategiewechsels (s. u.) sind
 > architektonisch festgelegt und werden im laufenden Ausbau des Profilsatzes

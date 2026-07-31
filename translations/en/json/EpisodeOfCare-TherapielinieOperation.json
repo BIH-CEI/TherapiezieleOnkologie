@@ -6,13 +6,13 @@
     "entries" : [{
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Kurativ",
+      "source" : "Curative - procedure intent",
       "target" : null
     },
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Erhaltungstherapie",
+      "source" : "Surgical procedure",
       "target" : null
     },
     {
