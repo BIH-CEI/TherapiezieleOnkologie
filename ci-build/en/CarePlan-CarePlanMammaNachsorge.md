@@ -33,7 +33,7 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 | | |
 | :--- | :--- |
 | - | **Reference** |
-| * | [ServiceRequest MG Breast Screening](ServiceRequest-ServiceRequestMammographieNachsorge.md) |
+| * | [ServiceRequest Mammografie](ServiceRequest-ServiceRequestMammographieNachsorge.md) |
 
 
 

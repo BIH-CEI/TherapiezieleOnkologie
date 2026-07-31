@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="0708ded4-ebe9-488b-904b-fc25d44e9cf8"/>
+  <id value="731cb452-e4c4-4582-a87c-e882dd123492"/>
   <meta>
-    <lastUpdated value="2026-07-31T08:51:02.506+00:00"/>
+    <lastUpdated value="2026-07-31T12:16:37.606+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -20,7 +20,7 @@
                 <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
-            <p>This value set contains 6 concepts</p>
+            <p>This value set contains 5 concepts</p>
             <table class="codes" data-fhir="generated">
               <tr>
                 <td>
@@ -34,6 +34,11 @@
                 </td>
                 <td>
                   <b>Definition</b>
+                </td>
+                <td>
+                  <b>
+                    <a href="https://browser.ihtsdotools.org/">Zielarten → SNOMED CT (Zielzustände)</a>
+                  </b>
                 </td>
                 <td>
                   <b>JSON</b>
@@ -52,6 +57,11 @@
                 </td>
                 <td/>
                 <td>Kuratives Ziel — vollständige Remission angestrebt.</td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://snomed.info/id/371001000">371001000</a>
+                  <i>(Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|.)</i>
+                </td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;heilung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -74,6 +84,11 @@
                 <td/>
                 <td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td>
                 <td>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/445320007">445320007</a>
+                  <i>(SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|.)</i>
+                </td>
+                <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
@@ -94,6 +109,15 @@
                 </td>
                 <td/>
                 <td>Linderung von Symptomen und Krankheitslast.</td>
+                <td>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/1149243003">1149243003</a>
+                  <i>(Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode.)</i>
+                  <br/>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/225353007">225353007</a>
+                  <i>(Regime/Therapy — das Mittel, nicht der Zielzustand.)</i>
+                </td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -116,6 +140,11 @@
                 <td/>
                 <td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td>
                 <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://snomed.info/id/1156447008">1156447008</a>
+                  <i>(Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite.)</i>
+                </td>
+                <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
@@ -136,6 +165,7 @@
                 </td>
                 <td/>
                 <td>Erhalt körperlicher oder kognitiver Funktion.</td>
+                <td/>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -144,27 +174,6 @@
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-studienteilnahme"> </a>
-                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
-                </td>
-                <td style="white-space:nowrap">  
-                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-studienteilnahme">studienteilnahme</a>
-                </td>
-                <td/>
-                <td>Teilnahme an einer klinischen Studie als explizites Ziel.</td>
-                <td>
-                  <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;studienteilnahme&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
-                  </span>
-                </td>
-                <td>
-                  <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;studienteilnahme&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -177,7 +186,7 @@
         <title value="Onkologische Therapieziel-Art (VS)"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-07-31T08:51:02+00:00"/>
+        <date value="2026-07-31T12:16:37+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -186,9 +195,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:61c34d03-582c-4218-b79d-bc083c361107"/>
-          <timestamp value="2026-07-31T08:52:24+00:00"/>
-          <total value="6"/>
+          <identifier value="urn:uuid:8c9ee344-a8ff-4588-8bcd-144434d2e61a"/>
+          <timestamp value="2026-07-31T12:17:58+00:00"/>
+          <total value="5"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -230,10 +239,6 @@
             <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
             <code value="funktionserhalt"/>
           </contains>
-          <contains>
-            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
-            <code value="studienteilnahme"/>
-          </contains>
         </expansion>
       </ValueSet>
     </resource>
@@ -252,7 +257,7 @@
                 <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
-            <p>This value set contains 6 concepts</p>
+            <p>This value set contains 5 concepts</p>
             <table class="codes" data-fhir="generated">
               <tr>
                 <td>
@@ -266,6 +271,11 @@
                 </td>
                 <td>
                   <b>Definition</b>
+                </td>
+                <td>
+                  <b>
+                    <a href="https://browser.ihtsdotools.org/">Zielarten → SNOMED CT (Zielzustände)</a>
+                  </b>
                 </td>
                 <td>
                   <b>JSON</b>
@@ -284,6 +294,11 @@
                 </td>
                 <td/>
                 <td>Kuratives Ziel — vollständige Remission angestrebt.</td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://snomed.info/id/371001000">371001000</a>
+                  <i>(Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|.)</i>
+                </td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;heilung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -306,6 +321,11 @@
                 <td/>
                 <td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td>
                 <td>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/445320007">445320007</a>
+                  <i>(SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|.)</i>
+                </td>
+                <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
@@ -326,6 +346,15 @@
                 </td>
                 <td/>
                 <td>Linderung von Symptomen und Krankheitslast.</td>
+                <td>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/1149243003">1149243003</a>
+                  <i>(Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode.)</i>
+                  <br/>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/225353007">225353007</a>
+                  <i>(Regime/Therapy — das Mittel, nicht der Zielzustand.)</i>
+                </td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -348,6 +377,11 @@
                 <td/>
                 <td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td>
                 <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://snomed.info/id/1156447008">1156447008</a>
+                  <i>(Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite.)</i>
+                </td>
+                <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
@@ -368,6 +402,7 @@
                 </td>
                 <td/>
                 <td>Erhalt körperlicher oder kognitiver Funktion.</td>
+                <td/>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -376,27 +411,6 @@
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-studienteilnahme"> </a>
-                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
-                </td>
-                <td style="white-space:nowrap">  
-                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-studienteilnahme">studienteilnahme</a>
-                </td>
-                <td/>
-                <td>Teilnahme an einer klinischen Studie als explizites Ziel.</td>
-                <td>
-                  <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;studienteilnahme&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
-                  </span>
-                </td>
-                <td>
-                  <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;studienteilnahme&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -409,7 +423,7 @@
         <title value="Onkologische Therapieziel-Art (VS)"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-07-31T08:51:02+00:00"/>
+        <date value="2026-07-31T12:16:37+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -418,9 +432,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:61c34d03-582c-4218-b79d-bc083c361107"/>
-          <timestamp value="2026-07-31T08:52:24+00:00"/>
-          <total value="6"/>
+          <identifier value="urn:uuid:8c9ee344-a8ff-4588-8bcd-144434d2e61a"/>
+          <timestamp value="2026-07-31T12:17:58+00:00"/>
+          <total value="5"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -462,10 +476,6 @@
             <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
             <code value="funktionserhalt"/>
           </contains>
-          <contains>
-            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
-            <code value="studienteilnahme"/>
-          </contains>
         </expansion>
       </ValueSet>
     </resource>
@@ -484,7 +494,7 @@
                 <button data-clipboard-text="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type|1.0.0-ballot" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
-            <p>This value set contains 6 concepts</p>
+            <p>This value set contains 5 concepts</p>
             <table class="codes" data-fhir="generated">
               <tr>
                 <td>
@@ -498,6 +508,11 @@
                 </td>
                 <td>
                   <b>Definition</b>
+                </td>
+                <td>
+                  <b>
+                    <a href="https://browser.ihtsdotools.org/">Zielarten → SNOMED CT (Zielzustände)</a>
+                  </b>
                 </td>
                 <td>
                   <b>JSON</b>
@@ -516,6 +531,11 @@
                 </td>
                 <td>Heilung</td>
                 <td>Kuratives Ziel — vollständige Remission angestrebt.</td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://snomed.info/id/371001000">371001000</a>
+                  <i>(Zielzustand exakt abgebildet (Finding). Alternative Zustandscodes für Zwischenziele: 103338009 |In full remission|, 103337004 |In partial remission|.)</i>
+                </td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;heilung&quot;, &quot;display&quot;: &quot;Heilung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -538,6 +558,11 @@
                 <td>Lebensverlängerung</td>
                 <td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td>
                 <td>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/445320007">445320007</a>
+                  <i>(SNOMED kennt keinen Zielzustand 'verlängertes Leben'; annotiert ist die Messgröße (Observable). Verwandt: 445397003 |Duration of recurrence-free survival|.)</i>
+                </td>
+                <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lebensverlaengerung&quot;, &quot;display&quot;: &quot;Lebensverlängerung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
@@ -558,6 +583,15 @@
                 </td>
                 <td>Symptomkontrolle / Palliation</td>
                 <td>Linderung von Symptomen und Krankheitslast.</td>
+                <td>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/1149243003">1149243003</a>
+                  <i>(Finding aus dem Selbstmanagement-Kontext; nächstliegender Zustandscode.)</i>
+                  <br/>
+                  <span title="RELATEDTO">?</span>
+                  <a href="http://snomed.info/id/225353007">225353007</a>
+                  <i>(Regime/Therapy — das Mittel, nicht der Zielzustand.)</i>
+                </td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;symptomkontrolle&quot;, &quot;display&quot;: &quot;Symptomkontrolle / Palliation&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -580,6 +614,11 @@
                 <td>Lebensqualität</td>
                 <td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td>
                 <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://snomed.info/id/1156447008">1156447008</a>
+                  <i>(Zielzustand als Finding. Messgröße dazu: 405152002 |Quality of life satisfaction (observable entity)| — Erfassung per PROM oder Interview, siehe Zielwerte-Seite.)</i>
+                </td>
+                <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lebensqualitaet&quot;, &quot;display&quot;: &quot;Lebensqualität&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
@@ -600,6 +639,7 @@
                 </td>
                 <td>Funktionserhalt</td>
                 <td>Erhalt körperlicher oder kognitiver Funktion.</td>
+                <td/>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;funktionserhalt&quot;, &quot;display&quot;: &quot;Funktionserhalt&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -608,27 +648,6 @@
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;funktionserhalt&quot;&gt;&lt;display value=&quot;Funktionserhalt&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a name="x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type-studienteilnahme"> </a>
-                  <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code>
-                </td>
-                <td style="white-space:nowrap">  
-                  <a href="CodeSystem-onko-therapy-goal-type.html#onko-therapy-goal-type-studienteilnahme">studienteilnahme</a>
-                </td>
-                <td>Studienteilnahme</td>
-                <td>Teilnahme an einer klinischen Studie als explizites Ziel.</td>
-                <td>
-                  <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;studienteilnahme&quot;, &quot;display&quot;: &quot;Studienteilnahme&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
-                  </span>
-                </td>
-                <td>
-                  <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;studienteilnahme&quot;&gt;&lt;display value=&quot;Studienteilnahme&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -641,7 +660,7 @@
         <title value="Onkologische Therapieziel-Art (VS)"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2026-07-31T08:51:02+00:00"/>
+        <date value="2026-07-31T12:16:37+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -650,9 +669,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:37a9f673-acef-42ad-8da4-a5d19edd2f74"/>
-          <timestamp value="2026-07-31T08:52:24+00:00"/>
-          <total value="6"/>
+          <identifier value="urn:uuid:ff570c83-8bd8-4537-a460-6d5adf302219"/>
+          <timestamp value="2026-07-31T12:17:58+00:00"/>
+          <total value="5"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -698,11 +717,6 @@
             <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
             <code value="funktionserhalt"/>
             <display value="Funktionserhalt"/>
-          </contains>
-          <contains>
-            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
-            <code value="studienteilnahme"/>
-            <display value="Studienteilnahme"/>
           </contains>
         </expansion>
       </ValueSet>

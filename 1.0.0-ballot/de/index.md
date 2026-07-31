@@ -10,7 +10,7 @@ Er entsteht im Rahmen der BIH-CEI / Gematik-Onkologie-Kooperation und wird auf D
 
 #### Erste Profile
 
-![](profile-overview.png)
+![](profil-uebersicht.png)
 
 Der initiale Profilsatz folgt der im [Analysebericht](analysebericht.md) festgelegten Vier-Schichten-Architektur und bildet den **CarePlan-/Goal-Fallback-Pfad** ab:
 
@@ -19,7 +19,7 @@ Der initiale Profilsatz folgt der im [Analysebericht](analysebericht.md) festgel
 * **[OnkoTherapyGoal](StructureDefinition-onko-therapy-goal.md)** — strukturiertes Therapieziel mit codierter Zielart (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität).
 * **[OnkoTherapyIntent](StructureDefinition-onko-therapy-intent.md)** — Extension für die Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).
 
-Begleitende Terminologien: [OnkoTherapyGoalType](CodeSystem-onko-therapy-goal-type.md) und [OnkoTherapyIntent](CodeSystem-onko-therapy-intent.md).
+Begleitende Terminologien: [OnkoTherapyGoalType](CodeSystem-onko-therapy-goal-type.md) und [OnkoTherapyIntent](ValueSet-onko-therapy-intent.md).
 
 Der CPG-on-FHIR-Primärpfad (`PlanDefinition`, `ActivityDefinition`, `Library`) und die MII-KDS-Anbindung folgen in späteren Iterationen.
 

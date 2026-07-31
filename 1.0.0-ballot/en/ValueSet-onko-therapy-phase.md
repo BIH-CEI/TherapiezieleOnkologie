@@ -3,7 +3,7 @@
 ## ValueSet: Onkologische Therapiephase / Unter-Intention (VS) (Experimental) 
 
  
-Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie, sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`. Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung ergänzbar). 
+Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie, sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`. Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B. Konsolidierung ergänzbar). 
 
  **References** 
 
@@ -35,7 +35,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "title" : "Onkologische Therapiephase / Unter-Intention (VS)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-31T08:51:02+00:00",
+  "date" : "2026-07-31T12:16:37+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -44,7 +44,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nDeutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung\nergänzbar).",
+  "description" : "Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur\nHaupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,\nsondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen\nBegriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.\nKonsolidierung ergänzbar).",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -57,19 +57,19 @@ No Expansion for this valueset (not supported by Publication Tooling)
       "system" : "http://snomed.info/sct",
       "concept" : [{
         "code" : "450827009",
-        "display" : "Induktionstherapie"
+        "display" : "Induction chemotherapy"
       },
       {
         "code" : "816151001",
-        "display" : "Konsolidierungstherapie"
+        "display" : "Consolidation antineoplastic chemotherapy"
       },
       {
         "code" : "1254741007",
-        "display" : "Intensivierungstherapie"
+        "display" : "Intensification antineoplastic therapy regimen"
       },
       {
         "code" : "1345242003",
-        "display" : "Erhaltungstherapie"
+        "display" : "Maintenance antineoplastic therapy"
       }]
     }]
   }

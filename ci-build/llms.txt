@@ -31,6 +31,10 @@
 * [Onkologische Therapielinie – Art (VS)](de/ValueSet-onko-therapy-line-type.md)
 * [Onkologische Therapiephase / Unter-Intention (VS)](de/ValueSet-onko-therapy-phase.md)
 
+### Logicals
+
+* [Therapieziel-Dreieck (logisches Modell)](de/StructureDefinition-TherapiezielDreieck.md)
+
 ### Resource Profiles
 
 * [Onkologischer CarePlan](de/StructureDefinition-onko-care-plan.md)
@@ -46,6 +50,10 @@
 * [CarePlan Custodian (Extension)](de/StructureDefinition-onko-careplan-custodian.md)
 * [Onkologische Therapieintention (Extension)](de/StructureDefinition-onko-therapy-intent.md)
 * [Therapielinie – Medikationsverordnung (Extension)](de/StructureDefinition-onko-therapy-line-medication-request.md)
+
+### ConceptMaps
+
+* [Zielarten → SNOMED CT (Zielzustände)](de/ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.md)
 
 ### ImplementationGuides
 

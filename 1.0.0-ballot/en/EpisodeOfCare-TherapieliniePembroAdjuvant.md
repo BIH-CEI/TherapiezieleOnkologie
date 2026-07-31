@@ -11,8 +11,8 @@
 Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Adjuvant
-* phase: Erhaltungstherapie
+* hauptintention: Adjuvant - intent
+* phase: Maintenance antineoplastic therapy
 
 **Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroAdjuvantMamma.md)
 
@@ -53,7 +53,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "373846009",
-          "display" : "Adjuvant"
+          "display" : "Adjuvant - intent"
         }]
       }
     },
@@ -63,7 +63,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "1345242003",
-          "display" : "Erhaltungstherapie"
+          "display" : "Maintenance antineoplastic therapy"
         }]
       }
     }],

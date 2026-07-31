@@ -4,7 +4,7 @@
   <id value="onko-therapy-intent"/>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet onko-therapy-intent</b></p><a name="onko-therapy-intent"> </a><a name="hconko-therapy-intent"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/373808002">373808002</a></td><td>Kurativ</td></tr><tr><td><a href="http://snomed.info/id/363676003">363676003</a></td><td>Palliativ</td></tr><tr><td><a href="http://snomed.info/id/373847000">373847000</a></td><td>Neoadjuvant</td></tr><tr><td><a href="http://snomed.info/id/373846009">373846009</a></td><td>Adjuvant</td></tr><tr><td><a href="http://snomed.info/id/399707004">399707004</a></td><td>Supportiv</td></tr></table></li></ul></div>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet onko-therapy-intent</b></p><a name="onko-therapy-intent"> </a><a name="hconko-therapy-intent"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/373808002">373808002</a></td><td>Curative - procedure intent</td></tr><tr><td><a href="http://snomed.info/id/363676003">363676003</a></td><td>Palliative intent</td></tr><tr><td><a href="http://snomed.info/id/373847000">373847000</a></td><td>Neoadjuvant intent</td></tr><tr><td><a href="http://snomed.info/id/373846009">373846009</a></td><td>Adjuvant - intent</td></tr><tr><td><a href="http://snomed.info/id/399707004">399707004</a></td><td>Supportive - procedure intent</td></tr></table></li></ul></div>
   </text>
   <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"/>
   <version value="1.0.0-ballot"/>
@@ -12,7 +12,7 @@
   <title value="Onkologische Therapieintention (VS)"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2026-07-31T08:51:02+00:00"/>
+  <date value="2026-07-31T12:16:37+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -21,7 +21,7 @@
       <value value="https://www.bihealth.org"/>
     </telecom>
   </contact>
-  <description value="Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.&#xA;&#xA;Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.&#xA;Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen&#xA;SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."/>
+  <description value="Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.&#xA;&#xA;Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.&#xA;Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar&#xA;gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten&#xA;des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -34,23 +34,23 @@
       <system value="http://snomed.info/sct"/>
       <concept>
         <code value="373808002"/>
-        <display value="Kurativ"/>
+        <display value="Curative - procedure intent"/>
       </concept>
       <concept>
         <code value="363676003"/>
-        <display value="Palliativ"/>
+        <display value="Palliative intent"/>
       </concept>
       <concept>
         <code value="373847000"/>
-        <display value="Neoadjuvant"/>
+        <display value="Neoadjuvant intent"/>
       </concept>
       <concept>
         <code value="373846009"/>
-        <display value="Adjuvant"/>
+        <display value="Adjuvant - intent"/>
       </concept>
       <concept>
         <code value="399707004"/>
-        <display value="Supportiv"/>
+        <display value="Supportive - procedure intent"/>
       </concept>
     </include>
   </compose>

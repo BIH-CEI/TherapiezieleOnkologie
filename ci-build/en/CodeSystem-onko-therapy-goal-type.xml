@@ -4,7 +4,7 @@
   <id value="onko-therapy-goal-type"/>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem onko-therapy-goal-type</b></p><a name="en-onko-therapy-goal-type"> </a><a name="en-hconko-therapy-goal-type"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">heilung<a name="en-onko-therapy-goal-type-heilung"> </a></td><td>Heilung</td><td>Kuratives Ziel — vollständige Remission angestrebt.</td></tr><tr><td style="white-space:nowrap">lebensverlaengerung<a name="en-onko-therapy-goal-type-lebensverlaengerung"> </a></td><td>Lebensverlängerung</td><td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td></tr><tr><td style="white-space:nowrap">symptomkontrolle<a name="en-onko-therapy-goal-type-symptomkontrolle"> </a></td><td>Symptomkontrolle / Palliation</td><td>Linderung von Symptomen und Krankheitslast.</td></tr><tr><td style="white-space:nowrap">lebensqualitaet<a name="en-onko-therapy-goal-type-lebensqualitaet"> </a></td><td>Lebensqualität</td><td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td></tr><tr><td style="white-space:nowrap">funktionserhalt<a name="en-onko-therapy-goal-type-funktionserhalt"> </a></td><td>Funktionserhalt</td><td>Erhalt körperlicher oder kognitiver Funktion.</td></tr><tr><td style="white-space:nowrap">studienteilnahme<a name="en-onko-therapy-goal-type-studienteilnahme"> </a></td><td>Studienteilnahme</td><td>Teilnahme an einer klinischen Studie als explizites Ziel.</td></tr></table></div>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem onko-therapy-goal-type</b></p><a name="en-onko-therapy-goal-type"> </a><a name="en-hconko-therapy-goal-type"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">heilung<a name="en-onko-therapy-goal-type-heilung"> </a></td><td>Heilung</td><td>Kuratives Ziel — vollständige Remission angestrebt.</td></tr><tr><td style="white-space:nowrap">lebensverlaengerung<a name="en-onko-therapy-goal-type-lebensverlaengerung"> </a></td><td>Lebensverlängerung</td><td>Verlängerung des Gesamtüberlebens, wenn Heilung unwahrscheinlich ist.</td></tr><tr><td style="white-space:nowrap">symptomkontrolle<a name="en-onko-therapy-goal-type-symptomkontrolle"> </a></td><td>Symptomkontrolle / Palliation</td><td>Linderung von Symptomen und Krankheitslast.</td></tr><tr><td style="white-space:nowrap">lebensqualitaet<a name="en-onko-therapy-goal-type-lebensqualitaet"> </a></td><td>Lebensqualität</td><td>Erhalt oder Verbesserung von Funktion und Lebensqualität.</td></tr><tr><td style="white-space:nowrap">funktionserhalt<a name="en-onko-therapy-goal-type-funktionserhalt"> </a></td><td>Funktionserhalt</td><td>Erhalt körperlicher oder kognitiver Funktion.</td></tr></table></div>
   </text>
   <url value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
   <version value="1.0.0-ballot"/>
@@ -12,7 +12,7 @@
   <title value="Onkologische Therapieziel-Art"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2026-07-31T08:51:02+00:00"/>
+  <date value="2026-07-31T12:16:37+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -21,7 +21,7 @@
       <value value="https://www.bihealth.org"/>
     </telecom>
   </contact>
-  <description value="Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung)."/>
+  <description value="Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015)."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -31,7 +31,7 @@
   </jurisdiction>
   <caseSensitive value="true"/>
   <content value="complete"/>
-  <count value="6"/>
+  <count value="5"/>
   <concept>
     <code value="heilung"/>
     <display value="Heilung"/>
@@ -56,10 +56,5 @@
     <code value="funktionserhalt"/>
     <display value="Funktionserhalt"/>
     <definition value="Erhalt körperlicher oder kognitiver Funktion."/>
-  </concept>
-  <concept>
-    <code value="studienteilnahme"/>
-    <display value="Studienteilnahme"/>
-    <definition value="Teilnahme an einer klinischen Studie als explizites Ziel."/>
   </concept>
 </CodeSystem>

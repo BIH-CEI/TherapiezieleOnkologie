@@ -11,8 +11,8 @@
 Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Palliativ
-* phase: Erhaltungstherapie
+* hauptintention: Palliative intent
+* phase: Maintenance antineoplastic therapy
 
 > **Goal: Related Goal**
 * type: Predecessor
@@ -48,7 +48,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "363676003",
-          "display" : "Palliativ"
+          "display" : "Palliative intent"
         }]
       }
     },
@@ -58,7 +58,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "1345242003",
-          "display" : "Erhaltungstherapie"
+          "display" : "Maintenance antineoplastic therapy"
         }]
       }
     }],

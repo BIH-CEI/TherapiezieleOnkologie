@@ -5,9 +5,10 @@
     "status" : "draft",
     "name" : "OnkoTherapyGoalType",
     "title" : "Onkologische Therapieziel-Art",
-    "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+    "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
     "uses" : {
     },
-    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)"
+    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)",
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
   }]
 }

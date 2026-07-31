@@ -283,6 +283,55 @@ extensible). Häufige Arten:</p>
 Konsolidierung/Erhaltung bei hämatologischen Erkrankungen) lassen sich ergänzen, ohne
 das Modell zu ändern.</p>
 
+<svg width="100%" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Behandlungsepisoden: ein Profil, viele Arten, drei Modalitätsspuren</title>
+<desc>Zeitstrahl mit Behandlungsepisoden in drei Spuren: systemische Therapielinien (EnLiST, in der LoT-Zaehlung), lokoregionale Behandlungslinien (nicht gezaehlt) und informative bzw. Management-Abschnitte. Alle sind dasselbe EpisodeOfCare-Profil, die Art steht in type. Die Operation selbst ist ein Procedure innerhalb der perioperativen Episode.</desc>
+<defs>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<text x="40" y="24" font-size="11.5" font-weight="500" fill="#5F5E5A">Ein Profil — viele Arten: EpisodeOfCare.type unterscheidet, die Struktur bleibt gleich.</text>
+
+<text x="30" y="66" font-size="10.5" font-weight="500" fill="#2C2C2A">systemisch</text>
+<text x="30" y="80" font-size="9" fill="#0F6E56">EnLiST — zählt (LoT)</text>
+<text x="30" y="140" font-size="10.5" font-weight="500" fill="#2C2C2A">lokoregional</text>
+<text x="30" y="154" font-size="9" fill="#5F5E5A">zählt nicht</text>
+<text x="30" y="214" font-size="10.5" font-weight="500" fill="#2C2C2A">informativ /</text>
+<text x="30" y="228" font-size="9" fill="#5F5E5A">Management</text>
+
+<line x1="140" y1="111" x2="655" y2="111" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
+<line x1="140" y1="185" x2="655" y2="185" stroke="#C9C7C0" stroke-width="1" stroke-dasharray="2,5" />
+
+<g><rect x="145" y="198" width="115" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="202" y="218" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Diagnostiklinie</text>
+<text x="202" y="233" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Diagnostik</text></g>
+
+<g><rect x="270" y="50" width="135" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="337" y="70" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Systemische Linie</text>
+<text x="337" y="85" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Therapielinie</text>
+<circle cx="400" cy="54" r="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2" />
+<text x="400" y="58" text-anchor="middle" font-size="8.5" font-weight="600" fill="#04342C">1L</text></g>
+
+<g><rect x="415" y="124" width="130" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="480" y="141" text-anchor="middle" font-size="9.5" font-weight="500" fill="#26215C">Perioperative Episode</text>
+<circle cx="452" cy="155" r="3" fill="#534AB7" />
+<text x="460" y="159" font-size="8.5" fill="#534AB7">OP = Procedure</text></g>
+
+<g><rect x="555" y="198" width="105" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="607" y="218" text-anchor="middle" font-size="10.5" font-weight="500" fill="#26215C">Nachsorge</text>
+<text x="607" y="233" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Surveillance</text></g>
+
+<line x1="145" y1="272" x2="648" y2="272" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)" />
+<text x="656" y="276" font-size="10.5" fill="#5F5E5A">Zeit</text>
+
+<text x="40" y="302" font-size="9.5" fill="#5F5E5A">Perioperative Episode = die Reise (Planung → OP → Reha); die OP selbst ist ein Procedure, einzelne Kontakte sind Encounter.</text>
+<text x="40" y="318" font-size="9.5" fill="#5F5E5A">In die LoT-Zählung (EnLiST) gehen nur systemische Linien ein — lokoregionale Linien und Management-Abschnitte nicht.</text>
+
+<rect x="40" y="342" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="59" y="353" font-size="11" fill="#5F5E5A">Behandlungsepisode (EpisodeOfCare — ein Profil)</text>
+<circle cx="342" cy="348" r="8" fill="#E1F5EE" stroke="#0F6E56" /><text x="357" y="353" font-size="11" fill="#5F5E5A">LoT-Zähler</text>
+<circle cx="435" cy="348" r="3" fill="#534AB7" /><text x="446" y="353" font-size="11" fill="#5F5E5A">Procedure (Ereignis)</text>
+</svg>
+
 <h3 id="systemische-therapielinie-vs-lokoregionale-behandlungslinie">Systemische Therapielinie vs. lokoregionale Behandlungslinie</h3>
 
 <p>Der Oberbegriff <strong>Behandlungslinie</strong> umfasst zwei Modalitätsklassen:</p>
@@ -374,7 +423,7 @@ anschließende Operation als getrennte Abschnitte.</li>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-31 08:51:00 +0000">
+  <span title="2026-07-31 12:16:00 +0000">
     2026-07-31
   </span>
 

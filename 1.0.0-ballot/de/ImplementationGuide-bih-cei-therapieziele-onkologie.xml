@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-07-31T08:51:02+00:00"/>
+  <date value="2026-07-31T12:16:37+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -701,7 +701,7 @@
       <reference>
         <reference value="CarePlan/CarePlanMammaDiagnostik"/>
       </reference>
-      <name value="Diagnostischer CarePlan"/>
+      <name value="Diagnostischer CarePlan (Beispiel Mamma)"/>
       <description value="Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."/>
       <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
     </resource>
@@ -878,7 +878,7 @@
         <reference value="ValueSet/onko-therapy-intent"/>
       </reference>
       <name value="Onkologische Therapieintention (VS)"/>
-      <description value="Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.&#xA;&#xA;Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.&#xA;Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen&#xA;SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."/>
+      <description value="Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.&#xA;&#xA;Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.&#xA;Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar&#xA;gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten&#xA;des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -911,7 +911,7 @@
         <reference value="ValueSet/onko-therapy-phase"/>
       </reference>
       <name value="Onkologische Therapiephase / Unter-Intention (VS)"/>
-      <description value="Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur&#xA;Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,&#xA;sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.&#xA;Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung&#xA;ergänzbar)."/>
+      <description value="Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur&#xA;Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,&#xA;sondern als Behandlungsformen unter `716872004 | Antineoplastic chemotherapy regimen`.&#xA;Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen&#xA;Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.&#xA;Konsolidierung ergänzbar)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -922,7 +922,7 @@
         <reference value="CodeSystem/onko-therapy-goal-type"/>
       </reference>
       <name value="Onkologische Therapieziel-Art"/>
-      <description value="Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung)."/>
+      <description value="Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -999,7 +999,7 @@
         <reference value="StructureDefinition/onko-therapy-goal"/>
       </reference>
       <name value="Onkologisches Therapieziel"/>
-      <description value="Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.&#xA;&#xA;Das Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))&#xA;angelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über&#xA;`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten&#xA;Ergebnissen (Verlaufs-Observations) verknüpft wird.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,&#xA;  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).&#xA;- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der&#xA;  zugehörigen Behandlungslinie hinterlegt werden.&#xA;- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE&#xA;  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel&#xA;  bezogen ausgewertet werden kann.&#xA;&#xA;`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab&#xA;(z. B. erreicht, in Bearbeitung, nicht erreicht)."/>
+      <description value="Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.&#xA;&#xA;Das Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))&#xA;angelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über&#xA;`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten&#xA;Ergebnissen (Verlaufs-Observations) verknüpft wird.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,&#xA;  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt).&#xA;- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der&#xA;  zugehörigen Behandlungslinie hinterlegt werden.&#xA;- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE&#xA;  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel&#xA;  bezogen ausgewertet werden kann.&#xA;&#xA;`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab&#xA;(z. B. erreicht, in Bearbeitung, nicht erreicht)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1169,6 +1169,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/TherapiezielDreieck"/>
+      </reference>
+      <name value="Therapieziel-Dreieck (logisches Modell)"/>
+      <description value="Logisches Modell der drei Kernkonzepte des Leitfadens und ihrer Beziehungen:&#xA;&#xA;- **Behandlungsepisode** — *wer* behandelt, in welchem Rahmen (Art, Intention,&#xA;  Zeitraum, verantwortliche Organisation),&#xA;- **Therapieziel** — *was* erreicht werden soll (Zielart, messbarer Zielwert,&#xA;  Erreichungsgrad),&#xA;- **Versorgungsplan** — *welche Maßnahmen* geplant sind (Tumorboard-Empfehlung&#xA;  bzw. Behandlungsplan mit den geplanten Anforderungen).&#xA;&#xA;Das Ziel geht dem Plan voraus; der Plan **verfolgt** das Ziel (`verfolgtesZiel`)&#xA;und ist seiner **Episode zugeordnet** (`episode`). Zwischen Ziel und Episode gibt&#xA;es **keine direkte Referenz** — die Zuordnung ergibt sich implizit über den Plan&#xA;(siehe schematische Darstellung)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
       </extension>
       <reference>
@@ -1331,6 +1342,17 @@
       <name value="Verbesserung und Erhaltung der QoL nach der onkologischen Behandlung"/>
       <description value="Nachsorge-/Monitoring-Ziel nach abgeschlossener Primärtherapie (Chemotherapie und Operation) des Mammakarzinoms."/>
       <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/ConceptMapOnkoTherapyGoalTypeSct"/>
+      </reference>
+      <name value="Zielarten → SNOMED CT (Zielzustände)"/>
+      <description value="Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (`equivalence`) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

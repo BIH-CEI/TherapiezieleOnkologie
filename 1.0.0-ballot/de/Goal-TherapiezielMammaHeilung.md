@@ -11,7 +11,7 @@
 Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Kurativ
+* hauptintention: Curative - procedure intent
 
 > **Goal acceptance**
 * individual: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
@@ -71,7 +71,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "373808002",
-          "display" : "Kurativ"
+          "display" : "Curative - procedure intent"
         }]
       }
     }],

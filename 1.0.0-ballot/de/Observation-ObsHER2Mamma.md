@@ -10,7 +10,7 @@
 
 **status**: Final
 
-**code**: HER2 [Interpretation] in Tissue
+**code**: HER2 Ag [Interpretation] in Tissue
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -40,7 +40,7 @@ Immunhistochemie 1+ → HER2-negativ; keine In-situ-Hybridisierung erforderlich.
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "48676-1",
-      "display" : "HER2 [Interpretation] in Tissue"
+      "display" : "HER2 Ag [Interpretation] in Tissue"
     }]
   },
   "subject" : {

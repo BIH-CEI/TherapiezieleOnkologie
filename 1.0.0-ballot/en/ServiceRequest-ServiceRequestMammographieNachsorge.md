@@ -36,7 +36,7 @@
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "24606-6",
-      "display" : "MG Breast Screening"
+      "display" : "Mammografie"
     }],
     "text" : "Nachsorge-Mammographie beidseits (jährlich)"
   },

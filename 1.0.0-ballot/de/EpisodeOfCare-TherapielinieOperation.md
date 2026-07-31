@@ -11,11 +11,11 @@
 Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Kurativ
+* hauptintention: Curative - procedure intent
 
 **status**: Finished
 
-**type**: Erhaltungstherapie
+**type**: Surgical procedure
 
 ### Diagnoses
 
@@ -52,7 +52,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "373808002",
-          "display" : "Kurativ"
+          "display" : "Curative - procedure intent"
         }]
       }
     }],
@@ -62,8 +62,8 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
   "type" : [{
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "1345242003",
-      "display" : "Erhaltungstherapie"
+      "code" : "387713003",
+      "display" : "Surgical procedure"
     }]
   }],
   "diagnosis" : [{

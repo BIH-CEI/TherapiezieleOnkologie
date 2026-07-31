@@ -273,7 +273,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="363676003"/>
-                <display value="Palliativ"/>
+                <display value="Palliative intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -282,7 +282,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="450827009"/>
-                <display value="Induktionstherapie"/>
+                <display value="Induction chemotherapy"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -348,7 +348,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="363676003"/>
-                <display value="Palliativ"/>
+                <display value="Palliative intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -357,7 +357,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="450827009"/>
-                <display value="Induktionstherapie"/>
+                <display value="Induction chemotherapy"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -493,7 +493,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="373808002"/>
-                <display value="Kurativ"/>
+                <display value="Curative - procedure intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -548,7 +548,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="363676003"/>
-                <display value="Palliativ"/>
+                <display value="Palliative intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -557,7 +557,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="1345242003"/>
-                <display value="Erhaltungstherapie"/>
+                <display value="Maintenance antineoplastic therapy"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -744,7 +744,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="363676003"/>
-                <display value="Palliativ"/>
+                <display value="Palliative intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>

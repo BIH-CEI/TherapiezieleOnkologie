@@ -853,7 +853,7 @@
           <coding>
             <system value="http://loinc.org"/>
             <code value="48676-1"/>
-            <display value="HER2 [Interpretation] in Tissue"/>
+            <display value="HER2 Ag [Interpretation] in Tissue"/>
           </coding>
         </code>
         <subject>
@@ -989,7 +989,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="373847000"/>
-                <display value="Neoadjuvant"/>
+                <display value="Neoadjuvant intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -998,7 +998,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="373808002"/>
-                <display value="Kurativ"/>
+                <display value="Curative - procedure intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -1067,7 +1067,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="373808002"/>
-                <display value="Kurativ"/>
+                <display value="Curative - procedure intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -1076,8 +1076,8 @@
         <type>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="1345242003"/>
-            <display value="Erhaltungstherapie"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
           </coding>
         </type>
         <diagnosis>
@@ -1134,7 +1134,7 @@
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="373808002"/>
-                <display value="Kurativ"/>
+                <display value="Curative - procedure intent"/>
               </coding>
             </valueCodeableConcept>
           </extension>
@@ -1742,7 +1742,7 @@
             <coding>
               <system value="http://loinc.org"/>
               <code value="24606-6"/>
-              <display value="MG Breast Screening"/>
+              <display value="Mammografie"/>
             </coding>
           </measure>
           <detailCodeableConcept>
@@ -1797,7 +1797,7 @@
           <coding>
             <system value="http://loinc.org"/>
             <code value="24606-6"/>
-            <display value="MG Breast Screening"/>
+            <display value="Mammografie"/>
           </coding>
           <text value="Nachsorge-Mammographie beidseits (jährlich)"/>
         </code>

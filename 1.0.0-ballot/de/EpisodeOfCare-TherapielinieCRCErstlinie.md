@@ -11,8 +11,8 @@
 Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Palliativ
-* phase: Induktionstherapie
+* hauptintention: Palliative intent
+* phase: Induction chemotherapy
 
 **status**: Active
 
@@ -53,7 +53,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "363676003",
-          "display" : "Palliativ"
+          "display" : "Palliative intent"
         }]
       }
     },
@@ -63,7 +63,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "450827009",
-          "display" : "Induktionstherapie"
+          "display" : "Induction chemotherapy"
         }]
       }
     }],

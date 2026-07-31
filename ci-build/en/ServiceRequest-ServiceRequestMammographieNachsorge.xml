@@ -12,7 +12,7 @@
     <coding>
       <system value="http://loinc.org"/>
       <code value="24606-6"/>
-      <display value="MG Breast Screening"/>
+      <display value="Mammografie"/>
     </coding>
     <text value="Nachsorge-Mammographie beidseits (jährlich)"/>
   </code>

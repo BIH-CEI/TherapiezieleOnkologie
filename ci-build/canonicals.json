@@ -6,11 +6,24 @@
   "name" : "OnkoTherapyGoalType"
 },
 {
+  "id" : "ConceptMapOnkoTherapyGoalTypeSct",
+  "type" : "ConceptMap",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ConceptMap/ConceptMapOnkoTherapyGoalTypeSct",
+  "version" : "1.0.0-ballot"
+},
+{
   "id" : "bih-cei-therapieziele-onkologie",
   "type" : "ImplementationGuide",
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ImplementationGuide/bih-cei-therapieziele-onkologie",
   "version" : "1.0.0-ballot",
   "name" : "TherapiezieleOnkologie"
+},
+{
+  "id" : "TherapiezielDreieck",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/TherapiezielDreieck",
+  "version" : "1.0.0-ballot",
+  "name" : "TherapiezielDreieck"
 },
 {
   "id" : "onko-care-plan",

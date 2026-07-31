@@ -243,7 +243,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Beispiel:</strong> Die Tumorboard-Empfehlung wird umgesetzt, pro geplanter Abgabe entsteht ein <code class="language-plaintext highlighter-rouge">MedicationRequest</code>. Nach 2 von 6 Zyklen wird die Dosis reduziert. Die noch offenen Requests werden gestoppt und durch neue ersetzt, gebündelt in einem neuen <code class="language-plaintext highlighter-rouge">CarePlan</code>. Das Tumorboard wird dafür nicht erneut einberufen.</p>
 
-<p><img src="Dosisänderung.png" alt="Szenario 1: Reguläres Ende mit Dosisanpassung, in diesem Fall Dosisreduktion" style="width:100%;" /></p>
+<p><img src="abweichung-dosisanpassung.png" alt="Szenario 1: Reguläres Ende mit Dosisanpassung, in diesem Fall Dosisreduktion" style="width:100%;" /></p>
 
 <p><strong>Merkmale:</strong></p>
 <ul>
@@ -266,7 +266,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Beispiel:</strong> Nach 2 von 6 Zyklen wird ein Wirkstoff ausgetauscht. Wie beim Dosiswechsel werden offene <code class="language-plaintext highlighter-rouge">MedicationRequests</code> gestoppt und in einem neuen <code class="language-plaintext highlighter-rouge">CarePlan</code> ersetzt. Ein reiner Austausch bleibt inhaltlich von der ursprünglichen Tumorboard-Empfehlung gedeckt (meist auf Ebene der Therapieklasse), das Tumorboard wird daher nie erneut einberufen.</p>
 
-<p><img src="Substanzwechsel.png" alt="Szenario 2: Reguläres Ende mit Substanzwechsel" style="width:100%;" /></p>
+<p><img src="abweichung-substanzwechsel.png" alt="Szenario 2: Reguläres Ende mit Substanzwechsel" style="width:100%;" /></p>
 
 <p><strong>Merkmale:</strong></p>
 
@@ -299,7 +299,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Beispiel:</strong> Nach 2 von 6 Zyklen treten schwerwiegende Nebenwirkungen ein, sodass die Chemotherapie abgebrochen werden muss. Das Tumorboard wird erneut einberufen und ein neuer <code class="language-plaintext highlighter-rouge">CarePlan</code> mit entsprechendem <code class="language-plaintext highlighter-rouge">TherapieIntent</code>, <code class="language-plaintext highlighter-rouge">Goals</code> und Behandlungsvorschlägen erstellt. Ein bereits geplanter <code class="language-plaintext highlighter-rouge">ServiceRequest</code> (z. B. für begleitende Diagnostik) wird dabei unverändert aus dem bisherigen CarePlan in den neu erstellten CarePlan übernommen.</p>
 
-<p><img src="Nebenwirkung.png" alt="Szenario 3: Abbruch wegen Nebenwirkung" style="width:100%;" /></p>
+<p><img src="abweichung-nebenwirkung.png" alt="Szenario 3: Abbruch wegen Nebenwirkung" style="width:100%;" /></p>
 
 <p><strong>Merkmale:</strong></p>
 
@@ -317,7 +317,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Beispiel:</strong> Nach 3 Zyklen findet ein Progress der Erkrankung statt. Dies führt dazu, dass die initiale Therapie so nicht weitergeführt werden kann. Da zu Beginn aber bereits ein potenzieller Progress der Erkrankung im ersten Tumorboard mit eingeplant wurde, wurde bereits ein <code class="language-plaintext highlighter-rouge">CarePlan</code> erstellt, welcher umgesetzt werden soll, sobald es zu einem Progress kommt.</p>
 
-<p><img src="Progress.png" alt="Szenario 4: Abbruch wegen Progress" style="width:100%;" /></p>
+<p><img src="abweichung-progress.png" alt="Szenario 4: Abbruch wegen Progress" style="width:100%;" /></p>
 
 <p><strong>Merkmale:</strong></p>
 
@@ -335,7 +335,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Beispiel:</strong> Der Grund ist medizinisch nicht begründet, z. B. Patient zieht weg, Arzt-Patienten-Verhältnis gestört, Unfall. Die Tumorboard-Empfehlung selbst bleibt inhaltlich unverändert gültig, <code class="language-plaintext highlighter-rouge">MedicationRequest</code> und <code class="language-plaintext highlighter-rouge">ServiceRequest</code> laufen weiter mit Status <code class="language-plaintext highlighter-rouge">active</code>. Es ändern sich nur die Verantwortlichen, <code class="language-plaintext highlighter-rouge">requester</code>, <code class="language-plaintext highlighter-rouge">performer</code> bzw. <code class="language-plaintext highlighter-rouge">careManager</code> werden aktualisiert, kein Statuswechsel, kein Ersatz.</p>
 
-<p><img src="Sonstige_Gründe.png" alt="Szenario 5: Abbruch aus anderen Gründen" style="width:100%;" /></p>
+<p><img src="abweichung-sonstige-gruende.png" alt="Szenario 5: Abbruch aus anderen Gründen" style="width:100%;" /></p>
 
 <p><strong>Merkmale:</strong></p>
 <ul>
@@ -348,7 +348,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Beispiel:</strong> Die Patientin verstirbt während der Behandlung. Dementsprechend wird die Patientenressource geändert. Folglich müssen die noch offenen Ressourcen im Status angepasst werden.</p>
 
-<p><img src="Verstorben.png" alt="Szenario 6: Versterben der Patientin" style="width:100%;" /></p>
+<p><img src="abweichung-verstorben.png" alt="Szenario 6: Versterben der Patientin" style="width:100%;" /></p>
 
 <p><strong>Merkmale:</strong></p>
 
@@ -384,7 +384,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-31 08:51:00 +0000">
+  <span title="2026-07-31 12:16:00 +0000">
     2026-07-31
   </span>
 

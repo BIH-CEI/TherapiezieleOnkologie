@@ -1,6 +1,6 @@
-# Diagnostischer CarePlan - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
+# Diagnostischer CarePlan (Beispiel Mamma) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Example CarePlan: Diagnostischer CarePlan
+## Example CarePlan: Diagnostischer CarePlan (Beispiel Mamma)
 
 -------
 
@@ -31,7 +31,7 @@ Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan
 * [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-ObsGradingMamma.md)
 * [Observation Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-ObsEstrogenrezeptorMamma.md)
 * [Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-ObsProgesteronrezeptorMamma.md)
-* [Observation HER2 [Interpretation] in Tissue](Observation-ObsHER2Mamma.md)
+* [Observation HER2 Ag [Interpretation] in Tissue](Observation-ObsHER2Mamma.md)
 * [Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain](Observation-ObsKi67Mamma.md)
 **reference**: [ServiceRequest Histopathology service (qualifier value)](ServiceRequest-ServiceRequestPathologieMamma.md)
 

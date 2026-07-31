@@ -11,7 +11,7 @@
 Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Palliativ
+* hauptintention: Palliative intent
 
 **CarePlan Custodian (Extension)**: [Organization Onkologisches Zentrum Musterklinik](Organization-TumorzentrumCRC.md)
 
@@ -57,7 +57,7 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "363676003",
-          "display" : "Palliativ"
+          "display" : "Palliative intent"
         }]
       }
     }],

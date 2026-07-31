@@ -11,7 +11,7 @@
 Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Kurativ
+* hauptintention: Curative - procedure intent
 
 **Goal Reason Rejected**: Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar.
 
@@ -45,7 +45,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "373808002",
-          "display" : "Kurativ"
+          "display" : "Curative - procedure intent"
         }]
       }
     }],

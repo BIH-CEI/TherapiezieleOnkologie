@@ -1,10 +1,10 @@
 TherapiezieleOnkologie : Validation Results
 =========================================
 
-err = 31, warn = 105, info = 538
+err = 30, warn = 111, info = 543
 $--
 Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
- Build Errors : 6 / 7 / 0
+ Build Errors : 0 / 7 / 0
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Bundle-BundleCRCPalliativ : 8 / 4 / 57
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Bundle-BundleMammaNeoadjuvant : 11 / 15 / 87
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-CarePlanCRCPalliativ : 0 / 0 / 2
@@ -14,6 +14,7 @@ Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (cano
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CarePlan-DiagnostikCarePlanCRC : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CareTeam-TumorboardCRC : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/CodeSystem-onko-therapy-goal-type : 0 / 3 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ConceptMap-ConceptMapOnkoTherapyGoalTypeSct : 0 / 4 / 3
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Condition-ConditionCRC : 1 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Condition-ConditionMamma : 1 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/DiagnosticReport-DiagnosticReportHistologieCRC : 0 / 0 / 1
@@ -64,6 +65,7 @@ Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (cano
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestProcedure : 0 / 0 / 2
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ServiceRequest-ServiceRequestStagingMamma : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Specimen-SpecimenBiopsieMamma : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-TherapiezielDreieck : 0 / 2 / 4
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-care-plan : 0 / 2 / 69
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-careplan-custodian : 0 / 2 / 8
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-condition : 0 / 9 / 75
@@ -83,12 +85,6 @@ Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (cano
 WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be de.bih-cei.therapieziele-onkologie
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/OnkologinCRC.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/OnkologinMamma.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: There are multiple resources with the same title [Diagnostischer CarePlan].  This is not allowed because it produces duplicate entries in the table of contents.
-ERROR: de/index.html#/html/body/div/div/div/div/div/p/a at Line 294, column 109: The link 'CodeSystem-onko-therapy-intent.html' for "OnkoTherapyIntent" cannot be resolved
-ERROR: de/szenario-mamma.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 301, column 90: The link 'EpisodeOfCare-Therapielinieoperation.html' for "TherapielinieOperation" cannot be resolved
-ERROR: de/szenario-mamma.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 421, column 12: The link 'EpisodeOfCare-TherapielinieMammaNeoadjuvant.html' for "TherapielinieMammaNeoadjuvant" cannot be resolved
-ERROR: en/szenario-mamma.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 308, column 90: The link 'EpisodeOfCare-Therapielinieoperation.html' for "TherapielinieOperation" cannot be resolved
-ERROR: en/szenario-mamma.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 428, column 12: The link 'EpisodeOfCare-TherapielinieMammaNeoadjuvant.html' for "TherapielinieMammaNeoadjuvant" cannot be resolved
 WARNING: 1: An HTML fragment from the set [ip-statements.xhtml, ip-statements.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml, dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
@@ -213,6 +209,13 @@ INFORMATION: CarePlan/CarePlanCRCPalliativ: CarePlan.extension[0].extension[0].v
 WARNING: CodeSystem/onko-therapy-goal-type: CodeSystem.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: CodeSystem/onko-therapy-goal-type: CodeSystem.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 WARNING: Resource: The resource CodeSystem/onko-therapy-goal-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.json ==
+WARNING: ConceptMap/ConceptMapOnkoTherapyGoalTypeSct: ConceptMap.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
+WARNING: ConceptMap/ConceptMapOnkoTherapyGoalTypeSct: ConceptMap.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+INFORMATION: ConceptMap/ConceptMapOnkoTherapyGoalTypeSct: ConceptMap.group[0].target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
+WARNING: ConceptMap/ConceptMapOnkoTherapyGoalTypeSct: ConceptMap.group[0]: The terminology server null used for the CodeSystem http://snomed.info/sct does not support batch validation (tx version Not Known), so the codes have not been validated
+WARNING: ConceptMap/ConceptMapOnkoTherapyGoalTypeSct: ConceptMap: Das ShareableConceptMap-Profil empfiehlt, dass das Element name befüllt wird, aber es ist nicht vorhanden. Veröffentlichte Concept Maps SOLLTEN mit dem ShareableConceptMap-Profil übereinstimmen
+INFORMATION: Resource: The resource ConceptMap/ConceptMapOnkoTherapyGoalTypeSct could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Condition-ConditionCRC.json ==
 WARNING: Condition/ConditionCRC: Condition.code.coding[0].system: A definition for CodeSystem 'http://fhir.de/CodeSystem/bfarm/icd-10-gm' version '2026' could not be found, so the code cannot be validated. No versions of this code system are known
 ERROR: Condition/ConditionCRC: Condition.code.coding[0]: Der angegebene Code (http://fhir.de/CodeSystem/bfarm/icd-10-gm#C18.9) befindet sich nicht im ValueSet 'MII VS Diagnose ICD-10-GM' (https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm|2026.0.0), und es wird ein Code aus diesem ValueSet benötigt: Invalid criteria version: '2025"
@@ -305,6 +308,12 @@ WARNING: Organization/Tumorboard: Organization.identifier[0].system: URL-Wert 'h
 INFORMATION: ServiceRequest/ServiceRequestProcedure: ServiceRequest.category[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request|1.0.0-ballot überein.
 == fsh-generated/resources/ServiceRequest-ServiceRequestStagingMamma.json ==
 == fsh-generated/resources/Specimen-SpecimenBiopsieMamma.json ==
+== fsh-generated/resources/StructureDefinition-TherapiezielDreieck.json ==
+INFORMATION: StructureDefinition/TherapiezielDreieck: StructureDefinition.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
+INFORMATION: StructureDefinition/TherapiezielDreieck: StructureDefinition.description.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
+WARNING: StructureDefinition/TherapiezielDreieck: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
+WARNING: StructureDefinition/TherapiezielDreieck: StructureDefinition.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
+INFORMATION: Resource: The resource StructureDefinition/TherapiezielDreieck could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-care-plan.json ==
 INFORMATION: StructureDefinition/onko-care-plan: StructureDefinition.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-care-plan: StructureDefinition.description.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.

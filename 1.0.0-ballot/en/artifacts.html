@@ -224,19 +224,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Structures: Resource Profiles</a>
+         <a href="#1">Structures: Logical Models</a>
       </li>
       <li>
-         <a href="#2">Structures: Extension Definitions</a>
+         <a href="#2">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#3">Terminology: Value Sets</a>
+         <a href="#3">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#4">Terminology: Code Systems</a>
+         <a href="#4">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#5">Example: Example Instances</a>
+         <a href="#5">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Concept Maps</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -246,6 +252,40 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      data-fhir="generated">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-TherapiezielDreieck.html"
+                  title="StructureDefinition/TherapiezielDreieck">
+                  <span title="StructureDefinition/TherapiezielDreieck">Therapieziel-Dreieck (logisches Modell)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Logisches Modell der drei Kernkonzepte des Leitfadens und ihrer Beziehungen:</p>
+
+<ul>
+  <li><strong>Behandlungsepisode</strong> — <em>wer</em> behandelt, in welchem Rahmen (Art, Intention,
+Zeitraum, verantwortliche Organisation),</li>
+  <li><strong>Therapieziel</strong> — <em>was</em> erreicht werden soll (Zielart, messbarer Zielwert,
+Erreichungsgrad),</li>
+  <li><strong>Versorgungsplan</strong> — <em>welche Maßnahmen</em> geplant sind (Tumorboard-Empfehlung
+bzw. Behandlungsplan mit den geplanten Anforderungen).</li>
+</ul>
+
+<p>Das Ziel geht dem Plan voraus; der Plan <strong>verfolgt</strong> das Ziel (<code class="language-plaintext highlighter-rouge">verfolgtesZiel</code>)
+und ist seiner <strong>Episode zugeordnet</strong> (<code class="language-plaintext highlighter-rouge">episode</code>). Zwischen Ziel und Episode gibt
+es <strong>keine direkte Referenz</strong> — die Zuordnung ergibt sich implizit über den Plan
+(siehe schematische Darstellung).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
    <h3>Structures: Resource Profiles </h3>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -367,7 +407,7 @@ Ergebnissen (Verlaufs-Observations) verknüpft wird.</p>
 <p>Onkologiespezifische Ergänzungen gegenüber MCC:</p>
 <ul>
   <li>Die Zielart wird über <code class="language-plaintext highlighter-rouge">category</code> aus <code class="language-plaintext highlighter-rouge">OnkoTherapyGoalTypeVS</code> codiert (Heilung,
-Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt, Studienteilnahme).</li>
+Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt).</li>
   <li>Über die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> kann zusätzlich die Therapieintention der
 zugehörigen Behandlungslinie hinterlegt werden.</li>
   <li><code class="language-plaintext highlighter-rouge">outcomeReference</code> bindet das Ziel an Verlaufs-Observations (z. B. mCODE
@@ -415,7 +455,7 @@ bezogen ausgewertet werden kann.</li>
          </tr>
       </tbody>
    </table>
-   <a name="2"> </a>
+   <a name="3"> </a>
    <h3>Structures: Extension Definitions </h3>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -487,7 +527,7 @@ Systemtherapie), wird daher diese Extension ergänzend zu <code class="language-
          </tr>
       </tbody>
    </table>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Terminology: Value Sets </h3>
     <p>These define sets of codes used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -505,8 +545,9 @@ Systemtherapie), wird daher diese Extension ergänzend zu <code class="language-
 <p>Intention (das „Warum") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.</p>
 
 <p>Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie <code class="language-plaintext highlighter-rouge">362961001 | Procedure by intent</code>.
-Die deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen
-SNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</p>
+Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
+gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
+des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</p>
 </td>
          </tr>
          <tr>
@@ -538,8 +579,9 @@ Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlu
 <p>Sequenzielle Phase (Unter-Intention) innerhalb eines Behandlungskonzepts – ergänzend zur
 Haupt-Therapieintention. In SNOMED CT liegen diese Konzepte nicht in der Intent-Hierarchie,
 sondern als Behandlungsformen unter <code class="language-plaintext highlighter-rouge">716872004 | Antineoplastic chemotherapy regimen</code>.
-Deutsche Anzeigetexte als Concept-Display. Extensible gebunden (z. B. Konsolidierung
-ergänzbar).</p>
+Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release; die deutschen
+Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.
+Konsolidierung ergänzbar).</p>
 </td>
          </tr>
          <tr>
@@ -556,7 +598,7 @@ ergänzbar).</p>
          </tr>
       </tbody>
    </table>
-   <a name="4"> </a>
+   <a name="5"> </a>
    <h3>Terminology: Code Systems </h3>
     <p>These define new code systems used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -571,12 +613,32 @@ ergänzbar).</p>
                </a>
             </td>
             <td>
-<p>Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).</p>
+<p>Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).</p>
 </td>
          </tr>
       </tbody>
    </table>
-   <a name="5"> </a>
+   <a name="6"> </a>
+   <h3>Terminology: Concept Maps </h3>
+    <p>These define transformations to convert between codes by systems conforming with this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html"
+                  title="ConceptMap/ConceptMapOnkoTherapyGoalTypeSct">
+                  <span title="ConceptMap/ConceptMapOnkoTherapyGoalTypeSct">Zielarten → SNOMED CT (Zielzustände)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Semantische Annotation der onkologischen Zielarten (<code class="language-plaintext highlighter-rouge">OnkoTherapyGoalType</code>) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (<code class="language-plaintext highlighter-rouge">equivalence</code>) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -717,7 +779,7 @@ ergänzbar).</p>
             <td style="column-width:30%">
                <a href="CarePlan-CarePlanMammaDiagnostik.html"
                   title="CarePlan/CarePlanMammaDiagnostik">
-                  <span title="CarePlan/CarePlanMammaDiagnostik">Diagnostischer CarePlan
+                  <span title="CarePlan/CarePlanMammaDiagnostik">Diagnostischer CarePlan (Beispiel Mamma)
 </span>
                </a>
             </td>
@@ -1282,7 +1344,7 @@ ergänzbar).</p>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-31 08:51:00 +0000">
+  <span title="2026-07-31 12:16:00 +0000">
     2026-07-31
   </span>
 

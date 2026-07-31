@@ -11,8 +11,8 @@
 Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Neoadjuvant
-* phase: Kurativ
+* hauptintention: Neoadjuvant intent
+* phase: Curative - procedure intent
 
 **Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
 
@@ -53,7 +53,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "373847000",
-          "display" : "Neoadjuvant"
+          "display" : "Neoadjuvant intent"
         }]
       }
     },
@@ -63,7 +63,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "373808002",
-          "display" : "Kurativ"
+          "display" : "Curative - procedure intent"
         }]
       }
     }],

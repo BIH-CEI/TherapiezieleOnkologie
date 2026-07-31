@@ -11,8 +11,8 @@
 Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
 > **Onkologische Therapieintention (Extension)**
-* hauptintention: Palliativ
-* phase: Induktionstherapie
+* hauptintention: Palliative intent
+* phase: Induction chemotherapy
 
 > **Goal acceptance**
 * individual: [Erika Musterfrau Female, DoB: 1961-09-12](Patient-PatientinCRC.md)
@@ -72,7 +72,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "363676003",
-          "display" : "Palliativ"
+          "display" : "Palliative intent"
         }]
       }
     },
@@ -82,7 +82,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "450827009",
-          "display" : "Induktionstherapie"
+          "display" : "Induction chemotherapy"
         }]
       }
     }],

@@ -29,7 +29,7 @@ Schemakonform zu KEYNOTE-522 – und **unabhängig vom pCR-Status** – schließ
 | 22.09.2025 | Interdisziplinäre Tumorkonferenz: kuratives Konzept, OP vom Tumorboard vorgeschlagen, Neoadjuvante Chemo-/Immuntherapie (KEYNOTE-522) von Tumorboard vorgeschlagen; Therapieziel festgelegt | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md),[TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md),[FollowUpGoal](Goal-FollowUpGoal.md),[ServiceRequestProcedure](ServiceRequest-ServiceRequestProcedure.md),[MedicationRequestPembroChemoNeoadjuvantMamma](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md) |
 | 25.09.2025 | Keimbahn-Panel gBRCA1/2: unauffällig → Abschluss der Diagnostikphase | [ObsGBRCAMamma](Observation-ObsGBRCAMamma.md) |
 | 01.10.2025 – 15.03.2026 | Therapielinie neoadjuvante und kurative Chemotherapie mit Medikationsabgabe | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md),[MedicationAdministrationPembroChemoNeoadjuvantMamma1](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.md),[MedicationAdministrationPembroChemoNeoadjuvantMamma2](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.md),[MedicationAdministrationPembroChemoNeoadjuvantMamma3](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.md),[MedicationAdministrationPembroChemoNeoadjuvantMamma4](MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma4.md) |
-| 20.03.2026 - 06.04.2026 | Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie, Therapielinie kurative Operation | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.md),[TherapielinieOperation](EpisodeOfCare-Therapielinieoperation.md) |
+| 20.03.2026 - 06.04.2026 | Brusterhaltende Operation (BET) links + Sentinel-Lymphknoten-Biopsie, Therapielinie kurative Operation | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.md),[TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md) |
 | 07.04.2026 | Pathologie des OP-Präparats: ypT0 ypN0 → pathologische Komplettremission (pCR); Disease Status | [ObsTNMpathologischMamma](Observation-ObsTNMpathologischMamma.md),[ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.md) |
 | ab 24.04.2026 (laufend) | Nachgelagerte,**ambulante**adjuvante Pembrolizumab-Monotherapie (KEYNOTE-522, ~9 Zyklen q3w); Therapielinie adjuvante Immuntherapie | [TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.md),[MedicationRequestPembroAdjuvantMamma](MedicationRequest-MedicationRequestPembroAdjuvantMamma.md) |
 
@@ -53,7 +53,7 @@ Das prätherapeutische Profil aus der Stanzbiopsie ist – leitlinienkonform –
 
 ### Graphische Darstellung des zeitlichen Verlaufs
 
-![](Beispiel_Mamma.png)
+![](szenario-mamma-verlauf.png)
 
 ### Informationsmodell
 
@@ -65,7 +65,9 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 | Tumorerkrankung | `OnkoCondition` | [ConditionMamma](Condition-ConditionMamma.md) |
 | Versorgungsplan | `OnkoCarePlan` | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md) |
 | Therapieziel | `OnkoTherapyGoal` | [TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md) |
-| Therapielinie (LoT 1) | `OnkoTherapyLine` | [TherapielinieMammaNeoadjuvant](EpisodeOfCare-TherapielinieMammaNeoadjuvant.md) |
+| Therapielinie 1 (neoadjuvante Chemo-/Immuntherapie) | `OnkoTherapyLine` | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md) |
+| Therapielinie 2 (Operation) | `OnkoTherapyLine` | [TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md) |
+| Therapielinie 3 (adjuvante Immuntherapie) | `OnkoTherapyLine` | [TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.md) |
 | Geplante Maßnahme (Systemtherapie) | `MedicationRequest` | [MedicationRequestPembroChemoNeoadjuvantMamma](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md) |
 | Durchgeführte Maßnahme (Operation) | `Procedure` | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.md) |
 | Tumoransprechen | `Observation` | [ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.md) |

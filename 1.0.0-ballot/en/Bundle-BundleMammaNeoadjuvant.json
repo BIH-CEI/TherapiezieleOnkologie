@@ -839,7 +839,7 @@
         "coding" : [{
           "system" : "http://loinc.org",
           "code" : "48676-1",
-          "display" : "HER2 [Interpretation] in Tissue"
+          "display" : "HER2 Ag [Interpretation] in Tissue"
         }]
       },
       "subject" : {
@@ -973,7 +973,7 @@
             "coding" : [{
               "system" : "http://snomed.info/sct",
               "code" : "373847000",
-              "display" : "Neoadjuvant"
+              "display" : "Neoadjuvant intent"
             }]
           }
         },
@@ -983,7 +983,7 @@
             "coding" : [{
               "system" : "http://snomed.info/sct",
               "code" : "373808002",
-              "display" : "Kurativ"
+              "display" : "Curative - procedure intent"
             }]
           }
         }],
@@ -1054,7 +1054,7 @@
             "coding" : [{
               "system" : "http://snomed.info/sct",
               "code" : "373808002",
-              "display" : "Kurativ"
+              "display" : "Curative - procedure intent"
             }]
           }
         }],
@@ -1064,8 +1064,8 @@
       "type" : [{
         "coding" : [{
           "system" : "http://snomed.info/sct",
-          "code" : "1345242003",
-          "display" : "Erhaltungstherapie"
+          "code" : "387713003",
+          "display" : "Surgical procedure"
         }]
       }],
       "diagnosis" : [{
@@ -1122,7 +1122,7 @@
             "coding" : [{
               "system" : "http://snomed.info/sct",
               "code" : "373808002",
-              "display" : "Kurativ"
+              "display" : "Curative - procedure intent"
             }]
           }
         }],
@@ -1741,7 +1741,7 @@
           "coding" : [{
             "system" : "http://loinc.org",
             "code" : "24606-6",
-            "display" : "MG Breast Screening"
+            "display" : "Mammografie"
           }]
         },
         "detailCodeableConcept" : {
@@ -1795,7 +1795,7 @@
         "coding" : [{
           "system" : "http://loinc.org",
           "code" : "24606-6",
-          "display" : "MG Breast Screening"
+          "display" : "Mammografie"
         }],
         "text" : "Nachsorge-Mammographie beidseits (jährlich)"
       },

@@ -3,7 +3,7 @@
   "id" : "onko-therapy-intent",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet onko-therapy-intent</b></p><a name=\"onko-therapy-intent\"> </a><a name=\"hconko-therapy-intent\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/373808002\">373808002</a></td><td>Kurativ</td></tr><tr><td><a href=\"http://snomed.info/id/363676003\">363676003</a></td><td>Palliativ</td></tr><tr><td><a href=\"http://snomed.info/id/373847000\">373847000</a></td><td>Neoadjuvant</td></tr><tr><td><a href=\"http://snomed.info/id/373846009\">373846009</a></td><td>Adjuvant</td></tr><tr><td><a href=\"http://snomed.info/id/399707004\">399707004</a></td><td>Supportiv</td></tr></table></li></ul></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet onko-therapy-intent</b></p><a name=\"en-onko-therapy-intent\"> </a><a name=\"en-hconko-therapy-intent\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/373808002\">373808002</a></td><td>Kurativ</td></tr><tr><td><a href=\"http://snomed.info/id/363676003\">363676003</a></td><td>Palliativ</td></tr><tr><td><a href=\"http://snomed.info/id/373847000\">373847000</a></td><td>Neoadjuvant</td></tr><tr><td><a href=\"http://snomed.info/id/373846009\">373846009</a></td><td>Adjuvant</td></tr><tr><td><a href=\"http://snomed.info/id/399707004\">399707004</a></td><td>Supportiv</td></tr></table></li></ul></div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet onko-therapy-intent</b></p><a name=\"onko-therapy-intent\"> </a><a name=\"hconko-therapy-intent\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/373808002\">373808002</a></td><td>Curative - procedure intent</td></tr><tr><td><a href=\"http://snomed.info/id/363676003\">363676003</a></td><td>Palliative intent</td></tr><tr><td><a href=\"http://snomed.info/id/373847000\">373847000</a></td><td>Neoadjuvant intent</td></tr><tr><td><a href=\"http://snomed.info/id/373846009\">373846009</a></td><td>Adjuvant - intent</td></tr><tr><td><a href=\"http://snomed.info/id/399707004\">399707004</a></td><td>Supportive - procedure intent</td></tr></table></li></ul></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet onko-therapy-intent</b></p><a name=\"en-onko-therapy-intent\"> </a><a name=\"en-hconko-therapy-intent\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/373808002\">373808002</a></td><td>Curative - procedure intent</td></tr><tr><td><a href=\"http://snomed.info/id/363676003\">363676003</a></td><td>Palliative intent</td></tr><tr><td><a href=\"http://snomed.info/id/373847000\">373847000</a></td><td>Neoadjuvant intent</td></tr><tr><td><a href=\"http://snomed.info/id/373846009\">373846009</a></td><td>Adjuvant - intent</td></tr><tr><td><a href=\"http://snomed.info/id/399707004\">399707004</a></td><td>Supportive - procedure intent</td></tr></table></li></ul></div></div>"
   },
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",
   "version" : "1.0.0-ballot",
@@ -11,7 +11,7 @@
   "title" : "Onkologische Therapieintention (VS)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-31T08:51:02+00:00",
+  "date" : "2026-07-31T12:16:37+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -20,7 +20,7 @@
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nDie deutschen Anzeigetexte sind als Concept-Display hinterlegt (Übersetzung der englischen\nSNOMED-FSN). Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+  "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -33,23 +33,23 @@
       "system" : "http://snomed.info/sct",
       "concept" : [{
         "code" : "373808002",
-        "display" : "Kurativ"
+        "display" : "Curative - procedure intent"
       },
       {
         "code" : "363676003",
-        "display" : "Palliativ"
+        "display" : "Palliative intent"
       },
       {
         "code" : "373847000",
-        "display" : "Neoadjuvant"
+        "display" : "Neoadjuvant intent"
       },
       {
         "code" : "373846009",
-        "display" : "Adjuvant"
+        "display" : "Adjuvant - intent"
       },
       {
         "code" : "399707004",
-        "display" : "Supportiv"
+        "display" : "Supportive - procedure intent"
       }]
     }]
   }

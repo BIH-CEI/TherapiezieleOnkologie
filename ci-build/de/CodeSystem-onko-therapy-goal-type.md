@@ -3,7 +3,7 @@
 ## CodeSystem: Onkologische Therapieziel-Art (Experimentell) 
 
  
-Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung). 
+Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015). 
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "Onkologische Therapieziel-Art",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-31T08:51:02+00:00",
+  "date" : "2026-07-31T12:16:37+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -36,7 +36,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, gemeinsame Entscheidung).",
+  "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -46,7 +46,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 6,
+  "count" : 5,
   "concept" : [{
     "code" : "heilung",
     "display" : "Heilung",
@@ -71,11 +71,6 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "funktionserhalt",
     "display" : "Funktionserhalt",
     "definition" : "Erhalt körperlicher oder kognitiver Funktion."
-  },
-  {
-    "code" : "studienteilnahme",
-    "display" : "Studienteilnahme",
-    "definition" : "Teilnahme an einer klinischen Studie als explizites Ziel."
   }]
 }
 

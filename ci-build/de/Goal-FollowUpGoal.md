@@ -39,7 +39,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 
 > **target****measure**: Cancer outcome status**detail**: Kein Hinweis auf Lokalrezidiv oder Fernmetastasen**due**: 2026-11-15
 
-> **target****measure**: MG Breast Screening**detail**: Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis**due**: 2027-04-15
+> **target****measure**: Mammografie**detail**: Unauffällige Nachsorge-Mammographie (jährlich), kein Rezidivnachweis**due**: 2027-04-15
 
 > **target****measure**: Arm-/Schulterfunktion und Lymphödem-Status nach axillärem Eingriff**detail**: Kein manifestes Lymphödem, erhaltene Schulterbeweglichkeit
 
@@ -170,7 +170,7 @@ Profile: [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
       "coding" : [{
         "system" : "http://loinc.org",
         "code" : "24606-6",
-        "display" : "MG Breast Screening"
+        "display" : "Mammografie"
       }]
     },
     "detailCodeableConcept" : {

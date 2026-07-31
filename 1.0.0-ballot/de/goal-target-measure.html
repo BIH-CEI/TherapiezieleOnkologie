@@ -247,6 +247,66 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Ein Ziel kann <strong>mehrere</strong> Targets tragen (z. B. Krankheitsstatus <em>und</em> Bildgebung
 <em>und</em> Funktion).</p>
 
+<svg width="100%" viewBox="0 0 680 430" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Anatomie des Goal.target: Messgröße, Zielwert, Frist — und das Ergebnis</title>
+<desc>Links das Episodenziel mit den drei target-Elementen measure (woran), detail (welcher Wert) und due (bis wann) sowie dem achievementStatus; rechts die evidenzierende Verlaufs-Observation, verbunden ueber outcomeReference. Unten: Messgroessen sind leitlinienversioniert, alte und neue Groesse koexistieren und werden ueber relatedArtifact bzw. instantiatesCanonical an ihre Leitlinienquelle gebunden.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+</defs>
+
+<g><rect x="40" y="30" width="310" height="170" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="195" y="52" text-anchor="middle" font-size="12.5" font-weight="500" fill="#04342C">Episodenziel (Goal)</text>
+<text x="195" y="67" text-anchor="middle" font-size="9.5" fill="#0F6E56">mit messbarem target</text>
+<text x="58" y="92" font-size="10" font-weight="600" fill="#04342C">measure — Woran?</text>
+<text x="58" y="105" font-size="9.5" fill="#0F6E56">Krankheitsstatus — LOINC 21976-6</text>
+<line x1="52" y1="113" x2="338" y2="113" stroke="#BFE3D6" stroke-width="1" />
+<text x="58" y="128" font-size="10" font-weight="600" fill="#04342C">detail — Welcher Wert?</text>
+<text x="58" y="141" font-size="9.5" fill="#0F6E56">„kein Tumornachweis“ (Not detected)</text>
+<line x1="52" y1="149" x2="338" y2="149" stroke="#BFE3D6" stroke-width="1" />
+<text x="58" y="164" font-size="10" font-weight="600" fill="#04342C">due — Bis wann?</text>
+<text x="58" y="177" font-size="9.5" fill="#0F6E56">Frist bzw. Zieltermin</text>
+<text x="58" y="192" font-size="9" fill="#0F6E56">achievementStatus: in-progress → achieved (Zustands-Codes)</text></g>
+
+<g><rect x="460" y="60" width="180" height="108" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4" />
+<text x="550" y="82" text-anchor="middle" font-size="11.5" font-weight="500" fill="#4A1B0C">Verlaufs-Observation</text>
+<text x="550" y="98" text-anchor="middle" font-size="9.5" fill="#4A1B0C">„Not detected“</text>
+<text x="550" y="111" text-anchor="middle" font-size="8.5" fill="#993C1D">LOINC 97509-4 · SCT 260415000</text>
+<text x="550" y="130" text-anchor="middle" font-size="9" fill="#4A1B0C">zeitgestempelt,</text>
+<text x="550" y="142" text-anchor="middle" font-size="9" fill="#4A1B0C">Bezugspunkt selbst definiert</text></g>
+
+<line x1="352" y1="110" x2="458" y2="110" stroke="#534AB7" stroke-width="1.7" marker-end="url(#arp)" />
+<text x="405" y="100" text-anchor="middle" font-size="9.5" font-weight="500" fill="#534AB7">outcomeReference</text>
+<text x="405" y="124" text-anchor="middle" font-size="9" fill="#5F5E5A">Ergebnis,</text>
+<text x="405" y="136" text-anchor="middle" font-size="9" fill="#5F5E5A">pro Ziel eigen</text>
+
+<text x="40" y="226" font-size="11" font-weight="500" fill="#5F5E5A">Zielwert (Absicht) ≠ Ergebnis (Beobachtung) — der target darf über Ziele gleich sein, das Ergebnis wird nie geteilt.</text>
+
+<text x="40" y="256" font-size="11.5" font-weight="500" fill="#5F5E5A">Messgrößen sind leitlinienversioniert — Alt und Neu koexistieren:</text>
+
+<g><rect x="40" y="268" width="190" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="135" y="288" text-anchor="middle" font-size="11" font-weight="500" fill="#04342C">measure: DAS28</text>
+<text x="135" y="303" text-anchor="middle" font-size="9" fill="#0F6E56">Leitlinienstand alt</text></g>
+
+<g><rect x="250" y="268" width="210" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="355" y="288" text-anchor="middle" font-size="10" font-weight="500" fill="#04342C">measure: ACR-EULAR · SDAI/CDAI</text>
+<text x="355" y="303" text-anchor="middle" font-size="9" fill="#0F6E56">EULAR 2025</text></g>
+
+<g><rect x="520" y="268" width="120" height="48" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.3" />
+<text x="580" y="288" text-anchor="middle" font-size="11" font-weight="500" fill="#2C2C2A">Leitlinie</text>
+<text x="580" y="303" text-anchor="middle" font-size="9" fill="#5F5E5A">(Version)</text></g>
+
+<path d="M135,318 L135,338 L578,338 L578,318" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#arp)" />
+<path d="M355,318 L355,338" fill="none" stroke="#534AB7" stroke-width="1.4" />
+<text x="300" y="352" text-anchor="middle" font-size="9.5" fill="#534AB7">relatedArtifact / instantiatesCanonical — Herkunft und Gültigkeit</text>
+
+<text x="40" y="382" font-size="10" fill="#5F5E5A">„Remission nach DAS28“ ≠ „Remission nach ACR-EULAR“ — erst der Leitlinienbezug macht parallele Stände vergleichbar.</text>
+
+<rect x="40" y="402" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="59" y="413" font-size="11" fill="#5F5E5A">Ziel / Messgröße</text>
+<rect x="170" y="402" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30" /><text x="189" y="413" font-size="11" fill="#5F5E5A">Beobachtung</text>
+<rect x="285" y="402" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="304" y="413" font-size="11" fill="#5F5E5A">Quelle / Hinweis</text>
+<line x1="420" y1="408" x2="450" y2="408" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" /><text x="456" y="413" font-size="11" fill="#5F5E5A">Referenz</text>
+</svg>
+
 <h3 id="vor-allem-auf-ebene-der-therapieepisoden">Vor allem auf Ebene der Therapieepisoden</h3>
 
 <p>Diese messbare <code class="language-plaintext highlighter-rouge">target</code>-Logik betrifft <strong>vor allem die
@@ -492,7 +552,7 @@ Bezug auf die Verlaufs-Observation.</li>
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-07-31 08:51:00 +0000">
+  <span title="2026-07-31 12:16:00 +0000">
     2026-07-31
   </span>
 
