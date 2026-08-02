@@ -1,64 +1,91 @@
-<svg width="100%" viewBox="0 0 680 600" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<svg width="100%" viewBox="0 0 680 620" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
 <title>Referenzgraph (Therapie-Kern) des Beispiel-Szenarios mCRC palliativ</title>
-<desc>Geordneter, zyklenfreier Graph der Kernbeziehungen des Therapie-CarePlan. Durchgezogene Pfeile sind fachliche Referenzen mit Feldnamen, gestrichelte Pfeile die subject-Referenzen aller Ressourcen auf die Patientin, zusammengefasst zu einem subject-Bus.</desc>
+<desc>Orthogonal gelegter Referenzgraph: links die Quellen CarePlan und Therapielinie, in der Mitte Ziele und Systemtherapie, rechts Diagnose, Verlaufs-Observation und Akteure. Jede Referenz verlaesst ihre Quelle an einem eigenen Port mit Feldnamen-Beschriftung auf freiem Segment; die subject-Referenzen aller Ressourcen auf die Patientin sind als gestrichelter Hinweis zusammengefasst.</desc>
 <defs>
 <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7"/></marker>
 <marker id="arg" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A"/></marker>
 </defs>
 
-<path d="M130,88 L190,48" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M130,88 L190,268" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M130,88 L190,468" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M130,88 L370,148" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M130,88 L540,88" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M130,88 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M310,48 L370,428" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M310,48 L370,148" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M310,48 L560,60" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M310,60 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M130,448 L570,116" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M490,428 L540,328" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
-<path d="M490,428 L518,428 L518,100 L540,100" fill="none" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M155,62 L251,62" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M155,82 L274,82 L274,132 L440,132 L440,74 L506,74" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M155,102 L246,102 L246,148 L470,148 L470,186 L506,186" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M155,122 L260,122 L260,252 L480,252 L480,292 L506,292" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M155,142 L226,142 L226,305 L251,305" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M87,170 L87,455 L251,455" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
 
-<path d="M150,508 L540,508" fill="none" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arg)"/>
-<path d="M130,116 L150,116 L150,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4"/>
-<path d="M130,476 L160,476 L160,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4"/>
-<path d="M310,48 L330,48 L330,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4"/>
-<path d="M310,268 L340,268 L340,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4"/>
-<path d="M370,176 L355,176 L355,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4"/>
-<path d="M490,428 L520,428 L520,508" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4"/>
-<path d="M600,116 L665,116 L665,520 L660,520" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arg)"/>
+<text x="161" y="57" font-size="8.5" fill="#534AB7">goal</text>
+<text x="161" y="77" font-size="8.5" fill="#534AB7">addresses</text>
+<text x="161" y="97" font-size="7" fill="#534AB7">activity.outcomeReference</text>
+<text x="161" y="117" font-size="8.5" fill="#534AB7">author</text>
+<text x="161" y="137" font-size="8" fill="#534AB7">activity.reference</text>
+<text x="95" y="450" font-size="8.5" fill="#534AB7">custodian</text>
 
-<text x="160" y="52" text-anchor="middle" font-size="11.5" fill="#5F5E5A">goal</text>
-<text x="255" y="226" text-anchor="middle" font-size="11.5" fill="#5F5E5A">activity.reference</text>
-<text x="255" y="425" text-anchor="middle" font-size="11.5" fill="#5F5E5A">custodian</text>
-<text x="430" y="108" text-anchor="middle" font-size="11.5" fill="#5F5E5A">activity.outcomeReference</text>
-<text x="478" y="80" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
-<text x="475" y="277" text-anchor="middle" font-size="11.5" fill="#5F5E5A">author</text>
-<text x="340" y="236" text-anchor="middle" font-size="11.5" fill="#5F5E5A">relatedGoal</text>
-<text x="336" y="122" text-anchor="middle" font-size="11.5" fill="#5F5E5A">outcomeReference</text>
-<text x="300" y="304" text-anchor="middle" font-size="11.5" fill="#5F5E5A">diagnosis.condition</text>
-<text x="432" y="42" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
-<text x="452" y="232" text-anchor="middle" font-size="11.5" fill="#5F5E5A">expressedBy</text>
-<text x="520" y="378" text-anchor="middle" font-size="11.5" fill="#5F5E5A">expressedBy</text>
-<text x="533" y="252" text-anchor="middle" font-size="11.5" fill="#5F5E5A">addresses</text>
-<text x="200" y="500" text-anchor="middle" font-size="11.5" fill="#5F5E5A">subject (von allen Ressourcen)</text>
+<path d="M390,66 L506,66" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M390,80 L456,80 L456,195 L506,195" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M390,94 L424,94 L424,306 L506,306" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M322,110 L322,166" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<text x="396" y="61" font-size="8.5" fill="#534AB7">addresses</text>
+<text x="396" y="75" font-size="8" fill="#534AB7">outcomeReference</text>
+<text x="396" y="89" font-size="8.5" fill="#534AB7">expressedBy</text>
+<text x="328" y="142" font-size="8" fill="#534AB7">relatedGoal (replacement)</text>
 
-<g><rect x="10" y="60" width="120" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7"/><text x="70" y="84" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">CarePlan</text><text x="70" y="102" text-anchor="middle" font-size="11.5" fill="#534AB7">OnkoCarePlan</text></g>
-<g><rect x="10" y="420" width="120" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7"/><text x="70" y="444" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Therapielinie</text><text x="70" y="462" text-anchor="middle" font-size="11.5" fill="#534AB7">OnkoTherapyLine</text><rect x="84" y="413" width="48" height="13" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.1"/><text x="108" y="423" text-anchor="middle" font-size="7.5" font-weight="600" fill="#04342C">aLoT 1.0</text></g>
-<g><rect x="190" y="20" width="120" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56"/><text x="250" y="44" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Ziel (palliativ)</text><text x="250" y="62" text-anchor="middle" font-size="11.5" fill="#0F6E56">OnkoTherapyGoal</text></g>
-<g><rect x="190" y="240" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30"/><text x="250" y="264" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">Systemtherapie</text><text x="250" y="282" text-anchor="middle" font-size="11.5" fill="#993C1D">TumorboardMedReq</text></g>
-<g><rect x="190" y="440" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/><text x="250" y="464" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Tumorzentrum</text><text x="250" y="482" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Organization</text></g>
-<g><rect x="370" y="120" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30"/><text x="430" y="144" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">Disease Status</text><text x="430" y="162" text-anchor="middle" font-size="11.5" fill="#993C1D">Observation</text></g>
-<g><rect x="370" y="400" width="120" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56"/><text x="430" y="424" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Ziel (abgelehnt)</text><text x="430" y="442" text-anchor="middle" font-size="11.5" fill="#0F6E56">OnkoTherapyGoal</text></g>
-<g><rect x="540" y="60" width="120" height="56" rx="8" fill="#FAECE7" stroke="#D85A30"/><text x="600" y="84" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4A1B0C">Diagnose</text><text x="600" y="102" text-anchor="middle" font-size="11.5" fill="#993C1D">OnkoCondition</text></g>
-<g><rect x="540" y="300" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/><text x="600" y="324" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Onkologin</text><text x="600" y="342" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Practitioner</text></g>
-<g><rect x="540" y="480" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/><text x="600" y="504" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Patientin</text><text x="600" y="522" text-anchor="middle" font-size="11.5" fill="#5F5E5A">Patient</text></g>
+<path d="M390,182 L498,182 L498,104 L506,104" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M390,196 L412,196 L412,320 L506,320" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<text x="396" y="177" font-size="8.5" fill="#534AB7">addresses</text>
+<text x="418" y="315" font-size="8.5" fill="#534AB7">expressedBy</text>
 
-<rect x="40" y="560" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="59" y="571" font-size="11.5" fill="#5F5E5A">Plan</text>
-<rect x="108" y="560" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="127" y="571" font-size="11.5" fill="#5F5E5A">Ziel</text>
-<rect x="170" y="560" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30"/><text x="189" y="571" font-size="11.5" fill="#5F5E5A">Klinik</text>
-<rect x="242" y="560" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="261" y="571" font-size="11.5" fill="#5F5E5A">Akteur</text>
-<line x1="330" y1="567" x2="360" y2="567" stroke="#534AB7" stroke-width="1.6" marker-end="url(#ar)"/><text x="366" y="571" font-size="11.5" fill="#5F5E5A">Referenz</text>
-<line x1="448" y1="567" x2="478" y2="567" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arg)"/><text x="484" y="571" font-size="11.5" fill="#5F5E5A">subject (Patientenbezug)</text>
+<path d="M155,536 L664,536 L664,88 L649,88" fill="none" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/>
+<text x="161" y="531" font-size="8.5" fill="#534AB7">diagnosis.condition</text>
+
+<line x1="398" y1="455" x2="504" y2="455" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arg)"/>
+<text x="451" y="447" text-anchor="middle" font-size="8" fill="#5F5E5A">subject (alle Ressourcen)</text>
+
+<g><rect x="20" y="50" width="135" height="120" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4"/>
+<text x="87" y="106" text-anchor="middle" font-size="13" font-weight="500" fill="#26215C">CarePlan</text>
+<text x="87" y="121" text-anchor="middle" font-size="9" fill="#534AB7">OnkoCarePlan</text></g>
+
+<g><rect x="20" y="510" width="135" height="50" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4"/>
+<text x="87" y="531" text-anchor="middle" font-size="12.5" font-weight="500" fill="#26215C">Therapielinie</text>
+<text x="87" y="547" text-anchor="middle" font-size="9" fill="#534AB7">OnkoTherapyLine</text>
+<rect x="106" y="503" width="48" height="13" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.1"/>
+<text x="130" y="513" text-anchor="middle" font-size="7.5" font-weight="600" fill="#04342C">aLoT 1.0</text></g>
+
+<g><rect x="255" y="60" width="135" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4"/>
+<text x="322" y="81" text-anchor="middle" font-size="10" font-weight="500" fill="#04342C">Palliatives Ziel (aktiv)</text>
+<text x="322" y="97" text-anchor="middle" font-size="9" fill="#0F6E56">OnkoTherapyGoal</text></g>
+
+<g><rect x="255" y="170" width="135" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4"/>
+<text x="322" y="191" text-anchor="middle" font-size="10" font-weight="500" fill="#04342C">Kuratives Ziel (abgelehnt)</text>
+<text x="322" y="207" text-anchor="middle" font-size="8" fill="#0F6E56">OnkoTherapyGoal · rejected</text></g>
+
+<g><rect x="255" y="280" width="135" height="50" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4"/>
+<text x="322" y="301" text-anchor="middle" font-size="12" font-weight="500" fill="#4A1B0C">Systemtherapie</text>
+<text x="322" y="317" text-anchor="middle" font-size="9" fill="#993C1D">TumorboardMedReq</text></g>
+
+<g><rect x="255" y="430" width="135" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.4"/>
+<text x="322" y="451" text-anchor="middle" font-size="12" font-weight="500" fill="#2C2C2A">Tumorzentrum</text>
+<text x="322" y="467" text-anchor="middle" font-size="9" fill="#5F5E5A">Organization</text></g>
+
+<g><rect x="510" y="60" width="135" height="50" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4"/>
+<text x="577" y="81" text-anchor="middle" font-size="12" font-weight="500" fill="#4A1B0C">Diagnose</text>
+<text x="577" y="97" text-anchor="middle" font-size="9" fill="#993C1D">OnkoCondition</text></g>
+
+<g><rect x="510" y="170" width="135" height="50" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4"/>
+<text x="577" y="191" text-anchor="middle" font-size="12" font-weight="500" fill="#4A1B0C">Disease Status</text>
+<text x="577" y="207" text-anchor="middle" font-size="9" fill="#993C1D">Observation</text></g>
+
+<g><rect x="510" y="280" width="135" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.4"/>
+<text x="577" y="301" text-anchor="middle" font-size="12" font-weight="500" fill="#2C2C2A">Onkologin</text>
+<text x="577" y="317" text-anchor="middle" font-size="9" fill="#5F5E5A">Practitioner</text></g>
+
+<g><rect x="510" y="430" width="135" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.4"/>
+<text x="577" y="451" text-anchor="middle" font-size="12" font-weight="500" fill="#2C2C2A">Patientin</text>
+<text x="577" y="467" text-anchor="middle" font-size="9" fill="#5F5E5A">Patient</text></g>
+
+<rect x="20" y="588" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="39" y="599" font-size="11" fill="#5F5E5A">Plan</text>
+<rect x="80" y="588" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="99" y="599" font-size="11" fill="#5F5E5A">Ziel</text>
+<rect x="140" y="588" width="13" height="13" rx="3" fill="#FAECE7" stroke="#D85A30"/><text x="159" y="599" font-size="11" fill="#5F5E5A">Klinik</text>
+<rect x="210" y="588" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="229" y="599" font-size="11" fill="#5F5E5A">Akteur</text>
+<line x1="290" y1="594" x2="320" y2="594" stroke="#534AB7" stroke-width="1.4" marker-end="url(#ar)"/><text x="326" y="599" font-size="11" fill="#5F5E5A">Referenz (Feldname am Austritt)</text>
+<line x1="505" y1="594" x2="535" y2="594" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arg)"/><text x="541" y="599" font-size="11" fill="#5F5E5A">subject (Patientenbezug)</text>
 </svg>
