@@ -20,7 +20,7 @@ Der folgende Referenzgraph zeigt die **Kernbeziehungen des Therapie-CarePlan** (
 | Diagnostik-Anforderung | `ServiceRequest` | [ServiceRequestKoloskopieCRC](ServiceRequest-ServiceRequestKoloskopieCRC.html) |
 | Diagnostik-Ergebnis | `DiagnosticReport` | [DiagnosticReportHistologieCRC](DiagnosticReport-DiagnosticReportHistologieCRC.html) |
 | Therapie-Plan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.html) |
-| Therapielinie (LoT 1) | `OnkoTherapyLine` | [TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.html) |
+| Therapielinie (aLoT 1.0) | `OnkoTherapyLine` | [TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.html) |
 | Therapieziel (palliativ) | `OnkoTherapyGoal` | [TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.html) |
 | Therapieziel (abgelehnt) | `OnkoTherapyGoal` | [TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.html) |
 | Therapieziel (Erhaltung) | `OnkoTherapyGoal` | [TherapiezielCRCErhaltung](Goal-TherapiezielCRCErhaltung.html) |
@@ -30,6 +30,12 @@ Der folgende Referenzgraph zeigt die **Kernbeziehungen des Therapie-CarePlan** (
 | Tumoransprechen | `Observation` | [ObservationDiseaseStatusCRC](Observation-ObservationDiseaseStatusCRC.html) |
 | Custodian / Zentrum | `Organization` | [TumorzentrumCRC](Organization-TumorzentrumCRC.html) |
 | Behandlerin | `Practitioner` | [OnkologinCRC](Practitioner-OnkologinCRC.html) |
+
+**EnLiST-Sicht:** Die Erstlinie ist eine systemische Linie im fortgeschrittenen
+Setting — Designation **`aLoT 1.0`** (`enlist-lot` an der Therapielinie;
+Führung und Ausführung fallen hier in einer Episode zusammen,
+`enlist-countable = counted`). Der Empfehlungs-Request trägt den Änderungstyp
+*New LoT* (Linieneröffnung). Siehe [Behandlungsepisoden](behandlungsepisode.html).
 
 ### Verknüpfungen im Beispiel
 
