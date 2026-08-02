@@ -45,7 +45,7 @@ Alle EnLiST-Änderungstypen.
     }]
   },
   "status" : "draft",
-  "date" : "2026-07-31T14:25:45+00:00",
+  "date" : "2026-08-02T18:42:01+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

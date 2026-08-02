@@ -23,8 +23,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-kind",
@@ -171,8 +171,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.161"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
-    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)",
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-predecessor",
@@ -341,12 +341,12 @@
     "uses" : {
     },
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
+    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)",
     "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
     "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
     "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-condition.html" : "Onkologische Diagnose (Condition)"
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/manifestation-or-symptom",
@@ -517,8 +517,8 @@
     "uses" : {
     },
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest"
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
@@ -590,8 +590,8 @@
     "uses" : {
     },
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan",
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest"
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
+    "StructureDefinition-onko-diagnostic-care-plan.html" : "Diagnostischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/security-labels",
@@ -739,8 +739,8 @@
     "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",
