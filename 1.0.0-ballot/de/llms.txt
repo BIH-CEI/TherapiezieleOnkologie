@@ -7,6 +7,7 @@
 * [Analysebericht (LG-01)](analysebericht.md)
 * [Anwendungsbeispiel (Mammakarzinom neoadjuvant)](szenario-mamma.md)
 * [Weitere Entität – Rheumatoide Arthritis](entitaet-rheuma.md)
+* [Das Therapieziel-Dreieck](modell-dreieck.md)
 * [Weitere Entität – Diabetes mellitus](entitaet-diabetes.md)
 * [Artefaktübersicht](artifacts.md)
 * [Empfehlungs- und Behandlungsplan](empfehlung-behandlung.md)

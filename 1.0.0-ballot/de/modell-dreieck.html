@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Das Therapieziel-Dreieck - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Implementierungsleitfaden Therapieziele Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot - Ballot
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="modell-dreieck.html">Das Therapieziel-Dreieck</a>
+      </li>
+      <li>
+        <a href="therapieziele.html">Therapieziele</a>
+      </li>
+      <li>
+        <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan</a>
+      </li>
+      <li>
+        <a href="behandlungsepisode.html">Behandlungsepisoden</a>
+      </li>
+      <li>
+        <a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenario-crc.html">mCRC (palliativ)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma.html">Mammakarzinom (neoadjuvant)</a>
+      </li>
+      <li>
+        <a href="szenario-mamma-abweichende-szenarios.html">Abweichende Szenarios</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Weitere Entitäten
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="entitaet-diabetes.html">Diabetes mellitus</a>
+      </li>
+      <li>
+        <a href="entitaet-asthma.html">Asthma bronchiale</a>
+      </li>
+      <li>
+        <a href="entitaet-ced.html">Chronisch-entzündliche Darmerkrankungen</a>
+      </li>
+      <li>
+        <a href="entitaet-rheuma.html">Rheumatoide Arthritis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="analysebericht.html">Analysebericht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/modell-dreieck.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Das Therapieziel-Dreieck</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Implementierungsleitfaden Therapieziele Onkologie - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.de/fhir/therapieziele-onkologie/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Das Therapieziel-Dreieck</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#formalisierung-als-logisches-modell" id="markdown-toc-formalisierung-als-logisches-modell">Formalisierung als logisches Modell</a></li>
+  <li><a href="#vertiefung-je-ecke" id="markdown-toc-vertiefung-je-ecke">Vertiefung je Ecke</a></li>
+</ul>
+
+</div>
+<p>Die drei Kernkonzepte dieses Leitfadens bilden ein <strong>Dreieck</strong>: die
+<strong>Behandlungsepisode</strong> (<em>wer</em> behandelt, in welchem Rahmen), das
+<strong>Therapieziel</strong> (<em>was</em> erreicht werden soll) und der <strong>Versorgungsplan</strong>
+(<em>welche Maßnahmen</em> geplant sind). Der Plan <strong>verfolgt</strong> das Ziel
+(<code class="language-plaintext highlighter-rouge">CarePlan.goal</code> — Verfolgung, kein Besitz) und <strong>gehört zu</strong> seiner Episode
+(Standard-Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code>); Ziel und Episode sind <strong>nur
+implizit über den Plan</strong> verknüpft. In der Mitte steht die Patientin als
+gemeinsames <code class="language-plaintext highlighter-rouge">subject</code> aller drei.</p>
+
+<svg width="100%" viewBox="0 0 680 570" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Therapieziel-Dreieck: Behandlungsepisode, Therapieziel und Versorgungsplan</title>
+<desc>Dreieck der drei Kernressourcen: oben das Therapieziel (Goal, was soll erreicht werden), unten links die Behandlungsepisode (EpisodeOfCare, wer behandelt in welchem Rahmen), unten rechts der Versorgungsplan (CarePlan, was sind die geplanten Massnahmen). Der Plan verfolgt das Ziel (CarePlan.goal) und ist der Episode zugeordnet (Extension workflow-episodeOfCare); Ziel und Episode sind nur implizit ueber den Plan verknuepft. In der Mitte die Patientin als gemeinsames subject.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
+</defs>
+
+<line x1="524" y1="328" x2="416" y2="142" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<text x="496" y="230" font-size="11" fill="#534AB7">goal</text>
+<text x="496" y="244" font-size="10.5" fill="#5F5E5A">verfolgt das Ziel</text>
+
+<line x1="408" y1="410" x2="274" y2="410" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
+<text x="340" y="399" text-anchor="middle" font-size="9.5" fill="#534AB7">workflow-episodeOfCare</text>
+<text x="340" y="425" text-anchor="middle" font-size="10" fill="#5F5E5A">gehört zur Episode</text>
+
+<line x1="150" y1="328" x2="264" y2="142" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" />
+<text x="40" y="230" font-size="10.5" fill="#5F5E5A">keine direkte Referenz —</text>
+<text x="40" y="244" font-size="10.5" fill="#5F5E5A">implizit über den Plan</text>
+
+<circle cx="340" cy="255" r="36" fill="#F1EFE8" stroke="#5F5E5A" />
+<text x="340" y="251" text-anchor="middle" font-size="11.5" font-weight="500" fill="#2C2C2A">Patientin</text>
+<text x="340" y="266" text-anchor="middle" font-size="10" fill="#5F5E5A">subject</text>
+<line x1="340" y1="218" x2="340" y2="140" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4" />
+<line x1="312" y1="278" x2="230" y2="330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4" />
+<line x1="368" y1="278" x2="450" y2="330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4" />
+
+<g><rect x="205" y="16" width="270" height="122" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
+<text x="352" y="38" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Therapieziel</text>
+<text x="352" y="54" text-anchor="middle" font-size="10.5" fill="#0F6E56">Goal — was soll erreicht werden?</text>
+<circle cx="248" cy="96" r="18" fill="none" stroke="#0F6E56" stroke-width="1.4" />
+<circle cx="248" cy="96" r="11" fill="none" stroke="#0F6E56" stroke-width="1.2" />
+<circle cx="248" cy="96" r="4" fill="#0F6E56" />
+<text x="282" y="78" font-size="10.5" fill="#04342C">Zielart: Heilung · Symptomkontrolle · …</text>
+<text x="282" y="94" font-size="10.5" fill="#04342C">Zielwert: Größe · Wert · Frist (target)</text>
+<text x="282" y="110" font-size="10.5" fill="#04342C">Erreichungsgrad (achievementStatus)</text>
+<text x="282" y="126" font-size="10.5" fill="#04342C">Ergebnis (outcomeReference)</text></g>
+
+<g><rect x="16" y="330" width="254" height="160" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.4" />
+<text x="143" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Behandlungsepisode</text>
+<text x="143" y="368" text-anchor="middle" font-size="10.5" fill="#5F5E5A">EpisodeOfCare — wer behandelt?</text>
+<line x1="36" y1="394" x2="250" y2="394" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)" />
+<rect x="60" y="387" width="120" height="14" rx="4" fill="#EEEDFE" stroke="#534AB7" stroke-width="1" />
+<text x="120" y="398" text-anchor="middle" font-size="9.5" fill="#26215C">period (Zeitraum)</text>
+<text x="36" y="424" font-size="10.5" fill="#2C2C2A">Art: Therapielinie · Diagnostiklinie · …</text>
+<text x="36" y="440" font-size="10.5" fill="#2C2C2A">Intention: kurativ · palliativ · … (Ext.)</text>
+<text x="36" y="456" font-size="10.5" fill="#2C2C2A">Team / Organisation</text>
+<text x="36" y="476" font-size="10" fill="#5F5E5A">der Rahmen, in dem behandelt wird</text></g>
+
+<g><rect x="410" y="330" width="254" height="160" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
+<text x="537" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Versorgungsplan</text>
+<text x="537" y="368" text-anchor="middle" font-size="10.5" fill="#534AB7">CarePlan — was ist geplant?</text>
+<rect x="430" y="382" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2" /><path d="M432,388 L435,391 L440,384" fill="none" stroke="#534AB7" stroke-width="1.4" />
+<text x="448" y="392" font-size="10.5" fill="#26215C">ServiceRequest — OP · Radiatio · …</text>
+<rect x="430" y="402" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2" /><path d="M432,408 L435,411 L440,404" fill="none" stroke="#534AB7" stroke-width="1.4" />
+<text x="448" y="412" font-size="10.5" fill="#26215C">MedicationRequest — Systemtherapie</text>
+<rect x="430" y="422" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2" />
+<text x="448" y="432" font-size="10.5" fill="#26215C">… (activity.reference)</text>
+<text x="430" y="456" font-size="10.5" fill="#2C2C2A">Empfehlung (Tumorboard) → Behandlung</text>
+<text x="430" y="472" font-size="10" fill="#5F5E5A">basedOn: Plan erfüllt Empfehlung</text></g>
+
+<rect x="20" y="518" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="39" y="529" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="80" y="518" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="99" y="529" font-size="11.5" fill="#5F5E5A">Plan</text>
+<rect x="145" y="518" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="164" y="529" font-size="11.5" fill="#5F5E5A">Episode / Akteur</text>
+<line x1="290" y1="524" x2="320" y2="524" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" /><text x="326" y="529" font-size="11.5" fill="#5F5E5A">Referenz</text>
+<line x1="405" y1="524" x2="435" y2="524" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" /><text x="441" y="529" font-size="11.5" fill="#5F5E5A">implizite Beziehung / Patientenbezug</text>
+<text x="20" y="554" font-size="10.5" fill="#5F5E5A">Das Ziel geht dem Plan voraus: erst Ziel (Shared Decision / Tumorboard), dann Plan — CarePlan.goal ist Verfolgung, kein Besitz.</text>
+</svg>
+
+<h3 id="formalisierung-als-logisches-modell">Formalisierung als logisches Modell</h3>
+
+<p>Das Dreieck ist als ressourcenneutrales <strong>logisches Modell</strong>
+<a href="StructureDefinition-TherapiezielDreieck.html">TherapiezielDreieck</a>
+formalisiert: die drei Konzepte als Strukturbaum mit deutschen
+Elementnamen — und im Reiter <strong>„Mappings“</strong> die Abbildung jedes Elements auf
+FHIR R4 bzw. die Profile dieses Leitfadens (<code class="language-plaintext highlighter-rouge">Goal.target.measure</code>,
+<code class="language-plaintext highlighter-rouge">EpisodeOfCare.type</code>, <code class="language-plaintext highlighter-rouge">CarePlan.goal</code>, …).</p>
+
+<h3 id="vertiefung-je-ecke">Vertiefung je Ecke</h3>
+
+<ul>
+  <li><strong>Ziel:</strong> <a href="therapieziele.html">Therapieziele (Goal)</a> und
+<a href="goal-target-measure.html">Zielwerte &amp; Messgrößen</a></li>
+  <li><strong>Plan:</strong> <a href="empfehlung-behandlung.html">Empfehlungs- und Behandlungsplan (CarePlan)</a></li>
+  <li><strong>Episode:</strong> <a href="behandlungsepisode.html">Behandlungsepisoden (EpisodeOfCare)</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
+          Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt 
+  <span title="2026-08-03 05:20:00 +0000">
+    2026-08-03
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

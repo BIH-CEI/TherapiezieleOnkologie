@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-08-02T18:51:55+00:00",
+  "date" : "2026-08-03T05:20:25+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -2110,6 +2110,15 @@
         }],
         "nameUrl" : "index.html",
         "title" : "Startseite",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "modell-dreieck.html"
+        }],
+        "nameUrl" : "modell-dreieck.html",
+        "title" : "Das Therapieziel-Dreieck",
         "generation" : "markdown"
       },
       {
