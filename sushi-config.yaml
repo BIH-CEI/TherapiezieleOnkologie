@@ -32,6 +32,8 @@ dependencies:
 pages:
   index.md:
     title: Startseite
+  einfuehrung.md:
+    title: Einführung
   modell-dreieck.md:
     title: Das Therapieziel-Dreieck
   therapieziele.md:
@@ -77,6 +79,7 @@ parameters:
 
 menu:
   Startseite: index.html
+  Einführung: einfuehrung.html
   Konzepte:
     Das Therapieziel-Dreieck: modell-dreieck.html
     Therapieziele: therapieziele.html
