@@ -205,11 +205,10 @@ Description: "Das onkologische Diagnoseziel wird im diagnostischen CarePlan verl
 // ---------------------------------------------------------------------
 
 Instance: ConditionMamma
-InstanceOf: OnkoCondition
+InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Title: "Mammakarzinom links, triple-negativ (Beispiel)"
 Description: "Adressierte Tumorerkrankung: invasives Mammakarzinom links (NST), ICD-10-GM C50.4. Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."
-* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"

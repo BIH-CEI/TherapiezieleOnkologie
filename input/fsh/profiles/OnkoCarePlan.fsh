@@ -71,12 +71,12 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 
 // Adressierte Gesundheitsprobleme (Verbindung Erkrankung – CarePlan)
 * addresses 1..* MS
-// Bindung an OnkoCondition via targetProfile (SUSHI kann die externe Parent-Kette
-// des MII-Profils im `only Reference()`-Check nicht auflösen; FHIR-Ausgabe identisch)
-* addresses ^type.targetProfile = Canonical(OnkoCondition)
-* insert Label(addresses, Adressierte Erkrankung, Referenz auf die vom Plan adressierte Tumorerkrankung OnkoCondition.)
+// Bindung an das MII-Onkologie-Diagnoseprofil via targetProfile (SUSHI kann die externe
+// Parent-Kette des MII-Profils im `only Reference()`-Check nicht auflösen; FHIR-Ausgabe identisch)
+* addresses ^type.targetProfile = Canonical(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
+* insert Label(addresses, Adressierte Erkrankung, Referenz auf die vom Plan adressierte Tumorerkrankung nach MII-Onkologie-Diagnoseprofil.)
 * insert Translation(addresses ^short, en, Addressed condition)
-* insert Translation(addresses ^definition, en, Reference to the tumor condition addressed by the plan OnkoCondition.)
+* insert Translation(addresses ^definition, en, Reference to the tumor condition addressed by the plan\, per the MII oncology diagnosis profile.)
 
 // Übergeordnete Therapieziele
 * goal MS

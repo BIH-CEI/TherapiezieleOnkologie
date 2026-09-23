@@ -129,11 +129,11 @@ weil die Absicht über Heilung → Surveillance durchläuft.
 // Adressierte Tumorerkrankung
 * addresses MS
 * addresses only Reference(Condition)
-// Bindung an OnkoCondition via targetProfile (s. Hinweis in OnkoCarePlan)
-* addresses ^type.targetProfile = Canonical(OnkoCondition)
-* insert Label(addresses, Adressierte Erkrankung, Referenz auf die adressierte Tumorerkrankung OnkoCondition.)
+// Bindung an das MII-Onkologie-Diagnoseprofil via targetProfile (s. Hinweis in OnkoCarePlan)
+* addresses ^type.targetProfile = Canonical(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
+* insert Label(addresses, Adressierte Erkrankung, Referenz auf die adressierte Tumorerkrankung nach MII-Onkologie-Diagnoseprofil.)
 * insert Translation(addresses ^short, en, Addressed condition)
-* insert Translation(addresses ^definition, en, Reference to the addressed tumor condition OnkoCondition.)
+* insert Translation(addresses ^definition, en, Reference to the addressed tumor condition\, per the MII oncology diagnosis profile.)
 
 // Verfasser des Ziels (Behandler bzw. Patient)
 * expressedBy MS

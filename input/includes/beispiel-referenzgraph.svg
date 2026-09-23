@@ -68,7 +68,7 @@
 
 <g><rect x="510" y="60" width="135" height="50" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4"/>
 <text x="577" y="81" text-anchor="middle" font-size="12" font-weight="500" fill="#4A1B0C">Diagnose</text>
-<text x="577" y="97" text-anchor="middle" font-size="9" fill="#993C1D">OnkoCondition</text></g>
+<text x="577" y="97" text-anchor="middle" font-size="9" fill="#993C1D">MII Onko Diagnose</text></g>
 
 <g><rect x="510" y="170" width="135" height="50" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4"/>
 <text x="577" y="191" text-anchor="middle" font-size="12" font-weight="500" fill="#4A1B0C">Disease Status</text>

@@ -62,11 +62,11 @@ Description: "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis v
 * insert Translation(diagnosis ^definition, en, Tumor diagnosis or diagnoses underlying the line of therapy.)
 * diagnosis.condition 1..1 MS
 * diagnosis.condition only Reference(Condition)
-// Bindung an OnkoCondition via targetProfile (s. Hinweis in OnkoCarePlan)
-* diagnosis.condition ^type.targetProfile = Canonical(OnkoCondition)
-* insert Label(diagnosis.condition, Diagnose, Referenz auf die adressierte Tumorerkrankung OnkoCondition.)
+// Bindung an das MII-Onkologie-Diagnoseprofil via targetProfile (s. Hinweis in OnkoCarePlan)
+* diagnosis.condition ^type.targetProfile = Canonical(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
+* insert Label(diagnosis.condition, Diagnose, Referenz auf die adressierte Tumorerkrankung nach MII-Onkologie-Diagnoseprofil.)
 * insert Translation(diagnosis.condition ^short, en, Condition)
-* insert Translation(diagnosis.condition ^definition, en, Reference to the addressed tumor condition OnkoCondition.)
+* insert Translation(diagnosis.condition ^definition, en, Reference to the addressed tumor condition\, per the MII oncology diagnosis profile.)
 // Rolle der Diagnose in dieser Episode: fest auf "chief complaint" (Hauptbehandlungsgrund)
 * diagnosis.role 1..1 MS
 * diagnosis.role = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC "Chief complaint"

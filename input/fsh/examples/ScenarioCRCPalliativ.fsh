@@ -16,7 +16,7 @@
 // eine Verlaufs-Observation (Disease Status) auf das Ziel bezogen
 // ausgewertet.
 //
-// Genutzte Profile: OnkoCondition, DiagnosticCarePlan, OnkoCarePlan,
+// Genutzte Profile: MII PR Onko Diagnose Primärtumor, DiagnosticCarePlan, OnkoCarePlan,
 // OnkoTherapyLine, OnkoTherapyGoal (x2), TumorboardMedicationRequest,
 // TumorboardServiceRequest.
 // =====================================================================
@@ -65,11 +65,10 @@ Description: "Tumorkonferenz, die die Therapieempfehlungen ausspricht (Requester
 // ---------------------------------------------------------------------
 
 Instance: ConditionCRC
-InstanceOf: OnkoCondition
+InstanceOf: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor
 Usage: #example
 Title: "Kolorektales Karzinom, metastasiert (Beispiel)"
 Description: "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."
-* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"

@@ -10,8 +10,9 @@ zur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfa
 Aktivitäten abgebildet, deren Ergebnisse können
 über `activity.outcomeReference` angebunden werden.
 
-Der diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (`OnkoCondition`)
-und ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.
+Der diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (MII-Onkologie-
+Diagnoseprofil) und ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose
+adressiert.
 
 Diagnostikspezifische Ergänzungen:
 - Der Plan-Typ ist über `category` verpflichtend gekennzeichnet: `category.text`
@@ -64,9 +65,9 @@ Diagnostikspezifische Ergänzungen:
 * addresses 1..* MS
 * addresses ^short = "Adressierte (Verdachts-)Tumordiagnose"
 * addresses ^definition = "Referenz auf die Tumordiagnose, die der diagnostische CarePlan adressiert. Zu Beginn der Diagnostik ist dies eine Verdachtsdiagnose (Condition mit verificationStatus 'provisional' oder 'unconfirmed'); nach Diagnosesicherung wird dieselbe Condition auf 'confirmed' aktualisiert, sodass die Referenz über den gesamten Verlauf stabil bleibt."
-// Bindung an OnkoCondition via targetProfile (SUSHI kann die externe Parent-Kette
-// des MII-Profils im `only Reference()`-Check nicht auflösen; FHIR-Ausgabe identisch)
-* addresses ^type.targetProfile = Canonical(OnkoCondition)
+// Bindung an das MII-Onkologie-Diagnoseprofil via targetProfile (SUSHI kann die externe
+// Parent-Kette des MII-Profils im `only Reference()`-Check nicht auflösen; FHIR-Ausgabe identisch)
+* addresses ^type.targetProfile = Canonical(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * insert Translation(addresses ^short, en, Addressed suspected tumor diagnosis)
 * insert Translation(addresses ^definition, en, Reference to the tumor diagnosis addressed by the diagnostic care plan. Initially a suspected diagnosis with verificationStatus provisional or unconfirmed; after confirmation the same Condition is updated to confirmed\, so the reference stays stable throughout.)
 
