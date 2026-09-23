@@ -56,13 +56,13 @@ Führung und Ausführung fallen hier in einer Episode zusammen,
 
 #### `goal-relationship` – Bedeutung der Beziehungstypen
 
-Codesystem `http://terminology.hl7.org/CodeSystem/goal-relationship-type`. Die Beziehung wird immer aus Sicht des *Quell-Ziels* (das die Extension trägt) auf das *Ziel-Ziel* (`target`) angegeben:
+Codesystem `http://terminology.hl7.org/CodeSystem/goal-relationship-type`. Die Beziehung wird immer aus Sicht des *ursprünglichen Zieles* (das die Extension trägt) auf das *neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles)* (`target`) angegeben:
 
 | Typ | Bedeutung | im Beispiel |
 |---|---|---|
-| `predecessor` | Das Ziel-Ziel muss **vorher** erreicht werden. | Erhaltungsziel → predecessor → Induktionsziel |
-| `successor` | Das Ziel-Ziel ist das angestrebte Ziel, **nachdem** dieses erreicht ist. | Induktionsziel → successor → Erhaltungsziel |
-| `replacement` | Dieses Ziel wurde **durch** das Ziel-Ziel **ersetzt**. | palliatives Ziel → replacement → abgelehntes kuratives Ziel |
-| `milestone` | Das Ziel-Ziel ist ein **Teilschritt** dieses Ziels. | (nicht im Beispiel) |
+| `predecessor` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) muss **vorher** erreicht werden. | Erhaltungsziel → predecessor → Induktionsziel |
+| `successor` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) ist das angestrebte Ziel, **nachdem** dieses erreicht ist. | Induktionsziel → successor → Erhaltungsziel |
+| `replacement` | Dieses Ziel wurde **durch** das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) **ersetzt**. | palliatives Ziel → replacement → abgelehntes kuratives Ziel |
+| `milestone` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) ist ein **Teilschritt** dieses Ziels. | (nicht im Beispiel) |
 
 `predecessor` und `successor` sind zueinander invers: Induktions- und Erhaltungsziel verweisen wechselseitig aufeinander und bilden so die zeitliche Sequenz ab.
