@@ -55,6 +55,14 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 * insert Label(achievementStatus, Erreichungsgrad, Grad der Zielerreichung\, z. B. erreicht\, in Bearbeitung\, nicht erreicht.)
 * insert Translation(achievementStatus ^short, en, Achievement status)
 * insert Translation(achievementStatus ^definition, en, Degree of goal achievement\, e.g. achieved\, in progress\, not achieved.)
+* achievementStatus ^comment = """achievementStatus verwendet nur Zustands-Codes: in-progress oder achieved oder not-achieved,
+  not-attainable. Die Trajektorie ("besser/schlechter", Tumoransprechen) wird nicht hier
+  abgelegt — das Feld ist einwertig und ohne Historie, und "verbessert gegenüber was?"
+  (Baseline vs. Nadir) ist ohne Bezugspunkt nicht bestimmbar. Ansprechen und Verlauf liegen
+  deshalb in den outcomeReference-Observations (z. B. RECIST, mCODE Cancer Disease Status),
+  die zeitgestempelt sind und ihren Bezugspunkt selbst definieren.
+  """
+* insert Translation(achievementStatus ^comment, en, achievementStatus only uses state codes: in-progress\, achieved\, not-achieved\, not-attainable. Trajectory better/worse\, tumor response is not captured here — the field is single-valued and has no history\, and 'improved compared to what?' baseline vs. nadir cannot be determined without a reference point. Response and course are therefore captured in the outcomeReference observations e.g. RECIST\, mCODE Cancer Disease Status\, which are timestamped and define their own reference point.)
 
 // Zielart (onkologiespezifische ValueSet-Bindung)
 * category 1..* MS
@@ -99,6 +107,11 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 * insert Label(target, Zielwert, Angestrebter messbarer Zielzustand.)
 * insert Translation(target ^short, en, Target)
 * insert Translation(target ^definition, en, Intended measurable target state.)
+* target ^comment = """target ist der Zielwert (die Absicht). Derselbe Zielwert darf über mehrere
+Ziele gleich sein — Behandlungs- und Nachsorgeziel können denselben Krankheitsstatus anstreben,
+weil die Absicht über Heilung → Surveillance durchläuft.
+"""
+* insert Translation(target ^comment, en, target is the target value/the intent. The same target value may be shared across multiple goals — a treatment goal and a follow-up goal can pursue the same disease status and because the intent carries through from cure to surveillance.)
 * target.measure MS
 * insert Label(target.measure, Zielparameter, Parameter bzw. Messgröße\, an der die Zielerreichung gemessen wird.)
 * insert Translation(target.measure ^short, en, Target measure)
@@ -137,6 +150,10 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 * insert Label(outcomeReference, Ergebnis-Referenz, Referenz auf Verlaufs-Observations\, die das Tumoransprechen dokumentieren.)
 * insert Translation(outcomeReference ^short, en, Outcome reference)
 * insert Translation(outcomeReference ^definition, en, Reference to progress observations documenting tumor response.)
+* outcomeReference ^comment = """outcomeReference ist das Ergebnis — die evidenzierende Observation.
+Sie ist pro Ziel eigen und phasengerecht und bleibt leer, solange kein Ergebnis beobachtet wurde.
+"""
+* insert Translation(outcomeReference ^comment, en, outcomeReference is the result — the evidencing observation. It is specific to each goal and phase-appropriate\, and remains empty as long as no result has been observed.)
 
 // Begleitende Hinweise
 * note
