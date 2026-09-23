@@ -7,17 +7,17 @@
 //
 // Erzählung: Eine 67-jährige Patientin mit synchron metastasiertem
 // Kolonkarzinom (Lebermetastasen). Der Diagnostikpfad (Koloskopie mit
-// Biopsie → Histologie) wird über einen `DiagnosticCarePlan` abgebildet.
-// Nach interdisziplinärer Tumorkonferenz (`CareTeam`) empfiehlt das
-// Tumorboard eine palliative Systemtherapie (FOLFOX + Bevacizumab,
-// `TumorboardMedicationRequest`) sowie die Anlage eines Portkatheters
-// (`TumorboardServiceRequest`). Übergeordnete Therapieziele sind
-// Lebensverlängerung und Symptomkontrolle. Das Tumoransprechen wird über
-// eine Verlaufs-Observation (Disease Status) auf das Ziel bezogen
-// ausgewertet.
+// Biopsie → Histologie) wird über einen `OnkoCarePlan` mit
+// Therapieabschnitt = Diagnostic intent abgebildet. Nach interdisziplinärer
+// Tumorkonferenz (`CareTeam`) empfiehlt das Tumorboard eine palliative
+// Systemtherapie (FOLFOX + Bevacizumab, `TumorboardMedicationRequest`)
+// sowie die Anlage eines Portkatheters (`TumorboardServiceRequest`).
+// Übergeordnete Therapieziele sind Lebensverlängerung und Symptomkontrolle.
+// Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status)
+// auf das Ziel bezogen ausgewertet.
 //
-// Genutzte Profile: MII PR Onko Diagnose Primärtumor, DiagnosticCarePlan, OnkoCarePlan,
-// OnkoTherapyLine, OnkoTherapyGoal (x2), TumorboardMedicationRequest,
+// Genutzte Profile: MII PR Onko Diagnose Primärtumor, OnkoCarePlan (Diagnostik- und
+// Therapieabschnitt), OnkoTherapyLine, OnkoTherapyGoal (x2), TumorboardMedicationRequest,
 // TumorboardServiceRequest.
 // =====================================================================
 
@@ -82,19 +82,21 @@ Description: "Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-
 * recordedDate = "2026-01-20"
 
 // ---------------------------------------------------------------------
-// Diagnostikpfad: DiagnosticCarePlan mit ServiceRequest → DiagnosticReport
+// Diagnostikpfad: OnkoCarePlan (Therapieabschnitt = Diagnostic intent) mit
+// ServiceRequest → DiagnosticReport
 // ---------------------------------------------------------------------
 
 Instance: DiagnostikCarePlanCRC
-InstanceOf: DiagnosticCarePlan
+InstanceOf: OnkoCarePlan
 Usage: #example
-Title: "Diagnostischer CarePlan – Tumordiagnostik (Beispiel)"
+Title: "Onkologischer CarePlan – Tumordiagnostik (Beispiel)"
 Description: "Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."
-* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"
 * extension[custodian].valueReference = Reference(TumorzentrumCRC)
 * status = #completed
 * intent = #plan
-* category.text = "Tumordiagnostik"
+* category[erkrankungsart] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#C18.9 "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+* category[therapieabschnitt] = http://snomed.info/sct#261004008 "Diagnostic intent (qualifier value)"
 * subject = Reference(PatientinCRC)
 * period.start = "2026-01-05"
 * period.end = "2026-01-20"
@@ -292,7 +294,8 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, palliatives
 * extension[custodian].valueReference = Reference(TumorzentrumCRC)
 * status = #active
 * intent = #plan
-* category = http://snomed.info/sct#736252007 "Cancer care plan"
+* category[erkrankungsart] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#C18.9 "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+* category[therapieabschnitt] = http://snomed.info/sct#262202000 "Therapeutic intent (qualifier value)"
 * subject = Reference(PatientinCRC)
 * period.start = "2026-02-10"
 * addresses = Reference(ConditionCRC)

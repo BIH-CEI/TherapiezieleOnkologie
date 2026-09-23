@@ -126,14 +126,15 @@ Description: "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim 
 // ---------------------------------------------------------------------
 
 Instance: CarePlanMammaDiagnostik
-InstanceOf: DiagnosticCarePlan
+InstanceOf: OnkoCarePlan
 Usage: #example
-Title: "Diagnostischer CarePlan (Beispiel Mamma)"
+Title: "Onkologischer CarePlan – Tumordiagnostik (Beispiel Mamma)"
 Description: "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."
-* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"
 * status = #active
 * intent = #plan
-* category.text = "Tumordiagnostik" 
+* category[erkrankungsart] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#C50.4 "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+* category[therapieabschnitt] = http://snomed.info/sct#261004008 "Diagnostic intent (qualifier value)"
 * subject = Reference(PatientinMamma)
 * addresses = Reference(ConditionMamma)
 * author = Reference(OnkologinMamma)
@@ -675,7 +676,8 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives T
 * extension[custodian].valueReference = Reference(TumorzentrumMamma)
 * status = #active
 * intent = #plan
-* category = http://snomed.info/sct#736252007 "Cancer care plan"
+* category[erkrankungsart] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#C50.4 "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+* category[therapieabschnitt] = http://snomed.info/sct#262202000 "Therapeutic intent (qualifier value)"
 * subject = Reference(PatientinMamma)
 * period.start = "2025-09-22"
 * addresses = Reference(ConditionMamma)
@@ -779,7 +781,8 @@ Description: "Nachsorgeplan nach abgeschlossener kurativer Primärtherapie (pCR)
 * extension[custodian].valueReference = Reference(TumorzentrumMamma)
 * status = #active
 * intent = #plan
-* category = http://snomed.info/sct#736252007 "Cancer care plan"
+* category[erkrankungsart] = http://fhir.de/CodeSystem/bfarm/icd-10-gm#C50.4 "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+* category[therapieabschnitt] = http://snomed.info/sct#262202000 "Therapeutic intent (qualifier value)"
 * subject = Reference(PatientinMamma)
 * period.start = "2026-08-15"
 * addresses = Reference(ConditionMamma)

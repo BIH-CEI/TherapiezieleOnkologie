@@ -16,7 +16,7 @@ Der folgende Referenzgraph zeigt die **Kernbeziehungen des Therapie-CarePlan** (
 |---|---|---|
 | Patient:in | `Patient` | [PatientinCRC](Patient-PatientinCRC.html) |
 | Tumorerkrankung | `MII PR Onko Diagnose Primärtumor` | [ConditionCRC](Condition-ConditionCRC.html) |
-| Diagnostik-Plan | `DiagnosticCarePlan` | [DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.html) |
+| Diagnostik-Plan | `OnkoCarePlan` (Therapieabschnitt: Diagnostic intent) | [DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.html) |
 | Diagnostik-Anforderung | `ServiceRequest` | [ServiceRequestKoloskopieCRC](ServiceRequest-ServiceRequestKoloskopieCRC.html) |
 | Diagnostik-Ergebnis | `DiagnosticReport` | [DiagnosticReportHistologieCRC](DiagnosticReport-DiagnosticReportHistologieCRC.html) |
 | Therapie-Plan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.html) |
@@ -39,7 +39,7 @@ Führung und Ausführung fallen hier in einer Episode zusammen,
 
 ### Verknüpfungen im Beispiel
 
-- **Diagnostikpfad:** Der `DiagnosticCarePlan` (`category.text = "Tumordiagnostik"`) adressiert dieselbe Tumordiagnose (MII-Onkologie-Diagnoseprofil) und führt geplante Anforderung (`activity.reference` → `ServiceRequest` Koloskopie) und Ergebnis (`activity.outcomeReference` → `DiagnosticReport` Histologie) zusammen. Der Therapie-CarePlan verweist über `supportingInfo` auf den Diagnostik-CarePlan.
+- **Diagnostikpfad:** Der diagnostische `OnkoCarePlan` (`category[therapieabschnitt] = Diagnostic intent`, SNOMED `261004008`) adressiert dieselbe Tumordiagnose (MII-Onkologie-Diagnoseprofil, `category[erkrankungsart]` trägt denselben ICD-10-GM-Code) und führt geplante Anforderung (`activity.reference` → `ServiceRequest` Koloskopie) und Ergebnis (`activity.outcomeReference` → `DiagnosticReport` Histologie) zusammen. Der Therapie-CarePlan (`category[therapieabschnitt] = Therapeutic intent`, SNOMED `262202000`) verweist über `supportingInfo` auf den Diagnostik-CarePlan.
 - **Tumorboard:** Die Empfehlungen (`TumorboardMedicationRequest`, `TumorboardServiceRequest`) tragen im `category` den LOINC-Code `85232-7` (Tumor board Consult note); das `CareTeam` ist als `careTeam` am Therapie-CarePlan und als `team` an der Therapielinie hinterlegt.
 - **Therapieintention (zwei Achsen):** Die Extension `onko-therapy-intent` codiert `hauptintention` (hier `palliativ`, SNOMED `363676003`) und optional `phase` (hier `Induktionstherapie`, SNOMED `450827009`). So ist „palliativ + Induktionsphase" gleichzeitig ausdrückbar; die Codes sind extensible gebunden.
 - **CarePlan → Erkrankung:** `addresses` referenziert direkt das [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) (Primärtumor, v2026.0.3).

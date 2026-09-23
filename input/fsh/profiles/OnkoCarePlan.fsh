@@ -17,13 +17,16 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 - `goal` referenziert das Profil `OnkoTherapyGoal`.
 - Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die
   Standard-Extension `workflow-episodeOfCare` verknüpft.
+- `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der
+  adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird,
+  beispielsweise der diagnostische (`Diagnostic intent`) oder der therapeutische (`Therapeutic intent`).
 
 Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des
 realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine
 `PlanDefinition` aus dem CPG-on-FHIR-Stack.
 """
 * insert Translation(^title, en, Oncological care plan)
-* insert Translation(^description, en, Oncological care plan based on CarePlan\, architecturally aligned with the HL7 FHIR US MCC eCare Plan. The care plan is the central\, consensus-driven steering object bringing together addressed conditions\, overarching goals and planned versus performed activities of the care teams.)
+* insert Translation(^description, en, Oncological care plan based on CarePlan\, architecturally aligned with the HL7 FHIR US MCC eCare Plan. The care plan is the central\, consensus-driven steering object bringing together addressed conditions\, overarching goals and planned versus performed activities of the care teams. category is sliced into erkrankungsart – ICD-10-GM code of the addressed tumor disease – and therapieabschnitt – SNOMED CT Diagnostic intent 261004008 or Therapeutic intent 262202000\, so a single profile covers both the diagnostic pathway and the therapy pathway.)
 
 // Therapieintention (onkologiespezifisch) und Custodian (übernommen aus MCC)
 * extension contains
@@ -46,15 +49,34 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 * insert Translation(status ^short, en, Status)
 * insert Translation(status ^definition, en, Status of the care plan – e.g. draft\, active\, completed\, revoked.)
 * intent MS
-* insert Label(intent, Planart, Art des Plans – proposal/plan = Empfehlungsplan des Tumorboards\, plan/order = Behandlungsplan.)
+* insert Label(intent, Planart, Art des Plans – proposal/plan = Empfehlungsplan des Tumorboards\, plan/order = Behandlungs- bzw. Diagnostikplan.)
 * insert Translation(intent ^short, en, Intent)
-* insert Translation(intent ^definition, en, Kind of plan – proposal/plan = tumor board recommendation plan\, plan/order = treatment plan.)
+* insert Translation(intent ^definition, en, Kind of plan – proposal/plan = tumor board recommendation plan\, plan/order = treatment or diagnostic plan.)
 
-// Kategorisierung des Plans
-* category MS
-* insert Label(category, Plan-Kategorie, Art bzw. Kategorie des Versorgungsplans.)
+// Kategorisierung des Plans: Erkrankungsart (codierte Tumordiagnose) und Therapieabschnitt
+// (diagnostisch/therapeutisch). Unterscheidet – statt zweier separater Profile – anhand der
+// Slice therapieabschnitt, ob der Plan den Diagnostikpfad (vormals DiagnosticCarePlan\,
+// Therapieabschnitt = Diagnostic intent SNOMED 261004008) oder den Therapiepfad (vormals
+// OnkoCarePlan\, Therapieabschnitt = Therapeutic intent SNOMED 262202000) abbildet.
+// Erkrankungsart trägt denselben ICD-10-GM-Code wie die referenzierte Condition (addresses).
+* category 1..* MS
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.rules = #open
+* category contains
+    erkrankungsart 1..1 MS and
+    therapieabschnitt 1..1 MS
+* insert Label(category, Plan-Kategorie, Kategorisierung des Versorgungsplans – Erkrankungsart mit Diagnosecode und Therapieabschnitt mit diagnostisch oder therapeutisch.)
 * insert Translation(category ^short, en, Plan category)
-* insert Translation(category ^definition, en, Type or category of the care plan.)
+* insert Translation(category ^definition, en, Categorization of the care plan – disease type as diagnosis code and care phase as diagnostic or therapeutic.)
+* category[erkrankungsart].coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* insert Label(category[erkrankungsart], Erkrankungsart, Kodierte Tumorerkrankung nach ICD-10-GM\, die dieser Versorgungsplan adressiert – identisch zum Diagnosecode der referenzierten Condition.)
+* insert Translation(category[erkrankungsart] ^short, en, Disease type)
+* insert Translation(category[erkrankungsart] ^definition, en, Coded tumor disease per ICD-10-GM addressed by this care plan – identical to the diagnosis code of the referenced condition.)
+* category[therapieabschnitt] from OnkoCarePlanPhaseVS (example)
+* insert Label(category[therapieabschnitt], Therapieabschnitt, Diagnostischer oder therapeutischer Abschnitt der Versorgung – SNOMED CT Diagnostic intent 261004008 bzw. Therapeutic intent 262202000.)
+* insert Translation(category[therapieabschnitt] ^short, en, Care plan phase)
+* insert Translation(category[therapieabschnitt] ^definition, en, Diagnostic or therapeutic phase of care – SNOMED CT Diagnostic intent 261004008 or Therapeutic intent 262202000.)
 
 // Patientenbezug
 * subject 1..1 MS
@@ -63,27 +85,28 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 * insert Translation(subject ^short, en, Patient)
 * insert Translation(subject ^definition, en, The person the care plan is created for.)
 
-// Geltungszeitraum des Plans
-* period
-* insert Label(period, Geltungszeitraum, Zeitraum\, in dem der Versorgungsplan gültig ist.)
+// Geltungszeitraum des Plans (bei diagnostischer Nutzung: Diagnostikzeitraum von Beginn bis
+// Diagnosesicherung)
+* period MS
+* insert Label(period, Geltungszeitraum, Zeitraum\, in dem der Versorgungsplan gültig ist – bei diagnostischer Nutzung der Diagnostikzeitraum von Beginn bis Diagnosesicherung.)
 * insert Translation(period ^short, en, Period)
-* insert Translation(period ^definition, en, Period during which the care plan is valid.)
+* insert Translation(period ^definition, en, Period during which the care plan is valid – for diagnostic use\, the diagnostic period from start to confirmation of diagnosis.)
 
 // Adressierte Gesundheitsprobleme (Verbindung Erkrankung – CarePlan)
 * addresses 1..* MS
 // Bindung an das MII-Onkologie-Diagnoseprofil via targetProfile (SUSHI kann die externe
 // Parent-Kette des MII-Profils im `only Reference()`-Check nicht auflösen; FHIR-Ausgabe identisch)
 * addresses ^type.targetProfile = Canonical(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
-* insert Label(addresses, Adressierte Erkrankung, Referenz auf die vom Plan adressierte Tumorerkrankung nach MII-Onkologie-Diagnoseprofil.)
+* insert Label(addresses, Adressierte Erkrankung, Referenz auf die vom Plan adressierte Tumorerkrankung nach MII-Onkologie-Diagnoseprofil – im Diagnostikabschnitt ggf. eine Verdachtsdiagnose mit verificationStatus 'provisional' oder 'unconfirmed'\, die nach Diagnosesicherung auf 'confirmed' aktualisiert wird\, sodass die Referenz stabil bleibt.)
 * insert Translation(addresses ^short, en, Addressed condition)
-* insert Translation(addresses ^definition, en, Reference to the tumor condition addressed by the plan\, per the MII oncology diagnosis profile.)
+* insert Translation(addresses ^definition, en, Reference to the tumor condition addressed by the plan\, per the MII oncology diagnosis profile – during the diagnostic phase possibly a suspected diagnosis with verificationStatus provisional or unconfirmed that is updated to confirmed once the diagnosis is established\, so the reference stays stable.)
 
-// Übergeordnete Therapieziele
+// Übergeordnete Therapie- bzw. Diagnoseziele
 * goal MS
 * goal only Reference(OnkoTherapyGoal)
-* insert Label(goal, Therapieziele, Referenz auf die übergeordneten onkologischen Therapieziele OnkoTherapyGoal.)
+* insert Label(goal, Therapieziele, Referenz auf die übergeordneten onkologischen Therapie- bzw. Diagnoseziele OnkoTherapyGoal.)
 * insert Translation(goal ^short, en, Goals)
-* insert Translation(goal ^definition, en, Reference to the overarching oncological therapy goals OnkoTherapyGoal.)
+* insert Translation(goal ^definition, en, Reference to the overarching oncological therapy or diagnostic goals OnkoTherapyGoal.)
 
 // Maßnahmen: Unterscheidung geplant vs. durchgeführt (MCC-Kernkonzept)
 * activity MS
