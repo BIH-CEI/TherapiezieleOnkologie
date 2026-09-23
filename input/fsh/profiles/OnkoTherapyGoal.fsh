@@ -94,6 +94,7 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 * start[x] MS
 * startDate MS
 * startCodeableConcept MS
+* startCodeableConcept from OnkoGoalStartEventVS (example)
 * insert Label(start[x], Zielbeginn, Beginn des angestrebten Ziels als Datum oder codiertes Ereignis.)
 * insert Translation(start[x] ^short, en, Goal start)
 * insert Translation(start[x] ^definition, en, Start of the goal as a date or a coded event.)
