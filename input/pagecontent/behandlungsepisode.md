@@ -94,14 +94,20 @@ Die LoT-Zählung bleibt damit trivial: Gezählt werden ausschließlich Träger v
 
 ### Anschluss an Versorgungskontakte (ISiK/KBV) und MII-Prozeduren
 
-Findet die vorgeschlagene Therapielinien-Modellierung Zustimmung, ist sie der
-**Andockpunkt in beide Richtungen** der Versorgungsdokumentation:
+Die Therapielinie ist der **Andockpunkt in beide Richtungen** der
+Versorgungsdokumentation:
 
 - **Kontakte aus der Versorgung:** `Encounter` aus dem Krankenhausumfeld
-  (**ISiK**) wie aus der vertragsärztlichen Versorgung (**KBV**) verweisen über
-  das Standard-Element `Encounter.episodeOfCare` auf die jeweilige
-  (Segment-)Episode — die einzelnen Kontakte hängen sich an die Linie, ohne dass
-  dieser Leitfaden Encounter selbst profilieren muss (bewusst out of scope).
+  (**ISiK**) wie aus der vertragsärztlichen Versorgung (**KBV**) könnten
+  zukünftig über das Standard-Element `Encounter.episodeOfCare` auf die
+  jeweilige (Segment-)Episode verweisen — die einzelnen Kontakte hängen sich an die
+  Linie, ohne dass dieser Leitfaden Encounter selbst profilieren muss (bewusst
+  out of scope). Zu beachten: Weder ISiK (Stufe 6) noch die KBV-Basisprofile
+  constrainen dieses Element derzeit oder belegen es mit Must Support — die
+  Befüllung ist eine optionale Zusatzleistung des Primärsystems, keine
+  zugesicherte Eigenschaft dieser Basisprofile. Das gematik-Diskussionspapier
+  [Zielbild Encounter-Fallmodell 2027](https://github.com/gematik/spec-ISiK-Basismodul/blob/main-stufe-6/Material/Basis/Zielbild-Encounter-Fallmodell-2027.md)
+  adressiert die künftige Rolle von `EpisodeOfCare` in ISiK explizit.
 - **MII-Prozeduren:** Die im MII KDS Onkologie als `Procedure` mit
   `performedPeriod` modellierten Therapieblöcke — **systemische Therapie,
   Strahlentherapie und Operationen** — bleiben unverändert und werden verkabelt:
@@ -131,16 +137,20 @@ die Standard-Extension **`workflow-episodeOfCare`** verknüpft (direkt am `CareP
 *erstellenden* Kontakt bezeichnet). `Encounter` selbst ist bewusst außerhalb des
 Scopes dieses Leitfadens.
 
-> **Zielmodell.** Das generelle `Behandlungsepisode`-Profil (Art über `type`,
-> art-spezifische Angaben in Extensions) löst das aktuell auf aktive Therapie verengte
-> Profil [`OnkoTherapyLine`](StructureDefinition-onko-therapy-line.html) ab und wird im
-> laufenden Ausbau umgesetzt. Die EnLiST-Konformität der systemischen Linien bleibt
-> dabei erhalten.
+> **Umgesetztes Modell.** Das generelle Profil
+> [`OnkoBehandlungsepisode`](StructureDefinition-onko-behandlungsepisode.html) bildet
+> alle Episoden ab: Die **Episodenart** steht in `type` (systemische Therapielinie,
+> lokoregionale Behandlungslinie, Diagnostiklinie, Active Surveillance, Watchful
+> Waiting — extensible), die **Behandlungsmodalität** (Chemo, Immuntherapie,
+> Bestrahlung, Operation …) ist ein eigenes Merkmal (Extension `onko-modalitaet`).
+> Es löst das frühere, auf aktive Therapie verengte Profil `OnkoTherapyLine` ab; die
+> EnLiST-Konformität der systemischen Linien bleibt erhalten und ist per Invariante
+> auf die Episodenart *systemische Therapielinie* begrenzt.
 
 ### Beispiele
 
 - [mCRC (palliativ)](szenario-crc.html) — Diagnostikpfad und systemische Erstlinie
-  (`OnkoTherapyLine`).
+  (`OnkoBehandlungsepisode`).
 - [Mammakarzinom (neoadjuvant)](szenario-mamma.html) — neoadjuvante Systemtherapie und
   anschließende Operation als getrennte Abschnitte.
 
