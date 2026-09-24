@@ -1,8 +1,30 @@
+# IG-Build + GitHub Pages.
+#
+#   main            → ci-build/ (beweglicher Stand) + <VERSION>/ (Snapshot)
+#                     + Wurzel-Redirect — die formale Veröffentlichung.
+#   jeder andere    → branches/<branch>/ — eine gerenderte Vorschau pro Branch,
+#   Branch            damit ein Stand ohne lokalen Build teilbar ist. Wurzel,
+#                     ci-build/ und Versionsverzeichnisse bleiben unangetastet.
+#
+# Gelöschte Branch-Vorschauen räumt cleanup-gh-pages.yml wöchentlich ab; es
+# erkennt sie am .branch-name-Marker, den jede Vorschau hier ablegt.
+# Muster: MII-KDS-Modul-Template (kerndatensatz-bildgebung u. a.).
+#
+# Zwei unabhängige, parallel laufende Prüfungen auf jedem Branch:
+#   validate → validator_cli über fsh-generated/, -forPublication, Ergebnis
+#              gefiltert als Markdown in der Job-Summary (fail fast, gut lesbar).
+#   build    → IG Publisher; seine QA (output/qa.html) prüft im vollen
+#              IG-Kontext inkl. Snapshots, Seitenlinks und Beispielen und ist
+#              bei Bundle-/Snapshot-Fragen die Autorität. Liegt in jeder
+#              Vorschau unter branches/<branch>/qa.html.
 name: Build IG & Publish to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - "**"
+      - "!gh-pages"
+      - "!fsh-generated"
   workflow_dispatch:
 
 permissions:
@@ -10,12 +32,18 @@ permissions:
   pages: write
   id-token: write
   checks: write
+  pull-requests: write # Vorschau-URL als PR-Kommentar
+  issues: write # PR-Kommentare laufen über die Issues-API
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
+  # Standalone-Validierung (validator_cli, -forPublication) auf JEDEM Branch —
+  # inhaltliche Änderungen sollen nicht erst auf main auffallen. Läuft parallel
+  # zu build: das Gating lag ohnehin nie hier (build hatte `if: always()`), die
+  # Abhängigkeit hätte die Vorschau nur verzögert.
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 60
@@ -169,9 +197,10 @@ jobs:
             validation.json
           retention-days: 7
 
+  # Der IG-Publisher-Build erzeugt seine eigene QA (output/qa.html) im vollen
+  # IG-Kontext und ist für Bundle-/Snapshot-Fragen die Autorität; er läuft
+  # unabhängig von validate.
   build:
-    needs: validate
-    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -227,16 +256,71 @@ jobs:
             txcache-build-
             txcache-
 
+      # Ohne diesen Schritt lief der IG Publisher immer gegen tx.fhir.org — dort
+      # ist ICD-10-GM (BfArM-lizenziert) nicht expandierbar, was in qa.html die
+      # Condition-Beispiele durchfallen ließ und als Folge jede Referenz auf sie.
+      # Muster wie im validate-Job und in SenologieOnFHIR.
+      - name: Setup TX Proxy (MII Ontoserver)
+        id: txproxy
+        env:
+          MII_TERMSERV_CERT: ${{ secrets.MII_TERMSERV_CERT }}
+          MII_TERMSERV_PW: ${{ secrets.MII_TERMSERV_PW }}
+        run: |
+          if [ -z "$MII_TERMSERV_CERT" ]; then
+            echo "::warning::Kein MII-TermServ-Zertifikat — Build gegen tx.fhir.org; ICD-10-GM-Bindings werden in qa.html als Fehler erscheinen."
+            echo "tx=http://tx.fhir.org" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          mkdir -p nginx/certs
+          curl -sSL -o nginx/nginx.conf \
+            https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-meta/refs/heads/master/.github/workflows/nginx.conf
+          echo "$MII_TERMSERV_CERT" | base64 -d > nginx/certs/client.p12
+          openssl pkcs12 -in nginx/certs/client.p12 -clcerts -nokeys \
+            -out nginx/certs/client-cert.pem -passin pass:$MII_TERMSERV_PW
+          openssl pkcs12 -in nginx/certs/client.p12 -nocerts \
+            -out nginx/certs/client-key-encrypted.key \
+            -passin pass:$MII_TERMSERV_PW -passout pass:$MII_TERMSERV_PW
+          openssl rsa -in nginx/certs/client-key-encrypted.key \
+            -out nginx/certs/client-key.key -passin pass:$MII_TERMSERV_PW
+          docker run -d --name nginx-proxy-build \
+            -v $PWD/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+            -v $PWD/nginx/certs:/etc/nginx/certs:ro \
+            -p 8090:80 nginx:alpine
+          sleep 5
+          for i in {1..5}; do
+            if curl --silent --fail http://localhost:8090/fhir/metadata > /dev/null; then
+              echo "NGINX TX proxy is ready."
+              echo "tx=http://localhost:8090/fhir" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Waiting for NGINX... attempt $i"
+            sleep 2
+          done
+          echo "::warning::Proxy nicht erreichbar — Fallback auf tx.fhir.org."
+          echo "tx=http://tx.fhir.org" >> "$GITHUB_OUTPUT"
+
       - name: Build IG
         run: |
           chmod +x _build.sh
-          ./_build.sh build
+          # -fhir-settings: der Publisher (2.3.1+) verweigert sonst ein
+          # -tx-Ziel im privaten Netz per HTTP. Ohne den lokalen Proxy ist der
+          # Parameter wirkungslos, stört aber nicht.
+          ./_build.sh build \
+            -tx ${{ steps.txproxy.outputs.tx }} \
+            -fhir-settings "${GITHUB_WORKSPACE}/.github/fhir-settings.json"
+
+      - name: Stop TX Proxy
+        if: always()
+        run: docker rm --force nginx-proxy-build > /dev/null 2>&1 || true
 
       - name: Deploy Build to GitHub Pages
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Version aus sushi-config lesen (z. B. 1.0.0-ballot) für den versionierten Pfad
+          # Version aus sushi-config lesen (z. B. 1.0.0-ballot) für den versionierten
+          # Pfad — zwingend VOR dem Branch-Wechsel: auf gh-pages gibt es die Datei nicht.
           VERSION=$(grep -E '^version:' sushi-config.yaml | head -1 | awk '{print $2}')
           # Discard build-generated changes to tracked files (e.g. translations/)
           # before switching branches. output/ is untracked and survives.
@@ -247,14 +331,69 @@ jobs:
             git checkout --orphan gh-pages
             git rm -rf . 2>/dev/null || true
           fi
-          # ci-build = beweglicher Stand von main; "$VERSION"/ = versionierter Snapshot (z. B. Ballot).
-          # Bestehende andere Release-Versionen bleiben unangetastet.
-          rm -rf ci-build
-          cp -r output ci-build
-          rm -rf "$VERSION"
-          cp -r output "$VERSION"
-          # Wurzel-Redirect auf die versionierte Ballot-Ausgabe (der Link, der geteilt wird)
-          echo "<html><head><meta http-equiv=\"refresh\" content=\"0; url=${VERSION}/index.html\"></head><body>Redirecting to <a href=\"${VERSION}/index.html\">${VERSION}</a></body></html>" > index.html
-          git add ci-build/ "$VERSION"/ index.html
-          git commit -m "publish ${VERSION}: $(date -u +%Y-%m-%dT%H:%M:%SZ)" --allow-empty
+          # Pages soll die fertige IG-Ausgabe unverändert ausliefern statt sie
+          # noch einmal durch Jekyll zu schicken (sonst fallen u. a. Pfade mit
+          # führendem _ heraus).
+          touch .nojekyll
+          if [ "$BRANCH" = "main" ]; then
+            if [ -z "$VERSION" ]; then
+              echo "::error::Keine version in sushi-config.yaml gefunden"; exit 1
+            fi
+            # ci-build = beweglicher Stand von main; "$VERSION"/ = versionierter Snapshot (z. B. Ballot).
+            # Bestehende andere Release-Versionen bleiben unangetastet.
+            rm -rf ci-build
+            cp -r output ci-build
+            rm -rf "$VERSION"
+            cp -r output "$VERSION"
+            # Wurzel-Redirect auf die versionierte Ballot-Ausgabe (der Link, der geteilt wird)
+            echo "<html><head><meta http-equiv=\"refresh\" content=\"0; url=${VERSION}/index.html\"></head><body>Redirecting to <a href=\"${VERSION}/index.html\">${VERSION}</a></body></html>" > index.html
+            git add -A ci-build "$VERSION" index.html .nojekyll
+            MSG="publish ${VERSION}: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          else
+            # Branch-Vorschau: nur branches/<branch>/ wird angefasst; Wurzel,
+            # ci-build/ und Versionsverzeichnisse bleiben, wie sie sind. Der
+            # Branchname darf Schrägstriche enthalten (feature/xy) — mkdir -p
+            # legt die Verschachtelung an.
+            rm -rf "branches/${BRANCH}"
+            mkdir -p "branches/${BRANCH}"
+            cp -r output/. "branches/${BRANCH}/"
+            # Marker, an dem cleanup-gh-pages.yml gelöschte Branches erkennt
+            echo "${BRANCH}" > "branches/${BRANCH}/.branch-name"
+            git add -A branches .nojekyll
+            MSG="preview ${BRANCH}: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          fi
+          git commit -m "$MSG" --allow-empty
           git push origin gh-pages
+
+      - name: Vorschau-URL melden
+        if: ${{ github.ref_name != 'main' }}
+        run: |
+          BASE="https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/branches/${GITHUB_REF_NAME}"
+          {
+            echo "Vorschau: ${BASE}/"
+            echo "QA-Report: ${BASE}/qa.html"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Vorschau-URL als PR-Kommentar
+        if: ${{ github.ref_name != 'main' }}
+        continue-on-error: true
+        uses: actions/github-script@v7
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const branch = process.env.BRANCH_NAME;
+            const marker = '<!-- ig-preview-url -->';
+            const url = `https://${owner}.github.io/${repo}/branches/${branch}/`;
+            const body = `${marker}\n### IG-Vorschau\n[Gerenderter IG für Branch \`${branch}\`](${url}) · [QA-Report](${url}qa.html)`;
+            const { data: prs } = await github.rest.pulls.list({ owner, repo, state: 'open', per_page: 100 });
+            const pr = prs.find(p => p.head && p.head.ref === branch);
+            if (!pr) { core.info(`Kein offener PR für ${branch} — kein Kommentar.`); return; }
+            const { data: comments } = await github.rest.issues.listComments({ owner, repo, issue_number: pr.number, per_page: 100 });
+            const existing = comments.find(c => typeof c.body === 'string' && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number: pr.number, body });
+            }

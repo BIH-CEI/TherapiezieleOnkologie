@@ -1,0 +1,134 @@
+# Aufräumen verwaister Branch-Vorschauen (Gegenstück zu ig-publish.yml).
+#
+# Entfernt Vorschauen unter gh-pages/branches/<branch>/, deren Branch es nicht
+# mehr gibt — sonst wächst gh-pages mit jedem kurzlebigen Feature-Branch weiter.
+# Gelöscht wird ausschließlich ein Verzeichnis mit .branch-name-Marker, dessen
+# Branch remote verschwunden ist. Die formale Veröffentlichung (Wurzel,
+# index.html, ci-build/, Versionsverzeichnisse wie 1.0.0-ballot/) trägt keinen
+# Marker und ist damit nie Löschkandidat.
+#
+# Trigger: wöchentlich (So 00:00 UTC) + manuell; dry_run listet nur auf.
+name: Cleanup stale GitHub Pages previews
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Nur auflisten, nichts löschen"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+# Gleiche Gruppe wie ig-publish/ig-release: nie zwei gleichzeitige gh-pages-Pushes
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # gh-pages existiert erst nach dem ersten Build. Fehlt der Branch, gibt es
+      # nichts aufzuräumen — das darf keinen roten Lauf erzeugen.
+      - name: Prüfen, ob gh-pages existiert
+        id: probe
+        env:
+          REMOTE_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
+        run: |
+          if git ls-remote --heads "$REMOTE_URL" gh-pages | grep -q .; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Noch kein gh-pages-Branch — nichts aufzuräumen."
+          fi
+
+      - name: gh-pages auschecken
+        if: ${{ steps.probe.outputs.exists == 'true' }}
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 1
+
+      - name: Verwaiste Vorschauen entfernen
+        if: ${{ steps.probe.outputs.exists == 'true' }}
+        env:
+          DRY_RUN: ${{ inputs.dry_run || false }}
+        run: |
+          set -uo pipefail
+          if [ ! -d branches ]; then
+            echo "Kein branches/-Verzeichnis — nichts aufzuräumen."
+            exit 0
+          fi
+
+          # Aktive Branches (ohne gh-pages selbst) und gefundene Marker als
+          # zeilenweise Listen — Git-Refnamen enthalten nie Leerzeichen oder
+          # Zeilenumbrüche, deshalb ist das eindeutig.
+          active="$(git ls-remote --heads origin | sed 's|.*refs/heads/||' | grep -v '^gh-pages$')"
+          markers="$(find branches -type f -name '.branch-name' | sort)"
+          echo "Aktive Branches: $(printf '%s\n' "$active" | grep -c .) | Vorschauen: $(printf '%s\n' "$markers" | grep -c .)"
+
+          is_active() {
+            printf '%s\n' "$active" | grep -Fxq -- "$1"
+          }
+
+          stale=0; kept=0
+          while IFS= read -r marker; do
+            [ -n "$marker" ] || continue
+            # Ein bereits gelöschter Vorfahr kann diesen Marker mitgenommen haben
+            [ -f "$marker" ] || continue
+            dir="$(dirname "$marker")"
+            branch="$(tr -d '\r\n' < "$marker")"
+            if [ -z "$branch" ]; then
+              echo "::warning::Leerer Marker in $dir — bleibt stehen."
+              kept=$((kept+1)); continue
+            fi
+            if is_active "$branch"; then
+              echo "Behalte $dir/ ($branch)"
+              kept=$((kept+1)); continue
+            fi
+            # Branchnamen mit Schrägstrich: ein verwaister Vorfahr darf keine
+            # aktive Unter-Vorschau mitreißen (feature/x gelöscht, feature/x/y aktiv).
+            descendant_active=false
+            while IFS= read -r m2; do
+              [ -n "$m2" ] || continue
+              [ "$m2" = "$marker" ] && continue
+              case "$m2" in "$dir"/*) ;; *) continue ;; esac
+              [ -f "$m2" ] || continue
+              if is_active "$(tr -d '\r\n' < "$m2")"; then descendant_active=true; break; fi
+            done <<< "$markers"
+            if [ "$descendant_active" = true ]; then
+              echo "::warning::Behalte verwaisten Vorfahren $dir/ ($branch) — enthält aktive Vorschau."
+              kept=$((kept+1)); continue
+            fi
+            stale=$((stale+1))
+            if [ "$DRY_RUN" = "true" ]; then
+              echo "[dry run] Würde entfernen: $dir/ ($branch)"
+            else
+              echo "Entferne $dir/ ($branch)"
+              rm -rf -- "$dir"
+            fi
+          done <<< "$markers"
+
+          if [ "$DRY_RUN" != "true" ]; then
+            git add -A branches
+            if ! git diff --cached --quiet; then
+              git config user.name "github-actions[bot]"
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git commit -m "chore: $stale verwaiste Vorschau(en) entfernt"
+              git push origin gh-pages
+            fi
+          fi
+
+          {
+            echo "### Aufräumen der Branch-Vorschauen"
+            echo
+            echo "- Dry run: $DRY_RUN"
+            echo "- Behalten: $kept"
+            echo "- Verwaist: $stale"
+          } >> "$GITHUB_STEP_SUMMARY"
