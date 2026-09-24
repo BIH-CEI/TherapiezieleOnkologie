@@ -110,10 +110,57 @@ jobs:
           sed -i "s/^version: .*/version: $VERSION/" sushi-config.yaml
           grep '^version:' sushi-config.yaml
 
+      # Wie im Publish-Workflow: ohne den Proxy läuft der Publisher gegen
+      # tx.fhir.org und der veröffentlichte Snapshot trüge ICD-10-GM-Fehler.
+      - name: Setup TX Proxy (MII Ontoserver)
+        id: txproxy
+        env:
+          MII_TERMSERV_CERT: ${{ secrets.MII_TERMSERV_CERT }}
+          MII_TERMSERV_PW: ${{ secrets.MII_TERMSERV_PW }}
+        run: |
+          if [ -z "$MII_TERMSERV_CERT" ]; then
+            echo "::warning::Kein MII-TermServ-Zertifikat — Release-Build gegen tx.fhir.org."
+            echo "tx=http://tx.fhir.org" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          mkdir -p nginx/certs
+          curl -sSL -o nginx/nginx.conf \
+            https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-meta/refs/heads/master/.github/workflows/nginx.conf
+          echo "$MII_TERMSERV_CERT" | base64 -d > nginx/certs/client.p12
+          openssl pkcs12 -in nginx/certs/client.p12 -clcerts -nokeys \
+            -out nginx/certs/client-cert.pem -passin pass:$MII_TERMSERV_PW
+          openssl pkcs12 -in nginx/certs/client.p12 -nocerts \
+            -out nginx/certs/client-key-encrypted.key \
+            -passin pass:$MII_TERMSERV_PW -passout pass:$MII_TERMSERV_PW
+          openssl rsa -in nginx/certs/client-key-encrypted.key \
+            -out nginx/certs/client-key.key -passin pass:$MII_TERMSERV_PW
+          docker run -d --name nginx-proxy-release \
+            -v $PWD/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+            -v $PWD/nginx/certs:/etc/nginx/certs:ro \
+            -p 8090:80 nginx:alpine
+          sleep 5
+          for i in {1..5}; do
+            if curl --silent --fail http://localhost:8090/fhir/metadata > /dev/null; then
+              echo "NGINX TX proxy is ready."
+              echo "tx=http://localhost:8090/fhir" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Waiting for NGINX... attempt $i"
+            sleep 2
+          done
+          echo "::warning::Proxy nicht erreichbar — Fallback auf tx.fhir.org."
+          echo "tx=http://tx.fhir.org" >> "$GITHUB_OUTPUT"
+
       - name: Build IG
         run: |
           chmod +x _build.sh
-          ./_build.sh build
+          ./_build.sh build \
+            -tx ${{ steps.txproxy.outputs.tx }} \
+            -fhir-settings "${GITHUB_WORKSPACE}/.github/fhir-settings.json"
+
+      - name: Stop TX Proxy
+        if: always()
+        run: docker rm --force nginx-proxy-release > /dev/null 2>&1 || true
 
       - name: Deploy Release to GitHub Pages
         run: |
@@ -130,6 +177,10 @@ jobs:
             git checkout --orphan gh-pages
             git rm -rf . 2>/dev/null || true
           fi
+          # Wie im Publish-Workflow: Pages soll die IG-Ausgabe unverändert
+          # ausliefern, nicht noch einmal durch Jekyll schicken.
+          touch .nojekyll
+          git add .nojekyll
           # Statischer, versionierter Snapshot — bestehende Releases bleiben unangetastet
           if [ -d "$VERSION" ]; then
             echo "WARNUNG: Version $VERSION existiert bereits und wird ersetzt"
