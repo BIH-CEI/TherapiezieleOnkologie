@@ -11,6 +11,12 @@ Tumorboardspezifische Ergänzung:
 * insert Translation(^title, en, Tumor board service request)
 * insert Translation(^description, en, Structured tumor board recommendation based on ServiceRequest. The category must contain the LOINC code Tumor board Consult note 85232-7 to mark it as a tumor board recommendation.)
 
+// Kontext: zusätzlicher Kontext neben der Therapieintention (optional, wiederholbar)
+* extension contains OnkoServiceRequestKontextExt named kontext 0..* MS
+* insert Label(extension[kontext], Kontext, Dieses Feld soll dazu dienen\, neben der Therapieintention einzelnen Behandlungsschritten weiteren Kontext zu geben.)
+* insert Translation(extension[kontext] ^short, en, Context)
+* insert Translation(extension[kontext] ^definition, en, This field is intended to give individual treatment steps further context beyond the therapy intent.)
+
 // Status und Absicht des Requests
 * status MS
 * insert Label(status, Status, Status des Requests – z. B. active\, completed\, cancelled.)
