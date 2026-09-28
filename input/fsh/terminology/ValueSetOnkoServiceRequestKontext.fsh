@@ -4,7 +4,7 @@ Title: "Kontext einer Tumorboard-Empfehlung (VS)"
 Description: """
 Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine
 Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv
-oder im Notfall erfolgt. Gebunden an die Extension `onko-service-request-kontext`.
+oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.
 """
 * ^url = "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-service-request-kontext"
 * ^status = #draft
