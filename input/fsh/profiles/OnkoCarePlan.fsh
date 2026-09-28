@@ -73,6 +73,7 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
 * insert Label(category[erkrankungsart], Erkrankungsart, Kodierte Tumorerkrankung nach ICD-10-GM\, die dieser Versorgungsplan adressiert – identisch zum Diagnosecode der referenzierten Condition.)
 * insert Translation(category[erkrankungsart] ^short, en, Disease type)
 * insert Translation(category[erkrankungsart] ^definition, en, Coded tumor disease per ICD-10-GM addressed by this care plan – identical to the diagnosis code of the referenced condition.)
+* category[therapieabschnitt].coding.system = "http://snomed.info/sct"
 * category[therapieabschnitt] from OnkoCarePlanPhaseVS (example)
 * insert Label(category[therapieabschnitt], Therapieabschnitt, Diagnostischer oder therapeutischer Abschnitt der Versorgung – SNOMED CT Diagnostic intent 261004008 bzw. Therapeutic intent 262202000.)
 * insert Translation(category[therapieabschnitt] ^short, en, Care plan phase)
