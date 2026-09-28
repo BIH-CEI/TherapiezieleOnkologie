@@ -5,9 +5,9 @@
  
 Logical model of the three core concepts and their relations: care episode – who treats; therapy goal – what is to be achieved; care plan – which measures are planned. The goal precedes the plan; the plan tracks the goal and is assigned to its episode. Goal and episode are linked only implicitly via the plan. 
 
-Die drei Kernkonzepte des Leitfadens bilden ein **Dreieck**: die **Behandlungsepisode** (**wer** behandelt, in welchem Rahmen), das **Therapieziel** (**was** erreicht werden soll) und der **Versorgungsplan** (**welche Maßnahmen** geplant sind). Der Plan verfolgt das Ziel (`CarePlan.goal`) und gehört zu seiner Episode (Extension `workflow-episodeOfCare`); Ziel und Episode sind **nur implizit über den Plan** verknüpft.
+The three core concepts of this guide form a **triangle**: the **care episode** (**who** treats, in which setting), the **therapy goal** (**what** is to be achieved) and the **care plan** (**which measures** are planned). The plan pursues the goal (`CarePlan.goal`) and belongs to its episode (extension `workflow-episodeOfCare`); goal and episode are linked **only implicitly through the plan**.
 
-Das folgende logische Modell formuliert diese Konzepte ressourcenneutral; die Abbildung auf FHIR R4 bzw. die Profile dieses Leitfadens ([OnkoTherapyGoal](StructureDefinition-onko-therapy-goal.md), [OnkoCarePlan](StructureDefinition-onko-care-plan.md), [Behandlungsepisode](behandlungsepisode.md)) steht im Reiter „Mappings“.
+The logical model below states these concepts independently of any resource; the mapping onto FHIR R4 and onto the profiles of this guide ([OnkoTherapyGoal](StructureDefinition-onko-therapy-goal.md), [OnkoCarePlan](StructureDefinition-onko-care-plan.md), [care episode](behandlungsepisode.md)) is given in the “Mappings” tab.
 
 **Usages:**
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-TherapiezielDreie
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T10:16:57+00:00",
+  "date" : "2026-09-28T10:26:56+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

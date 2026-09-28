@@ -332,16 +332,15 @@ Therapieziel-Dreieck (logisches Modell)
 
 <div style="display:inline-block" markdown="1">
 
-<p>Die drei Kernkonzepte des Leitfadens bilden ein <strong>Dreieck</strong>: die
-<strong>Behandlungsepisode</strong> (<em>wer</em> behandelt, in welchem Rahmen), das <strong>Therapieziel</strong>
-(<em>was</em> erreicht werden soll) und der <strong>Versorgungsplan</strong> (<em>welche Maßnahmen</em>
-geplant sind). Der Plan verfolgt das Ziel (<code class="language-plaintext highlighter-rouge">CarePlan.goal</code>) und gehört zu seiner
-Episode (Extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code>); Ziel und Episode sind <strong>nur
-implizit über den Plan</strong> verknüpft.</p>
+<p>The three core concepts of this guide form a <strong>triangle</strong>: the <strong>care episode</strong>
+(<em>who</em> treats, in which setting), the <strong>therapy goal</strong> (<em>what</em> is to be achieved)
+and the <strong>care plan</strong> (<em>which measures</em> are planned). The plan pursues the goal
+(<code class="language-plaintext highlighter-rouge">CarePlan.goal</code>) and belongs to its episode (extension <code class="language-plaintext highlighter-rouge">workflow-episodeOfCare</code>);
+goal and episode are linked <strong>only implicitly through the plan</strong>.</p>
 
 <svg width="100%" viewBox="0 0 680 570" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
-<title>Therapieziel-Dreieck: Behandlungsepisode, Therapieziel und Versorgungsplan</title>
-<desc>Dreieck der drei Kernressourcen: oben das Therapieziel (Goal, was soll erreicht werden), unten links die Behandlungsepisode (EpisodeOfCare, wer behandelt in welchem Rahmen), unten rechts der Versorgungsplan (CarePlan, was sind die geplanten Massnahmen). Der Plan verfolgt das Ziel (CarePlan.goal) und ist der Episode zugeordnet (Extension workflow-episodeOfCare); Ziel und Episode sind nur implizit ueber den Plan verknuepft. In der Mitte die Patientin als gemeinsames subject.</desc>
+<title>Therapy goal triangle: care episode, therapy goal and care plan</title>
+<desc>Triangle of the three core resources: at the top the therapy goal (Goal, what is to be achieved), bottom left the care episode (EpisodeOfCare, who treats and in which setting), bottom right the care plan (CarePlan, which measures are planned). The plan pursues the goal (CarePlan.goal) and belongs to the episode (extension workflow-episodeOfCare); goal and episode are linked only implicitly through the plan. At the centre the patient as the shared subject.</desc>
 <defs>
 <marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7" /></marker>
 <marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A" /></marker>
@@ -349,70 +348,70 @@ implizit über den Plan</strong> verknüpft.</p>
 
 <line x1="524" y1="328" x2="416" y2="142" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
 <text x="496" y="230" font-size="11" fill="#534AB7">goal</text>
-<text x="496" y="244" font-size="10.5" fill="#5F5E5A">verfolgt das Ziel</text>
+<text x="496" y="244" font-size="10.5" fill="#5F5E5A">pursues the goal</text>
 
 <line x1="408" y1="410" x2="274" y2="410" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" />
 <text x="340" y="399" text-anchor="middle" font-size="9.5" fill="#534AB7">workflow-episodeOfCare</text>
-<text x="340" y="425" text-anchor="middle" font-size="10" fill="#5F5E5A">gehört zur Episode</text>
+<text x="340" y="425" text-anchor="middle" font-size="10" fill="#5F5E5A">belongs to the episode</text>
 
 <line x1="150" y1="328" x2="264" y2="142" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" />
-<text x="40" y="230" font-size="10.5" fill="#5F5E5A">keine direkte Referenz —</text>
-<text x="40" y="244" font-size="10.5" fill="#5F5E5A">implizit über den Plan</text>
+<text x="40" y="230" font-size="10.5" fill="#5F5E5A">no direct reference —</text>
+<text x="40" y="244" font-size="10.5" fill="#5F5E5A">implicit via the plan</text>
 
 <circle cx="340" cy="255" r="36" fill="#F1EFE8" stroke="#5F5E5A" />
-<text x="340" y="251" text-anchor="middle" font-size="11.5" font-weight="500" fill="#2C2C2A">Patientin</text>
+<text x="340" y="251" text-anchor="middle" font-size="11.5" font-weight="500" fill="#2C2C2A">Patient</text>
 <text x="340" y="266" text-anchor="middle" font-size="10" fill="#5F5E5A">subject</text>
 <line x1="340" y1="218" x2="340" y2="140" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4" />
 <line x1="312" y1="278" x2="230" y2="330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4" />
 <line x1="368" y1="278" x2="450" y2="330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4" />
 
 <g><rect x="205" y="16" width="270" height="122" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4" />
-<text x="352" y="38" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Therapieziel</text>
-<text x="352" y="54" text-anchor="middle" font-size="10.5" fill="#0F6E56">Goal — was soll erreicht werden?</text>
+<text x="352" y="38" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Therapy goal</text>
+<text x="352" y="54" text-anchor="middle" font-size="10.5" fill="#0F6E56">Goal — what is to be achieved?</text>
 <circle cx="248" cy="96" r="18" fill="none" stroke="#0F6E56" stroke-width="1.4" />
 <circle cx="248" cy="96" r="11" fill="none" stroke="#0F6E56" stroke-width="1.2" />
 <circle cx="248" cy="96" r="4" fill="#0F6E56" />
-<text x="282" y="78" font-size="10.5" fill="#04342C">Zielart: Heilung · Symptomkontrolle · …</text>
-<text x="282" y="94" font-size="10.5" fill="#04342C">Zielwert: Größe · Wert · Frist (target)</text>
-<text x="282" y="110" font-size="10.5" fill="#04342C">Erreichungsgrad (achievementStatus)</text>
-<text x="282" y="126" font-size="10.5" fill="#04342C">Ergebnis (outcomeReference)</text></g>
+<text x="282" y="78" font-size="10.5" fill="#04342C">Goal type: cure · symptom control · …</text>
+<text x="282" y="94" font-size="10.5" fill="#04342C">Measure · value · due date (target)</text>
+<text x="282" y="110" font-size="10.5" fill="#04342C">Achievement (achievementStatus)</text>
+<text x="282" y="126" font-size="10.5" fill="#04342C">Outcome (outcomeReference)</text></g>
 
 <g><rect x="16" y="330" width="254" height="160" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.4" />
-<text x="143" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Behandlungsepisode</text>
-<text x="143" y="368" text-anchor="middle" font-size="10.5" fill="#5F5E5A">EpisodeOfCare — wer behandelt?</text>
+<text x="143" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Care episode</text>
+<text x="143" y="368" text-anchor="middle" font-size="10.5" fill="#5F5E5A">EpisodeOfCare — who treats?</text>
 <line x1="36" y1="394" x2="250" y2="394" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)" />
 <rect x="60" y="387" width="120" height="14" rx="4" fill="#EEEDFE" stroke="#534AB7" stroke-width="1" />
-<text x="120" y="398" text-anchor="middle" font-size="9.5" fill="#26215C">period (Zeitraum)</text>
-<text x="36" y="424" font-size="10.5" fill="#2C2C2A">Art: Therapielinie · Diagnostiklinie · …</text>
-<text x="36" y="440" font-size="10.5" fill="#2C2C2A">Intention: kurativ · palliativ · … (Ext.)</text>
-<text x="36" y="456" font-size="10.5" fill="#2C2C2A">Team / Organisation</text>
-<text x="36" y="476" font-size="10" fill="#5F5E5A">der Rahmen, in dem behandelt wird</text></g>
+<text x="120" y="398" text-anchor="middle" font-size="9.5" fill="#26215C">period (time span)</text>
+<text x="36" y="424" font-size="10.5" fill="#2C2C2A">Type: line of therapy · diagnostics · …</text>
+<text x="36" y="440" font-size="10.5" fill="#2C2C2A">Intent: curative · palliative · … (ext.)</text>
+<text x="36" y="456" font-size="10.5" fill="#2C2C2A">Team / organisation</text>
+<text x="36" y="476" font-size="10" fill="#5F5E5A">the setting in which care is given</text></g>
 
 <g><rect x="410" y="330" width="254" height="160" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4" />
-<text x="537" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Versorgungsplan</text>
-<text x="537" y="368" text-anchor="middle" font-size="10.5" fill="#534AB7">CarePlan — was ist geplant?</text>
+<text x="537" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Care plan</text>
+<text x="537" y="368" text-anchor="middle" font-size="10.5" fill="#534AB7">CarePlan — what is planned?</text>
 <rect x="430" y="382" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2" /><path d="M432,388 L435,391 L440,384" fill="none" stroke="#534AB7" stroke-width="1.4" />
-<text x="448" y="392" font-size="10.5" fill="#26215C">ServiceRequest — OP · Radiatio · …</text>
+<text x="448" y="392" font-size="10.5" fill="#26215C">ServiceRequest — surgery · radiation · …</text>
 <rect x="430" y="402" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2" /><path d="M432,408 L435,411 L440,404" fill="none" stroke="#534AB7" stroke-width="1.4" />
-<text x="448" y="412" font-size="10.5" fill="#26215C">MedicationRequest — Systemtherapie</text>
+<text x="448" y="412" font-size="10.5" fill="#26215C">MedicationRequest — systemic therapy</text>
 <rect x="430" y="422" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2" />
 <text x="448" y="432" font-size="10.5" fill="#26215C">… (activity.reference)</text>
-<text x="430" y="456" font-size="10.5" fill="#2C2C2A">Empfehlung (Tumorboard) → Behandlung</text>
-<text x="430" y="472" font-size="10" fill="#5F5E5A">basedOn: Plan erfüllt Empfehlung</text></g>
+<text x="430" y="456" font-size="10.5" fill="#2C2C2A">Recommendation (tumour board) → care</text>
+<text x="430" y="472" font-size="10" fill="#5F5E5A">basedOn: plan fulfils the recommendation</text></g>
 
-<rect x="20" y="518" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="39" y="529" font-size="11.5" fill="#5F5E5A">Ziel</text>
+<rect x="20" y="518" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56" /><text x="39" y="529" font-size="11.5" fill="#5F5E5A">Goal</text>
 <rect x="80" y="518" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7" /><text x="99" y="529" font-size="11.5" fill="#5F5E5A">Plan</text>
-<rect x="145" y="518" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="164" y="529" font-size="11.5" fill="#5F5E5A">Episode / Akteur</text>
-<line x1="290" y1="524" x2="320" y2="524" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" /><text x="326" y="529" font-size="11.5" fill="#5F5E5A">Referenz</text>
-<line x1="405" y1="524" x2="435" y2="524" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" /><text x="441" y="529" font-size="11.5" fill="#5F5E5A">implizite Beziehung / Patientenbezug</text>
-<text x="20" y="554" font-size="10.5" fill="#5F5E5A">Das Ziel geht dem Plan voraus: erst Ziel (Shared Decision / Tumorboard), dann Plan — CarePlan.goal ist Verfolgung, kein Besitz.</text>
+<rect x="145" y="518" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A" /><text x="164" y="529" font-size="11.5" fill="#5F5E5A">Episode / actor</text>
+<line x1="290" y1="524" x2="320" y2="524" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)" /><text x="326" y="529" font-size="11.5" fill="#5F5E5A">Reference</text>
+<line x1="405" y1="524" x2="435" y2="524" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4" /><text x="441" y="529" font-size="11.5" fill="#5F5E5A">implicit relation / patient link</text>
+<text x="20" y="554" font-size="10.5" fill="#5F5E5A">The goal precedes the plan: goal first (shared decision / tumour board), then plan — CarePlan.goal is pursuit, not ownership.</text>
 </svg>
 
-<p>Das folgende logische Modell formuliert diese Konzepte ressourcenneutral; die
-Abbildung auf FHIR R4 bzw. die Profile dieses Leitfadens
+<p>The logical model below states these concepts independently of any resource; the
+mapping onto FHIR R4 and onto the profiles of this guide
 (<a href="StructureDefinition-onko-therapy-goal.html">OnkoTherapyGoal</a>,
 <a href="StructureDefinition-onko-care-plan.html">OnkoCarePlan</a>,
-<a href="behandlungsepisode.html">Behandlungsepisode</a>) steht im Reiter „Mappings“.</p>
+<a href="behandlungsepisode.html">care episode</a>) is given in the “Mappings” tab.</p>
 
 
 </div>
@@ -667,7 +666,7 @@ es **keine direkte Referenz** — die Zuordnung ergibt sich implizit über den P
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>()</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Anforderung</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 211b6114-d940-4a7e-acfb-08830dfe030d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a444a771-60f5-46f0-9c74-6b9283e71762
 document.getElementById('cbTherapiezielDreieckD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('TherapiezielDreieckD'), 'binding', document.getElementById('cbTherapiezielDreieckD-binding').checked, document.getElementById('ppTherapiezielDreieckD'));
 document.getElementById('cbTherapiezielDreieckD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -992,7 +991,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>()</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Anforderung</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 211b6114-d940-4a7e-acfb-08830dfe030d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a444a771-60f5-46f0-9c74-6b9283e71762
 document.getElementById('cbTherapiezielDreieckS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('TherapiezielDreieckS'), 'binding', document.getElementById('cbTherapiezielDreieckS-binding').checked, document.getElementById('ppTherapiezielDreieckS'));
 document.getElementById('cbTherapiezielDreieckS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1362,7 +1361,7 @@ es **keine direkte Referenz** — die Zuordnung ergibt sich implizit über den P
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>()</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Anforderung</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 211b6114-d940-4a7e-acfb-08830dfe030d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a444a771-60f5-46f0-9c74-6b9283e71762
 document.getElementById('cbTherapiezielDreieckDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('TherapiezielDreieckDA'), 'binding', document.getElementById('cbTherapiezielDreieckDA-binding').checked, document.getElementById('ppTherapiezielDreieckDA'));
 document.getElementById('cbTherapiezielDreieckDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1684,7 +1683,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>()</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Anforderung</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 211b6114-d940-4a7e-acfb-08830dfe030d
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // a444a771-60f5-46f0-9c74-6b9283e71762
 document.getElementById('cbTherapiezielDreieckSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('TherapiezielDreieckSA'), 'binding', document.getElementById('cbTherapiezielDreieckSA-binding').checked, document.getElementById('ppTherapiezielDreieckSA'));
 document.getElementById('cbTherapiezielDreieckSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1881,7 +1880,7 @@ Summary
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-28 10:16:00 +0000">
+  <span title="2026-09-28 10:26:00 +0000">
     2026-09-28
   </span>
 

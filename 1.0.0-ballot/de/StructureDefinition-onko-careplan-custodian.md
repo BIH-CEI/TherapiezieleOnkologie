@@ -90,7 +90,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-carepla
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T10:16:57+00:00",
+  "date" : "2026-09-28T10:26:56+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
