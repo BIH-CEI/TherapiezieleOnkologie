@@ -95,8 +95,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.232"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-code",
@@ -180,8 +180,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.279"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
-    "ValueSet-onko-goal-start-event.html" : "Onkologisches Zielbeginn-Ereignis (VS)"
+    "ValueSet-onko-goal-start-event.html" : "Onkologisches Zielbeginn-Ereignis (VS)",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/goal-status",
@@ -209,11 +209,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
+    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
@@ -368,8 +368,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
@@ -411,8 +411,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/request-status",
@@ -426,8 +426,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.111"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/servicerequest-category",
@@ -593,8 +593,8 @@
     "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"],
     "uses" : {
     },
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",

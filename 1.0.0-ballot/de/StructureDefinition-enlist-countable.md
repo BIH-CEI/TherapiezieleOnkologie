@@ -86,7 +86,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-count
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T12:11:39+00:00",
+  "date" : "2026-09-28T20:57:11+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

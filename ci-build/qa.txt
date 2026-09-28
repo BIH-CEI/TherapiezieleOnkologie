@@ -3,7 +3,7 @@ TherapiezieleOnkologie : Validation Results
 
 err = 17, warn = 169, info = 504
 IG Publisher Version: 2.3.4
-Generated Mon Sep 28 12:13:54 UTC 2026. FHIR version 4.0.1 for de.bih-cei.therapieziele-onkologie#1.0.0-ballot (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
+Generated Mon Sep 28 20:59:20 UTC 2026. FHIR version 4.0.1 for de.bih-cei.therapieziele-onkologie#1.0.0-ballot (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
  Build Errors : 0 / 6 / 0
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Bundle-BundleCRCPalliativ : 0 / 7 / 45
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Bundle-BundleMammaNeoadjuvant : 0 / 20 / 64
