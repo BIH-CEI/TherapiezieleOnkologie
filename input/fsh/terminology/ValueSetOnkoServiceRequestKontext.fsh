@@ -7,7 +7,7 @@ Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraop
 oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.
 """
 * ^url = "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-service-request-kontext"
-* ^status = #draft
+* ^status = #active
 * ^experimental = true
 * http://snomed.info/sct#255470001 "Local (qualifier value)"
 * http://snomed.info/sct#264931009 "Symptomatic (qualifier value)"

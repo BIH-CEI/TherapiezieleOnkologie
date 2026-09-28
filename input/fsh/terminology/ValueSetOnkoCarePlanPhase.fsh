@@ -7,7 +7,7 @@ onkologischen Versorgung abbildet. Gebunden an `category` (Slice `therapieabschn
 die vormalige Unterscheidung über zwei separate Profile (`OnkoCarePlan` / `DiagnosticCarePlan`).
 """
 * ^url = "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-care-plan-phase"
-* ^status = #draft
+* ^status = #active
 * ^experimental = true
 * http://snomed.info/sct#261004008 "Diagnostic intent (qualifier value)"
 * http://snomed.info/sct#262202000 "Therapeutic intent (qualifier value)"

@@ -3,7 +3,7 @@ Id: onko-therapy-goal-type
 Title: "Onkologische Therapieziel-Art"
 Description: "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015)."
 * ^url = "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"
-* ^status = #draft
+* ^status = #active
 * ^experimental = true
 * ^caseSensitive = true
 * ^content = #complete

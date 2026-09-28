@@ -9,7 +9,7 @@ Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlu
 `Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code
 `Ambulatory chemotherapy` (315601005).
 """
-* ^status = #draft
+* ^status = #active
 * ^experimental = true
 * http://snomed.info/sct#385786002 "Chemotherapy care"
 * http://snomed.info/sct#315601005 "Ambulatory chemotherapy"

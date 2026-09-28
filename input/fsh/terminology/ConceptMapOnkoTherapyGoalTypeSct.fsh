@@ -21,7 +21,7 @@ Title: "Zielarten → SNOMED CT (Zielzustände)"
 Description: "Semantische Annotation der onkologischen Zielarten (`OnkoTherapyGoalType`) mit SNOMED-CT-Konzepten des jeweils angestrebten Zielzustands. Die Beziehungsqualität (`equivalence`) dokumentiert ehrlich, wo SNOMED nur verwandte Konzepte (Messgröße, Regime) oder gar kein Konzept anbietet."
 Usage: #definition
 
-* status = #draft
+* status = #active
 * experimental = true
 * sourceCanonical = "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type"
 * targetCanonical = "http://snomed.info/sct?fhir_vs"

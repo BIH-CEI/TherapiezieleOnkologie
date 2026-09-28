@@ -10,7 +10,7 @@ Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden (z. B.
 Konsolidierung ergänzbar).
 """
 * ^url = "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase"
-* ^status = #draft
+* ^status = #active
 * ^experimental = true
 // Reihenfolge entspricht der typischen Behandlungssequenz
 * http://snomed.info/sct#450827009 "Induction chemotherapy"
