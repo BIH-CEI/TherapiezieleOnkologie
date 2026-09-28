@@ -1,0 +1,68 @@
+<svg width="100%" viewBox="0 0 680 570" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Therapy goal triangle: care episode, therapy goal and care plan</title>
+<desc>Triangle of the three core resources: at the top the therapy goal (Goal, what is to be achieved), bottom left the care episode (EpisodeOfCare, who treats and in which setting), bottom right the care plan (CarePlan, which measures are planned). The plan pursues the goal (CarePlan.goal) and belongs to the episode (extension workflow-episodeOfCare); goal and episode are linked only implicitly through the plan. At the centre the patient as the shared subject.</desc>
+<defs>
+<marker id="arp" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#534AB7"/></marker>
+<marker id="argr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A"/></marker>
+</defs>
+
+<line x1="524" y1="328" x2="416" y2="142" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<text x="496" y="230" font-size="11" fill="#534AB7">goal</text>
+<text x="496" y="244" font-size="10.5" fill="#5F5E5A">pursues the goal</text>
+
+<line x1="408" y1="410" x2="274" y2="410" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/>
+<text x="340" y="399" text-anchor="middle" font-size="9.5" fill="#534AB7">workflow-episodeOfCare</text>
+<text x="340" y="425" text-anchor="middle" font-size="10" fill="#5F5E5A">belongs to the episode</text>
+
+<line x1="150" y1="328" x2="264" y2="142" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4"/>
+<text x="40" y="230" font-size="10.5" fill="#5F5E5A">no direct reference —</text>
+<text x="40" y="244" font-size="10.5" fill="#5F5E5A">implicit via the plan</text>
+
+<circle cx="340" cy="255" r="36" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="340" y="251" text-anchor="middle" font-size="11.5" font-weight="500" fill="#2C2C2A">Patient</text>
+<text x="340" y="266" text-anchor="middle" font-size="10" fill="#5F5E5A">subject</text>
+<line x1="340" y1="218" x2="340" y2="140" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4"/>
+<line x1="312" y1="278" x2="230" y2="330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4"/>
+<line x1="368" y1="278" x2="450" y2="330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4,4"/>
+
+<g><rect x="205" y="16" width="270" height="122" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4"/>
+<text x="352" y="38" text-anchor="middle" font-size="13.5" font-weight="500" fill="#04342C">Therapy goal</text>
+<text x="352" y="54" text-anchor="middle" font-size="10.5" fill="#0F6E56">Goal — what is to be achieved?</text>
+<circle cx="248" cy="96" r="18" fill="none" stroke="#0F6E56" stroke-width="1.4"/>
+<circle cx="248" cy="96" r="11" fill="none" stroke="#0F6E56" stroke-width="1.2"/>
+<circle cx="248" cy="96" r="4" fill="#0F6E56"/>
+<text x="282" y="78" font-size="10.5" fill="#04342C">Goal type: cure · symptom control · …</text>
+<text x="282" y="94" font-size="10.5" fill="#04342C">Measure · value · due date (target)</text>
+<text x="282" y="110" font-size="10.5" fill="#04342C">Achievement (achievementStatus)</text>
+<text x="282" y="126" font-size="10.5" fill="#04342C">Outcome (outcomeReference)</text></g>
+
+<g><rect x="16" y="330" width="254" height="160" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.4"/>
+<text x="143" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#2C2C2A">Care episode</text>
+<text x="143" y="368" text-anchor="middle" font-size="10.5" fill="#5F5E5A">EpisodeOfCare — who treats?</text>
+<line x1="36" y1="394" x2="250" y2="394" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)"/>
+<rect x="60" y="387" width="120" height="14" rx="4" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="120" y="398" text-anchor="middle" font-size="9.5" fill="#26215C">period (time span)</text>
+<text x="36" y="424" font-size="10.5" fill="#2C2C2A">Type: line of therapy · diagnostics · …</text>
+<text x="36" y="440" font-size="10.5" fill="#2C2C2A">Intent: curative · palliative · … (ext.)</text>
+<text x="36" y="456" font-size="10.5" fill="#2C2C2A">Team / organisation</text>
+<text x="36" y="476" font-size="10" fill="#5F5E5A">the setting in which care is given</text></g>
+
+<g><rect x="410" y="330" width="254" height="160" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4"/>
+<text x="537" y="352" text-anchor="middle" font-size="13.5" font-weight="500" fill="#26215C">Care plan</text>
+<text x="537" y="368" text-anchor="middle" font-size="10.5" fill="#534AB7">CarePlan — what is planned?</text>
+<rect x="430" y="382" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2"/><path d="M432,388 L435,391 L440,384" fill="none" stroke="#534AB7" stroke-width="1.4"/>
+<text x="448" y="392" font-size="10.5" fill="#26215C">ServiceRequest — surgery · radiation · …</text>
+<rect x="430" y="402" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2"/><path d="M432,408 L435,411 L440,404" fill="none" stroke="#534AB7" stroke-width="1.4"/>
+<text x="448" y="412" font-size="10.5" fill="#26215C">MedicationRequest — systemic therapy</text>
+<rect x="430" y="422" width="11" height="11" rx="2" fill="none" stroke="#534AB7" stroke-width="1.2"/>
+<text x="448" y="432" font-size="10.5" fill="#26215C">… (activity.reference)</text>
+<text x="430" y="456" font-size="10.5" fill="#2C2C2A">Recommendation (tumour board) → care</text>
+<text x="430" y="472" font-size="10" fill="#5F5E5A">basedOn: plan fulfils the recommendation</text></g>
+
+<rect x="20" y="518" width="13" height="13" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="39" y="529" font-size="11.5" fill="#5F5E5A">Goal</text>
+<rect x="80" y="518" width="13" height="13" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="99" y="529" font-size="11.5" fill="#5F5E5A">Plan</text>
+<rect x="145" y="518" width="13" height="13" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="164" y="529" font-size="11.5" fill="#5F5E5A">Episode / actor</text>
+<line x1="290" y1="524" x2="320" y2="524" stroke="#534AB7" stroke-width="1.6" marker-end="url(#arp)"/><text x="326" y="529" font-size="11.5" fill="#5F5E5A">Reference</text>
+<line x1="405" y1="524" x2="435" y2="524" stroke="#5F5E5A" stroke-width="1.4" stroke-dasharray="5,4"/><text x="441" y="529" font-size="11.5" fill="#5F5E5A">implicit relation / patient link</text>
+<text x="20" y="554" font-size="10.5" fill="#5F5E5A">The goal precedes the plan: goal first (shared decision / tumour board), then plan — CarePlan.goal is pursuit, not ownership.</text>
+</svg>
