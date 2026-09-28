@@ -15,3 +15,4 @@ oder Operation. Example-Bindung – die Codes dienen als Anregung, sind aber nic
 * http://snomed.info/sct#262502001 "Post-chemotherapy (qualifier value)"
 * http://snomed.info/sct#262061000 "Postoperative period (qualifier value)"
 * http://snomed.info/sct#406151001 "Post-discharge follow-up (finding)"
+* http://snomed.info/sct#183665006 "Discharged from hospital (finding)"
