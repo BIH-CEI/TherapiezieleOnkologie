@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-08-03T05:20:25+00:00"/>
+  <date value="2026-09-28T10:16:57+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -38,7 +38,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.3.0"/>
+    <version value="7.4.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -117,7 +117,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueString value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="template/liquid"/>
@@ -125,7 +125,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueString value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="input/liquid"/>
@@ -368,7 +368,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="path-liquid"/>
+        <valueCode value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="template/liquid"/>
@@ -376,7 +376,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="path-liquid"/>
+        <valueCode value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="input/liquid"/>

@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
     }]
   },
   "status" : "draft",
-  "date" : "2026-08-03T05:20:25+00:00",
+  "date" : "2026-09-28T10:16:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

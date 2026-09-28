@@ -14,7 +14,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-08-03T05:20:25+00:00",
+  "date" : "2026-09-28T10:16:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -42,7 +42,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.3.0"
+    "version" : "7.4.0"
   },
   {
     "id" : "hl7ext",
@@ -147,7 +147,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -158,7 +158,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -492,7 +492,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -503,7 +503,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",

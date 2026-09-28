@@ -7,7 +7,7 @@ Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counte
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [EnlistCountableVS](ValueSet-enlist-countable.md)
+* [EnLiST-Zählstatus (ValueSet)](ValueSet-enlist-countable.md)
 
 -------
 
@@ -39,7 +39,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }]
   },
   "status" : "draft",
-  "date" : "2026-08-03T05:20:25+00:00",
+  "date" : "2026-09-28T10:16:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

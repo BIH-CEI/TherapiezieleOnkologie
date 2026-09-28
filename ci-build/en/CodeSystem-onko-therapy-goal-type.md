@@ -7,7 +7,7 @@ Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung,
 
 This Code system is referenced in the definition of the following value sets:
 
-* [OnkoTherapyGoalTypeVS](ValueSet-onko-therapy-goal-type.md)
+* [Onkologische Therapieziel-Art (VS)](ValueSet-onko-therapy-goal-type.md)
 
 -------
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "Onkologische Therapieziel-Art",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-03T05:20:25+00:00",
+  "date" : "2026-09-28T10:16:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

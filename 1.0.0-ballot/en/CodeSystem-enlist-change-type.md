@@ -7,7 +7,7 @@ The three change types of the EnLiST counting logic: new LoT — X plus one, onl
 
 This Code system is referenced in the definition of the following value sets:
 
-* [EnlistChangeTypeVS](ValueSet-enlist-change-type.md)
+* [EnLiST change types value set](ValueSet-enlist-change-type.md)
 
 -------
 
@@ -39,7 +39,7 @@ This Code system is referenced in the definition of the following value sets:
     }]
   },
   "status" : "draft",
-  "date" : "2026-08-03T05:20:25+00:00",
+  "date" : "2026-09-28T10:16:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

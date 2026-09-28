@@ -7,7 +7,7 @@ The three separately counted setting axes of the EnLiST notation: eLoT early, aL
 
 This Code system is referenced in the definition of the following value sets:
 
-* [EnlistLotSettingVS](ValueSet-enlist-lot-setting.md)
+* [EnLiST setting axes value set](ValueSet-enlist-lot-setting.md)
 
 -------
 
@@ -39,7 +39,7 @@ This Code system is referenced in the definition of the following value sets:
     }]
   },
   "status" : "draft",
-  "date" : "2026-08-03T05:20:25+00:00",
+  "date" : "2026-09-28T10:16:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

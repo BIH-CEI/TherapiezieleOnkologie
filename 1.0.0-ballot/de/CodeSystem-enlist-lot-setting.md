@@ -7,7 +7,7 @@ Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), a
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [EnlistLotSettingVS](ValueSet-enlist-lot-setting.md)
+* [EnLiST-Setting-Achsen (ValueSet)](ValueSet-enlist-lot-setting.md)
 
 -------
 
@@ -39,7 +39,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }]
   },
   "status" : "draft",
-  "date" : "2026-08-03T05:20:25+00:00",
+  "date" : "2026-09-28T10:16:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

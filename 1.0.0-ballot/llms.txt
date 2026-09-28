@@ -3,21 +3,21 @@
 ## Pages
 
 * [Startseite](de/index.md)
-* [Hinweise zur Übersetzung](de/translationinfo.md)
-* [Analysebericht (LG-01)](de/analysebericht.md)
-* [Anwendungsbeispiel (Mammakarzinom neoadjuvant)](de/szenario-mamma.md)
-* [Weitere Entität – Rheumatoide Arthritis](de/entitaet-rheuma.md)
-* [Das Therapieziel-Dreieck](de/modell-dreieck.md)
+* [Behandlungsepisoden (EpisodeOfCare)](de/behandlungsepisode.md)
 * [Weitere Entität – Diabetes mellitus](de/entitaet-diabetes.md)
-* [Artefaktübersicht](de/artifacts.md)
 * [Empfehlungs- und Behandlungsplan](de/empfehlung-behandlung.md)
+* [Hinweise zur Übersetzung](de/translationinfo.md)
 * [Therapieziele (Goals)](de/therapieziele.md)
 * [Weitere Entität – Asthma bronchiale](de/entitaet-asthma.md)
-* [Weitere Entität – Chronisch-entzündliche Darmerkrankungen](de/entitaet-ced.md)
-* [Anwendungsbeispiel (mCRC palliativ)](de/szenario-crc.md)
-* [Behandlungsepisoden (EpisodeOfCare)](de/behandlungsepisode.md)
-* [Zielwerte und Messgrößen](de/goal-target-measure.md)
+* [Analysebericht (LG-01)](de/analysebericht.md)
+* [Artefaktübersicht](de/artifacts.md)
+* [Weitere Entität – Rheumatoide Arthritis](de/entitaet-rheuma.md)
+* [Das Therapieziel-Dreieck](de/modell-dreieck.md)
 * [Abweichende Szenarios](de/szenario-mamma-abweichende-szenarios.md)
+* [Anwendungsbeispiel (Mammakarzinom neoadjuvant)](de/szenario-mamma.md)
+* [Weitere Entität – Chronisch-entzündliche Darmerkrankungen](de/entitaet-ced.md)
+* [Zielwerte und Messgrößen](de/goal-target-measure.md)
+* [Anwendungsbeispiel (mCRC palliativ)](de/szenario-crc.md)
 
 ## Resources
 
