@@ -1,6 +1,6 @@
-# Diagnostischer CarePlan – Tumordiagnostik (Beispiel) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
+# Onkologischer CarePlan – Tumordiagnostik (Beispiel) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Example CarePlan: Diagnostischer CarePlan – Tumordiagnostik (Beispiel)
+## Example CarePlan: Onkologischer CarePlan – Tumordiagnostik (Beispiel)
 
 -------
 
@@ -8,7 +8,7 @@
 
 -------
 
-Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan.md)
+Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **CarePlan Custodian (Extension)**: [Organization Onkologisches Zentrum Musterklinik](Organization-TumorzentrumCRC.md)
 
@@ -16,7 +16,7 @@ Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan
 
 **intent**: Plan
 
-**category**: Tumordiagnostik
+**category**: Bösartige Neubildung: Kolon, nicht näher bezeichnet, Diagnostic intent (qualifier value)
 
 **subject**: [Erika Musterfrau Female, DoB: 1961-09-12](Patient-PatientinCRC.md)
 
@@ -42,7 +42,7 @@ Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan
   "resourceType" : "CarePlan",
   "id" : "DiagnostikCarePlanCRC",
   "meta" : {
-    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"]
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
   },
   "extension" : [{
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
@@ -53,7 +53,18 @@ Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan
   "status" : "completed",
   "intent" : "plan",
   "category" : [{
-    "text" : "Tumordiagnostik"
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "code" : "C18.9",
+      "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "261004008",
+      "display" : "Diagnostic intent (qualifier value)"
+    }]
   }],
   "subject" : {
     "reference" : "Patient/PatientinCRC"

@@ -97,12 +97,12 @@
       "resourceType" : "Condition",
       "id" : "ConditionCRC",
       "meta" : {
-        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
       },
       "language" : "de",
       "text" : {
         "status" : "extensions",
-        "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Condition_ConditionCRC\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionCRC</b></p><a name=\"ConditionCRC\"> </a><a name=\"hcConditionCRC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-condition.html\">Onkologische Diagnose (Condition)</a></p></div><p><b>Condition Asserted Date</b>: 2026-01-20</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}\">Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>onset</b>: 2026-01-20</p><p><b>recordedDate</b>: 2026-01-20</p></div>"
+        "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"Condition_ConditionCRC\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionCRC</b></p><a name=\"ConditionCRC\"> </a><a name=\"hcConditionCRC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor\">MII PR Onkologie Diagnose Primärtumor</a></p></div><p><b>Condition Asserted Date</b>: 2026-01-20</p><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}\">Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>onset</b>: 2026-01-20</p><p><b>recordedDate</b>: 2026-01-20</p></div>"
       },
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
@@ -152,12 +152,12 @@
       "resourceType" : "CarePlan",
       "id" : "DiagnostikCarePlanCRC",
       "meta" : {
-        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"]
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
       },
       "language" : "de",
       "text" : {
         "status" : "extensions",
-        "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_DiagnostikCarePlanCRC\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan DiagnostikCarePlanCRC</b></p><a name=\"DiagnostikCarePlanCRC\"> </a><a name=\"hcDiagnostikCarePlanCRC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-diagnostic-care-plan.html\">Diagnostischer CarePlan</a></p></div><p><b>CarePlan Custodian (Extension)</b>: <a href=\"Organization-TumorzentrumCRC.html\">Organization Onkologisches Zentrum Musterklinik</a></p><p><b>status</b>: Completed</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:\">Tumordiagnostik</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>period</b>: 2026-01-05 --&gt; 2026-01-20</p><p><b>careTeam</b>: <a href=\"CareTeam-TumorboardCRC.html\">CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom</a></p><p><b>addresses</b>: <a href=\"Condition-ConditionCRC.html\">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></p><h3>Activities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>OutcomeReference</b></td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"DiagnosticReport-DiagnosticReportHistologieCRC.html\">Diagnostic Report for 'Pathology Synoptic report' for '-&gt;Erika Musterfrau  Female, DoB: 1961-09-12'</a></td><td><a href=\"ServiceRequest-ServiceRequestKoloskopieCRC.html\">ServiceRequest Colonoscopy</a></td></tr></table></div>"
+        "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_DiagnostikCarePlanCRC\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan DiagnostikCarePlanCRC</b></p><a name=\"DiagnostikCarePlanCRC\"> </a><a name=\"hcDiagnostikCarePlanCRC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-care-plan.html\">Onkologischer CarePlan</a></p></div><p><b>CarePlan Custodian (Extension)</b>: <a href=\"Organization-TumorzentrumCRC.html\">Organization Onkologisches Zentrum Musterklinik</a></p><p><b>status</b>: Completed</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}\">Bösartige Neubildung: Kolon, nicht näher bezeichnet</span>, <span title=\"Codes:{http://snomed.info/sct 261004008}\">Diagnostic intent (qualifier value)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>period</b>: 2026-01-05 --&gt; 2026-01-20</p><p><b>careTeam</b>: <a href=\"CareTeam-TumorboardCRC.html\">CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom</a></p><p><b>addresses</b>: <a href=\"Condition-ConditionCRC.html\">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></p><h3>Activities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>OutcomeReference</b></td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"DiagnosticReport-DiagnosticReportHistologieCRC.html\">Diagnostic Report for 'Pathology Synoptic report' for '-&gt;Erika Musterfrau  Female, DoB: 1961-09-12'</a></td><td><a href=\"ServiceRequest-ServiceRequestKoloskopieCRC.html\">ServiceRequest Colonoscopy</a></td></tr></table></div>"
       },
       "extension" : [{
         "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
@@ -168,7 +168,18 @@
       "status" : "completed",
       "intent" : "plan",
       "category" : [{
-        "text" : "Tumordiagnostik"
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "code" : "C18.9",
+          "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "261004008",
+          "display" : "Diagnostic intent (qualifier value)"
+        }]
       }],
       "subject" : {
         "reference" : "Patient/PatientinCRC"
@@ -798,7 +809,7 @@
       "language" : "de",
       "text" : {
         "status" : "extensions",
-        "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_CarePlanCRCPalliativ\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan CarePlanCRCPalliativ</b></p><a name=\"CarePlanCRCPalliativ\"> </a><a name=\"hcCarePlanCRCPalliativ\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-care-plan.html\">Onkologischer CarePlan</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title=\"Codes:{http://snomed.info/sct 363676003}\">Palliative intent</span></li></ul></blockquote><p><b>CarePlan Custodian (Extension)</b>: <a href=\"Organization-TumorzentrumCRC.html\">Organization Onkologisches Zentrum Musterklinik</a></p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 736252007}\">Cancer care plan</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>period</b>: 2026-02-10 --&gt; (ongoing)</p><p><b>author</b>: <a href=\"Practitioner-OnkologinCRC.html\">Practitioner Petra Musterarzt </a></p><p><b>careTeam</b>: <a href=\"CareTeam-TumorboardCRC.html\">CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom</a></p><p><b>addresses</b>: <a href=\"Condition-ConditionCRC.html\">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></p><p><b>supportingInfo</b>: <a href=\"CarePlan-DiagnostikCarePlanCRC.html\">CarePlan: extension = -&gt;Organization Onkologisches Zentrum Musterklinik; status = completed; intent = plan; category = ; period = 2026-01-05 --&gt; 2026-01-20</a></p><p><b>goal</b>: <a href=\"Goal-TherapiezielCRCLebensverlaengerung.html\">Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10</a></p><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Observation-ObservationDiseaseStatusCRC.html\">Observation Cancer disease progression</a></p><p><b>reference</b>: <a href=\"MedicationRequest-MedicationRequestFOLFOX.html\">MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestPortCRC.html\">ServiceRequest Implantable venous access port injection</a></p></blockquote></div>"
+        "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><a name=\"CarePlan_CarePlanCRCPalliativ\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan CarePlanCRCPalliativ</b></p><a name=\"CarePlanCRCPalliativ\"> </a><a name=\"hcCarePlanCRCPalliativ\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-care-plan.html\">Onkologischer CarePlan</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title=\"Codes:{http://snomed.info/sct 363676003}\">Palliative intent</span></li></ul></blockquote><p><b>CarePlan Custodian (Extension)</b>: <a href=\"Organization-TumorzentrumCRC.html\">Organization Onkologisches Zentrum Musterklinik</a></p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C18.9}\">Bösartige Neubildung: Kolon, nicht näher bezeichnet</span>, <span title=\"Codes:{http://snomed.info/sct 262202000}\">Therapeutic intent (qualifier value)</span></p><p><b>subject</b>: <a href=\"Patient-PatientinCRC.html\">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>period</b>: 2026-02-10 --&gt; (ongoing)</p><p><b>author</b>: <a href=\"Practitioner-OnkologinCRC.html\">Practitioner Petra Musterarzt </a></p><p><b>careTeam</b>: <a href=\"CareTeam-TumorboardCRC.html\">CareTeam Interdisziplinäres Tumorboard Kolorektales Karzinom</a></p><p><b>addresses</b>: <a href=\"Condition-ConditionCRC.html\">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></p><p><b>supportingInfo</b>: <a href=\"CarePlan-DiagnostikCarePlanCRC.html\">CarePlan: extension = -&gt;Organization Onkologisches Zentrum Musterklinik; status = completed; intent = plan; category = Bösartige Neubildung: Kolon, nicht näher bezeichnet,Diagnostic intent (qualifier value); period = 2026-01-05 --&gt; 2026-01-20</a></p><p><b>goal</b>: <a href=\"Goal-TherapiezielCRCLebensverlaengerung.html\">Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10</a></p><blockquote><p><b>activity</b></p><p><b>outcomeReference</b>: <a href=\"Observation-ObservationDiseaseStatusCRC.html\">Observation Cancer disease progression</a></p><p><b>reference</b>: <a href=\"MedicationRequest-MedicationRequestFOLFOX.html\">MedicationRequest: status = active; intent = plan; category = Tumor board Consult note; medication[x] = </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href=\"ServiceRequest-ServiceRequestPortCRC.html\">ServiceRequest Implantable venous access port injection</a></p></blockquote></div>"
       },
       "extension" : [{
         "extension" : [{
@@ -823,9 +834,16 @@
       "intent" : "plan",
       "category" : [{
         "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "code" : "C18.9",
+          "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+        }]
+      },
+      {
+        "coding" : [{
           "system" : "http://snomed.info/sct",
-          "code" : "736252007",
-          "display" : "Cancer care plan"
+          "code" : "262202000",
+          "display" : "Therapeutic intent (qualifier value)"
         }]
       }],
       "subject" : {

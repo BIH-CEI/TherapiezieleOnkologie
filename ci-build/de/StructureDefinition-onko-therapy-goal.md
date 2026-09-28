@@ -14,7 +14,7 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 
 **Usages:**
 
-* Refer to this Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md) and [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan.md)
+* Refer to this Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 * Examples for this Profile: [Goal/DiagnosticGoal](Goal-DiagnosticGoal.md), [Goal/FollowUpGoal](Goal-FollowUpGoal.md), [Goal/TherapiezielCRCErhaltung](Goal-TherapiezielCRCErhaltung.md), [Goal/TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md)... Show 2 more, [Goal/TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md) and [Goal/TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-goal.json)
@@ -52,7 +52,7 @@ Mandatory: 1 element
 
 This structure refers to these other structures:
 
-* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 
 **Extensions**
 
@@ -98,7 +98,7 @@ Mandatory: 1 element
 
 This structure refers to these other structures:
 
-* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 
 **Extensions**
 
@@ -145,7 +145,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T11:29:30+00:00",
+  "date" : "2026-09-28T12:11:39+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -436,6 +436,20 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "comment" : "achievementStatus verwendet nur Zustands-Codes: in-progress oder achieved oder not-achieved,\n  not-attainable. Die Trajektorie (\"besser/schlechter\", Tumoransprechen) wird nicht hier\n  abgelegt — das Feld ist einwertig und ohne Historie, und \"verbessert gegenüber was?\"\n  (Baseline vs. Nadir) ist ohne Bezugspunkt nicht bestimmbar. Ansprechen und Verlauf liegen\n  deshalb in den outcomeReference-Observations (z. B. RECIST, mCODE Cancer Disease Status),\n  die zeitgestempelt sind und ihren Bezugspunkt selbst definieren.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "achievementStatus only uses state codes: in-progress, achieved, not-achieved, not-attainable. Trajectory better/worse, tumor response is not captured here — the field is single-valued and has no history, and 'improved compared to what?' baseline vs. nadir cannot be determined without a reference point. Response and course are therefore captured in the outcomeReference observations e.g. RECIST, mCODE Cancer Disease Status, which are timestamped and define their own reference point."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "mustSupport" : true
     },
     {
@@ -696,7 +710,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "type" : [{
         "code" : "CodeableConcept"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-goal-start-event"
+      }
     },
     {
       "id" : "Goal.target",
@@ -725,6 +743,20 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           {
             "url" : "content",
             "valueString" : "Intended measurable target state."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "comment" : "target ist der Zielwert (die Absicht). Derselbe Zielwert darf über mehrere\nZiele gleich sein — Behandlungs- und Nachsorgeziel können denselben Krankheitsstatus anstreben,\nweil die Absicht über Heilung → Surveillance durchläuft.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "target is the target value/the intent. The same target value may be shared across multiple goals — a treatment goal and a follow-up goal can pursue the same disease status and because the intent carries through from cure to surveillance."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -880,7 +912,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Referenz auf die adressierte Tumorerkrankung OnkoCondition.",
+      "definition" : "Referenz auf die adressierte Tumorerkrankung nach MII-Onkologie-Diagnoseprofil.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -889,14 +921,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           },
           {
             "url" : "content",
-            "valueString" : "Reference to the addressed tumor condition OnkoCondition."
+            "valueString" : "Reference to the addressed tumor condition, per the MII oncology diagnosis profile."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
       }],
       "mustSupport" : true
     },
@@ -991,6 +1023,20 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           {
             "url" : "content",
             "valueString" : "Reference to progress observations documenting tumor response."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "comment" : "outcomeReference ist das Ergebnis — die evidenzierende Observation.\nSie ist pro Ziel eigen und phasengerecht und bleibt leer, solange kein Ergebnis beobachtet wurde.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "outcomeReference is the result — the evidencing observation. It is specific to each goal and phase-appropriate, and remains empty as long as no result has been observed."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

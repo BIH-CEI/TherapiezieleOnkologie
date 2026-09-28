@@ -51,8 +51,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"16.71"}
-    h3,h4,h5,h6{--heading-prefix:"16.71"}</style>
+    <style type="text/css">h2{--heading-prefix:"17.73"}
+    h3,h4,h5,h6{--heading-prefix:"17.73"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -96,6 +96,9 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Startseite</a>
+  </li>
+  <li>
+    <a href="einfuehrung.html">Einführung</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
@@ -500,7 +503,7 @@
         "<a href="http://hl7.org/fhir/R4/resource.html#CarePlan.id">id</a>" : "CarePlanMammaDiagnostik",
         "<a href="http://hl7.org/fhir/R4/resource.html#CarePlan.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-            <a href="StructureDefinition-onko-diagnostic-care-plan.html" style="color: Maroon">&#x1F517;</a> "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"
+            <a href="StructureDefinition-onko-care-plan.html" style="color: Maroon">&#x1F517;</a> "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"
           ]
         },
         "<a href="http://hl7.org/fhir/R4/resource.html#CarePlan.language">language</a>" : "en",
@@ -511,7 +514,22 @@
         "<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.intent">intent</a>" : "plan",
         "<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.category">category</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Tumordiagnostik"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "C50.4",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "261004008",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Diagnostic intent (qualifier value)"
+              }
+            ]
           }
         ],
         "<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.subject">subject</a>" : {
@@ -822,7 +840,7 @@
         "<a href="http://hl7.org/fhir/R4/resource.html#Condition.id">id</a>" : "ConditionMamma",
         "<a href="http://hl7.org/fhir/R4/resource.html#Condition.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-            <a href="StructureDefinition-onko-condition.html" style="color: Maroon">&#x1F517;</a> "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"
+            <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor" style="color: Maroon">&#x1F517;</a> "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
           ]
         },
         "<a href="http://hl7.org/fhir/R4/resource.html#Condition.language">language</a>" : "en",
@@ -2158,9 +2176,18 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
               {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "C50.4",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
                 "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "736252007",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Cancer care plan"
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "262202000",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Therapeutic intent (qualifier value)"
               }
             ]
           }
@@ -2493,9 +2520,18 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
               {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "C50.4",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
                 "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "736252007",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Cancer care plan"
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "262202000",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Therapeutic intent (qualifier value)"
               }
             ]
           }
@@ -2566,7 +2602,7 @@
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-28 11:29:00 +0000">
+  <span title="2026-09-28 12:11:00 +0000">
     2026-09-28
   </span>
 

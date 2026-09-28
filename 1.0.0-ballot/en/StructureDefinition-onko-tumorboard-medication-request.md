@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-onko-tumorboard-m
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T11:29:30+00:00",
+  "date" : "2026-09-28T12:11:39+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -123,6 +123,46 @@ Other representations of profile: [CSV](../StructureDefinition-onko-tumorboard-m
         "ordered" : false,
         "rules" : "open"
       }
+    },
+    {
+      "id" : "MedicationRequest.extension:kontext",
+      "path" : "MedicationRequest.extension",
+      "sliceName" : "kontext",
+      "short" : "Kontext",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Context"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Dieses Feld soll dazu dienen, neben der Therapieintention einzelnen Behandlungsschritten weiteren Kontext zu geben.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "This field is intended to give individual treatment steps further context beyond the therapy intent."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungs-kontext"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "MedicationRequest.extension:changeType",

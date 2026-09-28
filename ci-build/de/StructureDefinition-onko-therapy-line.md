@@ -46,7 +46,7 @@ Mandatory: 5 elements
 
 This structure refers to these other structures:
 
-* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 
 **Extensions**
 
@@ -89,7 +89,7 @@ Mandatory: 5 elements
 
 This structure refers to these other structures:
 
-* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 
 **Extensions**
 
@@ -131,7 +131,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T11:29:30+00:00",
+  "date" : "2026-09-28T12:11:39+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -575,7 +575,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Referenz auf die adressierte Tumorerkrankung OnkoCondition.",
+      "definition" : "Referenz auf die adressierte Tumorerkrankung nach MII-Onkologie-Diagnoseprofil.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -584,14 +584,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
           },
           {
             "url" : "content",
-            "valueString" : "Reference to the addressed tumor condition OnkoCondition."
+            "valueString" : "Reference to the addressed tumor condition, per the MII oncology diagnosis profile."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
       }],
       "mustSupport" : true
     },

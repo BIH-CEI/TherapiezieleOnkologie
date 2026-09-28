@@ -8,7 +8,7 @@
 
 -------
 
-Profile: [Onkologische Diagnose (Condition)](StructureDefinition-onko-condition.md)
+Profile: [MII PR Onkologie Diagnose Primärtumor](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 
 **Condition Asserted Date**: 2025-09-15
 
@@ -37,7 +37,7 @@ Profile: [Onkologische Diagnose (Condition)](StructureDefinition-onko-condition.
   "resourceType" : "Condition",
   "id" : "ConditionMamma",
   "meta" : {
-    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",

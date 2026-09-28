@@ -93,7 +93,7 @@
       "resourceType" : "Condition",
       "id" : "ConditionCRC",
       "meta" : {
-        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
       },
       "language" : "en",
       "text" : {
@@ -147,7 +147,7 @@
       "resourceType" : "CarePlan",
       "id" : "DiagnostikCarePlanCRC",
       "meta" : {
-        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"]
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
       },
       "language" : "en",
       "text" : {
@@ -162,7 +162,18 @@
       "status" : "completed",
       "intent" : "plan",
       "category" : [{
-        "text" : "Tumordiagnostik"
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "code" : "C18.9",
+          "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "261004008",
+          "display" : "Diagnostic intent (qualifier value)"
+        }]
       }],
       "subject" : {
         "reference" : "Patient/PatientinCRC"
@@ -807,9 +818,16 @@
       "intent" : "plan",
       "category" : [{
         "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "code" : "C18.9",
+          "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+        }]
+      },
+      {
+        "coding" : [{
           "system" : "http://snomed.info/sct",
-          "code" : "736252007",
-          "display" : "Cancer care plan"
+          "code" : "262202000",
+          "display" : "Therapeutic intent (qualifier value)"
         }]
       }],
       "subject" : {

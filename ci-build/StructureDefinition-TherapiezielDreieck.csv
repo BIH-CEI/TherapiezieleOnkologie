@@ -64,7 +64,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "TherapiezielDreieck.therapieziel.beschreibung","TherapiezielDreieck.therapieziel.beschreibung","","","",1,1,"","","","string {[]} {[]}
 ","Zielbeschreibung","Klartext-Beschreibung des angestrebten Ziels.","","","","","","","","","",,,,,"",,,,"TherapiezielDreieck.therapieziel.beschreibung",1,1,"","","Goal.description"
 "TherapiezielDreieck.therapieziel.adressierteErkrankung","TherapiezielDreieck.therapieziel.adressierteErkrankung","","","",0,*,"","","","Reference {[]} {[]}
-","Adressierte Erkrankung","Erkrankung, auf die sich das Ziel bezieht (Tumorerkrankung bzw. chronische Grunderkrankung).","","","","","","","","","",,,,,"",,,,"TherapiezielDreieck.therapieziel.adressierteErkrankung",0,*,"","","Goal.addresses (OnkoCondition)"
+","Adressierte Erkrankung","Erkrankung, auf die sich das Ziel bezieht (Tumorerkrankung bzw. chronische Grunderkrankung).","","","","","","","","","",,,,,"",,,,"TherapiezielDreieck.therapieziel.adressierteErkrankung",0,*,"","","Goal.addresses (MII Onko Diagnose Primärtumor)"
 "TherapiezielDreieck.therapieziel.zielwert","TherapiezielDreieck.therapieziel.zielwert","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Zielwert","Messbarer angestrebter Zielzustand: woran gemessen wird, welcher Wert als erreicht gilt, bis wann.","","","","","","","","","",,,,,"",,,,"TherapiezielDreieck.therapieziel.zielwert",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Goal.target"

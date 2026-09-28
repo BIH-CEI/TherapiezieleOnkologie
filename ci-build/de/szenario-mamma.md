@@ -61,7 +61,7 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 | | | |
 | :--- | :--- | :--- |
 | Patient:in | `Patient` | [PatientinMamma](Patient-PatientinMamma.md) |
-| Tumorerkrankung | `OnkoCondition` | [ConditionMamma](Condition-ConditionMamma.md) |
+| Tumorerkrankung | `MII PR Onko Diagnose Primärtumor` | [ConditionMamma](Condition-ConditionMamma.md) |
 | Versorgungsplan | `OnkoCarePlan` | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md) |
 | Therapieziel | `OnkoTherapyGoal` | [TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md) |
 | Therapielinie 1 (neoadjuvante Chemo-/Immuntherapie) | `OnkoTherapyLine` | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md) |
@@ -74,7 +74,7 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 ### Verknüpfungen im Beispiel
 
 * **Therapieintention:** `kurativ` (Extension `onko-therapy-intent`) auf CarePlan und Therapieziel; die zugehörige Therapielinie trägt `neoadjuvant`.
-* **CarePlan → Erkrankung:** `addresses` referenziert die `OnkoCondition` (geerbt vom [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor), v2026.0.3).
+* **CarePlan → Erkrankung:** `addresses` referenziert direkt das [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) (Primärtumor, v2026.0.3).
 * **CarePlan → Ziel:** `goal` referenziert das `OnkoTherapyGoal` (Kategorien Heilung + Funktionserhalt).
 * **Geplant vs. durchgeführt:** `activity.reference` → geplante Systemtherapie (`MedicationRequest`); `activity.outcomeReference` → durchgeführte Operation (`Procedure`) und dokumentiertes Ergebnis (`Observation`).
 * **Ziel → Ergebnis:** `Goal.outcomeReference` bindet die Verlaufs-Observation (Disease Status, pCR), wodurch der `achievementStatus` (hier `achieved`) auswertbar wird.

@@ -19,7 +19,7 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **intent**: Plan
 
-**category**: Cancer care plan
+**category**: Bösartige Neubildung: Kolon, nicht näher bezeichnet, Therapeutic intent (qualifier value)
 
 **subject**: [Erika Musterfrau Female, DoB: 1961-09-12](Patient-PatientinCRC.md)
 
@@ -31,7 +31,7 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **addresses**: [Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet](Condition-ConditionCRC.md)
 
-**supportingInfo**: [CarePlan: extension = ->Organization Onkologisches Zentrum Musterklinik; status = completed; intent = plan; category = ; period = 2026-01-05 --> 2026-01-20](CarePlan-DiagnostikCarePlanCRC.md)
+**supportingInfo**: [CarePlan: extension = ->Organization Onkologisches Zentrum Musterklinik; status = completed; intent = plan; category = Bösartige Neubildung: Kolon, nicht näher bezeichnet,Diagnostic intent (qualifier value); period = 2026-01-05 --> 2026-01-20](CarePlan-DiagnostikCarePlanCRC.md)
 
 **goal**: [Goal: extension = ,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Lebensverlängerung,Symptomkontrolle / Palliation; priority = High Priority; description = ; start[x] = 2026-02-10](Goal-TherapiezielCRCLebensverlaengerung.md)
 
@@ -73,9 +73,16 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
   "intent" : "plan",
   "category" : [{
     "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "code" : "C18.9",
+      "display" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+    }]
+  },
+  {
+    "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "736252007",
-      "display" : "Cancer care plan"
+      "code" : "262202000",
+      "display" : "Therapeutic intent (qualifier value)"
     }]
   }],
   "subject" : {

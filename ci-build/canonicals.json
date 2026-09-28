@@ -75,6 +75,13 @@
   "name" : "EnlistLotExt"
 },
 {
+  "id" : "onko-behandlungs-kontext",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungs-kontext",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoBehandlungsKontextExt"
+},
+{
   "id" : "onko-care-plan",
   "type" : "StructureDefinition",
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan",
@@ -87,20 +94,6 @@
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
   "version" : "1.0.0-ballot",
   "name" : "OnkoCarePlanCustodianExt"
-},
-{
-  "id" : "onko-condition",
-  "type" : "StructureDefinition",
-  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition",
-  "version" : "1.0.0-ballot",
-  "name" : "OnkoCondition"
-},
-{
-  "id" : "onko-diagnostic-care-plan",
-  "type" : "StructureDefinition",
-  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan",
-  "version" : "1.0.0-ballot",
-  "name" : "DiagnosticCarePlan"
 },
 {
   "id" : "onko-therapy-goal",
@@ -164,6 +157,27 @@
   "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
   "version" : "1.0.0-ballot",
   "name" : "EnlistLotSettingVS"
+},
+{
+  "id" : "onko-care-plan-phase",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-care-plan-phase",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoCarePlanPhaseVS"
+},
+{
+  "id" : "onko-goal-start-event",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-goal-start-event",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoGoalStartEventVS"
+},
+{
+  "id" : "onko-service-request-kontext",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-service-request-kontext",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoServiceRequestKontextVS"
 },
 {
   "id" : "onko-therapy-goal-type",

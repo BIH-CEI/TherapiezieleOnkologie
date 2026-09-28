@@ -9,12 +9,13 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 * Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).
 * `goal` referenziert das Profil `OnkoTherapyGoal`.
 * Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die Standard-Extension `workflow-episodeOfCare` verknüpft.
+* `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird, beispielsweise der diagnostische (`Diagnostic intent`) oder der therapeutische (`Therapeutic intent`).
  
 Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine `PlanDefinition` aus dem CPG-on-FHIR-Stack. 
 
 **Usages:**
 
-* Examples for this Profile: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [CarePlan/CarePlanMammaNachsorge](CarePlan-CarePlanMammaNachsorge.md) and [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md)
+* Examples for this Profile: [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [CarePlan/CarePlanMammaDiagnostik](CarePlan-CarePlanMammaDiagnostik.md), [CarePlan/CarePlanMammaNachsorge](CarePlan-CarePlanMammaNachsorge.md), [CarePlan/CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md) and [CarePlan/DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-care-plan.json)
 
@@ -34,6 +35,8 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.html) 
 
+#### Terminology Bindings (Differential)
+
 #### Terminology Bindings
 
 #### Constraints
@@ -42,14 +45,14 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 
 ** Summary **
 
-Mandatory: 1 element
- Must-Support: 15 elements
+Mandatory: 3 elements(2 nested mandatory elements)
+ Must-Support: 18 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
-* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
 * [Tumorboard MedicationRequest (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request)](StructureDefinition-onko-tumorboard-medication-request.md)
 * [Tumorboard ServiceRequest (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request)](StructureDefinition-onko-tumorboard-service-request.md)
@@ -61,6 +64,12 @@ This structure refers to these extensions:
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent](StructureDefinition-onko-therapy-intent.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian](StructureDefinition-onko-careplan-custodian.md)
 * [http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-workflow-episodeOfCare.html)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of CarePlan.category
 
  **Schlüsselelemente-Ansicht** 
 
@@ -72,6 +81,8 @@ This structure refers to these extensions:
 
 Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.html) 
 
+#### Terminology Bindings (Differential)
+
  **Snapshot-AnsichtView** 
 
 #### Terminology Bindings
@@ -82,14 +93,14 @@ Diese Struktur ist abgeleitet von [CarePlan](http://hl7.org/fhir/R4/careplan.htm
 
 ** Summary **
 
-Mandatory: 1 element
- Must-Support: 15 elements
+Mandatory: 3 elements(2 nested mandatory elements)
+ Must-Support: 18 elements
 
 **Structures**
 
 This structure refers to these other structures:
 
-* [Onkologische Diagnose (Condition) (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition)](StructureDefinition-onko-condition.md)
+* [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * [Onkologisches Therapieziel (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal)](StructureDefinition-onko-therapy-goal.md)
 * [Tumorboard MedicationRequest (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request)](StructureDefinition-onko-tumorboard-medication-request.md)
 * [Tumorboard ServiceRequest (https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request)](StructureDefinition-onko-tumorboard-service-request.md)
@@ -101,6 +112,12 @@ This structure refers to these extensions:
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent](StructureDefinition-onko-therapy-intent.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian](StructureDefinition-onko-careplan-custodian.md)
 * [http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-workflow-episodeOfCare.html)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of CarePlan.category
 
  
 
@@ -132,7 +149,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T11:29:30+00:00",
+  "date" : "2026-09-28T12:11:39+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -141,7 +158,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die\n  Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
+  "description" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die\n  Standard-Extension `workflow-episodeOfCare` verknüpft.\n- `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der\n  adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird,\n  beispielsweise der diagnostische (`Diagnostic intent`) oder der therapeutische (`Therapeutic intent`).\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -150,7 +167,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
       },
       {
         "url" : "content",
-        "valueString" : "Oncological care plan based on CarePlan, architecturally aligned with the HL7 FHIR US MCC eCare Plan. The care plan is the central, consensus-driven steering object bringing together addressed conditions, overarching goals and planned versus performed activities of the care teams."
+        "valueString" : "Oncological care plan based on CarePlan, architecturally aligned with the HL7 FHIR US MCC eCare Plan. The care plan is the central, consensus-driven steering object bringing together addressed conditions, overarching goals and planned versus performed activities of the care teams. category is sliced into erkrankungsart – ICD-10-GM code of the addressed tumor disease – and therapieabschnitt – SNOMED CT Diagnostic intent 261004008 or Therapeutic intent 262202000, so a single profile covers both the diagnostic pathway and the therapy pathway."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -407,7 +424,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Art des Plans – proposal/plan = Empfehlungsplan des Tumorboards, plan/order = Behandlungsplan.",
+      "definition" : "Art des Plans – proposal/plan = Empfehlungsplan des Tumorboards, plan/order = Behandlungs- bzw. Diagnostikplan.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -416,7 +433,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           },
           {
             "url" : "content",
-            "valueString" : "Kind of plan – proposal/plan = tumor board recommendation plan, plan/order = treatment plan."
+            "valueString" : "Kind of plan – proposal/plan = tumor board recommendation plan, plan/order = treatment or diagnostic plan."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -426,6 +443,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
     {
       "id" : "CarePlan.category",
       "path" : "CarePlan.category",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "coding.system"
+        }],
+        "rules" : "open"
+      },
       "short" : "Plan-Kategorie",
       "_short" : {
         "extension" : [{
@@ -440,7 +464,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Art bzw. Kategorie des Versorgungsplans.",
+      "definition" : "Kategorisierung des Versorgungsplans – Erkrankungsart mit Diagnosecode und Therapieabschnitt mit diagnostisch oder therapeutisch.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -449,12 +473,101 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           },
           {
             "url" : "content",
-            "valueString" : "Type or category of the care plan."
+            "valueString" : "Categorization of the care plan – disease type as diagnosis code and care phase as diagnostic or therapeutic."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "min" : 2,
       "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.category:erkrankungsart",
+      "path" : "CarePlan.category",
+      "sliceName" : "erkrankungsart",
+      "short" : "Erkrankungsart",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Disease type"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Kodierte Tumorerkrankung nach ICD-10-GM, die dieser Versorgungsplan adressiert – identisch zum Diagnosecode der referenzierten Condition.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Coded tumor disease per ICD-10-GM addressed by this care plan – identical to the diagnosis code of the referenced condition."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "CarePlan.category:erkrankungsart.coding.system",
+      "path" : "CarePlan.category.coding.system",
+      "min" : 1,
+      "patternUri" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+    },
+    {
+      "id" : "CarePlan.category:therapieabschnitt",
+      "path" : "CarePlan.category",
+      "sliceName" : "therapieabschnitt",
+      "short" : "Therapieabschnitt",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Care plan phase"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Diagnostischer oder therapeutischer Abschnitt der Versorgung – SNOMED CT Diagnostic intent 261004008 bzw. Therapeutic intent 262202000.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnostic or therapeutic phase of care – SNOMED CT Diagnostic intent 261004008 or Therapeutic intent 262202000."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-care-plan-phase"
+      }
+    },
+    {
+      "id" : "CarePlan.category:therapieabschnitt.coding.system",
+      "path" : "CarePlan.category.coding.system",
+      "min" : 1,
+      "patternUri" : "http://snomed.info/sct"
     },
     {
       "id" : "CarePlan.subject",
@@ -510,7 +623,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Zeitraum, in dem der Versorgungsplan gültig ist.",
+      "definition" : "Zeitraum, in dem der Versorgungsplan gültig ist – bei diagnostischer Nutzung der Diagnostikzeitraum von Beginn bis Diagnosesicherung.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -519,11 +632,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           },
           {
             "url" : "content",
-            "valueString" : "Period during which the care plan is valid."
+            "valueString" : "Period during which the care plan is valid – for diagnostic use, the diagnostic period from start to confirmation of diagnosis."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
-      }
+      },
+      "mustSupport" : true
     },
     {
       "id" : "CarePlan.author",
@@ -640,7 +754,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Referenz auf die vom Plan adressierte Tumorerkrankung OnkoCondition.",
+      "definition" : "Referenz auf die vom Plan adressierte Tumorerkrankung nach MII-Onkologie-Diagnoseprofil – im Diagnostikabschnitt ggf. eine Verdachtsdiagnose mit verificationStatus 'provisional' oder 'unconfirmed', die nach Diagnosesicherung auf 'confirmed' aktualisiert wird, sodass die Referenz stabil bleibt.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -649,7 +763,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           },
           {
             "url" : "content",
-            "valueString" : "Reference to the tumor condition addressed by the plan OnkoCondition."
+            "valueString" : "Reference to the tumor condition addressed by the plan, per the MII oncology diagnosis profile – during the diagnostic phase possibly a suspected diagnosis with verificationStatus provisional or unconfirmed that is updated to confirmed once the diagnosis is established, so the reference stays stable."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -657,7 +771,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
       "min" : 1,
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"]
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
       }],
       "mustSupport" : true
     },
@@ -711,7 +825,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Referenz auf die übergeordneten onkologischen Therapieziele OnkoTherapyGoal.",
+      "definition" : "Referenz auf die übergeordneten onkologischen Therapie- bzw. Diagnoseziele OnkoTherapyGoal.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -720,7 +834,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
           },
           {
             "url" : "content",
-            "valueString" : "Reference to the overarching oncological therapy goals OnkoTherapyGoal."
+            "valueString" : "Reference to the overarching oncological therapy or diagnostic goals OnkoTherapyGoal."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

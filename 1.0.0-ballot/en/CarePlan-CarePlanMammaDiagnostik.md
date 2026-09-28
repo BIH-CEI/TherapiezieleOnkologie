@@ -1,6 +1,6 @@
-# Diagnostischer CarePlan (Beispiel Mamma) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
+# Onkologischer CarePlan – Tumordiagnostik (Beispiel Mamma) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Example CarePlan: Diagnostischer CarePlan (Beispiel Mamma)
+## Example CarePlan: Onkologischer CarePlan – Tumordiagnostik (Beispiel Mamma)
 
 -------
 
@@ -8,13 +8,13 @@
 
 -------
 
-Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan.md)
+Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **status**: Active
 
 **intent**: Plan
 
-**category**: Tumordiagnostik
+**category**: Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse, Diagnostic intent (qualifier value)
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -48,12 +48,23 @@ Profile: [Diagnostischer CarePlan](StructureDefinition-onko-diagnostic-care-plan
   "resourceType" : "CarePlan",
   "id" : "CarePlanMammaDiagnostik",
   "meta" : {
-    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"]
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
   },
   "status" : "active",
   "intent" : "plan",
   "category" : [{
-    "text" : "Tumordiagnostik"
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "code" : "C50.4",
+      "display" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "261004008",
+      "display" : "Diagnostic intent (qualifier value)"
+    }]
   }],
   "subject" : {
     "reference" : "Patient/PatientinMamma"

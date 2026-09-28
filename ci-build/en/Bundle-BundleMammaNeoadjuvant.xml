@@ -226,7 +226,7 @@
       <CarePlan>
         <id value="CarePlanMammaDiagnostik"/>
         <meta>
-          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
         </meta>
         <language value="en"/>
         <text>
@@ -235,7 +235,18 @@
         <status value="active"/>
         <intent value="plan"/>
         <category>
-          <text value="Tumordiagnostik"/>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <code value="C50.4"/>
+            <display value="Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="261004008"/>
+            <display value="Diagnostic intent (qualifier value)"/>
+          </coding>
         </category>
         <subject>
           <reference value="Patient/PatientinMamma"/>
@@ -484,7 +495,7 @@
       <Condition>
         <id value="ConditionMamma"/>
         <meta>
-          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"/>
         </meta>
         <language value="en"/>
         <text>
@@ -1623,9 +1634,16 @@
         <intent value="plan"/>
         <category>
           <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <code value="C50.4"/>
+            <display value="Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="736252007"/>
-            <display value="Cancer care plan"/>
+            <code value="262202000"/>
+            <display value="Therapeutic intent (qualifier value)"/>
           </coding>
         </category>
         <subject>
@@ -1892,9 +1910,16 @@
         <intent value="plan"/>
         <category>
           <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <code value="C50.4"/>
+            <display value="Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"/>
+          </coding>
+        </category>
+        <category>
+          <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="736252007"/>
-            <display value="Cancer care plan"/>
+            <code value="262202000"/>
+            <display value="Therapeutic intent (qualifier value)"/>
           </coding>
         </category>
         <subject>

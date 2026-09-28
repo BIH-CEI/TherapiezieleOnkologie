@@ -1,27 +1,5 @@
 {
   "codeSystems" : [{
-    "url" : "http://fhir.de/CodeSystem/bfarm/alpha-id",
-    "version" : null,
-    "status" : "active",
-    "name" : "AlphaId",
-    "title" : "Alpha-ID",
-    "description" : "Alpha-ID Platzhalter-CodeSystem",
-    "uses" : {
-    },
-    "https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/ValueSet-mii-vs-diagnose-alphaid.html" : "MII VS Diagnose Alpha-ID"
-  },
-  {
-    "url" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-    "version" : null,
-    "status" : "active",
-    "name" : "ICD10GM",
-    "title" : "ICD-10-GM",
-    "description" : "ICD-10-GM Platzhalter-CodeSystem",
-    "uses" : {
-    },
-    "https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/ValueSet-mii-vs-diagnose-icd10gm.html" : "MII VS Diagnose ICD-10-GM"
-  },
-  {
     "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
     "version" : "4.0.1",
     "status" : "draft",
@@ -82,18 +60,6 @@
     "http://hl7.org/fhir/R4/valueset-goal-status.html" : "GoalLifecycleStatus"
   },
   {
-    "url" : "http://hl7.org/fhir/quantity-comparator",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "QuantityComparator",
-    "title" : "QuantityComparator",
-    "description" : "How the Quantity should be understood and represented.",
-    "oids" : ["2.16.840.1.113883.4.642.4.60"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-quantity-comparator.html" : "QuantityComparator"
-  },
-  {
     "url" : "http://hl7.org/fhir/request-intent",
     "version" : "4.0.1",
     "status" : "draft",
@@ -103,8 +69,8 @@
     "oids" : ["2.16.840.1.113883.4.642.4.114"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-request-intent.html" : "RequestIntent",
-    "http://hl7.org/fhir/R4/valueset-care-plan-intent.html" : "Care Plan Intent"
+    "http://hl7.org/fhir/R4/valueset-care-plan-intent.html" : "Care Plan Intent",
+    "http://hl7.org/fhir/R4/valueset-request-intent.html" : "RequestIntent"
   },
   {
     "url" : "http://hl7.org/fhir/request-priority",
@@ -163,81 +129,28 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "ValueSet-onko-therapy-intent.html" : "Onkologische Therapieintention (VS)",
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
-    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
-    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
-    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
     "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=http://fhir.de/ValueSet/lebensphase-de" : "LebensphaseDe ValueSet",
-    "https://browser.ihtsdotools.org/" : "All Codes SCT ValueSet",
-    "http://hl7.org/fhir/R4/valueset-condition-predecessor.html" : "Condition Predecessor Codes",
-    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
-    "https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/ValueSet-mii-vs-diagnose-diagnosecodes-snomed.html" : "MII VS Diagnose Diagnose-Codes SNOMED",
-    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
-    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
-    "ValueSet-onko-therapy-phase.html" : "Onkologische Therapiephase / Unter-Intention (VS)",
-    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
-    "ValueSet-onko-therapy-line-type.html" : "Onkologische Therapielinie – Art (VS)",
-    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
-    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
     "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
-    "https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/ValueSet-mii-vs-diagnose-bodystructure-snomed.html" : "MII VS Diagnose BodyStructure SNOMED"
-  },
-  {
-    "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
-    "version" : "1.0.1",
-    "status" : "active",
-    "name" : "CommonTags",
-    "title" : "Common Tags",
-    "description" : "Common Tag Codes defined by FHIR project",
-    "oids" : ["2.16.840.1.113883.4.642.1.1067"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-common-tags.html" : "Common Tags"
-  },
-  {
-    "url" : "http://terminology.hl7.org/CodeSystem/condition-category",
-    "version" : "2.0.0",
-    "status" : "active",
-    "name" : "ConditionCategoryCodes",
-    "title" : "Condition Category Codes",
-    "description" : "Preferred value set for Condition Categories.",
-    "oids" : ["2.16.840.1.113883.4.642.1.1073"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-condition-category.html" : "Condition Category Codes"
-  },
-  {
-    "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-    "version" : "3.0.0",
-    "status" : "active",
-    "name" : "ConditionClinicalStatusCodes",
-    "title" : "Condition Clinical Status Codes",
-    "description" : "Preferred value set for Condition Clinical Status.",
-    "oids" : ["2.16.840.1.113883.4.642.1.1074"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-condition-clinical.html" : "Condition Clinical Status Codes"
-  },
-  {
-    "url" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-    "version" : "2.0.1",
-    "status" : "active",
-    "name" : "ConditionVerificationStatus",
-    "title" : "ConditionVerificationStatus",
-    "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
-    "oids" : ["2.16.840.1.113883.4.642.1.1075"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-condition-ver-status.html" : "ConditionVerificationStatus"
+    "ValueSet-onko-service-request-kontext.html" : "Kontext einer Tumorboard-Empfehlung (VS)",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "https://browser.ihtsdotools.org/" : "All Codes SCT ValueSet",
+    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
+    "ValueSet-onko-therapy-intent.html" : "Onkologische Therapieintention (VS)",
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
+    "ValueSet-onko-therapy-line-type.html" : "Onkologische Therapielinie – Art (VS)",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
+    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "ValueSet-onko-goal-start-event.html" : "Onkologisches Zielbeginn-Ereignis (VS)",
+    "ValueSet-onko-care-plan-phase.html" : "Onkologischer CarePlan – Therapieabschnitt (VS)",
+    "ValueSet-onko-therapy-phase.html" : "Onkologische Therapiephase / Unter-Intention (VS)"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
@@ -274,19 +187,6 @@
     "uses" : {
     },
     "http://hl7.org/fhir/R4/valueset-goal-priority.html" : "Goal priority"
-  },
-  {
-    "url" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
-    "version" : "2.0.1",
-    "status" : "active",
-    "name" : "IcdO3",
-    "title" : "International Classification of Diseases for Oncology, version 3.",
-    "description" : "International Classification of Diseases for Oncology, version 3. For more information see http://www.who.int/classifications/icd/adaptations/oncology/en/.",
-    "oids" : ["2.16.840.1.113883.6.43.1"],
-    "uses" : {
-    },
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie" : "MII VS Onkologie ICD-O-3 Morphologie",
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie" : "MII VS Onkologie ICD-O-3 Topographie"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
@@ -396,36 +296,14 @@
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
     "version" : "1.0.0-ballot",
-    "status" : "draft",
+    "status" : "active",
     "name" : "OnkoTherapyGoalType",
     "title" : "Onkologische Therapieziel-Art",
     "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
     "uses" : {
     },
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
-    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)"
-  },
-  {
-    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
-    "version" : "2026.0.3",
-    "status" : "active",
-    "name" : "MII_CS_Onko_Primaertumor_Diagnosesicherung",
-    "title" : "MII CS Onkologie Primärtumor Diagnosesicherung",
-    "description" : "Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose.",
-    "uses" : {
-    },
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung" : "MII VS Onkologie Primärtumor Diagnosesicherung"
-  },
-  {
-    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
-    "version" : "2026.0.3",
-    "status" : "active",
-    "name" : "MII_CS_Onko_Seitenlokalisation",
-    "title" : "MII CS Onkologie Primärtumor Seitenlokalisation",
-    "description" : "Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite.",
-    "uses" : {
-    },
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation" : "MII VS Onkologie Primärtumor Seitenlokalisation"
+    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)",
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
   },
   {
     "url" : "urn:ietf:bcp:47",

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="onko-care-plan-phase"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet onko-care-plan-phase</b></p><a name="en-onko-care-plan-phase"> </a><a name="en-hconko-care-plan-phase"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/261004008">261004008</a></td><td>Diagnostic intent (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/262202000">262202000</a></td><td>Therapeutic intent (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/363676003">363676003</a></td><td>Palliative - procedure intent (qualifier value)</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-care-plan-phase"/>
+  <version value="1.0.0-ballot"/>
+  <name value="OnkoCarePlanPhaseVS"/>
+  <title value="Onkologischer CarePlan – Therapieabschnitt (VS)"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-09-28T12:11:39+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="Kennzeichnet, ob ein `OnkoCarePlan` den diagnostischen oder den therapeutischen Abschnitt der&#xA;onkologischen Versorgung abbildet. Gebunden an `category` (Slice `therapieabschnitt`); ersetzt&#xA;die vormalige Unterscheidung über zwei separate Profile (`OnkoCarePlan` / `DiagnosticCarePlan`)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="261004008"/>
+        <display value="Diagnostic intent (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="262202000"/>
+        <display value="Therapeutic intent (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="363676003"/>
+        <display value="Palliative - procedure intent (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

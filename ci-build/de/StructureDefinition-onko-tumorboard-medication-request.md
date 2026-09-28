@@ -40,12 +40,13 @@ Diese Struktur ist abgeleitet von [MedicationRequest](http://hl7.org/fhir/R4/med
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 9 elements
+ Must-Support: 10 elements
 
 **Extensions**
 
 This structure refers to these extensions:
 
+* [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungs-kontext](StructureDefinition-onko-behandlungs-kontext.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change](StructureDefinition-enlist-change.md)
 
 **Slices**
@@ -75,12 +76,13 @@ Diese Struktur ist abgeleitet von [MedicationRequest](http://hl7.org/fhir/R4/med
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 9 elements
+ Must-Support: 10 elements
 
 **Extensions**
 
 This structure refers to these extensions:
 
+* [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungs-kontext](StructureDefinition-onko-behandlungs-kontext.md)
 * [https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change](StructureDefinition-enlist-change.md)
 
 **Slices**
@@ -119,7 +121,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-tumorbo
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T11:29:30+00:00",
+  "date" : "2026-09-28T12:11:39+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -196,6 +198,46 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-tumorbo
         "ordered" : false,
         "rules" : "open"
       }
+    },
+    {
+      "id" : "MedicationRequest.extension:kontext",
+      "path" : "MedicationRequest.extension",
+      "sliceName" : "kontext",
+      "short" : "Kontext",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Context"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Dieses Feld soll dazu dienen, neben der Therapieintention einzelnen Behandlungsschritten weiteren Kontext zu geben.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "This field is intended to give individual treatment steps further context beyond the therapy intent."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungs-kontext"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "MedicationRequest.extension:changeType",

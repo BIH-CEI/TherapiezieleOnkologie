@@ -47,8 +47,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8"}
-    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -92,6 +92,9 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Startseite</a>
+  </li>
+  <li>
+    <a href="einfuehrung.html">Einführung</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
@@ -414,7 +417,7 @@ Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>)
     </tr>
     <tr>
       <td>Tumorerkrankung</td>
-      <td><code class="language-plaintext highlighter-rouge">OnkoCondition</code></td>
+      <td><code class="language-plaintext highlighter-rouge">MII PR Onko Diagnose Primärtumor</code></td>
       <td><a href="Condition-ConditionMamma.html">ConditionMamma</a></td>
     </tr>
     <tr>
@@ -464,7 +467,7 @@ Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>)
 
 <ul>
   <li><strong>Therapieintention:</strong> <code class="language-plaintext highlighter-rouge">kurativ</code> (Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code>) auf CarePlan und Therapieziel; die zugehörige Therapielinie trägt <code class="language-plaintext highlighter-rouge">neoadjuvant</code>.</li>
-  <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert die <code class="language-plaintext highlighter-rouge">OnkoCondition</code> (geerbt vom <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a>, v2026.0.3).</li>
+  <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert direkt das <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a> (Primärtumor, v2026.0.3).</li>
   <li><strong>CarePlan → Ziel:</strong> <code class="language-plaintext highlighter-rouge">goal</code> referenziert das <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> (Kategorien Heilung + Funktionserhalt).</li>
   <li><strong>Geplant vs. durchgeführt:</strong> <code class="language-plaintext highlighter-rouge">activity.reference</code> → geplante Systemtherapie (<code class="language-plaintext highlighter-rouge">MedicationRequest</code>); <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → durchgeführte Operation (<code class="language-plaintext highlighter-rouge">Procedure</code>) und dokumentiertes Ergebnis (<code class="language-plaintext highlighter-rouge">Observation</code>).</li>
   <li><strong>Ziel → Ergebnis:</strong> <code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> bindet die Verlaufs-Observation (Disease Status, pCR), wodurch der <code class="language-plaintext highlighter-rouge">achievementStatus</code> (hier <code class="language-plaintext highlighter-rouge">achieved</code>) auswertbar wird.</li>
@@ -505,7 +508,7 @@ Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>)
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-28 11:29:00 +0000">
+  <span title="2026-09-28 12:11:00 +0000">
     2026-09-28
   </span>
 

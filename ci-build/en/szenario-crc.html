@@ -47,8 +47,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"7"}
-    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -92,6 +92,9 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Startseite</a>
+  </li>
+  <li>
+    <a href="einfuehrung.html">Einführung</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Konzepte
@@ -239,11 +242,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Diese Seite zeigt – in Anlehnung an die <a href="https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current">szenariobasierte Darstellung des MII IG Modul Onkologie</a> – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens nutzt: <code class="language-plaintext highlighter-rouge">OnkoCondition</code>, <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code>, <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>, <code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code> und <code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>.</p>
+<p>Diese Seite zeigt – in Anlehnung an die <a href="https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current">szenariobasierte Darstellung des MII IG Modul Onkologie</a> – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens sowie das <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a> nutzt: <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code>, <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code>, <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code>, <code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code> und <code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>.</p>
 
 <h3 id="klinische-erzählung">Klinische Erzählung</h3>
 
-<p>Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonkarzinom (mCRC, Lebermetastasen) vor. Der <strong>Diagnostikpfad</strong> – Koloskopie mit Biopsie und histopathologische Sicherung – wird über einen <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code> abgebildet und mündet in die gesicherte Diagnose (<code class="language-plaintext highlighter-rouge">OnkoCondition</code>). Das interdisziplinäre <strong>Tumorboard</strong> (<code class="language-plaintext highlighter-rouge">CareTeam</code>) empfiehlt eine <strong>palliative Systemtherapie</strong> (FOLFOX + Bevacizumab, <code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code>) sowie die Anlage eines <strong>Portkatheters</strong> (<code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>). Die übergeordneten Therapieziele sind <strong>Lebensverlängerung</strong> und <strong>Symptomkontrolle</strong>. Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet.</p>
+<p>Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonkarzinom (mCRC, Lebermetastasen) vor. Der <strong>Diagnostikpfad</strong> – Koloskopie mit Biopsie und histopathologische Sicherung – wird über einen <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code> abgebildet und mündet in die gesicherte Diagnose (MII-Onkologie-Diagnoseprofil). Das interdisziplinäre <strong>Tumorboard</strong> (<code class="language-plaintext highlighter-rouge">CareTeam</code>) empfiehlt eine <strong>palliative Systemtherapie</strong> (FOLFOX + Bevacizumab, <code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code>) sowie die Anlage eines <strong>Portkatheters</strong> (<code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>). Die übergeordneten Therapieziele sind <strong>Lebensverlängerung</strong> und <strong>Symptomkontrolle</strong>. Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet.</p>
 
 <h3 id="informationsmodell">Informationsmodell</h3>
 
@@ -321,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <g><rect x="510" y="60" width="135" height="50" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4" />
 <text x="577" y="81" text-anchor="middle" font-size="12" font-weight="500" fill="#4A1B0C">Diagnose</text>
-<text x="577" y="97" text-anchor="middle" font-size="9" fill="#993C1D">OnkoCondition</text></g>
+<text x="577" y="97" text-anchor="middle" font-size="9" fill="#993C1D">MII Onko Diagnose</text></g>
 
 <g><rect x="510" y="170" width="135" height="50" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="1.4" />
 <text x="577" y="191" text-anchor="middle" font-size="12" font-weight="500" fill="#4A1B0C">Disease Status</text>
@@ -359,12 +362,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>Tumorerkrankung</td>
-      <td><code class="language-plaintext highlighter-rouge">OnkoCondition</code></td>
+      <td><code class="language-plaintext highlighter-rouge">MII PR Onko Diagnose Primärtumor</code></td>
       <td><a href="Condition-ConditionCRC.html">ConditionCRC</a></td>
     </tr>
     <tr>
       <td>Diagnostik-Plan</td>
-      <td><code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code></td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> (Therapieabschnitt: Diagnostic intent)</td>
       <td><a href="CarePlan-DiagnostikCarePlanCRC.html">DiagnostikCarePlanCRC</a></td>
     </tr>
     <tr>
@@ -444,10 +447,10 @@ Führung und Ausführung fallen hier in einer Episode zusammen,
 <h3 id="verknüpfungen-im-beispiel">Verknüpfungen im Beispiel</h3>
 
 <ul>
-  <li><strong>Diagnostikpfad:</strong> Der <code class="language-plaintext highlighter-rouge">DiagnosticCarePlan</code> (<code class="language-plaintext highlighter-rouge">category.text = "Tumordiagnostik"</code>) adressiert dieselbe <code class="language-plaintext highlighter-rouge">OnkoCondition</code> und führt geplante Anforderung (<code class="language-plaintext highlighter-rouge">activity.reference</code> → <code class="language-plaintext highlighter-rouge">ServiceRequest</code> Koloskopie) und Ergebnis (<code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> Histologie) zusammen. Der Therapie-CarePlan verweist über <code class="language-plaintext highlighter-rouge">supportingInfo</code> auf den Diagnostik-CarePlan.</li>
+  <li><strong>Diagnostikpfad:</strong> Der diagnostische <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> (<code class="language-plaintext highlighter-rouge">category[therapieabschnitt] = Diagnostic intent</code>, SNOMED <code class="language-plaintext highlighter-rouge">261004008</code>) adressiert dieselbe Tumordiagnose (MII-Onkologie-Diagnoseprofil, <code class="language-plaintext highlighter-rouge">category[erkrankungsart]</code> trägt denselben ICD-10-GM-Code) und führt geplante Anforderung (<code class="language-plaintext highlighter-rouge">activity.reference</code> → <code class="language-plaintext highlighter-rouge">ServiceRequest</code> Koloskopie) und Ergebnis (<code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> Histologie) zusammen. Der Therapie-CarePlan (<code class="language-plaintext highlighter-rouge">category[therapieabschnitt] = Therapeutic intent</code>, SNOMED <code class="language-plaintext highlighter-rouge">262202000</code>) verweist über <code class="language-plaintext highlighter-rouge">supportingInfo</code> auf den Diagnostik-CarePlan.</li>
   <li><strong>Tumorboard:</strong> Die Empfehlungen (<code class="language-plaintext highlighter-rouge">TumorboardMedicationRequest</code>, <code class="language-plaintext highlighter-rouge">TumorboardServiceRequest</code>) tragen im <code class="language-plaintext highlighter-rouge">category</code> den LOINC-Code <code class="language-plaintext highlighter-rouge">85232-7</code> (Tumor board Consult note); das <code class="language-plaintext highlighter-rouge">CareTeam</code> ist als <code class="language-plaintext highlighter-rouge">careTeam</code> am Therapie-CarePlan und als <code class="language-plaintext highlighter-rouge">team</code> an der Therapielinie hinterlegt.</li>
   <li><strong>Therapieintention (zwei Achsen):</strong> Die Extension <code class="language-plaintext highlighter-rouge">onko-therapy-intent</code> codiert <code class="language-plaintext highlighter-rouge">hauptintention</code> (hier <code class="language-plaintext highlighter-rouge">palliativ</code>, SNOMED <code class="language-plaintext highlighter-rouge">363676003</code>) und optional <code class="language-plaintext highlighter-rouge">phase</code> (hier <code class="language-plaintext highlighter-rouge">Induktionstherapie</code>, SNOMED <code class="language-plaintext highlighter-rouge">450827009</code>). So ist „palliativ + Induktionsphase" gleichzeitig ausdrückbar; die Codes sind extensible gebunden.</li>
-  <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert die <code class="language-plaintext highlighter-rouge">OnkoCondition</code> (geerbt vom <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a>, v2026.0.3).</li>
+  <li><strong>CarePlan → Erkrankung:</strong> <code class="language-plaintext highlighter-rouge">addresses</code> referenziert direkt das <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor">MII-Onkologie-Diagnoseprofil</a> (Primärtumor, v2026.0.3).</li>
   <li><strong>CarePlan → Ziel:</strong> <code class="language-plaintext highlighter-rouge">goal</code> referenziert das <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> (Kategorien Lebensverlängerung + Symptomkontrolle).</li>
   <li><strong>Geplant vs. durchgeführt:</strong> <code class="language-plaintext highlighter-rouge">activity.reference</code> → geplante Maßnahmen (Tumorboard-Empfehlungen); <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code> → dokumentiertes Ergebnis (<code class="language-plaintext highlighter-rouge">Observation</code>).</li>
   <li><strong>Ziel → Ergebnis:</strong> <code class="language-plaintext highlighter-rouge">Goal.outcomeReference</code> bindet die Verlaufs-Observation (Disease Status), wodurch der <code class="language-plaintext highlighter-rouge">achievementStatus</code> (hier <code class="language-plaintext highlighter-rouge">in-progress</code>) auswertbar wird.</li>
@@ -464,7 +467,7 @@ Führung und Ausführung fallen hier in einer Episode zusammen,
 
 <h4 id="goal-relationship--bedeutung-der-beziehungstypen"><code class="language-plaintext highlighter-rouge">goal-relationship</code> – Bedeutung der Beziehungstypen</h4>
 
-<p>Codesystem <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/goal-relationship-type</code>. Die Beziehung wird immer aus Sicht des <em>Quell-Ziels</em> (das die Extension trägt) auf das <em>Ziel-Ziel</em> (<code class="language-plaintext highlighter-rouge">target</code>) angegeben:</p>
+<p>Codesystem <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/goal-relationship-type</code>. Die Beziehung wird immer aus Sicht des <em>ursprünglichen Zieles</em> (das die Extension trägt) auf das <em>neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles)</em> (<code class="language-plaintext highlighter-rouge">target</code>) angegeben:</p>
 
 <table>
   <thead>
@@ -477,22 +480,22 @@ Führung und Ausführung fallen hier in einer Episode zusammen,
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">predecessor</code></td>
-      <td>Das Ziel-Ziel muss <strong>vorher</strong> erreicht werden.</td>
+      <td>Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) muss <strong>vorher</strong> erreicht werden.</td>
       <td>Erhaltungsziel → predecessor → Induktionsziel</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">successor</code></td>
-      <td>Das Ziel-Ziel ist das angestrebte Ziel, <strong>nachdem</strong> dieses erreicht ist.</td>
+      <td>Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) ist das angestrebte Ziel, <strong>nachdem</strong> dieses erreicht ist.</td>
       <td>Induktionsziel → successor → Erhaltungsziel</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">replacement</code></td>
-      <td>Dieses Ziel wurde <strong>durch</strong> das Ziel-Ziel <strong>ersetzt</strong>.</td>
+      <td>Dieses Ziel wurde <strong>durch</strong> das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) <strong>ersetzt</strong>.</td>
       <td>palliatives Ziel → replacement → abgelehntes kuratives Ziel</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">milestone</code></td>
-      <td>Das Ziel-Ziel ist ein <strong>Teilschritt</strong> dieses Ziels.</td>
+      <td>Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) ist ein <strong>Teilschritt</strong> dieses Ziels.</td>
       <td>(nicht im Beispiel)</td>
     </tr>
   </tbody>
@@ -528,7 +531,7 @@ Führung und Ausführung fallen hier in einer Episode zusammen,
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-28 11:29:00 +0000">
+  <span title="2026-09-28 12:11:00 +0000">
     2026-09-28
   </span>
 

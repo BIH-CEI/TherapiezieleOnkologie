@@ -16,7 +16,7 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
 
 **intent**: Plan
 
-**category**: Cancer care plan
+**category**: Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse, Therapeutic intent (qualifier value)
 
 **subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
 
@@ -62,9 +62,16 @@ Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
   "intent" : "plan",
   "category" : [{
     "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "code" : "C50.4",
+      "display" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+    }]
+  },
+  {
+    "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "736252007",
-      "display" : "Cancer care plan"
+      "code" : "262202000",
+      "display" : "Therapeutic intent (qualifier value)"
     }]
   }],
   "subject" : {

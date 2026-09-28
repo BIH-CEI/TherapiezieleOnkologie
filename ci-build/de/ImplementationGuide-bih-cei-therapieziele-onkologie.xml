@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-09-28T11:29:30+00:00"/>
+  <date value="2026-09-28T12:11:39+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -690,39 +690,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/onko-diagnostic-care-plan"/>
-      </reference>
-      <name value="Diagnostischer CarePlan"/>
-      <description value="CarePlan für die Tumordiagnostik auf Basis von `CarePlan`.&#xA;&#xA;Ergänzend zum onkologischen Therapie-CarePlan (`OnkoCarePlan`) bildet dieses Profil den Weg&#xA;zur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfads werden als&#xA;Aktivitäten abgebildet, deren Ergebnisse können&#xA;über `activity.outcomeReference` angebunden werden.&#xA;&#xA;Der diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (`OnkoCondition`)&#xA;und ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.&#xA;&#xA;Diagnostikspezifische Ergänzungen:&#xA;- Der Plan-Typ ist über `category` verpflichtend gekennzeichnet: `category.text`&#xA;  muss den Wert &quot;Tumordiagnostik&quot; tragen. Weitere Categories können ergänzt&#xA;  werden. Damit sind diagnostischer und Therapie-CarePlan unterscheidbar.&#xA;&#xA;**Abgrenzung:** Dieses Profil beschreibt den *Prozess* der Diagnosefindung."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CarePlan"/>
-      </extension>
-      <reference>
-        <reference value="CarePlan/CarePlanMammaDiagnostik"/>
-      </reference>
-      <name value="Diagnostischer CarePlan (Beispiel Mamma)"/>
-      <description value="Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."/>
-      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CarePlan"/>
-      </extension>
-      <reference>
-        <reference value="CarePlan/DiagnostikCarePlanCRC"/>
-      </reference>
-      <name value="Diagnostischer CarePlan – Tumordiagnostik (Beispiel)"/>
-      <description value="Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."/>
-      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -950,7 +917,29 @@
       </reference>
       <name value="Kolorektales Karzinom, metastasiert (Beispiel)"/>
       <description value="Adressierte Tumorerkrankung: metastasiertes Kolonkarzinom (ICD-10-GM C18.9). Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."/>
-      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-behandlungs-kontext"/>
+      </reference>
+      <name value="Kontext (Extension)"/>
+      <description value="Zusätzlicher Kontext eines Behandlungsschritts, der – ergänzend zur Therapieintention – z. B.&#xA;kennzeichnet, ob eine Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv,&#xA;intraoperativ, elektiv oder im Notfall erfolgt.&#xA;&#xA;Dieses Feld soll dazu dienen, neben der Therapieintention einzelnen Behandlungsschritten&#xA;weiteren Kontext zu geben. Die Extension kann an ServiceRequest, Procedure, MedicationRequest&#xA;und MedicationAdministration verwendet werden."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-service-request-kontext"/>
+      </reference>
+      <name value="Kontext einer Tumorboard-Empfehlung (VS)"/>
+      <description value="Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine&#xA;Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv&#xA;oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -961,18 +950,7 @@
       </reference>
       <name value="Mammakarzinom links, triple-negativ (Beispiel)"/>
       <description value="Adressierte Tumorerkrankung: invasives Mammakarzinom links (NST), ICD-10-GM C50.4. Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor)."/>
-      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/onko-condition"/>
-      </reference>
-      <name value="Onkologische Diagnose (Condition)"/>
-      <description value="Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**&#xA;([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),&#xA;Version 2026.0.3).&#xA;&#xA;Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,&#xA;ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,&#xA;Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`&#xA;und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen&#xA;Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.&#xA;&#xA;Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das&#xA;Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen&#xA;lokalen Canonical bereit, auf den die übrigen Profile referenzieren."/>
-      <exampleBoolean value="false"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1059,7 +1037,7 @@
         <reference value="StructureDefinition/onko-care-plan"/>
       </reference>
       <name value="Onkologischer CarePlan"/>
-      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die&#xA;  Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
+      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die&#xA;  Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;- `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der&#xA;  adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird,&#xA;  beispielsweise der diagnostische (`Diagnostic intent`) oder der therapeutische (`Therapeutic intent`).&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1097,6 +1075,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-care-plan-phase"/>
+      </reference>
+      <name value="Onkologischer CarePlan – Therapieabschnitt (VS)"/>
+      <description value="Kennzeichnet, ob ein `OnkoCarePlan` den diagnostischen oder den therapeutischen Abschnitt der&#xA;onkologischen Versorgung abbildet. Gebunden an `category` (Slice `therapieabschnitt`); ersetzt&#xA;die vormalige Unterscheidung über zwei separate Profile (`OnkoCarePlan` / `DiagnosticCarePlan`)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/CarePlanMammaDiagnostik"/>
+      </reference>
+      <name value="Onkologischer CarePlan – Tumordiagnostik (Beispiel Mamma)"/>
+      <description value="Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/DiagnostikCarePlanCRC"/>
+      </reference>
+      <name value="Onkologischer CarePlan – Tumordiagnostik (Beispiel)"/>
+      <description value="Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Goal"/>
       </extension>
       <reference>
@@ -1115,6 +1126,17 @@
       </reference>
       <name value="Onkologisches Therapieziel"/>
       <description value="Strukturiertes onkologisches Therapieziel auf Basis von `Goal`.&#xA;&#xA;Das Profil ist an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCGoal](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-MCCGoal.html))&#xA;angelehnt: Das Therapieziel ist eine eigenständige, referenzbasierte Ressource, die über&#xA;`addresses` mit den adressierten Erkrankungen und über `outcomeReference` mit beobachteten&#xA;Ergebnissen (Verlaufs-Observations) verknüpft wird.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Die Zielart wird über `category` aus `OnkoTherapyGoalTypeVS` codiert (Heilung,&#xA;  Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt).&#xA;- Über die Extension `onko-therapy-intent` kann zusätzlich die Therapieintention der&#xA;  zugehörigen Behandlungslinie hinterlegt werden.&#xA;- `outcomeReference` bindet das Ziel an Verlaufs-Observations (z. B. mCODE&#xA;  CancerDiseaseStatus / Response Assessment), wodurch das Tumoransprechen auf das Ziel&#xA;  bezogen ausgewertet werden kann.&#xA;&#xA;`achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab&#xA;(z. B. erreicht, in Bearbeitung, nicht erreicht)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-goal-start-event"/>
+      </reference>
+      <name value="Onkologisches Zielbeginn-Ereignis (VS)"/>
+      <description value="Codierte Ereignisse für den Beginn eines onkologischen Therapieziels (`Goal.startCodeableConcept`).&#xA;Übernimmt das HL7-Basis-ValueSet [GoalStartEvent](http://hl7.org/fhir/ValueSet/goal-start-event) und&#xA;ergänzt onkologisch relevante SNOMED-CT-Qualifier für den Zielbeginn nach Bestrahlung, Chemotherapie&#xA;oder Operation. Example-Bindung – die Codes dienen als Anregung, sind aber nicht verpflichtend."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1493,6 +1515,14 @@
         </extension>
         <nameUrl value="index.html"/>
         <title value="Startseite"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="einfuehrung.html"/>
+        </extension>
+        <nameUrl value="einfuehrung.html"/>
+        <title value="Einführung"/>
         <generation value="markdown"/>
       </page>
       <page>

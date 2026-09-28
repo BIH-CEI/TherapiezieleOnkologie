@@ -87,6 +87,13 @@
       ]
     },
     {
+      "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungs-kontext",
+      "title": "Kontext (Extension)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
       "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
       "title": "CarePlan Custodian (Extension)",
       "types": [
@@ -162,14 +169,8 @@
   "profiles": {
     "CarePlan": [
       {
-        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan",
-        "title": "Diagnostischer CarePlan"
-      }
-    ],
-    "Condition": [
-      {
-        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition",
-        "title": "Onkologische Diagnose (Condition)"
+        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan",
+        "title": "Onkologischer CarePlan"
       }
     ],
     "Goal": [
@@ -198,28 +199,8 @@
     ]
   },
   "usage": {
-    "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit": [
-      "Condition.code.coding"
-    ],
-    "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen": [
-      "Condition.code.coding"
-    ],
-    "http://fhir.de/StructureDefinition/lebensphase": [
-      "Condition.onset[x]",
-      "Condition.onset[x].end",
-      "Condition.onset[x].start"
-    ],
-    "http://fhir.de/StructureDefinition/seitenlokalisation": [
-      "Condition.code.coding"
-    ],
     "http://hl7.org/fhir/StructureDefinition/condition-assertedDate": [
       "Bundle.entry.resource",
-      "Condition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/condition-occurredFollowing": [
-      "Condition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/condition-related": [
       "Condition"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
@@ -249,9 +230,6 @@
       "Bundle.entry.resource",
       "Goal"
     ],
-    "http://hl7.org/fhir/StructureDefinition/regex": [
-      "StructureDefinition.snapshot.element.type"
-    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
@@ -262,8 +240,10 @@
       "CodeSystem.description",
       "CodeSystem.title",
       "StructureDefinition.description",
+      "StructureDefinition.differential.element.comment",
       "StructureDefinition.differential.element.definition",
       "StructureDefinition.differential.element.short",
+      "StructureDefinition.snapshot.element.comment",
       "StructureDefinition.snapshot.element.definition",
       "StructureDefinition.snapshot.element.short",
       "StructureDefinition.title",
@@ -307,6 +287,10 @@
       "Bundle.entry.resource",
       "EpisodeOfCare"
     ],
+    "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungs-kontext": [
+      "MedicationRequest",
+      "ServiceRequest"
+    ],
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian": [
       "Bundle.entry.resource",
       "CarePlan"
@@ -320,12 +304,6 @@
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request": [
       "Bundle.entry.resource",
       "EpisodeOfCare"
-    ],
-    "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3": [
-      "Condition"
-    ],
-    "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable": [
-      "StructureDefinition"
     ]
   }
 }
