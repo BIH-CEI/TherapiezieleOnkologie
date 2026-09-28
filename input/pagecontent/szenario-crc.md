@@ -1,8 +1,8 @@
-Diese Seite zeigt – in Anlehnung an die [szenariobasierte Darstellung des MII IG Modul Onkologie](https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current) – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens nutzt: `OnkoCondition`, `DiagnosticCarePlan`, `OnkoCarePlan`, `OnkoTherapyLine`, `OnkoTherapyGoal`, `TumorboardMedicationRequest` und `TumorboardServiceRequest`.
+Diese Seite zeigt – in Anlehnung an die [szenariobasierte Darstellung des MII IG Modul Onkologie](https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current) – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens sowie das [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) nutzt: `DiagnosticCarePlan`, `OnkoCarePlan`, `OnkoTherapyLine`, `OnkoTherapyGoal`, `TumorboardMedicationRequest` und `TumorboardServiceRequest`.
 
 ### Klinische Erzählung
 
-Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonkarzinom (mCRC, Lebermetastasen) vor. Der **Diagnostikpfad** – Koloskopie mit Biopsie und histopathologische Sicherung – wird über einen `DiagnosticCarePlan` abgebildet und mündet in die gesicherte Diagnose (`OnkoCondition`). Das interdisziplinäre **Tumorboard** (`CareTeam`) empfiehlt eine **palliative Systemtherapie** (FOLFOX + Bevacizumab, `TumorboardMedicationRequest`) sowie die Anlage eines **Portkatheters** (`TumorboardServiceRequest`). Die übergeordneten Therapieziele sind **Lebensverlängerung** und **Symptomkontrolle**. Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet.
+Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonkarzinom (mCRC, Lebermetastasen) vor. Der **Diagnostikpfad** – Koloskopie mit Biopsie und histopathologische Sicherung – wird über einen `DiagnosticCarePlan` abgebildet und mündet in die gesicherte Diagnose (MII-Onkologie-Diagnoseprofil). Das interdisziplinäre **Tumorboard** (`CareTeam`) empfiehlt eine **palliative Systemtherapie** (FOLFOX + Bevacizumab, `TumorboardMedicationRequest`) sowie die Anlage eines **Portkatheters** (`TumorboardServiceRequest`). Die übergeordneten Therapieziele sind **Lebensverlängerung** und **Symptomkontrolle**. Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet.
 
 ### Informationsmodell
 
@@ -15,8 +15,8 @@ Der folgende Referenzgraph zeigt die **Kernbeziehungen des Therapie-CarePlan** (
 | Element | Ressource / Profil | Beispiel-Instanz |
 |---|---|---|
 | Patient:in | `Patient` | [PatientinCRC](Patient-PatientinCRC.html) |
-| Tumorerkrankung | `OnkoCondition` | [ConditionCRC](Condition-ConditionCRC.html) |
-| Diagnostik-Plan | `DiagnosticCarePlan` | [DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.html) |
+| Tumorerkrankung | `MII PR Onko Diagnose Primärtumor` | [ConditionCRC](Condition-ConditionCRC.html) |
+| Diagnostik-Plan | `OnkoCarePlan` (Therapieabschnitt: Diagnostic intent) | [DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.html) |
 | Diagnostik-Anforderung | `ServiceRequest` | [ServiceRequestKoloskopieCRC](ServiceRequest-ServiceRequestKoloskopieCRC.html) |
 | Diagnostik-Ergebnis | `DiagnosticReport` | [DiagnosticReportHistologieCRC](DiagnosticReport-DiagnosticReportHistologieCRC.html) |
 | Therapie-Plan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.html) |
@@ -39,10 +39,10 @@ Führung und Ausführung fallen hier in einer Episode zusammen,
 
 ### Verknüpfungen im Beispiel
 
-- **Diagnostikpfad:** Der `DiagnosticCarePlan` (`category.text = "Tumordiagnostik"`) adressiert dieselbe `OnkoCondition` und führt geplante Anforderung (`activity.reference` → `ServiceRequest` Koloskopie) und Ergebnis (`activity.outcomeReference` → `DiagnosticReport` Histologie) zusammen. Der Therapie-CarePlan verweist über `supportingInfo` auf den Diagnostik-CarePlan.
+- **Diagnostikpfad:** Der diagnostische `OnkoCarePlan` (`category[therapieabschnitt] = Diagnostic intent`, SNOMED `261004008`) adressiert dieselbe Tumordiagnose (MII-Onkologie-Diagnoseprofil, `category[erkrankungsart]` trägt denselben ICD-10-GM-Code) und führt geplante Anforderung (`activity.reference` → `ServiceRequest` Koloskopie) und Ergebnis (`activity.outcomeReference` → `DiagnosticReport` Histologie) zusammen. Der Therapie-CarePlan (`category[therapieabschnitt] = Therapeutic intent`, SNOMED `262202000`) verweist über `supportingInfo` auf den Diagnostik-CarePlan.
 - **Tumorboard:** Die Empfehlungen (`TumorboardMedicationRequest`, `TumorboardServiceRequest`) tragen im `category` den LOINC-Code `85232-7` (Tumor board Consult note); das `CareTeam` ist als `careTeam` am Therapie-CarePlan und als `team` an der Therapielinie hinterlegt.
 - **Therapieintention (zwei Achsen):** Die Extension `onko-therapy-intent` codiert `hauptintention` (hier `palliativ`, SNOMED `363676003`) und optional `phase` (hier `Induktionstherapie`, SNOMED `450827009`). So ist „palliativ + Induktionsphase" gleichzeitig ausdrückbar; die Codes sind extensible gebunden.
-- **CarePlan → Erkrankung:** `addresses` referenziert die `OnkoCondition` (geerbt vom [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor), v2026.0.3).
+- **CarePlan → Erkrankung:** `addresses` referenziert direkt das [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) (Primärtumor, v2026.0.3).
 - **CarePlan → Ziel:** `goal` referenziert das `OnkoTherapyGoal` (Kategorien Lebensverlängerung + Symptomkontrolle).
 - **Geplant vs. durchgeführt:** `activity.reference` → geplante Maßnahmen (Tumorboard-Empfehlungen); `activity.outcomeReference` → dokumentiertes Ergebnis (`Observation`).
 - **Ziel → Ergebnis:** `Goal.outcomeReference` bindet die Verlaufs-Observation (Disease Status), wodurch der `achievementStatus` (hier `in-progress`) auswertbar wird.
@@ -56,13 +56,13 @@ Führung und Ausführung fallen hier in einer Episode zusammen,
 
 #### `goal-relationship` – Bedeutung der Beziehungstypen
 
-Codesystem `http://terminology.hl7.org/CodeSystem/goal-relationship-type`. Die Beziehung wird immer aus Sicht des *Quell-Ziels* (das die Extension trägt) auf das *Ziel-Ziel* (`target`) angegeben:
+Codesystem `http://terminology.hl7.org/CodeSystem/goal-relationship-type`. Die Beziehung wird immer aus Sicht des *ursprünglichen Zieles* (das die Extension trägt) auf das *neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles)* (`target`) angegeben:
 
 | Typ | Bedeutung | im Beispiel |
 |---|---|---|
-| `predecessor` | Das Ziel-Ziel muss **vorher** erreicht werden. | Erhaltungsziel → predecessor → Induktionsziel |
-| `successor` | Das Ziel-Ziel ist das angestrebte Ziel, **nachdem** dieses erreicht ist. | Induktionsziel → successor → Erhaltungsziel |
-| `replacement` | Dieses Ziel wurde **durch** das Ziel-Ziel **ersetzt**. | palliatives Ziel → replacement → abgelehntes kuratives Ziel |
-| `milestone` | Das Ziel-Ziel ist ein **Teilschritt** dieses Ziels. | (nicht im Beispiel) |
+| `predecessor` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) muss **vorher** erreicht werden. | Erhaltungsziel → predecessor → Induktionsziel |
+| `successor` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) ist das angestrebte Ziel, **nachdem** dieses erreicht ist. | Induktionsziel → successor → Erhaltungsziel |
+| `replacement` | Dieses Ziel wurde **durch** das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) **ersetzt**. | palliatives Ziel → replacement → abgelehntes kuratives Ziel |
+| `milestone` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) ist ein **Teilschritt** dieses Ziels. | (nicht im Beispiel) |
 
 `predecessor` und `successor` sind zueinander invers: Induktions- und Erhaltungsziel verweisen wechselseitig aufeinander und bilden so die zeitliche Sequenz ab.

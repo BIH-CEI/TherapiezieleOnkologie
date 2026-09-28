@@ -16,8 +16,9 @@ publisher:
   url: https://www.bihealth.org
 
 # ╭───────────────────────────────────── Dependencies ─────────────────────────────╮
-# │ Abgleich mit dem MII Kerndatensatz-Modul Onkologie (v2026.0.3): Wiederverwendung │
-# │ des onkologischen Diagnose-Profils (Primärtumor) als Basis für OnkoCondition.    │
+# │ Abgleich mit dem MII Kerndatensatz-Modul Onkologie (v2026.0.3): OnkoCarePlan,   │
+# │ OnkoTherapyGoal und OnkoTherapyLine referenzieren die adressierte Tumor-        │
+# │ erkrankung direkt über das MII-Onkologie-Diagnoseprofil (Primärtumor).          │
 # ╰────────────────────────────────────────────────────────────────────────────────╯
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.onkologie: 2026.0.3
@@ -32,6 +33,8 @@ dependencies:
 pages:
   index.md:
     title: Startseite
+  einfuehrung.md:
+    title: Einführung
   modell-dreieck.md:
     title: Das Therapieziel-Dreieck
   therapieziele.md:
@@ -77,6 +80,7 @@ parameters:
 
 menu:
   Startseite: index.html
+  Einführung: einfuehrung.html
   Konzepte:
     Das Therapieziel-Dreieck: modell-dreieck.html
     Therapieziele: therapieziele.html

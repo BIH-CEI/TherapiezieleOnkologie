@@ -10,7 +10,7 @@ gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
 des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.
 """
 * ^url = "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent"
-* ^status = #draft
+* ^status = #active
 * ^experimental = true
 * http://snomed.info/sct#373808002 "Curative - procedure intent"
 * http://snomed.info/sct#363676003 "Palliative intent"
