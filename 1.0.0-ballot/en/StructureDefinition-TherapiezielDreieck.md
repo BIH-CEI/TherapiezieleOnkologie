@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-TherapiezielDreie
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T20:57:11+00:00",
+  "date" : "2026-09-28T21:01:12+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
