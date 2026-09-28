@@ -6,7 +6,7 @@ to** its episode (standard extension `workflow-episodeOfCare`); goal and
 episode are linked **only implicitly via the plan**. At the centre stands the
 patient as the shared `subject` of all three.
 
-{% include therapieziel-dreieck.svg %}
+{% include therapieziel-dreieck-en.svg %}
 
 ### Formalised as a logical model
 

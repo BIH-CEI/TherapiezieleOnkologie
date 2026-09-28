@@ -6,4 +6,4 @@ It is part of the BIH-CEI / Gematik Onkologie collaboration and is published in 
 
 #### Profiles and course of care at a glance
 
-{% include konzept-verlauf-prozess.svg %}
+{% include konzept-verlauf-prozess-en.svg %}

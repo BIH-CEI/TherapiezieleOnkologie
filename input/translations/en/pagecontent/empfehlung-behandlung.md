@@ -9,7 +9,7 @@ recommended* and *what is actually delivered* are distinct objects.
 - **Treatment care plan** — the episode-specific plan of **actually delivered** care;
   carries the respective **episode goal**.
 
-{% include konzept-empfehlung-behandlung.svg %}
+{% include konzept-empfehlung-behandlung-en.svg %}
 
 ### Different level of detail, decoupled in time and organisation
 

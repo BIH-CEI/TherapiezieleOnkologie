@@ -59,7 +59,7 @@ overarching goal is **not mutated** but **closed and replaced** by a new one (li
 `replacement`); a *successfully completed* goal, by contrast, hands off to its follow-up
 goal via `predecessor`/`successor`.
 
-{% include konzept-therapieziele-ebenen.svg %}
+{% include konzept-therapieziele-ebenen-en.svg %}
 
 ### The intent is set at the point of recommendation
 
