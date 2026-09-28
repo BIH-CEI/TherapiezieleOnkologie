@@ -292,7 +292,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <svg width="100%" viewBox="0 0 940 640" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
 <title>Therapieziele Onkologie — Profile und Verlauf</title>
-<desc>Prozessdiagramm im Stil der Originalgrafik: Von der Diagnose ueber Therapieziel festlegen, Behandlungsepisode anlegen, Versorgungsplan erstellen zu Verlauf bewerten; Entscheidung Ziel erreicht oder Linienwechsel. Gruene Kreislaeufe fuer Linienwechsel und Strategiewechsel mit neuem uebergeordnetem Ziel. FHIR-Ressourcen als Datenobjekte, rote gestrichelte outcomeReference von der Observation zum Goal. Seitliche Wertebereiche Zielart und zweiachsige Intention.</desc>
+<desc>Prozessdiagramm im Stil der Originalgrafik: Von der Diagnose ueber Therapieziel festlegen, Behandlungsepisode anlegen, Versorgungsplan erstellen zu Verlauf bewerten; Entscheidung Ziel erreicht oder Linienwechsel. Gruene Kreislaeufe fuer Linienwechsel und Strategiewechsel mit neuem uebergeordnetem Ziel. FHIR-Ressourcen als Datenobjekte, rote gestrichelte outcomeReference von der Observation zum Goal. Seitliche Wertebereiche: links die Zielart mit sechs Auspraegungen — Heilung, Lebensverlaengerung, Symptomkontrolle, Lebensqualitaet, Funktionserhalt und diagnostisch; rechts drei Bloecke — Intention kurativ, palliativ, supportiv; Kontext im Sinne der Stellung zur Operation neoadjuvant und adjuvant; sowie die Phase mit Induktion, Konsolidierung und Erhaltung.</desc>
 <defs>
 <marker id="arbk" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#1A1A1A" /></marker>
 <marker id="argn2" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#1E7A46" /></marker>
@@ -395,18 +395,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <line x1="45" y1="232" x2="145" y2="232" stroke="#C8102E" stroke-width="1.2" />
 <rect x="35" y="244" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
 <text x="95" y="263" text-anchor="middle" font-size="9" fill="#1A1A1A">Heilung</text>
-<rect x="35" y="282" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
-<text x="95" y="295" text-anchor="middle" font-size="8.5" fill="#1A1A1A">Lebens-</text>
-<text x="95" y="306" text-anchor="middle" font-size="8.5" fill="#1A1A1A">verlängerung</text>
-<rect x="35" y="320" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
-<text x="95" y="333" text-anchor="middle" font-size="8.5" fill="#1A1A1A">Symptom-</text>
-<text x="95" y="344" text-anchor="middle" font-size="8.5" fill="#1A1A1A">kontrolle</text>
-<rect x="35" y="358" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
-<text x="95" y="371" text-anchor="middle" font-size="8.5" fill="#1A1A1A">Lebens-</text>
-<text x="95" y="382" text-anchor="middle" font-size="8.5" fill="#1A1A1A">qualität</text>
-<rect x="35" y="396" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
-<text x="95" y="409" text-anchor="middle" font-size="8.5" fill="#1A1A1A">Funktions-</text>
-<text x="95" y="420" text-anchor="middle" font-size="8.5" fill="#1A1A1A">erhalt</text>
+<rect x="35" y="278" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
+<text x="95" y="291" text-anchor="middle" font-size="8.5" fill="#1A1A1A">Lebens-</text>
+<text x="95" y="302" text-anchor="middle" font-size="8.5" fill="#1A1A1A">verlängerung</text>
+<rect x="35" y="312" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
+<text x="95" y="325" text-anchor="middle" font-size="8.5" fill="#1A1A1A">Symptom-</text>
+<text x="95" y="336" text-anchor="middle" font-size="8.5" fill="#1A1A1A">kontrolle</text>
+<rect x="35" y="346" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
+<text x="95" y="359" text-anchor="middle" font-size="8.5" fill="#1A1A1A">Lebens-</text>
+<text x="95" y="370" text-anchor="middle" font-size="8.5" fill="#1A1A1A">qualität</text>
+<rect x="35" y="380" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
+<text x="95" y="393" text-anchor="middle" font-size="8.5" fill="#1A1A1A">Funktions-</text>
+<text x="95" y="404" text-anchor="middle" font-size="8.5" fill="#1A1A1A">erhalt</text>
+<rect x="35" y="414" width="120" height="30" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
+<text x="95" y="433" text-anchor="middle" font-size="9" fill="#1A1A1A">Diagnostisch</text>
 <text x="95" y="462" text-anchor="middle" font-size="8" font-style="italic" fill="#888888">Goal.category</text>
 <text x="95" y="475" text-anchor="middle" font-size="8" font-style="italic" fill="#888888">onko-therapy-goal-type</text></g>
 
@@ -418,15 +420,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <rect x="785" y="274" width="120" height="24" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
 <text x="845" y="290" text-anchor="middle" font-size="9" fill="#1A1A1A">palliativ</text>
 <rect x="785" y="304" width="120" height="24" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
-<text x="845" y="320" text-anchor="middle" font-size="9" fill="#1A1A1A">neoadjuvant</text>
-<rect x="785" y="334" width="120" height="24" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
-<text x="845" y="350" text-anchor="middle" font-size="9" fill="#1A1A1A">adjuvant</text>
-<rect x="785" y="364" width="120" height="24" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
-<text x="845" y="380" text-anchor="middle" font-size="9" fill="#1A1A1A">supportiv</text>
-<line x1="785" y1="398" x2="905" y2="398" stroke="#C8102E" stroke-width="0.8" stroke-dasharray="3,3" />
-<text x="845" y="414" text-anchor="middle" font-size="8" fill="#1A1A1A">Phase (2. Achse):</text>
-<text x="845" y="427" text-anchor="middle" font-size="8" fill="#1A1A1A">Induktion · Konsolidierung ·</text>
-<text x="845" y="439" text-anchor="middle" font-size="8" fill="#1A1A1A">Erhaltung</text>
+<text x="845" y="320" text-anchor="middle" font-size="9" fill="#1A1A1A">supportiv</text>
+<line x1="785" y1="338" x2="905" y2="338" stroke="#C8102E" stroke-width="0.8" stroke-dasharray="3,3" />
+<text x="845" y="352" text-anchor="middle" font-size="8" fill="#1A1A1A">Kontext (Stellung zur OP):</text>
+<rect x="785" y="358" width="58" height="20" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
+<text x="814" y="372" text-anchor="middle" font-size="8" fill="#1A1A1A">neoadjuvant</text>
+<rect x="847" y="358" width="58" height="20" rx="6" fill="#FFFFFF" stroke="#C8102E" stroke-width="1" />
+<text x="876" y="372" text-anchor="middle" font-size="8" fill="#1A1A1A">adjuvant</text>
+<line x1="785" y1="388" x2="905" y2="388" stroke="#C8102E" stroke-width="0.8" stroke-dasharray="3,3" />
+<text x="845" y="402" text-anchor="middle" font-size="8" fill="#1A1A1A">Phase (2. Achse):</text>
+<text x="845" y="414" text-anchor="middle" font-size="8" fill="#1A1A1A">Induktion · Konsolidierung ·</text>
+<text x="845" y="426" text-anchor="middle" font-size="8" fill="#1A1A1A">Erhaltung</text>
 <text x="845" y="462" text-anchor="middle" font-size="8" font-style="italic" fill="#888888">onko-therapy-intent</text>
 <text x="845" y="475" text-anchor="middle" font-size="8" font-style="italic" fill="#888888">CarePlan · Goal · EpisodeOfCare</text></g>
 
@@ -468,7 +472,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-28 10:26:00 +0000">
+  <span title="2026-09-28 11:29:00 +0000">
     2026-09-28
   </span>
 
