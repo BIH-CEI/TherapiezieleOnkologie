@@ -11,3 +11,4 @@ die vormalige Unterscheidung über zwei separate Profile (`OnkoCarePlan` / `Diag
 * ^experimental = true
 * http://snomed.info/sct#261004008 "Diagnostic intent (qualifier value)"
 * http://snomed.info/sct#262202000 "Therapeutic intent (qualifier value)"
+* http://snomed.info/sct#363676003 "Palliative - procedure intent (qualifier value)"
