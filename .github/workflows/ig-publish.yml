@@ -148,6 +148,7 @@ jobs:
             fsh-generated/resources/*.json \
             -version 4.0 \
             -txCache input-cache/txcache \
+            -expansion-parameters .github/expansion-parameters.json \
             ${{ vars.JAVA_VALIDATION_OPTIONS || '-output-style compact -advisor-file advisor.json -resolution-context file:fsh-generated/resources/ -show-message-ids -txLog txlog.html -forPublication -verbose -html-output validation.html -output validation.json' }} \
             $UNESCAPED_IG_DEPS \
             -ig fsh-generated/resources \

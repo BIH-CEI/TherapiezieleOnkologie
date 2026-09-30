@@ -1,0 +1,10 @@
+{
+  "resourceType": "Parameters",
+  "id": "bih-cei-expansion-parameters",
+  "parameter": [
+    {
+      "name": "system-version",
+      "valueUri": "urn:iso:std:iso:3166|20240629"
+    }
+  ]
+}
