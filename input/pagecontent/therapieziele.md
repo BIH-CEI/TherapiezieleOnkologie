@@ -12,6 +12,13 @@ Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt
 Studienteilnahme ist bewusst **keine** Zielart — sie ist ein *Mittel* (investigationale
 Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand.
 
+### Intention im oBDS
+
+Derzeit wird im oBDS lediglich zwischen palliativ und kurativ unterschieden. In der Praxis braucht es in der Versorgung jedoch eine granularere und spezifischere Phasenbeschreibung, da mittlerweile viele onkologische Erkrankungen unter Behandlung nicht zwingend zum Tod führen. Hier sind Themen wie Lebensverlängerung und der Erhalt der Lebensqualität relevant. Daher wird derzeit eine Änderung des oBDS diskutiert.
+
+Die Autoren des IG haben sich deshalb mit Fachexperten um Professor Pukrop vom Universitätsklinikum Regensburg sowie unter Einbindung der Deutschen Gesellschaft für Palliativmedizin (DGP) und der Deutschen Gesellschaft für Hämatologie und Medizinische Onkologie (DGHO) ausgetauscht, die Forschungsprojekte zu Therapiezielen, Patientenpartizipation und Shared Decision Making durchführen. Die genauen Ergebnisse dieser Forschungsgruppen sind noch nicht veröffentlicht, fließen aber in den Änderungsvorschlag zum oBDS ein. An diesem wird sich die Umsetzung im IG anschließend orientieren.
+
+
 ### Zielart ist nicht Therapieintention — zwei Achsen
 
 Die **Zielart** (`Goal.category`) und die **Therapieintention**
