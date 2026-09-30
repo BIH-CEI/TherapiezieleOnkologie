@@ -2,8 +2,8 @@
 
 Liefergegenstand LG-05 · Spezifikation „Onkologische Therapieziele" · Gematik-Auftrag C002717 · BIH-CEI
 
-**Stand:** Entwurf V3 · 30. September 2026
-**Bezugsfassung des Leitfadens:** Arbeitsstand nach dem Episodenart-Umbau (Branch `feat/episodenart-auf-main`), aufsetzend auf der kommentierten Fassung `1.0.0-ballot` und deren Kommentarumsetzungen
+**Stand:** 30. September 2026
+**Bezugsfassung des Leitfadens:** aktueller Stand nach Umsetzung der Ballot-Kommentare und dem Episodenart-Umbau, aufsetzend auf der kommentierten Fassung `1.0.0-ballot`
 **Adressat:** Koordinierungsgremium für Interoperabilität im Gesundheitswesen (KIG) / Auftraggeber
 **Einreichungsweg:** Kommentierungskommentar in die laufende Kommentierung des MII-Moduls Onkologie
 **Zieltermin der vollzogenen Überleitung:** Ende 2027
@@ -46,7 +46,7 @@ Die Spezifikation „Onkologische Therapieziele" wurde am 02.04.2026 von der gem
 
 ## 1.2 Gegenstand
 
-Gegenstand sind sämtliche im Leitfaden definierten Artefakte im aktuellen Arbeitsstand:
+Gegenstand sind sämtliche im Leitfaden definierten Artefakte im aktuellen Stand:
 
 - **5 Profile** — `OnkoTherapyGoal` (Goal), `OnkoCarePlan` (CarePlan), `OnkoBehandlungsepisode` (EpisodeOfCare), `TumorboardServiceRequest`, `TumorboardMedicationRequest`
 - **9 Extensions**, davon 8 projekteigene
@@ -73,7 +73,7 @@ Der Leitfaden modelliert das **Therapieziel-Dreieck**: Behandlungsepisode (*wer 
 
 Der Leitfaden ist bereits heute an MII gekoppelt: Die Abhängigkeit auf `de.medizininformatikinitiative.kerndatensatz.onkologie` ist in `sushi-config.yaml` gepinnt, und sämtliche Diagnosereferenzen zeigen über `targetProfile` direkt auf `mii-pr-onko-diagnose-primaertumor`. Die Überleitung ist damit kein Bruch, sondern die Fortsetzung einer bestehenden Kopplung.
 
-**Zur Fassungslage.** Die Kommentierung lief auf `1.0.0-ballot` — zuletzt vor Beginn der Kommentarumsetzungen am 03.08.2026 veröffentlicht. Seither ist der Leitfaden in zwei Schritten fortentwickelt worden: zunächst durch die **Umsetzung der eingegangenen Kommentare** — dabei entfielen die Profile `DiagnosticCarePlan` und `OnkoCondition`, und es kamen die Kontext-Extension sowie die ValueSets für CarePlan-Phase und Zielbeginn hinzu —, anschließend durch den hier beschriebenen **Episodenart-Umbau**. Dieses Dokument beschreibt den Stand nach beiden Schritten. Wo er von der kommentierten Fassung abweicht, ist das ausgewiesen; der Kommentar selbst muss diese Fortentwicklung offenlegen (Risiko 4a).
+**Zur Fassungslage.** Die Kommentierung lief auf `1.0.0-ballot` — zuletzt vor Beginn der Kommentarumsetzungen am 03.08.2026 veröffentlicht. Seither ist der Leitfaden in zwei Schritten fortentwickelt worden: zunächst durch die **Umsetzung der eingegangenen Kommentare** — dabei entfielen die Profile `DiagnosticCarePlan` und `OnkoCondition`, und es kamen die Kontext-Extension sowie die ValueSets für CarePlan-Phase und Zielbeginn hinzu —, anschließend durch den hier beschriebenen **Episodenart-Umbau**. Dieses Dokument beschreibt den Stand nach beiden Schritten. Wo er von der kommentierten Fassung abweicht, ist das ausgewiesen; der Kommentar selbst muss diese Fortentwicklung offenlegen (Risiko 6).
 
 ## 2.2 Das MII-Modul Onkologie
 
@@ -211,7 +211,7 @@ Der Behandlungsplan ist der episodenspezifische Plan **tatsächlich erbrachter**
 
 Der **diagnostische Abschnitt** ist damit bereits abgedeckt. Der Leitfaden hat sein früheres Profil `DiagnosticCarePlan` aufgegeben und unterscheidet Diagnostik von Therapie seither über `CarePlan.category`, gebunden an das ValueSet `onko-care-plan-phase` (`261004008` Diagnostic intent, `262202000` Therapeutic intent, `363676003` Palliative intent). Das ist dieselbe Lösung, die auch für die Überleitung trägt: ein Profil, zwei Ausprägungen über die Kategorie — ergänzt um die Episodenart „Diagnostiklinie" an der zugehörigen Episode.
 
-**Die Stufung ISiK → Kernprofile ist Teil des Zielbilds.** ISiK ist der richtige *erste* Kanal, weil dort die Krankenhaus-Implementierungen entstehen, an denen sich das Profil bewähren muss. Ein Planungsartefakt, das Terminvergabe und Apothekenanbindung trägt, gehört danach aber nicht dauerhaft in eine sektorspezifische Spezifikation: Sobald die Praxistauglichkeit belegt ist, ist die Überführung auf die Ebene der **Kernprofile** anzustreben, damit auch der ambulante Sektor, Reha und die Vernetzungsstandards darauf aufsetzen können, ohne ISiK zu implementieren. Die MII-Ableitung zieht dann auf die Kernprofil-Fassung um. Praktisch heißt das für den jetzigen Entwurf: Die ISiK-Einreichung darf keine Festlegungen treffen, die nur im stationären Kontext tragen — die Kernprofil-Fähigkeit ist von Beginn an mitzudenken, auch wenn die Überführung erst später ansteht.
+**Die Stufung ISiK → Kernprofile ist Teil des Zielbilds.** ISiK ist der richtige *erste* Kanal, weil dort die Krankenhaus-Implementierungen entstehen, an denen sich das Profil bewähren muss. Ein Planungsartefakt, das Terminvergabe und Apothekenanbindung trägt, gehört danach aber nicht dauerhaft in eine sektorspezifische Spezifikation: Sobald die Praxistauglichkeit belegt ist, ist die Überführung auf die Ebene der **Kernprofile** anzustreben, damit auch der ambulante Sektor, Reha und die Vernetzungsstandards darauf aufsetzen können, ohne ISiK zu implementieren. Die MII-Ableitung zieht dann auf die Kernprofil-Fassung um. Praktisch heißt das für die jetzige Modellierung: Die ISiK-Einreichung darf keine Festlegungen treffen, die nur im stationären Kontext tragen — die Kernprofil-Fähigkeit ist von Beginn an mitzudenken, auch wenn die Überführung erst später ansteht.
 
 Die Doppelung ISiK + MII ist bewusst: ISiK trägt das generische Muster, das MII-Modul die onkologische Verengung (`addresses` auf die Tumordiagnose, `goal` auf das onkologische Therapieziel, Aktivitäten auf die onkologischen Request- und Prozedur-Profile). Die MII-Ableitung ist damit an die ISiK-Aufnahme gebunden — das ist die einzige Abhängigkeit in diesem Plan, die außerhalb der MII-Governance liegt und deshalb früh adressiert werden muss.
 
@@ -446,7 +446,6 @@ Zieltermin für die vollzogene Überleitung: **Ende 2027.**
 | 3 | Abstimmung mit MII-Modul MTB: Begriff „Behandlungsepisode", Abwärtskompatibilität der `Tumorkonferenz`-Ergänzung, Verhältnis der Prioritäts-Extensions | AP 1 | abgestimmte Änderungszusage |
 | 4 | Einreichung des Behandlungsplan-Profils bei ISiK | unabhängig, früh starten | ISiK-Aufnahmeentscheidung |
 | 5 | Terminologie-Entscheidung: Trennung Episodenart/Modalität gegenüber `mii-cs-onko-therapie-typ` | AP 2, TC Terminologien | Festlegung, Grundlage für AP 6 |
-| 5a | ~~Umbau im Leitfaden: Intentions-ValueSet bereinigen, Kontext-Achse~~ | — | **erledigt** — neoadjuvant/adjuvant stehen in `onko-service-request-kontext` |
 | 6 | Erstellung der vier ConceptMaps (3 neu + EnLiST-Änderungstyp ← Ende-Grund) | AP 5 | lauffähige, validierte ConceptMaps |
 | 7 | Begleitung der Disposition; Nachreichen von Profilmaterial, wo der Kommentar es verlangt | AP 1–3, 6 | disponierter Kommentar |
 | 8 | Modul-Release abwarten; Analyse und Pinning im Leitfaden auf die Release-Fassung nachziehen | AP 7 | `sushi-config.yaml`, grüner Build |
@@ -464,13 +463,13 @@ Zieltermin für die vollzogene Überleitung: **Ende 2027.**
 | 1 | Aufnahme eines `EpisodeOfCare`-Profils im MII-Modul nicht konsensfähig | Therapielinie fällt auf Prozedur-Bindung zurück, sektorenübergreifende Fortführung entfällt | Rückfallebene ist vorbereitet: EnLiST-Extensions sind auch für `Procedure` kontextualisiert |
 | 2 | Begriffskollision „Behandlungsepisode" mit MTB bleibt ungelöst | Zwei gleichnamige Artefakte mit verschiedener Semantik im selben Kerndatensatz | Vor Einreichung entscheiden (AP 4); eine der Bezeichnungen wird angepasst |
 | 3 | Die für ISiK 7.0 angedachte Aufnahme des Behandlungsplans verschiebt sich oder entfällt | Weg D bricht; das Profil müsste doch im MII-Modul geführt werden | Zusage für Version 7.0 liegt vor (3.3); Ausweichplan bleibt das eigenständige MII-Profil |
-| 9 | Überführung in die Kernprofile erfolgt nie oder unter abweichender Modellierung | Zwei Behandlungsplan-Fassungen (ISiK und Kernprofil) mit Migrationsaufwand für die MII-Ableitung | ISiK-Einreichung von Beginn an sektorneutral halten (4.4); Überführung als Zielbild dokumentieren, nicht als Zusage |
-| 4 | Terminologie-Entscheidung zugunsten reiner oBDS-Kodierung bei Episodenart und Modalität | SNOMED-Anschluss und EnLiST-Kompatibilität leiden | ConceptMap-Weg (6.3) statt Ersetzung; SNOMED bleibt am Ziel- und Episoden-Profil |
-| 4a | Der Episodenart-Umbau ist noch nicht in `main`; die Kommentierung lief auf `1.0.0-ballot`, das ihn nicht enthält | Der Kommentar beschreibt einen Stand, den die Kommentierenden nicht gesehen haben | Umbau vor AP 1 nach `main` bringen und im Kommentar ausdrücklich als Fortentwicklung gegenüber der kommentierten Fassung kennzeichnen |
-| 5 | EnLiST-Road-Testing bringt Änderungen am Framework | Nachziehen der Extensions und Zählregeln | Als experimentell einbringen (6.6); Versionierung über die Extension-Definition |
-| 6 | Ergänzungen an `Tumorkonferenz` sind doch nicht abwärtskompatibel | MTB-Instanzen würden ungültig | Vor Einreichung gegen MTB-Beispielinstanzen validieren (AP 4) |
-| 7 | Kommentierungsfrist wird verpasst oder der Kommentar wird nicht disponiert; Zieltermin Ende 2027 fällt | Verschiebung um einen vollen Modulzyklus; Leitfaden und Kerndatensatz driften | AP 1 hat Vorrang vor allen anderen Arbeitspaketen; Leitfaden bleibt eigenständig lauffähig, der Rückbau (AP 10) ist bewusst als letzter Schritt geplant |
-| 8 | Abgrenzung `Goal.priority` ↔ `MII_EX_MTB_Empfehlung_Prioritaet` ungeklärt | Doppelte Prioritätsführung | In AP 4 entscheiden; inhaltlich sind es verschiedene Objekte, Doppelung ist vertretbar |
+| 4 | Überführung in die Kernprofile erfolgt nie oder unter abweichender Modellierung | Zwei Behandlungsplan-Fassungen (ISiK und Kernprofil) mit Migrationsaufwand für die MII-Ableitung | ISiK-Einreichung von Beginn an sektorneutral halten (4.4); Überführung als Zielbild dokumentieren, nicht als Zusage |
+| 5 | Terminologie-Entscheidung zugunsten reiner oBDS-Kodierung bei Episodenart und Modalität | SNOMED-Anschluss und EnLiST-Kompatibilität leiden | ConceptMap-Weg (6.3) statt Ersetzung; SNOMED bleibt am Ziel- und Episoden-Profil |
+| 6 | Der eingereichte Stand ist gegenüber der kommentierten Fassung fortentwickelt: `1.0.0-ballot` enthielt weder den Episodenart-Umbau noch die Trennung von Intention und Kontext | Der Kommentar beschreibt ein Modell, das die Kommentierenden in dieser Form nicht gesehen haben | Im Kommentar ausdrücklich als Fortentwicklung kennzeichnen und die beiden Schritte benennen (2.1); der Leitfaden selbst trägt den beschriebenen Stand |
+| 7 | EnLiST-Road-Testing bringt Änderungen am Framework | Nachziehen der Extensions und Zählregeln | Als experimentell einbringen (6.6); Versionierung über die Extension-Definition |
+| 8 | Ergänzungen an `Tumorkonferenz` sind doch nicht abwärtskompatibel | MTB-Instanzen würden ungültig | Vor Einreichung gegen MTB-Beispielinstanzen validieren (AP 4) |
+| 9 | Kommentierungsfrist wird verpasst oder der Kommentar wird nicht disponiert; Zieltermin Ende 2027 fällt | Verschiebung um einen vollen Modulzyklus; Leitfaden und Kerndatensatz driften | AP 1 hat Vorrang vor allen anderen Arbeitspaketen; Leitfaden bleibt eigenständig lauffähig, der Rückbau (AP 10) ist bewusst als letzter Schritt geplant |
+| 10 | Abgrenzung `Goal.priority` ↔ `MII_EX_MTB_Empfehlung_Prioritaet` ungeklärt | Doppelte Prioritätsführung | In AP 4 entscheiden; inhaltlich sind es verschiedene Objekte, Doppelung ist vertretbar |
 
 
 # Anhang A — Artefaktverzeichnis mit Überleitungsweg
@@ -485,10 +484,10 @@ Canonical-Basis des Leitfadens: `https://bih-cei.de/fhir/therapieziele-onkologie
 | `onko-behandlungsepisode` | `EpisodeOfCare` | A | neues MII-Profil |
 | `onko-care-plan` (Empfehlung) | `CarePlan` | B | `mii-pr-onko-tumorkonferenz` |
 | `onko-care-plan` (Behandlung) | `CarePlan` | D | ISiK → Kernprofile → MII-Ableitung |
-| ~~`onko-diagnostic-care-plan`~~ | `CarePlan` | — | im Zuge der Kommentierung entfallen; Unterscheidung über `CarePlan.category` |
+| `onko-diagnostic-care-plan` *(entfallen)* | `CarePlan` | — | im Zuge der Kommentierung gestrichen; Unterscheidung läuft über `CarePlan.category` |
 | `onko-tumorboard-medication-request` | `MedicationRequest` | B | `mii-pr-onko-therapieempfehlung-medikation` |
 | `onko-tumorboard-service-request` | `ServiceRequest` | B | `mii-pr-onko-therapieempfehlung-operation` |
-| ~~`onko-condition`~~ | `mii-pr-onko-diagnose-primaertumor` | C | im Zuge der Kommentierung entfallen; Referenzen zeigen direkt auf das MII-Profil |
+| `onko-condition` *(entfallen)* | `mii-pr-onko-diagnose-primaertumor` | C | im Zuge der Kommentierung gestrichen; Referenzen zeigen direkt auf das MII-Profil |
 
 ## A.2 Extensions
 

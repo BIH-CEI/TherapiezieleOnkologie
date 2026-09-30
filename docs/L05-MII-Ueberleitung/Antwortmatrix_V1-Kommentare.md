@@ -8,7 +8,7 @@ Originalwortlaut, mit Ankertext.
 |---:|---|---|---|---|
 | 1 | „de.bih-cei.therapieziele-onkologie)" | Hier richtige URL von GitHub einfügen und erwähnen, das es momentan auf GitHub gehostet wird | Übernommen — Quellen- und Rendering-URL ergänzt, Hosting benannt | Zusammenfassung, 1. Absatz |
 | 2 | „Der größte inhaltliche Klärungsbedarf liegt in der Terminologie …" | Hier hatten wir im Bild eigentlich entschieden, dass neoadjuvant, adjuvant zum kontext gehört und nicht zur intention | Übernommen — Kernaussage 5 umgeschrieben; beide Modelle laufen damit zusammen | Zusammenfassung, Kernaussage 5 |
-| 3 | „Mengengerüst der Überleitung" | In der Unten | **Offen — Rückfrage** | — |
+| 3 | „Mengengerüst der Überleitung" | In der Unten | Übernommen — dieselbe Bitte wie Kommentar 14: Binding-Spalte und ausgeschriebene Antwortmöglichkeiten in der Terminologietabelle | 6.1 |
 | 4 | „Zielmodul dieser Überleitung ist ausschließlich das MII-Kerndatensatzmodul Onkologie …" | Ja, müssen wir gucken ob das überhaupt der Fall ist. | Übernommen — als offene Prüfung formuliert statt als Feststellung | 1.3 |
 | 5 | „Kerndatensatzes." | Da sie sich mit den strukturellen Datenaustauschformaten bzw. der abstrakten Abbildung von Leitlinien befassen und nicht mit den konkreten instanziierten Datenelementen selbst. | Übernommen — Begründung wörtlich angefügt | 1.3 |
 | 6 | „Leitlinienbindung" | Ergänzen: Häufig sind Patienten, die eine vertiefende Diagnostik an einem Molekularen Tumorboard bekommen, jedoch entweder bereits „austherapiert", d.h. die Leitlinien sehen keine weiteren Therapien vor, oder es handelt sich um seltene Tumore, für die es keine oder wenig übergreifende Evidenz gibt und daher direkt personalisiert behandelt werden | Übernommen — mit der Folgerung, dass eine Leitlinienbindung des Zielwerts in diesen Fällen nicht trägt | 2.3 |
@@ -22,18 +22,6 @@ Originalwortlaut, mit Ankertext.
 | 14 | „ConceptMapOnkoTherapyGoalTypeSct … Zielarten → SNOMED-Zielzustände" | In der obenstehenden Tavelle das binding als extraspalte und auch die antwortmöglichkeiten explizit auflisten | Übernommen — Tabelle um Spalte „Bindung" erweitert, alle Konzepte je Artefakt ausgeschrieben | 6.1 |
 | 15 | „neoadjuvant · adjuvant ·" | Das muss meines verständnisses raus, weil das Kontext und nich tintention ist und mit den anderen sachen zusammen kann. | Übernommen — 6.2 vollständig neu geschrieben; Intention auf kurativ/palliativ/supportiv reduziert, Stellung zur OP als eigenes Merkmal. **Folge: Umbau des IG-ValueSets `onko-therapy-intent` als AP 5a, Voraussetzung der Einreichung** | 6.2, 4.2, 5.1 Zeile 3/3a, AP 5a, Risiko 4a |
 | 16 | „dann zwei bzw. drei Modalitäts-Extensions." | Über FHIR Invarianten D | Übernommen — Konsistenz zwischen Kombinationscode und Mehrfachbelegung wird über FHIR-Invarianten abgesichert | 6.3 |
-
-## Offene Rückfrage
-
-**Kommentar 3** („In der Unten", verankert an der Überschrift *Mengengerüst der Überleitung*)
-ist mir nicht eindeutig. Zwei Lesarten:
-
-1. Das Mengengerüst soll weiter nach unten wandern (etwa hinter die Wegetabelle in 3.1
-   oder in den Anhang).
-2. Die Zahlen sollen mit der Tabelle unten — der Wegetabelle in 3.1 bzw. dem
-   Artefaktverzeichnis in Anhang A — zusammengeführt werden, statt doppelt zu stehen.
-
-Bis zur Klärung unverändert gelassen.
 
 ## Hinweis zur Fassungsverwaltung
 
