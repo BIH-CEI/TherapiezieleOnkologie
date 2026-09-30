@@ -3,7 +3,7 @@
 Liefergegenstand LG-05 · Spezifikation „Onkologische Therapieziele" · Gematik-Auftrag C002717 · BIH-CEI
 
 **Stand:** Entwurf V3 · 30. September 2026
-**Bezugsfassung des Leitfadens:** Arbeitsstand nach dem Episodenart-Umbau (Branch `feat/episodenart-auf-main`), aufsetzend auf der kommentierten Ballot-Fassung `1.0.0-ballot-rc.2` und deren Kommentarumsetzungen
+**Bezugsfassung des Leitfadens:** Arbeitsstand nach dem Episodenart-Umbau (Branch `feat/episodenart-auf-main`), aufsetzend auf der kommentierten Fassung `1.0.0-ballot` und deren Kommentarumsetzungen
 **Adressat:** Koordinierungsgremium für Interoperabilität im Gesundheitswesen (KIG) / Auftraggeber
 **Einreichungsweg:** Kommentierungskommentar in die laufende Kommentierung des MII-Moduls Onkologie
 **Zieltermin der vollzogenen Überleitung:** Ende 2027
@@ -73,7 +73,7 @@ Der Leitfaden modelliert das **Therapieziel-Dreieck**: Behandlungsepisode (*wer 
 
 Der Leitfaden ist bereits heute an MII gekoppelt: Die Abhängigkeit auf `de.medizininformatikinitiative.kerndatensatz.onkologie` ist in `sushi-config.yaml` gepinnt, und sämtliche Diagnosereferenzen zeigen über `targetProfile` direkt auf `mii-pr-onko-diagnose-primaertumor`. Die Überleitung ist damit kein Bruch, sondern die Fortsetzung einer bestehenden Kopplung.
 
-**Zur Fassungslage.** Die Kommentierung lief auf `1.0.0-ballot-rc.2` (31.07.2026). Seither ist der Leitfaden in zwei Schritten fortentwickelt worden: zunächst durch die **Umsetzung der eingegangenen Kommentare** — dabei entfielen die Profile `DiagnosticCarePlan` und `OnkoCondition`, und es kamen die Kontext-Extension sowie die ValueSets für CarePlan-Phase und Zielbeginn hinzu —, anschließend durch den hier beschriebenen **Episodenart-Umbau**. Dieses Dokument beschreibt den Stand nach beiden Schritten. Wo er von der kommentierten Fassung abweicht, ist das ausgewiesen; der Kommentar selbst muss diese Fortentwicklung offenlegen (Risiko 4a).
+**Zur Fassungslage.** Die Kommentierung lief auf `1.0.0-ballot` — zuletzt vor Beginn der Kommentarumsetzungen am 03.08.2026 veröffentlicht. Seither ist der Leitfaden in zwei Schritten fortentwickelt worden: zunächst durch die **Umsetzung der eingegangenen Kommentare** — dabei entfielen die Profile `DiagnosticCarePlan` und `OnkoCondition`, und es kamen die Kontext-Extension sowie die ValueSets für CarePlan-Phase und Zielbeginn hinzu —, anschließend durch den hier beschriebenen **Episodenart-Umbau**. Dieses Dokument beschreibt den Stand nach beiden Schritten. Wo er von der kommentierten Fassung abweicht, ist das ausgewiesen; der Kommentar selbst muss diese Fortentwicklung offenlegen (Risiko 4a).
 
 ## 2.2 Das MII-Modul Onkologie
 
@@ -466,7 +466,7 @@ Zieltermin für die vollzogene Überleitung: **Ende 2027.**
 | 3 | Die für ISiK 7.0 angedachte Aufnahme des Behandlungsplans verschiebt sich oder entfällt | Weg D bricht; das Profil müsste doch im MII-Modul geführt werden | Zusage für Version 7.0 liegt vor (3.3); Ausweichplan bleibt das eigenständige MII-Profil |
 | 9 | Überführung in die Kernprofile erfolgt nie oder unter abweichender Modellierung | Zwei Behandlungsplan-Fassungen (ISiK und Kernprofil) mit Migrationsaufwand für die MII-Ableitung | ISiK-Einreichung von Beginn an sektorneutral halten (4.4); Überführung als Zielbild dokumentieren, nicht als Zusage |
 | 4 | Terminologie-Entscheidung zugunsten reiner oBDS-Kodierung bei Episodenart und Modalität | SNOMED-Anschluss und EnLiST-Kompatibilität leiden | ConceptMap-Weg (6.3) statt Ersetzung; SNOMED bleibt am Ziel- und Episoden-Profil |
-| 4a | Der Episodenart-Umbau ist noch nicht in `main`; die Kommentierung lief auf `1.0.0-ballot-rc.2`, das ihn nicht enthält | Der Kommentar beschreibt einen Stand, den die Kommentierenden nicht gesehen haben | Umbau vor AP 1 nach `main` bringen und im Kommentar ausdrücklich als Fortentwicklung gegenüber der kommentierten Fassung kennzeichnen |
+| 4a | Der Episodenart-Umbau ist noch nicht in `main`; die Kommentierung lief auf `1.0.0-ballot`, das ihn nicht enthält | Der Kommentar beschreibt einen Stand, den die Kommentierenden nicht gesehen haben | Umbau vor AP 1 nach `main` bringen und im Kommentar ausdrücklich als Fortentwicklung gegenüber der kommentierten Fassung kennzeichnen |
 | 5 | EnLiST-Road-Testing bringt Änderungen am Framework | Nachziehen der Extensions und Zählregeln | Als experimentell einbringen (6.6); Versionierung über die Extension-Definition |
 | 6 | Ergänzungen an `Tumorkonferenz` sind doch nicht abwärtskompatibel | MTB-Instanzen würden ungültig | Vor Einreichung gegen MTB-Beispielinstanzen validieren (AP 4) |
 | 7 | Kommentierungsfrist wird verpasst oder der Kommentar wird nicht disponiert; Zieltermin Ende 2027 fällt | Verschiebung um einen vollen Modulzyklus; Leitfaden und Kerndatensatz driften | AP 1 hat Vorrang vor allen anderen Arbeitspaketen; Leitfaden bleibt eigenständig lauffähig, der Rückbau (AP 10) ist bewusst als letzter Schritt geplant |
