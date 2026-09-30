@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="onko-service-request-kontext"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet onko-service-request-kontext</b></p><a name="onko-service-request-kontext"> </a><a name="hconko-service-request-kontext"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/255470001">255470001</a></td><td>Local (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/264931009">264931009</a></td><td>Symptomatic (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/129428001">129428001</a></td><td>Preventive - procedure intent</td></tr><tr><td><a href="http://snomed.info/id/261002007">261002007</a></td><td>Definitive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/373847000">373847000</a></td><td>Neoadjuvant intent</td></tr><tr><td><a href="http://snomed.info/id/373846009">373846009</a></td><td>Adjuvant - intent</td></tr><tr><td><a href="http://snomed.info/id/260364009">260364009</a></td><td>Additive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/277671009">277671009</a></td><td>Intraoperative (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/103390000">103390000</a></td><td>Elective (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/25876001">25876001</a></td><td>Emergency (qualifier value)</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-service-request-kontext"/>
+  <version value="1.0.0-ballot"/>
+  <name value="OnkoServiceRequestKontextVS"/>
+  <title value="Kontext einer Tumorboard-Empfehlung (VS)"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-09-30T19:48:43+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine&#xA;Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv&#xA;oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.&#xA;&#xA;**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und&#xA;`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als&#xA;`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der&#xA;Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="255470001"/>
+        <display value="Local (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="264931009"/>
+        <display value="Symptomatic (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="129428001"/>
+        <display value="Preventive - procedure intent"/>
+      </concept>
+      <concept>
+        <code value="261002007"/>
+        <display value="Definitive (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="373847000"/>
+        <display value="Neoadjuvant intent"/>
+      </concept>
+      <concept>
+        <code value="373846009"/>
+        <display value="Adjuvant - intent"/>
+      </concept>
+      <concept>
+        <code value="260364009"/>
+        <display value="Additive (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="277671009"/>
+        <display value="Intraoperative (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="103390000"/>
+        <display value="Elective (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="25876001"/>
+        <display value="Emergency (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

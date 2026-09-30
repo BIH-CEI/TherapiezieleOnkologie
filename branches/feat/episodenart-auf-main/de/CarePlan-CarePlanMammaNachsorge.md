@@ -1,0 +1,93 @@
+# Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
+
+## Beispiel CarePlan: Onkologischer CarePlan – Nachsorge/Surveillance Mamma (Beispiel)
+
+-------
+
+**German**
+
+-------
+
+Profile: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md)
+
+**CarePlan Custodian (Extension)**: [Organization Zertifiziertes Brustzentrum Musterklinik](Organization-TumorzentrumMamma.md)
+
+**status**: Active
+
+**intent**: Plan
+
+**category**: Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse, Therapeutic intent (qualifier value)
+
+**subject**: [Sabine Baumann Female, DoB: 1977-06-24](Patient-PatientinMamma.md)
+
+**period**: 2026-08-15 --> (ongoing)
+
+**author**: [Practitioner Katrin Musterarzt ](Practitioner-OnkologinMamma.md)
+
+**addresses**: [Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse](Condition-ConditionMamma.md)
+
+**goal**: [Goal: extension = ,,; lifecycleStatus = planned; achievementStatus = In Progress; category = Lebensqualität; priority = High Priority; description = ; start[x] = 2026-08-15](Goal-FollowUpGoal.md)
+
+### Activities
+
+| | |
+| :--- | :--- |
+| - | **Reference** |
+| * | [ServiceRequest Mammografie](ServiceRequest-ServiceRequestMammographieNachsorge.md) |
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CarePlan",
+  "id" : "CarePlanMammaNachsorge",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan"]
+  },
+  "extension" : [{
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+    "valueReference" : {
+      "reference" : "Organization/TumorzentrumMamma"
+    }
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "code" : "C50.4",
+      "display" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "262202000",
+      "display" : "Therapeutic intent (qualifier value)"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "period" : {
+    "start" : "2026-08-15"
+  },
+  "author" : {
+    "reference" : "Practitioner/OnkologinMamma"
+  },
+  "addresses" : [{
+    "reference" : "Condition/ConditionMamma"
+  }],
+  "goal" : [{
+    "reference" : "Goal/FollowUpGoal"
+  }],
+  "activity" : [{
+    "reference" : {
+      "reference" : "ServiceRequest/ServiceRequestMammographieNachsorge"
+    }
+  }]
+}
+
+```

@@ -1,0 +1,70 @@
+# Anwendungsbeispiel (mCRC palliativ) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
+
+## Anwendungsbeispiel (mCRC palliativ)
+
+ 
+There is no translation page available for the current page, so it has been rendered in the default language 
+
+Diese Seite zeigt – in Anlehnung an die [szenariobasierte Darstellung des MII IG Modul Onkologie](https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current) – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens sowie das [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) nutzt: `OnkoCarePlan` (diagnostischer und therapeutischer Abschnitt über `category`), `OnkoBehandlungsepisode`, `OnkoTherapyGoal`, `TumorboardMedicationRequest` und `TumorboardServiceRequest`.
+
+### Klinische Erzählung
+
+Eine 67-jährige Patientin stellt sich mit einem synchron metastasierten Kolonkarzinom (mCRC, Lebermetastasen) vor. Der **Diagnostikpfad** – Koloskopie mit Biopsie und histopathologische Sicherung – wird über einen `DiagnosticCarePlan` abgebildet und mündet in die gesicherte Diagnose (MII-Onkologie-Diagnoseprofil). Das interdisziplinäre **Tumorboard** (`CareTeam`) empfiehlt eine **palliative Systemtherapie** (FOLFOX + Bevacizumab, `TumorboardMedicationRequest`) sowie die Anlage eines **Portkatheters** (`TumorboardServiceRequest`). Die übergeordneten Therapieziele sind **Lebensverlängerung** und **Symptomkontrolle**. Das Tumoransprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet.
+
+### Informationsmodell
+
+Das Beispiel bildet das MCC-orientierte Beziehungsmodell ab: Der `OnkoCarePlan` ist das zentrale Steuerobjekt, das die adressierte Erkrankung (`addresses`), das übergeordnete Ziel (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity.reference` / `activity.outcomeReference`) zusammenführt.
+
+Der folgende Referenzgraph zeigt die **Kernbeziehungen des Therapie-CarePlan** (die vollständige Ressourcenliste inkl. Diagnostikpfad und Tumorboard steht in der Tabelle unten). Durchgezogene Pfeile sind fachliche Referenzen (mit Feldnamen), gestrichelte Pfeile die `subject`-Referenzen aller Ressourcen auf die Patientin (zu einem „subject-Bus" zusammengefasst). Der Graph ist gerichtet und **zyklenfrei** — jede Referenz verweist vom referenzierenden auf das referenzierte Resource, ohne Rückkanten.
+
+| | | |
+| :--- | :--- | :--- |
+| Patient:in | `Patient` | [PatientinCRC](Patient-PatientinCRC.md) |
+| Tumorerkrankung | `MII PR Onko Diagnose Primärtumor` | [ConditionCRC](Condition-ConditionCRC.md) |
+| Diagnostik-Plan | `OnkoCarePlan`(Therapieabschnitt: Diagnostic intent) | [DiagnostikCarePlanCRC](CarePlan-DiagnostikCarePlanCRC.md) |
+| Diagnostik-Anforderung | `ServiceRequest` | [ServiceRequestKoloskopieCRC](ServiceRequest-ServiceRequestKoloskopieCRC.md) |
+| Diagnostik-Ergebnis | `DiagnosticReport` | [DiagnosticReportHistologieCRC](DiagnosticReport-DiagnosticReportHistologieCRC.md) |
+| Therapie-Plan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md) |
+| Therapielinie (aLoT 1.0) | `OnkoBehandlungsepisode` | [TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md) |
+| Therapieziel (palliativ) | `OnkoTherapyGoal` | [TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md) |
+| Therapieziel (abgelehnt) | `OnkoTherapyGoal` | [TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md) |
+| Therapieziel (Erhaltung) | `OnkoTherapyGoal` | [TherapiezielCRCErhaltung](Goal-TherapiezielCRCErhaltung.md) |
+| Tumorboard | `CareTeam` | [TumorboardCRC](CareTeam-TumorboardCRC.md) |
+| Empfehlung Systemtherapie | `TumorboardMedicationRequest` | [MedicationRequestFOLFOX](MedicationRequest-MedicationRequestFOLFOX.md) |
+| Empfehlung Portanlage | `TumorboardServiceRequest` | [ServiceRequestPortCRC](ServiceRequest-ServiceRequestPortCRC.md) |
+| Tumoransprechen | `Observation` | [ObservationDiseaseStatusCRC](Observation-ObservationDiseaseStatusCRC.md) |
+| Custodian / Zentrum | `Organization` | [TumorzentrumCRC](Organization-TumorzentrumCRC.md) |
+| Behandlerin | `Practitioner` | [OnkologinCRC](Practitioner-OnkologinCRC.md) |
+
+**EnLiST-Sicht:** Die Erstlinie ist eine systemische Linie im fortgeschrittenen Setting — Designation **`aLoT 1.0`** (`enlist-lot` an der Therapielinie; Führung und Ausführung fallen hier in einer Episode zusammen, `enlist-countable = counted`). Der Empfehlungs-Request trägt den Änderungstyp **New LoT** (Linieneröffnung). Siehe [Behandlungsepisoden](behandlungsepisode.md).
+
+### Verknüpfungen im Beispiel
+
+* **Diagnostikpfad:** Der diagnostische `OnkoCarePlan` (`category[therapieabschnitt] = Diagnostic intent`, SNOMED `261004008`) adressiert dieselbe Tumordiagnose (MII-Onkologie-Diagnoseprofil, `category[erkrankungsart]` trägt denselben ICD-10-GM-Code) und führt geplante Anforderung (`activity.reference` → `ServiceRequest` Koloskopie) und Ergebnis (`activity.outcomeReference` → `DiagnosticReport` Histologie) zusammen. Der Therapie-CarePlan (`category[therapieabschnitt] = Therapeutic intent`, SNOMED `262202000`) verweist über `supportingInfo` auf den Diagnostik-CarePlan.
+* **Tumorboard:** Die Empfehlungen (`TumorboardMedicationRequest`, `TumorboardServiceRequest`) tragen im `category` den LOINC-Code `85232-7` (Tumor board Consult note); das `CareTeam` ist als `careTeam` am Therapie-CarePlan und als `team` an der Therapielinie hinterlegt.
+* **Therapieintention (zwei Achsen):** Die Extension `onko-therapy-intent` codiert `hauptintention` (hier `palliativ`, SNOMED `363676003`) und optional `phase` (hier `Induktionstherapie`, SNOMED `450827009`). So ist „palliativ + Induktionsphase" gleichzeitig ausdrückbar; die Codes sind extensible gebunden.
+* **CarePlan → Erkrankung:** `addresses` referenziert direkt das [MII-Onkologie-Diagnoseprofil](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) (Primärtumor, v2026.0.3).
+* **CarePlan → Ziel:** `goal` referenziert das `OnkoTherapyGoal` (Kategorien Lebensverlängerung + Symptomkontrolle).
+* **Geplant vs. durchgeführt:** `activity.reference` → geplante Maßnahmen (Tumorboard-Empfehlungen); `activity.outcomeReference` → dokumentiertes Ergebnis (`Observation`).
+* **Ziel → Ergebnis:** `Goal.outcomeReference` bindet die Verlaufs-Observation (Disease Status), wodurch der `achievementStatus` (hier `in-progress`) auswertbar wird.
+
+### Aus MCC übernommene Extensions im Beispiel
+
+* **`goal-acceptance`** (MCCGoal): Die Patientin stimmt dem palliativen Ziel mit hoher Priorität zu (`status = agree`).
+* **`goal-reasonRejected`** (MCCGoal): Das in der Tumorkonferenz erwogene kurative Ziel ([TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md), `lifecycleStatus = rejected`) trägt die Ablehnungsbegründung (nicht resektable Metastasierung).
+* **`goal-relationship`** (MCCGoal): Das Induktionsziel ([TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md)) ist gleich zweifach verknüpft — als `replacement` mit dem abgelehnten kurativen Ziel und als `successor` mit dem nachgelagerten Erhaltungsziel ([TherapiezielCRCErhaltung](Goal-TherapiezielCRCErhaltung.md)), das seinerseits als `predecessor` zurückverweist.
+* **`custodian`** (MCC CarePlan, R5-Backport): Das [Tumorzentrum](Organization-TumorzentrumCRC.md) ist als für Pflege und Aktualisierung des Plans verantwortliche Stelle hinterlegt.
+
+#### goal-relationship – Bedeutung der Beziehungstypen
+
+Codesystem `http://terminology.hl7.org/CodeSystem/goal-relationship-type`. Die Beziehung wird immer aus Sicht des **ursprünglichen Zieles** (das die Extension trägt) auf das **neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles)** (`target`) angegeben:
+
+| | | |
+| :--- | :--- | :--- |
+| `predecessor` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) muss**vorher**erreicht werden. | Erhaltungsziel → predecessor → Induktionsziel |
+| `successor` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) ist das angestrebte Ziel,**nachdem**dieses erreicht ist. | Induktionsziel → successor → Erhaltungsziel |
+| `replacement` | Dieses Ziel wurde**durch**das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles)**ersetzt**. | palliatives Ziel → replacement → abgelehntes kuratives Ziel |
+| `milestone` | Das neue Ziel (nach Abschluss oder Abbruch des ursprünglichen Zieles) ist ein**Teilschritt**dieses Ziels. | (nicht im Beispiel) |
+
+`predecessor` und `successor` sind zueinander invers: Induktions- und Erhaltungsziel verweisen wechselseitig aufeinander und bilden so die zeitliche Sequenz ab.
+

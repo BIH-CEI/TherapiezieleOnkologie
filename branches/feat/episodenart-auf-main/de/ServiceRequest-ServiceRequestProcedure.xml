@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ServiceRequestProcedure"/>
+  <meta>
+    <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest ServiceRequestProcedure</b></p><a name="ServiceRequestProcedure"> </a><a name="hcServiceRequestProcedure"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-onko-tumorboard-service-request.html">Tumorboard ServiceRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>category</b>: <span title="Codes:{http://loinc.org 85232-7}">Tumor board Consult note</span>, <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 392021009}">Lumpectomy of breast (procedure)</span></p><p><b>subject</b>: <a href="Patient-PatientinMamma.html">Sabine Baumann  Female, DoB: 1977-06-24</a></p></div>
+  </text>
+  <status value="active"/>
+  <intent value="proposal"/>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="85232-7"/>
+      <display value="Tumor board Consult note"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="392021009"/>
+      <display value="Lumpectomy of breast (procedure)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinMamma"/>
+  </subject>
+</ServiceRequest>

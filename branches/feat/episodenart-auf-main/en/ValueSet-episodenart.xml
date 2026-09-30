@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="episodenart"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet episodenart</b></p><a name="en-episodenart"> </a><a name="en-hcepisodenart"> </a><ul><li>Include all codes defined in <a href="CodeSystem-episodenart.html"><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;1.0.0-ballot</span></li></ul></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart"/>
+  <version value="1.0.0-ballot"/>
+  <name value="EpisodenartVS"/>
+  <title value="Episode type value set"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-09-30T19:48:43+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="All starter-set episode types; the binding is extensible — entity-specific types may be added."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart"/>
+    </include>
+  </compose>
+</ValueSet>

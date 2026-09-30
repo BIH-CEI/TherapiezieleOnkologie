@@ -1,0 +1,23 @@
+{
+  "resourceType" : "MedicationAdministration",
+  "id" : "MedicationAdministrationPembroAdjuvantMamma1",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration MedicationAdministrationPembroAdjuvantMamma1</b></p><a name=\"en-MedicationAdministrationPembroAdjuvantMamma1\"> </a><a name=\"en-hcMedicationAdministrationPembroAdjuvantMamma1\"> </a><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:\">Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2026-04-24</p><p><b>request</b>: <a href=\"MedicationRequest-MedicationRequestPembroAdjuvantMamma.html\">MedicationRequest: extension = Same LoT; status = active; intent = plan; category = Tumor board Consult note; medication[x] = </a></p><p><b>note</b>: </p><blockquote><div><p>Zyklus 1 von ~9 (q3w), ambulant</p>\n</div></blockquote></div>"
+  },
+  "status" : "completed",
+  "medicationCodeableConcept" : {
+    "text" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "effectiveDateTime" : "2026-04-24",
+  "request" : {
+    "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+  },
+  "note" : [{
+    "text" : "Zyklus 1 von ~9 (q3w), ambulant"
+  }]
+}

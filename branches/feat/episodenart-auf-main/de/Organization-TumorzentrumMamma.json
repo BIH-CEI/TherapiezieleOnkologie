@@ -1,0 +1,10 @@
+{
+  "resourceType" : "Organization",
+  "id" : "TumorzentrumMamma",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Organization TumorzentrumMamma</b></p><a name=\"TumorzentrumMamma\"> </a><a name=\"hcTumorzentrumMamma\"> </a><p><b>name</b>: Zertifiziertes Brustzentrum Musterklinik</p></div>"
+  },
+  "name" : "Zertifiziertes Brustzentrum Musterklinik"
+}
