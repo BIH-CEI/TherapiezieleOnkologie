@@ -12,7 +12,7 @@
 <rect x="330" y="44" width="280" height="3" fill="#C8102E"/>
 <text x="470" y="66" text-anchor="middle" font-size="11" fill="#555555">CarePlan · Goal · EpisodeOfCare — BIH-CEI · Schicht 3 (Fallback-Pfad)</text>
 
-<text x="470" y="100" text-anchor="middle" font-size="9.5" font-style="italic" fill="#777777">OnkoCarePlan.goal → OnkoTherapyGoal · Extension workflow-episodeOfCare → OnkoTherapyLine · instantiatesCanonical → PlanDefinition</text>
+<text x="470" y="100" text-anchor="middle" font-size="9.5" font-style="italic" fill="#777777">OnkoCarePlan.goal → OnkoTherapyGoal · Extension workflow-episodeOfCare → OnkoBehandlungsepisode · instantiatesCanonical → PlanDefinition</text>
 
 <path d="M273,126 h58 l13,13 v47 h-71 z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.4"/>
 <path d="M331,126 v13 h13" fill="none" stroke="#1A1A1A" stroke-width="1.1"/>
@@ -22,7 +22,7 @@
 <path d="M445,126 h58 l13,13 v47 h-71 z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.4"/>
 <path d="M503,126 v13 h13" fill="none" stroke="#1A1A1A" stroke-width="1.1"/>
 <text x="480" y="152" text-anchor="middle" font-size="9" font-weight="600" fill="#1A1A1A">EpisodeOfCare</text>
-<text x="480" y="167" text-anchor="middle" font-size="7.5" fill="#888888">OnkoTherapyLine</text>
+<text x="480" y="167" text-anchor="middle" font-size="7.5" fill="#888888">OnkoBehandlungsepisode</text>
 
 <path d="M620,126 h58 l13,13 v47 h-71 z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.4"/>
 <path d="M678,126 v13 h13" fill="none" stroke="#1A1A1A" stroke-width="1.1"/>
@@ -35,7 +35,7 @@
 <text x="769" y="146" text-anchor="middle" font-size="8.5" font-weight="600" fill="#1A1A1A">PlanDef.</text>
 <text x="769" y="159" text-anchor="middle" font-size="7" fill="#888888">CPG-on-FHIR</text>
 <text x="769" y="169" text-anchor="middle" font-size="7" fill="#888888">(optional)</text>
-<text x="716" y="186" text-anchor="middle" font-size="7.5" fill="#888888">instantiatesCanonical</text>
+<text x="769" y="188" text-anchor="middle" font-size="7.5" fill="#888888">instantiatesCanonical</text>
 
 <line x1="308" y1="188" x2="308" y2="256" stroke="#888888" stroke-width="1.1" stroke-dasharray="4,4" marker-end="url(#argr2)"/>
 <line x1="480" y1="188" x2="480" y2="256" stroke="#888888" stroke-width="1.1" stroke-dasharray="4,4" marker-end="url(#argr2)"/>
@@ -74,12 +74,12 @@
 <text x="380" y="384" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1A1A1A">Ziel erreicht /</text>
 <text x="380" y="398" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1A1A1A">Linienwechsel?</text>
 
-<line x1="298" y1="388" x2="260" y2="388" stroke="#1A1A1A" stroke-width="1.8" marker-end="url(#arbk)"/>
-<text x="279" y="378" text-anchor="middle" font-size="8" fill="#555555">erreicht</text>
-<circle cx="242" cy="388" r="14" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.8"/>
-<circle cx="242" cy="388" r="9" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
-<text x="242" y="414" text-anchor="middle" font-size="8" fill="#888888">Ziel-Abschluss</text>
-<text x="242" y="426" text-anchor="middle" font-size="8" fill="#888888">completed + achieved</text>
+<line x1="298" y1="388" x2="228" y2="388" stroke="#1A1A1A" stroke-width="1.8" marker-end="url(#arbk)"/>
+<text x="263" y="378" text-anchor="middle" font-size="8" fill="#555555">erreicht</text>
+<circle cx="210" cy="388" r="14" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.8"/>
+<circle cx="210" cy="388" r="9" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="218" y="414" text-anchor="middle" font-size="8" fill="#888888">Ziel-Abschluss</text>
+<text x="218" y="426" text-anchor="middle" font-size="8" fill="#888888">completed + achieved</text>
 
 <path d="M380,350 L380,334 L484,334 L484,324" fill="none" stroke="#1E7A46" stroke-width="1.8" marker-end="url(#argn2)"/>
 <text x="494" y="344" font-size="8.5" font-weight="600" fill="#1E7A46">Wechsel → neue Linie</text>

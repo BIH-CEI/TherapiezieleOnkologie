@@ -1,0 +1,19 @@
+{
+  "id" : "MedicationAdministration-MedicationAdministrationPembroAdjuvantMamma3",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Zyklus 3 von ~9 (q3w), ambulant; Therapie läuft weiter",
+      "target" : null
+    }]
+  }]
+}

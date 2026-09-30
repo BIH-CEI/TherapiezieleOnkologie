@@ -82,8 +82,8 @@ Die Zielart des übergeordneten Ziels wird durch die Extension
 
 > **Zielmodell.** Die saubere Trennung „ein aktives übergeordnetes Ziel + optionale
 > Episodenziele" sowie die Behandlung eines Strategiewechsels (s. u.) sind
-> architektonisch festgelegt und werden im laufenden Ausbau des Profilsatzes
-> umgesetzt.
+> architektonisch festgelegt und im Profilsatz umgesetzt (`OnkoTherapyGoal`,
+> `goal-relationship`, `replacement`).
 
 ### Über die Onkologie hinaus — weitere Intentionen und Entitäten
 

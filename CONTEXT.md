@@ -82,7 +82,15 @@ Surveillance durchläuft. `outcomeReference` (die *evidenzierende* Observation) 
 dagegen **pro Ziel eigen** und phasengerecht; **leer**, solange kein Ergebnis
 beobachtet wurde. Dieselbe Observation für mehrere Ziele zu verwenden vermischt
 verschiedene Fragen („diagnostiziert?" / „geheilt?" / „rezidiviert?").
-_Vermeiden_: geteilte `outcomeReference` „aus Bequemlichkeit".
+Das evidenzierende Ergebnis ist stets die **patientenbezogene
+Gesamt-Beobachtung** (z. B. der *globale* R-Status als Observation), nie das
+Ergebnis einer Einzelprozedur (`Procedure.outcome` — mehrere Einzeleingriffe
+können unterschiedliche R-Status haben). Herkunft: Der globale R-Status stammt
+aus dem **Patho-Befund** (`DiagnosticReport` der Pathologie), nicht aus dem
+OP-Planungs-/Dokumentationssystem. Maßnahmen-Ebene und Ziel-Evidenz bleiben
+getrennt.
+_Vermeiden_: geteilte `outcomeReference` „aus Bequemlichkeit"; Einzelprozeduren-
+Outcome als Ziel-Evidenz.
 
 **Status-Konvention** (lifecycle × achievement)  ·  FHIR: `Goal.lifecycleStatus` / `Goal.achievementStatus`
 _EN_: status convention
@@ -131,6 +139,18 @@ je-Art-Extension. Ersetzt das frühere, auf aktive Therapie verengte
 `OnkoTherapyLine`. Mehrere/eskalierende Episoden derselben Art sind normal.
 _Vermeiden_: Versorgungsepisode, Behandlungslinie (zu eng)
 
+**Episodenart**
+_EN_: episode type
+Die **Art** einer [[Behandlungsepisode]] — offenes, codiertes Merkmal:
+systemische [[Therapielinie]], [[Lokoregionale Behandlungslinie]],
+[[Diagnostiklinie]], Active Surveillance, Watchful Waiting … *Einige*
+Episodenarten sind [[Behandlungslinie]]n, andere (Diagnostik, Surveillance)
+nicht — der Linienbegriff bleibt therapeutischen Abschnitten vorbehalten.
+Die Modalität (Chemotherapie, Immuntherapie, Bestrahlung …) ist ein
+**eigenes** Merkmal, nicht Teil der Episodenart.
+_Vermeiden_: Linienart (weicht die Linien-/EnLiST-Grenze auf); Modalität als
+Episodenart.
+
 **Behandlungslinie**
 _EN_: treatment line
 Oberbegriff für einen **therapeutischen** Linien-Abschnitt. Zwei Modalitätsklassen:
@@ -147,6 +167,35 @@ klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplant
 Wechsel). **EnLiST-konform und in die LoT-Zählung aufgenommen.** Realisiert als
 [[Behandlungsepisode]] mit der Therapielinie-Extension (kein eigenes
 EpisodeOfCare-Profil).
+**Einordnung:** Die EnLiST-Linienzählung ist für die *Versorgung* nicht
+erforderlich — sie ist ein (bis zum Abschluss des ESMO-Road-Testings
+experimentelles) Konzept, dessen Nutzen in der **Sekundärnutzung** liegt
+(Auswertung, CDS, Studieneinschluss). Sie gehört daher nicht zu den
+Kernkonzepten des Therapieziel-Dreiecks.
+
+**Führende Episode**
+_EN_: leading episode
+Die [[Behandlungsepisode]], die eine systemische [[Therapielinie]] als
+Haupt-Beitragende (main contributor) koordiniert und daher **als einzige** die
+EnLiST-Designation der Linie trägt. Langfristig über die ePA-Composition
+patientenzentriert sichtbar — je Zeitpunkt gibt es **höchstens eine aktive**
+führende Episode je Linie. Die **Führung kann wechseln** (z. B. Klinik →
+niedergelassene Praxis): die neue führende Episode übernimmt Designation und
+Linien-Id und schreibt sie fort; die bisherige bleibt mit ihrem letzten Stand
+abgeschlossen (eingefrorene Historie). Auswertungsseitig gilt der **jüngste
+Stand je Linien-Id**. Bei gleichem Ort/Sektor fallen Führung und Ausführung in
+einer Episode zusammen.
+_Vermeiden_: Hauptepisode, Master-Episode
+
+**Liniensegment**
+_EN_: line segment
+Die [[Behandlungsepisode]] einer **ausführenden** Einrichtung innerhalb einer
+systemischen [[Therapielinie]]: autonom dokumentiert, per gemeinsamer Linien-Id
+mit der [[Führende Episode]] verkettet, **ohne eigene** Designation (zählt nie
+in die LoT-Zählung). Kennt die Einrichtung die Linien-Id nicht (noch kein
+ePA-Abgleich), dokumentiert sie ersatzweise führend — Doppelzählungen werden in
+der Auswertung dedupliziert, nicht am Datenbestand verhindert.
+_Vermeiden_: Teil-Linie, Sub-Episode
 
 **Lokoregionale Behandlungslinie**
 _EN_: locoregional treatment line
@@ -185,7 +234,10 @@ Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer
 Tumorboard-Empfehlung. Nicht-therapeutisch. Tritt typischerweise an drei Stellen
 auf: (1) Erstdiagnose, (2) Differenzial-/Re-Diagnostik nach Remission bzw. bei
 Rezidiv, (3) spezialisierte Diagnostik (z. B. molekulares Tumorboard). Realisiert
-als Behandlungsepisode mit Diagnostiklinie-Extension.
+als Behandlungsepisode mit Diagnostiklinie-Extension. **Diagnosebezug:** die
+Erstdiagnose-Diagnostiklinie startet mit einer **Verdachtsdiagnose ohne
+Staging** — die gesicherte, gestagte Diagnose ist ihr *Ergebnis*, nicht ihre
+Voraussetzung (daher ist der Diagnosebezug der Episode art-abhängig optional).
 
 **Intention** (einer Behandlungsepisode)
 _EN_: intent

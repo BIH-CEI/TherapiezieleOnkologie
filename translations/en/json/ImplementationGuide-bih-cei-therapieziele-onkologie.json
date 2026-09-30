@@ -138,6 +138,30 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Behandlungsmodalität (Extension)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Behandlungsmodalität der Behandlungsepisode — z. B. Chemotherapie, Immuntherapie, Hormontherapie, Bestrahlung, Operation. Eigenes Merkmal neben der Episodenart (`EpisodeOfCare.type`); mehrere Modalitäten je Episode sind zulässig (z. B. Radiochemotherapie).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Behandlungsmodalität (VS)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Behandlungsmodalität einer onkologischen Behandlungsepisode — Beispiel-Set\ngängiger Modalitäten, systemisch (Chemo-, Immun-, Hormontherapie) wie\nlokoregional (Bestrahlung, Operation).\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert. Für\nBestrahlung existiert `Radiation therapy care` (385798007), für die ambulante\nChemotherapie der spezifische Code `Ambulatory chemotherapy` (315601005).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
       "source" : "Brusterhaltende Operation + Sentinel-Lymphknoten-Biopsie (Beispiel)",
       "target" : null
     },
@@ -330,6 +354,30 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Episodenart",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Art einer onkologischen Behandlungsepisode. Offener Startsatz: systemische Therapielinie (EnLiST/LoT), lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation — nicht EnLiST), Diagnostiklinie, Active Surveillance und Watchful Waiting; entitätsspezifische Arten werden ergänzt, ohne das Framework zu ändern.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Episodenart (ValueSet)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Alle Episodenarten des Startsatzes; die Bindung ist extensible — entitätsspezifische Arten dürfen ergänzt werden.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
       "source" : "Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen",
       "target" : null
     },
@@ -462,6 +510,18 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Lokoregionale Behandlungslinie – Operation",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Perioperative Behandlungsepisode im Rahmen des kurativen Gesamtkonzepts (KEYNOTE-522-Schema). Episodenart: lokoregionale Behandlungslinie — von EnLiST nicht abgedeckt, daher not-counted.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
       "source" : "Mammakarzinom links, triple-negativ (Beispiel)",
       "target" : null
     },
@@ -469,6 +529,18 @@
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
       "source" : "Adressierte Tumorerkrankung: invasives Mammakarzinom links (NST), ICD-10-GM C50.4. Konform zum MII-Onkologie-Diagnoseprofil (Primärtumor).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Onkologische Behandlungsepisode",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Ein abgegrenzter onkologischer Versorgungsabschnitt mit eigener Intention auf Basis von `EpisodeOfCare` — die **Episodenart** (`type`) unterscheidet systemische Therapielinie, lokoregionale Behandlungslinie, Diagnostiklinie, Active Surveillance, Watchful Waiting u. a.; die Behandlungsmodalität ist ein eigenes Merkmal (Extension `onko-modalitaet`). Eine systemische **Therapielinie** (Line of Therapy, LoT) ist dabei ein **fachliches Kontinuum**, das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist: Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`.",
       "target" : null
     },
     {
@@ -492,7 +564,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`.",
+      "source" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`.",
       "target" : null
     },
     {
@@ -505,30 +577,6 @@
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
       "source" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
-      "target" : null
-    },
-    {
-      "id" : "ImplementationGuide.definition.resource.name",
-      "context" : "ImplementationGuide.definition.resource.name",
-      "source" : "Onkologische Therapielinie",
-      "target" : null
-    },
-    {
-      "id" : "ImplementationGuide.definition.resource.description",
-      "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein **fachliches Kontinuum** mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist. Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`.",
-      "target" : null
-    },
-    {
-      "id" : "ImplementationGuide.definition.resource.name",
-      "context" : "ImplementationGuide.definition.resource.name",
-      "source" : "Onkologische Therapielinie – Art (VS)",
-      "target" : null
-    },
-    {
-      "id" : "ImplementationGuide.definition.resource.description",
-      "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein\nBeispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert\n`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code\n`Ambulatory chemotherapy` (315601005).",
       "target" : null
     },
     {
@@ -576,7 +624,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die\n  Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
+      "source" : "Onkologischer Versorgungsplan auf Basis von `CarePlan`.\n\nDas Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**\n([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))\nangelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte\nErkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte\nMaßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.\n\nOnkologiespezifische Ergänzungen gegenüber MCC:\n- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,\n  Erhaltung, palliativ, supportiv).\n- `goal` referenziert das Profil `OnkoTherapyGoal`.\n- Behandlungsepisoden (`OnkoBehandlungsepisode`, Basis `EpisodeOfCare` — Episodenart\n  via `type`: Therapielinie, Diagnostiklinie, Surveillance …) werden über die\n  Standard-Extension `workflow-episodeOfCare` verknüpft.\n\nIm Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des\nrealen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine\n`PlanDefinition` aus dem CPG-on-FHIR-Stack.",
       "target" : null
     },
     {
@@ -714,13 +762,25 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Therapielinie 1 (Segment) – adjuvante Immuntherapie (Pembrolizumab), ambulant",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept). Episodenart: systemische Therapielinie; ausführendes Segment der Linie eLoT 1.0 (gemeinsame lineId, keine eigene Designation).",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
       "source" : "Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)",
       "target" : null
     },
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab).",
+      "source" : "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab). Episodenart: systemische Therapielinie; Führung und Ausführung fallen in einer Episode zusammen (aLoT 1.0 ohne lineId).",
       "target" : null
     },
     {
@@ -732,25 +792,7 @@
     {
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts.",
-      "target" : null
-    },
-    {
-      "id" : "ImplementationGuide.definition.resource.name",
-      "context" : "ImplementationGuide.definition.resource.name",
-      "source" : "Therapielinie 2 – Operation",
-      "target" : null
-    },
-    {
-      "id" : "ImplementationGuide.definition.resource.name",
-      "context" : "ImplementationGuide.definition.resource.name",
-      "source" : "Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant",
-      "target" : null
-    },
-    {
-      "id" : "ImplementationGuide.definition.resource.description",
-      "context" : "ImplementationGuide.definition.resource.description",
-      "source" : "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept).",
+      "source" : "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts. Episodenart: systemische Therapielinie; führende Episode der Linie eLoT 1.0.",
       "target" : null
     },
     {
@@ -937,6 +979,42 @@
       "id" : "ImplementationGuide.definition.resource.description",
       "context" : "ImplementationGuide.definition.resource.description",
       "source" : "Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 1/~9 (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Dokumentierte Gabe (Zyklus 1) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 2/~9 (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Dokumentierte Gabe (Zyklus 2) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 3/~9 (Beispiel)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Dokumentierte Gabe (Zyklus 3) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan.",
       "target" : null
     },
     {

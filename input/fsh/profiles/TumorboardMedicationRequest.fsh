@@ -21,6 +21,13 @@ Tumorboardspezifische Ergänzung:
 * insert Translation(intent ^short, en, Intent)
 * insert Translation(intent ^definition, en, Intent of the request – e.g. proposal\, plan\, order.)
 
+// Statusgrund: warum eine Empfehlung nicht (mehr) verfolgt wird –
+// Patientenwunsch, Komorbidität, Progress; Pendant zum Ablehnungsgrund am Ziel
+* statusReason MS
+* insert Label(statusReason, Statusgrund, Grund des Request-Status – z. B. Patientenwunsch bei abgelehnter Empfehlung; Pendant zum Ablehnungsgrund am Ziel.)
+* insert Translation(statusReason ^short, en, Status reason)
+* insert Translation(statusReason ^definition, en, Reason for the request status – e.g. patient wish for a declined recommendation; counterpart of the rejection reason on the goal.)
+
 // Category: genau ein Tumorboard-Coding (Pflicht), weitere Categories erlaubt (open slicing)
 * category 1..* MS
 * category ^slicing.discriminator.type = #pattern

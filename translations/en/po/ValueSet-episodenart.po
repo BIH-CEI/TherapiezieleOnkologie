@@ -1,0 +1,31 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "EpisodenartVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "Episodenart (ValueSet)"
+msgstr "Episode type value set"
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Alle Episodenarten des Startsatzes; die Bindung ist extensible — entitätsspezifische Arten dürfen ergänzt werden."
+msgstr "All starter-set episode types; the binding is extensible — entity-specific types may be added."
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+

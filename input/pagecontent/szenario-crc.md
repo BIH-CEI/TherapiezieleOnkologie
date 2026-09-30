@@ -1,4 +1,4 @@
-Diese Seite zeigt – in Anlehnung an die [szenariobasierte Darstellung des MII IG Modul Onkologie](https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current) – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens nutzt: `OnkoCondition`, `DiagnosticCarePlan`, `OnkoCarePlan`, `OnkoTherapyLine`, `OnkoTherapyGoal`, `TumorboardMedicationRequest` und `TumorboardServiceRequest`.
+Diese Seite zeigt – in Anlehnung an die [szenariobasierte Darstellung des MII IG Modul Onkologie](https://simplifier.net/guide/MII-IG-Onkologie-DE-v2026/MIIIGModulOnkologie/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.page.md?version=current) – ein durchgängiges Anwendungsbeispiel, das alle Profile dieses Leitfadens nutzt: `OnkoCondition`, `DiagnosticCarePlan`, `OnkoCarePlan`, `OnkoBehandlungsepisode`, `OnkoTherapyGoal`, `TumorboardMedicationRequest` und `TumorboardServiceRequest`.
 
 ### Klinische Erzählung
 
@@ -20,7 +20,7 @@ Der folgende Referenzgraph zeigt die **Kernbeziehungen des Therapie-CarePlan** (
 | Diagnostik-Anforderung | `ServiceRequest` | [ServiceRequestKoloskopieCRC](ServiceRequest-ServiceRequestKoloskopieCRC.html) |
 | Diagnostik-Ergebnis | `DiagnosticReport` | [DiagnosticReportHistologieCRC](DiagnosticReport-DiagnosticReportHistologieCRC.html) |
 | Therapie-Plan | `OnkoCarePlan` | [CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.html) |
-| Therapielinie (LoT 1) | `OnkoTherapyLine` | [TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.html) |
+| Therapielinie (LoT 1) | `OnkoBehandlungsepisode` | [TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.html) |
 | Therapieziel (palliativ) | `OnkoTherapyGoal` | [TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.html) |
 | Therapieziel (abgelehnt) | `OnkoTherapyGoal` | [TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.html) |
 | Therapieziel (Erhaltung) | `OnkoTherapyGoal` | [TherapiezielCRCErhaltung](Goal-TherapiezielCRCErhaltung.html) |

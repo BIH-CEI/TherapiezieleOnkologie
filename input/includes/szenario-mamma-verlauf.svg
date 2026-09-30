@@ -1,0 +1,92 @@
+<svg width="100%" viewBox="0 0 940 650" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Aptos','Segoe UI',system-ui,sans-serif">
+<title>Szenario Mammakarzinom — zeitlicher Verlauf (kurativ, neoadjuvant)</title>
+<desc>Zeitstrahl des Mamma-Szenarios über vier Phasen: Stammdaten und Erkrankung, Diagnostikphase, Tumorkonferenz und Planung, Durchfuehrung und Verlauf. Die systemische Therapielinie eLoT 1.0 ist ein Kontinuum: fuehrende neoadjuvante Episode und ausfuehrendes adjuvantes Segment, verkettet ueber die gemeinsame lineId; die OP-Episode ist lokoregional und not-counted. Ereignisse (Gaben, Operation, Observations) als Rauten.</desc>
+<defs>
+<marker id="svarbk" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#5F5E5A"/></marker>
+</defs>
+
+<text x="10" y="20" font-size="12.5" font-weight="700" letter-spacing="1.5" fill="#2C2C2A">SZENARIO MAMMAKARZINOM · KURATIV, NEOADJUVANT</text>
+
+<!-- 00 · Stammdaten & Erkrankung -->
+<rect x="10" y="34" width="920" height="16" fill="#F1EFE8"/><text x="18" y="46" font-size="9" font-weight="600" letter-spacing="1" fill="#5F5E5A">00 · STAMMDATEN &amp; ERKRANKUNG</text>
+<text x="10" y="70" font-size="9.5" font-weight="600" fill="#2C2C2A">Patientin</text>
+<text x="10" y="81" font-size="7.5" fill="#8A8880">PatientinMamma (Patient)</text>
+<rect x="220" y="58" width="710" height="24" rx="7" fill="#F1EFE8" stroke="#5F5E5A"/><text x="575" y="73" text-anchor="middle" font-size="9" fill="#2C2C2A">durchgängig referenziert (subject)</text>
+<text x="10" y="102" font-size="9.5" font-weight="600" fill="#2C2C2A">Onkologin · Zentrum · Tumorboard</text>
+<text x="10" y="113" font-size="7.5" fill="#8A8880">Practitioner · Organization · CareTeam</text>
+<rect x="220" y="90" width="710" height="24" rx="7" fill="#F1EFE8" stroke="#5F5E5A"/><text x="575" y="105" text-anchor="middle" font-size="9" fill="#2C2C2A">nehmen die Rollen requester · author · careManager · custodian ein</text>
+<text x="10" y="134" font-size="9.5" font-weight="600" fill="#2C2C2A">Onkologische Erkrankung</text>
+<text x="10" y="145" font-size="7.5" fill="#8A8880">ConditionMamma (OnkoCondition)</text>
+<rect x="220" y="122" width="710" height="24" rx="7" fill="#5F5E5A" stroke="#5F5E5A"/><text x="575" y="137" text-anchor="middle" font-size="9" fill="#FFFFFF">Verdachtsdiagnose → durch Diagnostik gesichert · bleibt während der Behandlung aktiv</text>
+
+<!-- 01 · Diagnostikphase -->
+<rect x="10" y="156" width="920" height="16" fill="#F1EFE8"/><text x="18" y="168" font-size="9" font-weight="600" letter-spacing="1" fill="#5F5E5A">01 · DIAGNOSTIKPHASE</text>
+<text x="10" y="192" font-size="9.5" font-weight="600" fill="#2C2C2A">Diagnostik-CarePlan</text>
+<text x="10" y="203" font-size="7.5" fill="#8A8880">CarePlanMammaDiagnostik (DiagnosticCarePlan)</text>
+<rect x="220" y="180" width="180" height="24" rx="7" fill="#EEEDFE" stroke="#534AB7"/><text x="310" y="195" text-anchor="middle" font-size="8.5" fill="#26215C">steuert bis zur Diagnosesicherung</text>
+<text x="10" y="224" font-size="9.5" font-weight="600" fill="#2C2C2A">Diagnostikziel</text>
+<text x="10" y="235" font-size="7.5" fill="#8A8880">DiagnosticGoal (OnkoTherapyGoal)</text>
+<rect x="220" y="212" width="180" height="24" rx="7" fill="#E1F5EE" stroke="#0F6E56"/><text x="310" y="227" text-anchor="middle" font-size="8.5" fill="#04342C">Diagnose sichern — predecessor</text>
+<text x="10" y="256" font-size="9.5" font-weight="600" fill="#2C2C2A">Diagnostik-Anforderungen</text>
+<text x="10" y="267" font-size="7.5" fill="#8A8880">Biopsie · Pathologie · Staging (ServiceRequests)</text>
+<rect x="220" y="244" width="180" height="24" rx="7" fill="#FAECE7" stroke="#D85A30"/><text x="310" y="259" text-anchor="middle" font-size="8.5" fill="#4A1B0C">verlinkt über activity.reference</text>
+<text x="10" y="288" font-size="9.5" font-weight="600" fill="#2C2C2A">Observations</text>
+<text x="10" y="299" font-size="7.5" fill="#8A8880">Histologie · Grading · cTNM · ER/PR/HER2 · gBRCA</text>
+<path d="M248,278 l7,7 l-7,7 l-7,-7 z" fill="#C8102E"/><path d="M282,278 l7,7 l-7,7 l-7,-7 z" fill="#C8102E"/><path d="M316,278 l7,7 l-7,7 l-7,-7 z" fill="#C8102E"/><path d="M350,278 l7,7 l-7,7 l-7,-7 z" fill="#C8102E"/>
+<text x="410" y="289" font-size="8.5" fill="#5F5E5A">Ergebnisse der Diagnostik — verlinkt über activity.outcomeReference</text>
+
+<!-- 02 · Tumorkonferenz & Planung -->
+<rect x="10" y="310" width="920" height="16" fill="#F1EFE8"/><text x="18" y="322" font-size="9" font-weight="600" letter-spacing="1" fill="#5F5E5A">02 · TUMORKONFERENZ &amp; PLANUNG</text>
+<text x="10" y="346" font-size="9.5" font-weight="600" fill="#2C2C2A">CarePlan Therapieplanung</text>
+<text x="10" y="357" font-size="7.5" fill="#8A8880">CarePlanMammaNeoadjuvant (OnkoCarePlan)</text>
+<rect x="410" y="334" width="520" height="24" rx="7" fill="#EEEDFE" stroke="#534AB7"/><text x="670" y="349" text-anchor="middle" font-size="9" fill="#26215C">angelegt am Tumorboard — führt Ziele und geplante Maßnahmen zusammen</text>
+<text x="10" y="378" font-size="9.5" font-weight="600" fill="#2C2C2A">Übergeordnetes Therapieziel</text>
+<text x="10" y="389" font-size="7.5" fill="#8A8880">TherapiezielMammaHeilung (OnkoTherapyGoal)</text>
+<rect x="410" y="366" width="520" height="24" rx="7" fill="#E1F5EE" stroke="#0F6E56"/><text x="670" y="381" text-anchor="middle" font-size="9" fill="#04342C">Heilung &amp; Brusterhalt — kurativ · Akzeptanz: Patientin stimmt zu (goal-acceptance)</text>
+<text x="10" y="410" font-size="9.5" font-weight="600" fill="#2C2C2A">Ziel nach Therapieende</text>
+<text x="10" y="421" font-size="7.5" fill="#8A8880">FollowUpGoal (Goal)</text>
+<rect x="410" y="398" width="450" height="24" rx="7" fill="#FFFFFF" stroke="#0F6E56" stroke-dasharray="5,4"/><text x="635" y="413" text-anchor="middle" font-size="9" fill="#5F5E5A">proposed — wird erst bei Therapieende aktiv</text>
+<rect x="866" y="398" width="64" height="24" rx="7" fill="#E1F5EE" stroke="#0F6E56"/><text x="898" y="413" text-anchor="middle" font-size="8.5" fill="#04342C">aktiv</text>
+<text x="10" y="442" font-size="9.5" font-weight="600" fill="#2C2C2A">Tumorboard-Empfehlung</text>
+<text x="10" y="453" font-size="7.5" fill="#8A8880">TumorboardMedicationRequest · TumorboardServiceRequest</text>
+<rect x="410" y="430" width="390" height="24" rx="7" fill="#FAECE7" stroke="#D85A30"/><text x="605" y="445" text-anchor="middle" font-size="8.5" fill="#4A1B0C">Chemo-Immuntherapie (MedicationRequest #new) · Operation (ServiceRequest)</text>
+
+<!-- 03 · Durchführung & Verlauf -->
+<rect x="10" y="464" width="920" height="16" fill="#F1EFE8"/><text x="18" y="476" font-size="9" font-weight="600" letter-spacing="1" fill="#5F5E5A">03 · DURCHFÜHRUNG &amp; VERLAUF</text>
+<text x="10" y="500" font-size="9.5" font-weight="600" fill="#2C2C2A">Behandlungsepisoden</text>
+<text x="10" y="511" font-size="7.5" fill="#8A8880">eine Linie eLoT 1.0 über zwei Episoden</text>
+<text x="10" y="522" font-size="7.5" fill="#8A8880">(OnkoBehandlungsepisode)</text>
+<rect x="446" y="486" width="52" height="13" rx="6.5" fill="#E1F5EE" stroke="#0F6E56"/><text x="472" y="496" text-anchor="middle" font-size="8" font-weight="600" fill="#04342C">eLoT 1.0</text>
+<rect x="420" y="500" width="220" height="30" rx="7" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4"/>
+<text x="530" y="512" text-anchor="middle" font-size="8.5" font-weight="600" fill="#26215C">Therapielinie — führende Episode</text>
+<text x="530" y="524" text-anchor="middle" font-size="8" fill="#534AB7">neoadjuvant · stationär · trägt Designation + lineId</text>
+<rect x="648" y="500" width="76" height="30" rx="7" fill="#FFFFFF" stroke="#534AB7"/>
+<text x="686" y="512" text-anchor="middle" font-size="8" fill="#26215C">OP-Episode</text>
+<text x="686" y="524" text-anchor="middle" font-size="7.5" fill="#8A8880">not-counted</text>
+<rect x="732" y="500" width="198" height="30" rx="7" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="831" y="512" text-anchor="middle" font-size="8.5" font-weight="600" fill="#26215C">Segment derselben Linie</text>
+<text x="831" y="524" text-anchor="middle" font-size="8" fill="#534AB7">adjuvantes Pembrolizumab · ambulant</text>
+<path d="M530,530 L530,540 L831,540 L831,530" fill="none" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="680" y="551" text-anchor="middle" font-size="8" fill="#534AB7">gemeinsame lineId — keine eigene Designation am Segment</text>
+<text x="10" y="572" font-size="9.5" font-weight="600" fill="#2C2C2A">Durchführung</text>
+<text x="10" y="583" font-size="7.5" fill="#8A8880">MedicationAdministration · ProcedureOperationMamma</text>
+<path d="M440,562 l7,7 l-7,7 l-7,-7 z" fill="#B8860B"/><path d="M478,562 l7,7 l-7,7 l-7,-7 z" fill="#B8860B"/><path d="M516,562 l7,7 l-7,7 l-7,-7 z" fill="#B8860B"/><path d="M554,562 l7,7 l-7,7 l-7,-7 z" fill="#B8860B"/><path d="M592,562 l7,7 l-7,7 l-7,-7 z" fill="#B8860B"/>
+<path d="M686,562 l7,7 l-7,7 l-7,-7 z" fill="#0F766E"/>
+<path d="M760,562 l7,7 l-7,7 l-7,-7 z" fill="#B8860B"/><path d="M808,562 l7,7 l-7,7 l-7,-7 z" fill="#B8860B"/><path d="M856,562 l7,7 l-7,7 l-7,-7 z" fill="#B8860B"/>
+<text x="10" y="602" font-size="9.5" font-weight="600" fill="#2C2C2A">Ergebnis-Observations</text>
+<text x="10" y="613" font-size="7.5" fill="#8A8880">ypT0 ypN0 (pCR) · Disease Status → Goal.outcomeReference</text>
+<path d="M724,594 l7,7 l-7,7 l-7,-7 z" fill="#C8102E"/><path d="M920,594 l7,7 l-7,7 l-7,-7 z" fill="#C8102E"/>
+<text x="742" y="605" font-size="8" fill="#C8102E">pCR</text>
+
+<line x1="220" y1="622" x2="920" y2="622" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#svarbk)"/><text x="928" y="626" font-size="8.5" fill="#5F5E5A" text-anchor="end">Zeit</text>
+
+<rect x="10" y="636" width="13" height="10" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="28" y="645" font-size="8.5" fill="#5F5E5A">Kontext</text>
+<rect x="80" y="636" width="13" height="10" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="98" y="645" font-size="8.5" fill="#5F5E5A">Plan / Episode</text>
+<rect x="172" y="636" width="13" height="10" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="190" y="645" font-size="8.5" fill="#5F5E5A">Ziel / Designation</text>
+<rect x="278" y="636" width="13" height="10" rx="3" fill="#FAECE7" stroke="#D85A30"/><text x="296" y="645" font-size="8.5" fill="#5F5E5A">Empfehlung / Request</text>
+<path d="M410,636 l6,6 l-6,6 l-6,-6 z" fill="#B8860B"/><text x="424" y="645" font-size="8.5" fill="#5F5E5A">Gabe</text>
+<path d="M470,636 l6,6 l-6,6 l-6,-6 z" fill="#0F766E"/><text x="484" y="645" font-size="8.5" fill="#5F5E5A">Procedure</text>
+<path d="M548,636 l6,6 l-6,6 l-6,-6 z" fill="#C8102E"/><text x="562" y="645" font-size="8.5" fill="#5F5E5A">Observation</text>
+<line x1="628" y1="642" x2="656" y2="642" stroke="#534AB7" stroke-width="1.2" stroke-dasharray="4,3"/><text x="662" y="645" font-size="8.5" fill="#5F5E5A">lineId-Verkettung</text>
+<rect x="756" y="636" width="26" height="10" rx="3" fill="#FFFFFF" stroke="#0F6E56" stroke-dasharray="4,3"/><text x="788" y="645" font-size="8.5" fill="#5F5E5A">angelegt, noch nicht wirksam</text>
+</svg>

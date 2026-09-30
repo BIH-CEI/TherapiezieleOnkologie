@@ -10,7 +10,7 @@ Strukturierte Codierung der Therapieintention über zwei Achsen:
   (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.
 
 So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Verwendet in
-OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE
+OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE
 `procedure-intent`.
 """
 * insert Translation(^title, en, Oncological therapy intent extension)

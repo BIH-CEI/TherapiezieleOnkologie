@@ -21,6 +21,14 @@ Tumorboardspezifische Ergänzung:
 * insert Translation(intent ^short, en, Intent)
 * insert Translation(intent ^definition, en, Intent of the request – e.g. proposal\, plan\, order.)
 
+// Statusgrund: ServiceRequest hat in R4 kein statusReason-Element (erst R5) –
+// daher die Standard-Extension, damit der Grund einer abgelehnten/verworfenen
+// Empfehlung (Patientenwunsch, Komorbidität, Progress) codiert vorliegt
+* extension contains http://hl7.org/fhir/StructureDefinition/request-statusReason named statusReason 0..1 MS
+* insert Label(extension[statusReason], Statusgrund, Grund des Request-Status – z. B. Patientenwunsch bei abgelehnter Empfehlung; Pendant zum Ablehnungsgrund am Ziel.)
+* insert Translation(extension[statusReason] ^short, en, Status reason)
+* insert Translation(extension[statusReason] ^definition, en, Reason for the request status – e.g. patient wish for a declined recommendation; counterpart of the rejection reason on the goal.)
+
 // Category: genau ein Tumorboard-Coding (Pflicht), weitere Categories erlaubt (open slicing)
 * category 1..* MS
 * category ^slicing.discriminator.type = #pattern

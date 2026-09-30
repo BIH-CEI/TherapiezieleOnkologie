@@ -378,6 +378,12 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
+      "source" : "Systemische Therapielinie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
       "source" : "Chief complaint",
       "target" : null
     },
@@ -391,6 +397,12 @@
       "id" : "Coding.display",
       "context" : "Coding.display",
       "source" : "Surgical procedure",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Lokoregionale Behandlungslinie",
       "target" : null
     },
     {
@@ -481,6 +493,30 @@
       "id" : "Annotation.text",
       "context" : "Annotation.text",
       "source" : "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Zyklus 1 von ~9 (q3w), ambulant",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Zyklus 2 von ~9 (q3w), ambulant",
+      "target" : null
+    },
+    {
+      "id" : "Annotation.text",
+      "context" : "Annotation.text",
+      "source" : "Zyklus 3 von ~9 (q3w), ambulant; Therapie läuft weiter",
       "target" : null
     },
     {

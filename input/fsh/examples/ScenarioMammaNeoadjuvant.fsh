@@ -387,11 +387,11 @@ Description: "Leitlinienindizierte Keimbahn-Panel-Diagnostik (BRCA1/BRCA2) beim 
 // ---------------------------------------------------------------------
 
 Instance: TherapielinieChemo
-InstanceOf: OnkoTherapyLine
+InstanceOf: OnkoBehandlungsepisode
 Usage: #example
 Title: "Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie"
-Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
-* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts. Episodenart: systemische Therapielinie; führende Episode der Linie eLoT 1.0."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373847000 "Neoadjuvant intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
 // EnLiST: perioperative Systemtherapie zählt im frühen Setting — eLoT 1.0.
@@ -405,7 +405,9 @@ Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNO
 * extension[lot].extension[lineId].valueIdentifier.value = "mamma-baumann-elot-1"
 * extension[countable].valueCodeableConcept = EnlistCountable#counted "Zählt in der LoT-Zählung"
 * status = #finished
-* type = http://snomed.info/sct#385786002  "Chemotherapy care"
+// Episodenart: systemische Therapielinie; die Modalität ist eigenes Merkmal
+* type = Episodenart#systemische-therapielinie "Systemische Therapielinie"
+* extension[modalitaet].valueCodeableConcept = http://snomed.info/sct#385786002 "Chemotherapy care"
 * diagnosis.condition = Reference(ConditionMamma)
 * diagnosis.rank = 1
 * patient = Reference(PatientinMamma)
@@ -424,16 +426,18 @@ Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNO
 // ---------------------------------------------------------------------
 
 Instance: TherapielinieOperation
-InstanceOf: OnkoTherapyLine
+InstanceOf: OnkoBehandlungsepisode
 Usage: #example
-Title: "Therapielinie 2 – Operation"
-Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."
-* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+Title: "Lokoregionale Behandlungslinie – Operation"
+Description: "Perioperative Behandlungsepisode im Rahmen des kurativen Gesamtkonzepts (KEYNOTE-522-Schema). Episodenart: lokoregionale Behandlungslinie — von EnLiST nicht abgedeckt, daher not-counted."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373808002 "Curative - procedure intent"
 // EnLiST: lokoregionale Behandlungslinie — im EnLiST-Framework nicht mitgezählt
 * extension[countable].valueCodeableConcept = EnlistCountable#not-counted "Zählt nicht"
 * status = #finished
-* type = http://snomed.info/sct#387713003 "Surgical procedure"
+// Episodenart: lokoregionale Behandlungslinie; die Modalität ist eigenes Merkmal
+* type = Episodenart#lokoregionale-behandlungslinie "Lokoregionale Behandlungslinie"
+* extension[modalitaet].valueCodeableConcept = http://snomed.info/sct#387713003 "Surgical procedure"
 * patient = Reference(PatientinMamma)
 * period.start = "2026-03-20"
 * period.end = "2026-04-06"
@@ -453,11 +457,11 @@ Description: "Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNO
 // ---------------------------------------------------------------------
 
 Instance: TherapieliniePembroAdjuvant
-InstanceOf: OnkoTherapyLine
+InstanceOf: OnkoBehandlungsepisode
 Usage: #example
-Title: "Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant"
-Description: "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept)."
-* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+Title: "Therapielinie 1 (Segment) – adjuvante Immuntherapie (Pembrolizumab), ambulant"
+Description: "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept). Episodenart: systemische Therapielinie; ausführendes Segment der Linie eLoT 1.0 (gemeinsame lineId, keine eigene Designation)."
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#373846009 "Adjuvant - intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#1345242003 "Maintenance antineoplastic therapy"
 // EnLiST: ausführendes Segment derselben Linie (eLoT 1.0) — KEINE eigene
@@ -468,8 +472,10 @@ Description: "Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrol
 * extension[countable].valueCodeableConcept = EnlistCountable#counted "Zählt in der LoT-Zählung"
 * extension[medicationRequest].valueReference = Reference(MedicationRequestPembroAdjuvantMamma)
 * status = #active
-* type = http://snomed.info/sct#76334006 "Immunological therapy"
-* type.text = "Ambulante adjuvante Immuntherapie – Pembrolizumab-Monotherapie"
+// Episodenart: systemische Therapielinie; die Modalität ist eigenes Merkmal
+* type = Episodenart#systemische-therapielinie "Systemische Therapielinie"
+* extension[modalitaet].valueCodeableConcept = http://snomed.info/sct#76334006 "Immunological therapy"
+* extension[modalitaet].valueCodeableConcept.text = "Ambulante adjuvante Immuntherapie – Pembrolizumab-Monotherapie"
 * patient = Reference(PatientinMamma)
 * period.start = "2026-04-24"
 * diagnosis.condition = Reference(ConditionMamma)
@@ -580,6 +586,48 @@ Description: "Dokumentierte Gabe (Zyklus 4 von 4, KEYNOTE-522 Phase 1) im Rahmen
 * request = Reference(MedicationRequestPembroChemoNeoadjuvantMamma)
 * effectiveDateTime = "2026-03-15"
 * note.text = "Zyklus 4 von 4 (Pembro/Carbo q3w); begleitend wöchentliche Paclitaxel-Gaben, hier nicht einzeln erfasst"
+
+// ---------------------------------------------------------------------
+// Verabreichte adjuvante Systemtherapie (ambulantes Segment der Linie)
+// Pembrolizumab-Monotherapie q3w — dokumentiert von der ausführenden
+// ambulanten Einrichtung; die Episode (Segment) läuft noch (~9 Zyklen).
+// ---------------------------------------------------------------------
+
+Instance: MedicationAdministrationPembroAdjuvantMamma1
+InstanceOf: MedicationAdministration
+Usage: #example
+Title: "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 1/~9 (Beispiel)"
+Description: "Dokumentierte Gabe (Zyklus 1) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."
+* status = #completed
+* medicationCodeableConcept.text = "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+* subject = Reference(PatientinMamma)
+* request = Reference(MedicationRequestPembroAdjuvantMamma)
+* effectiveDateTime = "2026-04-24"
+* note.text = "Zyklus 1 von ~9 (q3w), ambulant"
+
+Instance: MedicationAdministrationPembroAdjuvantMamma2
+InstanceOf: MedicationAdministration
+Usage: #example
+Title: "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 2/~9 (Beispiel)"
+Description: "Dokumentierte Gabe (Zyklus 2) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."
+* status = #completed
+* medicationCodeableConcept.text = "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+* subject = Reference(PatientinMamma)
+* request = Reference(MedicationRequestPembroAdjuvantMamma)
+* effectiveDateTime = "2026-05-15"
+* note.text = "Zyklus 2 von ~9 (q3w), ambulant"
+
+Instance: MedicationAdministrationPembroAdjuvantMamma3
+InstanceOf: MedicationAdministration
+Usage: #example
+Title: "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 3/~9 (Beispiel)"
+Description: "Dokumentierte Gabe (Zyklus 3) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."
+* status = #completed
+* medicationCodeableConcept.text = "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+* subject = Reference(PatientinMamma)
+* request = Reference(MedicationRequestPembroAdjuvantMamma)
+* effectiveDateTime = "2026-06-05"
+* note.text = "Zyklus 3 von ~9 (q3w), ambulant; Therapie läuft weiter"
 
 
 
@@ -694,6 +742,9 @@ Description: "Zentraler Versorgungsplan, der adressierte Erkrankung, kuratives T
 * activity[1].outcomeReference = Reference(ProcedureOperationMamma)
 // Geplante Maßnahme: adjuvante Systemtherapie (Pembrolizumab-Monotherapie, ambulant)
 * activity[2].reference = Reference(MedicationRequestPembroAdjuvantMamma)
+* activity[2].outcomeReference[0] = Reference(MedicationAdministrationPembroAdjuvantMamma1)
+* activity[2].outcomeReference[1] = Reference(MedicationAdministrationPembroAdjuvantMamma2)
+* activity[2].outcomeReference[2] = Reference(MedicationAdministrationPembroAdjuvantMamma3)
 // Dokumentiertes Ergebnis: Ansprechbeurteilung
 * activity[3].outcomeReference = Reference(ObsDiseaseStatusMamma)
 

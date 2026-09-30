@@ -46,7 +46,7 @@
 
 <g><rect x="145" y="198" width="115" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.4"/>
 <text x="202" y="218" text-anchor="middle" font-size="10" font-weight="500" fill="#26215C">Diagnostiklinie</text>
-<text x="202" y="233" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Diagnostik</text></g>
+<text x="202" y="233" text-anchor="middle" font-size="8.5" fill="#534AB7">type: Diagnostiklinie</text></g>
 
 <line x1="145" y1="272" x2="648" y2="272" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#argr)"/>
 <text x="656" y="276" font-size="10.5" fill="#5F5E5A">Zeit</text>

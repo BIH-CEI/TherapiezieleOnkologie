@@ -10,15 +10,13 @@ Er entsteht im Rahmen der BIH-CEI / Gematik-Onkologie-Kooperation und wird auf D
 
 #### Erste Profile
 
-<img src="profil-uebersicht.png" alt="Profil-Übersicht" style="display:block; float:none; width:100%; max-width:820px; height:auto; margin:1em auto;"/>
-
 Der initiale Profilsatz folgt der im [Analysebericht](analysebericht.html) festgelegten Vier-Schichten-Architektur und bildet den **CarePlan-/Goal-Fallback-Pfad** ab:
 
 - **[OnkoCarePlan](StructureDefinition-onko-care-plan.html)** — onkologischer Versorgungsplan mit Therapieintention, adressierter Tumorerkrankung und Bezug zu Therapielinien.
-- **[OnkoTherapyLine](StructureDefinition-onko-therapy-line.html)** — Therapielinie (EnLiST-konform) als Behandlungsabschnitt mit eigener Intention.
+- **[OnkoBehandlungsepisode](StructureDefinition-onko-behandlungsepisode.html)** — generische Behandlungsepisode mit eigener Intention; die Episodenart (`type`) unterscheidet systemische Therapielinie (EnLiST-konform), lokoregionale Behandlungslinie, Diagnostiklinie und Surveillance.
 - **[OnkoTherapyGoal](StructureDefinition-onko-therapy-goal.html)** — strukturiertes Therapieziel mit codierter Zielart (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität).
 - **[OnkoTherapyIntent](StructureDefinition-onko-therapy-intent.html)** — Extension für die Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).
 
-Begleitende Terminologien: [OnkoTherapyGoalType](CodeSystem-onko-therapy-goal-type.html) und [OnkoTherapyIntent](ValueSet-onko-therapy-intent.html).
+Begleitende Terminologien: [OnkoTherapyGoalType](CodeSystem-onko-therapy-goal-type.html), [Episodenart](CodeSystem-episodenart.html) und [OnkoTherapyIntent](ValueSet-onko-therapy-intent.html).
 
 Der CPG-on-FHIR-Primärpfad (`PlanDefinition`, `ActivityDefinition`, `Library`) und die MII-KDS-Anbindung folgen in späteren Iterationen.
