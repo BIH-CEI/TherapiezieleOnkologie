@@ -95,8 +95,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.232"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel"
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-code",
@@ -209,10 +209,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
+    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
     "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
     "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
-    "StructureDefinition-onko-therapy-goal.html" : "Onkologisches Therapieziel",
     "StructureDefinition-onko-behandlungsepisode.html" : "Onkologische Behandlungsepisode"
   },
   {
@@ -241,8 +241,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.375"],
     "uses" : {
     },
-    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
+    "StructureDefinition-onko-care-plan.html" : "Onkologischer CarePlan"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-category",
@@ -411,8 +411,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
-    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest",
-    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest"
+    "StructureDefinition-onko-tumorboard-medication-request.html" : "Tumorboard MedicationRequest",
+    "StructureDefinition-onko-tumorboard-service-request.html" : "Tumorboard ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/request-status",

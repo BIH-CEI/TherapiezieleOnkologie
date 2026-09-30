@@ -149,7 +149,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-care-pl
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T19:48:43+00:00",
+  "date" : "2026-09-30T19:56:57+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
