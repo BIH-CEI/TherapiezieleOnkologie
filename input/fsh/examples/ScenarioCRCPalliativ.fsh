@@ -17,7 +17,7 @@
 // auf das Ziel bezogen ausgewertet.
 //
 // Genutzte Profile: MII PR Onko Diagnose Primärtumor, OnkoCarePlan (Diagnostik- und
-// Therapieabschnitt), OnkoTherapyLine, OnkoTherapyGoal (x2), TumorboardMedicationRequest,
+// Therapieabschnitt), OnkoBehandlungsepisode, OnkoTherapyGoal (x2), TumorboardMedicationRequest,
 // TumorboardServiceRequest.
 // =====================================================================
 
@@ -135,11 +135,11 @@ Description: "Ergebnis der Diagnostik: histologische Sicherung eines Adenokarzin
 // ---------------------------------------------------------------------
 
 Instance: TherapielinieCRCErstlinie
-InstanceOf: OnkoTherapyLine
+InstanceOf: OnkoBehandlungsepisode
 Usage: #example
 Title: "Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)"
 Description: "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab)."
-* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+* meta.profile = "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"
 // Zwei-Achsen-Intention: Hauptintention palliativ + Phase Induktionstherapie
 * extension[therapyIntent].extension[hauptintention].valueCodeableConcept = http://snomed.info/sct#363676003 "Palliative intent"
 * extension[therapyIntent].extension[phase].valueCodeableConcept = http://snomed.info/sct#450827009 "Induction chemotherapy"
@@ -150,7 +150,9 @@ Description: "Erstlinien-Behandlungsabschnitt mit palliativer Intention, Indukti
 * extension[lot].extension[notation].valueString = "aLoT 1.0"
 * extension[countable].valueCodeableConcept = EnlistCountable#counted "Zählt in der LoT-Zählung"
 * status = #active
-* type = http://snomed.info/sct#315601005 "Ambulatory chemotherapy"
+// Episodenart: systemische therapielinie; die Modalität ist eigenes Merkmal
+* type = Episodenart#systemische-therapielinie "Systemische Therapielinie"
+* extension[modalitaet].valueCodeableConcept = http://snomed.info/sct#315601005 "Ambulatory chemotherapy"
 * patient = Reference(PatientinCRC)
 * period.start = "2026-02-10"
 * diagnosis.condition = Reference(ConditionCRC)

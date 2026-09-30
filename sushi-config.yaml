@@ -17,7 +17,7 @@ publisher:
 
 # ╭───────────────────────────────────── Dependencies ─────────────────────────────╮
 # │ Abgleich mit dem MII Kerndatensatz-Modul Onkologie (v2026.0.3): OnkoCarePlan,   │
-# │ OnkoTherapyGoal und OnkoTherapyLine referenzieren die adressierte Tumor-        │
+# │ OnkoTherapyGoal und OnkoBehandlungsepisode referenzieren die adressierte Tumor- │
 # │ erkrankung direkt über das MII-Onkologie-Diagnoseprofil (Primärtumor).          │
 # ╰────────────────────────────────────────────────────────────────────────────────╯
 dependencies:

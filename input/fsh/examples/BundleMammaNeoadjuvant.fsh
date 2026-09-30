@@ -200,3 +200,18 @@ Description: "Postbares Transaction-Bundle mit allen Instanzen des Mamma-Szenari
 * entry[=].resource = CarePlanMammaNachsorge
 * entry[=].request.method = #POST
 * entry[=].request.url = "CarePlan"
+
+* entry[+].fullUrl = "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma1"
+* entry[=].resource = MedicationAdministrationPembroAdjuvantMamma1
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationAdministration"
+
+* entry[+].fullUrl = "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma2"
+* entry[=].resource = MedicationAdministrationPembroAdjuvantMamma2
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationAdministration"
+
+* entry[+].fullUrl = "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma3"
+* entry[=].resource = MedicationAdministrationPembroAdjuvantMamma3
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationAdministration"
