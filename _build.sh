@@ -99,7 +99,11 @@ function run_publisher() {
   if [ "$jar_location" != "not_found" ]; then
     echo "jar_location is: $jar_location"
     export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
-    java $JAVA_OPTS -jar "$jar_location" -ig . "${extra_flags[@]}"
+    # preferIPv4Stack: Ab Publisher 2.3.x lehnt NonPublicAddressRejectingDns
+    # Adressen ausserhalb des oeffentlichen Bereichs ab. In Netzen mit NAT64
+    # loest tx.fhir.org auf 64:ff9b::/96 auf und wird dadurch blockiert
+    # ("Refusing to fetch from non-public address"). IPv4 umgeht das.
+    java -Djava.net.preferIPv4Stack=true $JAVA_OPTS -jar "$jar_location" -ig . "${extra_flags[@]}"
   else
     echo "IG Publisher NOT FOUND in input-cache or parent folder. Please run update. Aborting..."
   fi

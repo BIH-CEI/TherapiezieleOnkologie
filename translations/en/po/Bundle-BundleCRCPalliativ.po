@@ -39,9 +39,9 @@ msgstr ""
 msgid "Metastasiertes Kolonkarzinom (mCRC) mit Lebermetastasen"
 msgstr ""
 
-# CodeableConcept.text
-#: CodeableConcept.text
-msgid "Tumordiagnostik"
+# Coding.display
+#: Coding.display
+msgid "Diagnostic intent (qualifier value)"
 msgstr ""
 
 # Coding.display
@@ -92,6 +92,11 @@ msgstr ""
 # Coding.display
 #: Coding.display
 msgid "Ambulatory chemotherapy"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Systemische Therapielinie"
 msgstr ""
 
 # Coding.display
@@ -211,6 +216,6 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Cancer care plan"
+msgid "Therapeutic intent (qualifier value)"
 msgstr ""
 

@@ -111,6 +111,32 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Behandlungsmodalität (Extension)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Behandlungsmodalität der Behandlungsepisode — z. B. Chemotherapie, Immuntherapie, Hormontherapie, Bestrahlung, Operation. Eigenes Merkmal neben der Episodenart (`EpisodeOfCare.type`); mehrere Modalitäten je Episode sind zulässig (z. B. Radiochemotherapie)."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Behandlungsmodalität (VS)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Behandlungsmodalität einer onkologischen Behandlungsepisode — Beispiel-Set
+gängiger Modalitäten, systemisch (Chemo-, Immun-, Hormontherapie) wie
+lokoregional (Bestrahlung, Operation).
+
+Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert. Für
+Bestrahlung existiert `Radiation therapy care` (385798007), für die ambulante
+Chemotherapie der spezifische Code `Ambulatory chemotherapy` (315601005)."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "Brusterhaltende Operation + Sentinel-Lymphknoten-Biopsie (Beispiel)"
 msgstr ""
 
@@ -147,51 +173,6 @@ Contributor sein.
 
 Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu
 vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt."
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "Diagnostischer CarePlan"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "CarePlan für die Tumordiagnostik auf Basis von `CarePlan`.
-
-Ergänzend zum onkologischen Therapie-CarePlan (`OnkoCarePlan`) bildet dieses Profil den Weg
-zur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfads werden als
-Aktivitäten abgebildet, deren Ergebnisse können
-über `activity.outcomeReference` angebunden werden.
-
-Der diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (`OnkoCondition`)
-und ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.
-
-Diagnostikspezifische Ergänzungen:
-- Der Plan-Typ ist über `category` verpflichtend gekennzeichnet: `category.text`
-  muss den Wert \"Tumordiagnostik\" tragen. Weitere Categories können ergänzt
-  werden. Damit sind diagnostischer und Therapie-CarePlan unterscheidbar.
-
-**Abgrenzung:** Dieses Profil beschreibt den *Prozess* der Diagnosefindung."
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "Diagnostischer CarePlan (Beispiel Mamma)"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "Diagnostischer CarePlan – Tumordiagnostik (Beispiel)"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -330,6 +311,26 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Episodenart"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Art einer onkologischen Behandlungsepisode. Offener Startsatz: systemische Therapielinie (EnLiST/LoT), lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation — nicht EnLiST), Diagnostiklinie, Active Surveillance und Watchful Waiting; entitätsspezifische Arten werden ergänzt, ohne das Framework zu ändern."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Episodenart (ValueSet)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Alle Episodenarten des Startsatzes; die Bindung ist extensible — entitätsspezifische Arten dürfen ergänzt werden."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen"
 msgstr ""
 
@@ -440,6 +441,39 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Kontext (Extension)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Zusätzlicher Kontext eines Behandlungsschritts, der – ergänzend zur Therapieintention – z. B.
+kennzeichnet, ob eine Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv,
+intraoperativ, elektiv oder im Notfall erfolgt.
+
+Dieses Feld soll dazu dienen, neben der Therapieintention einzelnen Behandlungsschritten
+weiteren Kontext zu geben. Die Extension kann an ServiceRequest, Procedure, MedicationRequest
+und MedicationAdministration verwendet werden."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Kontext einer Tumorboard-Empfehlung (VS)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine
+Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv
+oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.
+
+**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und
+`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als
+`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der
+Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "Mammakarzinom links, triple-negativ (Beispiel)"
 msgstr ""
 
@@ -450,24 +484,12 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "Onkologische Diagnose (Condition)"
+msgid "Onkologische Behandlungsepisode"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**
-([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),
-Version 2026.0.3).
-
-Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,
-ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,
-Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`
-und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen
-Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.
-
-Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das
-Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen
-lokalen Canonical bereit, auf den die übrigen Profile referenzieren."
+msgid "Ein abgegrenzter onkologischer Versorgungsabschnitt mit eigener Intention auf Basis von `EpisodeOfCare` — die **Episodenart** (`type`) unterscheidet systemische Therapielinie, lokoregionale Behandlungslinie, Diagnostiklinie, Active Surveillance, Watchful Waiting u. a.; die Behandlungsmodalität ist ein eigenes Merkmal (Extension `onko-modalitaet`). Eine systemische **Therapielinie** (Line of Therapy, LoT) ist dabei ein **fachliches Kontinuum**, das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist: Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -485,7 +507,7 @@ msgid "Strukturierte Codierung der Therapieintention über zwei Achsen:
   (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.
 
 So lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in
-OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE
+OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE
 `procedure-intent`."
 msgstr ""
 
@@ -496,37 +518,18 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
+msgid "Intention (das „Warum\") einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:
+**wozu** behandelt wird.
 
-Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
+Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`.
+
+Nicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu\",
+sondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist
+in aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr
+alternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`).
 Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
 gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
 des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "Onkologische Therapielinie"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein **fachliches Kontinuum** mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist. Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`."
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "Onkologische Therapielinie – Art (VS)"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.
-
-Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein
-Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert
-`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code
-`Ambulatory chemotherapy` (315601005)."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -583,8 +586,11 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 - Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,
   Erhaltung, palliativ, supportiv).
 - `goal` referenziert das Profil `OnkoTherapyGoal`.
-- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die
+- Behandlungsepisoden (`OnkoBehandlungsepisode`, Basis `EpisodeOfCare`) werden über die
   Standard-Extension `workflow-episodeOfCare` verknüpft.
+- `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der
+  adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird,
+  beispielsweise der diagnostische (`Diagnostic intent`) oder der therapeutische (`Therapeutic intent`).
 
 Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des
 realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine
@@ -623,6 +629,38 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Onkologischer CarePlan – Therapieabschnitt (VS)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Kennzeichnet, ob ein `OnkoCarePlan` den diagnostischen oder den therapeutischen Abschnitt der
+onkologischen Versorgung abbildet. Gebunden an `category` (Slice `therapieabschnitt`); ersetzt
+die vormalige Unterscheidung über zwei separate Profile (`OnkoCarePlan` / `DiagnosticCarePlan`)."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Onkologischer CarePlan – Tumordiagnostik (Beispiel Mamma)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Onkologischer CarePlan – Tumordiagnostik (Beispiel)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "Onkologisches Diagnosezeil"
 msgstr ""
 
@@ -657,6 +695,19 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 
 `achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab
 (z. B. erreicht, in Bearbeitung, nicht erreicht)."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Onkologisches Zielbeginn-Ereignis (VS)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Codierte Ereignisse für den Beginn eines onkologischen Therapieziels (`Goal.startCodeableConcept`).
+Übernimmt das HL7-Basis-ValueSet [GoalStartEvent](http://hl7.org/fhir/ValueSet/goal-start-event) und
+ergänzt onkologisch relevante SNOMED-CT-Qualifier für den Zielbeginn nach Bestrahlung, Chemotherapie
+oder Operation. Example-Bindung – die Codes dienen als Anregung, sind aber nicht verpflichtend."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -936,6 +987,36 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 1/~9 (Beispiel)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Dokumentierte Gabe (Zyklus 1) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 2/~9 (Beispiel)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Dokumentierte Gabe (Zyklus 2) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 3/~9 (Beispiel)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Dokumentierte Gabe (Zyklus 3) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 1/4 (KEYNOTE-522, Beispiel)"
 msgstr ""
 
@@ -1012,6 +1093,16 @@ msgstr ""
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
 msgid "Startseite"
+msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Einführung"
+msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Das Therapieziel-Dreieck"
 msgstr ""
 
 # ImplementationGuide.definition.page.title

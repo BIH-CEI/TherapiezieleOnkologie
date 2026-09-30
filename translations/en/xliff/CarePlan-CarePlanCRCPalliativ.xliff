@@ -14,7 +14,14 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Cancer care plan</source>
+        <source>Bösartige Neubildung: Kolon, nicht näher bezeichnet</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CarePlan-CarePlanCRCPalliativ" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Therapeutic intent (qualifier value)</source>
         <target></target>
       </trans-unit>
     </body>

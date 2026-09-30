@@ -54,9 +54,14 @@ msgstr ""
 msgid "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
 msgstr ""
 
-# CodeableConcept.text
-#: CodeableConcept.text
-msgid "Tumordiagnostik"
+# Coding.display
+#: Coding.display
+msgid "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Diagnostic intent (qualifier value)"
 msgstr ""
 
 # Coding.display
@@ -132,11 +137,6 @@ msgstr ""
 # Coding.display
 #: Coding.display
 msgid "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"
-msgstr ""
-
-# Coding.display
-#: Coding.display
-msgid "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse"
 msgstr ""
 
 # CodeableConcept.text
@@ -311,6 +311,11 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
+msgid "Systemische Therapielinie"
+msgstr ""
+
+# Coding.display
+#: Coding.display
 msgid "Chief complaint"
 msgstr ""
 
@@ -322,6 +327,11 @@ msgstr ""
 # Coding.display
 #: Coding.display
 msgid "Surgical procedure"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Lokoregionale Behandlungslinie"
 msgstr ""
 
 # Coding.display
@@ -431,7 +441,7 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Cancer care plan"
+msgid "Therapeutic intent (qualifier value)"
 msgstr ""
 
 # Coding.display
@@ -487,5 +497,25 @@ msgstr ""
 # CodeableConcept.text
 #: CodeableConcept.text
 msgid "Nachsorge-Mammographie beidseits (jährlich)"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 1 von ~9 (q3w), ambulant"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 2 von ~9 (q3w), ambulant"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 3 von ~9 (q3w), ambulant; Therapie läuft weiter"
 msgstr ""
 

@@ -21,9 +21,15 @@ msgstr ""
 
 # ValueSet.description
 #: ValueSet.description
-msgid "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
+msgid "Intention (das „Warum\") einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:
+**wozu** behandelt wird.
 
-Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
+Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`.
+
+Nicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu\",
+sondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist
+in aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr
+alternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`).
 Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
 gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
 des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."
@@ -42,16 +48,6 @@ msgstr ""
 # ValueSet.compose.include.concept.display
 #: ValueSet.compose.include.concept.display
 msgid "Palliative intent"
-msgstr ""
-
-# ValueSet.compose.include.concept.display
-#: ValueSet.compose.include.concept.display
-msgid "Neoadjuvant intent"
-msgstr ""
-
-# ValueSet.compose.include.concept.display
-#: ValueSet.compose.include.concept.display
-msgid "Adjuvant - intent"
 msgstr ""
 
 # ValueSet.compose.include.concept.display

@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-onko-service-request-kontext" original="Resource ValueSet-onko-service-request-kontext" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>OnkoServiceRequestKontextVS</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>Kontext einer Tumorboard-Empfehlung (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine
+Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv
+oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.
+
+**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und
+`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als
+`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der
+Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Local (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Symptomatic (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Preventive - procedure intent</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Definitive (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Neoadjuvant intent</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Adjuvant - intent</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Additive (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Intraoperative (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Elective (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-service-request-kontext" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Emergency (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

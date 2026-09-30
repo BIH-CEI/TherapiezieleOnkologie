@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CodeSystem-episodenart" original="Resource CodeSystem-episodenart" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.name">
+             <notes>
+               <note id="n1">CodeSystem.name</note>
+             </notes>
+        <source>Episodenart</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.title">
+             <notes>
+               <note id="n1">CodeSystem.title</note>
+             </notes>
+        <source>Episodenart</source>
+        <target>Episode type</target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.publisher">
+             <notes>
+               <note id="n1">CodeSystem.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.description">
+             <notes>
+               <note id="n1">CodeSystem.description</note>
+             </notes>
+        <source>Art einer onkologischen Behandlungsepisode. Offener Startsatz: systemische Therapielinie (EnLiST/LoT), lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation — nicht EnLiST), Diagnostiklinie, Active Surveillance und Watchful Waiting; entitätsspezifische Arten werden ergänzt, ohne das Framework zu ändern.</source>
+        <target>Type of an oncological care episode. Open starter set: systemic line of therapy — EnLiST/LoT; locoregional treatment line — surgery, radiotherapy, ablation, not EnLiST; diagnostic line; active surveillance; watchful waiting. Entity-specific types may be added without changing the framework.</target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Systemische Therapielinie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Lokoregionale Behandlungslinie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Nicht-systemische Behandlungslinie: Chirurgie, Strahlentherapie, Ablation — von EnLiST nicht abgedeckt, nicht in der LoT-Zählung.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Diagnostiklinie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Abgegrenzter diagnostischer Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer Tumorboard-Empfehlung; nicht-therapeutisch.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Active Surveillance</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Aktive Überwachung mit kurativer Rückfallebene — engmaschiges Monitoring statt sofortiger Therapie.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.display">
+             <notes>
+               <note id="n1">CodeSystem.concept.display</note>
+             </notes>
+        <source>Watchful Waiting</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CodeSystem-episodenart" resname="CodeSystem.concept.definition">
+             <notes>
+               <note id="n1">CodeSystem.concept.definition</note>
+             </notes>
+        <source>Abwartendes Beobachten — symptomorientiertes Vorgehen ohne kurative Rückfallebene.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

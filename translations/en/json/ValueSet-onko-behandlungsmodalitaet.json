@@ -1,0 +1,79 @@
+{
+  "id" : "ValueSet-onko-behandlungsmodalitaet",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "ValueSet.name",
+      "context" : "ValueSet.name",
+      "source" : "BehandlungsmodalitaetVS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.title",
+      "context" : "ValueSet.title",
+      "source" : "Behandlungsmodalität (VS)",
+      "target" : "Treatment modality value set"
+    },
+    {
+      "id" : "ValueSet.publisher",
+      "context" : "ValueSet.publisher",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : null
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.description",
+      "context" : "ValueSet.description",
+      "source" : "Behandlungsmodalität einer onkologischen Behandlungsepisode — Beispiel-Set\ngängiger Modalitäten, systemisch (Chemo-, Immun-, Hormontherapie) wie\nlokoregional (Bestrahlung, Operation).\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert. Für\nBestrahlung existiert `Radiation therapy care` (385798007), für die ambulante\nChemotherapie der spezifische Code `Ambulatory chemotherapy` (315601005).",
+      "target" : "Treatment modality of an oncological care episode — an example set of common systemic and locoregional modalities, researched against SNOMED CT international edition."
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Germany",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Chemotherapy care",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Ambulatory chemotherapy",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Radiation therapy care",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Immunological therapy",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Hormone therapy",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Surgical procedure",
+      "target" : null
+    }]
+  }]
+}

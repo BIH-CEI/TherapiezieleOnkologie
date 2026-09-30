@@ -1,0 +1,88 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "OnkoServiceRequestKontextVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "Kontext einer Tumorboard-Empfehlung (VS)"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine
+Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv
+oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.
+
+**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und
+`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als
+`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der
+Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Local (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Symptomatic (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Preventive - procedure intent"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Definitive (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Neoadjuvant intent"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Adjuvant - intent"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Additive (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Intraoperative (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Elective (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Emergency (qualifier value)"
+msgstr ""
+

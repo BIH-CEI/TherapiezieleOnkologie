@@ -161,6 +161,40 @@
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
+        <source>Behandlungsmodalität (Extension)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Behandlungsmodalität der Behandlungsepisode — z. B. Chemotherapie, Immuntherapie, Hormontherapie, Bestrahlung, Operation. Eigenes Merkmal neben der Episodenart (`EpisodeOfCare.type`); mehrere Modalitäten je Episode sind zulässig (z. B. Radiochemotherapie).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Behandlungsmodalität (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Behandlungsmodalität einer onkologischen Behandlungsepisode — Beispiel-Set
+gängiger Modalitäten, systemisch (Chemo-, Immun-, Hormontherapie) wie
+lokoregional (Bestrahlung, Operation).
+
+Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert. Für
+Bestrahlung existiert `Radiation therapy care` (385798007), für die ambulante
+Chemotherapie der spezifische Code `Ambulatory chemotherapy` (315601005).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
         <source>Brusterhaltende Operation + Sentinel-Lymphknoten-Biopsie (Beispiel)</source>
         <target></target>
       </trans-unit>
@@ -207,63 +241,6 @@ Contributor sein.
 
 Hier als lokale Extension nachgebildet, um die US-Realm-Abhängigkeit (US MCC / US Core) zu
 vermeiden; Wertebereich an die Referenztypen der MCC-Extension angelehnt.</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.name</note>
-             </notes>
-        <source>Diagnostischer CarePlan</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.description</note>
-             </notes>
-        <source>CarePlan für die Tumordiagnostik auf Basis von `CarePlan`.
-
-Ergänzend zum onkologischen Therapie-CarePlan (`OnkoCarePlan`) bildet dieses Profil den Weg
-zur Diagnosestellung als strukturierten Prozess ab. Die Schritte des Diagnosepfads werden als
-Aktivitäten abgebildet, deren Ergebnisse können
-über `activity.outcomeReference` angebunden werden.
-
-Der diagnostische CarePlan verweist über `addresses` auf die Tumordiagnose (`OnkoCondition`)
-und ist darüber mit dem Therapie-CarePlan verknüpft, der dieselbe Diagnose adressiert.
-
-Diagnostikspezifische Ergänzungen:
-- Der Plan-Typ ist über `category` verpflichtend gekennzeichnet: `category.text`
-  muss den Wert &quot;Tumordiagnostik&quot; tragen. Weitere Categories können ergänzt
-  werden. Damit sind diagnostischer und Therapie-CarePlan unterscheidbar.
-
-**Abgrenzung:** Dieses Profil beschreibt den *Prozess* der Diagnosefindung.</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.name</note>
-             </notes>
-        <source>Diagnostischer CarePlan (Beispiel Mamma)</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.description</note>
-             </notes>
-        <source>Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose.</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.name</note>
-             </notes>
-        <source>Diagnostischer CarePlan – Tumordiagnostik (Beispiel)</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.description</note>
-             </notes>
-        <source>Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -444,6 +421,34 @@ Blöcke liegt in der RequestGroup, nicht in `priorPrescription`.</source>
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
+        <source>Episodenart</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Art einer onkologischen Behandlungsepisode. Offener Startsatz: systemische Therapielinie (EnLiST/LoT), lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation — nicht EnLiST), Diagnostiklinie, Active Surveillance und Watchful Waiting; entitätsspezifische Arten werden ergänzt, ohne das Framework zu ändern.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Episodenart (ValueSet)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Alle Episodenarten des Startsatzes; die Bindung ist extensible — entitätsspezifische Arten dürfen ergänzt werden.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
         <source>Geplante Operation vom Tumorboard um den Tumor operativ zu entfernen</source>
         <target></target>
       </trans-unit>
@@ -598,6 +603,47 @@ Blöcke liegt in der RequestGroup, nicht in `priorPrescription`.</source>
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
+        <source>Kontext (Extension)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Zusätzlicher Kontext eines Behandlungsschritts, der – ergänzend zur Therapieintention – z. B.
+kennzeichnet, ob eine Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv,
+intraoperativ, elektiv oder im Notfall erfolgt.
+
+Dieses Feld soll dazu dienen, neben der Therapieintention einzelnen Behandlungsschritten
+weiteren Kontext zu geben. Die Extension kann an ServiceRequest, Procedure, MedicationRequest
+und MedicationAdministration verwendet werden.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Kontext einer Tumorboard-Empfehlung (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine
+Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv
+oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.
+
+**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und
+`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als
+`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der
+Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
         <source>Mammakarzinom links, triple-negativ (Beispiel)</source>
         <target></target>
       </trans-unit>
@@ -612,26 +658,14 @@ Blöcke liegt in der RequestGroup, nicht in `priorPrescription`.</source>
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
-        <source>Onkologische Diagnose (Condition)</source>
+        <source>Onkologische Behandlungsepisode</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Onkologische Tumorerkrankung auf Basis des **MII Kerndatensatz-Moduls Onkologie**
-([MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor),
-Version 2026.0.3).
-
-Dieses Profil erbt das vollständige onkologische Diagnosemodell des MII KDS (ICD-10-GM,
-ICD-O-3 Topographie/Morphologie, Diagnosesicherung gemäß oBDS, Seitenlokalisation,
-Feststellungsdatum) und dient als adressierte Erkrankung (`addresses`) für `OnkoCarePlan`
-und `OnkoTherapyGoal`. Damit wird die Therapieziel-Spezifikation an den nationalen
-Onkologie-Kerndatensatz angeschlossen, statt ein eigenes Condition-Modell zu definieren.
-
-Für die Therapieziel-Domäne werden keine zusätzlichen Einschränkungen vorgenommen; das
-Profil dokumentiert lediglich die explizite Wiederverwendung und stellt einen stabilen
-lokalen Canonical bereit, auf den die übrigen Profile referenzieren.</source>
+        <source>Ein abgegrenzter onkologischer Versorgungsabschnitt mit eigener Intention auf Basis von `EpisodeOfCare` — die **Episodenart** (`type`) unterscheidet systemische Therapielinie, lokoregionale Behandlungslinie, Diagnostiklinie, Active Surveillance, Watchful Waiting u. a.; die Behandlungsmodalität ist ein eigenes Merkmal (Extension `onko-modalitaet`). Eine systemische **Therapielinie** (Line of Therapy, LoT) ist dabei ein **fachliches Kontinuum**, das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist: Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -653,7 +687,7 @@ lokalen Canonical bereit, auf den die übrigen Profile referenzieren.</source>
   (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.
 
 So lässt sich z. B. „kurativ + Induktionsphase&quot; gleichzeitig ausdrücken. Verwendet in
-OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE
+OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE
 `procedure-intent`.</source>
         <target></target>
       </trans-unit>
@@ -668,45 +702,18 @@ OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
+        <source>Intention (das „Warum&quot;) einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:
+**wozu** behandelt wird.
 
-Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
+Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`.
+
+Nicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu&quot;,
+sondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist
+in aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr
+alternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`).
 Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
 gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
 des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.name</note>
-             </notes>
-        <source>Onkologische Therapielinie</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.description</note>
-             </notes>
-        <source>Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein **fachliches Kontinuum** mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist. Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`.</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.name</note>
-             </notes>
-        <source>Onkologische Therapielinie – Art (VS)</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
-             <notes>
-               <note id="n1">ImplementationGuide.definition.resource.description</note>
-             </notes>
-        <source>Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.
-
-Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein
-Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert
-`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code
-`Ambulatory chemotherapy` (315601005).</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -779,8 +786,11 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 - Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,
   Erhaltung, palliativ, supportiv).
 - `goal` referenziert das Profil `OnkoTherapyGoal`.
-- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die
+- Behandlungsepisoden (`OnkoBehandlungsepisode`, Basis `EpisodeOfCare`) werden über die
   Standard-Extension `workflow-episodeOfCare` verknüpft.
+- `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der
+  adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird,
+  beispielsweise der diagnostische (`Diagnostic intent`) oder der therapeutische (`Therapeutic intent`).
 
 Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des
 realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine
@@ -833,6 +843,50 @@ realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCano
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
+        <source>Onkologischer CarePlan – Therapieabschnitt (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Kennzeichnet, ob ein `OnkoCarePlan` den diagnostischen oder den therapeutischen Abschnitt der
+onkologischen Versorgung abbildet. Gebunden an `category` (Slice `therapieabschnitt`); ersetzt
+die vormalige Unterscheidung über zwei separate Profile (`OnkoCarePlan` / `DiagnosticCarePlan`).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Onkologischer CarePlan – Tumordiagnostik (Beispiel Mamma)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Diagnostikplan zur Tumordiagnose: bildet den Weg zur Diagnosesicherung ab (Stanzbiopsie, Histologie, Grading, klinisches TNM, Rezeptor-/HER2-Status, Ki-67, Keimbahn-Testung) und verweist auf die daraus hervorgegangene Tumordiagnose.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Onkologischer CarePlan – Tumordiagnostik (Beispiel)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Bildet den Weg zur Diagnosestellung ab: Koloskopie mit Biopsie und histopathologische Sicherung. Adressiert dieselbe Diagnose wie der Therapie-CarePlan.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
         <source>Onkologisches Diagnosezeil</source>
         <target></target>
       </trans-unit>
@@ -873,6 +927,23 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 
 `achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab
 (z. B. erreicht, in Bearbeitung, nicht erreicht).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Onkologisches Zielbeginn-Ereignis (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Codierte Ereignisse für den Beginn eines onkologischen Therapieziels (`Goal.startCodeableConcept`).
+Übernimmt das HL7-Basis-ValueSet [GoalStartEvent](http://hl7.org/fhir/ValueSet/goal-start-event) und
+ergänzt onkologisch relevante SNOMED-CT-Qualifier für den Zielbeginn nach Bestrahlung, Chemotherapie
+oder Operation. Example-Bindung – die Codes dienen als Anregung, sind aber nicht verpflichtend.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
@@ -1254,6 +1325,48 @@ Tumorboardspezifische Ergänzung:
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
+        <source>Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 1/~9 (Beispiel)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Dokumentierte Gabe (Zyklus 1) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 2/~9 (Beispiel)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Dokumentierte Gabe (Zyklus 2) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 3/~9 (Beispiel)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Dokumentierte Gabe (Zyklus 3) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
         <source>Verabreichte Systemtherapie – Pembrolizumab + Carboplatin/Paclitaxel, Zyklus 1/4 (KEYNOTE-522, Beispiel)</source>
         <target></target>
       </trans-unit>
@@ -1360,6 +1473,20 @@ Tumorboardspezifische Ergänzung:
                <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
         <source>Startseite</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.page.title">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
+             </notes>
+        <source>Einführung</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.page.title">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
+             </notes>
+        <source>Das Therapieziel-Dreieck</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-bih-cei-therapieziele-onkologie" resname="ImplementationGuide.definition.page.title">

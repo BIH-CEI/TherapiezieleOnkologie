@@ -7,7 +7,14 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Cancer care plan</source>
+        <source>Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CarePlan-CarePlanMammaNachsorge" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Therapeutic intent (qualifier value)</source>
         <target></target>
       </trans-unit>
     </body>

@@ -1,0 +1,358 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="StructureDefinition-onko-behandlungsepisode" original="Resource StructureDefinition-onko-behandlungsepisode" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.name">
+             <notes>
+               <note id="n1">A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+             </notes>
+        <source>OnkoBehandlungsepisode</source>
+        <target>OnkoBehandlungsepisode</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.title">
+             <notes>
+               <note id="n1">A short, descriptive, user-friendly title for the structure definition.</note>
+             </notes>
+        <source>Onkologische Behandlungsepisode</source>
+        <target>Oncological care episode</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.publisher">
+             <notes>
+               <note id="n1">The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target>Berlin Institute of Health at Charité (BIH)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.contact.name">
+             <notes>
+               <note id="n1">The name of an individual to contact.</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target>Berlin Institute of Health at Charité (BIH)</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.mapping.workflow/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>Workflow Pattern</source>
+        <target>Workflow Pattern</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.mapping.rim/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>RIM Mapping</source>
+        <target>RIM Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.mapping.w5/name">
+             <notes>
+               <note id="n1">A name for the specification that is being mapped to.</note>
+             </notes>
+        <source>FiveWs Pattern Mapping</source>
+        <target>FiveWs Pattern Mapping</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare/constraint">
+             <notes>
+               <note id="n1">Text that can be used to describe the constraint in messages identifying that the constraint has been violated.</note>
+             </notes>
+        <source>Eine EnLiST-LoT-Designation (enlist-lot) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist.</source>
+        <target>Eine EnLiST-LoT-Designation (enlist-lot) darf nur vorliegen, wenn der Zählstatus (enlist-countable) 'counted' ist.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare/constraint">
+             <notes>
+               <note id="n1">Text that can be used to describe the constraint in messages identifying that the constraint has been violated.</note>
+             </notes>
+        <source>Zählstatus 'counted' erfordert eine EnLiST-Designation (enlist-lot, führende Episode) oder einen Segment-Marker (enlist-line-segment, ausführende Episode).</source>
+        <target>Zählstatus 'counted' erfordert eine EnLiST-Designation (enlist-lot, führende Episode) oder einen Segment-Marker (enlist-line-segment, ausführende Episode).</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare/constraint">
+             <notes>
+               <note id="n1">Text that can be used to describe the constraint in messages identifying that the constraint has been violated.</note>
+             </notes>
+        <source>enlist-lot (führende Episode) und enlist-line-segment (ausführendes Segment) dürfen nicht an derselben Episode vorliegen.</source>
+        <target>enlist-lot (führende Episode) und enlist-line-segment (ausführendes Segment) dürfen nicht an derselben Episode vorliegen.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare/constraint">
+             <notes>
+               <note id="n1">Text that can be used to describe the constraint in messages identifying that the constraint has been violated.</note>
+             </notes>
+        <source>Therapeutische Episodenarten (systemische Therapielinie, lokoregionale Behandlungslinie) erfordern mindestens einen Diagnosebezug.</source>
+        <target>Therapeutische Episodenarten (systemische Therapielinie, lokoregionale Behandlungslinie) erfordern mindestens einen Diagnosebezug.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare/constraint">
+             <notes>
+               <note id="n1">Text that can be used to describe the constraint in messages identifying that the constraint has been violated.</note>
+             </notes>
+        <source>EnLiST-Designation (enlist-lot), Segment-Marker (enlist-line-segment) und Zählstatus 'counted' sind nur bei Episodenart 'systemische Therapielinie' zulässig.</source>
+        <target>EnLiST-Designation (enlist-lot), Segment-Marker (enlist-line-segment) und Zählstatus 'counted' sind nur bei Episodenart 'systemische Therapielinie' zulässig.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:therapyIntent/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Intention</source>
+        <target>Intent</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:therapyIntent/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Strukturierte Intention der Behandlungsepisode – Hauptintention und optionale Behandlungsphase; für jede Episodenart bestimmbar.</source>
+        <target>Structured intent of the care episode – main intent and optional treatment phase; determinable for every episode type.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:modalitaet/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Behandlungsmodalität</source>
+        <target>Treatment modality</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:modalitaet/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Modalität der Behandlung – z. B. Chemotherapie, Immuntherapie, Bestrahlung, Operation; eigenes Merkmal neben der Episodenart.</source>
+        <target>Modality of treatment – e.g. chemotherapy, immunotherapy, radiotherapy, surgery; a characteristic of its own next to the episode type.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:medicationRequest/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Medikationsverordnung</source>
+        <target>Medication request</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:medicationRequest/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Referenz auf Medikationsverordnungen, die den Anlass für diese Episode bilden – Ergänzung zu referralRequest, das auf ServiceRequest beschränkt ist.</source>
+        <target>Reference to the medication requests giving rise to this episode – complements referralRequest, which is restricted to ServiceRequest.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:lot/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>EnLiST-LoT-Designation</source>
+        <target>EnLiST LoT designation</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:lot/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>X.Y-Designation je Setting-Achse — eLoT, aLoT oder iLoT — nach EnLiST; nur an systemischen Therapielinien.</source>
+        <target>X.Y designation per setting axis — eLoT, aLoT or iLoT — per EnLiST; only on systemic lines of therapy.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:lineSegment/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>EnLiST-Linien-Segment</source>
+        <target>EnLiST line segment</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:lineSegment/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Segment-Marker einer ausführenden Einrichtung — gemeinsame lineId, keine eigene Designation.</source>
+        <target>Segment marker of an executing organisation — shared lineId, no designation of its own.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:countable/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>EnLiST-Zählstatus</source>
+        <target>EnLiST countability</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.extension:countable/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Zählstatus nach EnLiST — counted oder not-counted.</source>
+        <target>EnLiST countability — counted or not-counted.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.status/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.status/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Status der Behandlungsepisode – z. B. active, onhold, finished, cancelled.</source>
+        <target>Status of the care episode – e.g. active, onhold, finished, cancelled.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.statusHistory/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Statusverlauf</source>
+        <target>Status history</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.statusHistory/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Historie der Statuswechsel der Behandlungsepisode mit jeweiligem Zeitraum.</source>
+        <target>History of status changes of the care episode, each with its period.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.type/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Episodenart</source>
+        <target>Episode type</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.type/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Art der Behandlungsepisode – systemische Therapielinie, lokoregionale Behandlungslinie, Diagnostiklinie, Active Surveillance, Watchful Waiting u. a.</source>
+        <target>Type of the care episode – systemic line of therapy, locoregional treatment line, diagnostic line, active surveillance, watchful waiting and others.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.diagnosis/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Diagnosebezug</source>
+        <target>Diagnosis</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.diagnosis/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Der Episode zugrunde liegende Tumordiagnose bzw. Tumordiagnosen – für therapeutische Episodenarten verpflichtend, für die Erstdiagnose-Diagnostiklinie optional.</source>
+        <target>Tumor diagnosis or diagnoses underlying the episode – mandatory for therapeutic episode types, optional for the initial diagnostic line.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.diagnosis.condition/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Diagnose</source>
+        <target>Condition</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.diagnosis.condition/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Referenz auf die adressierte Tumorerkrankung – MII Onkologie Diagnose Primärtumor.</source>
+        <target>Reference to the addressed tumour condition – MII Oncology primary tumour diagnosis.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.diagnosis.role/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Diagnoserolle</source>
+        <target>Diagnosis role</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.diagnosis.role/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Rolle der Diagnose in dieser Episode – fest auf chief complaint als Hauptbehandlungsgrund.</source>
+        <target>Role of the diagnosis in this episode – fixed to chief complaint.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.diagnosis.rank/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Rangfolge</source>
+        <target>Rank</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.diagnosis.rank/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Rangfolge der Diagnose bei mehreren Diagnosen.</source>
+        <target>Rank of the diagnosis when several diagnoses are present.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.patient/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Patientin/Patient</source>
+        <target>Patient</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.patient/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Person, die in dieser Behandlungsepisode versorgt wird.</source>
+        <target>The person cared for within this episode.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.managingOrganization/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Behandelnde Organisation</source>
+        <target>Managing organization</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.managingOrganization/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Organisation, die diese Episode of Care verantwortlich behandelt bzw. steuert – bei der führenden Episode einer Linie die koordinierende Stelle.</source>
+        <target>Organization responsible for treating or managing this episode of care – for the leading episode of a line the coordinating body.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.period/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Zeitraum</source>
+        <target>Period</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.period/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Zeitraum der Behandlungsepisode von Beginn bis Ende des Versorgungsabschnitts.</source>
+        <target>Period of the care episode from start to end of the care segment.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.referralRequest/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Anforderung</source>
+        <target>Referral request</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.referralRequest/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Der Episode zugrunde liegende Anforderung oder Anforderungen, z. B. Überweisung oder Prozedur-Anforderung.</source>
+        <target>Requests giving rise to this episode, e.g. a referral or procedure request.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.careManager/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Fallverantwortliche/r</source>
+        <target>Care manager</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.careManager/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>Für die Behandlungsepisode fallverantwortliche behandelnde Person.</source>
+        <target>Practitioner responsible for managing the care episode.</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.team/short">
+             <notes>
+               <note id="n1">A concise description of what this element means (e.g. for use in autogenerated summaries).</note>
+             </notes>
+        <source>Behandlungsteam</source>
+        <target>Care team</target>
+      </trans-unit>
+      <trans-unit id="StructureDefinition-onko-behandlungsepisode" resname="StructureDefinition.element.EpisodeOfCare.team/definition">
+             <notes>
+               <note id="n1">Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).</note>
+             </notes>
+        <source>An der Behandlungsepisode beteiligtes Versorgungsteam, z. B. Tumorboard.</source>
+        <target>Care team involved in the episode, e.g. tumor board.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

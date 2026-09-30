@@ -12,6 +12,7 @@ Description: "Art einer onkologischen Behandlungsepisode. Offener Startsatz: sys
 * insert Translation(^title, en, Episode type)
 * insert Translation(^description, en, Type of an oncological care episode. Open starter set: systemic line of therapy — EnLiST/LoT; locoregional treatment line — surgery\, radiotherapy\, ablation\, not EnLiST; diagnostic line; active surveillance; watchful waiting. Entity-specific types may be added without changing the framework.)
 * ^status = #active
+* ^experimental = true
 * ^caseSensitive = true
 * ^content = #complete
 * #systemische-therapielinie "Systemische Therapielinie" "Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen."

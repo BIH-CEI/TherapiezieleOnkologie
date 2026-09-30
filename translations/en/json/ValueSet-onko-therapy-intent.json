@@ -30,7 +30,7 @@
     {
       "id" : "ValueSet.description",
       "context" : "ValueSet.description",
-      "source" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+      "source" : "Intention (das „Warum\") einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:\n**wozu** behandelt wird.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`.\n\nNicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu\",\nsondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist\nin aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr\nalternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`).\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
       "target" : null
     },
     {
@@ -49,18 +49,6 @@
       "id" : "ValueSet.compose.include.concept.display",
       "context" : "ValueSet.compose.include.concept.display",
       "source" : "Palliative intent",
-      "target" : null
-    },
-    {
-      "id" : "ValueSet.compose.include.concept.display",
-      "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Neoadjuvant intent",
-      "target" : null
-    },
-    {
-      "id" : "ValueSet.compose.include.concept.display",
-      "context" : "ValueSet.compose.include.concept.display",
-      "source" : "Adjuvant - intent",
       "target" : null
     },
     {
