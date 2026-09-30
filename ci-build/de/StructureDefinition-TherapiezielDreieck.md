@@ -83,7 +83,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-28T21:01:12+00:00",
+  "date" : "2026-09-30T11:29:35+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
