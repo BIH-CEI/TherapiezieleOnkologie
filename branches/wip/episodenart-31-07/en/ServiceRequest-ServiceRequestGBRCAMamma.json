@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "ServiceRequestGBRCAMamma",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ServiceRequestGBRCAMamma</b></p><a name=\"en-ServiceRequestGBRCAMamma\"> </a><a name=\"en-hcServiceRequestGBRCAMamma\"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21639-0}\">BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>authoredOn</b>: 2025-09-18</p><p><b>requester</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p></div>"
+  },
+  "status" : "completed",
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "21639-0",
+      "display" : "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "authoredOn" : "2025-09-18",
+  "requester" : {
+    "reference" : "Practitioner/OnkologinMamma"
+  }
+}

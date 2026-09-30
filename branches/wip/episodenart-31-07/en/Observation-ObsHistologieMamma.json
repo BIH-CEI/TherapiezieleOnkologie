@@ -1,0 +1,37 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObsHistologieMamma",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsHistologieMamma</b></p><a name=\"en-ObsHistologieMamma\"> </a><a name=\"en-hcObsHistologieMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 59847-4}\">Histology and Behavior ICD-O-3 Cancer</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-15</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 82711006}, {urn:oid:2.16.840.1.113883.6.43.1 8500/3}\">Invasives Mammakarzinom, NST (ICD-O-3 8500/3)</span></p><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "59847-4",
+      "display" : "Histology and Behavior ICD-O-3 Cancer"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "effectiveDateTime" : "2025-09-15",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "82711006",
+      "display" : "Infiltrating duct carcinoma"
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.43.1",
+      "code" : "8500/3",
+      "display" : "Invasives duktales Karzinom / Karzinom ohne speziellen Typ (NST)"
+    }],
+    "text" : "Invasives Mammakarzinom, NST (ICD-O-3 8500/3)"
+  },
+  "specimen" : {
+    "reference" : "Specimen/SpecimenBiopsieMamma"
+  }
+}

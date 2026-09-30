@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObsEstrogenrezeptorMamma",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation ObsEstrogenrezeptorMamma</b></p><a name=\"en-ObsEstrogenrezeptorMamma\"> </a><a name=\"en-hcObsEstrogenrezeptorMamma\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85337-4}, {http://snomed.info/sct 1234806008}\">Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>effective</b>: 2025-09-17</p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA6577-6}\">Negative</span></p><p><b>note</b>: </p><blockquote><div><p>Immunhistochemie: &lt;1 % positive Kerne → ER-negativ.</p>\n</div></blockquote><p><b>specimen</b>: <a href=\"Specimen-SpecimenBiopsieMamma.html\">Specimen: status = available; type = Specimen from breast obtained by core needle biopsy</a></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "85337-4",
+      "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234806008",
+      "display" : "Observation using immunohistochemistry (observable entity)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "effectiveDateTime" : "2025-09-17",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA6577-6",
+      "display" : "Negative"
+    }]
+  },
+  "note" : [{
+    "text" : "Immunhistochemie: <1 % positive Kerne → ER-negativ."
+  }],
+  "specimen" : {
+    "reference" : "Specimen/SpecimenBiopsieMamma"
+  }
+}

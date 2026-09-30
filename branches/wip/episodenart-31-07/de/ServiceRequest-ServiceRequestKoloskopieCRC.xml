@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ServiceRequestKoloskopieCRC"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest ServiceRequestKoloskopieCRC</b></p><a name="ServiceRequestKoloskopieCRC"> </a><a name="hcServiceRequestKoloskopieCRC"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 73761001}">Koloskopie mit Biopsieentnahme</span></p><p><b>subject</b>: <a href="Patient-PatientinCRC.html">Erika Musterfrau  Female, DoB: 1961-09-12</a></p></div>
+  </text>
+  <status value="completed"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="73761001"/>
+      <display value="Colonoscopy"/>
+    </coding>
+    <text value="Koloskopie mit Biopsieentnahme"/>
+  </code>
+  <subject>
+    <reference value="Patient/PatientinCRC"/>
+  </subject>
+</ServiceRequest>

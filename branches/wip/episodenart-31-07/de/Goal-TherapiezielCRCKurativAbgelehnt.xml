@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="TherapiezielCRCKurativAbgelehnt"/>
+  <meta>
+    <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Goal TherapiezielCRCKurativAbgelehnt</b></p><a name="TherapiezielCRCKurativAbgelehnt"> </a><a name="hcTherapiezielCRCKurativAbgelehnt"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-onko-therapy-goal.html">Onkologisches Therapieziel</a></p></div><blockquote><p><b>Onkologische Therapieintention (Extension)</b></p><ul><li>hauptintention: <span title="Codes:{http://snomed.info/sct 373808002}">Curative - procedure intent</span></li></ul></blockquote><p><b>Goal Reason Rejected</b>: <span title="Codes:">Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar.</span></p><p><b>lifecycleStatus</b>: Rejected</p><p><b>category</b>: <span title="Codes:{https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type heilung}">Heilung</span></p><p><b>description</b>: <span title="Codes:">Kurative Resektion des Primärtumors mit kurativer Absicht.</span></p><p><b>subject</b>: <a href="Patient-PatientinCRC.html">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><p><b>expressedBy</b>: <a href="Practitioner-OnkologinCRC.html">Practitioner Petra Musterarzt </a></p><p><b>addresses</b>: <a href="Condition-ConditionCRC.html">Condition Bösartige Neubildung: Kolon, nicht näher bezeichnet</a></p></div>
+  </text>
+  <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent">
+    <extension url="hauptintention">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="373808002"/>
+          <display value="Curative - procedure intent"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/goal-reasonRejected">
+    <valueCodeableConcept>
+      <text value="Nicht resektable Fernmetastasierung — kuratives Ziel nicht erreichbar."/>
+    </valueCodeableConcept>
+  </extension>
+  <lifecycleStatus value="rejected"/>
+  <category>
+    <coding>
+      <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type"/>
+      <code value="heilung"/>
+      <display value="Heilung"/>
+    </coding>
+  </category>
+  <description>
+    <text value="Kurative Resektion des Primärtumors mit kurativer Absicht."/>
+  </description>
+  <subject>
+    <reference value="Patient/PatientinCRC"/>
+  </subject>
+  <expressedBy>
+    <reference value="Practitioner/OnkologinCRC"/>
+  </expressedBy>
+  <addresses>
+    <reference value="Condition/ConditionCRC"/>
+  </addresses>
+</Goal>

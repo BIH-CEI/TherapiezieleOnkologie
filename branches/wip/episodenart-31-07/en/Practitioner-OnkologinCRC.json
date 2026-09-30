@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "OnkologinCRC",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner OnkologinCRC</b></p><a name=\"en-OnkologinCRC\"> </a><a name=\"en-hcOnkologinCRC\"> </a><p><b>name</b>: Petra Musterarzt </p></div>"
+  },
+  "name" : [{
+    "family" : "Musterarzt",
+    "given" : ["Petra"]
+  }]
+}

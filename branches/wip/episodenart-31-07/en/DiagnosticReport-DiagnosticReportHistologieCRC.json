@@ -1,0 +1,23 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "DiagnosticReportHistologieCRC",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport DiagnosticReportHistologieCRC</b></p><a name=\"en-DiagnosticReportHistologieCRC\"> </a><a name=\"en-hcDiagnosticReportHistologieCRC\"> </a><h2><span title=\"Codes:{http://loinc.org 60568-3}\">Histopathologie Kolonbiopsie</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>Erika Musterfrau  Female, DoB: 1961-09-12</td></tr><tr><td>Relevant Time</td><td>2026-01-18</td></tr></table><p><b>Report Details</b></p><p>Adenokarzinom des Kolons (C18.9), ICD-O-3 M8140/3.</p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "60568-3",
+      "display" : "Pathology Synoptic report"
+    }],
+    "text" : "Histopathologie Kolonbiopsie"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinCRC"
+  },
+  "effectiveDateTime" : "2026-01-18",
+  "conclusion" : "Adenokarzinom des Kolons (C18.9), ICD-O-3 M8140/3."
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="onko-behandlungsmodalitaet"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet onko-behandlungsmodalitaet</b></p><a name="onko-behandlungsmodalitaet"> </a><a name="hconko-behandlungsmodalitaet"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/385786002">385786002</a></td><td>Chemotherapy care</td></tr><tr><td><a href="http://snomed.info/id/315601005">315601005</a></td><td>Ambulatory chemotherapy</td></tr><tr><td><a href="http://snomed.info/id/385798007">385798007</a></td><td>Radiation therapy care</td></tr><tr><td><a href="http://snomed.info/id/76334006">76334006</a></td><td>Immunological therapy</td></tr><tr><td><a href="http://snomed.info/id/169413002">169413002</a></td><td>Hormone therapy</td></tr><tr><td><a href="http://snomed.info/id/387713003">387713003</a></td><td>Surgical procedure</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-behandlungsmodalitaet"/>
+  <version value="1.0.0-ballot"/>
+  <name value="BehandlungsmodalitaetVS"/>
+  <title value="Behandlungsmodalität (VS)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-09-30T19:52:44+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="Behandlungsmodalität einer onkologischen Behandlungsepisode — Beispiel-Set&#xA;gängiger Modalitäten, systemisch (Chemo-, Immun-, Hormontherapie) wie&#xA;lokoregional (Bestrahlung, Operation).&#xA;&#xA;Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert. Für&#xA;Bestrahlung existiert `Radiation therapy care` (385798007), für die ambulante&#xA;Chemotherapie der spezifische Code `Ambulatory chemotherapy` (315601005)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="385786002"/>
+        <display value="Chemotherapy care"/>
+      </concept>
+      <concept>
+        <code value="315601005"/>
+        <display value="Ambulatory chemotherapy"/>
+      </concept>
+      <concept>
+        <code value="385798007"/>
+        <display value="Radiation therapy care"/>
+      </concept>
+      <concept>
+        <code value="76334006"/>
+        <display value="Immunological therapy"/>
+      </concept>
+      <concept>
+        <code value="169413002"/>
+        <display value="Hormone therapy"/>
+      </concept>
+      <concept>
+        <code value="387713003"/>
+        <display value="Surgical procedure"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

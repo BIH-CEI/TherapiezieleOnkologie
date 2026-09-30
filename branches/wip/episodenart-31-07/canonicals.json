@@ -1,0 +1,216 @@
+[{
+  "id" : "enlist-change-type",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistChangeType"
+},
+{
+  "id" : "enlist-countable",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistCountable"
+},
+{
+  "id" : "enlist-lot-setting",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistLotSetting"
+},
+{
+  "id" : "episodenart",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+  "version" : "1.0.0-ballot",
+  "name" : "Episodenart"
+},
+{
+  "id" : "onko-therapy-goal-type",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoTherapyGoalType"
+},
+{
+  "id" : "ConceptMapOnkoTherapyGoalTypeSct",
+  "type" : "ConceptMap",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ConceptMap/ConceptMapOnkoTherapyGoalTypeSct",
+  "version" : "1.0.0-ballot"
+},
+{
+  "id" : "bih-cei-therapieziele-onkologie",
+  "type" : "ImplementationGuide",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ImplementationGuide/bih-cei-therapieziele-onkologie",
+  "version" : "1.0.0-ballot",
+  "name" : "TherapiezieleOnkologie"
+},
+{
+  "id" : "TherapiezielDreieck",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/TherapiezielDreieck",
+  "version" : "1.0.0-ballot",
+  "name" : "TherapiezielDreieck"
+},
+{
+  "id" : "enlist-change",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-change",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistChangeTypeExt"
+},
+{
+  "id" : "enlist-countable",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-countable",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistCountableExt"
+},
+{
+  "id" : "enlist-line-segment",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-line-segment",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistLineSegmentExt"
+},
+{
+  "id" : "enlist-lot",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/enlist-lot",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistLotExt"
+},
+{
+  "id" : "onko-behandlungsepisode",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoBehandlungsepisode"
+},
+{
+  "id" : "onko-care-plan",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoCarePlan"
+},
+{
+  "id" : "onko-careplan-custodian",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoCarePlanCustodianExt"
+},
+{
+  "id" : "onko-condition",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-condition",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoCondition"
+},
+{
+  "id" : "onko-diagnostic-care-plan",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-diagnostic-care-plan",
+  "version" : "1.0.0-ballot",
+  "name" : "DiagnosticCarePlan"
+},
+{
+  "id" : "onko-modalitaet",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoModalitaetExt"
+},
+{
+  "id" : "onko-therapy-goal",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoTherapyGoal"
+},
+{
+  "id" : "onko-therapy-intent",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoTherapyIntentExt"
+},
+{
+  "id" : "onko-therapy-line-medication-request",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoTherapyLineMedicationRequestExt"
+},
+{
+  "id" : "onko-tumorboard-medication-request",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-medication-request",
+  "version" : "1.0.0-ballot",
+  "name" : "TumorboardMedicationRequest"
+},
+{
+  "id" : "onko-tumorboard-service-request",
+  "type" : "StructureDefinition",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-tumorboard-service-request",
+  "version" : "1.0.0-ballot",
+  "name" : "TumorboardServiceRequest"
+},
+{
+  "id" : "enlist-change-type",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-change-type",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistChangeTypeVS"
+},
+{
+  "id" : "enlist-countable",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-countable",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistCountableVS"
+},
+{
+  "id" : "enlist-lot-setting",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/enlist-lot-setting",
+  "version" : "1.0.0-ballot",
+  "name" : "EnlistLotSettingVS"
+},
+{
+  "id" : "episodenart",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+  "version" : "1.0.0-ballot",
+  "name" : "EpisodenartVS"
+},
+{
+  "id" : "onko-behandlungsmodalitaet",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-behandlungsmodalitaet",
+  "version" : "1.0.0-ballot",
+  "name" : "BehandlungsmodalitaetVS"
+},
+{
+  "id" : "onko-therapy-goal-type",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoTherapyGoalTypeVS"
+},
+{
+  "id" : "onko-therapy-intent",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoTherapyIntentVS"
+},
+{
+  "id" : "onko-therapy-phase",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase",
+  "version" : "1.0.0-ballot",
+  "name" : "OnkoTherapyPhaseVS"
+}]

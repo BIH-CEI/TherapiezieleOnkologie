@@ -1,0 +1,171 @@
+{
+  "resourceType" : "Goal",
+  "id" : "DiagnosticGoal",
+  "meta" : {
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Goal DiagnosticGoal</b></p><a name=\"DiagnosticGoal\"> </a><a name=\"hcDiagnosticGoal\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-therapy-goal.html\">Onkologisches Therapieziel</a></p></div><blockquote><p><b>Goal acceptance</b></p><ul><li>individual: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></li><li>status: agree</li><li>priority: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}\">High Priority</span></li></ul></blockquote><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 261004008}\">Diagnostic intent</span></p><p><b>priority</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}\">High Priority</span></p><p><b>description</b>: <span title=\"Codes:\">Diagnosesicherung für die Verdachtsdiagnose</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>start</b>: 2025-09-12</p><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21905-5}\">Primary tumor.clinical [Class] Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21906-3}\">Regional lymph nodes.clinical [Class] Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21907-1}\">Distant metastases.clinical [Class] Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21908-9}\">Stage group.clinical Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 40556-3}\">Estrogen receptor Ag [Presence] in Tissue by Immune stain</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 85339-0}\">Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 48676-1}\">HER2 Ag [Interpretation] in Tissue</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21855-2}\">Primary site Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 44648-4}\">Histologic grade [Score] in Breast cancer specimen by Nottingham</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 33732-9}\">Histology grade [Identifier] in Cancer specimen</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 85347-3}\">Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</span></p></blockquote><p><b>expressedBy</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsDiseaseStatusMamma.html\">Observation Cancer disease progression</a></p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Goal DiagnosticGoal</b></p><a name=\"en-DiagnosticGoal\"> </a><a name=\"en-hcDiagnosticGoal\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-onko-therapy-goal.html\">Onkologisches Therapieziel</a></p></div><blockquote><p><b>Goal acceptance</b></p><ul><li>individual: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></li><li>status: agree</li><li>priority: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}\">High Priority</span></li></ul></blockquote><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 261004008}\">Diagnostic intent</span></p><p><b>priority</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-priority high-priority}\">High Priority</span></p><p><b>description</b>: <span title=\"Codes:\">Diagnosesicherung für die Verdachtsdiagnose</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMamma.html\">Sabine Baumann  Female, DoB: 1977-06-24</a></p><p><b>start</b>: 2025-09-12</p><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21905-5}\">Primary tumor.clinical [Class] Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21906-3}\">Regional lymph nodes.clinical [Class] Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21907-1}\">Distant metastases.clinical [Class] Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21908-9}\">Stage group.clinical Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 40556-3}\">Estrogen receptor Ag [Presence] in Tissue by Immune stain</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 85339-0}\">Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 48676-1}\">HER2 Ag [Interpretation] in Tissue</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 21855-2}\">Primary site Cancer</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 44648-4}\">Histologic grade [Score] in Breast cancer specimen by Nottingham</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 33732-9}\">Histology grade [Identifier] in Cancer specimen</span></p></blockquote><blockquote><p><b>target</b></p><p><b>measure</b>: <span title=\"Codes:{http://loinc.org 85347-3}\">Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</span></p></blockquote><p><b>expressedBy</b>: <a href=\"Practitioner-OnkologinMamma.html\">Practitioner Katrin Musterarzt </a></p><p><b>addresses</b>: <a href=\"Condition-ConditionMamma.html\">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>outcomeReference</b>: <a href=\"Observation-ObsDiseaseStatusMamma.html\">Observation Cancer disease progression</a></p></div></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "individual",
+      "valueReference" : {
+        "reference" : "Patient/PatientinMamma"
+      }
+    },
+    {
+      "url" : "status",
+      "valueCode" : "agree"
+    },
+    {
+      "url" : "priority",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+          "code" : "high-priority",
+          "display" : "High Priority"
+        }]
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/goal-acceptance"
+  }],
+  "lifecycleStatus" : "active",
+  "achievementStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/goal-achievement",
+      "code" : "in-progress",
+      "display" : "In Progress"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "261004008",
+      "display" : "Diagnostic intent"
+    }]
+  }],
+  "priority" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+      "code" : "high-priority",
+      "display" : "High Priority"
+    }]
+  },
+  "description" : {
+    "text" : "Diagnosesicherung für die Verdachtsdiagnose"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMamma"
+  },
+  "startDate" : "2025-09-12",
+  "target" : [{
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "21905-5",
+        "display" : "Primary tumor.clinical [Class] Cancer"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "21906-3",
+        "display" : "Regional lymph nodes.clinical [Class] Cancer"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "21907-1",
+        "display" : "Distant metastases.clinical [Class] Cancer"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "21908-9",
+        "display" : "Stage group.clinical Cancer"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "40556-3",
+        "display" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "85339-0",
+        "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48676-1",
+        "display" : "HER2 Ag [Interpretation] in Tissue"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "21855-2",
+        "display" : "Primary site Cancer"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "44648-4",
+        "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "33732-9",
+        "display" : "Histology grade [Identifier] in Cancer specimen"
+      }]
+    }
+  },
+  {
+    "measure" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "85347-3",
+        "display" : "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"
+      }]
+    }
+  }],
+  "expressedBy" : {
+    "reference" : "Practitioner/OnkologinMamma"
+  },
+  "addresses" : [{
+    "reference" : "Condition/ConditionMamma"
+  }],
+  "outcomeReference" : [{
+    "reference" : "Observation/ObsDiseaseStatusMamma"
+  }]
+}

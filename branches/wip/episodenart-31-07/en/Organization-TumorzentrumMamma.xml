@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="TumorzentrumMamma"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Organization TumorzentrumMamma</b></p><a name="en-TumorzentrumMamma"> </a><a name="en-hcTumorzentrumMamma"> </a><p><b>name</b>: Zertifiziertes Brustzentrum Musterklinik</p></div>
+  </text>
+  <name value="Zertifiziertes Brustzentrum Musterklinik"/>
+</Organization>

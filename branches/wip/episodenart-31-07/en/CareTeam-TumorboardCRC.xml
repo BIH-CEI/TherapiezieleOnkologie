@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="TumorboardCRC"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CareTeam TumorboardCRC</b></p><a name="en-TumorboardCRC"> </a><a name="en-hcTumorboardCRC"> </a><p><b>status</b>: Active</p><p><b>name</b>: Interdisziplinäres Tumorboard Kolorektales Karzinom</p><p><b>subject</b>: <a href="Patient-PatientinCRC.html">Erika Musterfrau  Female, DoB: 1961-09-12</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Member</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-OnkologinCRC.html">Practitioner Petra Musterarzt </a></td></tr></table><p><b>managingOrganization</b>: <a href="Organization-TumorzentrumCRC.html">Organization Onkologisches Zentrum Musterklinik</a></p></div>
+  </text>
+  <status value="active"/>
+  <name value="Interdisziplinäres Tumorboard Kolorektales Karzinom"/>
+  <subject>
+    <reference value="Patient/PatientinCRC"/>
+  </subject>
+  <participant>
+    <member>
+      <reference value="Practitioner/OnkologinCRC"/>
+    </member>
+  </participant>
+  <managingOrganization>
+    <reference value="Organization/TumorzentrumCRC"/>
+  </managingOrganization>
+</CareTeam>
