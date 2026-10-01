@@ -774,6 +774,18 @@
     {
       "id" : "ImplementationGuide.definition.resource.name",
       "context" : "ImplementationGuide.definition.resource.name",
+      "source" : "Terminologie-Manifest (Systemversionen)",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.description",
+      "context" : "ImplementationGuide.definition.resource.description",
+      "source" : "Systemversionen, gegen die dieser Implementierungsleitfaden gilt.\n\n| System | Fassung | Verwendung im Leitfaden |\n|---|---|---|\n| SNOMED CT International | 20260501 | Intention, Therapiephase, Behandlungsmodalität, Kontext, Zielart-ConceptMap |\n| LOINC | 2.83 | Tumorboard-Kennzeichnung (85232-7) |\n| ICD-10-GM | 2026 | Tumordiagnosen in den Anwendungsbeispielen |\n| ISO 3166 | 20240629 | Jurisdiction des Leitfadens |\n\nDie SNOMED-Fassung ist die kritische Angabe: Die zentralen ValueSets des\nLeitfadens sind SNOMED-basiert, und die Zuordnung eines Codes zu einer\nHierarchie kann sich zwischen Releases ändern. Die Trennung von Intention und\nKontext stützt sich darauf, dass beide Achsen unter `362981000 | Qualifier value`\nliegen, die Modalität dagegen unter `71388002 | Procedure` — gegen die hier\ngepinnte Fassung geprüft.",
+      "target" : null
+    },
+    {
+      "id" : "ImplementationGuide.definition.resource.name",
+      "context" : "ImplementationGuide.definition.resource.name",
       "source" : "Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)",
       "target" : null
     },
