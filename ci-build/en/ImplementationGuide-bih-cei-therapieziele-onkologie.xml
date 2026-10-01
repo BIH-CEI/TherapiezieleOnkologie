@@ -12,7 +12,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-10-01T11:19:09+00:00"/>
+  <date value="2026-10-01T11:27:43+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -1237,6 +1237,17 @@
       <name value="Stanzbiopsat Mamma links (Beispiel)"/>
       <description value="Gewebeprobe aus der Stanzbiopsie, an der die histopathologische und molekulare Diagnostik durchgeführt wurde."/>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/TerminologieManifest"/>
+      </reference>
+      <name value="Terminologie-Manifest (Systemversionen)"/>
+      <description value="Systemversionen, gegen die dieser Implementierungsleitfaden gilt.&#xA;&#xA;| System | Fassung | Verwendung im Leitfaden |&#xA;|---|---|---|&#xA;| SNOMED CT International | 20260501 | Intention, Therapiephase, Behandlungsmodalität, Kontext, Zielart-ConceptMap |&#xA;| LOINC | 2.83 | Tumorboard-Kennzeichnung (85232-7) |&#xA;| ICD-10-GM | 2026 | Tumordiagnosen in den Anwendungsbeispielen |&#xA;| ISO 3166 | 20240629 | Jurisdiction des Leitfadens |&#xA;&#xA;Die SNOMED-Fassung ist die kritische Angabe: Die zentralen ValueSets des&#xA;Leitfadens sind SNOMED-basiert, und die Zuordnung eines Codes zu einer&#xA;Hierarchie kann sich zwischen Releases ändern. Die Trennung von Intention und&#xA;Kontext stützt sich darauf, dass beide Achsen unter `362981000 | Qualifier value`&#xA;liegen, die Modalität dagegen unter `71388002 | Procedure` — gegen die hier&#xA;gepinnte Fassung geprüft."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

@@ -1,0 +1,31 @@
+# Terminologie-Manifest (Systemversionen) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
+
+## Parameters: Terminologie-Manifest (Systemversionen)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Parameters",
+  "id" : "TerminologieManifest",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueCanonical" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260501"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "http://loinc.org|2.83"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "urn:iso:std:iso:3166|20240629"
+  }]
+}
+
+```

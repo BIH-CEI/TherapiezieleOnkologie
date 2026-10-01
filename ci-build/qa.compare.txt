@@ -1,7 +1,7 @@
 TherapiezieleOnkologie : Validation Results
 =========================================
 
-err = 17, warn = 161, info = 518
+err = 17, warn = 162, info = 518
 $--
 Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
  Build Errors : 0 / 6 / 0
@@ -57,6 +57,7 @@ Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (cano
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Organization-Tumorboard : 0 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Organization-TumorzentrumCRC : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Organization-TumorzentrumMamma : 0 / 0 / 1
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Parameters-TerminologieManifest : 0 / 1 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Patient-PatientinCRC : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Patient-PatientinMamma : 0 / 0 / 1
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/Practitioner-OnkologinCRC : 0 / 0 / 1
@@ -304,6 +305,8 @@ WARNING: Observation/ObservationDiseaseStatusCRC: Observation: Alle Observations
 WARNING: Organization/Tumorboard: Organization.identifier[0].system: URL-Wert 'https://www.musterklinik.de/fhir/sid/organisationen' löst nicht auf
 == fsh-generated/resources/Organization-TumorzentrumCRC.json ==
 == fsh-generated/resources/Organization-TumorzentrumMamma.json ==
+== fsh-generated/resources/Parameters-TerminologieManifest.json ==
+WARNING: Parameters/TerminologieManifest: Parameters.parameter[2].value.ofType(canonical): Canonical URL 'http://fhir.de/CodeSystem/bfarm/icd-10-gm|2026' kann nicht aufgelöst werden
 == fsh-generated/resources/Patient-PatientinCRC.json ==
 == fsh-generated/resources/Patient-PatientinMamma.json ==
 == fsh-generated/resources/Practitioner-OnkologinCRC.json ==

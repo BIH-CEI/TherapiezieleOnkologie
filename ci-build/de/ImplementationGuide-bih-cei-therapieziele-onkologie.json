@@ -11,7 +11,7 @@
   "name" : "TherapiezieleOnkologie",
   "title" : "Implementierungsleitfaden Therapieziele Onkologie",
   "status" : "draft",
-  "date" : "2026-10-01T11:19:09+00:00",
+  "date" : "2026-10-01T11:27:43+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -1491,6 +1491,18 @@
       "name" : "Stanzbiopsat Mamma links (Beispiel)",
       "description" : "Gewebeprobe aus der Stanzbiopsie, an der die histopathologische und molekulare Diagnostik durchgeführt wurde.",
       "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Parameters"
+      }],
+      "reference" : {
+        "reference" : "Parameters/TerminologieManifest"
+      },
+      "name" : "Terminologie-Manifest (Systemversionen)",
+      "description" : "Systemversionen, gegen die dieser Implementierungsleitfaden gilt.\n\n| System | Fassung | Verwendung im Leitfaden |\n|---|---|---|\n| SNOMED CT International | 20260501 | Intention, Therapiephase, Behandlungsmodalität, Kontext, Zielart-ConceptMap |\n| LOINC | 2.83 | Tumorboard-Kennzeichnung (85232-7) |\n| ICD-10-GM | 2026 | Tumordiagnosen in den Anwendungsbeispielen |\n| ISO 3166 | 20240629 | Jurisdiction des Leitfadens |\n\nDie SNOMED-Fassung ist die kritische Angabe: Die zentralen ValueSets des\nLeitfadens sind SNOMED-basiert, und die Zuordnung eines Codes zu einer\nHierarchie kann sich zwischen Releases ändern. Die Trennung von Intention und\nKontext stützt sich darauf, dass beide Achsen unter `362981000 | Qualifier value`\nliegen, die Modalität dagegen unter `71388002 | Procedure` — gegen die hier\ngepinnte Fassung geprüft.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
