@@ -8,7 +8,7 @@
 
 -------
 
-Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+Profile: [Onkologische Behandlungsepisode](StructureDefinition-onko-behandlungsepisode.md)
 
 > **Onkologische Therapieintention (Extension)**
 * hauptintention: Neoadjuvant intent
@@ -23,11 +23,13 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
 **EnLiST-Zählstatus (Extension)**: Zählt in der LoT-Zählung
 
+**Behandlungsmodalität (Extension)**: Chemotherapy care
+
 **Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: extension = New LoT; status = completed; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md)
 
 **status**: Finished
 
-**type**: Chemotherapy care
+**type**: Systemische Therapielinie
 
 ### Diagnoses
 
@@ -53,7 +55,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
   "resourceType" : "EpisodeOfCare",
   "id" : "TherapielinieChemo",
   "meta" : {
-    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"]
   },
   "extension" : [{
     "extension" : [{
@@ -121,6 +123,16 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
     }
   },
   {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "385786002",
+        "display" : "Chemotherapy care"
+      }]
+    }
+  },
+  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",
     "valueReference" : {
       "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
@@ -129,9 +141,9 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
   "status" : "finished",
   "type" : [{
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "385786002",
-      "display" : "Chemotherapy care"
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+      "code" : "systemische-therapielinie",
+      "display" : "Systemische Therapielinie"
     }]
   }],
   "diagnosis" : [{

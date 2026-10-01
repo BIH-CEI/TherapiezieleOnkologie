@@ -15,7 +15,7 @@ In der interdisziplinären Tumorkonferenz wird – leitlinienkonform für ein fr
 
 Nach Abschluss der neoadjuvanten Therapie erfolgt eine **brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie**. Die pathologische Aufarbeitung des Präparats zeigt eine **pathologische Komplettremission (pCR, ypT0 ypN0)**. Das Ansprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet (`achievementStatus = achieved`).
 
-Schemakonform zu KEYNOTE-522 – und **unabhängig vom pCR-Status** – schließt sich an die Operation eine **ambulante adjuvante Pembrolizumab-Monotherapie** (~9 Zyklen q3w) an. Sie ist als **nachgelagerte Therapielinie** (`OnkoTherapyLine` / `EpisodeOfCare`, ambulant) modelliert und zum Zeitpunkt der Darstellung noch laufend (`status = active`).
+Schemakonform zu KEYNOTE-522 – und **unabhängig vom pCR-Status** – schließt sich an die Operation eine **ambulante adjuvante Pembrolizumab-Monotherapie** (~9 Zyklen q3w) an. Sie ist als **nachgelagerte Behandlungsepisode** (`OnkoBehandlungsepisode` / `EpisodeOfCare`, ambulant, Episodenart „systemische Therapielinie") modelliert und zum Zeitpunkt der Darstellung noch laufend (`status = active`).
 
 **EnLiST-Sicht:** Beide systemischen Abschnitte sind **eine** Line of Therapy (`eLoT 1.0`) — die neoadjuvante Klinik-Episode **führt** die Linie (`enlist-lot` samt gemeinsamer `lineId`), die ambulante adjuvante Episode ist **ausführendes Segment** derselben Linie (`enlist-line-segment`, gleiche `lineId`, keine eigene Designation). Der adjuvante Medikations-Request trägt den Änderungstyp **Same LoT** (prospektiv geplant, kein Y-Inkrement); die dazwischenliegende Operation bleibt als lokoregionale Episode außerhalb der Zählung (`not-counted`). Siehe [Behandlungsepisoden](behandlungsepisode.md).
 
@@ -59,7 +59,7 @@ Das prätherapeutische Profil aus der Stanzbiopsie ist – leitlinienkonform –
 
 ### Informationsmodell
 
-Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Szenario: Der `OnkoCarePlan` ist das zentrale Steuerobjekt, das die adressierte Erkrankung (`addresses`), das übergeordnete Ziel (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity.reference` / `activity.outcomeReference`) zusammenführt. Die **neoadjuvante Therapielinie** dient dabei dem **kurativen Gesamtziel**: Die `OnkoTherapyLine` trägt die Intention `neoadjuvant`, während `OnkoCarePlan` und `OnkoTherapyGoal` die übergeordnete Intention `kurativ` tragen.
+Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Szenario: Der `OnkoCarePlan` ist das zentrale Steuerobjekt, das die adressierte Erkrankung (`addresses`), das übergeordnete Ziel (`goal`) sowie geplante und durchgeführte Maßnahmen (`activity.reference` / `activity.outcomeReference`) zusammenführt. Die **neoadjuvante Behandlungsepisode** dient dabei dem **kurativen Gesamtziel**: Die Intention ist auch auf Episodenebene `kurativ` — „neoadjuvant" ist keine Intention, sondern die Stellung zur Operation und steht als Kontext an der Maßnahme (`onko-behandlungs-kontext`).
 
 | | | |
 | :--- | :--- | :--- |
@@ -67,9 +67,9 @@ Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Sz
 | Tumorerkrankung | `MII PR Onko Diagnose Primärtumor` | [ConditionMamma](Condition-ConditionMamma.md) |
 | Versorgungsplan | `OnkoCarePlan` | [CarePlanMammaNeoadjuvant](CarePlan-CarePlanMammaNeoadjuvant.md) |
 | Therapieziel | `OnkoTherapyGoal` | [TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md) |
-| Therapielinie 1 (neoadjuvante Chemo-/Immuntherapie) | `OnkoTherapyLine` | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md) |
-| Therapielinie 2 (Operation) | `OnkoTherapyLine` | [TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md) |
-| Therapielinie 3 (adjuvante Immuntherapie) | `OnkoTherapyLine` | [TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.md) |
+| Therapielinie 1 (neoadjuvante Chemo-/Immuntherapie) | `OnkoBehandlungsepisode` | [TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md) |
+| Therapielinie 2 (Operation) | `OnkoBehandlungsepisode` | [TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md) |
+| Therapielinie 3 (adjuvante Immuntherapie) | `OnkoBehandlungsepisode` | [TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.md) |
 | Geplante Maßnahme (Systemtherapie) | `MedicationRequest` | [MedicationRequestPembroChemoNeoadjuvantMamma](MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.md) |
 | Durchgeführte Maßnahme (Operation) | `Procedure` | [ProcedureOperationMamma](Procedure-ProcedureOperationMamma.md) |
 | Tumoransprechen | `Observation` | [ObsDiseaseStatusMamma](Observation-ObsDiseaseStatusMamma.md) |

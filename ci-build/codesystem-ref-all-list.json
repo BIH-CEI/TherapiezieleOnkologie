@@ -129,28 +129,28 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-    "ValueSet-onko-therapy-phase.html" : "Onkologische Therapiephase / Unter-Intention (VS)",
-    "ValueSet-onko-therapy-line-type.html" : "Onkologische Therapielinie – Art (VS)",
-    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-    "ValueSet-onko-goal-start-event.html" : "Onkologisches Zielbeginn-Ereignis (VS)",
-    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
-    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
-    "https://browser.ihtsdotools.org/" : "All Codes SCT ValueSet",
-    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
-    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
     "ValueSet-onko-service-request-kontext.html" : "Kontext einer Tumorboard-Empfehlung (VS)",
     "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-    "ValueSet-onko-care-plan-phase.html" : "Onkologischer CarePlan – Therapieabschnitt (VS)",
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
-    "ValueSet-onko-therapy-intent.html" : "Onkologische Therapieintention (VS)",
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
+    "https://browser.ihtsdotools.org/" : "All Codes SCT ValueSet",
     "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "ValueSet-onko-goal-start-event.html" : "Onkologisches Zielbeginn-Ereignis (VS)",
+    "ValueSet-onko-therapy-phase.html" : "Onkologische Therapiephase / Unter-Intention (VS)",
+    "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
     "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-    "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category"
+    "ValueSet-onko-care-plan-phase.html" : "Onkologischer CarePlan – Therapieabschnitt (VS)",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "ValueSet-onko-behandlungsmodalitaet.html" : "Behandlungsmodalität (VS)",
+    "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
+    "ValueSet-onko-therapy-intent.html" : "Onkologische Therapieintention (VS)"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
@@ -294,6 +294,17 @@
     "ValueSet-enlist-lot-setting.html" : "EnLiST-Setting-Achsen (ValueSet)"
   },
   {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+    "version" : "1.0.0-ballot",
+    "status" : "active",
+    "name" : "Episodenart",
+    "title" : "Episodenart",
+    "description" : "Art einer onkologischen Behandlungsepisode. Offener Startsatz: systemische Therapielinie (EnLiST/LoT), lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation — nicht EnLiST), Diagnostiklinie, Active Surveillance und Watchful Waiting; entitätsspezifische Arten werden ergänzt, ohne das Framework zu ändern.",
+    "uses" : {
+    },
+    "ValueSet-episodenart.html" : "Episodenart (ValueSet)"
+  },
+  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
     "version" : "1.0.0-ballot",
     "status" : "active",
@@ -302,8 +313,8 @@
     "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
     "uses" : {
     },
-    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)",
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)"
   },
   {
     "url" : "urn:ietf:bcp:47",

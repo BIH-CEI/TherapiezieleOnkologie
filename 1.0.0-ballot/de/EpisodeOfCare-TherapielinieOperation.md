@@ -8,16 +8,18 @@
 
 -------
 
-Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+Profile: [Onkologische Behandlungsepisode](StructureDefinition-onko-behandlungsepisode.md)
 
 > **Onkologische Therapieintention (Extension)**
 * hauptintention: Curative - procedure intent
 
 **EnLiST-Zählstatus (Extension)**: Zählt nicht
 
+**Behandlungsmodalität (Extension)**: Surgical procedure
+
 **status**: Finished
 
-**type**: Surgical procedure
+**type**: Lokoregionale Behandlungslinie
 
 ### Diagnoses
 
@@ -45,7 +47,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
   "resourceType" : "EpisodeOfCare",
   "id" : "TherapielinieOperation",
   "meta" : {
-    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"]
   },
   "extension" : [{
     "extension" : [{
@@ -69,13 +71,23 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "display" : "Zählt nicht"
       }]
     }
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "387713003",
+        "display" : "Surgical procedure"
+      }]
+    }
   }],
   "status" : "finished",
   "type" : [{
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "387713003",
-      "display" : "Surgical procedure"
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+      "code" : "lokoregionale-behandlungslinie",
+      "display" : "Lokoregionale Behandlungslinie"
     }]
   }],
   "diagnosis" : [{

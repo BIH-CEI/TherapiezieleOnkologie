@@ -7,7 +7,7 @@ Strukturierte Codierung der Therapieintention über zwei Achsen:
 * `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ, neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.
 * `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.
 
-So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Verwendet in OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.
+So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Verwendet in OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE `procedure-intent`.
 
 **Context of Use**
 
@@ -15,7 +15,7 @@ So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Ver
 
 **Usages:**
 
-* Use this Extension: [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md), [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md) and [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+* Use this Extension: [Onkologische Behandlungsepisode](StructureDefinition-onko-behandlungsepisode.md), [Onkologischer CarePlan](StructureDefinition-onko-care-plan.md) and [Onkologisches Therapieziel](StructureDefinition-onko-therapy-goal.md)
 * Examples for this Extension: [Bundle/BundleCRCPalliativ](Bundle-BundleCRCPalliativ.md), [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md), [CarePlan/CarePlanCRCPalliativ](CarePlan-CarePlanCRCPalliativ.md), [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md)... Show 7 more, [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md), [EpisodeOfCare/TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md), [EpisodeOfCare/TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.md), [Goal/TherapiezielCRCErhaltung](Goal-TherapiezielCRCErhaltung.md), [Goal/TherapiezielCRCKurativAbgelehnt](Goal-TherapiezielCRCKurativAbgelehnt.md), [Goal/TherapiezielCRCLebensverlaengerung](Goal-TherapiezielCRCLebensverlaengerung.md) and [Goal/TherapiezielMammaHeilung](Goal-TherapiezielMammaHeilung.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-onko-therapy-intent.json)
@@ -44,7 +44,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 Complex Extension: Strukturierte Codierung der Therapieintention über zwei Achsen: 
 * `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ, neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.
 * `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.
- So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Verwendet in OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.
+ So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Verwendet in OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE `procedure-intent`.
 
  **Differential-AnsichtDifferential View** 
 
@@ -65,7 +65,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 Complex Extension: Strukturierte Codierung der Therapieintention über zwei Achsen: 
 * `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ, neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.
 * `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.
- So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Verwendet in OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE `procedure-intent`.
+ So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Verwendet in OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE `procedure-intent`.
 
  
 
@@ -97,7 +97,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T11:29:35+00:00",
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -106,7 +106,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`.",
+  "description" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -155,7 +155,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
       "id" : "Extension",
       "path" : "Extension",
       "short" : "Onkologische Therapieintention (Extension)",
-      "definition" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`."
+      "definition" : "Strukturierte Codierung der Therapieintention über zwei Achsen:\n\n- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,\n  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.\n- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention\n  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.\n\nSo lässt sich z. B. „kurativ + Induktionsphase\" gleichzeitig ausdrücken. Verwendet in\nOnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE\n`procedure-intent`."
     },
     {
       "id" : "Extension.extension",

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="episodenart"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem episodenart</b></p><a name="en-episodenart"> </a><a name="en-hcepisodenart"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">systemische-therapielinie<a name="en-episodenart-systemische-therapielinie"> </a></td><td>Systemische Therapielinie</td><td>Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen.</td></tr><tr><td style="white-space:nowrap">lokoregionale-behandlungslinie<a name="en-episodenart-lokoregionale-behandlungslinie"> </a></td><td>Lokoregionale Behandlungslinie</td><td>Nicht-systemische Behandlungslinie: Chirurgie, Strahlentherapie, Ablation — von EnLiST nicht abgedeckt, nicht in der LoT-Zählung.</td></tr><tr><td style="white-space:nowrap">diagnostiklinie<a name="en-episodenart-diagnostiklinie"> </a></td><td>Diagnostiklinie</td><td>Abgegrenzter diagnostischer Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer Tumorboard-Empfehlung; nicht-therapeutisch.</td></tr><tr><td style="white-space:nowrap">active-surveillance<a name="en-episodenart-active-surveillance"> </a></td><td>Active Surveillance</td><td>Aktive Überwachung mit kurativer Rückfallebene — engmaschiges Monitoring statt sofortiger Therapie.</td></tr><tr><td style="white-space:nowrap">watchful-waiting<a name="en-episodenart-watchful-waiting"> </a></td><td>Watchful Waiting</td><td>Abwartendes Beobachten — symptomorientiertes Vorgehen ohne kurative Rückfallebene.</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart"/>
+  <version value="1.0.0-ballot"/>
+  <name value="Episodenart"/>
+  <title value="Episode type"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-10-01T05:55:59+00:00"/>
+  <publisher value="Berlin Institute of Health at Charité (BIH)"/>
+  <contact>
+    <name value="Berlin Institute of Health at Charité (BIH)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org"/>
+    </telecom>
+  </contact>
+  <description value="Type of an oncological care episode. Open starter set: systemic line of therapy — EnLiST/LoT; locoregional treatment line — surgery, radiotherapy, ablation, not EnLiST; diagnostic line; active surveillance; watchful waiting. Entity-specific types may be added without changing the framework."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="systemische-therapielinie"/>
+    <display value="Systemische Therapielinie"/>
+    <definition value="Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen."/>
+  </concept>
+  <concept>
+    <code value="lokoregionale-behandlungslinie"/>
+    <display value="Lokoregionale Behandlungslinie"/>
+    <definition value="Nicht-systemische Behandlungslinie: Chirurgie, Strahlentherapie, Ablation — von EnLiST nicht abgedeckt, nicht in der LoT-Zählung."/>
+  </concept>
+  <concept>
+    <code value="diagnostiklinie"/>
+    <display value="Diagnostiklinie"/>
+    <definition value="Abgegrenzter diagnostischer Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer Tumorboard-Empfehlung; nicht-therapeutisch."/>
+  </concept>
+  <concept>
+    <code value="active-surveillance"/>
+    <display value="Active Surveillance"/>
+    <definition value="Aktive Überwachung mit kurativer Rückfallebene — engmaschiges Monitoring statt sofortiger Therapie."/>
+  </concept>
+  <concept>
+    <code value="watchful-waiting"/>
+    <display value="Watchful Waiting"/>
+    <definition value="Abwartendes Beobachten — symptomorientiertes Vorgehen ohne kurative Rückfallebene."/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,60 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "episodenart",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem episodenart</b></p><a name=\"en-episodenart\"> </a><a name=\"en-hcepisodenart\"> </a><p>This case-sensitive code system <code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">systemische-therapielinie<a name=\"en-episodenart-systemische-therapielinie\"> </a></td><td>Systemische Therapielinie</td><td>Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen.</td></tr><tr><td style=\"white-space:nowrap\">lokoregionale-behandlungslinie<a name=\"en-episodenart-lokoregionale-behandlungslinie\"> </a></td><td>Lokoregionale Behandlungslinie</td><td>Nicht-systemische Behandlungslinie: Chirurgie, Strahlentherapie, Ablation — von EnLiST nicht abgedeckt, nicht in der LoT-Zählung.</td></tr><tr><td style=\"white-space:nowrap\">diagnostiklinie<a name=\"en-episodenart-diagnostiklinie\"> </a></td><td>Diagnostiklinie</td><td>Abgegrenzter diagnostischer Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer Tumorboard-Empfehlung; nicht-therapeutisch.</td></tr><tr><td style=\"white-space:nowrap\">active-surveillance<a name=\"en-episodenart-active-surveillance\"> </a></td><td>Active Surveillance</td><td>Aktive Überwachung mit kurativer Rückfallebene — engmaschiges Monitoring statt sofortiger Therapie.</td></tr><tr><td style=\"white-space:nowrap\">watchful-waiting<a name=\"en-episodenart-watchful-waiting\"> </a></td><td>Watchful Waiting</td><td>Abwartendes Beobachten — symptomorientiertes Vorgehen ohne kurative Rückfallebene.</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+  "version" : "1.0.0-ballot",
+  "name" : "Episodenart",
+  "title" : "Episode type",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2026-10-01T05:55:59+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "Type of an oncological care episode. Open starter set: systemic line of therapy — EnLiST/LoT; locoregional treatment line — surgery, radiotherapy, ablation, not EnLiST; diagnostic line; active surveillance; watchful waiting. Entity-specific types may be added without changing the framework.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "systemische-therapielinie",
+    "display" : "Systemische Therapielinie",
+    "definition" : "Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen."
+  },
+  {
+    "code" : "lokoregionale-behandlungslinie",
+    "display" : "Lokoregionale Behandlungslinie",
+    "definition" : "Nicht-systemische Behandlungslinie: Chirurgie, Strahlentherapie, Ablation — von EnLiST nicht abgedeckt, nicht in der LoT-Zählung."
+  },
+  {
+    "code" : "diagnostiklinie",
+    "display" : "Diagnostiklinie",
+    "definition" : "Abgegrenzter diagnostischer Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer Tumorboard-Empfehlung; nicht-therapeutisch."
+  },
+  {
+    "code" : "active-surveillance",
+    "display" : "Active Surveillance",
+    "definition" : "Aktive Überwachung mit kurativer Rückfallebene — engmaschiges Monitoring statt sofortiger Therapie."
+  },
+  {
+    "code" : "watchful-waiting",
+    "display" : "Watchful Waiting",
+    "definition" : "Abwartendes Beobachten — symptomorientiertes Vorgehen ohne kurative Rückfallebene."
+  }]
+}

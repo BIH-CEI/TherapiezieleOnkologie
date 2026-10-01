@@ -4,7 +4,7 @@
   <id value="onko-service-request-kontext"/>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet onko-service-request-kontext</b></p><a name="en-onko-service-request-kontext"> </a><a name="en-hconko-service-request-kontext"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/255470001">255470001</a></td><td>Local (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/264931009">264931009</a></td><td>Symptomatic (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/129428001">129428001</a></td><td>Preventive - procedure intent</td></tr><tr><td><a href="http://snomed.info/id/261002007">261002007</a></td><td>Definitive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/260364009">260364009</a></td><td>Additive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/277671009">277671009</a></td><td>Intraoperative (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/103390000">103390000</a></td><td>Elective (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/25876001">25876001</a></td><td>Emergency (qualifier value)</td></tr></table></li></ul></div>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet onko-service-request-kontext</b></p><a name="en-onko-service-request-kontext"> </a><a name="en-hconko-service-request-kontext"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/255470001">255470001</a></td><td>Local (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/264931009">264931009</a></td><td>Symptomatic (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/129428001">129428001</a></td><td>Preventive - procedure intent</td></tr><tr><td><a href="http://snomed.info/id/261002007">261002007</a></td><td>Definitive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/373847000">373847000</a></td><td>Neoadjuvant intent</td></tr><tr><td><a href="http://snomed.info/id/373846009">373846009</a></td><td>Adjuvant - intent</td></tr><tr><td><a href="http://snomed.info/id/260364009">260364009</a></td><td>Additive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/277671009">277671009</a></td><td>Intraoperative (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/103390000">103390000</a></td><td>Elective (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/25876001">25876001</a></td><td>Emergency (qualifier value)</td></tr></table></li></ul></div>
   </text>
   <url value="https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-service-request-kontext"/>
   <version value="1.0.0-ballot"/>
@@ -12,7 +12,7 @@
   <title value="Kontext einer Tumorboard-Empfehlung (VS)"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-09-30T11:29:35+00:00"/>
+  <date value="2026-10-01T05:55:59+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -21,7 +21,7 @@
       <value value="https://www.bihealth.org"/>
     </telecom>
   </contact>
-  <description value="Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine&#xA;Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv&#xA;oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`."/>
+  <description value="Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine&#xA;Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv&#xA;oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.&#xA;&#xA;**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und&#xA;`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als&#xA;`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der&#xA;Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,6 +47,14 @@
       <concept>
         <code value="261002007"/>
         <display value="Definitive (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="373847000"/>
+        <display value="Neoadjuvant intent"/>
+      </concept>
+      <concept>
+        <code value="373846009"/>
+        <display value="Adjuvant - intent"/>
       </concept>
       <concept>
         <code value="260364009"/>

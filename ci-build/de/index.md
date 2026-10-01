@@ -15,7 +15,7 @@ Er entsteht im Rahmen der BIH-CEI / Gematik-Onkologie-Kooperation und wird auf D
 Der initiale Profilsatz folgt der im [Analysebericht](analysebericht.md) festgelegten Vier-Schichten-Architektur und bildet den **CarePlan-/Goal-Fallback-Pfad** ab:
 
 * **[OnkoCarePlan](StructureDefinition-onko-care-plan.md)** — onkologischer Versorgungsplan mit Therapieintention, adressierter Tumorerkrankung und Bezug zu Therapielinien.
-* **[OnkoTherapyLine](StructureDefinition-onko-therapy-line.md)** — Therapielinie (EnLiST-konform) als Behandlungsabschnitt mit eigener Intention.
+* **[OnkoBehandlungsepisode](StructureDefinition-onko-behandlungsepisode.md)** — Behandlungsepisode mit eigener Intention; die Episodenart (`type`) unterscheidet systemische Therapielinie, lokoregionale Behandlungslinie, Diagnostiklinie, Active Surveillance und Watchful Waiting.
 * **[OnkoTherapyGoal](StructureDefinition-onko-therapy-goal.md)** — strukturiertes Therapieziel mit codierter Zielart (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität).
 * **[OnkoTherapyIntent](StructureDefinition-onko-therapy-intent.md)** — Extension für die Therapieintention (kurativ, neoadjuvant, adjuvant, Erhaltung, palliativ, supportiv).
 

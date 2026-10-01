@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "episodenart",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet episodenart</b></p><a name=\"en-episodenart\"> </a><a name=\"en-hcepisodenart\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-episodenart.html\"><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0-ballot</span></li></ul></div>"
+  },
+  "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+  "version" : "1.0.0-ballot",
+  "name" : "EpisodenartVS",
+  "title" : "Episode type value set",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2026-10-01T05:55:59+00:00",
+  "publisher" : "Berlin Institute of Health at Charité (BIH)",
+  "contact" : [{
+    "name" : "Berlin Institute of Health at Charité (BIH)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org"
+    }]
+  }],
+  "description" : "All starter-set episode types; the binding is extensible — entity-specific types may be added.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart"
+    }]
+  }
+}

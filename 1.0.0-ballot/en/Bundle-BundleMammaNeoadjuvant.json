@@ -971,7 +971,7 @@
       "resourceType" : "EpisodeOfCare",
       "id" : "TherapielinieChemo",
       "meta" : {
-        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"]
       },
       "language" : "en",
       "text" : {
@@ -1043,6 +1043,16 @@
         }
       },
       {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "385786002",
+            "display" : "Chemotherapy care"
+          }]
+        }
+      },
+      {
         "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",
         "valueReference" : {
           "reference" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
@@ -1051,9 +1061,9 @@
       "status" : "finished",
       "type" : [{
         "coding" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "385786002",
-          "display" : "Chemotherapy care"
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "systemische-therapielinie",
+          "display" : "Systemische Therapielinie"
         }]
       }],
       "diagnosis" : [{
@@ -1094,7 +1104,7 @@
       "resourceType" : "EpisodeOfCare",
       "id" : "TherapielinieOperation",
       "meta" : {
-        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+        "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"]
       },
       "language" : "en",
       "text" : {
@@ -1122,13 +1132,23 @@
             "display" : "Zählt nicht"
           }]
         }
+      },
+      {
+        "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "387713003",
+            "display" : "Surgical procedure"
+          }]
+        }
       }],
       "status" : "finished",
       "type" : [{
         "coding" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "387713003",
-          "display" : "Surgical procedure"
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "lokoregionale-behandlungslinie",
+          "display" : "Lokoregionale Behandlungslinie"
         }]
       }],
       "diagnosis" : [{
@@ -1953,6 +1973,93 @@
     "request" : {
       "method" : "POST",
       "url" : "CarePlan"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma1",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroAdjuvantMamma1",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-04-24",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 1 von ~9 (q3w), ambulant"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma2",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroAdjuvantMamma2",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-05-15",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 2 von ~9 (q3w), ambulant"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma3",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "MedicationAdministrationPembroAdjuvantMamma3",
+      "language" : "en",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "text" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientinMamma"
+      },
+      "effectiveDateTime" : "2026-06-05",
+      "request" : {
+        "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+      },
+      "note" : [{
+        "text" : "Zyklus 3 von ~9 (q3w), ambulant; Therapie läuft weiter"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
     }
   }]
 }

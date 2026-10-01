@@ -36,6 +36,30 @@
     "StructureDefinition-enlist-lot.html" : "EnLiST-LoT-Designation (Extension)"
   },
   {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+    "version" : "1.0.0-ballot",
+    "status" : "active",
+    "name" : "EpisodenartVS",
+    "title" : "Episodenart (ValueSet)",
+    "description" : "Alle Episodenarten des Startsatzes; die Bindung ist extensible — entitätsspezifische Arten dürfen ergänzt werden.",
+    "systems" : ["https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-behandlungsepisode.html" : "Onkologische Behandlungsepisode"
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-behandlungsmodalitaet",
+    "version" : "1.0.0-ballot",
+    "status" : "active",
+    "name" : "BehandlungsmodalitaetVS",
+    "title" : "Behandlungsmodalität (VS)",
+    "description" : "Behandlungsmodalität einer onkologischen Behandlungsepisode — Beispiel-Set\ngängiger Modalitäten, systemisch (Chemo-, Immun-, Hormontherapie) wie\nlokoregional (Bestrahlung, Operation).\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert. Für\nBestrahlung existiert `Radiation therapy care` (385798007), für die ambulante\nChemotherapie der spezifische Code `Ambulatory chemotherapy` (315601005).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-onko-modalitaet.html" : "Behandlungsmodalität (Extension)"
+  },
+  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-care-plan-phase",
     "version" : "1.0.0-ballot",
     "status" : "active",
@@ -65,7 +89,7 @@
     "status" : "active",
     "name" : "OnkoServiceRequestKontextVS",
     "title" : "Kontext einer Tumorboard-Empfehlung (VS)",
-    "description" : "Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine\nMaßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv\noder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.",
+    "description" : "Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine\nMaßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv\noder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.\n\n**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und\n`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als\n`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der\nIntentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -90,23 +114,11 @@
     "status" : "active",
     "name" : "OnkoTherapyIntentVS",
     "title" : "Onkologische Therapieintention (VS)",
-    "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+    "description" : "Intention (das „Warum\") einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:\n**wozu** behandelt wird.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`.\n\nNicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu\",\nsondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist\nin aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr\nalternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`).\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
     "StructureDefinition-onko-therapy-intent.html" : "Onkologische Therapieintention (Extension)"
-  },
-  {
-    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-line-type",
-    "version" : "1.0.0-ballot",
-    "status" : "active",
-    "name" : "OnkoTherapyLineTypeVS",
-    "title" : "Onkologische Therapielinie – Art (VS)",
-    "description" : "Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.\n\nDie Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein\nBeispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert\n`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code\n`Ambulatory chemotherapy` (315601005).",
-    "systems" : ["http://snomed.info/sct"],
-    "uses" : {
-    },
-    "StructureDefinition-onko-therapy-line.html" : "Onkologische Therapielinie"
   },
   {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase",

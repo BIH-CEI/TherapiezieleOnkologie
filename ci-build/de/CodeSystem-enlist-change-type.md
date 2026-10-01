@@ -1,6 +1,6 @@
 # EnLiST-Änderungstypen - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## CodeSystem: EnLiST-Änderungstypen 
+## CodeSystem: EnLiST-Änderungstypen (Experimentell) 
 
  
 Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene. 
@@ -39,7 +39,8 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T11:29:35+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

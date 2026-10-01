@@ -248,7 +248,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Nach Abschluss der neoadjuvanten Therapie erfolgt eine <strong>brusterhaltende Operation (BET) links mit Sentinel-Lymphknoten-Biopsie</strong>. Die pathologische Aufarbeitung des Präparats zeigt eine <strong>pathologische Komplettremission (pCR, ypT0 ypN0)</strong>. Das Ansprechen wird über eine Verlaufs-Observation (Disease Status) erfasst und auf das Therapieziel bezogen ausgewertet (<code class="language-plaintext highlighter-rouge">achievementStatus = achieved</code>).</p>
 
-<p>Schemakonform zu KEYNOTE-522 – und <strong>unabhängig vom pCR-Status</strong> – schließt sich an die Operation eine <strong>ambulante adjuvante Pembrolizumab-Monotherapie</strong> (~9 Zyklen q3w) an. Sie ist als <strong>nachgelagerte Therapielinie</strong> (<code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code> / <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>, ambulant) modelliert und zum Zeitpunkt der Darstellung noch laufend (<code class="language-plaintext highlighter-rouge">status = active</code>).</p>
+<p>Schemakonform zu KEYNOTE-522 – und <strong>unabhängig vom pCR-Status</strong> – schließt sich an die Operation eine <strong>ambulante adjuvante Pembrolizumab-Monotherapie</strong> (~9 Zyklen q3w) an. Sie ist als <strong>nachgelagerte Behandlungsepisode</strong> (<code class="language-plaintext highlighter-rouge">OnkoBehandlungsepisode</code> / <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code>, ambulant, Episodenart „systemische Therapielinie") modelliert und zum Zeitpunkt der Darstellung noch laufend (<code class="language-plaintext highlighter-rouge">status = active</code>).</p>
 
 <p><strong>EnLiST-Sicht:</strong> Beide systemischen Abschnitte sind <strong>eine</strong> Line of Therapy
 (<code class="language-plaintext highlighter-rouge">eLoT 1.0</code>) — die neoadjuvante Klinik-Episode <strong>führt</strong> die Linie
@@ -399,7 +399,7 @@ Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>)
 
 <h3 id="informationsmodell">Informationsmodell</h3>
 
-<p>Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Szenario: Der <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> ist das zentrale Steuerobjekt, das die adressierte Erkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>), das übergeordnete Ziel (<code class="language-plaintext highlighter-rouge">goal</code>) sowie geplante und durchgeführte Maßnahmen (<code class="language-plaintext highlighter-rouge">activity.reference</code> / <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code>) zusammenführt. Die <strong>neoadjuvante Therapielinie</strong> dient dabei dem <strong>kurativen Gesamtziel</strong>: Die <code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code> trägt die Intention <code class="language-plaintext highlighter-rouge">neoadjuvant</code>, während <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> und <code class="language-plaintext highlighter-rouge">OnkoTherapyGoal</code> die übergeordnete Intention <code class="language-plaintext highlighter-rouge">kurativ</code> tragen.</p>
+<p>Das Beispiel bildet dasselbe MCC-orientierte Beziehungsmodell ab wie das mCRC-Szenario: Der <code class="language-plaintext highlighter-rouge">OnkoCarePlan</code> ist das zentrale Steuerobjekt, das die adressierte Erkrankung (<code class="language-plaintext highlighter-rouge">addresses</code>), das übergeordnete Ziel (<code class="language-plaintext highlighter-rouge">goal</code>) sowie geplante und durchgeführte Maßnahmen (<code class="language-plaintext highlighter-rouge">activity.reference</code> / <code class="language-plaintext highlighter-rouge">activity.outcomeReference</code>) zusammenführt. Die <strong>neoadjuvante Behandlungsepisode</strong> dient dabei dem <strong>kurativen Gesamtziel</strong>: Die Intention ist auch auf Episodenebene <code class="language-plaintext highlighter-rouge">kurativ</code> — „neoadjuvant" ist keine Intention, sondern die Stellung zur Operation und steht als Kontext an der Maßnahme (<code class="language-plaintext highlighter-rouge">onko-behandlungs-kontext</code>).</p>
 
 <table>
   <thead>
@@ -432,17 +432,17 @@ Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>)
     </tr>
     <tr>
       <td>Therapielinie 1 (neoadjuvante Chemo-/Immuntherapie)</td>
-      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoBehandlungsepisode</code></td>
       <td><a href="EpisodeOfCare-TherapielinieChemo.html">TherapielinieChemo</a></td>
     </tr>
     <tr>
       <td>Therapielinie 2 (Operation)</td>
-      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoBehandlungsepisode</code></td>
       <td><a href="EpisodeOfCare-TherapielinieOperation.html">TherapielinieOperation</a></td>
     </tr>
     <tr>
       <td>Therapielinie 3 (adjuvante Immuntherapie)</td>
-      <td><code class="language-plaintext highlighter-rouge">OnkoTherapyLine</code></td>
+      <td><code class="language-plaintext highlighter-rouge">OnkoBehandlungsepisode</code></td>
       <td><a href="EpisodeOfCare-TherapieliniePembroAdjuvant.html">TherapieliniePembroAdjuvant</a></td>
     </tr>
     <tr>
@@ -508,8 +508,8 @@ Zählung (<code class="language-plaintext highlighter-rouge">not-counted</code>)
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 11:29:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 05:55:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

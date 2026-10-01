@@ -13,7 +13,7 @@
   <name value="TherapiezieleOnkologie"/>
   <title value="Implementierungsleitfaden Therapieziele Onkologie"/>
   <status value="draft"/>
-  <date value="2026-09-30T11:29:35+00:00"/>
+  <date value="2026-10-01T05:55:59+00:00"/>
   <publisher value="Berlin Institute of Health at Charité (BIH)"/>
   <contact>
     <name value="Berlin Institute of Health at Charité (BIH)"/>
@@ -658,6 +658,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-modalitaet"/>
+      </reference>
+      <name value="Behandlungsmodalität (Extension)"/>
+      <description value="Behandlungsmodalität der Behandlungsepisode — z. B. Chemotherapie, Immuntherapie, Hormontherapie, Bestrahlung, Operation. Eigenes Merkmal neben der Episodenart (`EpisodeOfCare.type`); mehrere Modalitäten je Episode sind zulässig (z. B. Radiochemotherapie)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/onko-behandlungsmodalitaet"/>
+      </reference>
+      <name value="Behandlungsmodalität (VS)"/>
+      <description value="Behandlungsmodalität einer onkologischen Behandlungsepisode — Beispiel-Set&#xA;gängiger Modalitäten, systemisch (Chemo-, Immun-, Hormontherapie) wie&#xA;lokoregional (Bestrahlung, Operation).&#xA;&#xA;Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert. Für&#xA;Bestrahlung existiert `Radiation therapy care` (385798007), für die ambulante&#xA;Chemotherapie der spezifische Code `Ambulatory chemotherapy` (315601005)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Procedure"/>
       </extension>
       <reference>
@@ -801,6 +823,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/episodenart"/>
+      </reference>
+      <name value="Episodenart"/>
+      <description value="Art einer onkologischen Behandlungsepisode. Offener Startsatz: systemische Therapielinie (EnLiST/LoT), lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation — nicht EnLiST), Diagnostiklinie, Active Surveillance und Watchful Waiting; entitätsspezifische Arten werden ergänzt, ohne das Framework zu ändern."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/episodenart"/>
+      </reference>
+      <name value="Episodenart (ValueSet)"/>
+      <description value="Alle Episodenarten des Startsatzes; die Bindung ist extensible — entitätsspezifische Arten dürfen ergänzt werden."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ServiceRequest"/>
       </extension>
       <reference>
@@ -939,7 +983,7 @@
         <reference value="ValueSet/onko-service-request-kontext"/>
       </reference>
       <name value="Kontext einer Tumorboard-Empfehlung (VS)"/>
-      <description value="Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine&#xA;Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv&#xA;oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`."/>
+      <description value="Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine&#xA;Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv&#xA;oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.&#xA;&#xA;**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und&#xA;`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als&#xA;`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der&#xA;Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -955,13 +999,24 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/onko-behandlungsepisode"/>
+      </reference>
+      <name value="Onkologische Behandlungsepisode"/>
+      <description value="Ein abgegrenzter onkologischer Versorgungsabschnitt mit eigener Intention auf Basis von `EpisodeOfCare` — die **Episodenart** (`type`) unterscheidet systemische Therapielinie, lokoregionale Behandlungslinie, Diagnostiklinie, Active Surveillance, Watchful Waiting u. a.; die Behandlungsmodalität ist ein eigenes Merkmal (Extension `onko-modalitaet`). Eine systemische **Therapielinie** (Line of Therapy, LoT) ist dabei ein **fachliches Kontinuum**, das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist: Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/onko-therapy-intent"/>
       </reference>
       <name value="Onkologische Therapieintention (Extension)"/>
-      <description value="Strukturierte Codierung der Therapieintention über zwei Achsen:&#xA;&#xA;- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,&#xA;  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.&#xA;- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention&#xA;  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.&#xA;&#xA;So lässt sich z. B. „kurativ + Induktionsphase&quot; gleichzeitig ausdrücken. Verwendet in&#xA;OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE&#xA;`procedure-intent`."/>
+      <description value="Strukturierte Codierung der Therapieintention über zwei Achsen:&#xA;&#xA;- `hauptintention` (Pflicht): die eigentliche Behandlungsintention (kurativ, palliativ,&#xA;  neoadjuvant, adjuvant, supportiv) – SNOMED `Procedure by intent`.&#xA;- `phase` (optional, wiederholbar): die sequenzielle Behandlungsphase / Unter-Intention&#xA;  (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.&#xA;&#xA;So lässt sich z. B. „kurativ + Induktionsphase&quot; gleichzeitig ausdrücken. Verwendet in&#xA;OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE&#xA;`procedure-intent`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -972,29 +1027,7 @@
         <reference value="ValueSet/onko-therapy-intent"/>
       </reference>
       <name value="Onkologische Therapieintention (VS)"/>
-      <description value="Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.&#xA;&#xA;Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.&#xA;Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar&#xA;gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten&#xA;des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/onko-therapy-line"/>
-      </reference>
-      <name value="Onkologische Therapielinie"/>
-      <description value="Eine onkologische Therapielinie (Line of Therapy, LoT) auf Basis von `EpisodeOfCare`, EnLiST-konform. Eine Therapielinie ist ein **fachliches Kontinuum** mit definierter Intention und Tumorerkrankung, das durch ein klinisches Ereignis (Progress, Toxizität, Patientenwunsch, Studienende, geplanter Wechsel) beendet wird — und das organisatorisch in mehrere Episoden zerfallen kann, da `EpisodeOfCare` organisationsgebunden ist. Die EnLiST-Designation (`enlist-lot`) trägt je Linie **genau eine führende Episode** (main contributor); ausführende Einrichtungen dokumentieren eigene Episoden als Segmente (`enlist-line-segment`) mit gemeinsamer `lineId`. Bei gleichem Ort/Sektor fallen Führung und Ausführung in einer einzigen Episode zusammen. Die Verbindung zu einem `OnkoCarePlan` erfolgt über die Standard-Extension `workflow-episodeOfCare`."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/onko-therapy-line-type"/>
-      </reference>
-      <name value="Onkologische Therapielinie – Art (VS)"/>
-      <description value="Art einer onkologischen Therapielinie (Behandlungsmodalität) für `EpisodeOfCare.type`.&#xA;&#xA;Die Codes wurden gegen SNOMED CT (internationale Edition) recherchiert und stellen ein&#xA;Beispiel-Set gängiger onkologischer Behandlungsmodalitäten dar. Für Bestrahlung existiert&#xA;`Radiation therapy care` (385798007), für die ambulante Chemotherapie der spezifische Code&#xA;`Ambulatory chemotherapy` (315601005)."/>
+      <description value="Intention (das „Warum&quot;) einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:&#xA;**wozu** behandelt wird.&#xA;&#xA;Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`.&#xA;&#xA;Nicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu&quot;,&#xA;sondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist&#xA;in aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr&#xA;alternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`).&#xA;Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar&#xA;gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten&#xA;des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1038,7 +1071,7 @@
         <reference value="StructureDefinition/onko-care-plan"/>
       </reference>
       <name value="Onkologischer CarePlan"/>
-      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die&#xA;  Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;- `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der&#xA;  adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird,&#xA;  beispielsweise der diagnostische (`Diagnostic intent`) oder der therapeutische (`Therapeutic intent`).&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
+      <description value="Onkologischer Versorgungsplan auf Basis von `CarePlan`.&#xA;&#xA;Das Profil ist architektonisch an den **HL7 FHIR US Multiple Chronic Conditions (MCC) eCare Plan**&#xA;([MCCCarePlan](https://build.fhir.org/ig/HL7/fhir-us-mcc/StructureDefinition-mccCarePlan.html))&#xA;angelehnt: Der CarePlan ist das zentrale, konsensbasierte Steuerobjekt, das adressierte&#xA;Erkrankungen (`addresses`), übergeordnete Ziele (`goal`) sowie geplante und durchgeführte&#xA;Maßnahmen (`activity`) verschiedener Versorgungsteams zusammenführt.&#xA;&#xA;Onkologiespezifische Ergänzungen gegenüber MCC:&#xA;- Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,&#xA;  Erhaltung, palliativ, supportiv).&#xA;- `goal` referenziert das Profil `OnkoTherapyGoal`.&#xA;- Behandlungsepisoden (`OnkoBehandlungsepisode`, Basis `EpisodeOfCare`) werden über die&#xA;  Standard-Extension `workflow-episodeOfCare` verknüpft.&#xA;- `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der&#xA;  adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird,&#xA;  beispielsweise der diagnostische (`Diagnostic intent`) oder der therapeutische (`Therapeutic intent`).&#xA;&#xA;Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Repräsentation des&#xA;realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine&#xA;`PlanDefinition` aus dem CPG-on-FHIR-Stack."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1215,7 +1248,7 @@
       </reference>
       <name value="Therapielinie 1 – FOLFOX + Bevacizumab (Beispiel)"/>
       <description value="Erstlinien-Behandlungsabschnitt mit palliativer Intention, Induktionsphase (FOLFOX + Bevacizumab)."/>
-      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1226,7 +1259,7 @@
       </reference>
       <name value="Therapielinie 1 – neoadjuvante Chemo-/Immuntherapie"/>
       <description value="Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."/>
-      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1237,7 +1270,7 @@
       </reference>
       <name value="Therapielinie 2 – Operation"/>
       <description value="Erstlinien-Behandlungsabschnitt mit neoadjuvanter Intention (KEYNOTE-522-Schema) im Rahmen eines kurativen Gesamtkonzepts."/>
-      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1248,7 +1281,7 @@
       </reference>
       <name value="Therapielinie 3 – adjuvante Immuntherapie (Pembrolizumab), ambulant"/>
       <description value="Nachgelagerter, ambulanter Behandlungsabschnitt: adjuvante Pembrolizumab-Monotherapie nach dem KEYNOTE-522-Schema im Anschluss an die Operation (kuratives Gesamtkonzept)."/>
-      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+      <exampleCanonical value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1424,6 +1457,39 @@
       </reference>
       <name value="Tumorzentrum (Custodian, Beispiel)"/>
       <description value="Verantwortliche Stelle für Pflege und Aktualisierung der Versorgungspläne."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma1"/>
+      </reference>
+      <name value="Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 1/~9 (Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 1) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma2"/>
+      </reference>
+      <name value="Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 2/~9 (Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 2) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma3"/>
+      </reference>
+      <name value="Verabreichte adjuvante Systemtherapie – Pembrolizumab-Monotherapie, Zyklus 3/~9 (Beispiel)"/>
+      <description value="Dokumentierte Gabe (Zyklus 3) der ambulanten adjuvanten Pembrolizumab-Monotherapie im ausführenden Segment der Linie eLoT 1.0, referenziert auf den adjuvanten MedicationRequest aus dem Tumorboard-CarePlan."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

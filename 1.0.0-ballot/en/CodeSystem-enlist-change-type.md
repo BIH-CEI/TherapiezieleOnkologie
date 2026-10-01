@@ -1,6 +1,6 @@
 # EnLiST-Änderungstypen - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## CodeSystem: EnLiST-Änderungstypen 
+## CodeSystem: EnLiST-Änderungstypen (Experimental) 
 
  
 The three change types of the EnLiST counting logic: new LoT — X plus one, only on progression or lack of adequate response; modified LoT — Y plus one, non-progression-related change; same LoT — prospectively planned change, designation unchanged. Intended for flagging treatment changes at request level. 
@@ -39,7 +39,8 @@ This Code system is referenced in the definition of the following value sets:
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T11:29:35+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

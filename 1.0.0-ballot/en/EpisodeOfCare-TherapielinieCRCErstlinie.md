@@ -8,7 +8,7 @@
 
 -------
 
-Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+Profile: [Onkologische Behandlungsepisode](StructureDefinition-onko-behandlungsepisode.md)
 
 > **Onkologische Therapieintention (Extension)**
 * hauptintention: Palliative intent
@@ -22,9 +22,11 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
 **EnLiST-Zählstatus (Extension)**: Zählt in der LoT-Zählung
 
+**Behandlungsmodalität (Extension)**: Ambulatory chemotherapy
+
 **status**: Active
 
-**type**: Ambulatory chemotherapy
+**type**: Systemische Therapielinie
 
 ### Diagnoses
 
@@ -52,7 +54,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
   "resourceType" : "EpisodeOfCare",
   "id" : "TherapielinieCRCErstlinie",
   "meta" : {
-    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"]
   },
   "extension" : [{
     "extension" : [{
@@ -111,13 +113,23 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
         "display" : "Zählt in der LoT-Zählung"
       }]
     }
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "315601005",
+        "display" : "Ambulatory chemotherapy"
+      }]
+    }
   }],
   "status" : "active",
   "type" : [{
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "315601005",
-      "display" : "Ambulatory chemotherapy"
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+      "code" : "systemische-therapielinie",
+      "display" : "Systemische Therapielinie"
     }]
   }],
   "diagnosis" : [{

@@ -101,6 +101,13 @@
       ]
     },
     {
+      "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+      "title": "Behandlungsmodalität (Extension)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
       "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent",
       "title": "Onkologische Therapieintention (Extension)",
       "types": [
@@ -167,6 +174,12 @@
     }
   ],
   "profiles": {
+    "EpisodeOfCare": [
+      {
+        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode",
+        "title": "Onkologische Behandlungsepisode"
+      }
+    ],
     "CarePlan": [
       {
         "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-care-plan",
@@ -177,12 +190,6 @@
       {
         "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-goal",
         "title": "Onkologisches Therapieziel"
-      }
-    ],
-    "EpisodeOfCare": [
-      {
-        "url": "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line",
-        "title": "Onkologische Therapielinie"
       }
     ],
     "MedicationRequest": [
@@ -294,6 +301,10 @@
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-careplan-custodian": [
       "Bundle.entry.resource",
       "CarePlan"
+    ],
+    "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet": [
+      "Bundle.entry.resource",
+      "EpisodeOfCare"
     ],
     "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-intent": [
       "Bundle.entry.resource",

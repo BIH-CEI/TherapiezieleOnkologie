@@ -10,7 +10,7 @@ Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf 
 
 **Usages:**
 
-* Use this Extension: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+* Use this Extension: [Onkologische Behandlungsepisode](StructureDefinition-onko-behandlungsepisode.md)
 * Examples for this Extension: [Bundle/BundleCRCPalliativ](Bundle-BundleCRCPalliativ.md), [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md), [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md), [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md)... Show 2 more, [EpisodeOfCare/TherapielinieOperation](EpisodeOfCare-TherapielinieOperation.md) and [EpisodeOfCare/TherapieliniePembroAdjuvant](EpisodeOfCare-TherapieliniePembroAdjuvant.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-enlist-countable.json)
@@ -86,7 +86,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-count
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T11:29:35+00:00",
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

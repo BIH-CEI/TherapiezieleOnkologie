@@ -8,7 +8,7 @@
 
 -------
 
-Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+Profile: [Onkologische Behandlungsepisode](StructureDefinition-onko-behandlungsepisode.md)
 
 > **Onkologische Therapieintention (Extension)**
 * hauptintention: Adjuvant - intent
@@ -20,9 +20,11 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
 
 **Therapielinie – Medikationsverordnung (Extension)**: [MedicationRequest: extension = Same LoT; status = active; intent = plan; category = Tumor board Consult note; medication[x] = ](MedicationRequest-MedicationRequestPembroAdjuvantMamma.md)
 
+**Behandlungsmodalität (Extension)**: Ambulante adjuvante Immuntherapie – Pembrolizumab-Monotherapie
+
 **status**: Active
 
-**type**: Ambulante adjuvante Immuntherapie – Pembrolizumab-Monotherapie
+**type**: Systemische Therapielinie
 
 ### Diagnoses
 
@@ -48,7 +50,7 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
   "resourceType" : "EpisodeOfCare",
   "id" : "TherapieliniePembroAdjuvant",
   "meta" : {
-    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"]
+    "profile" : ["https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"]
   },
   "extension" : [{
     "extension" : [{
@@ -95,15 +97,25 @@ Profile: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
     "valueReference" : {
       "reference" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
     }
+  },
+  {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "76334006",
+        "display" : "Immunological therapy"
+      }],
+      "text" : "Ambulante adjuvante Immuntherapie – Pembrolizumab-Monotherapie"
+    }
   }],
   "status" : "active",
   "type" : [{
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "76334006",
-      "display" : "Immunological therapy"
-    }],
-    "text" : "Ambulante adjuvante Immuntherapie – Pembrolizumab-Monotherapie"
+      "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+      "code" : "systemische-therapielinie",
+      "display" : "Systemische Therapielinie"
+    }]
   }],
   "diagnosis" : [{
     "condition" : {

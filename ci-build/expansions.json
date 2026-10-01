@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "692abd8f-6467-4e77-8a30-c1b1d55099e4",
+  "id" : "a48f4171-da12-4419-b7c4-dfa7e794f94f",
   "meta" : {
-    "lastUpdated" : "2026-09-30T11:29:35.684+00:00"
+    "lastUpdated" : "2026-10-01T05:55:59.461+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -31,7 +31,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -40,8 +40,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:97906db7-4b5d-4d62-a71f-58e10248e6ec",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:e592a01f-2ccc-4300-a579-b569117a57fc",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -59,6 +59,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -105,7 +109,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -114,8 +118,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:43078c85-72cf-484a-91ae-ce4dc70ef221",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:bd97f679-bc17-474b-ad81-8cd9b5d8ece3",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -133,6 +137,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -179,7 +187,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -188,8 +196,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:b34e2619-16b0-4a3b-8eb8-e7cc499238cd",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:481737ab-2b33-4c8a-bce5-bfa310ee40c6",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -207,6 +215,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-change-type|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -256,7 +268,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -265,8 +277,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:1b331698-35d0-4e2d-8390-89406767a1d7",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:9bd942bf-a6e8-456f-8351-34ac6b3b44f0",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -284,6 +296,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -326,7 +342,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -335,8 +351,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:782c997a-8b81-4237-a55d-c46b94d80e7f",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:e7e9d4d6-069a-46cf-9633-184a65463f4c",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -354,6 +370,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -396,7 +416,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -405,8 +425,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:11984d16-6c82-4d1e-81ce-cf1cb83822c5",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:4fb2776d-7f4d-4f19-8215-4d1e3a8135ab",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -424,6 +444,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-countable|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -468,7 +492,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -477,8 +501,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:48a2131a-ad28-443d-b22f-e4bd6e3bc785",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:d0ac4e76-512d-4a03-8b2e-788fc77b986a",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -496,6 +520,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -542,7 +570,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -551,8 +579,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:fe24cea8-a688-4ae2-96b7-33e77994725e",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:b92b1b60-6436-4cf4-8333-b864a802ebd7",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -570,6 +598,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -616,7 +648,7 @@
         }]
       },
       "status" : "draft",
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -625,8 +657,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:ea466d08-a0ea-461a-ad84-0390417e923b",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:33c184cc-75d5-417b-b484-23afedceafd7",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -644,6 +676,10 @@
         {
           "name" : "excludeNested",
           "valueBoolean" : false
+        },
+        {
+          "name" : "warning-experimental",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/enlist-lot-setting|1.0.0-ballot"
         },
         {
           "name" : "used-codesystem",
@@ -668,6 +704,260 @@
     }
   },
   {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-episodenart.html\">codesystem Episodenart v1.0.0-ballot (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart|1.0.0-ballot\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 5 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-systemische-therapielinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-systemische-therapielinie\">systemische-therapielinie</a></td><td/><td>Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;systemische-therapielinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;systemische-therapielinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-lokoregionale-behandlungslinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-lokoregionale-behandlungslinie\">lokoregionale-behandlungslinie</a></td><td/><td>Nicht-systemische Behandlungslinie: Chirurgie, Strahlentherapie, Ablation — von EnLiST nicht abgedeckt, nicht in der LoT-Zählung.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lokoregionale-behandlungslinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;lokoregionale-behandlungslinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-diagnostiklinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-diagnostiklinie\">diagnostiklinie</a></td><td/><td>Abgegrenzter diagnostischer Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer Tumorboard-Empfehlung; nicht-therapeutisch.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;diagnostiklinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;diagnostiklinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-active-surveillance\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-active-surveillance\">active-surveillance</a></td><td/><td>Aktive Überwachung mit kurativer Rückfallebene — engmaschiges Monitoring statt sofortiger Therapie.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;active-surveillance&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;active-surveillance&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-watchful-waiting\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-watchful-waiting\">watchful-waiting</a></td><td/><td>Abwartendes Beobachten — symptomorientiertes Vorgehen ohne kurative Rückfallebene.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;watchful-waiting&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;watchful-waiting&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+      "version" : "1.0.0-ballot",
+      "name" : "EpisodenartVS",
+      "title" : "Episodenart (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Episode type value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-10-01T05:55:59+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:ef72d69e-3124-424c-b453-63dca88ac011",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
+        "total" : 5,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart|1.0.0-ballot"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "systemische-therapielinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "lokoregionale-behandlungslinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "diagnostiklinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "active-surveillance"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "watchful-waiting"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-episodenart.html\">codesystem Episodenart v1.0.0-ballot (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart|1.0.0-ballot\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 5 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-systemische-therapielinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-systemische-therapielinie\">systemische-therapielinie</a></td><td/><td>Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;systemische-therapielinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;systemische-therapielinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-lokoregionale-behandlungslinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-lokoregionale-behandlungslinie\">lokoregionale-behandlungslinie</a></td><td/><td>Nicht-systemische Behandlungslinie: Chirurgie, Strahlentherapie, Ablation — von EnLiST nicht abgedeckt, nicht in der LoT-Zählung.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lokoregionale-behandlungslinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;lokoregionale-behandlungslinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-diagnostiklinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-diagnostiklinie\">diagnostiklinie</a></td><td/><td>Abgegrenzter diagnostischer Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer Tumorboard-Empfehlung; nicht-therapeutisch.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;diagnostiklinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;diagnostiklinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-active-surveillance\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-active-surveillance\">active-surveillance</a></td><td/><td>Aktive Überwachung mit kurativer Rückfallebene — engmaschiges Monitoring statt sofortiger Therapie.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;active-surveillance&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;active-surveillance&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-watchful-waiting\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-watchful-waiting\">watchful-waiting</a></td><td/><td>Abwartendes Beobachten — symptomorientiertes Vorgehen ohne kurative Rückfallebene.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;watchful-waiting&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;watchful-waiting&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+      "version" : "1.0.0-ballot",
+      "name" : "EpisodenartVS",
+      "title" : "Episodenart (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Episode type value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-10-01T05:55:59+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:2bd5d395-4795-411b-95df-4c042626ca42",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
+        "total" : 5,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart|1.0.0-ballot"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "systemische-therapielinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "lokoregionale-behandlungslinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "diagnostiklinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "active-surveillance"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "watchful-waiting"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-episodenart.html\">codesystem Episodenart v1.0.0-ballot (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart|1.0.0-ballot\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 5 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-systemische-therapielinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-systemische-therapielinie\">systemische-therapielinie</a></td><td>Systemische Therapielinie</td><td>Abschnitt aktiver systemischer Therapie (Line of Therapy, LoT) — EnLiST-konform und in die LoT-Zählung aufgenommen.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;systemische-therapielinie&quot;, &quot;display&quot;: &quot;Systemische Therapielinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;systemische-therapielinie&quot;&gt;&lt;display value=&quot;Systemische Therapielinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-lokoregionale-behandlungslinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-lokoregionale-behandlungslinie\">lokoregionale-behandlungslinie</a></td><td>Lokoregionale Behandlungslinie</td><td>Nicht-systemische Behandlungslinie: Chirurgie, Strahlentherapie, Ablation — von EnLiST nicht abgedeckt, nicht in der LoT-Zählung.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;lokoregionale-behandlungslinie&quot;, &quot;display&quot;: &quot;Lokoregionale Behandlungslinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;lokoregionale-behandlungslinie&quot;&gt;&lt;display value=&quot;Lokoregionale Behandlungslinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-diagnostiklinie\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-diagnostiklinie\">diagnostiklinie</a></td><td>Diagnostiklinie</td><td>Abgegrenzter diagnostischer Abschnitt (Grading, Staging, molekulare Charakterisierung) als Grundlage einer Tumorboard-Empfehlung; nicht-therapeutisch.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;diagnostiklinie&quot;, &quot;display&quot;: &quot;Diagnostiklinie&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;diagnostiklinie&quot;&gt;&lt;display value=&quot;Diagnostiklinie&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-active-surveillance\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-active-surveillance\">active-surveillance</a></td><td>Active Surveillance</td><td>Aktive Überwachung mit kurativer Rückfallebene — engmaschiges Monitoring statt sofortiger Therapie.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;active-surveillance&quot;, &quot;display&quot;: &quot;Active Surveillance&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;active-surveillance&quot;&gt;&lt;display value=&quot;Active Surveillance&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart-watchful-waiting\"> </a><code>https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-episodenart.html#episodenart-watchful-waiting\">watchful-waiting</a></td><td>Watchful Waiting</td><td>Abwartendes Beobachten — symptomorientiertes Vorgehen ohne kurative Rückfallebene.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;, &quot;version&quot;: &quot;1.0.0-ballot&quot;, &quot;code&quot;: &quot;watchful-waiting&quot;, &quot;display&quot;: &quot;Watchful Waiting&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart&quot;&gt;&lt;version value=&quot;1.0.0-ballot&quot;&gt;&lt;code value=&quot;watchful-waiting&quot;&gt;&lt;display value=&quot;Watchful Waiting&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart",
+      "version" : "1.0.0-ballot",
+      "name" : "EpisodenartVS",
+      "title" : "Episodenart (ValueSet)",
+      "_title" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Episode type value set"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-10-01T05:55:59+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:68c42fbc-3503-44cb-89d6-29bf11e094b1",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
+        "total" : 5,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart|1.0.0-ballot"
+        }],
+        "contains" : [{
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "systemische-therapielinie",
+          "display" : "Systemische Therapielinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "lokoregionale-behandlungslinie",
+          "display" : "Lokoregionale Behandlungslinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "diagnostiklinie",
+          "display" : "Diagnostiklinie"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "active-surveillance",
+          "display" : "Active Surveillance"
+        },
+        {
+          "system" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+          "code" : "watchful-waiting",
+          "display" : "Watchful Waiting"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -681,7 +971,7 @@
       "title" : "Onkologische Therapieziel-Art (VS)",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -690,8 +980,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:d2f6aea9-c171-434d-8aee-237e4ba6c2ad",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:4adae27a-33ae-4763-b767-b3b35876f364",
+        "timestamp" : "2026-10-01T05:57:27+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -751,7 +1041,7 @@
       "title" : "Onkologische Therapieziel-Art (VS)",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -760,8 +1050,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:4ea382d8-f372-444c-a067-b741a4463626",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:5d429933-127c-41eb-a40c-de5bd9a41bed",
+        "timestamp" : "2026-10-01T05:57:28+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -821,7 +1111,7 @@
       "title" : "Onkologische Therapieziel-Art (VS)",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-09-30T11:29:35+00:00",
+      "date" : "2026-10-01T05:55:59+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -830,8 +1120,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:feaea8d4-5cf8-460d-a31d-be71d8fe0a78",
-        "timestamp" : "2026-09-30T11:30:36+00:00",
+        "identifier" : "urn:uuid:36253cbd-243c-4641-bfc4-efc9ec7b7a33",
+        "timestamp" : "2026-10-01T05:57:28+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{

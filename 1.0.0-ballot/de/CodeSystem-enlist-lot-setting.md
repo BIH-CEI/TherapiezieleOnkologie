@@ -1,6 +1,6 @@
 # EnLiST-Setting-Achsen - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## CodeSystem: EnLiST-Setting-Achsen 
+## CodeSystem: EnLiST-Setting-Achsen (Experimentell) 
 
  
 Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational). 
@@ -39,7 +39,8 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T11:29:35+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

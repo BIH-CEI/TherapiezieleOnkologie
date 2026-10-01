@@ -33,6 +33,17 @@
     "ValueSet-enlist-lot-setting.html" : "EnLiST-Setting-Achsen (ValueSet)"
   },
   {
+    "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+    "version" : "1.0.0-ballot",
+    "status" : "active",
+    "name" : "Episodenart",
+    "title" : "Episodenart",
+    "description" : "Art einer onkologischen Behandlungsepisode. Offener Startsatz: systemische Therapielinie (EnLiST/LoT), lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation — nicht EnLiST), Diagnostiklinie, Active Surveillance und Watchful Waiting; entitätsspezifische Arten werden ergänzt, ohne das Framework zu ändern.",
+    "uses" : {
+    },
+    "ValueSet-episodenart.html" : "Episodenart (ValueSet)"
+  },
+  {
     "url" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/onko-therapy-goal-type",
     "version" : "1.0.0-ballot",
     "status" : "active",
@@ -41,7 +52,7 @@
     "description" : "Codiert die Art eines onkologischen Therapieziels (Heilung, Lebensverlängerung, Symptomkontrolle, Lebensqualität, Funktionserhalt). Studienteilnahme ist bewusst keine Zielart: Sie ist ein Mittel (investigationale Therapielinie, iLoT nach EnLiST), kein patientenseitiger Zielzustand (vgl. ADR-0015).",
     "uses" : {
     },
-    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)",
-    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)"
+    "ConceptMap-ConceptMapOnkoTherapyGoalTypeSct.html" : "Zielarten → SNOMED CT (Zielzustände)",
+    "ValueSet-onko-therapy-goal-type.html" : "Onkologische Therapieziel-Art (VS)"
   }]
 }

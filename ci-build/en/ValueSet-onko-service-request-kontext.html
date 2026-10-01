@@ -48,8 +48,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"17.18"}
-    h3,h4,h5,h6{--heading-prefix:"17.18"}</style>
+    <style type="text/css">h2{--heading-prefix:"17.21"}
+    h3,h4,h5,h6{--heading-prefix:"17.21"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -277,7 +277,7 @@
           
 
             as of 
-2026-09-30
+2026-10-01
 
           
         
@@ -297,6 +297,11 @@
 <p>Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine
 Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv
 oder im Notfall erfolgt. Gebunden an die Extension <code class="language-plaintext highlighter-rouge">onko-behandlungs-kontext</code>.</p>
+
+<p><strong>Stellung zur Operation:</strong> Die Codes <code class="language-plaintext highlighter-rouge">Neoadjuvant intent</code>, <code class="language-plaintext highlighter-rouge">Adjuvant - intent</code>, <code class="language-plaintext highlighter-rouge">Additive</code> und
+<code class="language-plaintext highlighter-rouge">Intraoperative</code> decken die Achse ab, die das MII-Modul Onkologie als
+<code class="language-plaintext highlighter-rouge">mii-cs-onko-therapie-stellungzurop</code> (A/N/I/Z) führt. Sie stehen hier und nicht in der
+Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen.</p>
 
 </p>
 
@@ -320,7 +325,7 @@ oder im Notfall erfolgt. Gebunden an die Extension <code class="language-plainte
 <!-- Content Logical Definition heading in the fragment -->
   <h3>Logical Definition (CLD)</h3>
 <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="onko-service-request-kontext"> </a><a name="hconko-service-request-kontext"> </a>
-<ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/255470001">255470001</a></td><td>Local (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/264931009">264931009</a></td><td>Symptomatic (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/129428001">129428001</a></td><td>Preventive - procedure intent</td></tr><tr><td><a href="http://snomed.info/id/261002007">261002007</a></td><td>Definitive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/260364009">260364009</a></td><td>Additive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/277671009">277671009</a></td><td>Intraoperative (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/103390000">103390000</a></td><td>Elective (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/25876001">25876001</a></td><td>Emergency (qualifier value)</td></tr></table></li></ul></div>
+<ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/255470001">255470001</a></td><td>Local (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/264931009">264931009</a></td><td>Symptomatic (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/129428001">129428001</a></td><td>Preventive - procedure intent</td></tr><tr><td><a href="http://snomed.info/id/261002007">261002007</a></td><td>Definitive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/373847000">373847000</a></td><td>Neoadjuvant intent</td></tr><tr><td><a href="http://snomed.info/id/373846009">373846009</a></td><td>Adjuvant - intent</td></tr><tr><td><a href="http://snomed.info/id/260364009">260364009</a></td><td>Additive (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/277671009">277671009</a></td><td>Intraoperative (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/103390000">103390000</a></td><td>Elective (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/25876001">25876001</a></td><td>Emergency (qualifier value)</td></tr></table></li></ul></div>
 
   <p>&#160;</p>
   <a name="expansion"> </a>
@@ -368,8 +373,8 @@ oder im Notfall erfolgt. Gebunden an die Extension <code class="language-plainte
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 11:29:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 05:55:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

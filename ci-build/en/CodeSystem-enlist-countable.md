@@ -1,6 +1,6 @@
 # EnLiST-Zählstatus - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## CodeSystem: EnLiST-Zählstatus 
+## CodeSystem: EnLiST-Zählstatus (Experimental) 
 
  
 Countability of a treatment line per EnLiST: on a LoT counting axis — counted — or outside any count — not-counted, e.g. a locoregional treatment line. 
@@ -39,7 +39,8 @@ This Code system is referenced in the definition of the following value sets:
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T11:29:35+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

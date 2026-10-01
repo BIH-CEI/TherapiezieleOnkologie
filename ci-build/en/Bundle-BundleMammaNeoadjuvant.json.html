@@ -51,8 +51,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"17.73"}
-    h3,h4,h5,h6{--heading-prefix:"17.73"}</style>
+    <style type="text/css">h2{--heading-prefix:"17.76"}
+    h3,h4,h5,h6{--heading-prefix:"17.76"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -1389,7 +1389,7 @@
         "<a href="http://hl7.org/fhir/R4/resource.html#EpisodeOfCare.id">id</a>" : "TherapielinieChemo",
         "<a href="http://hl7.org/fhir/R4/resource.html#EpisodeOfCare.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-            <a href="StructureDefinition-onko-therapy-line.html" style="color: Maroon">&#x1F517;</a> "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+            <a href="StructureDefinition-onko-behandlungsepisode.html" style="color: Maroon">&#x1F517;</a> "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"
           ]
         },
         "<a href="http://hl7.org/fhir/R4/resource.html#EpisodeOfCare.language">language</a>" : "en",
@@ -1475,6 +1475,18 @@
             }
           },
           {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "385786002",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Chemotherapy care"
+                }
+              ]
+            }
+          },
+          {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request",
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueReference</a>" : {
               <a href="MedicationRequest-MedicationRequestPembroChemoNeoadjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"
@@ -1486,9 +1498,9 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
               {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "385786002",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Chemotherapy care"
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "systemische-therapielinie",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Systemische Therapielinie"
               }
             ]
           }
@@ -1536,7 +1548,7 @@
         "<a href="http://hl7.org/fhir/R4/resource.html#EpisodeOfCare.id">id</a>" : "TherapielinieOperation",
         "<a href="http://hl7.org/fhir/R4/resource.html#EpisodeOfCare.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-            <a href="StructureDefinition-onko-therapy-line.html" style="color: Maroon">&#x1F517;</a> "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"
+            <a href="StructureDefinition-onko-behandlungsepisode.html" style="color: Maroon">&#x1F517;</a> "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"
           ]
         },
         "<a href="http://hl7.org/fhir/R4/resource.html#EpisodeOfCare.language">language</a>" : "en",
@@ -1572,6 +1584,18 @@
                 }
               ]
             }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "387713003",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Surgical procedure"
+                }
+              ]
+            }
           }
         ],
         "<a href="http://hl7.org/fhir/R4/episodeofcare.html#EpisodeOfCare.status">status</a>" : "finished",
@@ -1579,9 +1603,9 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
               {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "387713003",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Surgical procedure"
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "lokoregionale-behandlungslinie",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Lokoregionale Behandlungslinie"
               }
             ]
           }
@@ -2567,6 +2591,99 @@
         "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
         "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "CarePlan"
       }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma1",
+      "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "MedicationAdministrationPembroAdjuvantMamma1",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a>" : "en",
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+          <a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/PatientinMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2026-04-24",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+          <a href="MedicationRequest-MedicationRequestPembroAdjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>" : "Zyklus 1 von ~9 (q3w), ambulant"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationAdministration"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma2",
+      "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "MedicationAdministrationPembroAdjuvantMamma2",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a>" : "en",
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+          <a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/PatientinMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2026-05-15",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+          <a href="MedicationRequest-MedicationRequestPembroAdjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>" : "Zyklus 2 von ~9 (q3w), ambulant"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationAdministration"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma3",
+      "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "MedicationAdministrationPembroAdjuvantMamma3",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.language">language</a>" : "en",
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationAdministration.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+          <a href="Patient-PatientinMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/PatientinMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2026-06-05",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+          <a href="MedicationRequest-MedicationRequestPembroAdjuvantMamma.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/MedicationRequestPembroAdjuvantMamma"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.note">note</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>" : "Zyklus 3 von ~9 (q3w), ambulant; Therapie läuft weiter"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationAdministration"
+      }
     }
   ]
 }</code></pre>
@@ -2602,8 +2719,8 @@
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 11:29:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 05:55:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

@@ -3,8 +3,9 @@
 ## ValueSet: Onkologische Therapieintention (VS) (Experimental) 
 
  
-Intention (das „Warum") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts. 
-Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`. Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden. 
+Intention (das „Warum") einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts: **wozu** behandelt wird. 
+Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`. 
+Nicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu", sondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist in aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr alternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`). Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden. 
 
  **References** 
 
@@ -36,7 +37,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "title" : "Onkologische Therapieintention (VS)",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-09-30T11:29:35+00:00",
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -45,7 +46,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
       "value" : "https://www.bihealth.org"
     }]
   }],
-  "description" : "Intention (das „Warum\") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
+  "description" : "Intention (das „Warum\") einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:\n**wozu** behandelt wird.\n\nVerwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`.\n\nNicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu\",\nsondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist\nin aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr\nalternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`).\nAls Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar\ngegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten\ndes Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -63,14 +64,6 @@ No Expansion for this valueset (not supported by Publication Tooling)
       {
         "code" : "363676003",
         "display" : "Palliative intent"
-      },
-      {
-        "code" : "373847000",
-        "display" : "Neoadjuvant intent"
-      },
-      {
-        "code" : "373846009",
-        "display" : "Adjuvant - intent"
       },
       {
         "code" : "399707004",

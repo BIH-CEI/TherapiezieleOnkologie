@@ -67,11 +67,11 @@ Wichtige Abgrenzung am Beispiel Chirurgie: Die **Operation selbst** ist ein punk
 
 Die Behandlungsepisode wird mit dem [Behandlungsplan](empfehlung-behandlung.md) über die Standard-Extension **`workflow-episodeOfCare`** verknüpft (direkt am `CarePlan`, `Reference(EpisodeOfCare)`) — nicht über `CarePlan.encounter` (das nur den **erstellenden** Kontakt bezeichnet). `Encounter` selbst ist bewusst außerhalb des Scopes dieses Leitfadens.
 
-> **Zielmodell.** Das generelle `Behandlungsepisode`-Profil (Art über `type`, art-spezifische Angaben in Extensions) löst das aktuell auf aktive Therapie verengte Profil [`OnkoTherapyLine`](StructureDefinition-onko-therapy-line.md) ab und wird im laufenden Ausbau umgesetzt. Die EnLiST-Konformität der systemischen Linien bleibt dabei erhalten.
+> **Zielmodell.** Das generelle `Behandlungsepisode`-Profil (Art über `type`, art-spezifische Angaben in Extensions) löst das aktuell auf aktive Therapie verengte Profil [`OnkoBehandlungsepisode`](StructureDefinition-onko-behandlungsepisode.md) ab und wird im laufenden Ausbau umgesetzt. Die EnLiST-Konformität der systemischen Linien bleibt dabei erhalten.
 
 ### Beispiele
 
-* [mCRC (palliativ)](szenario-crc.md) — Diagnostikpfad und systemische Erstlinie (`OnkoTherapyLine`).
+* [mCRC (palliativ)](szenario-crc.md) — Diagnostikpfad und systemische Erstlinie (`OnkoBehandlungsepisode`).
 * [Mammakarzinom (neoadjuvant)](szenario-mamma.md) — neoadjuvante Systemtherapie und anschließende Operation als getrennte Abschnitte.
 
 → Weiter: [Zielwerte und Messgrößen](goal-target-measure.md)

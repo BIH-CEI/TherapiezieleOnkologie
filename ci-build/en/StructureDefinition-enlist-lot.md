@@ -10,7 +10,7 @@ EnLiST designation of the systemic line of therapy in X.Y notation per setting a
 
 **Usages:**
 
-* Use this Extension: [Onkologische Therapielinie](StructureDefinition-onko-therapy-line.md)
+* Use this Extension: [Onkologische Behandlungsepisode](StructureDefinition-onko-behandlungsepisode.md)
 * Examples for this Extension: [Bundle/BundleCRCPalliativ](Bundle-BundleCRCPalliativ.md), [Bundle/BundleMammaNeoadjuvant](Bundle-BundleMammaNeoadjuvant.md), [EpisodeOfCare/TherapielinieCRCErstlinie](EpisodeOfCare-TherapielinieCRCErstlinie.md) and [EpisodeOfCare/TherapielinieChemo](EpisodeOfCare-TherapielinieChemo.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.bih-cei.therapieziele-onkologie|current/StructureDefinition/StructureDefinition-enlist-lot.json)
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-lot.csv), 
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T11:29:35+00:00",
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

@@ -7,7 +7,7 @@ There is no translation page available for the current page, so it has been rend
 
 Diese Seite ergänzt das [Anwendungsbeispiel Mammakarzinom (neoadjuvant)](szenario-mamma.md) um Verlaufsabweichungen vom dort beschriebenen Standardverlauf. Während das Hauptbeispiel einen unkomplizierten Verlauf mit pathologischer Komplettremission zeigt, treten in der klinischen Praxis regelmäßig Abweichungen von der ursprünglichen Therapieplanung auf, von planmäßigen Anpassungen bis hin zum vorzeitigen Abbruch der Therapielinie.
 
-Für jedes der folgenden Szenarien wird gezeigt, wie sich das jeweilige klinische Ereignis auf **Ressourcenebene** abbilden lässt: welche Elemente sich ändern (z. B. `status`, `statusReason`), welche Verknüpfungen neu entstehen (z. B. `priorPrescription`, `reasonReference`) und welche Auswirkungen dies auf Therapielinie (`OnkoTherapyLine`) und Therapieziel (`OnkoTherapyGoal`) hat.
+Für jedes der folgenden Szenarien wird gezeigt, wie sich das jeweilige klinische Ereignis auf **Ressourcenebene** abbilden lässt: welche Elemente sich ändern (z. B. `status`, `statusReason`), welche Verknüpfungen neu entstehen (z. B. `priorPrescription`, `reasonReference`) und welche Auswirkungen dies auf Behandlungsepisode (`OnkoBehandlungsepisode`) und Therapieziel (`OnkoTherapyGoal`) hat.
 
 Die unten aufgeführten, beispielhaften Szenarien sind rein informativ und daher nicht in Bundles dargestellt.
 

@@ -272,7 +272,7 @@
       <EpisodeOfCare>
         <id value="TherapielinieCRCErstlinie"/>
         <meta>
-          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"/>
         </meta>
         <language value="en"/>
         <text>
@@ -327,12 +327,21 @@
             </coding>
           </valueCodeableConcept>
         </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="315601005"/>
+              <display value="Ambulatory chemotherapy"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
         <status value="active"/>
         <type>
           <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="315601005"/>
-            <display value="Ambulatory chemotherapy"/>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart"/>
+            <code value="systemische-therapielinie"/>
+            <display value="Systemische Therapielinie"/>
           </coding>
         </type>
         <diagnosis>

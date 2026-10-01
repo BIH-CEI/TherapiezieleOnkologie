@@ -27,6 +27,7 @@
 * [EnLiST-Änderungstypen](de/CodeSystem-enlist-change-type.md)
 * [EnLiST-Zählstatus](de/CodeSystem-enlist-countable.md)
 * [EnLiST-Setting-Achsen](de/CodeSystem-enlist-lot-setting.md)
+* [Episodenart](de/CodeSystem-episodenart.md)
 * [Onkologische Therapieziel-Art](de/CodeSystem-onko-therapy-goal-type.md)
 
 ### ValueSets
@@ -34,12 +35,13 @@
 * [EnLiST-Änderungstypen (ValueSet)](de/ValueSet-enlist-change-type.md)
 * [EnLiST-Zählstatus (ValueSet)](de/ValueSet-enlist-countable.md)
 * [EnLiST-Setting-Achsen (ValueSet)](de/ValueSet-enlist-lot-setting.md)
+* [Episodenart (ValueSet)](de/ValueSet-episodenart.md)
+* [Behandlungsmodalität (VS)](de/ValueSet-onko-behandlungsmodalitaet.md)
 * [Onkologischer CarePlan – Therapieabschnitt (VS)](de/ValueSet-onko-care-plan-phase.md)
 * [Onkologisches Zielbeginn-Ereignis (VS)](de/ValueSet-onko-goal-start-event.md)
 * [Kontext einer Tumorboard-Empfehlung (VS)](de/ValueSet-onko-service-request-kontext.md)
 * [Onkologische Therapieziel-Art (VS)](de/ValueSet-onko-therapy-goal-type.md)
 * [Onkologische Therapieintention (VS)](de/ValueSet-onko-therapy-intent.md)
-* [Onkologische Therapielinie – Art (VS)](de/ValueSet-onko-therapy-line-type.md)
 * [Onkologische Therapiephase / Unter-Intention (VS)](de/ValueSet-onko-therapy-phase.md)
 
 ### Logicals
@@ -48,9 +50,9 @@
 
 ### Resource Profiles
 
+* [Onkologische Behandlungsepisode](de/StructureDefinition-onko-behandlungsepisode.md)
 * [Onkologischer CarePlan](de/StructureDefinition-onko-care-plan.md)
 * [Onkologisches Therapieziel](de/StructureDefinition-onko-therapy-goal.md)
-* [Onkologische Therapielinie](de/StructureDefinition-onko-therapy-line.md)
 * [Tumorboard MedicationRequest](de/StructureDefinition-onko-tumorboard-medication-request.md)
 * [Tumorboard ServiceRequest](de/StructureDefinition-onko-tumorboard-service-request.md)
 
@@ -62,6 +64,7 @@
 * [EnLiST-LoT-Designation (Extension)](de/StructureDefinition-enlist-lot.md)
 * [Kontext (Extension)](de/StructureDefinition-onko-behandlungs-kontext.md)
 * [CarePlan Custodian (Extension)](de/StructureDefinition-onko-careplan-custodian.md)
+* [Behandlungsmodalität (Extension)](de/StructureDefinition-onko-modalitaet.md)
 * [Onkologische Therapieintention (Extension)](de/StructureDefinition-onko-therapy-intent.md)
 * [Therapielinie – Medikationsverordnung (Extension)](de/StructureDefinition-onko-therapy-line-medication-request.md)
 
@@ -96,6 +99,9 @@
 * [TherapiezielCRCKurativAbgelehnt (Goal)](de/Goal-TherapiezielCRCKurativAbgelehnt.md)
 * [TherapiezielCRCLebensverlaengerung (Goal)](de/Goal-TherapiezielCRCLebensverlaengerung.md)
 * [TherapiezielMammaHeilung (Goal)](de/Goal-TherapiezielMammaHeilung.md)
+* [MedicationAdministrationPembroAdjuvantMamma1 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroAdjuvantMamma1.md)
+* [MedicationAdministrationPembroAdjuvantMamma2 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroAdjuvantMamma2.md)
+* [MedicationAdministrationPembroAdjuvantMamma3 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroAdjuvantMamma3.md)
 * [MedicationAdministrationPembroChemoNeoadjuvantMamma1 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma1.md)
 * [MedicationAdministrationPembroChemoNeoadjuvantMamma2 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma2.md)
 * [MedicationAdministrationPembroChemoNeoadjuvantMamma3 (MedicationAdministration)](de/MedicationAdministration-MedicationAdministrationPembroChemoNeoadjuvantMamma3.md)

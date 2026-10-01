@@ -988,7 +988,7 @@
       <EpisodeOfCare>
         <id value="TherapielinieChemo"/>
         <meta>
-          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"/>
         </meta>
         <language value="en"/>
         <text>
@@ -1049,6 +1049,15 @@
             </coding>
           </valueCodeableConcept>
         </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="385786002"/>
+              <display value="Chemotherapy care"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
         <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line-medication-request">
           <valueReference>
             <reference value="MedicationRequest/MedicationRequestPembroChemoNeoadjuvantMamma"/>
@@ -1057,9 +1066,9 @@
         <status value="finished"/>
         <type>
           <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="385786002"/>
-            <display value="Chemotherapy care"/>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart"/>
+            <code value="systemische-therapielinie"/>
+            <display value="Systemische Therapielinie"/>
           </coding>
         </type>
         <diagnosis>
@@ -1101,7 +1110,7 @@
       <EpisodeOfCare>
         <id value="TherapielinieOperation"/>
         <meta>
-          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-therapy-line"/>
+          <profile value="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungsepisode"/>
         </meta>
         <language value="en"/>
         <text>
@@ -1127,12 +1136,21 @@
             </coding>
           </valueCodeableConcept>
         </extension>
+        <extension url="https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-modalitaet">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="387713003"/>
+              <display value="Surgical procedure"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
         <status value="finished"/>
         <type>
           <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="387713003"/>
-            <display value="Surgical procedure"/>
+            <system value="https://bih-cei.de/fhir/therapieziele-onkologie/CodeSystem/episodenart"/>
+            <code value="lokoregionale-behandlungslinie"/>
+            <display value="Lokoregionale Behandlungslinie"/>
           </coding>
         </type>
         <diagnosis>
@@ -1947,6 +1965,96 @@
     <request>
       <method value="POST"/>
       <url value="CarePlan"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma1"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroAdjuvantMamma1"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-04-24"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroAdjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 1 von ~9 (q3w), ambulant"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma2"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroAdjuvantMamma2"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-05-15"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroAdjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 2 von ~9 (q3w), ambulant"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/fhir/MedicationAdministration/MedicationAdministrationPembroAdjuvantMamma3"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="MedicationAdministrationPembroAdjuvantMamma3"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <text value="Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/PatientinMamma"/>
+        </subject>
+        <effectiveDateTime value="2026-06-05"/>
+        <request>
+          <reference value="MedicationRequest/MedicationRequestPembroAdjuvantMamma"/>
+        </request>
+        <note>
+          <text value="Zyklus 3 von ~9 (q3w), ambulant; Therapie läuft weiter"/>
+        </note>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
     </request>
   </entry>
 </Bundle>

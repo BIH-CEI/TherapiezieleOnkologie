@@ -48,8 +48,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"17.19"}
-    h3,h4,h5,h6{--heading-prefix:"17.19"}</style>
+    <style type="text/css">h2{--heading-prefix:"17.22"}
+    h3,h4,h5,h6{--heading-prefix:"17.22"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -277,7 +277,7 @@
           
 
             as of 
-2026-09-30
+2026-10-01
 
           
         
@@ -294,9 +294,15 @@
   </table>
 
 <p>
-<p>Intention (das „Warum") einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.</p>
+<p>Intention (das „Warum") einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:
+<strong>wozu</strong> behandelt wird.</p>
 
-<p>Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie <code class="language-plaintext highlighter-rouge">362961001 | Procedure by intent</code>.
+<p>Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie <code class="language-plaintext highlighter-rouge">362981000 | Qualifier value</code>.</p>
+
+<p>Nicht hier abgebildet sind <strong>neoadjuvant</strong> und <strong>adjuvant</strong>: Sie beantworten nicht das „Wozu",
+sondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist
+in aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr
+alternativ und stehen in der Kontext-Achse (<code class="language-plaintext highlighter-rouge">onko-service-request-kontext</code>).
 Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
 gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
 des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</p>
@@ -323,7 +329,7 @@ des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergän
 <!-- Content Logical Definition heading in the fragment -->
   <h3>Logical Definition (CLD)</h3>
 <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="onko-therapy-intent"> </a><a name="hconko-therapy-intent"> </a>
-<ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/373808002">373808002</a></td><td>Curative - procedure intent</td></tr><tr><td><a href="http://snomed.info/id/363676003">363676003</a></td><td>Palliative intent</td></tr><tr><td><a href="http://snomed.info/id/373847000">373847000</a></td><td>Neoadjuvant intent</td></tr><tr><td><a href="http://snomed.info/id/373846009">373846009</a></td><td>Adjuvant - intent</td></tr><tr><td><a href="http://snomed.info/id/399707004">399707004</a></td><td>Supportive - procedure intent</td></tr></table></li></ul></div>
+<ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/373808002">373808002</a></td><td>Curative - procedure intent</td></tr><tr><td><a href="http://snomed.info/id/363676003">363676003</a></td><td>Palliative intent</td></tr><tr><td><a href="http://snomed.info/id/399707004">399707004</a></td><td>Supportive - procedure intent</td></tr></table></li></ul></div>
 
   <p>&#160;</p>
   <a name="expansion"> </a>
@@ -371,8 +377,8 @@ des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergän
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org">Berlin Institute of Health at Charité (BIH)</a>.  
           Package de.bih-cei.therapieziele-onkologie#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 11:29:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 05:55:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

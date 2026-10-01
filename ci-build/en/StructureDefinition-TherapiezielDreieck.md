@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-TherapiezielDreie
     }]
   },
   "status" : "draft",
-  "date" : "2026-09-30T11:29:35+00:00",
+  "date" : "2026-10-01T05:55:59+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -395,6 +395,66 @@ Other representations of profile: [CSV](../StructureDefinition-TherapiezielDreie
       }]
     },
     {
+      "id" : "TherapiezielDreieck.therapieziel.akzeptanz",
+      "path" : "TherapiezielDreieck.therapieziel.akzeptanz",
+      "short" : "Zielakzeptanz",
+      "definition" : "Shared-Decision-Kern: Akzeptanz des Ziels durch die Beteiligten — die Akzeptanz wohnt am Ziel, nicht am Plan oder an der Maßnahme.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "Goal.extension[goal-acceptance]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.therapieziel.akzeptanz.wer",
+      "path" : "TherapiezielDreieck.therapieziel.akzeptanz.wer",
+      "short" : "Beteiligte Person",
+      "definition" : "Wessen Akzeptanz abgebildet wird: Patientin/Patient, Behandler:in oder Angehörige.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "Goal.extension[goal-acceptance].extension[individual]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.therapieziel.akzeptanz.status",
+      "path" : "TherapiezielDreieck.therapieziel.akzeptanz.status",
+      "short" : "Akzeptanzstatus",
+      "definition" : "agree (akzeptiert), disagree (abgelehnt) oder pending (Entscheidung steht aus).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "Goal.extension[goal-acceptance].extension[status]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.therapieziel.ablehnungsgrund",
+      "path" : "TherapiezielDreieck.therapieziel.ablehnungsgrund",
+      "short" : "Ablehnungsgrund",
+      "definition" : "Begründung, warum das Ziel nicht akzeptiert wurde — nur bei abgelehntem Ziel.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "Goal.extension[goal-reasonRejected]"
+      }]
+    },
+    {
       "id" : "TherapiezielDreieck.therapieziel.beziehung",
       "path" : "TherapiezielDreieck.therapieziel.beziehung",
       "short" : "Zielbeziehung",
@@ -459,6 +519,21 @@ Other representations of profile: [CSV](../StructureDefinition-TherapiezielDreie
       "mapping" : [{
         "identity" : "fhir-r4",
         "map" : "CarePlan.intent (proposal/plan = Empfehlung, plan/order = Behandlung)"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.status",
+      "path" : "TherapiezielDreieck.versorgungsplan.status",
+      "short" : "Status",
+      "definition" : "Lebenszyklus des Plans: entworfen, aktiv, abgeschlossen, verworfen — auch eine nicht umgesetzte Empfehlung ist so ausdrückbar.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "CarePlan.status"
       }]
     },
     {
@@ -545,6 +620,51 @@ Other representations of profile: [CSV](../StructureDefinition-TherapiezielDreie
       "mapping" : [{
         "identity" : "fhir-r4",
         "map" : "ServiceRequest (TumorboardServiceRequest), MedicationRequest (TumorboardMedicationRequest)"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.massnahme.status",
+      "path" : "TherapiezielDreieck.versorgungsplan.massnahme.status",
+      "short" : "Umsetzungsstatus",
+      "definition" : "Lebenszyklus der einzelnen Empfehlung — der entscheidende Status: vorgeschlagen, aktiv, abgeschlossen, verworfen (z. B. abgelehnte Empfehlung).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "ServiceRequest.status, MedicationRequest.status"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.massnahme.statusGrund",
+      "path" : "TherapiezielDreieck.versorgungsplan.massnahme.statusGrund",
+      "short" : "Statusgrund",
+      "definition" : "Grund des Umsetzungsstatus, z. B. Patientenwunsch, Komorbidität, Progress — versorgungsrelevant für die nächste Tumorboard-Runde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "MedicationRequest.statusReason, ServiceRequest.extension[request-statusReason]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.massnahme.durchfuehrung",
+      "path" : "TherapiezielDreieck.versorgungsplan.massnahme.durchfuehrung",
+      "short" : "Durchführung",
+      "definition" : "Vollzugslink auf das durchführende Ereignis (Prozedur, Medikationsgabe, Befund). Kein Ergebnis-Element: klinische Ergebnisse wohnen am Ereignis bzw. zielbezogen im Therapieziel-Ergebnis.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "CarePlan.activity.outcomeReference"
       }]
     }]
   }
