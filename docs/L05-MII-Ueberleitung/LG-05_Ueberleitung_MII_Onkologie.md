@@ -2,13 +2,7 @@
 
 Liefergegenstand LG-05 · Spezifikation „Onkologische Therapieziele" · Gematik-Auftrag C002717 · BIH-CEI
 
-**Stand:** 30. September 2026
-**Bezugsfassung des Leitfadens:** aktueller Stand nach Umsetzung der Ballot-Kommentare und dem Episodenart-Umbau, aufsetzend auf der kommentierten Fassung `1.0.0-ballot`
-**Adressat:** Koordinierungsgremium für Interoperabilität im Gesundheitswesen (KIG) / Auftraggeber
-**Einreichungsweg:** Kommentierungskommentar in die laufende Kommentierung des MII-Moduls Onkologie
-**Zieltermin der vollzogenen Überleitung:** Ende 2027
-**Projektleitung:** Sylvia Thun
-**Technische Leitung FHIR:** Thomas Debertshäuser
+**Bezugsfassung des Leitfadens:** aktueller Stand nach Umsetzung der Ballot-Kommentare und dem Episodenart-Umbau, aufsetzend auf der kommentierten Fassung `1.0.0-ballot`.
 
 
 # Zusammenfassung

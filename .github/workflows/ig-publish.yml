@@ -148,7 +148,6 @@ jobs:
             fsh-generated/resources/*.json \
             -version 4.0 \
             -txCache input-cache/txcache \
-            -expansion-parameters .github/expansion-parameters.json \
             ${{ vars.JAVA_VALIDATION_OPTIONS || '-output-style compact -advisor-file advisor.json -resolution-context file:fsh-generated/resources/ -show-message-ids -txLog txlog.html -forPublication -verbose -html-output validation.html -output validation.json' }} \
             $UNESCAPED_IG_DEPS \
             -ig fsh-generated/resources \
@@ -180,6 +179,14 @@ jobs:
             # IG-Publisher-Parameter (copyrightyear, releaselabel, i18n-*, translation-sources, excludettl) wurden erst post-R4 zur GuideParameterCode-Liste hinzugefügt; R4-Strikt-Validierung kennt sie nicht
             ||*GuideParameterCode*|
             ||*guide-parameter-code*|
+            # Der lokale TX-Server haelt urn:iso:std:iso:3166 doppelt vor: offiziell als 20240629 und
+            # aus dem MII-Modul Dokument als 2027.0.0-ballot.2. Da die zweite Version nicht datumsfoermig
+            # ist, kann er keine Default-Version bestimmen — ImplementationGuide.jurisdiction scheitert
+            # dadurch in JEDEM IG, unabhaengig vom Inhalt.
+            # Pinning per -expansion-parameters wurde versucht und wirkt nicht: der Konflikt entsteht
+            # serverseitig bei der Aufloesung, nicht in der Expansion. Daher Suppression.
+            # Entfaellt, sobald das Dokument-Modul eine datumsfoermige Version verwendet.
+            ||*Found more than one Resource with the same URL urn:iso:std:iso:3166*|
             # tx.fhir.org-Infrastrukturfehler (Timeout, verfallene Session-Cache, Sprachcode-Auflösung) — kein Inhaltsfehler, nur Server-Flakiness
             ||*is not known to this server*|
             ||*SocketTimeoutException*|
