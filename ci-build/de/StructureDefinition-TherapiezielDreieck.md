@@ -37,7 +37,7 @@ Diese Struktur ist abgeleitet von [Base](http://build.fhir.org/types.html#Base)
 
 ** Summary **
 
-Mandatory: 0 element(18 nested mandatory elements)
+Mandatory: 0 element(21 nested mandatory elements)
 
  **Differential-Ansicht** 
 
@@ -51,7 +51,7 @@ Diese Struktur ist abgeleitet von [Base](http://build.fhir.org/types.html#Base)
 
 ** Summary **
 
-Mandatory: 0 element(18 nested mandatory elements)
+Mandatory: 0 element(21 nested mandatory elements)
 
  
 
@@ -84,7 +84,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
   },
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T08:23:16+00:00",
+  "date" : "2026-10-01T11:19:09+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
@@ -181,7 +181,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
       "id" : "TherapiezielDreieck.behandlungsepisode.intention",
       "path" : "TherapiezielDreieck.behandlungsepisode.intention",
       "short" : "Intention",
-      "definition" : "Zweck der Episode: kurativ, neoadjuvant, adjuvant, palliativ, supportiv; bei Diagnostik der Informationsgewinn.",
+      "definition" : "Zweck der Episode — das Wozu: kurativ, palliativ, supportiv; bei Diagnostik der Informationsgewinn.",
       "min" : 1,
       "max" : "1",
       "type" : [{
@@ -189,7 +189,52 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
       }],
       "mapping" : [{
         "identity" : "fhir-r4",
-        "map" : "EpisodeOfCare.extension[OnkoTherapyIntentExt]"
+        "map" : "EpisodeOfCare.extension[therapyIntent].extension[hauptintention]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.stellungZurOperation",
+      "path" : "TherapiezielDreieck.behandlungsepisode.stellungZurOperation",
+      "short" : "Stellung zur Operation",
+      "definition" : "Kontext der Maßnahme im Behandlungsablauf: neoadjuvant, adjuvant, intraoperativ, additiv. Kombinierbar mit der Intention, nicht alternativ zu ihr — eine neoadjuvante Therapie ist in aller Regel kurativ intendiert.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "Maßnahmen-Ebene: ServiceRequest/Procedure/MedicationRequest.extension[onko-behandlungs-kontext]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.phase",
+      "path" : "TherapiezielDreieck.behandlungsepisode.phase",
+      "short" : "Behandlungsphase",
+      "definition" : "Sequenzielle Phase innerhalb des Konzepts: Induktion, Konsolidierung, Intensivierung, Erhaltung.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.extension[therapyIntent].extension[phase]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.modalitaet",
+      "path" : "TherapiezielDreieck.behandlungsepisode.modalitaet",
+      "short" : "Behandlungsmodalität",
+      "definition" : "Womit behandelt wird: Chemo-, Hormon-, Immuntherapie, Bestrahlung, Operation. Eigenes Merkmal neben der Episodenart; mehrfach belegbar (z. B. Radiochemotherapie).",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.extension[onko-modalitaet]"
       }]
     },
     {
@@ -235,6 +280,216 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
       "mapping" : [{
         "identity" : "fhir-r4",
         "map" : "EpisodeOfCare.status"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.statusverlauf",
+      "path" : "TherapiezielDreieck.behandlungsepisode.statusverlauf",
+      "short" : "Statusverlauf",
+      "definition" : "Historie der Statuswechsel mit jeweiligem Zeitraum.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.statusHistory"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.statusverlauf.status",
+      "path" : "TherapiezielDreieck.behandlungsepisode.statusverlauf.status",
+      "short" : "Status",
+      "definition" : "Der jeweilige Status.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.statusHistory.status"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.statusverlauf.zeitraum",
+      "path" : "TherapiezielDreieck.behandlungsepisode.statusverlauf.zeitraum",
+      "short" : "Zeitraum",
+      "definition" : "Zeitraum, in dem dieser Status galt.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Period"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.statusHistory.period"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.fallverantwortlich",
+      "path" : "TherapiezielDreieck.behandlungsepisode.fallverantwortlich",
+      "short" : "Fallverantwortliche Person",
+      "definition" : "Für die Episode fallverantwortliche behandelnde Person.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.careManager"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.team",
+      "path" : "TherapiezielDreieck.behandlungsepisode.team",
+      "short" : "Behandlungsteam",
+      "definition" : "An der Episode beteiligtes Versorgungsteam, z. B. Tumorboard.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.team"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.diagnosebezug",
+      "path" : "TherapiezielDreieck.behandlungsepisode.diagnosebezug",
+      "short" : "Diagnosebezug",
+      "definition" : "Der Episode zugrunde liegende Tumorerkrankung. Für therapeutische Episodenarten verpflichtend, für die Erstdiagnose-Diagnostiklinie optional.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.diagnosis.condition (MII Onko Diagnose Primärtumor)"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.anlass",
+      "path" : "TherapiezielDreieck.behandlungsepisode.anlass",
+      "short" : "Anlass",
+      "definition" : "Die der Episode zugrunde liegende Anforderung — Überweisung, Prozedur- oder Medikationsanforderung.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.referralRequest; für Medikationsverordnungen EpisodeOfCare.extension[onko-therapy-line-medication-request]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung",
+      "path" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung",
+      "short" : "Linienzählung",
+      "definition" : "Zählung der systemischen Therapielinie nach EnLiST. Nur bei Episodenart „systemische Therapielinie\"; experimentell bis zum Abschluss des ESMO-Road-Testings.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.extension[enlist-lot] bzw. [enlist-line-segment] und [enlist-countable]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.zaehlstatus",
+      "path" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.zaehlstatus",
+      "short" : "Zählstatus",
+      "definition" : "counted (auf einer Zählachse) oder not-counted (außerhalb jeder Zählung).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.extension[enlist-countable]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.rolle",
+      "path" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.rolle",
+      "short" : "Rolle in der Linie",
+      "definition" : "fuehrend (trägt die Designation) oder segment (ausführende Einrichtung, keine eigene Designation).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "implizit: enlist-lot = führend, enlist-line-segment = Segment"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.setting",
+      "path" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.setting",
+      "short" : "Setting-Achse",
+      "definition" : "eLoT (früh), aLoT (fortgeschritten) oder iLoT (investigational); jede Achse zählt getrennt.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.extension[enlist-lot].extension[setting]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.linie",
+      "path" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.linie",
+      "short" : "Liniennummer X",
+      "definition" : "Zahl der New LoTs im Setting.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.extension[enlist-lot].extension[line]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.modifikation",
+      "path" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.modifikation",
+      "short" : "Modifikationszähler Y",
+      "definition" : "Zahl der Modified LoTs seit der letzten New LoT.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.extension[enlist-lot].extension[modification]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.linienId",
+      "path" : "TherapiezielDreieck.behandlungsepisode.linienzaehlung.linienId",
+      "short" : "Linien-Identifier",
+      "definition" : "Gemeinsamer Identifier der Linie; verkettet ausführende Segmente mit der führenden Episode.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Identifier"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "EpisodeOfCare.extension[enlist-lot].extension[lineId] bzw. [enlist-line-segment].value[x]"
       }]
     },
     {
@@ -527,6 +782,54 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
       }]
     },
     {
+      "id" : "TherapiezielDreieck.therapieziel.prioritaet",
+      "path" : "TherapiezielDreieck.therapieziel.prioritaet",
+      "short" : "Priorität",
+      "definition" : "Relative Priorität bei mehreren konkurrierenden Zielen.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "Goal.priority"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.therapieziel.verfasser",
+      "path" : "TherapiezielDreieck.therapieziel.verfasser",
+      "short" : "Verfasser",
+      "definition" : "Wer das Ziel formuliert hat — Behandler:in oder Patient:in. Für die Shared-Decision-Nachvollziehbarkeit wesentlich.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "Goal.expressedBy"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.therapieziel.beginn[x]",
+      "path" : "TherapiezielDreieck.therapieziel.beginn[x]",
+      "short" : "Zielbeginn",
+      "definition" : "Beginn der Zielverfolgung als Datum oder als codiertes Ereignis (z. B. nach Operation, nach Bestrahlung).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      },
+      {
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "Goal.start[x]"
+      }]
+    },
+    {
       "id" : "TherapiezielDreieck.versorgungsplan",
       "path" : "TherapiezielDreieck.versorgungsplan",
       "short" : "Versorgungsplan — was ist geplant",
@@ -569,6 +872,66 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
       "mapping" : [{
         "identity" : "fhir-r4",
         "map" : "CarePlan.status"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.abschnitt",
+      "path" : "TherapiezielDreieck.versorgungsplan.abschnitt",
+      "short" : "Therapieabschnitt",
+      "definition" : "Ob der Plan den diagnostischen oder den therapeutischen Abschnitt abbildet. Ersetzt die frühere Unterscheidung über zwei getrennte Profile.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "CarePlan.category (onko-care-plan-phase)"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.intention",
+      "path" : "TherapiezielDreieck.versorgungsplan.intention",
+      "short" : "Intention des Plans",
+      "definition" : "Therapieintention, die der Plan verfolgt.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "CarePlan.extension[onko-therapy-intent]"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.adressierteErkrankung",
+      "path" : "TherapiezielDreieck.versorgungsplan.adressierteErkrankung",
+      "short" : "Adressierte Erkrankung",
+      "definition" : "Die vom Plan adressierte Tumorerkrankung.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "CarePlan.addresses (MII Onko Diagnose Primärtumor)"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.custodian",
+      "path" : "TherapiezielDreieck.versorgungsplan.custodian",
+      "short" : "Custodian",
+      "definition" : "Für Pflege und Aktualisierung des Plans verantwortliche Stelle.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "CarePlan.extension[onko-careplan-custodian]"
       }]
     },
     {
@@ -700,6 +1063,21 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
       "mapping" : [{
         "identity" : "fhir-r4",
         "map" : "CarePlan.activity.outcomeReference"
+      }]
+    },
+    {
+      "id" : "TherapiezielDreieck.versorgungsplan.massnahme.aenderungstyp",
+      "path" : "TherapiezielDreieck.versorgungsplan.massnahme.aenderungstyp",
+      "short" : "Änderungstyp",
+      "definition" : "Einordnung einer Therapieänderung nach EnLiST: new (Progression oder fehlendes Ansprechen), modified (nicht-progressionsbedingt) oder same (prospektiv geplant).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mapping" : [{
+        "identity" : "fhir-r4",
+        "map" : "MedicationRequest.extension[enlist-change]"
       }]
     }]
   }
