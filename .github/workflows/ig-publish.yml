@@ -179,12 +179,15 @@ jobs:
             # IG-Publisher-Parameter (copyrightyear, releaselabel, i18n-*, translation-sources, excludettl) wurden erst post-R4 zur GuideParameterCode-Liste hinzugefügt; R4-Strikt-Validierung kennt sie nicht
             ||*GuideParameterCode*|
             ||*guide-parameter-code*|
-            # Der lokale TX-Server haelt urn:iso:std:iso:3166 doppelt vor: offiziell als 20240629 und
+            # Der MII-Ontoserver haelt urn:iso:std:iso:3166 doppelt vor: offiziell als 20240629 und
             # aus dem MII-Modul Dokument als 2027.0.0-ballot.2. Da die zweite Version nicht datumsfoermig
             # ist, kann er keine Default-Version bestimmen — ImplementationGuide.jurisdiction scheitert
-            # dadurch in JEDEM IG, unabhaengig vom Inhalt.
+            # dadurch in JEDEM IG, der dort validiert, unabhaengig vom Inhalt.
+            # Das Dokument-Modul ist KEINE Abhaengigkeit dieses IG, weder direkt noch transitiv; der
+            # Konflikt liegt allein im Bestand des Terminologieservers.
             # Pinning per -expansion-parameters wurde versucht und wirkt nicht: der Konflikt entsteht
-            # serverseitig bei der Aufloesung, nicht in der Expansion. Daher Suppression.
+            # beim Aufloesen der Ressource, nicht in einer Expansion — und ein Pin im IG aendert ohnehin
+            # nichts am Serverbestand. Daher Suppression.
             # Entfaellt, sobald das Dokument-Modul eine datumsfoermige Version verwendet.
             ||*Found more than one Resource with the same URL urn:iso:std:iso:3166*|
             # tx.fhir.org-Infrastrukturfehler (Timeout, verfallene Session-Cache, Sprachcode-Auflösung) — kein Inhaltsfehler, nur Server-Flakiness
