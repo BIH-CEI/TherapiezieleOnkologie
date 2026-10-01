@@ -1,6 +1,6 @@
 # Therapielinie – Medikationsverordnung (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: Line of therapy – medication request extension 
+## Extension: Line of therapy – medication request extension (Experimental) 
 
 Reference to the MedicationRequest resource or resources that gave rise to or order this line of therapy. EpisodeOfCare.referralRequest is restricted to a Reference of type ServiceRequest in FHIR core and profiles cannot widen reference target types. For lines of therapy triggered by a medication order rather than a ServiceRequest, e.g. an antineoplastic systemic therapy, this extension is used alongside referralRequest.
 
@@ -49,7 +49,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-line
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

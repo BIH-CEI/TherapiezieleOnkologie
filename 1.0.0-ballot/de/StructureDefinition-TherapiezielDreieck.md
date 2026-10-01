@@ -1,6 +1,6 @@
 # Therapieziel-Dreieck (logisches Modell) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Logisches Modell: Therapieziel-Dreieck (logisches Modell) 
+## Logisches Modell: Therapieziel-Dreieck (logisches Modell) ( Experimentell ) 
 
  
 Logisches Modell der drei Kernkonzepte des Leitfadens und ihrer Beziehungen: 
@@ -83,7 +83,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-Therapieziel
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

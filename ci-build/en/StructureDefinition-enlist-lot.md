@@ -1,6 +1,6 @@
 # EnLiST-LoT-Designation (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: EnLiST LoT designation extension 
+## Extension: EnLiST LoT designation extension (Experimental) 
 
 EnLiST designation of the systemic line of therapy in X.Y notation per setting axis. The line of therapy is a clinical continuum that may span multiple organisation-bound episodes; the designation exists exactly once per line — on the leading episode or, in the MII-only path, on the systemic therapy procedure. Executing segments link via the shared lineId. Recorded, not computed.
 
@@ -49,7 +49,8 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-lot.csv), 
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

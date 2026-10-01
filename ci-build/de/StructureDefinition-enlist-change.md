@@ -1,6 +1,6 @@
 # EnLiST-Änderungstyp (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: EnLiST-Änderungstyp (Extension) 
+## Extension: EnLiST-Änderungstyp (Extension) (Experimentell) 
 
 EnLiST-Änderungstyp einer Therapieänderung auf Request-Ebene: **new** (eröffnet eine neue Linie, X+1 — nur bei Progression/fehlendem Ansprechen), **modified** (Y+1 — nicht-progressionsbedingte Änderung; bei Ersetzung eines Vorgängers zusätzlich `priorPrescription`) oder **same** (prospektiv geplante Änderung inkl. Erhaltungstherapie — Designation unverändert). Die Sequenz geplanter Blöcke liegt in der RequestGroup, nicht in `priorPrescription`.
 
@@ -86,7 +86,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-chang
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

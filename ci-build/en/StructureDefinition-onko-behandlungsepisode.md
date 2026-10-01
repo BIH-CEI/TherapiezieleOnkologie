@@ -1,6 +1,6 @@
 # Onkologische Behandlungsepisode - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Resource Profile: Onkologische Behandlungsepisode 
+## Resource Profile: Onkologische Behandlungsepisode ( Experimental ) 
 
  
 A delimited oncological care segment with its own intent based on EpisodeOfCare — the episode type distinguishes systemic line of therapy, locoregional treatment line, diagnostic line, active surveillance and watchful waiting; the treatment modality is a characteristic of its own. A systemic line of therapy is a clinical continuum that may span multiple organisation-bound episodes; the EnLiST designation is carried by exactly one leading episode per line, executing organisations document their episodes as segments with a shared lineId. 
@@ -45,7 +45,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-behandlungse
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

@@ -1,6 +1,6 @@
 # Kontext (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: Kontext (Extension) 
+## Extension: Kontext (Extension) (Experimentell) 
 
 Zusätzlicher Kontext eines Behandlungsschritts, der – ergänzend zur Therapieintention – z. B. kennzeichnet, ob eine Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv oder im Notfall erfolgt.
 
@@ -91,7 +91,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-behandl
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

@@ -1,6 +1,6 @@
 # Tumorboard ServiceRequest - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Resource Profile: Tumorboard ServiceRequest 
+## Resource Profile: Tumorboard ServiceRequest ( Experimental ) 
 
  
 Structured tumor board recommendation based on ServiceRequest. The category must contain the LOINC code Tumor board Consult note 85232-7 to mark it as a tumor board recommendation. 
@@ -46,7 +46,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-tumorboard-s
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

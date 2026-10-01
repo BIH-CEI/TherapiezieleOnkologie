@@ -1,6 +1,6 @@
 # Therapieziel-Dreieck (logisches Modell) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Logical Model: Therapieziel-Dreieck (logisches Modell) 
+## Logical Model: Therapieziel-Dreieck (logisches Modell) ( Experimental ) 
 
  
 Logical model of the three core concepts and their relations: care episode – who treats; therapy goal – what is to be achieved; care plan – which measures are planned. The goal precedes the plan; the plan tracks the goal and is assigned to its episode. Goal and episode are linked only implicitly via the plan. 
@@ -49,7 +49,8 @@ Other representations of profile: [CSV](../StructureDefinition-TherapiezielDreie
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

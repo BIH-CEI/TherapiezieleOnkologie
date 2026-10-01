@@ -1,6 +1,6 @@
 # Onkologische Therapieintention (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: Oncological therapy intent extension 
+## Extension: Oncological therapy intent extension (Experimental) 
 
 Structured coding of the therapy intent on two axes: hauptintention – the actual treatment intent such as curative, palliative, neoadjuvant, adjuvant, supportive – and phase – the sequential treatment phase such as induction or maintenance therapy. This allows expressing e.g. curative plus induction phase at the same time.
 
@@ -49,7 +49,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-inte
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

@@ -1,6 +1,6 @@
 # EnLiST-Zählstatus (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: EnLiST countability extension 
+## Extension: EnLiST countability extension (Experimental) 
 
 EnLiST countability of the treatment line: counted — the line lies on an EnLiST counting axis, with the designation in enlist-lot on the leading episode or the segment marker; not-counted — outside any LoT count, e.g. a locoregional treatment line or a management segment.
 
@@ -49,7 +49,8 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-countable.
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

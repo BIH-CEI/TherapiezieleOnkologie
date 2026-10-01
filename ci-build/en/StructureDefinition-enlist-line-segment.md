@@ -1,6 +1,6 @@
 # EnLiST-Linien-Segment (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: EnLiST line segment extension 
+## Extension: EnLiST line segment extension (Experimental) 
 
 Marks an executing treatment segment — an episode of an executing organisation or a therapy procedure — as part of a led line of therapy. Carries no designation of its own, only the shared lineId; evaluators count enlist-lot carriers only.
 
@@ -49,7 +49,8 @@ Other representations of profile: [CSV](../StructureDefinition-enlist-line-segme
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

@@ -1,6 +1,6 @@
 # Onkologischer CarePlan - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Resource Profile: Onkologischer CarePlan 
+## Resource Profile: Onkologischer CarePlan ( Experimental ) 
 
  
 Oncological care plan based on CarePlan, architecturally aligned with the HL7 FHIR US MCC eCare Plan. The care plan is the central, consensus-driven steering object bringing together addressed conditions, overarching goals and planned versus performed activities of the care teams. category is sliced into erkrankungsart – ICD-10-GM code of the addressed tumor disease – and therapieabschnitt – SNOMED CT Diagnostic intent 261004008 or Therapeutic intent 262202000, so a single profile covers both the diagnostic pathway and the therapy pathway. 
@@ -45,7 +45,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-care-plan.cs
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

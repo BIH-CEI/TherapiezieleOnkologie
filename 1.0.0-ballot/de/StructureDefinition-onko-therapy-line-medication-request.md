@@ -1,6 +1,6 @@
 # Therapielinie – Medikationsverordnung (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: Therapielinie – Medikationsverordnung (Extension) 
+## Extension: Therapielinie – Medikationsverordnung (Extension) (Experimentell) 
 
 Referenz auf die `MedicationRequest`-Ressource(en), die den Anlass bzw. die Verordnung für diese Therapielinie bilden.
 
@@ -84,7 +84,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-onko-therapy
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

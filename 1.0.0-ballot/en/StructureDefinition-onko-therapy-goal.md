@@ -1,6 +1,6 @@
 # Onkologisches Therapieziel - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Resource Profile: Onkologisches Therapieziel 
+## Resource Profile: Onkologisches Therapieziel ( Experimental ) 
 
  
 Structured oncological therapy goal based on Goal, aligned with the HL7 FHIR US MCC eCare Plan MCCGoal. The goal is a standalone reference-based resource linked to the addressed condition via addresses and to progress observations via outcomeReference. 
@@ -46,7 +46,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-therapy-goal
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

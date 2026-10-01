@@ -1,6 +1,6 @@
 # Kontext (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: Context extension 
+## Extension: Context extension (Experimental) 
 
 Additional context of a treatment step that, complementing the therapy intent, indicates for example whether a measure is local, symptomatic, preventive, definitive, additive, intraoperative, elective or an emergency. This field is intended to give individual treatment steps further context beyond the therapy intent. The extension can be used on ServiceRequest, Procedure, MedicationRequest and MedicationAdministration.
 
@@ -48,7 +48,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-behandlungs-
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

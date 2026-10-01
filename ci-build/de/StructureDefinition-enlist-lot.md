@@ -1,6 +1,6 @@
 # EnLiST-LoT-Designation (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: EnLiST-LoT-Designation (Extension) 
+## Extension: EnLiST-LoT-Designation (Extension) (Experimentell) 
 
 EnLiST-Designation der systemischen Line of Therapy in **X.Y-Notation je Setting**:
 
@@ -110,7 +110,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-lot.c
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

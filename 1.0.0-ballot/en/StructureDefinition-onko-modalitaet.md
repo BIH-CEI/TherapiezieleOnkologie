@@ -1,6 +1,6 @@
 # Behandlungsmodalität (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: Treatment modality extension 
+## Extension: Treatment modality extension (Experimental) 
 
 Treatment modality of the care episode — e.g. chemotherapy, immunotherapy, hormone therapy, radiotherapy, surgery. A characteristic of its own next to the episode type; multiple modalities per episode are allowed, e.g. radiochemotherapy.
 
@@ -49,7 +49,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-modalitaet.c
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

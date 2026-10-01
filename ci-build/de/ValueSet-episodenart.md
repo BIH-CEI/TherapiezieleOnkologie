@@ -46,7 +46,7 @@ Alle Episodenarten des Startsatzes; die Bindung ist extensible — entitätsspez
   },
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-10-01T05:55:59+00:00",
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

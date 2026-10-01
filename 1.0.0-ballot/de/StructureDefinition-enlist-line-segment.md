@@ -1,6 +1,6 @@
 # EnLiST-Linien-Segment (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: EnLiST-Linien-Segment (Extension) 
+## Extension: EnLiST-Linien-Segment (Extension) (Experimentell) 
 
 Markiert einen **ausführenden Behandlungsabschnitt** (Episode einer ausführenden Einrichtung bzw. eine Therapie-`Procedure`) als Segment einer geführten Line of Therapy. Trägt **keine eigene Designation**, sondern nur die gemeinsame `lineId` der Linie (siehe `enlist-lot.lineId` an der führenden Episode). So bleibt jede ausführende Instanz autonom dokumentationsfähig, ohne die LoT-Zählung zu duplizieren — Auswerter zählen ausschließlich Träger von `enlist-lot`.
 
@@ -78,7 +78,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-line-
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

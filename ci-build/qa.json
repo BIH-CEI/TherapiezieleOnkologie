@@ -6,14 +6,14 @@
   "status" : "draft",
   "package-id" : "de.bih-cei.therapieziele-onkologie",
   "ig-ver" : "1.0.0-ballot",
-  "date" : "Thu, 01 Oct, 2026 05:55:59 +0000",
-  "dateISO8601" : "2026-10-01T05:55:59+00:00",
+  "date" : "Thu, 01 Oct, 2026 06:38:06 +0000",
+  "dateISO8601" : "2026-10-01T06:38:06+00:00",
   "errs" : 17,
-  "warnings" : 174,
+  "warnings" : 161,
   "hints" : 518,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1832670208
+  "maxMemory" : 1723819328
 }

@@ -1,7 +1,7 @@
 TherapiezieleOnkologie : Validation Results
 =========================================
 
-err = 17, warn = 174, info = 518
+err = 17, warn = 161, info = 518
 $--
 Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (canonical = https://bih-cei.de/fhir/therapieziele-onkologie)
  Build Errors : 0 / 6 / 0
@@ -77,19 +77,19 @@ Generated $--. FHIR version $-- for de.bih-cei.therapieziele-onkologie#$-- (cano
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-enlist-countable : 0 / 2 / 8
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-enlist-line-segment : 0 / 2 / 8
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-enlist-lot : 0 / 3 / 24
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-behandlungs-kontext : 0 / 5 / 8
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-behandlungsepisode : 0 / 4 / 81
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-behandlungs-kontext : 0 / 3 / 8
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-behandlungsepisode : 0 / 2 / 81
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-care-plan : 0 / 4 / 84
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-careplan-custodian : 0 / 2 / 8
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-modalitaet : 0 / 2 / 8
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-goal : 0 / 10 / 99
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-intent : 0 / 6 / 12
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-goal : 0 / 8 / 99
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-intent : 0 / 2 / 12
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-therapy-line-medication-request : 0 / 2 / 8
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-tumorboard-medication-request : 0 / 2 / 46
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/StructureDefinition-onko-tumorboard-service-request : 0 / 2 / 42
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-enlist-change-type : 0 / 4 / 4
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-enlist-countable : 0 / 4 / 4
- /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-enlist-lot-setting : 0 / 4 / 4
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-enlist-change-type : 0 / 3 / 4
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-enlist-countable : 0 / 3 / 4
+ /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-enlist-lot-setting : 0 / 3 / 4
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-episodenart : 0 / 3 / 4
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-onko-behandlungsmodalitaet : 3 / 4 / 3
  /home/runner/work/TherapiezieleOnkologie/TherapiezieleOnkologie/fsh-generated/resources/ValueSet-onko-care-plan-phase : 3 / 4 / 1
@@ -392,8 +392,6 @@ INFORMATION: StructureDefinition/onko-behandlungs-kontext: StructureDefinition.s
 INFORMATION: StructureDefinition/onko-behandlungs-kontext: StructureDefinition.snapshot.element[4].definition.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-behandlungs-kontext: StructureDefinition.differential.element[3].short.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-behandlungs-kontext: StructureDefinition.differential.element[3].definition.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
-WARNING: StructureDefinition/onko-behandlungs-kontext: StructureDefinition.differential.element[3].binding: The definition for the element 'Extension.value[x]' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-service-request-kontext' which is experimental, but this structure is not labeled as experimental
-WARNING: StructureDefinition/onko-behandlungs-kontext: StructureDefinition.snapshot.element[4].binding: The definition for the element 'Extension.value[x]' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-service-request-kontext' which is experimental, but this structure is not labeled as experimental
 INFORMATION: Resource: The resource StructureDefinition/onko-behandlungs-kontext could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 WARNING: StructureDefinition.where(url = 'https://bih-cei.de/fhir/therapieziele-onkologie/StructureDefinition/onko-behandlungs-kontext'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-onko-behandlungsepisode.json ==
@@ -478,8 +476,6 @@ INFORMATION: StructureDefinition/onko-behandlungsepisode: StructureDefinition.di
 INFORMATION: StructureDefinition/onko-behandlungsepisode: StructureDefinition.differential.element[19].definition.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-behandlungsepisode: StructureDefinition.differential.element[20].short.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-behandlungsepisode: StructureDefinition.differential.element[20].definition.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
-WARNING: StructureDefinition/onko-behandlungsepisode: StructureDefinition.differential.element[10].binding: The definition for the element 'EpisodeOfCare.type' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart' which is experimental, but this structure is not labeled as experimental
-WARNING: StructureDefinition/onko-behandlungsepisode: StructureDefinition.snapshot.element[23].binding: The definition for the element 'EpisodeOfCare.type' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/episodenart' which is experimental, but this structure is not labeled as experimental
 INFORMATION: Resource: The resource StructureDefinition/onko-behandlungsepisode could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-care-plan.json ==
 INFORMATION: StructureDefinition/onko-care-plan: StructureDefinition.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
@@ -695,8 +691,6 @@ INFORMATION: StructureDefinition/onko-therapy-goal: StructureDefinition.differen
 INFORMATION: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[23].definition.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[23].comment.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-therapy-goal: Goal.extension: The extension http://hl7.org/fhir/StructureDefinition/goal-reasonRejected|5.3.0 is deprecated with the note: 'This extension is deprecated and replaced by Goal.statusReason'
-WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.differential.element[8].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
-WARNING: StructureDefinition/onko-therapy-goal: StructureDefinition.snapshot.element[16].binding: The definition for the element 'Goal.category' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-goal-type' which is experimental, but this structure is not labeled as experimental
 INFORMATION: Resource: The resource StructureDefinition/onko-therapy-goal could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-therapy-intent.json ==
 INFORMATION: StructureDefinition/onko-therapy-intent: StructureDefinition.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
@@ -711,10 +705,6 @@ INFORMATION: StructureDefinition/onko-therapy-intent: StructureDefinition.differ
 INFORMATION: StructureDefinition/onko-therapy-intent: StructureDefinition.differential.element[2].definition.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-therapy-intent: StructureDefinition.differential.element[6].short.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
 INFORMATION: StructureDefinition/onko-therapy-intent: StructureDefinition.differential.element[6].definition.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
-WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.differential.element[5].binding: The definition for the element 'Extension.extension.value[x]' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent' which is experimental, but this structure is not labeled as experimental
-WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.differential.element[9].binding: The definition for the element 'Extension.extension.value[x]' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase' which is experimental, but this structure is not labeled as experimental
-WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.snapshot.element[7].binding: The definition for the element 'Extension.extension.value[x]' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-intent' which is experimental, but this structure is not labeled as experimental
-WARNING: StructureDefinition/onko-therapy-intent: StructureDefinition.snapshot.element[12].binding: The definition for the element 'Extension.extension.value[x]' binds to the value set 'https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-therapy-phase' which is experimental, but this structure is not labeled as experimental
 INFORMATION: Resource: The resource StructureDefinition/onko-therapy-intent could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-onko-therapy-line-medication-request.json ==
 INFORMATION: StructureDefinition/onko-therapy-line-medication-request: StructureDefinition.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
@@ -824,7 +814,6 @@ INFORMATION: ValueSet/enlist-change-type: ValueSet.description.extension[0].exte
 WARNING: ValueSet/enlist-change-type: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: ValueSet/enlist-change-type: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 INFORMATION: ValueSet/enlist-change-type: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because there is no terminology server
-WARNING: ValueSet/enlist-change-type: ValueSet: Das ShareableValueSet-Profil sagt, dass das experimental-Element obligatorisch ist, aber es ist nicht vorhanden. Veröffentlichte ValueSets SOLLTEN mit dem ShareableValueSet-Profil übereinstimmen
 WARNING: Resource: The resource ValueSet/enlist-change-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-enlist-countable.json ==
 INFORMATION: ValueSet/enlist-countable: ValueSet.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
@@ -832,7 +821,6 @@ INFORMATION: ValueSet/enlist-countable: ValueSet.description.extension[0].extens
 WARNING: ValueSet/enlist-countable: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: ValueSet/enlist-countable: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 INFORMATION: ValueSet/enlist-countable: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because there is no terminology server
-WARNING: ValueSet/enlist-countable: ValueSet: Das ShareableValueSet-Profil sagt, dass das experimental-Element obligatorisch ist, aber es ist nicht vorhanden. Veröffentlichte ValueSets SOLLTEN mit dem ShareableValueSet-Profil übereinstimmen
 WARNING: Resource: The resource ValueSet/enlist-countable should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-enlist-lot-setting.json ==
 INFORMATION: ValueSet/enlist-lot-setting: ValueSet.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.
@@ -840,7 +828,6 @@ INFORMATION: ValueSet/enlist-lot-setting: ValueSet.description.extension[0].exte
 WARNING: ValueSet/enlist-lot-setting: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 ist unbekannt
 WARNING: ValueSet/enlist-lot-setting: ValueSet.jurisdiction[0].coding[0].system: Das CodeSystem urn:iso:std:iso:3166 Version null ist unbekannt. Gültige Versionen: 1.0.1
 INFORMATION: ValueSet/enlist-lot-setting: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because there is no terminology server
-WARNING: ValueSet/enlist-lot-setting: ValueSet: Das ShareableValueSet-Profil sagt, dass das experimental-Element obligatorisch ist, aber es ist nicht vorhanden. Veröffentlichte ValueSets SOLLTEN mit dem ShareableValueSet-Profil übereinstimmen
 WARNING: Resource: The resource ValueSet/enlist-lot-setting should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-episodenart.json ==
 INFORMATION: ValueSet/episodenart: ValueSet.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') konnte in Ermangelung eines Terminologieservers nicht validiert werden.

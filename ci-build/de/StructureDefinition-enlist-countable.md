@@ -1,6 +1,6 @@
 # EnLiST-Zählstatus (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: EnLiST-Zählstatus (Extension) 
+## Extension: EnLiST-Zählstatus (Extension) (Experimentell) 
 
 Zählstatus der Behandlungslinie nach EnLiST: `counted` — die Linie liegt auf einer EnLiST-Zählachse (Designation in `enlist-lot` an der führenden Episode bzw. Segment-Marker `enlist-line-segment`); `not-counted` — außerhalb jeder LoT-Zählung, z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie, Ablation) oder Management-Abschnitt.
 
@@ -86,7 +86,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-enlist-count
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",

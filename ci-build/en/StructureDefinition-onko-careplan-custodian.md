@@ -1,6 +1,6 @@
 # CarePlan Custodian (Extension) - Implementierungsleitfaden Therapieziele Onkologie v1.0.0-ballot
 
-## Extension: CarePlan custodian extension 
+## Extension: CarePlan custodian extension (Experimental) 
 
 Party responsible for maintaining the care plan – custodian. Adopted from the MCC eCare Plan custodian extension as an R5 backport: in FHIR R5 CarePlan.author was removed and CarePlan.custodian names the party responsible for maintenance. Modelled here as a local extension to avoid the US-realm dependency.
 
@@ -49,7 +49,8 @@ Other representations of profile: [CSV](../StructureDefinition-onko-careplan-cus
     }]
   },
   "status" : "draft",
-  "date" : "2026-10-01T05:55:59+00:00",
+  "experimental" : true,
+  "date" : "2026-10-01T06:38:06+00:00",
   "publisher" : "Berlin Institute of Health at Charité (BIH)",
   "contact" : [{
     "name" : "Berlin Institute of Health at Charité (BIH)",
