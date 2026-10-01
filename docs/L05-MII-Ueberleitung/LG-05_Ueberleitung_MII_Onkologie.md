@@ -45,7 +45,7 @@ Gegenstand sind sämtliche im Leitfaden definierten Artefakte im aktuellen Stand
 - **5 Profile** — `OnkoTherapyGoal` (Goal), `OnkoCarePlan` (CarePlan), `OnkoBehandlungsepisode` (EpisodeOfCare), `TumorboardServiceRequest`, `TumorboardMedicationRequest`
 - **9 Extensions**, davon 8 projekteigene
 - **5 CodeSystems, 11 ValueSets, 1 ConceptMap**
-- **1 logisches Modell** (`TherapiezielDreieck`) mit 51 Datenelementen
+- **1 logisches Modell** (`TherapiezielDreieck`) mit 63 Datenelementen
 - **6 Invarianten**
 
 Gegenüber der kommentierten Ballot-Fassung entfallen zwei Profile ersatzlos: `DiagnosticCarePlan` und `OnkoCondition`. Der diagnostische Abschnitt wird seither über `CarePlan.category` (ValueSet `onko-care-plan-phase`) vom therapeutischen unterschieden statt über ein zweites Profil; die Tumordiagnose wird direkt über das MII-Diagnoseprofil referenziert, ohne eigene Ableitung. Beides geht auf die Kommentierung zurück und ist für die Überleitung eine Erleichterung — zwei Artefakte weniger, die überzuleiten wären.
