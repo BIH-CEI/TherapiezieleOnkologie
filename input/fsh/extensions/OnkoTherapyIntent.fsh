@@ -13,6 +13,7 @@ So lässt sich z. B. „kurativ + Induktionsphase" gleichzeitig ausdrücken. Ver
 OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE
 `procedure-intent`.
 """
+* ^experimental = true
 * insert Translation(^title, en, Oncological therapy intent extension)
 * insert Translation(^description, en, Structured coding of the therapy intent on two axes: hauptintention – the actual treatment intent such as curative\, palliative\, neoadjuvant\, adjuvant\, supportive – and phase – the sequential treatment phase such as induction or maintenance therapy. This allows expressing e.g. curative plus induction phase at the same time.)
 * ^context.type = #element

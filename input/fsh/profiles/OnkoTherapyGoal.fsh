@@ -23,6 +23,7 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 `achievementStatus` bildet — analog MCC — den Erreichungsgrad bzw. die Zielakzeptanz ab
 (z. B. erreicht, in Bearbeitung, nicht erreicht).
 """
+* ^experimental = true
 * insert Translation(^title, en, Oncological therapy goal)
 * insert Translation(^description, en, Structured oncological therapy goal based on Goal\, aligned with the HL7 FHIR US MCC eCare Plan MCCGoal. The goal is a standalone reference-based resource linked to the addressed condition via addresses and to progress observations via outcomeReference.)
 

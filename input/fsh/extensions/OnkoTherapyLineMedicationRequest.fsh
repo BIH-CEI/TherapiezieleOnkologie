@@ -11,6 +11,7 @@ Referenzziele nur einschränken, nicht erweitern). Für Therapielinien, deren Au
 Medikationsverordnung statt eines ServiceRequest ist (z. B. eine antineoplastische
 Systemtherapie), wird daher diese Extension ergänzend zu `referralRequest` verwendet.
 """
+* ^experimental = true
 * insert Translation(^title, en, Line of therapy – medication request extension)
 * insert Translation(^description, en, Reference to the MedicationRequest resource or resources that gave rise to or order this line of therapy. EpisodeOfCare.referralRequest is restricted to a Reference of type ServiceRequest in FHIR core and profiles cannot widen reference target types. For lines of therapy triggered by a medication order rather than a ServiceRequest\, e.g. an antineoplastic systemic therapy\, this extension is used alongside referralRequest.)
 * ^context.type = #element

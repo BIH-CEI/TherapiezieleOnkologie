@@ -17,6 +17,7 @@ ValueSet: EnlistCountableVS
 Id: enlist-countable
 Title: "EnLiST-Zählstatus (ValueSet)"
 Description: "Alle Zählstatus-Werte nach EnLiST."
+* ^experimental = true
 * insert Translation(^title, en, EnLiST countability value set)
 * insert Translation(^description, en, All EnLiST countability values.)
 * include codes from system EnlistCountable
@@ -38,6 +39,7 @@ ValueSet: EnlistLotSettingVS
 Id: enlist-lot-setting
 Title: "EnLiST-Setting-Achsen (ValueSet)"
 Description: "Alle EnLiST-Setting-Achsen."
+* ^experimental = true
 * insert Translation(^title, en, EnLiST setting axes value set)
 * insert Translation(^description, en, All EnLiST setting axes.)
 * include codes from system EnlistLotSetting
@@ -59,6 +61,7 @@ ValueSet: EnlistChangeTypeVS
 Id: enlist-change-type
 Title: "EnLiST-Änderungstypen (ValueSet)"
 Description: "Alle EnLiST-Änderungstypen."
+* ^experimental = true
 * insert Translation(^title, en, EnLiST change types value set)
 * insert Translation(^description, en, All EnLiST change types.)
 * include codes from system EnlistChangeType

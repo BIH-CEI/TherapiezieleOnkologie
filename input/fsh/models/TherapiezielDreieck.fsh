@@ -24,6 +24,7 @@ und ist seiner **Episode zugeordnet** (`episode`). Zwischen Ziel und Episode gib
 es **keine direkte Referenz** — die Zuordnung ergibt sich implizit über den Plan
 (siehe schematische Darstellung).
 """
+* ^experimental = true
 * insert Translation(^title, en, Therapy-goal triangle – logical model)
 * insert Translation(^description, en, Logical model of the three core concepts and their relations: care episode – who treats; therapy goal – what is to be achieved; care plan – which measures are planned. The goal precedes the plan; the plan tracks the goal and is assigned to its episode. Goal and episode are linked only implicitly via the plan.)
 

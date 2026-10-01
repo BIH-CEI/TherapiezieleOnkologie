@@ -34,6 +34,7 @@ systemischen Therapie-`Procedure` (MII-Pfad). Sie wird dokumentiert erfasst,
 nicht berechnet; *Same LoTs* (prospektiv geplante Änderungen inkl. Erhaltung)
 verändern die Designation nicht.
 """
+* ^experimental = true
 * insert Translation(^title, en, EnLiST LoT designation extension)
 * insert Translation(^description, en, EnLiST designation of the systemic line of therapy in X.Y notation per setting axis. The line of therapy is a clinical continuum that may span multiple organisation-bound episodes; the designation exists exactly once per line — on the leading episode or\, in the MII-only path\, on the systemic therapy procedure. Executing segments link via the shared lineId. Recorded\, not computed.)
 * ^context.type = #element
@@ -88,6 +89,7 @@ So bleibt jede ausführende Instanz autonom dokumentationsfähig, ohne die
 LoT-Zählung zu duplizieren — Auswerter zählen ausschließlich Träger von
 `enlist-lot`.
 """
+* ^experimental = true
 * insert Translation(^title, en, EnLiST line segment extension)
 * insert Translation(^description, en, Marks an executing treatment segment — an episode of an executing organisation or a therapy procedure — as part of a led line of therapy. Carries no designation of its own\, only the shared lineId; evaluators count enlist-lot carriers only.)
 * ^context.type = #element
@@ -111,6 +113,7 @@ zusätzlich `priorPrescription`) oder **same** (prospektiv geplante Änderung
 inkl. Erhaltungstherapie — Designation unverändert). Die Sequenz geplanter
 Blöcke liegt in der RequestGroup, nicht in `priorPrescription`.
 """
+* ^experimental = true
 * insert Translation(^title, en, EnLiST change type extension)
 * insert Translation(^description, en, EnLiST change type of a treatment change at request level: new — opens a new line\, X plus one; modified — Y plus one\, non-progression-related\, with priorPrescription when replacing a predecessor; same — prospectively planned change including maintenance\, designation unchanged.)
 * ^context.type = #element
@@ -132,6 +135,7 @@ bzw. Segment-Marker `enlist-line-segment`); `not-counted` — außerhalb jeder
 LoT-Zählung, z. B. lokoregionale Behandlungslinie (Chirurgie, Strahlentherapie,
 Ablation) oder Management-Abschnitt.
 """
+* ^experimental = true
 * insert Translation(^title, en, EnLiST countability extension)
 * insert Translation(^description, en, EnLiST countability of the treatment line: counted — the line lies on an EnLiST counting axis\, with the designation in enlist-lot on the leading episode or the segment marker; not-counted — outside any LoT count\, e.g. a locoregional treatment line or a management segment.)
 * ^context.type = #element

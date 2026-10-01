@@ -10,6 +10,7 @@ Dieses Feld soll dazu dienen, neben der Therapieintention einzelnen Behandlungss
 weiteren Kontext zu geben. Die Extension kann an ServiceRequest, Procedure, MedicationRequest
 und MedicationAdministration verwendet werden.
 """
+* ^experimental = true
 * insert Translation(^title, en, Context extension)
 * insert Translation(^description, en, Additional context of a treatment step that\, complementing the therapy intent\, indicates for example whether a measure is local\, symptomatic\, preventive\, definitive\, additive\, intraoperative\, elective or an emergency. This field is intended to give individual treatment steps further context beyond the therapy intent. The extension can be used on ServiceRequest\, Procedure\, MedicationRequest and MedicationAdministration.)
 * ^context.type = #element

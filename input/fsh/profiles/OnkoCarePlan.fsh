@@ -25,6 +25,7 @@ Im Fallback-Pfad (keine computable Leitlinie) ist der CarePlan die führende Rep
 realen Versorgungsverlaufs; im Primärpfad referenziert er via `instantiatesCanonical` eine
 `PlanDefinition` aus dem CPG-on-FHIR-Stack.
 """
+* ^experimental = true
 * insert Translation(^title, en, Oncological care plan)
 * insert Translation(^description, en, Oncological care plan based on CarePlan\, architecturally aligned with the HL7 FHIR US MCC eCare Plan. The care plan is the central\, consensus-driven steering object bringing together addressed conditions\, overarching goals and planned versus performed activities of the care teams. category is sliced into erkrankungsart – ICD-10-GM code of the addressed tumor disease – and therapieabschnitt – SNOMED CT Diagnostic intent 261004008 or Therapeutic intent 262202000\, so a single profile covers both the diagnostic pathway and the therapy pathway.)
 

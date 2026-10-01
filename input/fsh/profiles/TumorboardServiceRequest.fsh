@@ -8,6 +8,7 @@ Strukturierte Empfehlung des Tumorboards auf Basis von `ServiceRequest`.
 Tumorboardspezifische Ergänzung:
 - Im Element `category` muss der LOINC-Code `Tumor board Consult note` (85232-7) enthalten sein, um zu kennzeichnen, dass es sich um eine Empfehlung des Tumorboards handelt. Weitere Categories können zusätzlich angegeben werden.
 """
+* ^experimental = true
 * insert Translation(^title, en, Tumor board service request)
 * insert Translation(^description, en, Structured tumor board recommendation based on ServiceRequest. The category must contain the LOINC code Tumor board Consult note 85232-7 to mark it as a tumor board recommendation.)
 

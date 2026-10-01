@@ -7,6 +7,7 @@ Extension: OnkoModalitaetExt
 Id: onko-modalitaet
 Title: "Behandlungsmodalität (Extension)"
 Description: "Behandlungsmodalität der Behandlungsepisode — z. B. Chemotherapie, Immuntherapie, Hormontherapie, Bestrahlung, Operation. Eigenes Merkmal neben der Episodenart (`EpisodeOfCare.type`); mehrere Modalitäten je Episode sind zulässig (z. B. Radiochemotherapie)."
+* ^experimental = true
 * insert Translation(^title, en, Treatment modality extension)
 * insert Translation(^description, en, Treatment modality of the care episode — e.g. chemotherapy\, immunotherapy\, hormone therapy\, radiotherapy\, surgery. A characteristic of its own next to the episode type; multiple modalities per episode are allowed\, e.g. radiochemotherapy.)
 * ^context.type = #element
