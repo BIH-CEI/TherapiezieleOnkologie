@@ -57,7 +57,7 @@
   (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.
 
 So lässt sich z. B. „kurativ + Induktionsphase&quot; gleichzeitig ausdrücken. Verwendet in
-OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE
+OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE
 `procedure-intent`.</source>
         <target>Strukturierte Codierung der Therapieintention über zwei Achsen:
 
@@ -67,7 +67,7 @@ OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig
   (Induktionstherapie, Erhaltungstherapie) – ergänzend zur Hauptintention.
 
 So lässt sich z. B. „kurativ + Induktionsphase&quot; gleichzeitig ausdrücken. Verwendet in
-OnkoCarePlan, OnkoTherapyGoal und OnkoTherapyLine. Konzeptionell anschlussfähig an mCODE
+OnkoCarePlan, OnkoTherapyGoal und OnkoBehandlungsepisode. Konzeptionell anschlussfähig an mCODE
 `procedure-intent`.</target>
       </trans-unit>
       <trans-unit id="StructureDefinition-onko-therapy-intent" resname="StructureDefinition.element.Extension.extension:hauptintention/short">

@@ -35,9 +35,15 @@
              <notes>
                <note id="n1">ValueSet.description</note>
              </notes>
-        <source>Intention (das „Warum&quot;) einer onkologischen Therapielinie bzw. eines Behandlungsabschnitts.
+        <source>Intention (das „Warum&quot;) einer onkologischen Behandlungsepisode bzw. eines Behandlungsabschnitts:
+**wozu** behandelt wird.
 
-Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362961001 | Procedure by intent`.
+Verwendet aktuelle SNOMED-CT-Codes aus der Hierarchie `362981000 | Qualifier value`.
+
+Nicht hier abgebildet sind **neoadjuvant** und **adjuvant**: Sie beantworten nicht das „Wozu&quot;,
+sondern beschreiben die Stellung einer Maßnahme zur Operation — eine neoadjuvante Therapie ist
+in aller Regel kurativ intendiert. Sie sind daher mit der Intention kombinierbar statt zu ihr
+alternativ und stehen in der Kontext-Achse (`onko-service-request-kontext`).
 Als Concept-Display dient der englische SNOMED-Anzeigetext des aktuellen Release (validierbar
 gegen tx.fhir.org); die deutschen Begriffe stehen in den Label-Texten
 des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergänzt werden.</source>
@@ -62,20 +68,6 @@ des Leitfadens. Extensible gebunden – seltene Sonderintentionen dürfen ergän
                <note id="n1">ValueSet.compose.include.concept.display</note>
              </notes>
         <source>Palliative intent</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
-             <notes>
-               <note id="n1">ValueSet.compose.include.concept.display</note>
-             </notes>
-        <source>Neoadjuvant intent</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">
-             <notes>
-               <note id="n1">ValueSet.compose.include.concept.display</note>
-             </notes>
-        <source>Adjuvant - intent</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-onko-therapy-intent" resname="ValueSet.compose.include.concept.display">

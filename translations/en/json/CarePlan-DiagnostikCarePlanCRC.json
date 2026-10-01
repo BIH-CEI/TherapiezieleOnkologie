@@ -4,9 +4,15 @@
   "languages" : [{
     "targetLang" : "en",
     "entries" : [{
-      "id" : "CodeableConcept.text",
-      "context" : "CodeableConcept.text",
-      "source" : "Tumordiagnostik",
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Bösartige Neubildung: Kolon, nicht näher bezeichnet",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Diagnostic intent (qualifier value)",
       "target" : null
     }]
   }]

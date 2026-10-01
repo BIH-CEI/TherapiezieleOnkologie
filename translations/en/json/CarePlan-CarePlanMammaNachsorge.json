@@ -6,7 +6,13 @@
     "entries" : [{
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Cancer care plan",
+      "source" : "Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Therapeutic intent (qualifier value)",
       "target" : null
     }]
   }]

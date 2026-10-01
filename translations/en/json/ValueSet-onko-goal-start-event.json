@@ -1,0 +1,73 @@
+{
+  "id" : "ValueSet-onko-goal-start-event",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "ValueSet.name",
+      "context" : "ValueSet.name",
+      "source" : "OnkoGoalStartEventVS",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.title",
+      "context" : "ValueSet.title",
+      "source" : "Onkologisches Zielbeginn-Ereignis (VS)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.publisher",
+      "context" : "ValueSet.publisher",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : null
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Berlin Institute of Health at Charité (BIH)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.description",
+      "context" : "ValueSet.description",
+      "source" : "Codierte Ereignisse für den Beginn eines onkologischen Therapieziels (`Goal.startCodeableConcept`).\nÜbernimmt das HL7-Basis-ValueSet [GoalStartEvent](http://hl7.org/fhir/ValueSet/goal-start-event) und\nergänzt onkologisch relevante SNOMED-CT-Qualifier für den Zielbeginn nach Bestrahlung, Chemotherapie\noder Operation. Example-Bindung – die Codes dienen als Anregung, sind aber nicht verpflichtend.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Germany",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Post-radiation (qualifier value)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Post-chemotherapy (qualifier value)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Postoperative period (qualifier value)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Post-discharge follow-up (finding)",
+      "target" : null
+    },
+    {
+      "id" : "ValueSet.compose.include.concept.display",
+      "context" : "ValueSet.compose.include.concept.display",
+      "source" : "Discharged from hospital (finding)",
+      "target" : null
+    }]
+  }]
+}

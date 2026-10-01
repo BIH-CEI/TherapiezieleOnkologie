@@ -24,6 +24,12 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
+      "source" : "Lokoregionale Behandlungslinie",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
       "source" : "Chief complaint",
       "target" : null
     }]

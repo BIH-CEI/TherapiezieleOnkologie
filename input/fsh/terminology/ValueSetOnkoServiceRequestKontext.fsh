@@ -5,6 +5,11 @@ Description: """
 Zusätzlicher Kontext eines Behandlungsschritts – ergänzend zur Therapieintention – z. B. ob eine
 Maßnahme lokal begrenzt, symptomatisch, präventiv, definitiv, additiv, intraoperativ, elektiv
 oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.
+
+**Stellung zur Operation:** Die Codes `Neoadjuvant intent`, `Adjuvant - intent`, `Additive` und
+`Intraoperative` decken die Achse ab, die das MII-Modul Onkologie als
+`mii-cs-onko-therapie-stellungzurop` (A/N/I/Z) führt. Sie stehen hier und nicht in der
+Intentions-Liste, weil sie die Intention ergänzen statt sie zu ersetzen.
 """
 * ^url = "https://bih-cei.de/fhir/therapieziele-onkologie/ValueSet/onko-service-request-kontext"
 * ^status = #active
@@ -13,6 +18,8 @@ oder im Notfall erfolgt. Gebunden an die Extension `onko-behandlungs-kontext`.
 * http://snomed.info/sct#264931009 "Symptomatic (qualifier value)"
 * http://snomed.info/sct#129428001 "Preventive - procedure intent"
 * http://snomed.info/sct#261002007 "Definitive (qualifier value)"
+* http://snomed.info/sct#373847000 "Neoadjuvant intent"
+* http://snomed.info/sct#373846009 "Adjuvant - intent"
 * http://snomed.info/sct#260364009 "Additive (qualifier value)"
 * http://snomed.info/sct#277671009 "Intraoperative (qualifier value)"
 * http://snomed.info/sct#103390000 "Elective (qualifier value)"

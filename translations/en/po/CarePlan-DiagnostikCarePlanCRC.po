@@ -1,6 +1,11 @@
 
-# CodeableConcept.text
-#: CodeableConcept.text
-msgid "Tumordiagnostik"
+# Coding.display
+#: Coding.display
+msgid "Bösartige Neubildung: Kolon, nicht näher bezeichnet"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Diagnostic intent (qualifier value)"
 msgstr ""
 

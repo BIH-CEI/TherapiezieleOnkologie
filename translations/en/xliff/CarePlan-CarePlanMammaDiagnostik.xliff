@@ -3,11 +3,18 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
   <file source-language="de" target-language="en" id="CarePlan-CarePlanMammaDiagnostik" original="Resource CarePlan-CarePlanMammaDiagnostik" datatype="KEYVALUEJSON">
     <body>
-      <trans-unit id="CarePlan-CarePlanMammaDiagnostik" resname="CodeableConcept.text">
+      <trans-unit id="CarePlan-CarePlanMammaDiagnostik" resname="Coding.display">
              <notes>
-               <note id="n1">CodeableConcept.text</note>
+               <note id="n1">Coding.display</note>
              </notes>
-        <source>Tumordiagnostik</source>
+        <source>Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CarePlan-CarePlanMammaDiagnostik" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Diagnostic intent (qualifier value)</source>
         <target></target>
       </trans-unit>
     </body>

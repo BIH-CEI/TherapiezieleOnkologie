@@ -133,14 +133,14 @@ Scopes dieses Leitfadens.
 
 > **Zielmodell.** Das generelle `Behandlungsepisode`-Profil (Art über `type`,
 > art-spezifische Angaben in Extensions) löst das aktuell auf aktive Therapie verengte
-> Profil [`OnkoTherapyLine`](StructureDefinition-onko-therapy-line.html) ab und wird im
+> Profil [`OnkoBehandlungsepisode`](StructureDefinition-onko-behandlungsepisode.html) ab und wird im
 > laufenden Ausbau umgesetzt. Die EnLiST-Konformität der systemischen Linien bleibt
 > dabei erhalten.
 
 ### Beispiele
 
 - [mCRC (palliativ)](szenario-crc.html) — Diagnostikpfad und systemische Erstlinie
-  (`OnkoTherapyLine`).
+  (`OnkoBehandlungsepisode`).
 - [Mammakarzinom (neoadjuvant)](szenario-mamma.html) — neoadjuvante Systemtherapie und
   anschließende Operation als getrennte Abschnitte.
 

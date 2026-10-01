@@ -7,6 +7,7 @@ Title: "EnLiST-Zählstatus"
 Description: "Zählstatus einer Behandlungslinie nach EnLiST: auf einer LoT-Zählachse (counted) oder außerhalb jeder Zählung (not-counted, z. B. lokoregionale Behandlungslinie)."
 * insert Translation(^title, en, EnLiST countability)
 * insert Translation(^description, en, Countability of a treatment line per EnLiST: on a LoT counting axis — counted — or outside any count — not-counted\, e.g. a locoregional treatment line.)
+* ^experimental = true
 * ^caseSensitive = true
 * ^content = #complete
 * #counted "Zählt in der LoT-Zählung" "Systemische Therapielinie auf einer EnLiST-Zählachse (eLoT, aLoT oder iLoT); die Designation steht in der Extension enlist-lot."
@@ -26,6 +27,7 @@ Title: "EnLiST-Setting-Achsen"
 Description: "Die drei getrennt gezählten Setting-Achsen der EnLiST-Notation: eLoT (early), aLoT (advanced), iLoT (investigational)."
 * insert Translation(^title, en, EnLiST setting axes)
 * insert Translation(^description, en, The three separately counted setting axes of the EnLiST notation: eLoT early\, aLoT advanced\, iLoT investigational.)
+* ^experimental = true
 * ^caseSensitive = true
 * ^content = #complete
 * #eLoT "eLoT — frühes Setting" "Early-stage Line of Therapy: resektable Situation — neoadjuvante, adjuvante und perioperative Systemtherapie."
@@ -46,6 +48,7 @@ Title: "EnLiST-Änderungstypen"
 Description: "Die drei Änderungstypen der EnLiST-Zähllogik: New LoT (X+1, nur bei Progression oder fehlendem Ansprechen), Modified LoT (Y+1, nicht-progressionsbedingte Änderung) und Same LoT (prospektiv geplante Änderung, Designation unverändert). Vorgesehen für die Kennzeichnung von Therapieänderungen auf Request-Ebene."
 * insert Translation(^title, en, EnLiST change types)
 * insert Translation(^description, en, The three change types of the EnLiST counting logic: new LoT — X plus one\, only on progression or lack of adequate response; modified LoT — Y plus one\, non-progression-related change; same LoT — prospectively planned change\, designation unchanged. Intended for flagging treatment changes at request level.)
+* ^experimental = true
 * ^caseSensitive = true
 * ^content = #complete
 * #new "New LoT" "Neue Linie (X+1): klinische Progression (cPD) oder fehlendes adäquates Ansprechen."

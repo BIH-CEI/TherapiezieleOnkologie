@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-onko-goal-start-event" original="Resource ValueSet-onko-goal-start-event" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>OnkoGoalStartEventVS</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>Onkologisches Zielbeginn-Ereignis (VS)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Berlin Institute of Health at Charité (BIH)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>Codierte Ereignisse für den Beginn eines onkologischen Therapieziels (`Goal.startCodeableConcept`).
+Übernimmt das HL7-Basis-ValueSet [GoalStartEvent](http://hl7.org/fhir/ValueSet/goal-start-event) und
+ergänzt onkologisch relevante SNOMED-CT-Qualifier für den Zielbeginn nach Bestrahlung, Chemotherapie
+oder Operation. Example-Bindung – die Codes dienen als Anregung, sind aber nicht verpflichtend.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Post-radiation (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Post-chemotherapy (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Postoperative period (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Post-discharge follow-up (finding)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-onko-goal-start-event" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Discharged from hospital (finding)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,59 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "OnkoGoalStartEventVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "Onkologisches Zielbeginn-Ereignis (VS)"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Codierte Ereignisse für den Beginn eines onkologischen Therapieziels (`Goal.startCodeableConcept`).
+Übernimmt das HL7-Basis-ValueSet [GoalStartEvent](http://hl7.org/fhir/ValueSet/goal-start-event) und
+ergänzt onkologisch relevante SNOMED-CT-Qualifier für den Zielbeginn nach Bestrahlung, Chemotherapie
+oder Operation. Example-Bindung – die Codes dienen als Anregung, sind aber nicht verpflichtend."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Post-radiation (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Post-chemotherapy (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Postoperative period (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Post-discharge follow-up (finding)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Discharged from hospital (finding)"
+msgstr ""
+

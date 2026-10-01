@@ -52,9 +52,9 @@
       "target" : null
     },
     {
-      "id" : "CodeableConcept.text",
-      "context" : "CodeableConcept.text",
-      "source" : "Tumordiagnostik",
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Diagnostic intent (qualifier value)",
       "target" : null
     },
     {
@@ -115,6 +115,12 @@
       "id" : "Coding.display",
       "context" : "Coding.display",
       "source" : "Ambulatory chemotherapy",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Systemische Therapielinie",
       "target" : null
     },
     {
@@ -258,7 +264,7 @@
     {
       "id" : "Coding.display",
       "context" : "Coding.display",
-      "source" : "Cancer care plan",
+      "source" : "Therapeutic intent (qualifier value)",
       "target" : null
     }]
   }]

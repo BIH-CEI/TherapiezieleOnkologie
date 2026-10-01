@@ -15,7 +15,7 @@ Onkologiespezifische Ergänzungen gegenüber MCC:
 - Therapieintention über die Extension `onko-therapy-intent` (kurativ, neoadjuvant, adjuvant,
   Erhaltung, palliativ, supportiv).
 - `goal` referenziert das Profil `OnkoTherapyGoal`.
-- Therapielinien (`OnkoTherapyLine`, Basis `EpisodeOfCare`) werden über die
+- Behandlungsepisoden (`OnkoBehandlungsepisode`, Basis `EpisodeOfCare`) werden über die
   Standard-Extension `workflow-episodeOfCare` verknüpft.
 - `category` ist zweifach gesliced: Die Slice `erkrankungsart` trägt den ICD-10-GM-Code der
   adressierten Tumorerkrankung. Über die Slice `therapieabschnitt` lässt sich angeben, welcher Abschnitt der Versorgung betrachtet wird,

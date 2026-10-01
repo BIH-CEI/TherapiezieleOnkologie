@@ -1,0 +1,48 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "OnkoCarePlanPhaseVS"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "Onkologischer CarePlan – Therapieabschnitt (VS)"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Berlin Institute of Health at Charité (BIH)"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "Kennzeichnet, ob ein `OnkoCarePlan` den diagnostischen oder den therapeutischen Abschnitt der
+onkologischen Versorgung abbildet. Gebunden an `category` (Slice `therapieabschnitt`); ersetzt
+die vormalige Unterscheidung über zwei separate Profile (`OnkoCarePlan` / `DiagnosticCarePlan`)."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Diagnostic intent (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Therapeutic intent (qualifier value)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Palliative - procedure intent (qualifier value)"
+msgstr ""
+

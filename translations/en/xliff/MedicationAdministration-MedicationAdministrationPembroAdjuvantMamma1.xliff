@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="MedicationAdministration-MedicationAdministrationPembroAdjuvantMamma1" original="Resource MedicationAdministration-MedicationAdministrationPembroAdjuvantMamma1" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="MedicationAdministration-MedicationAdministrationPembroAdjuvantMamma1" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="MedicationAdministration-MedicationAdministrationPembroAdjuvantMamma1" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 1 von ~9 (q3w), ambulant</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

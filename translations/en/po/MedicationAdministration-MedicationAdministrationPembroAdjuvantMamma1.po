@@ -1,0 +1,11 @@
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w"
+msgstr ""
+
+# Annotation.text
+#: Annotation.text
+msgid "Zyklus 1 von ~9 (q3w), ambulant"
+msgstr ""
+

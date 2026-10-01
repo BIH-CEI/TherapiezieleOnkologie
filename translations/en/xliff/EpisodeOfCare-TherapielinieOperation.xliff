@@ -28,6 +28,13 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>Lokoregionale Behandlungslinie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="EpisodeOfCare-TherapielinieOperation" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Chief complaint</source>
         <target></target>
       </trans-unit>

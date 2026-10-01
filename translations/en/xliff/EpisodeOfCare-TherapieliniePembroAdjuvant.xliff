@@ -42,6 +42,13 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>Systemische Therapielinie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="EpisodeOfCare-TherapieliniePembroAdjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Chief complaint</source>
         <target></target>
       </trans-unit>

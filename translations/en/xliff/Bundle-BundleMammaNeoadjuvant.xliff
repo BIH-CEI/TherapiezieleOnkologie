@@ -80,11 +80,18 @@
         <source>BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal</source>
         <target></target>
       </trans-unit>
-      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
              <notes>
-               <note id="n1">CodeableConcept.text</note>
+               <note id="n1">Coding.display</note>
              </notes>
-        <source>Tumordiagnostik</source>
+        <source>Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Diagnostic intent (qualifier value)</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
@@ -190,13 +197,6 @@
                <note id="n1">Coding.display</note>
              </notes>
         <source>Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
-             <notes>
-               <note id="n1">Coding.display</note>
-             </notes>
-        <source>Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
@@ -441,6 +441,13 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
+        <source>Systemische Therapielinie</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
         <source>Chief complaint</source>
         <target></target>
       </trans-unit>
@@ -456,6 +463,13 @@
                <note id="n1">Coding.display</note>
              </notes>
         <source>Surgical procedure</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lokoregionale Behandlungslinie</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
@@ -609,7 +623,7 @@
              <notes>
                <note id="n1">Coding.display</note>
              </notes>
-        <source>Cancer care plan</source>
+        <source>Therapeutic intent (qualifier value)</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Coding.display">
@@ -687,6 +701,34 @@
                <note id="n1">CodeableConcept.text</note>
              </notes>
         <source>Nachsorge-Mammographie beidseits (jährlich)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Pembrolizumab-Monotherapie (adjuvant, KEYNOTE-522), q3w</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 1 von ~9 (q3w), ambulant</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 2 von ~9 (q3w), ambulant</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Bundle-BundleMammaNeoadjuvant" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Zyklus 3 von ~9 (q3w), ambulant; Therapie läuft weiter</source>
         <target></target>
       </trans-unit>
     </body>

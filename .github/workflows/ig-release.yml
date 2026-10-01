@@ -45,7 +45,7 @@ jobs:
           node-version: '20'
 
       - name: Install SUSHI
-        run: npm install -g fsh-sushi@${{ vars.SUSHI_VERSION || '3.19.0' }}
+        run: npm install -g fsh-sushi@${{ vars.SUSHI_VERSION || '3.20.1' }}
 
       - uses: ruby/setup-ruby@v1
         with:
@@ -66,14 +66,14 @@ jobs:
         id: cache-publisher
         with:
           path: input-cache/publisher.jar
-          key: ig-publisher-latest
+          key: ig-publisher-${{ vars.PUBLISHER_VERSION || '2.3.4' }}
 
       - name: Download IG Publisher
         if: steps.cache-publisher.outputs.cache-hit != 'true'
         run: |
           mkdir -p input-cache
           curl -L -o input-cache/publisher.jar \
-            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+            https://github.com/HL7/fhir-ig-publisher/releases/download/${{ vars.PUBLISHER_VERSION || '2.3.4' }}/publisher.jar
 
       # Terminologie-Cache wie im Publish-Workflow — ohne ihn läuft der
       # Publisher-Build gegen tx.fhir.org in Richtung Timeout.
